@@ -1,0 +1,507 @@
+{
+  "version": 1,
+  "title": "NASA cFS real-image reconstruction",
+  "slides": [
+    {
+      "id": "nasa_16",
+      "width": 1600,
+      "height": 1200,
+      "background": "#FFFFFF",
+      "source": "source.png",
+      "reviewed": true,
+      "notes": "Source: David McComas / NASA GSFC, NTRS 20180007319. Reconstructed from the rendered page image and OCR; source speaker notes were not supplied. Logos remain independent raster images.",
+      "elements": [
+        {
+          "id": "nasa-logo",
+          "kind": "image",
+          "z": 0,
+          "box": [
+            0,
+            0,
+            141,
+            134
+          ],
+          "path": "nasa-logo.png",
+          "contains_text": true,
+          "image_fit": "contain",
+          "role": "background",
+          "provenance": "NASA NTRS 20180007319 page 11, title-free common header crop; source image coordinates recorded in box."
+        },
+        {
+          "id": "stars",
+          "kind": "image",
+          "z": 0,
+          "box": [
+            141,
+            0,
+            1270,
+            134
+          ],
+          "path": "stars.png",
+          "contains_text": false,
+          "image_fit": "contain",
+          "role": "background",
+          "provenance": "NASA NTRS 20180007319 page 11, title-free common header crop; source image coordinates recorded in box."
+        },
+        {
+          "id": "cfs-logo",
+          "kind": "image",
+          "z": 0,
+          "box": [
+            1411,
+            0,
+            189,
+            134
+          ],
+          "path": "cfs-logo.png",
+          "contains_text": true,
+          "image_fit": "contain",
+          "role": "background",
+          "provenance": "NASA NTRS 20180007319 page 11, title-free common header crop; source image coordinates recorded in box."
+        },
+        {
+          "id": "title",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            493.0,
+            31.75,
+            559.25,
+            72.5556
+          ],
+          "text": "Architecture Goals",
+          "font_family": "Arial",
+          "font_size": 62.222222,
+          "bold": true,
+          "color": "#FFFFFF",
+          "font_group": "title",
+          "fit": "strict"
+        },
+        {
+          "id": "footer",
+          "kind": "line",
+          "z": 0,
+          "points": [
+            [
+              0,
+              1162
+            ],
+            [
+              1600,
+              1162
+            ]
+          ],
+          "stroke": "#333333",
+          "stroke_width": 2
+        },
+        {
+          "id": "page-number",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1493.25,
+            1169.0,
+            33.0,
+            31.25
+          ],
+          "text": "16",
+          "font_family": "Arial",
+          "font_size": 26.666667,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "footer",
+          "fit": "strict"
+        },
+        {
+          "id": "number-1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            226.0,
+            195.5,
+            36.25,
+            47.138
+          ],
+          "text": "1.",
+          "font_family": "Arial",
+          "font_size": 40.12,
+          "bold": true,
+          "color": "#000000",
+          "font_group": "goals",
+          "fit": "strict"
+        },
+        {
+          "id": "goal-1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            297.25,
+            194.75,
+            948.5,
+            47.138
+          ],
+          "text": "Reduce time to deploy high quality flight software",
+          "font_family": "Arial",
+          "font_size": 40.12,
+          "bold": true,
+          "color": "#000000",
+          "font_group": "goals",
+          "fit": "strict"
+        },
+        {
+          "id": "number-2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            226.0,
+            297.5,
+            36.25,
+            47.138
+          ],
+          "text": "2.",
+          "font_family": "Arial",
+          "font_size": 40.12,
+          "bold": true,
+          "color": "#000000",
+          "font_group": "goals",
+          "fit": "strict"
+        },
+        {
+          "id": "goal-2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            297.25,
+            297.25,
+            878.5,
+            47.138
+          ],
+          "text": "Reduce project schedule and cost uncertainty",
+          "font_family": "Arial",
+          "font_size": 40.12,
+          "bold": true,
+          "color": "#000000",
+          "font_group": "goals",
+          "fit": "strict"
+        },
+        {
+          "id": "number-3",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            225.5,
+            399.5,
+            36.25,
+            47.138
+          ],
+          "text": "3.",
+          "font_family": "Arial",
+          "font_size": 40.12,
+          "bold": true,
+          "color": "#000000",
+          "font_group": "goals",
+          "fit": "strict"
+        },
+        {
+          "id": "goal-3",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            297.25,
+            398.75,
+            826.0,
+            47.138
+          ],
+          "text": "Directly facilitate formalized software reuse",
+          "font_family": "Arial",
+          "font_size": 40.12,
+          "bold": true,
+          "color": "#000000",
+          "font_group": "goals",
+          "fit": "strict"
+        },
+        {
+          "id": "number-4",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            226.5,
+            501.0,
+            36.25,
+            47.138
+          ],
+          "text": "4.",
+          "font_family": "Arial",
+          "font_size": 40.12,
+          "bold": true,
+          "color": "#000000",
+          "font_group": "goals",
+          "fit": "strict"
+        },
+        {
+          "id": "goal-4",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            297.25,
+            500.25,
+            807.25,
+            47.138
+          ],
+          "text": "Enable collaboration across organizations",
+          "font_family": "Arial",
+          "font_size": 40.12,
+          "bold": true,
+          "color": "#000000",
+          "font_group": "goals",
+          "fit": "strict"
+        },
+        {
+          "id": "number-5",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            226.25,
+            603.0,
+            36.25,
+            47.138
+          ],
+          "text": "5.",
+          "font_family": "Arial",
+          "font_size": 40.12,
+          "bold": true,
+          "color": "#000000",
+          "font_group": "goals",
+          "fit": "strict"
+        },
+        {
+          "id": "goal-5",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            297.75,
+            601.75,
+            1228.0,
+            47.138
+          ],
+          "text": "Simplify sustaining engineering (i.e. On Orbit FSW maintenance)",
+          "font_family": "Arial",
+          "font_size": 40.12,
+          "bold": true,
+          "color": "#000000",
+          "font_group": "goals",
+          "fit": "strict"
+        },
+        {
+          "id": "number-6",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            225.5,
+            761.5,
+            36.25,
+            47.138
+          ],
+          "text": "6.",
+          "font_family": "Arial",
+          "font_size": 40.12,
+          "bold": true,
+          "color": "#000000",
+          "font_group": "goals",
+          "fit": "strict"
+        },
+        {
+          "id": "goal-6",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            297.75,
+            760.75,
+            1050.75,
+            47.138
+          ],
+          "text": "Scale from small instruments to Hubble class missions",
+          "font_family": "Arial",
+          "font_size": 40.12,
+          "bold": true,
+          "color": "#000000",
+          "font_group": "goals",
+          "fit": "strict"
+        },
+        {
+          "id": "number-7",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            225.5,
+            864.0,
+            36.25,
+            47.138
+          ],
+          "text": "7.",
+          "font_family": "Arial",
+          "font_size": 40.12,
+          "bold": true,
+          "color": "#000000",
+          "font_group": "goals",
+          "fit": "strict"
+        },
+        {
+          "id": "goal-7",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            297.25,
+            862.75,
+            1069.25,
+            47.138
+          ],
+          "text": "Build a platform for advanced concepts and prototyping",
+          "font_family": "Arial",
+          "font_size": 40.12,
+          "bold": true,
+          "color": "#000000",
+          "font_group": "goals",
+          "fit": "strict"
+        },
+        {
+          "id": "goal-5-continuation",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            286.25,
+            659.5,
+            584.5,
+            47.138
+          ],
+          "text": "Missions last 10 years or more",
+          "font_family": "Arial",
+          "font_size": 40.12,
+          "bold": true,
+          "color": "#000000",
+          "font_group": "goals",
+          "fit": "strict"
+        },
+        {
+          "id": "callout",
+          "kind": "shape",
+          "shape": "rect",
+          "z": 0,
+          "box": [
+            80,
+            960,
+            1440,
+            114
+          ],
+          "fill": "#CCFFCC"
+        },
+        {
+          "id": "bevel-top",
+          "kind": "image",
+          "z": 1,
+          "box": [
+            80,
+            960,
+            1440,
+            13
+          ],
+          "path": "bevel-top.png",
+          "contains_text": false,
+          "role": "background",
+          "image_fit": "contain",
+          "provenance": "Text-free edge crop of the source page 16 green callout; editable center and text reconstructed separately.",
+          "container": "callout"
+        },
+        {
+          "id": "bevel-bottom",
+          "kind": "image",
+          "z": 1,
+          "box": [
+            80,
+            1061,
+            1440,
+            13
+          ],
+          "path": "bevel-bottom.png",
+          "contains_text": false,
+          "role": "background",
+          "image_fit": "contain",
+          "provenance": "Text-free edge crop of the source page 16 green callout; editable center and text reconstructed separately.",
+          "container": "callout"
+        },
+        {
+          "id": "bevel-left",
+          "kind": "image",
+          "z": 1,
+          "box": [
+            80,
+            973,
+            14,
+            88
+          ],
+          "path": "bevel-left.png",
+          "contains_text": false,
+          "role": "background",
+          "image_fit": "contain",
+          "provenance": "Text-free edge crop of the source page 16 green callout; editable center and text reconstructed separately.",
+          "container": "callout"
+        },
+        {
+          "id": "bevel-right",
+          "kind": "image",
+          "z": 1,
+          "box": [
+            1506,
+            973,
+            14,
+            88
+          ],
+          "path": "bevel-right.png",
+          "contains_text": false,
+          "role": "background",
+          "image_fit": "contain",
+          "provenance": "Text-free edge crop of the source page 16 green callout; editable center and text reconstructed separately.",
+          "container": "callout"
+        },
+        {
+          "id": "callout-1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            194.25,
+            967.5,
+            1213.0,
+            47.138
+          ],
+          "text": "These goals were written in 2006 and have remained essentially",
+          "font_family": "Arial",
+          "font_size": 40.12,
+          "bold": true,
+          "color": "#000000",
+          "font_group": "goals",
+          "fit": "strict",
+          "container": "callout"
+        },
+        {
+          "id": "callout-2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            545.25,
+            1012.25,
+            512.0,
+            47.138
+          ],
+          "text": "unchanged over the years!",
+          "font_family": "Arial",
+          "font_size": 40.12,
+          "bold": true,
+          "color": "#000000",
+          "font_group": "goals",
+          "fit": "strict",
+          "container": "callout"
+        }
+      ]
+    }
+  ]
+}

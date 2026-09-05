@@ -15,7 +15,7 @@ because that is an agent/user inspection, not a machine truth. Keep a short visu
 with inspected page IDs, concrete remaining differences and the renderer/application used.
 Do not replace this with “looks good” or a made-up percentage.
 
-Examples of blocking failures: text does not fit at its allowed minimum; a text box escapes a
+Examples of blocking failures: text does not fit at its allowed minimum; visible text escapes a
 container; two content elements collide; image text is duplicated by an editable overlay; the
 rendered text is missing/clipped; paths escape the job; sources and dimensions disagree.
 
@@ -23,9 +23,22 @@ rendered text is missing/clipped; paths escape the job; sources and dimensions d
 pixel safety reserve. A width equal to the nominal advance is therefore insufficient. Do not
 shrink the font to work around an unexplained margin; inspect `required_width_px` first.
 
-`text_frame_overlap_only` is informational: two transparent text frames intersect, but the
-measured visible glyph regions do not. Real ink intersections remain blocking. This exception
-does not apply to a picture with baked text or permit a frame to escape its declared container.
+`text_frame_overlap_only` is informational: transparent frame space intersects text, a line or
+another object while visible ink remains separate. `text_frame_outside_container_only` means
+empty frame corners extend beyond the background shape while visible ink fits. Near glyph
+corners and sloping boundaries the check refines coarse ink boxes with a bounded 4x glyph mask.
+Actual ink crossings remain blocking. The mask is limited to 8 million pixels and eight cached
+entries; larger regions retain conservative boxes. These exceptions never waive baked-text
+duplication, page bounds or the containment of non-text objects.
+
+Source grid crossings can be declared with named overlap pairs and a concrete source-based
+reason. Do not blanket-exempt table text. Thin source lines must be measured at their stroke
+centers; an integer bitmap row denotes a pixel cell, not its center. A line polygon already
+includes its stroke width, so the page-boundary check counts that width once.
+
+Font discovery timeouts/nonzero exits are domain failures (exit 2), recorded in a fresh
+`validation.json` for both `check` and `build`. The selected executable is included in the error.
+Inspect `doctor` and select a working installed font tool for that command before retrying.
 
 `renderer_font_substitution` is blocking even when the text content matches. Font identifiers
 are read from the actual PDF and compared with the locally measured font's known names.

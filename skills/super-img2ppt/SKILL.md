@@ -36,6 +36,9 @@ Do not install globally or change host skill registries as part of a conversion.
 `doctor` reports dependencies; it does not install them. Real preview validation needs local
 LibreOffice (`soffice`). OCR is optional: macOS Vision runs locally; other platforms can use
 installed Tesseract and language packs. There are no API keys or credential-reading helpers.
+If font discovery fails, read the recorded error and `doctor`'s resolved `fc-list` path before
+retrying. Multiple font tools may coexist (for example MiKTeX and fontconfig). Select an already
+installed working tool with a command-local PATH; do not alter global settings or retry a stall blindly.
 
 ## Reconstruct the page
 
@@ -81,7 +84,11 @@ Use parallel page work only if it is separately authorized and supported by the 
   Use `allow_overlap_with: [specific_id]` plus `overlap_reason` only for overlap visible in the
   source. Never blanket-exempt collisions, especially text over an image containing text.
   Transparent text-frame padding may overlap when measured visible glyph regions stay separate;
-  this produces an informational finding. Container bounds still apply to the full text frame.
+  this produces an informational finding. Text containers constrain visible ink; empty frame
+  corners may extend beyond a diamond. Other objects still require full containment. Do not
+  squeeze line spacing to force a rectangular text frame into a sloping shape.
+  Table grid intersections and axis/tick joins require source-verified, named object pairs;
+  this does not exempt grid lines that actually cross text.
 - Source font identity cannot be uniquely inferred from pixels. Choose the closest available
   family, review the actual rendering, and report substitutions. Font files are not embedded
   or distributed; another computer needs the listed fonts for the same appearance.
@@ -96,6 +103,12 @@ Open the generated `render/page_NNN.png` and comparison images. These are render
 **actual PPTX**, not a mock drawn with an unrelated font. Check source versus output at full
 page and at dense text/diagram crops. Check missing text, baselines, line breaks, font weight,
 container spacing, z-order, arrow direction, image crop and page order.
+For dense pages, measure source and rendered ink in the same isolated regions. Record actual
+edge/baseline differences in source pixels, including failures; a matching font name alone does
+not prove alignment. Line coordinates describe stroke centers, while bitmap pixel indices
+describe cells: account for the half-pixel center when measuring thin grid lines.
+Standard `arrow: true` heads scale with the connector stroke and may be smaller than the source;
+inspect arrowhead size separately and disclose this limit when it is visible.
 
 - `fail`: blocking structural or rendered-text error; repair the scene before calling it done.
 - `review`: blocking checks passed, but font substitutions, spacing drift, recognition or raster text need review.

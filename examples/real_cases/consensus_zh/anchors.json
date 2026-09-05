@@ -1,0 +1,307 @@
+{
+  "anchors": [
+    {
+      "id": "past",
+      "roi": [
+        85,
+        26,
+        314,
+        81
+      ],
+      "ink_box": [
+        95,
+        35,
+        302,
+        75
+      ],
+      "polarity": "dark",
+      "threshold": 80
+    },
+    {
+      "id": "edit",
+      "roi": [
+        136,
+        216,
+        240,
+        273
+      ],
+      "ink_box": [
+        146,
+        224,
+        228,
+        264
+      ],
+      "polarity": "dark",
+      "threshold": 80
+    },
+    {
+      "id": "seek",
+      "roi": [
+        645,
+        215,
+        831,
+        273
+      ],
+      "ink_box": [
+        656,
+        224,
+        821,
+        263
+      ],
+      "polarity": "dark",
+      "threshold": 80
+    },
+    {
+      "id": "new",
+      "roi": [
+        623,
+        708,
+        809,
+        768
+      ],
+      "ink_box": [
+        635,
+        719,
+        800,
+        759
+      ],
+      "polarity": "dark",
+      "threshold": 80
+    },
+    {
+      "id": "wait",
+      "roi": [
+        220,
+        346,
+        305,
+        392
+      ],
+      "ink_box": [
+        230,
+        354,
+        295,
+        386
+      ],
+      "polarity": "dark",
+      "threshold": 80
+    },
+    {
+      "id": "execute",
+      "roi": [
+        420,
+        182,
+        507,
+        230
+      ],
+      "ink_box": [
+        431,
+        191,
+        496,
+        222
+      ],
+      "polarity": "dark",
+      "threshold": 80
+    },
+    {
+      "id": "yes",
+      "roi": [
+        420,
+        451,
+        470,
+        498
+      ],
+      "ink_box": [
+        431,
+        459,
+        463,
+        490
+      ],
+      "polarity": "dark",
+      "threshold": 80
+    },
+    {
+      "id": "no",
+      "roi": [
+        219,
+        656,
+        270,
+        703
+      ],
+      "ink_box": [
+        230,
+        664,
+        261,
+        693
+      ],
+      "polarity": "dark",
+      "threshold": 80
+    },
+    {
+      "id": "opposition",
+      "roi": [
+        777,
+        348,
+        860,
+        397
+      ],
+      "ink_box": [
+        786,
+        358,
+        851,
+        389
+      ],
+      "polarity": "dark",
+      "threshold": 80
+    },
+    {
+      "id": "approval",
+      "roi": [
+        783,
+        619,
+        872,
+        667
+      ],
+      "ink_box": [
+        795,
+        626,
+        860,
+        658
+      ],
+      "polarity": "dark",
+      "threshold": 80
+    },
+    {
+      "id": "edit_question_line1",
+      "roi": [
+        62,
+        451,
+        319,
+        501
+      ],
+      "ink_box": [
+        71,
+        463,
+        290,
+        499
+      ],
+      "polarity": "dark",
+      "threshold": 80,
+      "interior_diamond": [
+        187.75,
+        504,
+        187.25,
+        105.5,
+        0.98
+      ]
+    },
+    {
+      "id": "edit_question_line2",
+      "roi": [
+        62,
+        501,
+        319,
+        552
+      ],
+      "ink_box": [
+        71,
+        510,
+        285,
+        546
+      ],
+      "polarity": "dark",
+      "threshold": 80,
+      "interior_diamond": [
+        187.75,
+        504,
+        187.25,
+        105.5,
+        0.98
+      ]
+    },
+    {
+      "id": "consensus_question",
+      "roi": [
+        612,
+        470,
+        843,
+        535
+      ],
+      "ink_box": [
+        624,
+        482,
+        820,
+        523
+      ],
+      "polarity": "dark",
+      "threshold": 80
+    },
+    {
+      "id": "arrow_past",
+      "roi": [
+        175,
+        152,
+        201,
+        172
+      ],
+      "ink_box": [
+        179,
+        153,
+        197,
+        171
+      ],
+      "polarity": "dark",
+      "threshold": 80
+    },
+    {
+      "id": "arrow_yes",
+      "roi": [
+        518,
+        491,
+        540,
+        516
+      ],
+      "ink_box": [
+        520,
+        495,
+        540,
+        513
+      ],
+      "polarity": "dark",
+      "threshold": 80
+    },
+    {
+      "id": "arrow_opposition",
+      "roi": [
+        721,
+        313,
+        747,
+        334
+      ],
+      "ink_box": [
+        725,
+        314,
+        743,
+        332
+      ],
+      "polarity": "dark",
+      "threshold": 80
+    },
+    {
+      "id": "arrow_approval",
+      "roi": [
+        721,
+        666,
+        747,
+        687
+      ],
+      "ink_box": [
+        725,
+        668,
+        743,
+        686
+      ],
+      "polarity": "dark",
+      "threshold": 80
+    }
+  ]
+}

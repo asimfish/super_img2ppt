@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "evaluated": "2026-09-06",
+  "method": "Six published page images: three isolated forward evaluations (consensus, table, architecture) plus three root-authored NASA text pages. No source drawing code or PDF object coordinates were used to author scenes.",
+  "renderer": "LibreOffice 26.2.4.2 / PDFium 5.13.0 on macOS 26.2",
+  "all_accepted": false,
+  "cases": [
+    {
+      "id": "consensus_zh",
+      "directory": "consensus_zh",
+      "scene": "consensus_zh/scene.resolved.json",
+      "source": "assets/f87878c38351065ff59e.png",
+      "source_sha256": "f87878c38351065ff59e9ca9c1fdbb753baf66af2506a5f69325c1b4b5dd291a",
+      "scene_sha256": "83c7f69ac7c857dff3953168bc9333530839fa5067a1e18c2573ac4bb4254ee4",
+      "observed_status": "pass",
+      "diagnostic_only": false,
+      "native_counts": {
+        "text": 15,
+        "shape": 6,
+        "line": 8,
+        "image": 0
+      },
+      "preview": "consensus_zh/render/page_001.png",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Consensus_Flowchart_zh-hans.svg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Consensus_Flowchart_zh-hans.svg/960px-Consensus_Flowchart_zh-hans.svg.png",
+      "credit": "T.A Shirakawa, 2011-06-22",
+      "reuse": "CC BY-SA 3.0",
+      "original_download_sha256": "2d20f391285f57e0b4ce7b4c54a8fc017da53b4f253c3b79aeaf938c1223ac0c",
+      "pptx": "consensus_zh/editable.pptx",
+      "pptx_sha256": "e97fea21e845993340e33cf35ef3cc4f5b6ca049830a31eee553606da243d1c7"
+    },
+    {
+      "id": "matplotlib_table",
+      "directory": "matplotlib_table",
+      "scene": "matplotlib_table/scene.resolved.json",
+      "source": "assets/633681a052d5bc2a245f.png",
+      "source_sha256": "633681a052d5bc2a245f8f4ccd7c6c3612a1794b05741349698a427c750da163",
+      "scene_sha256": "3f1d8670d6a81ea1793037303f1026d1b1b87b8e997731f23fa3dd1b47c31dc3",
+      "observed_status": "fail",
+      "diagnostic_only": true,
+      "native_counts": {
+        "text": 41,
+        "shape": 31,
+        "line": 22,
+        "image": 1
+      },
+      "preview": "matplotlib_table/render/page_001.png",
+      "source_url": "https://matplotlib.org/stable/gallery/misc/table_demo.html",
+      "download_url": "https://matplotlib.org/stable/_images/sphx_glr_table_demo_001.png",
+      "credit": "Matplotlib Development Team",
+      "reuse": "Matplotlib license; see ../licenses/MATPLOTLIB_LICENSE.txt",
+      "original_download_sha256": "ed9ad654411ca4f4bd64c492387a94e03f5299edc0697c233248505f3586e060",
+      "pptx": "matplotlib_table/diagnostic.pptx",
+      "pptx_sha256": "c010d34bc90bad78d805763c79f8a7a80bc48286bf5f04e3ce632c921c892d76"
+    },
+    {
+      "id": "nasa_06",
+      "directory": "nasa_06",
+      "scene": "nasa_06/scene.resolved.json",
+      "source": "assets/bce80a3572342322af3d.png",
+      "source_sha256": "bce80a3572342322af3d8b0fdcb29b26d53364018adabc54904f1f823d89634b",
+      "scene_sha256": "926ddf1f417e7b65b8f671e1a9b6ded5b0dc5156bdb311bff799a2daf5cdc5e6",
+      "observed_status": "review",
+      "diagnostic_only": false,
+      "native_counts": {
+        "text": 21,
+        "shape": 5,
+        "line": 1,
+        "image": 3
+      },
+      "preview": "nasa_06/render/page_001.png",
+      "source_url": "https://ntrs.nasa.gov/citations/20180007319",
+      "download_url": "https://ntrs.nasa.gov/api/citations/20180007319/downloads/20180007319.pdf",
+      "source_page": 6,
+      "credit": "David McComas / NASA Goddard Space Flight Center",
+      "reuse": "NASA NTRS: PUBLIC; GOV_PUBLIC_USE_PERMITTED; containsThirdPartyMaterial=false",
+      "pptx": "nasa_06/editable.pptx",
+      "pptx_sha256": "32d3fda2e6674a57a2c4ba04178beab6ae665ee4471eb2152751998017119edb"
+    },
+    {
+      "id": "nasa_16",
+      "directory": "nasa_16",
+      "scene": "nasa_16/scene.resolved.json",
+      "source": "assets/44fa5e88fb9e42b8a1b0.png",
+      "source_sha256": "44fa5e88fb9e42b8a1b03fc4087c85a3403e83029e718ee6895ad46efcaa47ef",
+      "scene_sha256": "2908c4c1e09536566547577a57d17e1efc9c249cd6af70b51ec086077d9db9f6",
+      "observed_status": "review",
+      "diagnostic_only": false,
+      "native_counts": {
+        "text": 19,
+        "shape": 1,
+        "line": 1,
+        "image": 7
+      },
+      "preview": "nasa_16/render/page_001.png",
+      "source_url": "https://ntrs.nasa.gov/citations/20180007319",
+      "download_url": "https://ntrs.nasa.gov/api/citations/20180007319/downloads/20180007319.pdf",
+      "source_page": 16,
+      "credit": "David McComas / NASA Goddard Space Flight Center",
+      "reuse": "NASA NTRS: PUBLIC; GOV_PUBLIC_USE_PERMITTED; containsThirdPartyMaterial=false",
+      "pptx": "nasa_16/editable.pptx",
+      "pptx_sha256": "703407a6cb600f5624466e51f55b38b9eb94eb411c4ab632686c6bde18938ce6"
+    },
+    {
+      "id": "nasa_18",
+      "directory": "nasa_18",
+      "scene": "nasa_18/scene.resolved.json",
+      "source": "assets/02bb47bd5ef1b6d92bf4.png",
+      "source_sha256": "02bb47bd5ef1b6d92bf4a4f89029f8cb3142a2f823454b216b54322162cda6e5",
+      "scene_sha256": "251b6c62a7ddd10f525fefc2ec88112f35a58dcfc5f8c9160a9e75d242b31592",
+      "observed_status": "review",
+      "diagnostic_only": false,
+      "native_counts": {
+        "text": 53,
+        "shape": 35,
+        "line": 57,
+        "image": 3
+      },
+      "preview": "nasa_18/render/page_001.png",
+      "source_url": "https://ntrs.nasa.gov/citations/20180007319",
+      "download_url": "https://ntrs.nasa.gov/api/citations/20180007319/downloads/20180007319.pdf",
+      "source_page": 18,
+      "credit": "David McComas / NASA Goddard Space Flight Center",
+      "reuse": "NASA NTRS: PUBLIC; GOV_PUBLIC_USE_PERMITTED; containsThirdPartyMaterial=false",
+      "pptx": "nasa_18/editable.pptx",
+      "pptx_sha256": "8ec047a728d899155a78ba10d23b23a24d9393e397dbc80167ba60c127e0954d"
+    },
+    {
+      "id": "nasa_28",
+      "directory": "nasa_28",
+      "scene": "nasa_28/scene.resolved.json",
+      "source": "assets/07284bda0fb4dded410c.png",
+      "source_sha256": "07284bda0fb4dded410c0645a844572f323ec5154013d913fd7018b95b7ee1fd",
+      "scene_sha256": "aef78cd317c9f5b54f989b4057b5ca8c6529b132a0d5708c053e3373630fd6aa",
+      "observed_status": "review",
+      "diagnostic_only": false,
+      "native_counts": {
+        "text": 72,
+        "shape": 35,
+        "line": 1,
+        "image": 3
+      },
+      "preview": "nasa_28/render/page_001.png",
+      "source_url": "https://ntrs.nasa.gov/citations/20180007319",
+      "download_url": "https://ntrs.nasa.gov/api/citations/20180007319/downloads/20180007319.pdf",
+      "source_page": 28,
+      "credit": "David McComas / NASA Goddard Space Flight Center",
+      "reuse": "NASA NTRS: PUBLIC; GOV_PUBLIC_USE_PERMITTED; containsThirdPartyMaterial=false",
+      "pptx": "nasa_28/editable.pptx",
+      "pptx_sha256": "48fc05d377c6e3250bc3842cf4bd334033e1b24292c962d6c501a97000e9cc8e"
+    }
+  ]
+}

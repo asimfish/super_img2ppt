@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 819" width="960" height="819">
+  <rect width="100%" height="100%" fill="#FFFFFF" />
+  <g id="past_to_edit">
+    <defs>
+      <marker id="marker-past_to_edit" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#111111" />
+      </marker>
+    </defs>
+    <line x1="187.5" y1="94" x2="187.5" y2="172" stroke="#111111" stroke-width="0.8" marker-end="url(#marker-past_to_edit)" />
+  </g>
+  <g id="edit_to_decision">
+    <defs>
+      <marker id="marker-edit_to_decision" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#111111" />
+      </marker>
+    </defs>
+    <line x1="187.5" y1="312.7" x2="187.5" y2="398.5" stroke="#111111" stroke-width="0.8" marker-end="url(#marker-edit_to_decision)" />
+  </g>
+  <g id="consensus_to_edit">
+    <defs>
+      <marker id="marker-consensus_to_edit" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#111111" />
+      </marker>
+    </defs>
+    <line x1="562" y1="242.4" x2="359.7" y2="242.4" stroke="#111111" stroke-width="0.8" marker-end="url(#marker-consensus_to_edit)" />
+  </g>
+  <g id="decision_yes">
+    <defs>
+      <marker id="marker-decision_yes" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#111111" />
+      </marker>
+    </defs>
+    <line x1="375" y1="503.9" x2="539.5" y2="503.9" stroke="#111111" stroke-width="0.8" marker-end="url(#marker-decision_yes)" />
+  </g>
+  <g id="decision_opposition">
+    <defs>
+      <marker id="marker-decision_opposition" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#111111" />
+      </marker>
+    </defs>
+    <line x1="734.15" y1="397.8" x2="734.15" y2="312.7" stroke="#111111" stroke-width="0.8" marker-end="url(#marker-decision_opposition)" />
+  </g>
+  <g id="decision_approval">
+    <defs>
+      <marker id="marker-decision_approval" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#111111" />
+      </marker>
+    </defs>
+    <line x1="734.15" y1="610.4" x2="734.15" y2="687.3" stroke="#111111" stroke-width="0.8" marker-end="url(#marker-decision_approval)" />
+  </g>
+  <g id="decision_no_vertical">
+    <line x1="187.75" y1="609.5" x2="187.75" y2="734.3" stroke="#111111" stroke-width="0.8" />
+  </g>
+  <g id="decision_no_horizontal">
+    <defs>
+      <marker id="marker-decision_no_horizontal" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 Z" fill="#111111" />
+      </marker>
+    </defs>
+    <line x1="187.75" y1="734.3" x2="562" y2="734.3" stroke="#111111" stroke-width="0.8" marker-end="url(#marker-decision_no_horizontal)" />
+  </g>
+  <g id="past_node">
+    <rect x="15.7" y="0.5" width="344" height="93.5" rx="46.75" fill="#C8D6E6" stroke="#202020" stroke-width="0.8" />
+  </g>
+  <g id="edit_node">
+    <rect x="15.7" y="172" width="344" height="140.7" fill="#C8D6E6" stroke="#202020" stroke-width="0.8" />
+  </g>
+  <g id="seek_node">
+    <rect x="562" y="172" width="344" height="140.7" fill="#C8D6E6" stroke="#202020" stroke-width="0.8" />
+  </g>
+  <g id="edit_decision">
+    <polygon points="187.75,398.5 375.0,504.0 187.75,609.5 0.5,504.0" fill="#C8D6E6" stroke="#202020" stroke-width="0.8" />
+  </g>
+  <g id="consensus_decision">
+    <polygon points="734.15,397.8 928.8,504.1 734.15,610.4 539.5,504.1" fill="#C8D6E6" stroke="#202020" stroke-width="0.8" />
+  </g>
+  <g id="new_node">
+    <rect x="562" y="687.3" width="344" height="94.4" rx="47.2" fill="#C8D6E6" stroke="#202020" stroke-width="0.8" />
+  </g>
+  <g id="past_text">
+    <text x="93" y="67.0" xml:space="preserve">
+      <tspan font-family="Hiragino Sans GB" font-size="42" font-weight="normal" font-style="normal" fill="#000000">过去的共识</tspan>
+    </text>
+  </g>
+  <g id="edit_text">
+    <text x="144" y="256.0" xml:space="preserve">
+      <tspan font-family="Hiragino Sans GB" font-size="42" font-weight="normal" font-style="normal" fill="#000000">编辑</tspan>
+    </text>
+  </g>
+  <g id="seek_text">
+    <text x="653.5" y="256.0" xml:space="preserve">
+      <tspan font-family="Hiragino Sans GB" font-size="42" font-weight="normal" font-style="normal" fill="#000000">寻求共识</tspan>
+    </text>
+  </g>
+  <g id="new_text">
+    <text x="632.5" y="751.0" xml:space="preserve">
+      <tspan font-family="Hiragino Sans GB" font-size="42" font-weight="normal" font-style="normal" fill="#000000">新的共识</tspan>
+    </text>
+  </g>
+  <g id="edit_question_line1">
+    <text x="69.75" y="495.5" xml:space="preserve">
+      <tspan font-family="Hiragino Sans GB" font-size="38" font-weight="normal" font-style="normal" fill="#000000">将当时的条目</tspan>
+    </text>
+  </g>
+  <g id="edit_question_line2">
+    <text x="69.5" y="542.25" xml:space="preserve">
+      <tspan font-family="Hiragino Sans GB" font-size="38" font-weight="normal" font-style="normal" fill="#000000">进一步编辑</tspan>
+    </text>
+  </g>
+  <g id="edit_question_mark">
+    <text x="266" y="545.5" xml:space="preserve">
+      <tspan font-family="Arial" font-size="38" font-weight="normal" font-style="normal" fill="#000000">?</tspan>
+    </text>
+  </g>
+  <g id="consensus_question_phrase">
+    <text x="622" y="514.0" xml:space="preserve">
+      <tspan font-family="Hiragino Sans GB" font-size="42" font-weight="normal" font-style="normal" fill="#000000">赞成变更</tspan>
+    </text>
+  </g>
+  <g id="consensus_question_mark">
+    <text x="800" y="514.0" xml:space="preserve">
+      <tspan font-family="Hiragino Sans GB" font-size="42" font-weight="normal" font-style="normal" fill="#000000">?</tspan>
+    </text>
+  </g>
+  <g id="wait_label">
+    <text x="228" y="380.0" xml:space="preserve">
+      <tspan font-family="Hiragino Sans GB" font-size="34" font-weight="normal" font-style="normal" fill="#000000">等待</tspan>
+    </text>
+  </g>
+  <g id="execute_label">
+    <text x="429" y="217.0" xml:space="preserve">
+      <tspan font-family="Hiragino Sans GB" font-size="34" font-weight="normal" font-style="normal" fill="#000000">执行</tspan>
+    </text>
+  </g>
+  <g id="yes_label">
+    <text x="429" y="483.0" xml:space="preserve">
+      <tspan font-family="Hiragino Sans GB" font-size="34" font-weight="normal" font-style="normal" fill="#000000">是</tspan>
+    </text>
+  </g>
+  <g id="no_label">
+    <text x="228" y="688.0" xml:space="preserve">
+      <tspan font-family="Hiragino Sans GB" font-size="34" font-weight="normal" font-style="normal" fill="#000000">否</tspan>
+    </text>
+  </g>
+  <g id="opposition_label">
+    <text x="784" y="384.0" xml:space="preserve">
+      <tspan font-family="Hiragino Sans GB" font-size="34" font-weight="normal" font-style="normal" fill="#000000">反对</tspan>
+    </text>
+  </g>
+  <g id="approval_label">
+    <text x="792" y="652.0" xml:space="preserve">
+      <tspan font-family="Hiragino Sans GB" font-size="34" font-weight="normal" font-style="normal" fill="#000000">赞成</tspan>
+    </text>
+  </g>
+</svg>

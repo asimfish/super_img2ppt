@@ -1,0 +1,3736 @@
+{
+  "version": 1,
+  "title": "NASA Example Mission Applications — editable screenshot reconstruction",
+  "slide_width_inches": 13.333333,
+  "fonts": {
+    "latin": [
+      "Arial"
+    ],
+    "cjk": [
+      "PingFang SC"
+    ]
+  },
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 1600,
+      "height": 1200,
+      "source": "assets/02bb47bd5ef1b6d92bf4.png",
+      "background": "#FFFFFF",
+      "notes": "Reconstructed from the provided NASA page 18 screenshot only. No original speaker notes were supplied. Source wording Software Bus) is retained exactly. Connector endpoints use fixed source coordinates and do not automatically reroute after a node is moved. Header texture and both brand marks are the only raster assets.",
+      "reviewed": true,
+      "elements": [
+        {
+          "id": "header_nasa",
+          "kind": "image",
+          "z": 0,
+          "box": [
+            0,
+            0,
+            150,
+            134
+          ],
+          "path": "assets/670da472fa06718912ef.png",
+          "provenance": "Exact crop of user-authorized nasa_blank_header.png from the same NASA presentation; not generated.",
+          "contains_text": true,
+          "role": "content"
+        },
+        {
+          "id": "header_texture",
+          "kind": "image",
+          "z": 0,
+          "box": [
+            150,
+            0,
+            1268,
+            134
+          ],
+          "path": "assets/82685f6671611b867594.png",
+          "provenance": "Exact crop of user-authorized nasa_blank_header.png from the same NASA presentation; not generated.",
+          "contains_text": false,
+          "role": "background"
+        },
+        {
+          "id": "header_cfs",
+          "kind": "image",
+          "z": 0,
+          "box": [
+            1418,
+            0,
+            182,
+            134
+          ],
+          "path": "assets/b6405663db0a443c1e84.png",
+          "provenance": "Exact crop of user-authorized nasa_blank_header.png from the same NASA presentation; not generated.",
+          "contains_text": true,
+          "role": "content"
+        },
+        {
+          "id": "title",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            350.5,
+            36.6,
+            910,
+            81
+          ],
+          "font_family": "Arial",
+          "font_size": 62.22222222222222,
+          "bold": true,
+          "color": "#FFFFFF",
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "runs": [
+            {
+              "text": "Example Mission Applications",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 62.22222222222222,
+              "bold": true,
+              "italic": false,
+              "color": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "id": "instruments_back",
+          "kind": "shape",
+          "z": 18,
+          "box": [
+            841,
+            146.5,
+            179,
+            52
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "instruments_front",
+          "kind": "shape",
+          "z": 19,
+          "box": [
+            828,
+            159.8,
+            179,
+            52
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "stroke_width": 1.15,
+          "allow_overlap_with": [
+            "instruments_back"
+          ],
+          "overlap_reason": "Source shows two offset overlapping instrument rectangles."
+        },
+        {
+          "id": "instruments_label",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            845.2,
+            167.07,
+            129.67,
+            31.778
+          ],
+          "font_family": "Arial",
+          "font_size": 24.444444444444443,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "instruments_front",
+          "allow_overlap_with": [
+            "instruments_back"
+          ],
+          "overlap_reason": "Label sits on the front instrument sheet, which covers the rear sheet.",
+          "runs": [
+            {
+              "text": "Instruments",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 24.444444444444443,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "software_bus_outer",
+          "kind": "shape",
+          "z": 15,
+          "box": [
+            279.5,
+            430.5,
+            1028,
+            308
+          ],
+          "shape": "rect",
+          "fill": "#00FF00",
+          "stroke": null,
+          "stroke_width": 1.15
+        },
+        {
+          "id": "software_bus_interior",
+          "kind": "shape",
+          "z": 16,
+          "box": [
+            314,
+            463,
+            959,
+            243
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": null,
+          "stroke_width": 1.15,
+          "container": "software_bus_outer"
+        },
+        {
+          "id": "software_bus_label",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            498.2,
+            670.18,
+            582.91,
+            35.6
+          ],
+          "font_family": "Arial",
+          "font_size": 31.11111111111111,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "software_bus_interior",
+          "allow_overlap_with": [
+            "software_bus_outer"
+          ],
+          "overlap_reason": "The white software-bus interior masks the solid green parent rectangle behind this label.",
+          "runs": [
+            {
+              "text": "Inter-task Message Router (Software Bus)",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 31.11111111111111,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "scheduler",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            319.8,
+            254.8,
+            109,
+            110
+          ],
+          "shape": "ellipse",
+          "fill": "#00CCFF",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "scheduler_label_1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            336.2,
+            297.55,
+            82.32,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "scheduler",
+          "runs": [
+            {
+              "text": "Scheduler",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "limit_checker",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            505.2,
+            253.2,
+            109,
+            108
+          ],
+          "shape": "ellipse",
+          "fill": "#00CCFF",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "limit_checker_label_1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            535.2,
+            284.33,
+            39.54,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "limit_checker",
+          "runs": [
+            {
+              "text": "Limit",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "limit_checker_label_2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            520.2,
+            304.55,
+            68.46,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "limit_checker",
+          "runs": [
+            {
+              "text": "Checker",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "memory_manager",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            678.4,
+            254,
+            108.6,
+            110
+          ],
+          "shape": "ellipse",
+          "fill": "#00CCFF",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "memory_manager_label_1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            695.2,
+            279.33,
+            66.21,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "memory_manager",
+          "runs": [
+            {
+              "text": "Memory",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "memory_manager_label_2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            697.2,
+            307.33,
+            72.43,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "memory_manager",
+          "runs": [
+            {
+              "text": "Manager",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "space_wire",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            879.5,
+            253.2,
+            109,
+            112
+          ],
+          "shape": "ellipse",
+          "fill": "#FFFF99",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "space_wire_label_1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            908.2,
+            284.55,
+            52.42,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "space_wire",
+          "runs": [
+            {
+              "text": "Space",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "space_wire_label_2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            915.2,
+            304.33,
+            38.54,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "space_wire",
+          "runs": [
+            {
+              "text": "Wire",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "instrument_manager",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            1041.2,
+            253,
+            109,
+            110
+          ],
+          "shape": "ellipse",
+          "fill": "#FFFF99",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "instrument_manager_label_1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1059.2,
+            291.33,
+            86.0,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "instrument_manager",
+          "runs": [
+            {
+              "text": "Instrument",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "instrument_manager_label_2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1067.2,
+            311.33,
+            72.43,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "instrument_manager",
+          "runs": [
+            {
+              "text": "Manager",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "cfdp_transfer",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            1188,
+            253.2,
+            108.6,
+            110
+          ],
+          "shape": "ellipse",
+          "fill": "#00CCFF",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "cfdp_transfer_label_1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1200.2,
+            284.55,
+            83.99,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "cfdp_transfer",
+          "runs": [
+            {
+              "text": "CFDP File",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "cfdp_transfer_label_2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1208.2,
+            304.54,
+            68.44,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "cfdp_transfer",
+          "runs": [
+            {
+              "text": "Transfer",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stored_command",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            114.8,
+            444.8,
+            109,
+            109
+          ],
+          "shape": "ellipse",
+          "fill": "#00CCFF",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "stored_command_label_1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            149.2,
+            480.55,
+            54.39,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "stored_command",
+          "runs": [
+            {
+              "text": "Stored",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stored_command_label_2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            134.2,
+            500.55,
+            84.02,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "stored_command",
+          "runs": [
+            {
+              "text": "Command",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "packet_manager",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            114.8,
+            598.3,
+            109,
+            110
+          ],
+          "shape": "ellipse",
+          "fill": "#00CCFF",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "packet_manager_label_1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            146.2,
+            632.33,
+            56.36,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "packet_manager",
+          "runs": [
+            {
+              "text": "Packet",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "packet_manager_label_2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            139.2,
+            652.33,
+            72.43,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "packet_manager",
+          "runs": [
+            {
+              "text": "Manager",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "scheduler_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              373.3,
+              397.75
+            ],
+            [
+              373.3,
+              365
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "scheduler_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              373.3,
+              397.75
+            ],
+            [
+              373.3,
+              430.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "limit_checker_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              554.5,
+              395.35
+            ],
+            [
+              554.5,
+              361.7
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "limit_checker_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              554.5,
+              395.35
+            ],
+            [
+              554.5,
+              429
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "memory_manager_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              727.5,
+              396.5
+            ],
+            [
+              727.5,
+              364.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "memory_manager_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              727.5,
+              396.5
+            ],
+            [
+              727.5,
+              428.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "space_wire_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              931.1,
+              397.75
+            ],
+            [
+              931.1,
+              365.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "space_wire_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              931.1,
+              397.75
+            ],
+            [
+              931.1,
+              430
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "instrument_manager_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1090.8,
+              396.75
+            ],
+            [
+              1090.8,
+              364
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "instrument_manager_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1090.8,
+              396.75
+            ],
+            [
+              1090.8,
+              429.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "cfdp_transfer_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1237.3,
+              396.5
+            ],
+            [
+              1237.3,
+              364
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "cfdp_transfer_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1237.3,
+              396.5
+            ],
+            [
+              1237.3,
+              429
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "stored_command_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              253.25,
+              501.0
+            ],
+            [
+              227,
+              501
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "stored_command_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              253.25,
+              501.0
+            ],
+            [
+              279.5,
+              501
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "packet_manager_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              253.25,
+              647.7
+            ],
+            [
+              227,
+              647.7
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "packet_manager_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              253.25,
+              647.7
+            ],
+            [
+              279.5,
+              647.7
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "instruments_space_wire_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              934.5,
+              233.25
+            ],
+            [
+              934.5,
+              213.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "instruments_space_wire_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              934.5,
+              233.25
+            ],
+            [
+              934.5,
+              253
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "instruments_manager_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1027.75,
+              239.75
+            ],
+            [
+              988.5,
+              213.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "instruments_manager_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1027.75,
+              239.75
+            ],
+            [
+              1067,
+              266
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true,
+          "allow_overlap_with": [
+            "instrument_manager"
+          ],
+          "overlap_reason": "Source instrument arrow meets and slightly crosses the instrument-manager circular outline."
+        },
+        {
+          "id": "storage_bottom",
+          "kind": "shape",
+          "z": 7,
+          "box": [
+            1321,
+            242,
+            138,
+            38
+          ],
+          "shape": "ellipse",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "storage_body",
+          "kind": "shape",
+          "z": 8,
+          "box": [
+            1321,
+            179,
+            138,
+            82
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": null,
+          "stroke_width": 1.15,
+          "allow_overlap_with": [
+            "storage_bottom"
+          ],
+          "overlap_reason": "Cylinder body intentionally hides the upper portion of its bottom ellipse."
+        },
+        {
+          "id": "storage_top",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            1321,
+            160,
+            138,
+            38
+          ],
+          "shape": "ellipse",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "stroke_width": 1.15,
+          "allow_overlap_with": [
+            "storage_body"
+          ],
+          "overlap_reason": "Top ellipse overlays the cylinder body as in the source."
+        },
+        {
+          "id": "storage_left_side",
+          "kind": "line",
+          "z": 9,
+          "points": [
+            [
+              1321,
+              179
+            ],
+            [
+              1321,
+              261
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.15,
+          "arrow": false,
+          "allow_overlap_with": [
+            "storage_body",
+            "storage_bottom",
+            "storage_top"
+          ],
+          "overlap_reason": "Side line forms the shared boundary of the editable cylinder components."
+        },
+        {
+          "id": "storage_right_side",
+          "kind": "line",
+          "z": 9,
+          "points": [
+            [
+              1459,
+              179
+            ],
+            [
+              1459,
+              261
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.15,
+          "arrow": false,
+          "allow_overlap_with": [
+            "storage_body",
+            "storage_bottom",
+            "storage_top"
+          ],
+          "overlap_reason": "Side line forms the shared boundary of the editable cylinder components."
+        },
+        {
+          "id": "storage_label_1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1372.2,
+            203.33,
+            44.48,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "allow_overlap_with": [
+            "storage_body",
+            "storage_bottom"
+          ],
+          "overlap_reason": "Editable cylinder label is drawn over the native body and bottom components.",
+          "container": "storage_body",
+          "runs": [
+            {
+              "text": "Mass",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "storage_label_2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1362.2,
+            223.55,
+            64.28,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "allow_overlap_with": [
+            "storage_body",
+            "storage_bottom"
+          ],
+          "overlap_reason": "Editable cylinder label is drawn over the native body and bottom components.",
+          "container": "storage_body",
+          "runs": [
+            {
+              "text": "Storage",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "storage_label_3",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1347.2,
+            244.55,
+            94.87,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "allow_overlap_with": [
+            "storage_body",
+            "storage_bottom"
+          ],
+          "overlap_reason": "Source File System label spans the editable cylinder body and bottom ellipse; neither single component encloses its complete font frame, so both exact background components are named.",
+          "runs": [
+            {
+              "text": "File System",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "manager_storage_vertical",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1094.8,
+              213.5
+            ],
+            [
+              1094.8,
+              252.8
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true,
+          "allow_overlap_with": [
+            "manager_storage_horizontal"
+          ],
+          "overlap_reason": "These two segments intentionally form the single source right-angle instrument-storage connector."
+        },
+        {
+          "id": "manager_storage_horizontal",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1094.8,
+              213.5
+            ],
+            [
+              1320.8,
+              213.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true,
+          "allow_overlap_with": [
+            "storage_left_side"
+          ],
+          "overlap_reason": "Source arrow tip meets the cylinder left outline; 0.844 square pixel stroke contact."
+        },
+        {
+          "id": "cfdp_storage",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1272,
+              263.6
+            ],
+            [
+              1321,
+              240
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true,
+          "allow_overlap_with": [
+            "storage_left_side",
+            "cfdp_transfer"
+          ],
+          "overlap_reason": "Source arrow tip meets the cylinder left outline; 1.436 square pixel stroke contact. Source connector starts at the CFDP circle outline; 2.815 square pixel stroke contact."
+        },
+        {
+          "id": "data_storage",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            1367.3,
+            393.6,
+            107,
+            109.3
+          ],
+          "shape": "ellipse",
+          "fill": "#00CCFF",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "data_storage_line1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1403.2,
+            417.91,
+            44.24,
+            26.0
+          ],
+          "font_family": "Arial",
+          "font_size": 20,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "data_storage",
+          "runs": [
+            {
+              "text": "Data",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "data_storage_line2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1389.2,
+            436.16,
+            72.04,
+            26.0
+          ],
+          "font_family": "Arial",
+          "font_size": 20,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "data_storage",
+          "runs": [
+            {
+              "text": "Storage",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "file_manager",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            1361.8,
+            524.5,
+            106.5,
+            109.2
+          ],
+          "shape": "ellipse",
+          "fill": "#00CCFF",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "file_manager_line1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1402.2,
+            550.91,
+            34.22,
+            26.0
+          ],
+          "font_family": "Arial",
+          "font_size": 20,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "file_manager",
+          "runs": [
+            {
+              "text": "File",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "file_manager_line2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1380.2,
+            570.91,
+            81.2,
+            26.0
+          ],
+          "font_family": "Arial",
+          "font_size": 20,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "file_manager",
+          "runs": [
+            {
+              "text": "Manager",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "gnc_back",
+          "kind": "shape",
+          "z": 18,
+          "box": [
+            1360.5,
+            655.5,
+            110,
+            113
+          ],
+          "shape": "ellipse",
+          "fill": "#FFFF99",
+          "stroke": "#555555",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "gnc_middle",
+          "kind": "shape",
+          "z": 19,
+          "box": [
+            1367.5,
+            657.5,
+            110,
+            113
+          ],
+          "shape": "ellipse",
+          "fill": "#FFFF99",
+          "stroke": "#555555",
+          "stroke_width": 1.15,
+          "allow_overlap_with": [
+            "gnc_back"
+          ],
+          "overlap_reason": "Source mission GN&C is a stack of offset yellow circular applications."
+        },
+        {
+          "id": "gnc_front",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            1374.5,
+            660,
+            110,
+            112
+          ],
+          "shape": "ellipse",
+          "fill": "#FFFF99",
+          "stroke": "#555555",
+          "stroke_width": 1.15,
+          "allow_overlap_with": [
+            "gnc_back",
+            "gnc_middle"
+          ],
+          "overlap_reason": "Source mission GN&C is a stack of offset yellow circular applications."
+        },
+        {
+          "id": "gnc_label",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1411.2,
+            700.87,
+            48.22,
+            20.8
+          ],
+          "font_family": "Arial",
+          "font_size": 16,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "gnc_front",
+          "allow_overlap_with": [
+            "gnc_back",
+            "gnc_middle"
+          ],
+          "overlap_reason": "The front circle and its label cover the rear circles of the source stack.",
+          "runs": [
+            {
+              "text": "GN&C",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 16,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "data_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1337.75,
+              454.8
+            ],
+            [
+              1307.5,
+              454.8
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "data_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1337.75,
+              454.8
+            ],
+            [
+              1368,
+              454.8
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true,
+          "allow_overlap_with": [
+            "data_storage"
+          ],
+          "overlap_reason": "Source bus arrow tip touches the data-storage circle; 0.610 square pixel stroke contact."
+        },
+        {
+          "id": "file_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1332.75,
+              574.8
+            ],
+            [
+              1307.5,
+              574.8
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "file_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1332.75,
+              574.8
+            ],
+            [
+              1358,
+              574.8
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "gnc_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1333.75,
+              706.8
+            ],
+            [
+              1307.5,
+              706.8
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "gnc_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1333.75,
+              706.8
+            ],
+            [
+              1360,
+              706.8
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "data_storage_up",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1424.2,
+              388
+            ],
+            [
+              1424.2,
+              280.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "file_storage_vertical",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1344,
+              507.5
+            ],
+            [
+              1344,
+              280.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true,
+          "allow_overlap_with": [
+            "data_bus_a",
+            "data_bus_b"
+          ],
+          "overlap_reason": "Source has an unjoined crossing of the file-storage vertical line with the data-storage bus link."
+        },
+        {
+          "id": "file_storage_diagonal",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1344,
+              507.5
+            ],
+            [
+              1384,
+              534.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true,
+          "allow_overlap_with": [
+            "file_storage_vertical"
+          ],
+          "overlap_reason": "These two segments intentionally meet at the source file-storage connector elbow."
+        },
+        {
+          "id": "bus1553_shadow",
+          "kind": "shape",
+          "z": 18,
+          "box": [
+            336,
+            815,
+            108.6,
+            110
+          ],
+          "shape": "ellipse",
+          "fill": "#00CCFF",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "bus1553",
+          "kind": "shape",
+          "z": 19,
+          "box": [
+            334.5,
+            813.5,
+            108,
+            109.2
+          ],
+          "shape": "ellipse",
+          "fill": "#FFFF99",
+          "stroke": "#000000",
+          "stroke_width": 1.15,
+          "allow_overlap_with": [
+            "bus1553_shadow"
+          ],
+          "overlap_reason": "Source has a thin cyan offset circle visible behind the yellow 1553 support circle."
+        },
+        {
+          "id": "bus1553_label_1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            355.2,
+            848.38,
+            77.14,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "bus1553",
+          "allow_overlap_with": [
+            "bus1553_shadow"
+          ],
+          "overlap_reason": "Text belongs to the yellow foreground application covering the cyan offset circle.",
+          "runs": [
+            {
+              "text": "1553 Bus",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "bus1553_label_2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            361.2,
+            868.55,
+            64.28,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "bus1553",
+          "allow_overlap_with": [
+            "bus1553_shadow"
+          ],
+          "overlap_reason": "Text belongs to the yellow foreground application covering the cyan offset circle.",
+          "runs": [
+            {
+              "text": "Support",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "telemetry_output",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            482.5,
+            812.7,
+            109,
+            109
+          ],
+          "shape": "ellipse",
+          "fill": "#FFFF99",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "telemetry_output_label_1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            501.2,
+            853.33,
+            81.01,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "telemetry_output",
+          "runs": [
+            {
+              "text": "Telemetry",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "telemetry_output_label_2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            514.2,
+            873.55,
+            55.38,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "telemetry_output",
+          "runs": [
+            {
+              "text": "Output",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "command_ingest",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            608.5,
+            812.7,
+            109,
+            109
+          ],
+          "shape": "ellipse",
+          "fill": "#FFFF99",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "command_ingest_label_1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            623.2,
+            853.55,
+            84.02,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "command_ingest",
+          "runs": [
+            {
+              "text": "Command",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "command_ingest_label_2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            641.2,
+            873.33,
+            50.44,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "command_ingest",
+          "runs": [
+            {
+              "text": "Ingest",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "software_service",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            728.8,
+            810,
+            106.5,
+            109.2
+          ],
+          "shape": "ellipse",
+          "fill": "#00FF00",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "software_service_label_1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            748.2,
+            838.55,
+            72.17,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "software_service",
+          "runs": [
+            {
+              "text": "Software",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "software_service_label_2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            765.2,
+            858.54,
+            38.56,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "software_service",
+          "runs": [
+            {
+              "text": "Bus)",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "time_services",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            854.5,
+            813.5,
+            108.7,
+            109
+          ],
+          "shape": "ellipse",
+          "fill": "#00FF00",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "time_services_label_1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            890.2,
+            841.33,
+            41.5,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "time_services",
+          "runs": [
+            {
+              "text": "Time",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "time_services_label_2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            875.2,
+            861.55,
+            70.18,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "time_services",
+          "runs": [
+            {
+              "text": "Services",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "executive_services",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            978.5,
+            807.8,
+            108,
+            109
+          ],
+          "shape": "ellipse",
+          "fill": "#00FF00",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "executive_services_label_1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            998.2,
+            841.33,
+            79.09,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "executive_services",
+          "runs": [
+            {
+              "text": "Executive",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "executive_services_label_2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1001.2,
+            861.55,
+            70.18,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "executive_services",
+          "runs": [
+            {
+              "text": "Services",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "event_services",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            1095,
+            813.5,
+            108,
+            109
+          ],
+          "shape": "ellipse",
+          "fill": "#00FF00",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "event_services_label_1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1133.2,
+            844.33,
+            47.47,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "event_services",
+          "runs": [
+            {
+              "text": "Event",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "event_services_label_2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1121.2,
+            863.55,
+            70.18,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "event_services",
+          "runs": [
+            {
+              "text": "Services",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "table_services",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            1228.1,
+            813.5,
+            108.5,
+            109
+          ],
+          "shape": "ellipse",
+          "fill": "#00FF00",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "table_services_label_1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1261.2,
+            834.33,
+            46.45,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "table_services",
+          "runs": [
+            {
+              "text": "Table",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "table_services_label_2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1250.2,
+            853.55,
+            70.18,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "table_services",
+          "runs": [
+            {
+              "text": "Services",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "bus1553_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              389.5,
+              771.4
+            ],
+            [
+              389.5,
+              738.8
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "bus1553_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              389.5,
+              771.4
+            ],
+            [
+              389.5,
+              804
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "telemetry_output_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              536.0,
+              771.4
+            ],
+            [
+              536,
+              738.8
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "telemetry_output_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              536.0,
+              771.4
+            ],
+            [
+              536,
+              804
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "command_ingest_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              654.5,
+              771.4
+            ],
+            [
+              654.5,
+              738.8
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "command_ingest_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              654.5,
+              771.4
+            ],
+            [
+              654.5,
+              804
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "software_service_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              776.2,
+              771.4
+            ],
+            [
+              776.2,
+              738.8
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "software_service_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              776.2,
+              771.4
+            ],
+            [
+              776.2,
+              804
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "time_services_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              908.0,
+              771.4
+            ],
+            [
+              908,
+              738.8
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "time_services_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              908.0,
+              771.4
+            ],
+            [
+              908,
+              804
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "executive_services_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1029.5,
+              771.4
+            ],
+            [
+              1029.5,
+              738.8
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "executive_services_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1029.5,
+              771.4
+            ],
+            [
+              1029.5,
+              804
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "event_services_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1149.5,
+              771.4
+            ],
+            [
+              1149.5,
+              738.8
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "event_services_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1149.5,
+              771.4
+            ],
+            [
+              1149.5,
+              804
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "table_services_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1281.4,
+              771.4
+            ],
+            [
+              1281.4,
+              738.8
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "table_services_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1281.4,
+              771.4
+            ],
+            [
+              1281.4,
+              804
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 2.25,
+          "arrow": true
+        },
+        {
+          "id": "gnc_hardware",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            334.5,
+            992,
+            112,
+            52.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "gnc_hardware_line1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            362.2,
+            1001.55,
+            53.37,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "gnc_hardware",
+          "runs": [
+            {
+              "text": "GN&C",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "gnc_hardware_line2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            350.2,
+            1021.33,
+            79.08,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "gnc_hardware",
+          "runs": [
+            {
+              "text": "Hardware",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "gnc_hardware_bus_a",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              390.5,
+              959.0
+            ],
+            [
+              390.5,
+              926
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.8,
+          "arrow": true
+        },
+        {
+          "id": "gnc_hardware_bus_b",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              390.5,
+              959.0
+            ],
+            [
+              390.5,
+              992
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.8,
+          "arrow": true
+        },
+        {
+          "id": "communication_interfaces",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            1014.2,
+            959.3,
+            163,
+            55
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "communication_interfaces_line1",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1035.2,
+            968.55,
+            125.53,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "communication_interfaces",
+          "runs": [
+            {
+              "text": "Communication",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "communication_interfaces_line2",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1059.2,
+            988.54,
+            80.08,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "container": "communication_interfaces",
+          "runs": [
+            {
+              "text": "Interfaces",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "commands_to_ingest_horizontal",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              1014.2,
+              980
+            ],
+            [
+              658.3,
+              980
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.8,
+          "arrow": false,
+          "allow_overlap_with": [
+            "commands_to_ingest_vertical"
+          ],
+          "overlap_reason": "These two segments intentionally form the single source command-ingest elbow."
+        },
+        {
+          "id": "commands_to_ingest_vertical",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              658.3,
+              980
+            ],
+            [
+              658.3,
+              922.8
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.8,
+          "arrow": true
+        },
+        {
+          "id": "commands_label",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            841.2,
+            955.55,
+            92.91,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "runs": [
+            {
+              "text": "Commands",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "telemetry_down",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              540.3,
+              922
+            ],
+            [
+              540.3,
+              1007.3
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.8,
+          "arrow": false,
+          "allow_overlap_with": [
+            "telemetry_to_interfaces"
+          ],
+          "overlap_reason": "These two segments intentionally form the source real-time telemetry elbow."
+        },
+        {
+          "id": "telemetry_to_interfaces",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              540.3,
+              1007.3
+            ],
+            [
+              1008.5,
+              1007.3
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.8,
+          "arrow": true
+        },
+        {
+          "id": "telemetry_path_label",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            815.2,
+            1018.33,
+            162.024,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "runs": [
+            {
+              "text": "Real-time Telemetry",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "file_downlink_label",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            815.2,
+            1044.33,
+            104.78,
+            23.111
+          ],
+          "font_family": "Arial",
+          "font_size": 17.77777777777778,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "runs": [
+            {
+              "text": "File downlink",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.77777777777778,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "legend_cfs",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            14.8,
+            972.5,
+            45.5,
+            45.5
+          ],
+          "shape": "ellipse",
+          "fill": "#00CCFF",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "legend_cfs_label",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            73.2,
+            981.76,
+            167.481,
+            28.889
+          ],
+          "font_family": "Arial",
+          "font_size": 22.22222222222222,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "runs": [
+            {
+              "text": "cFS Applications",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22.22222222222222,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "legend_mission",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            13.5,
+            1034.5,
+            45.2,
+            45.5
+          ],
+          "shape": "ellipse",
+          "fill": "#FFFF99",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "legend_mission_label",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            71.2,
+            1039.49,
+            204.0,
+            28.889
+          ],
+          "font_family": "Arial",
+          "font_size": 22.22222222222222,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "runs": [
+            {
+              "text": "Mission Applications",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22.22222222222222,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "legend_core",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            13.5,
+            1101.4,
+            45.2,
+            45.5
+          ],
+          "shape": "ellipse",
+          "fill": "#00FF00",
+          "stroke": "#000000",
+          "stroke_width": 1.15
+        },
+        {
+          "id": "legend_core_label",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            73.2,
+            1108.76,
+            269.0,
+            28.889
+          ],
+          "font_family": "Arial",
+          "font_size": 22.22222222222222,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "runs": [
+            {
+              "text": "Core Services/Applications",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22.22222222222222,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "footer_rule_black",
+          "kind": "shape",
+          "z": 20,
+          "shape": "rect",
+          "box": [
+            0,
+            1161,
+            1600,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null
+        },
+        {
+          "id": "footer_rule_grey",
+          "kind": "line",
+          "z": 20,
+          "points": [
+            [
+              0,
+              1164
+            ],
+            [
+              1600,
+              1164
+            ]
+          ],
+          "stroke": "#777777",
+          "stroke_width": 1,
+          "arrow": false
+        },
+        {
+          "id": "page_number",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            1495.2,
+            1168.72,
+            31.66,
+            30.6
+          ],
+          "font_family": "Arial",
+          "font_size": 26.666666666666668,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "color": "#000000",
+          "bold": false,
+          "runs": [
+            {
+              "text": "18",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26.666666666666668,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

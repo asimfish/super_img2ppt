@@ -1,0 +1,705 @@
+{
+  "status": "review",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "review",
+      "findings": [
+        {
+          "slide": "nasa_06",
+          "code": "raster_text",
+          "severity": "warning",
+          "elements": [
+            "nasa-logo"
+          ],
+          "message": "Text inside this independent image remains noneditable"
+        },
+        {
+          "slide": "nasa_06",
+          "code": "raster_text",
+          "severity": "warning",
+          "elements": [
+            "cfs-logo"
+          ],
+          "message": "Text inside this independent image remains noneditable"
+        },
+        {
+          "slide": "nasa_06",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "p1a",
+            "p1b"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "nasa_06",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "p2a",
+            "p2b"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "nasa_06",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "p3a",
+            "p3b"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "nasa_06",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "s1a",
+            "s1b"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "nasa_06",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "s2a",
+            "s2b"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "nasa_06",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "t1a",
+            "t1b"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "nasa_06",
+          "counts": {
+            "image": 3,
+            "text": 21,
+            "line": 1,
+            "shape": 5
+          },
+          "intentional_overlaps": [],
+          "text_layouts": {
+            "title": {
+              "scale": 1,
+              "effective_font_size_px": 62.2222,
+              "width_px": 646.0,
+              "height_px": 71.556,
+              "available_width_px": 649.0,
+              "available_height_px": 72.5556,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 646.5,
+              "required_height_px": 72.056,
+              "fits": true,
+              "lines": [
+                "Project Centric Reuse"
+              ]
+            },
+            "page-number": {
+              "scale": 1,
+              "effective_font_size_px": 26.6667,
+              "width_px": 15.0,
+              "height_px": 30.667,
+              "available_width_px": 18.0,
+              "available_height_px": 31.25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 15.5,
+              "required_height_px": 31.167,
+              "fits": true,
+              "lines": [
+                "6"
+              ]
+            },
+            "p1a": {
+              "scale": 1,
+              "effective_font_size_px": 53.55,
+              "width_px": 1384.75,
+              "height_px": 61.582,
+              "available_width_px": 1387.75,
+              "available_height_px": 62.5825,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 1385.25,
+              "required_height_px": 62.082,
+              "fits": true,
+              "lines": [
+                "“Clone & Own” - Used similar heritage missions as starting"
+              ]
+            },
+            "p1b": {
+              "scale": 1,
+              "effective_font_size_px": 53.55,
+              "width_px": 116.0,
+              "height_px": 61.582,
+              "available_width_px": 119.0,
+              "available_height_px": 62.5825,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 116.5,
+              "required_height_px": 62.082,
+              "fits": true,
+              "lines": [
+                "point"
+              ]
+            },
+            "p2a": {
+              "scale": 1,
+              "effective_font_size_px": 53.55,
+              "width_px": 1411.0,
+              "height_px": 61.582,
+              "available_width_px": 1414.0,
+              "available_height_px": 62.5825,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 1411.5,
+              "required_height_px": 62.082,
+              "fits": true,
+              "lines": [
+                "Changes made to the heritage software for the new mission"
+              ]
+            },
+            "p2b": {
+              "scale": 1,
+              "effective_font_size_px": 53.55,
+              "width_px": 790.5,
+              "height_px": 61.582,
+              "available_width_px": 793.5,
+              "available_height_px": 62.5825,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 791.0,
+              "required_height_px": 62.082,
+              "fits": true,
+              "lines": [
+                "were not systematically managed"
+              ]
+            },
+            "p3a": {
+              "scale": 1,
+              "effective_font_size_px": 53.55,
+              "width_px": 1363.5,
+              "height_px": 61.582,
+              "available_width_px": 1366.5,
+              "available_height_px": 62.5825,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 1364.0,
+              "required_height_px": 62.082,
+              "fits": true,
+              "lines": [
+                "Inconsistent and minimal flight software (FSW) reuse cost"
+              ]
+            },
+            "p3b": {
+              "scale": 1,
+              "effective_font_size_px": 53.55,
+              "width_px": 181.5,
+              "height_px": 61.582,
+              "available_width_px": 184.5,
+              "available_height_px": 62.5825,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 182.0,
+              "required_height_px": 62.082,
+              "fits": true,
+              "lines": [
+                "savings"
+              ]
+            },
+            "s1a": {
+              "scale": 1,
+              "effective_font_size_px": 44.63,
+              "width_px": 1251.5,
+              "height_px": 51.325,
+              "available_width_px": 1254.5,
+              "available_height_px": 52.3245,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 1252.0,
+              "required_height_px": 51.825,
+              "fits": true,
+              "lines": [
+                "New flight hardware and/or operating system required changes"
+              ]
+            },
+            "s1b": {
+              "scale": 1,
+              "effective_font_size_px": 44.63,
+              "width_px": 326.75,
+              "height_px": 51.325,
+              "available_width_px": 329.75,
+              "available_height_px": 52.3245,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 327.25,
+              "required_height_px": 51.825,
+              "fits": true,
+              "lines": [
+                "throughout FSW"
+              ]
+            },
+            "s2a": {
+              "scale": 1,
+              "effective_font_size_px": 44.63,
+              "width_px": 1246.0,
+              "height_px": 51.325,
+              "available_width_px": 1249.0,
+              "available_height_px": 52.3245,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 1246.5,
+              "required_height_px": 51.825,
+              "fits": true,
+              "lines": [
+                "Small FSW requirement changes could have significant testing"
+              ]
+            },
+            "s2b": {
+              "scale": 1,
+              "effective_font_size_px": 44.63,
+              "width_px": 154.75,
+              "height_px": 51.325,
+              "available_width_px": 157.75,
+              "available_height_px": 52.3245,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 155.25,
+              "required_height_px": 51.825,
+              "fits": true,
+              "lines": [
+                "impacts"
+              ]
+            },
+            "s3": {
+              "scale": 1,
+              "effective_font_size_px": 44.63,
+              "width_px": 1107.0,
+              "height_px": 51.325,
+              "available_width_px": 1110.0,
+              "available_height_px": 52.3245,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 1107.5,
+              "required_height_px": 51.825,
+              "fits": true,
+              "lines": [
+                "FSW changes were made at the discretion of developer"
+              ]
+            },
+            "t1a": {
+              "scale": 1,
+              "effective_font_size_px": 44.63,
+              "width_px": 1271.25,
+              "height_px": 51.325,
+              "available_width_px": 1274.25,
+              "available_height_px": 52.3245,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 1271.75,
+              "required_height_px": 51.825,
+              "fits": true,
+              "lines": [
+                "FSW test procedure changes were made at the discretion of the"
+              ]
+            },
+            "t1b": {
+              "scale": 1,
+              "effective_font_size_px": 44.63,
+              "width_px": 113.25,
+              "height_px": 51.325,
+              "available_width_px": 116.25,
+              "available_height_px": 52.3245,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 113.75,
+              "required_height_px": 51.825,
+              "fits": true,
+              "lines": [
+                "tester"
+              ]
+            },
+            "t2": {
+              "scale": 1,
+              "effective_font_size_px": 44.63,
+              "width_px": 1089.0,
+              "height_px": 51.325,
+              "available_width_px": 1092.0,
+              "available_height_px": 52.3245,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 1089.5,
+              "required_height_px": 51.825,
+              "fits": true,
+              "lines": [
+                "Extensive documentation changes were made for style"
+              ]
+            },
+            "s4": {
+              "scale": 1,
+              "effective_font_size_px": 44.63,
+              "width_px": 1061.5,
+              "height_px": 51.325,
+              "available_width_px": 1064.5,
+              "available_height_px": 52.3245,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 1062.0,
+              "required_height_px": 51.825,
+              "fits": true,
+              "lines": [
+                "Not all artifacts from heritage missions were available"
+              ]
+            },
+            "dash-0": {
+              "scale": 1,
+              "effective_font_size_px": 44.63,
+              "width_px": 15.0,
+              "height_px": 51.325,
+              "available_width_px": 18.0,
+              "available_height_px": 52.3245,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 15.5,
+              "required_height_px": 51.825,
+              "fits": true,
+              "lines": [
+                "-"
+              ]
+            },
+            "dash-1": {
+              "scale": 1,
+              "effective_font_size_px": 44.63,
+              "width_px": 15.0,
+              "height_px": 51.325,
+              "available_width_px": 18.0,
+              "available_height_px": 52.3245,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 15.5,
+              "required_height_px": 51.825,
+              "fits": true,
+              "lines": [
+                "-"
+              ]
+            },
+            "dash-2": {
+              "scale": 1,
+              "effective_font_size_px": 44.63,
+              "width_px": 15.0,
+              "height_px": 51.325,
+              "available_width_px": 18.0,
+              "available_height_px": 52.3245,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 15.5,
+              "required_height_px": 51.825,
+              "fits": true,
+              "lines": [
+                "-"
+              ]
+            },
+            "dash-3": {
+              "scale": 1,
+              "effective_font_size_px": 44.63,
+              "width_px": 15.0,
+              "height_px": 51.325,
+              "available_width_px": 18.0,
+              "available_height_px": 52.3245,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 15.5,
+              "required_height_px": 51.825,
+              "fits": true,
+              "lines": [
+                "-"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "pass",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [],
+      "text_boxes": [
+        {
+          "slide": "nasa_06",
+          "element": "title",
+          "expected": "Project Centric Reuse",
+          "rendered": "Project Centric Reuse",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 639.25,
+          "rendered_ink_width_px": 639.476
+        },
+        {
+          "slide": "nasa_06",
+          "element": "page-number",
+          "expected": "6",
+          "rendered": "6",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 12.75,
+          "rendered_ink_width_px": 12.576
+        },
+        {
+          "slide": "nasa_06",
+          "element": "p1a",
+          "expected": "“Clone & Own” - Used similar heritage missions as starting",
+          "rendered": "“Clone & Own” - Used similar heritage missions as starting",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 1379.25,
+          "rendered_ink_width_px": 1376.468
+        },
+        {
+          "slide": "nasa_06",
+          "element": "p1b",
+          "expected": "point",
+          "rendered": "point",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 112.25,
+          "rendered_ink_width_px": 111.88
+        },
+        {
+          "slide": "nasa_06",
+          "element": "p2a",
+          "expected": "Changes made to the heritage software for the new mission",
+          "rendered": "Changes made to the heritage software for the new mission",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 1405.0,
+          "rendered_ink_width_px": 1402.673
+        },
+        {
+          "slide": "nasa_06",
+          "element": "p2b",
+          "expected": "were not systematically managed",
+          "rendered": "gg\r\nwere not systematically managed",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 786.75,
+          "rendered_ink_width_px": 785.14
+        },
+        {
+          "slide": "nasa_06",
+          "element": "p3a",
+          "expected": "Inconsistent and minimal flight software (FSW) reuse cost",
+          "rendered": "Inconsistent and minimal flight software (FSW) reuse cost",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 1358.5,
+          "rendered_ink_width_px": 1356.253
+        },
+        {
+          "slide": "nasa_06",
+          "element": "p3b",
+          "expected": "savings",
+          "rendered": "coss\r\nsavings",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 178.0,
+          "rendered_ink_width_px": 177.286
+        },
+        {
+          "slide": "nasa_06",
+          "element": "s1a",
+          "expected": "New flight hardware and/or operating system required changes",
+          "rendered": "New flight hardware and/or operating system required changes",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 1246.5,
+          "rendered_ink_width_px": 1235.55
+        },
+        {
+          "slide": "nasa_06",
+          "element": "s1b",
+          "expected": "throughout FSW",
+          "rendered": "g\r\nthroughout FSW",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 325.5,
+          "rendered_ink_width_px": 323.141
+        },
+        {
+          "slide": "nasa_06",
+          "element": "s2a",
+          "expected": "Small FSW requirement changes could have significant testing",
+          "rendered": "Small FSW requirement changes could have significant testing",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 1241.0,
+          "rendered_ink_width_px": 1230.728
+        },
+        {
+          "slide": "nasa_06",
+          "element": "s2b",
+          "expected": "impacts",
+          "rendered": "impacts",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 150.25,
+          "rendered_ink_width_px": 148.846
+        },
+        {
+          "slide": "nasa_06",
+          "element": "s3",
+          "expected": "FSW changes were made at the discretion of developer",
+          "rendered": "FSW changes were made at the discretion of developer",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 1103.5,
+          "rendered_ink_width_px": 1093.936
+        },
+        {
+          "slide": "nasa_06",
+          "element": "t1a",
+          "expected": "FSW test procedure changes were made at the discretion of the",
+          "rendered": "FSW test procedure changes were made at the discretion of the",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 1266.0,
+          "rendered_ink_width_px": 1254.926
+        },
+        {
+          "slide": "nasa_06",
+          "element": "t1b",
+          "expected": "tester",
+          "rendered": "tester",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 112.5,
+          "rendered_ink_width_px": 111.255
+        },
+        {
+          "slide": "nasa_06",
+          "element": "t2",
+          "expected": "Extensive documentation changes were made for style",
+          "rendered": "Extensive documentation changes were made for style",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 1083.75,
+          "rendered_ink_width_px": 1074.248
+        },
+        {
+          "slide": "nasa_06",
+          "element": "s4",
+          "expected": "Not all artifacts from heritage missions were available",
+          "rendered": "Not all artifacts from heritage missions were available",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 1056.5,
+          "rendered_ink_width_px": 1047.059
+        },
+        {
+          "slide": "nasa_06",
+          "element": "dash-0",
+          "expected": "-",
+          "rendered": "-",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 12.5,
+          "rendered_ink_width_px": 12.054
+        },
+        {
+          "slide": "nasa_06",
+          "element": "dash-1",
+          "expected": "-",
+          "rendered": "-",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 12.5,
+          "rendered_ink_width_px": 12.054
+        },
+        {
+          "slide": "nasa_06",
+          "element": "dash-2",
+          "expected": "-",
+          "rendered": "-",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 12.5,
+          "rendered_ink_width_px": 12.054
+        },
+        {
+          "slide": "nasa_06",
+          "element": "dash-3",
+          "expected": "-",
+          "rendered": "-",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 12.5,
+          "rendered_ink_width_px": 12.054
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "f547451c54f791f09a013385a1b6b7d05be69b9432ff4d5e697423316a1d8d25",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "nasa_06",
+      "mean_absolute_pixel_error": 0.048521,
+      "comparison": "nasa_06_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

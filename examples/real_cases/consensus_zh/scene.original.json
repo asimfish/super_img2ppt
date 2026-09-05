@@ -1,0 +1,720 @@
+{
+  "version": 1,
+  "title": "consensus_zh",
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 960,
+      "height": 819,
+      "background": "#FFFFFF",
+      "source": "pages/page_001/source.png",
+      "notes": "根据 consensus_zh.png 重建。源图透明区域按白底呈现。中文经原图逐行核对。源字体身份不能从像素唯一识别；中文及右侧问号采用本机 Hiragino Sans GB W3，左侧问号仍为 Arial。全部文字、节点和固定坐标连线都是原生可编辑对象；移动节点不会自动重新布线。左侧菱形经过三版仍有实际渲染 glyph-overflow 检查失败，第二行较源图上移；原生箭头头部小于源图。此文件为保留限制说明的可编辑草稿。",
+      "reviewed": true,
+      "elements": [
+        {
+          "id": "past_node",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            15.7,
+            0.5,
+            344,
+            93.5
+          ],
+          "shape": "round_rect",
+          "fill": "#C8D6E6",
+          "stroke": "#202020",
+          "stroke_width": 0.8,
+          "radius": 46.75
+        },
+        {
+          "id": "edit_node",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            15.7,
+            172,
+            344,
+            140.7
+          ],
+          "shape": "rect",
+          "fill": "#C8D6E6",
+          "stroke": "#202020",
+          "stroke_width": 0.8
+        },
+        {
+          "id": "seek_node",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            562,
+            172,
+            344,
+            140.7
+          ],
+          "shape": "rect",
+          "fill": "#C8D6E6",
+          "stroke": "#202020",
+          "stroke_width": 0.8
+        },
+        {
+          "id": "edit_decision",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            0.5,
+            398.5,
+            374.5,
+            211
+          ],
+          "shape": "diamond",
+          "fill": "#C8D6E6",
+          "stroke": "#202020",
+          "stroke_width": 0.8
+        },
+        {
+          "id": "consensus_decision",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            539.5,
+            397.8,
+            389.3,
+            212.6
+          ],
+          "shape": "diamond",
+          "fill": "#C8D6E6",
+          "stroke": "#202020",
+          "stroke_width": 0.8
+        },
+        {
+          "id": "new_node",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            562,
+            687.3,
+            344,
+            94.4
+          ],
+          "shape": "round_rect",
+          "fill": "#C8D6E6",
+          "stroke": "#202020",
+          "stroke_width": 0.8,
+          "radius": 47.2
+        },
+        {
+          "id": "past_to_edit",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              187.5,
+              94
+            ],
+            [
+              187.5,
+              172
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 0.8,
+          "arrow": true
+        },
+        {
+          "id": "edit_to_decision",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              187.5,
+              312.7
+            ],
+            [
+              187.5,
+              398.5
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 0.8,
+          "arrow": true
+        },
+        {
+          "id": "consensus_to_edit",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              562,
+              242.4
+            ],
+            [
+              359.7,
+              242.4
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 0.8,
+          "arrow": true
+        },
+        {
+          "id": "decision_yes",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              375,
+              503.9
+            ],
+            [
+              539.5,
+              503.9
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 0.8,
+          "arrow": true
+        },
+        {
+          "id": "decision_opposition",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              734.15,
+              397.8
+            ],
+            [
+              734.15,
+              312.7
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 0.8,
+          "arrow": true
+        },
+        {
+          "id": "decision_approval",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              734.15,
+              610.4
+            ],
+            [
+              734.15,
+              687.3
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 0.8,
+          "arrow": true
+        },
+        {
+          "id": "decision_no_vertical",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              187.75,
+              609.5
+            ],
+            [
+              187.75,
+              734.3
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 0.8,
+          "arrow": false
+        },
+        {
+          "id": "decision_no_horizontal",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              187.75,
+              734.3
+            ],
+            [
+              562,
+              734.3
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 0.8,
+          "arrow": true
+        },
+        {
+          "id": "past_text",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            93,
+            30,
+            218,
+            51
+          ],
+          "text": "过去的共识",
+          "font_size": 42,
+          "font_family": "Arial",
+          "cjk_font_family": "Hiragino Sans GB",
+          "bold": false,
+          "color": "#000000",
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "confidence": 1,
+          "container": "past_node",
+          "font_group": "node_text"
+        },
+        {
+          "id": "edit_text",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            144,
+            219,
+            94,
+            51
+          ],
+          "text": "编辑",
+          "font_size": 42,
+          "font_family": "Arial",
+          "cjk_font_family": "Hiragino Sans GB",
+          "bold": false,
+          "color": "#000000",
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "confidence": 1,
+          "container": "edit_node",
+          "font_group": "node_text"
+        },
+        {
+          "id": "seek_text",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            653.5,
+            219,
+            178,
+            51
+          ],
+          "text": "寻求共识",
+          "font_size": 42,
+          "font_family": "Arial",
+          "cjk_font_family": "Hiragino Sans GB",
+          "bold": false,
+          "color": "#000000",
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "confidence": 1,
+          "container": "seek_node",
+          "font_group": "node_text"
+        },
+        {
+          "id": "new_text",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            632.5,
+            714,
+            178,
+            51
+          ],
+          "text": "新的共识",
+          "font_size": 42,
+          "font_family": "Arial",
+          "cjk_font_family": "Hiragino Sans GB",
+          "bold": false,
+          "color": "#000000",
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "confidence": 1,
+          "container": "new_node",
+          "font_group": "node_text"
+        },
+        {
+          "id": "edit_question_line1",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            69.75,
+            462.0,
+            229.0,
+            44.699999999999996
+          ],
+          "text": "将当时的条目",
+          "font_size": 38,
+          "font_family": "Arial",
+          "cjk_font_family": "Hiragino Sans GB",
+          "bold": false,
+          "color": "#000000",
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "confidence": 1,
+          "container": "edit_decision",
+          "font_group": "question_small"
+        },
+        {
+          "id": "edit_question_line2",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            69.5,
+            508.75,
+            191.0,
+            44.699999999999996
+          ],
+          "text": "进一步编辑",
+          "font_size": 38,
+          "font_family": "Arial",
+          "cjk_font_family": "Hiragino Sans GB",
+          "bold": false,
+          "color": "#000000",
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "confidence": 1,
+          "container": "edit_decision",
+          "font_group": "question_small"
+        },
+        {
+          "id": "edit_question_mark",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            266,
+            511,
+            22,
+            43.25
+          ],
+          "text": "?",
+          "font_size": 38,
+          "font_family": "Arial",
+          "cjk_font_family": "Hiragino Sans GB",
+          "bold": false,
+          "color": "#000000",
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1,
+          "confidence": 1,
+          "container": "edit_decision",
+          "font_group": "question_small"
+        },
+        {
+          "id": "consensus_question_phrase",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            622,
+            477,
+            169,
+            51
+          ],
+          "text": "赞成变更",
+          "font_size": 42,
+          "font_family": "Arial",
+          "cjk_font_family": "Hiragino Sans GB",
+          "bold": false,
+          "color": "#000000",
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "confidence": 1,
+          "container": "consensus_decision",
+          "font_group": "node_text"
+        },
+        {
+          "id": "consensus_question_mark",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            800,
+            477,
+            25,
+            51
+          ],
+          "text": "?",
+          "font_size": 42,
+          "font_family": "Hiragino Sans GB",
+          "cjk_font_family": "Hiragino Sans GB",
+          "bold": false,
+          "color": "#000000",
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "confidence": 1,
+          "container": "consensus_decision",
+          "font_group": "node_text"
+        },
+        {
+          "id": "wait_label",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            228,
+            350,
+            76,
+            41
+          ],
+          "text": "等待",
+          "font_size": 34,
+          "font_family": "Arial",
+          "cjk_font_family": "Hiragino Sans GB",
+          "bold": false,
+          "color": "#000000",
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "confidence": 1,
+          "font_group": "branch_label"
+        },
+        {
+          "id": "execute_label",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            429,
+            187,
+            76,
+            41
+          ],
+          "text": "执行",
+          "font_size": 34,
+          "font_family": "Arial",
+          "cjk_font_family": "Hiragino Sans GB",
+          "bold": false,
+          "color": "#000000",
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "confidence": 1,
+          "font_group": "branch_label"
+        },
+        {
+          "id": "yes_label",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            429,
+            453,
+            42,
+            41
+          ],
+          "text": "是",
+          "font_size": 34,
+          "font_family": "Arial",
+          "cjk_font_family": "Hiragino Sans GB",
+          "bold": false,
+          "color": "#000000",
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "confidence": 1,
+          "font_group": "branch_label"
+        },
+        {
+          "id": "no_label",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            228,
+            658,
+            42,
+            41
+          ],
+          "text": "否",
+          "font_size": 34,
+          "font_family": "Arial",
+          "cjk_font_family": "Hiragino Sans GB",
+          "bold": false,
+          "color": "#000000",
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "confidence": 1,
+          "font_group": "branch_label"
+        },
+        {
+          "id": "opposition_label",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            784,
+            354,
+            76,
+            41
+          ],
+          "text": "反对",
+          "font_size": 34,
+          "font_family": "Arial",
+          "cjk_font_family": "Hiragino Sans GB",
+          "bold": false,
+          "color": "#000000",
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "confidence": 1,
+          "font_group": "branch_label"
+        },
+        {
+          "id": "approval_label",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            792,
+            622,
+            76,
+            41
+          ],
+          "text": "赞成",
+          "font_size": 34,
+          "font_family": "Arial",
+          "cjk_font_family": "Hiragino Sans GB",
+          "bold": false,
+          "color": "#000000",
+          "align": "left",
+          "valign": "top",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "confidence": 1,
+          "font_group": "branch_label"
+        }
+      ]
+    }
+  ],
+  "fonts": {
+    "latin": [
+      "Arial"
+    ],
+    "cjk": [
+      "Hiragino Sans GB"
+    ]
+  }
+}

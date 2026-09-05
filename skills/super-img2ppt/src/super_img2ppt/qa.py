@@ -5,11 +5,12 @@ from __future__ import annotations
 import hashlib
 import math
 from collections import Counter
+from functools import lru_cache
 from pathlib import Path
 
 from PIL import Image, ImageChops, ImageDraw, ImageStat
 
-from .layout import TextLayout, text_ink_boxes
+from .layout import TextLayout, text_ink_boxes, text_ink_mask
 from .scene import InputError, safe_asset, text_content
 
 
@@ -124,9 +125,38 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                 if im.size != (slide["width"], slide["height"]):
                     raise InputError(f"Source dimensions disagree with {slide['id']}")
         polys = {eid: polygon(e) for eid, e in elements.items()}
+        text_footprints = {}
+        for eid, element in elements.items():
+            if element["kind"] == "text" and layouts[slide["id"], eid].fits:
+                ink = text_ink_boxes(element, layouts[slide["id"], eid])
+                if ink:
+                    text_footprints[eid] = [
+                        polygon({"kind": "text", "box": [x0, y0, x1 - x0, y1 - y0]})
+                        for x0, y0, x1, y1 in ink
+                    ]
+
+        @lru_cache(maxsize=8)
+        def ink_mask(eid, elements=elements, slide_id=slide["id"]):
+            return text_ink_mask(elements[eid], layouts[slide_id, eid])
+
+        def ink_area(eid, other, *, outside=False):
+            measured = ink_mask(eid)
+            if measured is None:
+                return None
+            mask, left, top = measured
+            clip = Image.new("L", mask.size)
+            ImageDraw.Draw(clip).polygon(
+                [((x - left) * 4, (y - top) * 4) for x, y in other], fill=255
+            )
+            if outside:
+                clip = ImageChops.invert(clip)
+            coverage = ImageChops.multiply(mask, clip)
+            return ImageStat.Stat(coverage).sum[0] / (255 * 16)
+
         for eid, e in elements.items():
             p = polys[eid]
-            stroke = e.get("stroke_width", 1) / 2 if e.get("stroke") else 0
+            # A line's polygon already includes its stroke; shapes have centerline bounds.
+            stroke = e.get("stroke_width", 1) / 2 if e.get("stroke") and e["kind"] != "line" else 0
             if (
                 min(x for x, _ in p) - stroke < -0.5
                 or min(y for _, y in p) - stroke < -0.5
@@ -144,13 +174,29 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                     confidence=e["confidence"],
                 )
             if "container" in e:
-                overlap = area(intersection(p, polys[e["container"]]))
-                if overlap < area(p) - 0.5:
+                container = polys[e["container"]]
+                content = text_footprints.get(eid, [p])
+                outside = any(
+                    area(intersection(part, container)) < area(part) - 0.5 for part in content
+                )
+                if outside and eid in text_footprints:
+                    refined = ink_area(eid, container, outside=True)
+                    if refined is not None:
+                        outside = refined > 0.5
+                if outside:
                     issue(
                         slide,
                         "outside_container",
                         [eid, e["container"]],
-                        "Content is not fully contained by its declared shape",
+                        "Visible content is not fully contained by its declared shape",
+                    )
+                elif area(intersection(p, container)) < area(p) - 0.5:
+                    issue(
+                        slide,
+                        "text_frame_outside_container_only",
+                        [eid, e["container"]],
+                        "Transparent frame corners extend beyond the container; measured visible ink remains inside",
+                        "info",
                     )
             if e["kind"] == "text":
                 layout = layouts[slide["id"], eid]
@@ -204,15 +250,6 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                         "warning",
                     )
         ordered = sorted(elements.values(), key=lambda e: e["z"])
-        text_footprints = {}
-        for eid, element in elements.items():
-            if element["kind"] == "text" and layouts[slide["id"], eid].fits:
-                ink = text_ink_boxes(element, layouts[slide["id"], eid])
-                if ink:
-                    text_footprints[eid] = [
-                        polygon({"kind": "text", "box": [x0, y0, x1 - x0, y1 - y0]})
-                        for x0, y0, x1, y1 in ink
-                    ]
         bounds = {
             eid: (
                 min(x for x, _ in p),
@@ -251,22 +288,23 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                     continue
                 if is_ancestor(lower, upper, elements):
                     continue
-                if (
-                    lower["kind"] == upper["kind"] == "text"
-                    and lo in text_footprints
-                    and hi in text_footprints
-                ):
+                if lo in text_footprints or hi in text_footprints:
                     ink_overlap = sum(
                         area(intersection(a, b))
-                        for a in text_footprints[lo]
-                        for b in text_footprints[hi]
+                        for a in text_footprints.get(lo, [polys[lo]])
+                        for b in text_footprints.get(hi, [polys[hi]])
                     )
+                    if ink_overlap > 0.5 and (lo in text_footprints) != (hi in text_footprints):
+                        text_id, other_id = (lo, hi) if lo in text_footprints else (hi, lo)
+                        refined = ink_area(text_id, polys[other_id])
+                        if refined is not None:
+                            ink_overlap = refined
                     if ink_overlap <= 0.5:
                         issue(
                             slide,
                             "text_frame_overlap_only",
                             [lo, hi],
-                            "Text frame padding overlaps, but measured visible ink remains separate",
+                            "Text-frame overlap is confined to blank space; measured visible ink remains separate",
                             "info",
                         )
                         continue
@@ -288,6 +326,7 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                     "Objects overlap without a verified container or named exemption",
                     area_px2=round(overlap, 3),
                 )
+        ink_mask.cache_clear()
         pages.append(
             {
                 "id": slide["id"],

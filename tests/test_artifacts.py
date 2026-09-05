@@ -1,5 +1,6 @@
 import json
 import shutil
+import subprocess
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
@@ -7,6 +8,7 @@ import pytest
 from PIL import Image
 from pptx import Presentation
 from super_img2ppt.cli import build
+from super_img2ppt.cli import main as cli_main
 from super_img2ppt.export import write_pptx, write_svg
 from super_img2ppt.layout import layout_scene
 from super_img2ppt.prepare import prepare
@@ -97,6 +99,35 @@ def test_build_refuses_bad_geometry_and_marks_unrendered_draft(scene, tmp_path):
     report = build(source, tmp_path / "draft", render=False)
     assert report["status"] == "unverified"
     assert report["automated_checks"]["rendered_text"]["status"] == "not_run"
+
+
+@pytest.mark.parametrize("command", ["check", "build"])
+@pytest.mark.parametrize("failure", ["timeout", "nonzero"])
+def test_font_discovery_failure_is_recorded_without_uncaught_traceback(
+    scene, tmp_path, monkeypatch, capsys, command, failure
+):
+    from super_img2ppt import fonts as font_module
+
+    def fail_discovery(*args, **kwargs):
+        if failure == "timeout":
+            raise subprocess.TimeoutExpired("fc-list", 30)
+        raise subprocess.CalledProcessError(1, "fc-list", stderr="fontconfig failed")
+
+    source = tmp_path / "scene.json"
+    source.write_text(json.dumps(scene))
+    out = tmp_path / "failed"
+    font_module.discover_fonts.cache_clear()
+    monkeypatch.setattr(font_module.shutil, "which", lambda name: "/test/fc-list")
+    monkeypatch.setattr(font_module.subprocess, "run", fail_discovery)
+    try:
+        assert cli_main([command, str(source), "--out", str(out)]) == 2
+        report = json.loads((out / "validation.json").read_text())
+        assert report["status"] == "fail"
+        assert "font discovery" in report["error"]
+        assert not (out / "editable.pptx").exists()
+        assert "Traceback" not in capsys.readouterr().err
+    finally:
+        font_module.discover_fonts.cache_clear()
 
 
 @pytest.mark.render

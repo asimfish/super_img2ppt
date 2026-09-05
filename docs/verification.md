@@ -1,4 +1,19 @@
-# 0.1.0 验收记录
+# 验收记录
+
+## v0.1.1：真实案例与几何修复
+
+2026-09-06：全套 **43 项测试通过**，新增 10 项回归；ruff、格式、skill 元数据/引用和能力登记检查通过。
+六个公开真实案例已从归档场景复跑，五例通过自动阻断检查，密集表格仍有一处字体/网格冲突。
+全案例运行器保持退出码 2，不将已知失败改成成功。详细范围、源图与可编辑文件见
+[真实案例记录](real_cases.md)，机器证据见
+[verification_v011.json](evidence/real_cases/verification_v011.json)。
+
+独立安装包 SHA256：`84a04e0b1510322b712da1c42a2c21131ef31801ce7c0aecc6ffdd676b4c5930`。
+解包后的独立虚拟环境离线安装哈希锁定依赖，并实际重建中文真实案例；
+步骤及退出码见 [package_smoke_v011.json](evidence/real_cases/package_smoke_v011.json)。
+不包含字体或测试素材，原生 PowerPoint/WPS 仍未验证。
+
+## 历史 v0.1.0 验收记录
 
 日期：2026-09-06。发布候选结论：**CONDITIONAL**。
 本地重建、原生对象导出、真实 LibreOffice 渲染及独立安装包检查通过；

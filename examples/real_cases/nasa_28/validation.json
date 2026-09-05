@@ -1,0 +1,2022 @@
+{
+  "status": "review",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "review",
+      "findings": [
+        {
+          "slide": "nasa_28",
+          "code": "raster_text",
+          "severity": "warning",
+          "elements": [
+            "nasa-logo"
+          ],
+          "message": "Text inside this independent image remains noneditable"
+        },
+        {
+          "slide": "nasa_28",
+          "code": "raster_text",
+          "severity": "warning",
+          "elements": [
+            "cfs-logo"
+          ],
+          "message": "Text inside this independent image remains noneditable"
+        }
+      ],
+      "slides": [
+        {
+          "id": "nasa_28",
+          "counts": {
+            "image": 3,
+            "text": 72,
+            "line": 1,
+            "shape": 35
+          },
+          "intentional_overlaps": [],
+          "text_layouts": {
+            "title": {
+              "scale": 1,
+              "effective_font_size_px": 62.2222,
+              "width_px": 304.0,
+              "height_px": 71.556,
+              "available_width_px": 307.0,
+              "available_height_px": 72.5556,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 304.5,
+              "required_height_px": 72.056,
+              "fits": true,
+              "lines": [
+                "Acronyms"
+              ]
+            },
+            "page-number": {
+              "scale": 1,
+              "effective_font_size_px": 26.6667,
+              "width_px": 30.0,
+              "height_px": 30.667,
+              "available_width_px": 33.0,
+              "available_height_px": 31.25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 30.5,
+              "required_height_px": 31.167,
+              "fits": true,
+              "lines": [
+                "28"
+              ]
+            },
+            "acronym-00": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 28.75,
+              "height_px": 20.444,
+              "available_width_px": 31.75,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 29.25,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "API"
+              ]
+            },
+            "expansion-00": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 264.0,
+              "height_px": 20.444,
+              "available_width_px": 267.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 264.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Application Programmer Interface"
+              ]
+            },
+            "acronym-01": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 37.5,
+              "height_px": 20.444,
+              "available_width_px": 40.5,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 38.0,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "ARC"
+              ]
+            },
+            "expansion-01": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 184.5,
+              "height_px": 20.444,
+              "available_width_px": 187.5,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 185.0,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Ames Research Center"
+              ]
+            },
+            "acronym-02": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 34.25,
+              "height_px": 20.444,
+              "available_width_px": 37.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 34.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "BAT"
+              ]
+            },
+            "expansion-02": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 169.5,
+              "height_px": 20.444,
+              "available_width_px": 172.5,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 170.0,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Burst Alert Telescope"
+              ]
+            },
+            "acronym-03": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 61.75,
+              "height_px": 20.444,
+              "available_width_px": 64.75,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 62.25,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "CCSDS"
+              ]
+            },
+            "expansion-03": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 384.25,
+              "height_px": 20.444,
+              "available_width_px": 387.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 384.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Consultative Committee for Space Data Systems"
+              ]
+            },
+            "acronym-04": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 38.25,
+              "height_px": 20.444,
+              "available_width_px": 41.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 38.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "CDH"
+              ]
+            },
+            "expansion-04": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 198.0,
+              "height_px": 20.444,
+              "available_width_px": 201.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 198.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Command Data Handling"
+              ]
+            },
+            "acronym-05": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 48.0,
+              "height_px": 20.444,
+              "available_width_px": 51.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 48.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "CFDP"
+              ]
+            },
+            "expansion-05": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 234.5,
+              "height_px": 20.444,
+              "available_width_px": 237.5,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 235.0,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "CCSDS File Delivery Protocol"
+              ]
+            },
+            "acronym-06": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 31.5,
+              "height_px": 20.444,
+              "available_width_px": 34.5,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 32.0,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "cFE"
+              ]
+            },
+            "expansion-06": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 164.75,
+              "height_px": 20.444,
+              "available_width_px": 167.75,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 165.25,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "core Flight Executive"
+              ]
+            },
+            "acronym-07": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 31.5,
+              "height_px": 20.444,
+              "available_width_px": 34.5,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 32.0,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "cFS"
+              ]
+            },
+            "expansion-07": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 150.75,
+              "height_px": 20.444,
+              "available_width_px": 153.75,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 151.25,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Core Flight System"
+              ]
+            },
+            "acronym-08": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 47.25,
+              "height_px": 20.444,
+              "available_width_px": 50.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 47.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "CMMI"
+              ]
+            },
+            "expansion-08": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 283.5,
+              "height_px": 20.444,
+              "available_width_px": 286.5,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 284.0,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Capability Maturity Model Integrated"
+              ]
+            },
+            "acronym-09": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 48.0,
+              "height_px": 20.444,
+              "available_width_px": 51.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 48.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "ELOC"
+              ]
+            },
+            "expansion-09": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 192.75,
+              "height_px": 20.444,
+              "available_width_px": 195.75,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 193.25,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Estimated Lines of Code"
+              ]
+            },
+            "acronym-10": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 39.25,
+              "height_px": 20.444,
+              "available_width_px": 42.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 39.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "FSW"
+              ]
+            },
+            "expansion-10": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 118.0,
+              "height_px": 20.444,
+              "available_width_px": 121.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 118.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Flight Software"
+              ]
+            },
+            "acronym-11": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 47.0,
+              "height_px": 20.444,
+              "available_width_px": 50.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 47.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "GLAS"
+              ]
+            },
+            "expansion-11": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 282.0,
+              "height_px": 20.444,
+              "available_width_px": 285.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 282.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Geoscience Laser Altimeter System"
+              ]
+            },
+            "acronym-12": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 51.0,
+              "height_px": 20.444,
+              "available_width_px": 54.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 51.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "GN&C"
+              ]
+            },
+            "expansion-12": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 270.25,
+              "height_px": 20.444,
+              "available_width_px": 273.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 270.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Guidance, Navigation, and Control"
+              ]
+            },
+            "acronym-13": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 40.25,
+              "height_px": 20.444,
+              "available_width_px": 43.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 40.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "GPM"
+              ]
+            },
+            "expansion-13": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 266.5,
+              "height_px": 20.444,
+              "available_width_px": 269.5,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 267.0,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Global Precipitation Measurement"
+              ]
+            },
+            "acronym-14": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 49.0,
+              "height_px": 20.444,
+              "available_width_px": 52.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 49.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "GSFC"
+              ]
+            },
+            "expansion-14": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 230.0,
+              "height_px": 20.444,
+              "available_width_px": 233.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 230.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Goddard Space Flight Center"
+              ]
+            },
+            "acronym-15": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 33.5,
+              "height_px": 20.444,
+              "available_width_px": 36.5,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 34.0,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "JSC"
+              ]
+            },
+            "expansion-15": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 180.0,
+              "height_px": 20.444,
+              "available_width_px": 183.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 180.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Johnson Space Center"
+              ]
+            },
+            "acronym-16": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 57.75,
+              "height_px": 20.444,
+              "available_width_px": 60.75,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 58.25,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "LADEE"
+              ]
+            },
+            "expansion-16": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 396.5,
+              "height_px": 20.444,
+              "available_width_px": 399.5,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 397.0,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Lunar Atmosphere and Dust Environment Explorer"
+              ]
+            },
+            "acronym-17": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 35.25,
+              "height_px": 20.444,
+              "available_width_px": 38.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 35.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "LRD"
+              ]
+            },
+            "expansion-17": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 188.5,
+              "height_px": 20.444,
+              "available_width_px": 191.5,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 189.0,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Launch Readiness Date"
+              ]
+            },
+            "acronym-18": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 36.25,
+              "height_px": 20.444,
+              "available_width_px": 39.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "LRO"
+              ]
+            },
+            "expansion-18": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 169.5,
+              "height_px": 20.444,
+              "available_width_px": 172.5,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 170.0,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Lunar Robotic Orbiter"
+              ]
+            },
+            "acronym-19": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 38.25,
+              "height_px": 20.444,
+              "available_width_px": 41.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 38.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "MAP"
+              ]
+            },
+            "expansion-19": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 225.5,
+              "height_px": 20.444,
+              "available_width_px": 228.5,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 226.0,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Microwave Anisotropy Probe"
+              ]
+            },
+            "acronym-20": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 41.25,
+              "height_px": 20.444,
+              "available_width_px": 44.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "MMS"
+              ]
+            },
+            "expansion-20": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 221.0,
+              "height_px": 20.444,
+              "available_width_px": 224.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 221.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Magnetic Multiscale Mission"
+              ]
+            },
+            "acronym-21": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 47.0,
+              "height_px": 20.444,
+              "available_width_px": 50.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 47.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "OSAL"
+              ]
+            },
+            "expansion-21": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 285.0,
+              "height_px": 20.444,
+              "available_width_px": 288.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 285.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Operating System Abstraction Layer"
+              ]
+            },
+            "acronym-22": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 48.0,
+              "height_px": 20.444,
+              "available_width_px": 51.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 48.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "RBSP"
+              ]
+            },
+            "expansion-22": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 214.25,
+              "height_px": 20.444,
+              "available_width_px": 217.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 214.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Radiation Belt Storm Probe"
+              ]
+            },
+            "acronym-23": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 61.75,
+              "height_px": 20.444,
+              "available_width_px": 64.75,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 62.25,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "RTEMS"
+              ]
+            },
+            "expansion-23": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 383.0,
+              "height_px": 20.444,
+              "available_width_px": 386.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 383.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Real-Time Executive for Multiprocessor Systems"
+              ]
+            },
+            "acronym-24": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 73.5,
+              "height_px": 20.444,
+              "available_width_px": 76.5,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 74.0,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "SAMPEX"
+              ]
+            },
+            "expansion-24": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 435.0,
+              "height_px": 20.444,
+              "available_width_px": 438.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 435.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Solar Anomalous and Magnetospheric Particle Explorer"
+              ]
+            },
+            "acronym-25": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 48.0,
+              "height_px": 20.444,
+              "available_width_px": 51.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 48.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "SARB"
+              ]
+            },
+            "expansion-25": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 596.0,
+              "height_px": 20.444,
+              "available_width_px": 599.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 596.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Software Architecture Review Board (NASA Engineering and Safety Center)"
+              ]
+            },
+            "acronym-26": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 38.25,
+              "height_px": 20.444,
+              "available_width_px": 41.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 38.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "SDO"
+              ]
+            },
+            "expansion-26": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 226.0,
+              "height_px": 20.444,
+              "available_width_px": 229.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 226.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Solar Dynamics Observatory"
+              ]
+            },
+            "acronym-27": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 50.0,
+              "height_px": 20.444,
+              "available_width_px": 53.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 50.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "SMEX"
+              ]
+            },
+            "expansion-27": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 115.5,
+              "height_px": 20.444,
+              "available_width_px": 118.5,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 116.0,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Small Explorer"
+              ]
+            },
+            "acronym-28": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 38.25,
+              "height_px": 20.444,
+              "available_width_px": 41.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 38.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "ST-5"
+              ]
+            },
+            "expansion-28": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 161.0,
+              "height_px": 20.444,
+              "available_width_px": 164.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 161.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Space Technology 5"
+              ]
+            },
+            "acronym-29": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 52.0,
+              "height_px": 20.444,
+              "available_width_px": 55.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 52.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "SWAS"
+              ]
+            },
+            "expansion-29": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 315.25,
+              "height_px": 20.444,
+              "available_width_px": 318.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 315.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Submillimeter Wave Astronomy Satellite"
+              ]
+            },
+            "acronym-30": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 59.75,
+              "height_px": 20.444,
+              "available_width_px": 62.75,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 60.25,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "TRACE"
+              ]
+            },
+            "expansion-30": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 310.75,
+              "height_px": 20.444,
+              "available_width_px": 313.75,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 311.25,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Transition Region and Coronal Explorer"
+              ]
+            },
+            "acronym-31": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 33.25,
+              "height_px": 20.444,
+              "available_width_px": 36.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 33.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "TRL"
+              ]
+            },
+            "expansion-31": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 227.0,
+              "height_px": 20.444,
+              "available_width_px": 230.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 227.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Technology Readiness Level"
+              ]
+            },
+            "acronym-32": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 53.0,
+              "height_px": 20.444,
+              "available_width_px": 56.0,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 53.5,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "TRMM"
+              ]
+            },
+            "expansion-32": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 279.75,
+              "height_px": 20.444,
+              "available_width_px": 282.75,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 280.25,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Tropical Rainfall Measuring Mission"
+              ]
+            },
+            "acronym-33": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 46.25,
+              "height_px": 20.444,
+              "available_width_px": 49.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 46.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "WIRE"
+              ]
+            },
+            "expansion-33": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 212.75,
+              "height_px": 20.444,
+              "available_width_px": 215.75,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 213.25,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "Widearea Infrared Explorer"
+              ]
+            },
+            "acronym-34": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 34.25,
+              "height_px": 20.444,
+              "available_width_px": 37.25,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 34.75,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "XTE"
+              ]
+            },
+            "expansion-34": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 178.5,
+              "height_px": 20.444,
+              "available_width_px": 181.5,
+              "available_height_px": 21.4444,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 179.0,
+              "required_height_px": 20.944,
+              "fits": true,
+              "lines": [
+                "X-Ray Timing Explorer"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "pass",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [],
+      "text_boxes": [
+        {
+          "slide": "nasa_28",
+          "element": "title",
+          "expected": "Acronyms",
+          "rendered": "Acronyms",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 301.25,
+          "rendered_ink_width_px": 301.168
+        },
+        {
+          "slide": "nasa_28",
+          "element": "page-number",
+          "expected": "28",
+          "rendered": "28",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 28.0,
+          "rendered_ink_width_px": 27.657
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-00",
+          "expected": "API",
+          "rendered": "API ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 27.25,
+          "rendered_ink_width_px": 27.038
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-00",
+          "expected": "Application Programmer Interface",
+          "rendered": "Application Programmer Interface",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 263.5,
+          "rendered_ink_width_px": 263.969
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-01",
+          "expected": "ARC",
+          "rendered": "ARC ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 37.0,
+          "rendered_ink_width_px": 36.852
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-01",
+          "expected": "Ames Research Center",
+          "rendered": "Ames Research Center",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 184.5,
+          "rendered_ink_width_px": 185.01
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-02",
+          "expected": "BAT",
+          "rendered": "BAT ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 32.75,
+          "rendered_ink_width_px": 31.598
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-02",
+          "expected": "Burst Alert Telescope",
+          "rendered": "Burst Alert Telescope",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 167.75,
+          "rendered_ink_width_px": 164.598
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-03",
+          "expected": "CCSDS",
+          "rendered": "CCSDS ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 60.25,
+          "rendered_ink_width_px": 60.435
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-03",
+          "expected": "Consultative Committee for Space Data Systems",
+          "rendered": "Consultative Committee for Space Data Systems",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 382.75,
+          "rendered_ink_width_px": 383.628
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-04",
+          "expected": "CDH",
+          "rendered": "CDH ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 36.25,
+          "rendered_ink_width_px": 36.229
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-04",
+          "expected": "Command Data Handling",
+          "rendered": "Command Data Handling",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 196.25,
+          "rendered_ink_width_px": 197.496
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-05",
+          "expected": "CFDP",
+          "rendered": "CFDP ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 46.75,
+          "rendered_ink_width_px": 46.756
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-05",
+          "expected": "CCSDS File Delivery Protocol",
+          "rendered": "CCSDS File Delivery Protocol",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 232.5,
+          "rendered_ink_width_px": 232.905
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-06",
+          "expected": "cFE",
+          "rendered": "cFE ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 30.25,
+          "rendered_ink_width_px": 29.941
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-06",
+          "expected": "core Flight Executive",
+          "rendered": "core Flight Executive",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 163.75,
+          "rendered_ink_width_px": 163.475
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-07",
+          "expected": "cFS",
+          "rendered": "cFS ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 30.25,
+          "rendered_ink_width_px": 29.977
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-07",
+          "expected": "Core Flight System",
+          "rendered": "Core Flight System",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 149.0,
+          "rendered_ink_width_px": 149.03
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-08",
+          "expected": "CMMI",
+          "rendered": "CMMI ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 45.0,
+          "rendered_ink_width_px": 44.885
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-08",
+          "expected": "Capability Maturity Model Integrated",
+          "rendered": "Capability Maturity Model Integrated",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 281.75,
+          "rendered_ink_width_px": 282.19
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-09",
+          "expected": "ELOC",
+          "rendered": "ELOC ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 46.25,
+          "rendered_ink_width_px": 46.293
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-09",
+          "expected": "Estimated Lines of Code",
+          "rendered": "Estimated Lines of Code",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 191.0,
+          "rendered_ink_width_px": 191.44
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-10",
+          "expected": "FSW",
+          "rendered": "FSW ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 38.0,
+          "rendered_ink_width_px": 37.85
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-10",
+          "expected": "Flight Software",
+          "rendered": "Flight Software",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 116.25,
+          "rendered_ink_width_px": 116.31
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-11",
+          "expected": "GLAS",
+          "rendered": "GLAS ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 45.5,
+          "rendered_ink_width_px": 45.544
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-11",
+          "expected": "Geoscience Laser Altimeter System",
+          "rendered": "Geoscience Laser Altimeter System",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 280.25,
+          "rendered_ink_width_px": 279.394
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-12",
+          "expected": "GN&C",
+          "rendered": "GN&C ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 49.75,
+          "rendered_ink_width_px": 49.73
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-12",
+          "expected": "Guidance, Navigation, and Control",
+          "rendered": "Guidance, Navigation, and Control",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 268.25,
+          "rendered_ink_width_px": 269.455
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-13",
+          "expected": "GPM",
+          "rendered": "GPM ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 38.25,
+          "rendered_ink_width_px": 38.206
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-13",
+          "expected": "Global Precipitation Measurement",
+          "rendered": "Global Precipitation Measurement",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 265.75,
+          "rendered_ink_width_px": 266.623
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-14",
+          "expected": "GSFC",
+          "rendered": "GSFC ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 47.75,
+          "rendered_ink_width_px": 47.735
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-14",
+          "expected": "Goddard Space Flight Center",
+          "rendered": "Goddard Space Flight Center",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 229.25,
+          "rendered_ink_width_px": 230.501
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-15",
+          "expected": "JSC",
+          "rendered": "JSC ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 32.5,
+          "rendered_ink_width_px": 32.399
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-15",
+          "expected": "Johnson Space Center",
+          "rendered": "Johnson Space Center",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 179.5,
+          "rendered_ink_width_px": 180.575
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-16",
+          "expected": "LADEE",
+          "rendered": "LADEE ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 55.75,
+          "rendered_ink_width_px": 56.053
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-16",
+          "expected": "Lunar Atmosphere and Dust Environment Explorer",
+          "rendered": "Lunar Atmosphere and Dust Environment Explorer",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 395.25,
+          "rendered_ink_width_px": 396.06
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-17",
+          "expected": "LRD",
+          "rendered": "LRD ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 33.25,
+          "rendered_ink_width_px": 33.326
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-17",
+          "expected": "Launch Readiness Date",
+          "rendered": "Launch Readiness Date",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 186.75,
+          "rendered_ink_width_px": 187.717
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-18",
+          "expected": "LRO",
+          "rendered": "LRO ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 34.5,
+          "rendered_ink_width_px": 34.466
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-18",
+          "expected": "Lunar Robotic Orbiter",
+          "rendered": "Lunar Robotic Orbiter",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 168.25,
+          "rendered_ink_width_px": 168.837
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-19",
+          "expected": "MAP",
+          "rendered": "MAP ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 36.5,
+          "rendered_ink_width_px": 36.443
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-19",
+          "expected": "Microwave Anisotropy Probe",
+          "rendered": "Microwave Anisotropy Probe",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 223.75,
+          "rendered_ink_width_px": 223.109
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-20",
+          "expected": "MMS",
+          "rendered": "MMS ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 39.25,
+          "rendered_ink_width_px": 39.221
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-20",
+          "expected": "Magnetic Multiscale Mission",
+          "rendered": "Magnetic Multiscale Mission",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 218.75,
+          "rendered_ink_width_px": 218.638
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-21",
+          "expected": "OSAL",
+          "rendered": "OSAL ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 45.75,
+          "rendered_ink_width_px": 45.936
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-21",
+          "expected": "Operating System Abstraction Layer",
+          "rendered": "Operating System Abstraction Layer",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 284.25,
+          "rendered_ink_width_px": 283.847
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-22",
+          "expected": "RBSP",
+          "rendered": "RBSP ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 46.25,
+          "rendered_ink_width_px": 46.239
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-22",
+          "expected": "Radiation Belt Storm Probe",
+          "rendered": "Radiation Belt Storm Probe",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 212.5,
+          "rendered_ink_width_px": 213.17
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-23",
+          "expected": "RTEMS",
+          "rendered": "RTEMS ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 59.75,
+          "rendered_ink_width_px": 59.562
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-23",
+          "expected": "Real-Time Executive for Multiprocessor Systems",
+          "rendered": "Real-Time Executive for Multiprocessor Systems",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 381.0,
+          "rendered_ink_width_px": 380.368
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-24",
+          "expected": "SAMPEX",
+          "rendered": "SAMPEX ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 72.75,
+          "rendered_ink_width_px": 73.206
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-24",
+          "expected": "Solar Anomalous and Magnetospheric Particle Explorer",
+          "rendered": "Solar Anomalous and Magnetospheric Particle Explorer",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 434.25,
+          "rendered_ink_width_px": 435.103
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-25",
+          "expected": "SARB",
+          "rendered": "SARB ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 46.5,
+          "rendered_ink_width_px": 46.667
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-25",
+          "expected": "Software Architecture Review Board (NASA Engineering and Safety Center)",
+          "rendered": "Software Architecture Review Board (NASA Engineering and Safety Center)",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 594.75,
+          "rendered_ink_width_px": 595.195
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-26",
+          "expected": "SDO",
+          "rendered": "SDO ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 37.0,
+          "rendered_ink_width_px": 36.941
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-26",
+          "expected": "Solar Dynamics Observatory",
+          "rendered": "Solar Dynamics Observatory",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 225.0,
+          "rendered_ink_width_px": 225.193
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-27",
+          "expected": "SMEX",
+          "rendered": "SMEX ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 49.25,
+          "rendered_ink_width_px": 49.481
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-27",
+          "expected": "Small Explorer",
+          "rendered": "Small Explorer",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 114.75,
+          "rendered_ink_width_px": 115.01
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-28",
+          "expected": "ST-5",
+          "rendered": "ST-5 ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 37.0,
+          "rendered_ink_width_px": 36.033
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-28",
+          "expected": "Space Technology 5",
+          "rendered": "Space Technology 5",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 159.75,
+          "rendered_ink_width_px": 158.239
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-29",
+          "expected": "SWAS",
+          "rendered": "SWAS ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 50.5,
+          "rendered_ink_width_px": 49.962
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-29",
+          "expected": "Submillimeter Wave Astronomy Satellite",
+          "rendered": "Submillimeter Wave Astronomy Satellite",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 314.0,
+          "rendered_ink_width_px": 312.826
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-30",
+          "expected": "TRACE",
+          "rendered": "TRACE ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 58.75,
+          "rendered_ink_width_px": 58.885
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-30",
+          "expected": "Transition Region and Coronal Explorer",
+          "rendered": "Transition Region and Coronal Explorer",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 310.5,
+          "rendered_ink_width_px": 311.33
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-31",
+          "expected": "TRL",
+          "rendered": "TRL ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 32.5,
+          "rendered_ink_width_px": 32.56
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-31",
+          "expected": "Technology Readiness Level",
+          "rendered": "Technology Readiness Level",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 225.5,
+          "rendered_ink_width_px": 224.605
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-32",
+          "expected": "TRMM",
+          "rendered": "TRMM ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 51.5,
+          "rendered_ink_width_px": 51.583
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-32",
+          "expected": "Tropical Rainfall Measuring Mission",
+          "rendered": "Tropical Rainfall Measuring Mission",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 278.5,
+          "rendered_ink_width_px": 278.218
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-33",
+          "expected": "WIRE",
+          "rendered": "WIRE ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 45.5,
+          "rendered_ink_width_px": 45.224
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-33",
+          "expected": "Widearea Infrared Explorer",
+          "rendered": "Widearea Infrared Explorer",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 212.75,
+          "rendered_ink_width_px": 213.33
+        },
+        {
+          "slide": "nasa_28",
+          "element": "acronym-34",
+          "expected": "XTE",
+          "rendered": "XTE ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 33.5,
+          "rendered_ink_width_px": 33.539
+        },
+        {
+          "slide": "nasa_28",
+          "element": "expansion-34",
+          "expected": "X-Ray Timing Explorer",
+          "rendered": "X-Ray Timing Explorer",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 178.5,
+          "rendered_ink_width_px": 177.974
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "8c91a507c9ec088de670a9159b8667e6340650255cf75da9d4043da6befe83bf",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "nasa_28",
+      "mean_absolute_pixel_error": 0.016804,
+      "comparison": "nasa_28_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

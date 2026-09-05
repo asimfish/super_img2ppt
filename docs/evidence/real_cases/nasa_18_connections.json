@@ -1,0 +1,150 @@
+{
+  "source": "Manual reading of authorized NASA screenshot, checked against actual PPTX preview",
+  "logical_connection_count": 28,
+  "directional_arrow_end_count": 52,
+  "connections": [
+    {
+      "from": "software_bus",
+      "to": "scheduler",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "limit_checker",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "memory_manager",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "space_wire",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "instrument_manager",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "cfdp_transfer",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "stored_command",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "packet_manager",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "data_storage",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "file_manager",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "gnc_stack",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "bus1553",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "telemetry_output",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "command_ingest",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "software_service",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "time_services",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "executive_services",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "event_services",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "software_bus",
+      "to": "table_services",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "instruments",
+      "to": "space_wire",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "instruments",
+      "to": "instrument_manager",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "instrument_manager",
+      "to": "mass_storage_file_system",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "file_manager",
+      "to": "mass_storage_file_system",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "bus1553",
+      "to": "gnc_hardware",
+      "direction": "bidirectional"
+    },
+    {
+      "from": "cfdp_transfer",
+      "to": "mass_storage_file_system",
+      "direction": "one_way"
+    },
+    {
+      "from": "data_storage",
+      "to": "mass_storage_file_system",
+      "direction": "one_way"
+    },
+    {
+      "from": "communication_interfaces",
+      "to": "command_ingest",
+      "direction": "one_way",
+      "label": "Commands"
+    },
+    {
+      "from": "telemetry_output",
+      "to": "communication_interfaces",
+      "direction": "one_way",
+      "label": "Real-time Telemetry / File downlink"
+    }
+  ],
+  "limitation": "Native line endpoints are fixed coordinates, not attached or automatically rerouting graph edges."
+}

@@ -48,14 +48,24 @@ class FontFace:
 
 def font_candidates(extra_dirs: tuple[Path, ...] = ()) -> list[tuple[str, int]]:
     candidates = set()
-    if shutil.which("fc-list"):
-        result = subprocess.run(
-            ["fc-list", "--format=%{file}\t%{index}\n"],
-            capture_output=True,
-            text=True,
-            timeout=30,
-            check=True,
-        )
+    executable = shutil.which("fc-list")
+    if executable:
+        try:
+            result = subprocess.run(
+                [executable, "--format=%{file}\t%{index}\n"],
+                capture_output=True,
+                text=True,
+                timeout=30,
+                check=True,
+            )
+        except subprocess.TimeoutExpired as exc:
+            raise InputError(
+                f"Local font discovery timed out after 30 seconds: {executable}. Check the fc-list selected by PATH before retrying"
+            ) from exc
+        except subprocess.CalledProcessError as exc:
+            raise InputError(
+                f"Local font discovery failed with exit code {exc.returncode}: {executable}"
+            ) from exc
         for line in result.stdout.splitlines():
             fields = line.rsplit("\t", 1)
             if len(fields) == 2 and fields[1].isdigit() and int(fields[1]) < 65536:

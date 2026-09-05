@@ -1,5 +1,26 @@
 # Bounded reconstruction evidence
 
+## v0.1.1 real-case extension
+
+On 2026-09-06, six published images from three sources were reconstructed: a Chinese consensus
+flowchart, Matplotlib's chart/table example, and four NASA cFS presentation pages. Three cases
+were evaluated independently from only the skill and raw images; the other three NASA pages
+were authored by the main task from images/OCR. Source drawing code and PDF object coordinates
+were not used to author the scenes.
+
+Five cases pass blocking preflight/native/rendered-text checks; four retain `review` for raster
+logos. The dense table remains `fail` at one text/grid collision. Its separately marked diagnostic
+PPTX is not a successful production build. Arrowhead size and source font widths still differ.
+The owning repository contains `docs/real_cases.md`, source/scene/artifact hashes and actual
+PPTX PDF/PNG evidence in `examples/real_cases/`. The runner exits 2 while any case remains blocked.
+
+This evaluation led to font-discovery failure reports, text/grid and sloping-container ink
+refinement, and a line-stroke boundary fix. Ten new regression cases bring the local suite to
+43 passing tests. No new runtime dependencies were added. The mask refinement is bounded.
+Native PowerPoint/WPS remains unverified. These six cases do not establish population accuracy.
+
+## Historical v0.1.0 synthetic evaluation
+
 Version 0.1.0, evaluated 2026-09-05 through 2026-09-06. This is one synthetic reconstruction
 case and targeted regression evidence, not a population accuracy or performance benchmark.
 No quantitative comparison against the reference repository was performed.

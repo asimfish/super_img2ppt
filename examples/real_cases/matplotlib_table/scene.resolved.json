@@ -1,0 +1,2447 @@
+{
+  "version": 1,
+  "title": "Loss by Disaster — editable source reconstruction",
+  "fonts": {
+    "latin": [
+      "Verdana"
+    ],
+    "cjk": [
+      "Arial Unicode MS"
+    ]
+  },
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 640,
+      "height": 480,
+      "background": "#FFFFFF",
+      "source": "assets/633681a052d5bc2a245f.png",
+      "reviewed": true,
+      "notes": "Reconstructed from the supplied image only. All 25 table values manually compared with the original. Vertical y-axis title reads: Loss in $1000's. It remains a separately movable exact raster crop because scene v1 does not support rotation. Source font identity is uncertain; Verdana chosen from available fonts by measured width. Bar segment geometry is measured directly from source pixels; no hidden data inferred.",
+      "elements": [
+        {
+          "id": "table_region",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            51.5,
+            380,
+            525.5,
+            96
+          ],
+          "z": 0,
+          "fill": "#FFFFFF",
+          "role": "background"
+        },
+        {
+          "id": "bar_0_0",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            148,
+            322,
+            37,
+            20
+          ],
+          "z": 10,
+          "fill": "#8C95C6"
+        },
+        {
+          "id": "bar_0_1",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            148,
+            342,
+            37,
+            11
+          ],
+          "z": 10,
+          "fill": "#9EBCDA"
+        },
+        {
+          "id": "bar_0_2",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            148,
+            353,
+            37,
+            13
+          ],
+          "z": 10,
+          "fill": "#BFD3E6"
+        },
+        {
+          "id": "bar_0_3",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            148,
+            366,
+            37,
+            8
+          ],
+          "z": 10,
+          "fill": "#E0ECF4"
+        },
+        {
+          "id": "bar_0_4",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            148,
+            374,
+            37,
+            10
+          ],
+          "z": 10,
+          "fill": "#F7FCFD",
+          "allow_overlap_with": [
+            "plot_baseline"
+          ],
+          "overlap_reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection."
+        },
+        {
+          "id": "bar_1_0",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            241,
+            232,
+            37,
+            48
+          ],
+          "z": 10,
+          "fill": "#8C95C6"
+        },
+        {
+          "id": "bar_1_1",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            241,
+            280,
+            37,
+            12
+          ],
+          "z": 10,
+          "fill": "#9EBCDA"
+        },
+        {
+          "id": "bar_1_2",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            241,
+            292,
+            37,
+            12
+          ],
+          "z": 10,
+          "fill": "#BFD3E6"
+        },
+        {
+          "id": "bar_1_3",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            241,
+            304,
+            37,
+            55
+          ],
+          "z": 10,
+          "fill": "#E0ECF4"
+        },
+        {
+          "id": "bar_1_4",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            241,
+            359,
+            37,
+            25
+          ],
+          "z": 10,
+          "fill": "#F7FCFD",
+          "allow_overlap_with": [
+            "plot_baseline"
+          ],
+          "overlap_reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection."
+        },
+        {
+          "id": "bar_2_0",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            333,
+            268,
+            37,
+            50
+          ],
+          "z": 10,
+          "fill": "#8C95C6"
+        },
+        {
+          "id": "bar_2_1",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            333,
+            318,
+            37,
+            22
+          ],
+          "z": 10,
+          "fill": "#9EBCDA"
+        },
+        {
+          "id": "bar_2_2",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            333,
+            340,
+            37,
+            22
+          ],
+          "z": 10,
+          "fill": "#BFD3E6"
+        },
+        {
+          "id": "bar_2_3",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            333,
+            362,
+            37,
+            11
+          ],
+          "z": 10,
+          "fill": "#E0ECF4"
+        },
+        {
+          "id": "bar_2_4",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            333,
+            373,
+            37,
+            11
+          ],
+          "z": 10,
+          "fill": "#F7FCFD",
+          "allow_overlap_with": [
+            "plot_baseline"
+          ],
+          "overlap_reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection."
+        },
+        {
+          "id": "bar_3_0",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            426,
+            73,
+            37,
+            113
+          ],
+          "z": 10,
+          "fill": "#8C95C6"
+        },
+        {
+          "id": "bar_3_1",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            426,
+            186,
+            37,
+            28
+          ],
+          "z": 10,
+          "fill": "#9EBCDA"
+        },
+        {
+          "id": "bar_3_2",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            426,
+            214,
+            37,
+            72
+          ],
+          "z": 10,
+          "fill": "#BFD3E6"
+        },
+        {
+          "id": "bar_3_3",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            426,
+            286,
+            37,
+            14
+          ],
+          "z": 10,
+          "fill": "#E0ECF4"
+        },
+        {
+          "id": "bar_3_4",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            426,
+            300,
+            37,
+            84
+          ],
+          "z": 10,
+          "fill": "#F7FCFD",
+          "allow_overlap_with": [
+            "plot_baseline"
+          ],
+          "overlap_reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection."
+        },
+        {
+          "id": "bar_4_0",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            519,
+            251,
+            37,
+            8
+          ],
+          "z": 10,
+          "fill": "#8C95C6"
+        },
+        {
+          "id": "bar_4_1",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            519,
+            259,
+            37,
+            10
+          ],
+          "z": 10,
+          "fill": "#9EBCDA"
+        },
+        {
+          "id": "bar_4_2",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            519,
+            269,
+            37,
+            87
+          ],
+          "z": 10,
+          "fill": "#BFD3E6"
+        },
+        {
+          "id": "bar_4_3",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            519,
+            356,
+            37,
+            23
+          ],
+          "z": 10,
+          "fill": "#E0ECF4"
+        },
+        {
+          "id": "bar_4_4",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            519,
+            379,
+            37,
+            5
+          ],
+          "z": 10,
+          "fill": "#F7FCFD",
+          "allow_overlap_with": [
+            "plot_baseline"
+          ],
+          "overlap_reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection."
+        },
+        {
+          "id": "plot_top",
+          "kind": "line",
+          "points": [
+            [
+              128,
+              58
+            ],
+            [
+              576,
+              58
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.1,
+          "z": 30
+        },
+        {
+          "id": "plot_left",
+          "kind": "line",
+          "points": [
+            [
+              128,
+              58
+            ],
+            [
+              128,
+              384
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.1,
+          "z": 30,
+          "allow_overlap_with": [
+            "tick_500",
+            "tick_1000",
+            "tick_1500",
+            "tick_2000"
+          ],
+          "overlap_reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection."
+        },
+        {
+          "id": "plot_right",
+          "kind": "line",
+          "points": [
+            [
+              576,
+              58
+            ],
+            [
+              576,
+              384
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.1,
+          "z": 30
+        },
+        {
+          "id": "plot_baseline",
+          "kind": "line",
+          "points": [
+            [
+              128,
+              384
+            ],
+            [
+              576,
+              384
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.1,
+          "z": 30,
+          "allow_overlap_with": [
+            "table_vertical_1",
+            "table_vertical_2",
+            "table_vertical_3",
+            "table_vertical_4"
+          ],
+          "overlap_reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection."
+        },
+        {
+          "id": "title",
+          "kind": "text",
+          "box": [
+            265,
+            31.6,
+            174,
+            24
+          ],
+          "font_size": 16.666667,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "center",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "runs": [
+            {
+              "text": "Loss by Disaster",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 16.666667,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "tick_0",
+          "kind": "line",
+          "points": [
+            [
+              123.1,
+              384
+            ],
+            [
+              128,
+              384
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.1,
+          "z": 30
+        },
+        {
+          "id": "tick_label_0",
+          "kind": "text",
+          "box": [
+            77,
+            375.5,
+            40.5,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "runs": [
+            {
+              "text": "0",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "tick_500",
+          "kind": "line",
+          "points": [
+            [
+              123.1,
+              311.7778
+            ],
+            [
+              128,
+              311.7778
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.1,
+          "z": 30
+        },
+        {
+          "id": "tick_label_500",
+          "kind": "text",
+          "box": [
+            77,
+            303.3,
+            40.5,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "runs": [
+            {
+              "text": "500",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "tick_1000",
+          "kind": "line",
+          "points": [
+            [
+              123.1,
+              239.5556
+            ],
+            [
+              128,
+              239.5556
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.1,
+          "z": 30
+        },
+        {
+          "id": "tick_label_1000",
+          "kind": "text",
+          "box": [
+            77,
+            231.1,
+            40.5,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "runs": [
+            {
+              "text": "1000",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "tick_1500",
+          "kind": "line",
+          "points": [
+            [
+              123.1,
+              167.3333
+            ],
+            [
+              128,
+              167.3333
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.1,
+          "z": 30
+        },
+        {
+          "id": "tick_label_1500",
+          "kind": "text",
+          "box": [
+            77,
+            158.8,
+            40.5,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "runs": [
+            {
+              "text": "1500",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "tick_2000",
+          "kind": "line",
+          "points": [
+            [
+              123.1,
+              95.1111
+            ],
+            [
+              128,
+              95.1111
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.1,
+          "z": 30
+        },
+        {
+          "id": "tick_label_2000",
+          "kind": "text",
+          "box": [
+            77,
+            86.6,
+            40.5,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "runs": [
+            {
+              "text": "2000",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "rotated_y_axis_title",
+          "kind": "image",
+          "z": 20,
+          "box": [
+            59,
+            163,
+            17,
+            114
+          ],
+          "path": "assets/cf09cd4d213424086a7d.png",
+          "image_fit": "contain",
+          "contains_text": true,
+          "confidence": 1,
+          "provenance": "Exact source crop [59,163,76,277]; rotated title Loss in $1000's. Removed only blank right-side pixels, retaining all original visible glyphs. Scene v1 has no text rotation; no editable text overlay."
+        },
+        {
+          "id": "row_color_0",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            52.5,
+            398.666667,
+            75.5,
+            14.666665999999964
+          ],
+          "z": 2,
+          "fill": "#8C95C6",
+          "role": "background",
+          "container": "table_region"
+        },
+        {
+          "id": "row_color_1",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            52.5,
+            413.333333,
+            75.5,
+            14.666667000000018
+          ],
+          "z": 2,
+          "fill": "#9EBCDA",
+          "role": "background",
+          "container": "table_region"
+        },
+        {
+          "id": "row_color_2",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            52.5,
+            428,
+            75.5,
+            14.666667000000018
+          ],
+          "z": 2,
+          "fill": "#BFD3E6",
+          "role": "background",
+          "container": "table_region"
+        },
+        {
+          "id": "row_color_3",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            52.5,
+            442.666667,
+            75.5,
+            14.666665999999964
+          ],
+          "z": 2,
+          "fill": "#E0ECF4",
+          "role": "background",
+          "container": "table_region"
+        },
+        {
+          "id": "row_color_4",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            52.5,
+            457.333333,
+            75.5,
+            14.666667000000018
+          ],
+          "z": 2,
+          "fill": "#F7FCFD",
+          "role": "background",
+          "container": "table_region"
+        },
+        {
+          "id": "table_vertical_0",
+          "kind": "line",
+          "points": [
+            [
+              128,
+              384
+            ],
+            [
+              128,
+              472
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.35,
+          "z": 30,
+          "container": "table_region",
+          "allow_overlap_with": [
+            "table_horizontal_1",
+            "table_horizontal_2",
+            "table_horizontal_3",
+            "table_horizontal_4",
+            "table_horizontal_5",
+            "table_horizontal_6"
+          ],
+          "overlap_reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection."
+        },
+        {
+          "id": "table_vertical_1",
+          "kind": "line",
+          "points": [
+            [
+              217.6,
+              384
+            ],
+            [
+              217.6,
+              472
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.35,
+          "z": 30,
+          "container": "table_region",
+          "allow_overlap_with": [
+            "table_horizontal_1",
+            "table_horizontal_2",
+            "table_horizontal_3",
+            "table_horizontal_4",
+            "table_horizontal_5",
+            "table_horizontal_6"
+          ],
+          "overlap_reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection."
+        },
+        {
+          "id": "table_vertical_2",
+          "kind": "line",
+          "points": [
+            [
+              307.2,
+              384
+            ],
+            [
+              307.2,
+              472
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.35,
+          "z": 30,
+          "container": "table_region",
+          "allow_overlap_with": [
+            "table_horizontal_1",
+            "table_horizontal_2",
+            "table_horizontal_3",
+            "table_horizontal_4",
+            "table_horizontal_5",
+            "table_horizontal_6"
+          ],
+          "overlap_reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection."
+        },
+        {
+          "id": "table_vertical_3",
+          "kind": "line",
+          "points": [
+            [
+              396.8,
+              384
+            ],
+            [
+              396.8,
+              472
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.35,
+          "z": 30,
+          "container": "table_region",
+          "allow_overlap_with": [
+            "table_horizontal_1",
+            "table_horizontal_2",
+            "table_horizontal_3",
+            "table_horizontal_4",
+            "table_horizontal_5",
+            "table_horizontal_6"
+          ],
+          "overlap_reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection."
+        },
+        {
+          "id": "table_vertical_4",
+          "kind": "line",
+          "points": [
+            [
+              486.4,
+              384
+            ],
+            [
+              486.4,
+              472
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.35,
+          "z": 30,
+          "container": "table_region",
+          "allow_overlap_with": [
+            "table_horizontal_1",
+            "table_horizontal_2",
+            "table_horizontal_3",
+            "table_horizontal_4",
+            "table_horizontal_5",
+            "table_horizontal_6"
+          ],
+          "overlap_reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection."
+        },
+        {
+          "id": "table_vertical_5",
+          "kind": "line",
+          "points": [
+            [
+              576,
+              384
+            ],
+            [
+              576,
+              472
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.35,
+          "z": 30,
+          "container": "table_region",
+          "allow_overlap_with": [
+            "table_horizontal_1",
+            "table_horizontal_2",
+            "table_horizontal_3",
+            "table_horizontal_4",
+            "table_horizontal_5"
+          ],
+          "overlap_reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection."
+        },
+        {
+          "id": "row_labels_left",
+          "kind": "line",
+          "points": [
+            [
+              52.5,
+              398.666667
+            ],
+            [
+              52.5,
+              472
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.35,
+          "z": 30,
+          "container": "table_region",
+          "allow_overlap_with": [
+            "table_horizontal_2",
+            "table_horizontal_3",
+            "table_horizontal_4",
+            "table_horizontal_5"
+          ],
+          "overlap_reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection."
+        },
+        {
+          "id": "table_horizontal_1",
+          "kind": "line",
+          "points": [
+            [
+              52.5,
+              398.666667
+            ],
+            [
+              576,
+              398.666667
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.35,
+          "z": 30,
+          "container": "table_region"
+        },
+        {
+          "id": "table_horizontal_2",
+          "kind": "line",
+          "points": [
+            [
+              52.5,
+              413.333333
+            ],
+            [
+              576,
+              413.333333
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.35,
+          "z": 30,
+          "container": "table_region"
+        },
+        {
+          "id": "table_horizontal_3",
+          "kind": "line",
+          "points": [
+            [
+              52.5,
+              428
+            ],
+            [
+              576,
+              428
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.35,
+          "z": 30,
+          "container": "table_region"
+        },
+        {
+          "id": "table_horizontal_4",
+          "kind": "line",
+          "points": [
+            [
+              52.5,
+              442.666667
+            ],
+            [
+              576,
+              442.666667
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.35,
+          "z": 30,
+          "container": "table_region"
+        },
+        {
+          "id": "table_horizontal_5",
+          "kind": "line",
+          "points": [
+            [
+              52.5,
+              457.333333
+            ],
+            [
+              576,
+              457.333333
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.35,
+          "z": 30,
+          "container": "table_region"
+        },
+        {
+          "id": "table_horizontal_6",
+          "kind": "line",
+          "points": [
+            [
+              52.5,
+              472
+            ],
+            [
+              576,
+              472
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.35,
+          "z": 30,
+          "container": "table_region"
+        },
+        {
+          "id": "header_0",
+          "kind": "text",
+          "box": [
+            131,
+            381.3,
+            83.6,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "center",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "Freeze",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "header_1",
+          "kind": "text",
+          "box": [
+            220.6,
+            381.3,
+            83.6,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "center",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "Wind",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "header_2",
+          "kind": "text",
+          "box": [
+            310.2,
+            381.3,
+            83.6,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "center",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "Flood",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "header_3",
+          "kind": "text",
+          "box": [
+            399.8,
+            381.3,
+            83.6,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "center",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "Quake",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "header_4",
+          "kind": "text",
+          "box": [
+            489.4,
+            381.3,
+            83.6,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "center",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "Hail",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "row_label_0",
+          "kind": "text",
+          "box": [
+            60,
+            395.87500000499995,
+            66.8,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "left",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "100 year",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_0_0",
+          "kind": "text",
+          "box": [
+            136.96,
+            396.166667,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "431.5",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_0_1",
+          "kind": "text",
+          "box": [
+            226.56,
+            396.166667,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "1049.4",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_0_2",
+          "kind": "text",
+          "box": [
+            316.15999999999997,
+            396.166667,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "799.6",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_0_3",
+          "kind": "text",
+          "box": [
+            405.76,
+            396.166667,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "2149.8",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_0_4",
+          "kind": "text",
+          "box": [
+            495.35999999999996,
+            396.166667,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "917.9",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "row_label_1",
+          "kind": "text",
+          "box": [
+            60,
+            410.541666675,
+            66.8,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "left",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "50 year",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_1_0",
+          "kind": "text",
+          "box": [
+            136.96,
+            410.833333,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "292.2",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_1_1",
+          "kind": "text",
+          "box": [
+            226.56,
+            410.833333,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "717.8",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_1_2",
+          "kind": "text",
+          "box": [
+            316.15999999999997,
+            410.833333,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "456.4",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_1_3",
+          "kind": "text",
+          "box": [
+            405.76,
+            410.833333,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "1368.5",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_1_4",
+          "kind": "text",
+          "box": [
+            495.35999999999996,
+            410.833333,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "865.6",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "row_label_2",
+          "kind": "text",
+          "box": [
+            60,
+            425.208333345,
+            66.8,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "left",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "20 year",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_2_0",
+          "kind": "text",
+          "box": [
+            136.96,
+            425.5,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "213.8",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_2_1",
+          "kind": "text",
+          "box": [
+            226.56,
+            425.5,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "636.0",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_2_2",
+          "kind": "text",
+          "box": [
+            316.15999999999997,
+            425.5,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "305.7",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_2_3",
+          "kind": "text",
+          "box": [
+            405.76,
+            425.5,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "1175.2",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_2_4",
+          "kind": "text",
+          "box": [
+            495.35999999999996,
+            425.5,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "796.0",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "row_label_3",
+          "kind": "text",
+          "box": [
+            60,
+            439.87500001499996,
+            66.8,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "left",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "10 year",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_3_0",
+          "kind": "text",
+          "box": [
+            136.96,
+            440.166667,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "124.6",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_3_1",
+          "kind": "text",
+          "box": [
+            226.56,
+            440.166667,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "555.4",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_3_2",
+          "kind": "text",
+          "box": [
+            316.15999999999997,
+            440.166667,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "153.2",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_3_3",
+          "kind": "text",
+          "box": [
+            405.76,
+            440.166667,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "677.2",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_3_4",
+          "kind": "text",
+          "box": [
+            495.35999999999996,
+            440.166667,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "192.5",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "row_label_4",
+          "kind": "text",
+          "box": [
+            60,
+            454.541666685,
+            66.8,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "left",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "5 year",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_4_0",
+          "kind": "text",
+          "box": [
+            136.96,
+            454.833333,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "66.4",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_4_1",
+          "kind": "text",
+          "box": [
+            226.56,
+            454.833333,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "174.3",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_4_2",
+          "kind": "text",
+          "box": [
+            316.15999999999997,
+            454.833333,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "75.1",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_4_3",
+          "kind": "text",
+          "box": [
+            405.76,
+            454.833333,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "577.9",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "number_4_4",
+          "kind": "text",
+          "box": [
+            495.35999999999996,
+            454.833333,
+            71.68,
+            18.6
+          ],
+          "font_size": 13.888889,
+          "font_family": "Verdana",
+          "color": "#000000",
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "align": "right",
+          "valign": "top",
+          "wrap": false,
+          "fit": "strict",
+          "confidence": 1,
+          "z": 40,
+          "container": "table_region",
+          "runs": [
+            {
+              "text": "32.0",
+              "font_family": "Verdana",
+              "cjk_font_family": "Verdana",
+              "font_size": 13.888889,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

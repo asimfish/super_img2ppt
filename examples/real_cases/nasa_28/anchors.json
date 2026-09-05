@@ -1,0 +1,1229 @@
+{
+  "method": "Source bitmap ink bounds in manually isolated text regions, frozen before PPTX rendering. No PDF text coordinates used.",
+  "anchors": [
+    {
+      "id": "title",
+      "roi": [
+        640,
+        38,
+        970,
+        119
+      ],
+      "ink_box": [
+        649,
+        50,
+        948,
+        107
+      ],
+      "polarity": "light",
+      "threshold": 230
+    },
+    {
+      "id": "page-number",
+      "roi": [
+        1480,
+        1167,
+        1545,
+        1200
+      ],
+      "ink_box": [
+        1494,
+        1174,
+        1522,
+        1194
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-00",
+      "roi": [
+        205,
+        199,
+        350,
+        220
+      ],
+      "ink_box": [
+        210,
+        201,
+        238,
+        214
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-00",
+      "roi": [
+        465,
+        199,
+        1200,
+        220
+      ],
+      "ink_box": [
+        469,
+        201,
+        734,
+        218
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-01",
+      "roi": [
+        205,
+        225,
+        350,
+        242
+      ],
+      "ink_box": [
+        210,
+        227,
+        247,
+        240
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-01",
+      "roi": [
+        465,
+        225,
+        1200,
+        242
+      ],
+      "ink_box": [
+        469,
+        227,
+        655,
+        240
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-02",
+      "roi": [
+        205,
+        250,
+        350,
+        270
+      ],
+      "ink_box": [
+        212,
+        252,
+        245,
+        265
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-02",
+      "roi": [
+        465,
+        250,
+        1200,
+        270
+      ],
+      "ink_box": [
+        471,
+        252,
+        639,
+        268
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-03",
+      "roi": [
+        205,
+        276,
+        350,
+        297
+      ],
+      "ink_box": [
+        211,
+        278,
+        272,
+        291
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-03",
+      "roi": [
+        465,
+        276,
+        1200,
+        297
+      ],
+      "ink_box": [
+        470,
+        278,
+        856,
+        295
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-04",
+      "roi": [
+        205,
+        301,
+        350,
+        322
+      ],
+      "ink_box": [
+        211,
+        303,
+        248,
+        316
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-04",
+      "roi": [
+        465,
+        301,
+        1200,
+        322
+      ],
+      "ink_box": [
+        470,
+        303,
+        668,
+        320
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-05",
+      "roi": [
+        205,
+        327,
+        350,
+        348
+      ],
+      "ink_box": [
+        211,
+        329,
+        258,
+        342
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-05",
+      "roi": [
+        465,
+        327,
+        1200,
+        348
+      ],
+      "ink_box": [
+        470,
+        329,
+        703,
+        346
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-06",
+      "roi": [
+        205,
+        353,
+        350,
+        374
+      ],
+      "ink_box": [
+        211,
+        355,
+        241,
+        368
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-06",
+      "roi": [
+        465,
+        353,
+        1200,
+        374
+      ],
+      "ink_box": [
+        470,
+        355,
+        634,
+        372
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-07",
+      "roi": [
+        205,
+        378,
+        350,
+        399
+      ],
+      "ink_box": [
+        211,
+        380,
+        241,
+        393
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-07",
+      "roi": [
+        465,
+        378,
+        1200,
+        399
+      ],
+      "ink_box": [
+        470,
+        380,
+        620,
+        397
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-08",
+      "roi": [
+        205,
+        404,
+        350,
+        425
+      ],
+      "ink_box": [
+        211,
+        406,
+        256,
+        419
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-08",
+      "roi": [
+        465,
+        404,
+        1200,
+        425
+      ],
+      "ink_box": [
+        470,
+        406,
+        753,
+        423
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-09",
+      "roi": [
+        205,
+        429,
+        350,
+        446
+      ],
+      "ink_box": [
+        212,
+        431,
+        258,
+        444
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-09",
+      "roi": [
+        465,
+        429,
+        1200,
+        446
+      ],
+      "ink_box": [
+        470,
+        431,
+        662,
+        444
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-10",
+      "roi": [
+        205,
+        455,
+        350,
+        476
+      ],
+      "ink_box": [
+        212,
+        457,
+        250,
+        470
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-10",
+      "roi": [
+        465,
+        455,
+        1200,
+        476
+      ],
+      "ink_box": [
+        471,
+        457,
+        587,
+        474
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-11",
+      "roi": [
+        205,
+        481,
+        350,
+        502
+      ],
+      "ink_box": [
+        211,
+        483,
+        257,
+        496
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-11",
+      "roi": [
+        465,
+        481,
+        1200,
+        502
+      ],
+      "ink_box": [
+        470,
+        483,
+        752,
+        500
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-12",
+      "roi": [
+        205,
+        506,
+        350,
+        527
+      ],
+      "ink_box": [
+        211,
+        508,
+        261,
+        521
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-12",
+      "roi": [
+        465,
+        506,
+        1200,
+        527
+      ],
+      "ink_box": [
+        470,
+        508,
+        741,
+        525
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-13",
+      "roi": [
+        205,
+        532,
+        350,
+        553
+      ],
+      "ink_box": [
+        211,
+        534,
+        250,
+        547
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-13",
+      "roi": [
+        465,
+        532,
+        1200,
+        553
+      ],
+      "ink_box": [
+        470,
+        534,
+        738,
+        551
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-14",
+      "roi": [
+        205,
+        557,
+        350,
+        578
+      ],
+      "ink_box": [
+        211,
+        559,
+        259,
+        572
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-14",
+      "roi": [
+        465,
+        557,
+        1200,
+        578
+      ],
+      "ink_box": [
+        470,
+        559,
+        702,
+        576
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-15",
+      "roi": [
+        205,
+        583,
+        350,
+        603
+      ],
+      "ink_box": [
+        211,
+        585,
+        243,
+        598
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-15",
+      "roi": [
+        465,
+        583,
+        1200,
+        603
+      ],
+      "ink_box": [
+        470,
+        585,
+        651,
+        601
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-16",
+      "roi": [
+        205,
+        609,
+        350,
+        630
+      ],
+      "ink_box": [
+        212,
+        611,
+        268,
+        624
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-16",
+      "roi": [
+        465,
+        609,
+        1200,
+        630
+      ],
+      "ink_box": [
+        471,
+        611,
+        869,
+        628
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-17",
+      "roi": [
+        205,
+        634,
+        350,
+        651
+      ],
+      "ink_box": [
+        212,
+        636,
+        245,
+        649
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-17",
+      "roi": [
+        465,
+        634,
+        1200,
+        651
+      ],
+      "ink_box": [
+        471,
+        636,
+        659,
+        649
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-18",
+      "roi": [
+        205,
+        660,
+        350,
+        677
+      ],
+      "ink_box": [
+        212,
+        662,
+        246,
+        675
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-18",
+      "roi": [
+        465,
+        660,
+        1200,
+        677
+      ],
+      "ink_box": [
+        471,
+        662,
+        640,
+        675
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-19",
+      "roi": [
+        205,
+        685,
+        350,
+        706
+      ],
+      "ink_box": [
+        212,
+        687,
+        248,
+        700
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-19",
+      "roi": [
+        465,
+        685,
+        1200,
+        706
+      ],
+      "ink_box": [
+        471,
+        687,
+        695,
+        704
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-20",
+      "roi": [
+        205,
+        711,
+        350,
+        732
+      ],
+      "ink_box": [
+        212,
+        713,
+        251,
+        726
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-20",
+      "roi": [
+        465,
+        711,
+        1200,
+        732
+      ],
+      "ink_box": [
+        471,
+        713,
+        690,
+        730
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-21",
+      "roi": [
+        205,
+        737,
+        350,
+        758
+      ],
+      "ink_box": [
+        211,
+        739,
+        257,
+        752
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-21",
+      "roi": [
+        465,
+        737,
+        1200,
+        758
+      ],
+      "ink_box": [
+        470,
+        739,
+        761,
+        756
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-22",
+      "roi": [
+        205,
+        762,
+        350,
+        779
+      ],
+      "ink_box": [
+        212,
+        764,
+        258,
+        777
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-22",
+      "roi": [
+        465,
+        762,
+        1200,
+        779
+      ],
+      "ink_box": [
+        471,
+        764,
+        684,
+        777
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-23",
+      "roi": [
+        205,
+        788,
+        350,
+        809
+      ],
+      "ink_box": [
+        212,
+        790,
+        272,
+        803
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-23",
+      "roi": [
+        465,
+        788,
+        1200,
+        809
+      ],
+      "ink_box": [
+        471,
+        790,
+        853,
+        807
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-24",
+      "roi": [
+        205,
+        813,
+        350,
+        834
+      ],
+      "ink_box": [
+        211,
+        815,
+        284,
+        828
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-24",
+      "roi": [
+        465,
+        813,
+        1200,
+        834
+      ],
+      "ink_box": [
+        470,
+        815,
+        908,
+        832
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-25",
+      "roi": [
+        205,
+        839,
+        350,
+        860
+      ],
+      "ink_box": [
+        211,
+        841,
+        258,
+        854
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-25",
+      "roi": [
+        465,
+        839,
+        1200,
+        860
+      ],
+      "ink_box": [
+        470,
+        841,
+        1070,
+        858
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-26",
+      "roi": [
+        205,
+        865,
+        350,
+        886
+      ],
+      "ink_box": [
+        211,
+        867,
+        248,
+        880
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-26",
+      "roi": [
+        465,
+        865,
+        1200,
+        886
+      ],
+      "ink_box": [
+        470,
+        867,
+        695,
+        884
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-27",
+      "roi": [
+        205,
+        890,
+        350,
+        910
+      ],
+      "ink_box": [
+        211,
+        892,
+        260,
+        905
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-27",
+      "roi": [
+        465,
+        890,
+        1200,
+        910
+      ],
+      "ink_box": [
+        470,
+        892,
+        584,
+        908
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-28",
+      "roi": [
+        205,
+        916,
+        350,
+        937
+      ],
+      "ink_box": [
+        211,
+        918,
+        248,
+        931
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-28",
+      "roi": [
+        465,
+        916,
+        1200,
+        937
+      ],
+      "ink_box": [
+        470,
+        918,
+        632,
+        935
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-29",
+      "roi": [
+        205,
+        941,
+        350,
+        962
+      ],
+      "ink_box": [
+        211,
+        943,
+        263,
+        956
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-29",
+      "roi": [
+        465,
+        941,
+        1200,
+        962
+      ],
+      "ink_box": [
+        470,
+        943,
+        786,
+        960
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-30",
+      "roi": [
+        205,
+        967,
+        350,
+        988
+      ],
+      "ink_box": [
+        211,
+        969,
+        270,
+        982
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-30",
+      "roi": [
+        465,
+        967,
+        1200,
+        988
+      ],
+      "ink_box": [
+        470,
+        969,
+        782,
+        986
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-31",
+      "roi": [
+        205,
+        993,
+        350,
+        1014
+      ],
+      "ink_box": [
+        211,
+        995,
+        243,
+        1008
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-31",
+      "roi": [
+        465,
+        993,
+        1200,
+        1014
+      ],
+      "ink_box": [
+        470,
+        995,
+        697,
+        1012
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-32",
+      "roi": [
+        205,
+        1018,
+        350,
+        1039
+      ],
+      "ink_box": [
+        211,
+        1020,
+        262,
+        1033
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-32",
+      "roi": [
+        465,
+        1018,
+        1200,
+        1039
+      ],
+      "ink_box": [
+        470,
+        1020,
+        749,
+        1037
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-33",
+      "roi": [
+        205,
+        1044,
+        350,
+        1065
+      ],
+      "ink_box": [
+        211,
+        1046,
+        256,
+        1059
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-33",
+      "roi": [
+        465,
+        1044,
+        1200,
+        1065
+      ],
+      "ink_box": [
+        470,
+        1046,
+        683,
+        1063
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "acronym-34",
+      "roi": [
+        205,
+        1070,
+        350,
+        1091
+      ],
+      "ink_box": [
+        211,
+        1072,
+        244,
+        1085
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "expansion-34",
+      "roi": [
+        465,
+        1070,
+        1200,
+        1091
+      ],
+      "ink_box": [
+        470,
+        1072,
+        648,
+        1089
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    }
+  ]
+}

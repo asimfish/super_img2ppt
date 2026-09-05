@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/Users/liyufeng/Code/super_img2ppt/.venv/bin/super-img2ppt",
+    "check",
+    "/tmp/super-img2ppt-real-table-QEjguWsW/job/scene_02.json",
+    "--out",
+    "/tmp/super-img2ppt-real-table-QEjguWsW/check_02"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/liyufeng/Code/super_img2ppt/.venv/bin/super-img2ppt\", line 10, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/Users/liyufeng/code/super_img2ppt/skills/super-img2ppt/src/super_img2ppt/cli.py\", line 238, in main\n    catalog = FontCatalog(scene.get(\"fonts\"), tuple(args.font_dir))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/liyufeng/code/super_img2ppt/skills/super-img2ppt/src/super_img2ppt/fonts.py\", line 177, in __init__\n    self.faces = discover_fonts(extra_dirs)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/liyufeng/code/super_img2ppt/skills/super-img2ppt/src/super_img2ppt/fonts.py\", line 95, in discover_fonts\n    for path, index in font_candidates(extra_dirs):\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/liyufeng/code/super_img2ppt/skills/super-img2ppt/src/super_img2ppt/fonts.py\", line 52, in font_candidates\n    result = subprocess.run(\n             ^^^^^^^^^^^^^^^\n  File \"/Users/liyufeng/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/subprocess.py\", line 550, in run\n    stdout, stderr = process.communicate(input, timeout=timeout)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/liyufeng/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/subprocess.py\", line 1209, in communicate\n    stdout, stderr = self._communicate(input, endtime, timeout)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/liyufeng/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/subprocess.py\", line 2116, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n  File \"/Users/liyufeng/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/subprocess.py\", line 1253, in _check_timeout\n    raise TimeoutExpired(\nsubprocess.TimeoutExpired: Command '['fc-list', '--format=%{file}\\t%{index}\\n']' timed out after 30 seconds\n",
+  "completed_utc": "2026-09-05T21:01:58.604900+00:00"
+}

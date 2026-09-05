@@ -1,0 +1,525 @@
+{
+  "version": 1,
+  "title": "NASA cFS real-image reconstruction",
+  "slides": [
+    {
+      "id": "nasa_06",
+      "width": 1600,
+      "height": 1200,
+      "background": "#FFFFFF",
+      "source": "source.png",
+      "reviewed": true,
+      "notes": "Source: David McComas / NASA GSFC, NTRS 20180007319. Reconstructed from the rendered page image and OCR; source speaker notes were not supplied. Logos remain independent raster images.",
+      "elements": [
+        {
+          "id": "nasa-logo",
+          "kind": "image",
+          "z": 0,
+          "box": [
+            0,
+            0,
+            141,
+            134
+          ],
+          "path": "nasa-logo.png",
+          "contains_text": true,
+          "image_fit": "contain",
+          "role": "background",
+          "provenance": "NASA NTRS 20180007319 page 11, title-free common header crop; source image coordinates recorded in box."
+        },
+        {
+          "id": "stars",
+          "kind": "image",
+          "z": 0,
+          "box": [
+            141,
+            0,
+            1270,
+            134
+          ],
+          "path": "stars.png",
+          "contains_text": false,
+          "image_fit": "contain",
+          "role": "background",
+          "provenance": "NASA NTRS 20180007319 page 11, title-free common header crop; source image coordinates recorded in box."
+        },
+        {
+          "id": "cfs-logo",
+          "kind": "image",
+          "z": 0,
+          "box": [
+            1411,
+            0,
+            189,
+            134
+          ],
+          "path": "cfs-logo.png",
+          "contains_text": true,
+          "image_fit": "contain",
+          "role": "background",
+          "provenance": "NASA NTRS 20180007319 page 11, title-free common header crop; source image coordinates recorded in box."
+        },
+        {
+          "id": "title",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            463.5,
+            38.75,
+            649.0,
+            72.5556
+          ],
+          "text": "Project Centric Reuse",
+          "font_family": "Arial",
+          "font_size": 62.222222,
+          "bold": true,
+          "color": "#FFFFFF",
+          "font_group": "title",
+          "fit": "strict"
+        },
+        {
+          "id": "footer",
+          "kind": "line",
+          "z": 0,
+          "points": [
+            [
+              0,
+              1162
+            ],
+            [
+              1600,
+              1162
+            ]
+          ],
+          "stroke": "#333333",
+          "stroke_width": 2
+        },
+        {
+          "id": "page-number",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1493.0,
+            1169.0,
+            18.0,
+            31.25
+          ],
+          "text": "6",
+          "font_family": "Arial",
+          "font_size": 26.666667,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "footer",
+          "fit": "strict"
+        },
+        {
+          "id": "p1a",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            100.0,
+            153.25,
+            1387.75,
+            62.5825
+          ],
+          "text": "“Clone & Own” - Used similar heritage missions as starting",
+          "font_family": "Arial",
+          "font_size": 53.55,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "primary",
+          "fit": "strict"
+        },
+        {
+          "id": "p1b",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            99.5,
+            204.75,
+            119.0,
+            62.5825
+          ],
+          "text": "point",
+          "font_family": "Arial",
+          "font_size": 53.55,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "primary",
+          "fit": "strict"
+        },
+        {
+          "id": "p2a",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            100.5,
+            286.25,
+            1414.0,
+            62.5825
+          ],
+          "text": "Changes made to the heritage software for the new mission",
+          "font_family": "Arial",
+          "font_size": 53.55,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "primary",
+          "fit": "strict"
+        },
+        {
+          "id": "p2b",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            100.0,
+            337.75,
+            793.5,
+            62.5825
+          ],
+          "text": "were not systematically managed",
+          "font_family": "Arial",
+          "font_size": 53.55,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "primary",
+          "fit": "strict"
+        },
+        {
+          "id": "p3a",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            100.25,
+            942.5,
+            1366.5,
+            62.5825
+          ],
+          "text": "Inconsistent and minimal flight software (FSW) reuse cost",
+          "font_family": "Arial",
+          "font_size": 53.55,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "primary",
+          "fit": "strict"
+        },
+        {
+          "id": "p3b",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            100.5,
+            993.75,
+            184.5,
+            62.5825
+          ],
+          "text": "savings",
+          "font_family": "Arial",
+          "font_size": 53.55,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "primary",
+          "fit": "strict"
+        },
+        {
+          "id": "s1a",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            169.75,
+            421.0,
+            1254.5,
+            52.3245
+          ],
+          "text": "New flight hardware and/or operating system required changes",
+          "font_family": "Arial",
+          "font_size": 44.63,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "secondary",
+          "fit": "strict"
+        },
+        {
+          "id": "s1b",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            170.25,
+            465.0,
+            329.75,
+            52.3245
+          ],
+          "text": "throughout FSW",
+          "font_family": "Arial",
+          "font_size": 44.63,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "secondary",
+          "fit": "strict"
+        },
+        {
+          "id": "s2a",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            170.0,
+            531.0,
+            1249.0,
+            52.3245
+          ],
+          "text": "Small FSW requirement changes could have significant testing",
+          "font_family": "Arial",
+          "font_size": 44.63,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "secondary",
+          "fit": "strict"
+        },
+        {
+          "id": "s2b",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            170.25,
+            575.5,
+            157.75,
+            52.3245
+          ],
+          "text": "impacts",
+          "font_family": "Arial",
+          "font_size": 44.63,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "secondary",
+          "fit": "strict"
+        },
+        {
+          "id": "s3",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            169.5,
+            641.0,
+            1110.0,
+            52.3245
+          ],
+          "text": "FSW changes were made at the discretion of developer",
+          "font_family": "Arial",
+          "font_size": 44.63,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "secondary",
+          "fit": "strict"
+        },
+        {
+          "id": "t1a",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            249.5,
+            708.0,
+            1274.25,
+            52.3245
+          ],
+          "text": "FSW test procedure changes were made at the discretion of the",
+          "font_family": "Arial",
+          "font_size": 44.63,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "secondary",
+          "fit": "strict"
+        },
+        {
+          "id": "t1b",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            250.25,
+            751.0,
+            116.25,
+            52.3245
+          ],
+          "text": "tester",
+          "font_family": "Arial",
+          "font_size": 44.63,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "secondary",
+          "fit": "strict"
+        },
+        {
+          "id": "t2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            249.5,
+            813.0,
+            1092.0,
+            52.3245
+          ],
+          "text": "Extensive documentation changes were made for style",
+          "font_family": "Arial",
+          "font_size": 44.63,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "secondary",
+          "fit": "strict"
+        },
+        {
+          "id": "s4",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            169.75,
+            876.0,
+            1064.5,
+            52.3245
+          ],
+          "text": "Not all artifacts from heritage missions were available",
+          "font_family": "Arial",
+          "font_size": 44.63,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "secondary",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            43,
+            176,
+            13,
+            14
+          ],
+          "fill": "#000000"
+        },
+        {
+          "id": "bullet-1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            43,
+            310,
+            13,
+            13
+          ],
+          "fill": "#000000"
+        },
+        {
+          "id": "bullet-2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            43,
+            965,
+            13,
+            14
+          ],
+          "fill": "#000000"
+        },
+        {
+          "id": "bullet-3",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            202,
+            727,
+            12,
+            12
+          ],
+          "fill": "#000000"
+        },
+        {
+          "id": "bullet-4",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            202,
+            832,
+            12,
+            12
+          ],
+          "fill": "#000000"
+        },
+        {
+          "id": "dash-0",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            119.75,
+            421.75,
+            18.0,
+            52.3245
+          ],
+          "text": "-",
+          "font_family": "Arial",
+          "font_size": 44.63,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "secondary",
+          "fit": "strict"
+        },
+        {
+          "id": "dash-1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            119.75,
+            531.75,
+            18.0,
+            52.3245
+          ],
+          "text": "-",
+          "font_family": "Arial",
+          "font_size": 44.63,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "secondary",
+          "fit": "strict"
+        },
+        {
+          "id": "dash-2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            119.75,
+            641.75,
+            18.0,
+            52.3245
+          ],
+          "text": "-",
+          "font_family": "Arial",
+          "font_size": 44.63,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "secondary",
+          "fit": "strict"
+        },
+        {
+          "id": "dash-3",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            119.75,
+            876.75,
+            18.0,
+            52.3245
+          ],
+          "text": "-",
+          "font_family": "Arial",
+          "font_size": 44.63,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "secondary",
+          "fit": "strict"
+        }
+      ]
+    }
+  ]
+}

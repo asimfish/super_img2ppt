@@ -4,6 +4,13 @@ Reviewed 2026-09-06. Scope: the complete skill directory and its local runtime, 
 fixtures and packaging scripts. Verdict: no known blocking source-to-sink finding after the
 controls below; this is not a claim that native third-party document parsers are sandboxed.
 
+The v0.1.1 delta adds no runtime dependencies or remote capabilities. Font subprocess failures
+are normalized and written to fresh report directories. Refined glyph geometry uses a local
+Pillow mask capped at 8 million pixels per entry with an eight-entry cache; larger text retains
+conservative box geometry. Baked-text overlay, path and existing-output boundaries remain in
+place and their negative tests pass. Public test assets have separate source/license notices;
+the standalone skill package contains neither fonts nor the external real-case corpus.
+
 ## Sources and sinks
 
 | Source | Sink | Enforcement/evidence |

@@ -1,0 +1,127 @@
+{
+  "method": "Source-only black-ink bounds: all RGB channels below 130; upper bounds exclusive. Not a LibreOffice or PowerPoint measurement.",
+  "probes": [
+    {
+      "id": "title",
+      "source_ink_xyxy": [
+        285,
+        36,
+        421,
+        53
+      ],
+      "scene_frame_xywh": [
+        265,
+        31.6,
+        174,
+        24
+      ]
+    },
+    {
+      "id": "tick_label_2000",
+      "source_ink_xyxy": [
+        83,
+        90,
+        117,
+        100
+      ],
+      "scene_frame_xywh": [
+        77,
+        86.6,
+        40.5,
+        18.6
+      ]
+    },
+    {
+      "id": "header_0",
+      "source_ink_xyxy": [
+        151,
+        385,
+        195,
+        395
+      ],
+      "scene_frame_xywh": [
+        131,
+        381.0,
+        83.6,
+        18.6
+      ]
+    },
+    {
+      "id": "row_label_0",
+      "source_ink_xyxy": [
+        61,
+        400,
+        123,
+        412
+      ],
+      "scene_frame_xywh": [
+        60,
+        396.166667,
+        66.8,
+        18.6
+      ]
+    },
+    {
+      "id": "number_0_0",
+      "source_ink_xyxy": [
+        169,
+        400,
+        207,
+        410
+      ],
+      "scene_frame_xywh": [
+        136.96,
+        396.166667,
+        71.68,
+        18.6
+      ]
+    },
+    {
+      "id": "row_label_4",
+      "source_ink_xyxy": [
+        61,
+        459,
+        104,
+        471
+      ],
+      "scene_frame_xywh": [
+        60,
+        454.833333,
+        66.8,
+        18.6
+      ]
+    }
+  ],
+  "source_table_row_height_px": 14.6666667,
+  "check_01_required_linebox_height_px": 17.5,
+  "fonts_shrunk": false,
+  "actual_pptx_alignment_measurement_available": false,
+  "important_clearances": [
+    {
+      "region": "Freeze header versus plot baseline",
+      "source_ink_top": 385,
+      "baseline_stroke_bottom": 384.55,
+      "visible_clearance_px": 0.45,
+      "scene_frame_top": 381
+    },
+    {
+      "region": "431.5 versus first body row lower grid line",
+      "source_ink_bottom_exclusive": 410,
+      "line_stroke_top": 412.658333,
+      "visible_clearance_px": 2.658333
+    },
+    {
+      "region": "100 year versus first body row lower grid line",
+      "source_ink_bottom_exclusive": 412,
+      "line_stroke_top": 412.658333,
+      "visible_clearance_px": 0.658333
+    }
+  ],
+  "scene_sha256": "cbfd203ec3bee9619428bb0965afa8a31843b7fb27e400f2af57a0d93379fd04",
+  "objects": {
+    "shape": 31,
+    "line": 22,
+    "text": 41,
+    "image": 1
+  }
+}

@@ -73,12 +73,9 @@ def resolve_scene(scene: dict, layouts: dict, root: Path, out: Path) -> dict:
 def build(
     scene_path: Path, out: Path, render: bool = True, font_dirs: tuple[Path, ...] = ()
 ) -> dict:
-    scene = load_scene(scene_path)
-    root = scene_path.resolve().parent
     fresh_directory(out)
     report = {
         "status": "fail",
-        "source_scene_sha256": hashlib.sha256(scene_path.read_bytes()).hexdigest(),
         "visual_review": "required",
         "automated_checks": {},
         "limitations": [
@@ -88,6 +85,9 @@ def build(
         ],
     }
     try:
+        scene = load_scene(scene_path)
+        root = scene_path.resolve().parent
+        report["source_scene_sha256"] = hashlib.sha256(scene_path.read_bytes()).hexdigest()
         catalog = FontCatalog(scene.get("fonts"), font_dirs)
         layouts = layout_scene(scene, catalog)
         checks = preflight(scene, layouts, root)
@@ -170,6 +170,23 @@ def build(
         json_write(out / "validation.json", report)
 
 
+def check(scene_path: Path, out: Path, font_dirs: tuple[Path, ...] = ()) -> dict:
+    fresh_directory(out)
+    report = {"status": "fail", "findings": []}
+    try:
+        scene = load_scene(scene_path)
+        catalog = FontCatalog(scene.get("fonts"), font_dirs)
+        layouts = layout_scene(scene, catalog)
+        report = preflight(scene, layouts, scene_path.resolve().parent)
+        json_write(out / "fonts.json", catalog.manifest())
+        return report
+    except (InputError, OSError, ValueError, RuntimeError) as exc:
+        report["error"] = str(exc)
+        raise
+    finally:
+        json_write(out / "validation.json", report)
+
+
 def doctor() -> dict:
     return {
         "python": sys.version.split()[0],
@@ -234,13 +251,7 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "build":
             result = build(args.scene, args.out, not args.no_render, tuple(args.font_dir))
         else:
-            scene = load_scene(args.scene)
-            catalog = FontCatalog(scene.get("fonts"), tuple(args.font_dir))
-            layouts = layout_scene(scene, catalog)
-            result = preflight(scene, layouts, args.scene.resolve().parent)
-            fresh_directory(args.out)
-            json_write(args.out / "validation.json", result)
-            json_write(args.out / "fonts.json", catalog.manifest())
+            result = check(args.scene, args.out, tuple(args.font_dir))
         if args.command in {"build", "prepare", "check"}:
             print(
                 json.dumps(

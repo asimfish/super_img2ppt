@@ -1,0 +1,45 @@
+本次独立真实案例评估结束，转换仍被阻断，没有生成 PPTX、SVG、scene.resolved.json、真实 PPTX preview 或 comparison。最佳可继续编辑的场景为 [scene_02.json](/tmp/super-img2ppt-real-table-QEjguWsW/job/scene_02.json)。最终构建的 [validation.json](/tmp/super-img2ppt-real-table-QEjguWsW/build_03/validation.json) 是 `fail`，只到达 preflight，不能宣称完成转换或通过视觉验收。
+
+原始独立测试与收到父任务修复后的复跑必须分开看。完整、未改写的原始报告保存在 [independent_report_initial.md](/tmp/super-img2ppt-real-table-QEjguWsW/independent_report_initial.md)。初始 `check_01` 和 `build_01` 均 exit 2，含 131 个 error（其中127个 unintended_overlap）、2 个 warning、29 个 info；没有文字 overflow。之后修正版 `check_02`、`check_02_retry`、`build_02` 连续三次在 `fc-list` 字体枚举时30秒超时、exit 1，未生成 validation.json。这些失败记录全部保留。
+
+父任务随后通知：默认 `/usr/local/bin/fc-list` 来自 MiKTeX，机器同时已有 Homebrew fontconfig；并确认它已经修改 QA，使 text/line、text/shape 使用可见墨迹排除透明边距相交，另增加字体工具失败诊断。因此后述 `check_03`、`build_03` 是 **post-fix 复跑**，不是原始未修改 runtime 的独立结果。本 agent 没有读取或修改 runtime 源码，也没有安装依赖或改动全局配置。
+
+实际验证 `/opt/homebrew/bin/fc-list --version` exit 0，返回 `fontconfig version 2.18.3`。只在新进程设置 `PATH=/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin`，随后同一 `scene_02.json` 的 `check_03` 和 `build_03` 均正常完成但 exit 2 / fail，包含 **61 个 unintended_overlap、95 个 text_frame_overlap_only info、1 个 raster_text warning**。容器边界、轴标题裁图框交叉及字体超时均不再报错。完整 argv、进程 PATH、实际 fc-list 路径、stdout、stderr、退出码分别见 [check_03.command.json](/tmp/super-img2ppt-real-table-QEjguWsW/check_03.command.json) 与 [build_03.command.json](/tmp/super-img2ppt-real-table-QEjguWsW/build_03.command.json)。
+
+61 个剩余交集的实际对象明细保存在 [post_fix_intersections.json](/tmp/super-img2ppt-real-table-QEjguWsW/post_fix_intersections.json)：
+
+| 类型 | 数量 | 具体对象与含义 |
+| --- | ---: | --- |
+| line / shape | 5 | `plot_baseline` 与 `bar_0_4` 到 `bar_4_4`，即每根柱体的最底层接触基线 |
+| line / line | 47 | 左轴与4个非零刻度接点；基线与4条内部表格竖线接点；表格竖线与横线相交39处 |
+| line / text | 9 | 下方逐一列出；不能当作普通网格接点直接放行 |
+
+9 个文字与线交集为：
+
+- `plot_baseline` / `header_1`（Wind）
+- `plot_baseline` / `header_2`（Flood）
+- `plot_baseline` / `header_3`（Quake）
+- `plot_baseline` / `header_4`（Hail）
+- `table_horizontal_2` / `row_label_0`（100 year）
+- `table_horizontal_3` / `row_label_1`（50 year）
+- `table_horizontal_4` / `row_label_2`（20 year）
+- `table_horizontal_5` / `row_label_3`（10 year）
+- `table_horizontal_6` / `row_label_4`（5 year）
+
+47 个线接点进一步分为：`plot_left` 与 `tick_500/1000/1500/2000` 共4处；`plot_baseline` 与 `table_vertical_1..4` 共4处；`table_vertical_0..4` 与 `table_horizontal_1..6` 共30处；`table_vertical_5` 与 `table_horizontal_1..5` 共5处；`row_labels_left` 与 `table_horizontal_2..5` 共4处。它们多为原图明确存在的连线交点；本 agent 未添加任何 overlap 豁免，也没有为降低检查数量移动网格。按父任务要求，到此停止独立评估，将有理由的逐对象连接声明和文字穿线修复留给父任务。
+
+源图为 `/Users/liyufeng/Code/super_img2ppt/output/real_cases_20260906/matplotlib_table.png`，640 × 480，SHA-256 `ed9ad654411ca4f4bd64c492387a94e03f5299edc0697c233248505f3586e060`。已确实打开原图、prepare 的 source.png、表格和纵轴标题放大裁图；prepare exit 0、Vision OCR 为 ok。只使用指定 skill 及 references、原图、OCR 和本地产物；未读取预期场景、测试、绘图脚本、网站生成代码或其他案例输出，未联网、操作 GitHub 或再委派。源图 25 个数值逐项视觉核对后录入；OCR 的 Hail、小数点、年份和漏掉的 0 刻度均已纠正。完整转录表与命令记录在原始报告中。
+
+最佳场景 [scene_02.json](/tmp/super-img2ppt-real-table-QEjguWsW/job/scene_02.json) 的 SHA-256 为 `cbfd203ec3bee9619428bb0965afa8a31843b7fb27e400f2af57a0d93379fd04`，post-fix 复跑前后未改变。它设有 95 个对象：41 段原生文字、31 个矩形、22 条线以及1个栅格裁图。这只是场景对象计数，因导出被阻断，尚未通过 native_objects 检查。矩形和线保留五根堆积柱体、分段色彩、表格网格、坐标轴和刻度；图表与表格计划由可编辑文本/形状构成，不是 Excel 数据关联对象。
+
+唯一栅格区域为 [rotated_y_axis_label_tight.png](/tmp/super-img2ppt-real-table-QEjguWsW/job/assets/rotated_y_axis_label_tight.png)，精确裁图 `[59,163,76,277]`，17 × 114，保留旋转文字 `Loss in $1000's`。scene v1 不支持旋转，因此其内部文字仍不可编辑；没有重叠文字覆盖层，也没有使用整幅源图作背景。未发现无法辨认的数字或标签。
+
+字号始终 strict：标题16.666667源像素，正文13.888889源像素，没有缩小。采用本机 Verdana，属于根据像素宽度选择的近似字体，不能断言为原图字体。[fonts.json](/tmp/super-img2ppt-real-table-QEjguWsW/check_03/fonts.json) 解析到 Verdana.ttf、weight 400、face_index 0，SHA-256 `0da8c12f3e15d95585434d2cf294b3113a3e3fc84bf9ba9d64f2ef834ef4bd98`；substitutions=[] 只证明请求的 Verdana 找到，字体没有嵌入或复制。预期字体偏差包括字形、字距和 descender 高度；上述9个文字/线相交尤其需要查看实际渲染后局部修正。
+
+图框为 `[128,58,576,384]`；表格列边界 x=128、217.6、307.2、396.8、486.4、576，行高约14.6667px。五根柱体宽37px，左边界为148、241、333、426、519，分段颜色与高度均直接采样。源图完整几何数据见 [source_measurements.json](/tmp/super-img2ppt-real-table-QEjguWsW/source_measurements.json)。首轮严格文字行框需17.5px高，因此跨越紧密表格行线的是透明框留白；这不能自动证明输出字形没有穿线。
+
+必要的源图对齐测量见 [alignment_measurements.json](/tmp/super-img2ppt-real-table-QEjguWsW/alignment_measurements.json)，方法为 RGB 每通道 <130 的黑色墨迹边界、右下边界不含末像素。例如 Freeze 源墨迹 `[151,385,195,395]`，基线按1.1px线宽下沿384.55，间隙约0.45px；431.5 源墨迹 `[169,400,207,410]`，下方网格线按1.35px线宽上沿412.6583，间隙约2.66px；100 year 源墨迹 `[61,400,123,412]`，同一间隙约0.66px。这些是源图/场景几何测量，绝非 PPTX 渲染测量。
+
+实际 renderer：**未运行**。doctor 虽发现 `/opt/homebrew/bin/soffice`，但 build_01 和 post-fix build_03 均因 preflight fail 在导出前停止。最终 build_03 目录只有 fonts.json 和 validation.json，无法打开不存在的真实 PPTX preview 或 comparison；PowerPoint/WPS 也未验证。已打开的 [source_table_zoom.png](/tmp/super-img2ppt-real-table-QEjguWsW/source_table_zoom.png) 和 [source_axis_zoom.png](/tmp/super-img2ppt-real-table-QEjguWsW/source_axis_zoom.png) 均明确是源图裁图。
+
+证据与缺失产物的机器可读索引为 [evidence_index.json](/tmp/super-img2ppt-real-table-QEjguWsW/evidence_index.json)。原始 scene/check/build、三次字体超时、post-fix check/build、字体清单及图像测量均已保留。本报告不把 post-fix 复跑算作原始独立测试通过，也不把 scene 草稿冒充最终 PPTX/SVG。

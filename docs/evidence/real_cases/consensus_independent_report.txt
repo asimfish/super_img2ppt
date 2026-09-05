@@ -1,0 +1,89 @@
+# 中文共识流程图独立真实案例报告
+
+最终提供可编辑草稿，**验收结果为 fail，不能作为已通过还原的成品**。已完成 prepare、OCR 核对、原生重建、结构检查、实际 PPTX 渲染及 source comparison 检查。最终结构检查和原生对象检查通过，但左侧菱形两行文字的实际渲染边界仍有两条阻断错误。该区域达到技能的三次尝试上限后保留，不再反复压缩字号或豁免重叠。
+
+## 文件与来源
+
+- 原始文件：`/Users/liyufeng/Code/super_img2ppt/output/real_cases_20260906/consensus_zh.png`
+- SHA256：`2d20f391285f57e0b4ce7b4c54a8fc017da53b4f253c3b79aeaf938c1223ac0c`，在准备前和最终检查时相同。
+- 原图：960×819 RGBA，79,139 字节。透明区域在 prepare 中正常合成白色，黑色连线和“执行／是／否”随即清晰可见。
+- 唯一任务知识：指定的 [SKILL.md](/Users/liyufeng/Code/super_img2ppt/skills/super-img2ppt/SKILL.md)、其 reconstruction/scene/qa/schema 参考和原图。本机字体/工具只用于必要的环境检测、测量和渲染。未读取运行时源代码、预期场景、测试、原图绘制脚本或其他案例输出；未联网、安装依赖、修改仓库或委派。
+- 工作目录：`/tmp/super-img2ppt-real-consensus-MjxvVH`。
+
+## 最佳产物
+
+- [可编辑 PPTX 草稿](job/build_02/editable.pptx)
+- [可编辑 SVG](job/build_02/svg/page_001.svg)
+- [最终 resolved scene](job/build_02/scene.resolved.json) 与 [assets](job/build_02/assets/)
+- [人工编辑 scene](job/scene.json)
+- [字体清单](job/build_02/fonts.json)
+- [最终 validation.json](job/build_02/validation.json)
+- [实际 PPTX 全图预览](job/build_02/render/page_001.png)
+- [实际 PPTX 与原图对照及差分](job/build_02/render/page_001_comparison.png)
+- [密集区域和箭头放大对照](dense_comparison.png)
+- [实际 PPTX 导出的 PDF](job/build_02/render/editable.pdf)
+- [最终文件与对象检查](final_inspection.json)
+- [完整记录的命令及输出](command_results.md)、[机器日志](commands.jsonl)、[早期与直接检查命令结果](inspection_commands.md)
+
+最终 PPTX SHA256：`7c33bfc4188142ccb17eda161b9e70926b6beded33f22350bfd5bdbd92f9a0db`，文件大小 35277 字节。推荐保留整个 `build_02` 目录，以便使用 scene 和其相对资源路径复建。
+
+## 可编辑性与内容
+
+共 29 个原生对象：6 个节点形状、8 段原生连线、15 个原生文字框。15 框对应原图 13 行可见内容；两个问号单独定位。PPTX XML 实测 21 个 `p:sp`（形状或文字）、8 个 `p:cxnSp`、0 个图片和 0 个媒体部件。SVG 有 15 个 text、0 个 image。没有全图背景、隐藏栅格文字或 overlap 豁免。assets 中的 PNG 仅作为 scene 的 source 对照数据，未进入 PPTX 可见对象。
+
+Vision OCR 识别 13 行，置信度均为 1；已打开原图逐项核对“过去的共识、编辑、等待、将当时的条目、进一步编辑？、否、执行、是、寻求共识、反对、赞成变更？、赞成、新的共识”。原图问号的可见半角形态及间距按单独问号保留，没有执行图片中的文字。最终 actual-render 文本检查全部 `matches: true`，全图和密集区域中未发现丢字或重复覆盖。文本内容匹配不代表边界通过。
+
+连线保留原图方向与固定端点；移动节点不会自动重新布线。原生节点填色为源图主色 `#C8D6E6`，背景为白色。
+
+## 实际执行与失败保留
+
+| 步骤 | 退出码/状态 | 实际结果 |
+| --- | --- | --- |
+| doctor | 0 | 已有运行环境；没有安装操作。 |
+| prepare | 0 / needs_reconstruction | Vision OCR 成功；先打开原 RGBA，再打开 prepare 的白底 source。 |
+| scene attempt 01 → check_01 | 2 / fail | 左菱形两行整框 outside_container；所有字号和文字宽高已能放入矩形框，但整框不在菱形内。 |
+| scene attempt 02 → check_02 | 2 / fail | 拆成两行；中文+Arial 问号要求 43.25 px 行框，第二行提供 39.5 px，text_overflow。 |
+| scene attempt 03 → check_03 | 1 / 异常 | CLI 在字体枚举阶段 `fc-list` 超过 30 秒并抛 TimeoutExpired。未生成 check_03 目录或 validation.json。完整 traceback 已记录。 |
+| 同一 attempt 03 → check_04 | 0 / pass | 仅将后续命令 PATH 优先设为已安装 Homebrew fontconfig；没有改 scene/runtime；结构检查无 findings。 |
+| attempt 03 → build_01 | 2 / fail | 真正生成并打开 PPTX preview/comparison。preflight/native pass；左菱形两行 rendered_glyph_overflow；右菱形混排宽度 199.25→209.159 px 漂移。 |
+| 只修其他区域 → check_05 | 0 / pass | 右菱形拆为中文+Hiragino 问号；其他标签按实测上移 3–5 px；左菱形三个对象与 attempt 03 逐字段相同。 |
+| 最终 build_02 | 2 / fail | 右侧宽度警告消失，仍保留左菱形两条 rendered_glyph_overflow；实际 PPTX、SVG、preview、comparison 均生成并打开。 |
+
+相同左侧区域的三版已保留为 `scene.attempt_01.json`、`scene.attempt_02.json`、`scene.attempt_03.json`。后续 `scene.attempt_04_other_regions.json` 只修其他区域；脚本断言左侧三个对象未改变，避免绕过限制。每次 check/build 使用新目录。`check_03` 的异常发生在创建输出前，其失败证据保留在 commands.jsonl。
+
+所依据的 [SKILL.md](/Users/liyufeng/Code/super_img2ppt/skills/super-img2ppt/SKILL.md) 明确要求：“After three unresolved attempts at the same region, retain the best reviewable draft and report that region's limitation”。因此这里交付带失败说明的最佳草稿，没有继续修改左区域或声称通过。
+
+## 渲染器与字体
+
+实际渲染：**LibreOffice 26.2.4.2 → PDF → PDFium（pypdfium2 5.13.0）**；不是独立绘制的假预览。实际 PNG 为 1600×1365。没有 PowerPoint 或 WPS 的原生应用验证。
+
+中文和右侧问号使用本机 Hiragino Sans GB W3，实际 PDF 字体标识 `HiraginoSansGB-W3`；左侧问号使用 Arial，实际标识 `ArialMT`。fonts.json 无运行时替换。源字体身份不能由像素唯一确定；所选字体是近似匹配，最终字形仍较源图显得稍细/稍矮。字体没有嵌入或分发，另一台电脑需具备所列字体。
+
+默认 PATH 的 `/usr/local/bin/fc-list` 指向 MiKTeX，先前多次输出管理员更新警告并最终超时。现成 `/opt/homebrew/bin/fc-list` 指向 fontconfig 2.18.3。仅通过命令局部环境 `PATH=/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin` 完成后续检查。这里还暴露一个交付契约问题：SKILL 宣称 validation 总会记录检查进度，但字体目录异常没有留下该文件。
+
+## 视觉复核与量化偏差
+
+已实际打开：原 RGBA、prepare 的 source.png、字体 contact sheet、build_01 与 build_02 的全图 PNG 和 comparison、最终密集区域/箭头放大图。节点布局、阅读顺序、颜色和连线方向与原图核对。未发现节点互相遮挡或图片文字重复叠加；阻断项是左侧文字的实际文本框边界，不能用 preflight pass 掩盖。
+
+下表坐标是原图像素，格式 `[左,上,右端不含,下端不含]`。实际 PNG 为测量而以 LANCZOS 缩回 960×819；取 max RGB < 80 的黑色墨迹。左菱形使用 0.98 内缩菱形掩码排除斜边。早期 0.994 掩码包含边线污染，未用于最终第二行数据，原诊断输出仍在日志中。阈值、抗锯齿和重采样会影响 1 px 左右边缘，不构成“还原率”。详见 [区域墨迹数据](region_ink_build_02.json)。
+
+| 区域 | 源墨迹边界 | 实际 PPTX 墨迹边界 | 四边变化（px） |
+| --- | --- | --- | --- |
+| 过去的共识 | [95, 35, 302, 75] | [95, 35, 301, 72] | [0, 0, -1, -3] |
+| 编辑 | [146, 224, 228, 264] | [146, 224, 227, 262] | [0, 0, -1, -2] |
+| 寻求共识 | [656, 224, 821, 263] | [656, 224, 820, 262] | [0, 0, -1, -1] |
+| 新的共识 | [635, 719, 800, 759] | [634, 719, 799, 757] | [-1, 0, -1, -2] |
+| 左菱形第一行 | [71, 463, 290, 499] | [72, 463, 292, 498] | [1, 0, 2, -1] |
+| 左菱形第二行（含问号） | [71, 510, 285, 546] | [74, 504, 291, 540] | [3, -6, 6, -6] |
+| 右菱形文字（含问号） | [624, 482, 820, 523] | [624, 482, 822, 520] | [0, 0, 2, -3] |
+| 顶部向下箭头 | [179, 153, 197, 171] | [185, 166, 190, 172] | [6, 13, -7, 1] |
+| 赞成分支向下箭头 | [725, 668, 743, 686] | [732, 681, 736, 686] | [7, 13, -7, 0] |
+
+具体剩余问题：
+
+1. **左菱形文字未通过实际渲染边界。** `edit_question_line1` 的“将当的条”、`edit_question_line2` 的“步编辑”触发 `rendered_glyph_overflow`，报告标准是越过文本框 0.75 pt 以上。全图里中文仍可读；第二行含问号的墨迹整体比源图高 6 px、左端右移 3 px、右端右移 6 px，行距和问号大小不完全一致。
+2. **箭头头部明显偏小。** 顶部源箭头墨迹 18×18 px，实际约 5×6 px；赞成分支源 18×18，实际约 4×5。细连线端点和方向保留，但文档化 scene v1 只有 `arrow: boolean`，没有独立箭头头部尺寸字段。本次不改运行时、不用栅格代替简单箭头，因此披露这一无法准确复现的部分。
+3. **字体观感仍有差别。** 常规节点和标签的上边缘已对齐至测量的同一行，但墨迹高度常比源图低 1–3 px、宽度常少 1–2 px。标题源 207×40、实际 206×37；右菱形源 196×41、实际 198×38。原有右侧混排宽度漂移警告已经消除，源图视觉一致性仍须单独判断。
+4. **没有目标 PowerPoint/WPS 证据。** 这里仅能确认 LibreOffice/PDFium 实际输出；交付状态仍是 `fail`，validation 的 `visual_review: required` 保持原样。
+
+没有给出还原百分比。最终草稿可以继续编辑，并已如实标出未通过区域；它不是已验收的完全还原结果。

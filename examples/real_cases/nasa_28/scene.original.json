@@ -1,0 +1,1833 @@
+{
+  "version": 1,
+  "title": "NASA cFS real-image reconstruction",
+  "slides": [
+    {
+      "id": "nasa_28",
+      "width": 1600,
+      "height": 1200,
+      "background": "#FFFFFF",
+      "source": "source.png",
+      "reviewed": true,
+      "notes": "Source: David McComas / NASA GSFC, NTRS 20180007319. Reconstructed from the rendered page image and OCR; source speaker notes were not supplied. Logos remain independent raster images.",
+      "elements": [
+        {
+          "id": "nasa-logo",
+          "kind": "image",
+          "z": 0,
+          "box": [
+            0,
+            0,
+            141,
+            134
+          ],
+          "path": "nasa-logo.png",
+          "contains_text": true,
+          "image_fit": "contain",
+          "role": "background",
+          "provenance": "NASA NTRS 20180007319 page 11, title-free common header crop; source image coordinates recorded in box."
+        },
+        {
+          "id": "stars",
+          "kind": "image",
+          "z": 0,
+          "box": [
+            141,
+            0,
+            1270,
+            134
+          ],
+          "path": "stars.png",
+          "contains_text": false,
+          "image_fit": "contain",
+          "role": "background",
+          "provenance": "NASA NTRS 20180007319 page 11, title-free common header crop; source image coordinates recorded in box."
+        },
+        {
+          "id": "cfs-logo",
+          "kind": "image",
+          "z": 0,
+          "box": [
+            1411,
+            0,
+            189,
+            134
+          ],
+          "path": "cfs-logo.png",
+          "contains_text": true,
+          "image_fit": "contain",
+          "role": "background",
+          "provenance": "NASA NTRS 20180007319 page 11, title-free common header crop; source image coordinates recorded in box."
+        },
+        {
+          "id": "title",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            649.0,
+            38.0,
+            307.0,
+            72.5556
+          ],
+          "text": "Acronyms",
+          "font_family": "Arial",
+          "font_size": 62.222222,
+          "bold": true,
+          "color": "#FFFFFF",
+          "font_group": "title",
+          "fit": "strict"
+        },
+        {
+          "id": "footer",
+          "kind": "line",
+          "z": 0,
+          "points": [
+            [
+              0,
+              1162
+            ],
+            [
+              1600,
+              1162
+            ]
+          ],
+          "stroke": "#333333",
+          "stroke_width": 2
+        },
+        {
+          "id": "page-number",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1493.25,
+            1169.0,
+            33.0,
+            31.25
+          ],
+          "text": "28",
+          "font_family": "Arial",
+          "font_size": 26.666667,
+          "bold": false,
+          "color": "#000000",
+          "font_group": "footer",
+          "fit": "strict"
+        },
+        {
+          "id": "acronym-00",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.25,
+            197.5,
+            31.75,
+            21.4444
+          ],
+          "text": "API",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-00",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            197.75,
+            267.0,
+            21.4444
+          ],
+          "text": "Application Programmer Interface",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-00",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            203,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-01",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.25,
+            223.75,
+            40.5,
+            21.4444
+          ],
+          "text": "ARC",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-01",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            223.75,
+            187.5,
+            21.4444
+          ],
+          "text": "Ames Research Center",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-01",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            229,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-02",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.75,
+            248.5,
+            37.25,
+            21.4444
+          ],
+          "text": "BAT",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-02",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.75,
+            248.5,
+            172.5,
+            21.4444
+          ],
+          "text": "Burst Alert Telescope",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-02",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            254,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-03",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.25,
+            274.75,
+            64.75,
+            21.4444
+          ],
+          "text": "CCSDS",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-03",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            274.75,
+            387.25,
+            21.4444
+          ],
+          "text": "Consultative Committee for Space Data Systems",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-03",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            280,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-04",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.25,
+            299.75,
+            41.25,
+            21.4444
+          ],
+          "text": "CDH",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-04",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            299.75,
+            201.0,
+            21.4444
+          ],
+          "text": "Command Data Handling",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-04",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            305,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-05",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.25,
+            325.75,
+            51.0,
+            21.4444
+          ],
+          "text": "CFDP",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-05",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            325.75,
+            237.5,
+            21.4444
+          ],
+          "text": "CCSDS File Delivery Protocol",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-05",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            331,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-06",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.5,
+            351.5,
+            34.5,
+            21.4444
+          ],
+          "text": "cFE",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-06",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.5,
+            351.5,
+            167.75,
+            21.4444
+          ],
+          "text": "core Flight Executive",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-06",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            357,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-07",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.5,
+            376.75,
+            34.5,
+            21.4444
+          ],
+          "text": "cFS",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-07",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            376.75,
+            153.75,
+            21.4444
+          ],
+          "text": "Core Flight System",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-07",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            382,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-08",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.25,
+            402.75,
+            50.25,
+            21.4444
+          ],
+          "text": "CMMI",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-08",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            402.75,
+            286.5,
+            21.4444
+          ],
+          "text": "Capability Maturity Model Integrated",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-08",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            408,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-09",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.75,
+            427.75,
+            51.0,
+            21.4444
+          ],
+          "text": "ELOC",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-09",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            468.75,
+            427.75,
+            195.75,
+            21.4444
+          ],
+          "text": "Estimated Lines of Code",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-09",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            433,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-10",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.75,
+            453.75,
+            42.25,
+            21.4444
+          ],
+          "text": "FSW",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-10",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.75,
+            453.75,
+            121.0,
+            21.4444
+          ],
+          "text": "Flight Software",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-10",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            459,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-11",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.25,
+            479.75,
+            50.0,
+            21.4444
+          ],
+          "text": "GLAS",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-11",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            479.75,
+            285.0,
+            21.4444
+          ],
+          "text": "Geoscience Laser Altimeter System",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-11",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            485,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-12",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.25,
+            504.75,
+            54.0,
+            21.4444
+          ],
+          "text": "GN&C",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-12",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            504.75,
+            273.25,
+            21.4444
+          ],
+          "text": "Guidance, Navigation, and Control",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-12",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            510,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-13",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.25,
+            530.75,
+            43.25,
+            21.4444
+          ],
+          "text": "GPM",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-13",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            530.75,
+            269.5,
+            21.4444
+          ],
+          "text": "Global Precipitation Measurement",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-13",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            536,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-14",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.25,
+            555.75,
+            52.0,
+            21.4444
+          ],
+          "text": "GSFC",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-14",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            555.75,
+            233.0,
+            21.4444
+          ],
+          "text": "Goddard Space Flight Center",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-14",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            561,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-15",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.5,
+            581.75,
+            36.5,
+            21.4444
+          ],
+          "text": "JSC",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-15",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.5,
+            581.75,
+            183.0,
+            21.4444
+          ],
+          "text": "Johnson Space Center",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-15",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            587,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-16",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.75,
+            607.5,
+            60.75,
+            21.4444
+          ],
+          "text": "LADEE",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-16",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.75,
+            607.5,
+            399.5,
+            21.4444
+          ],
+          "text": "Lunar Atmosphere and Dust Environment Explorer",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-16",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            613,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-17",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.75,
+            632.5,
+            38.25,
+            21.4444
+          ],
+          "text": "LRD",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-17",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.75,
+            632.5,
+            191.5,
+            21.4444
+          ],
+          "text": "Launch Readiness Date",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-17",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            638,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-18",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.75,
+            658.75,
+            39.25,
+            21.4444
+          ],
+          "text": "LRO",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-18",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.75,
+            658.75,
+            172.5,
+            21.4444
+          ],
+          "text": "Lunar Robotic Orbiter",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-18",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            664,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-19",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.75,
+            683.5,
+            41.25,
+            21.4444
+          ],
+          "text": "MAP",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-19",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.75,
+            683.5,
+            228.5,
+            21.4444
+          ],
+          "text": "Microwave Anisotropy Probe",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-19",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            689,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-20",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.75,
+            709.75,
+            44.25,
+            21.4444
+          ],
+          "text": "MMS",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-20",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.75,
+            709.5,
+            224.0,
+            21.4444
+          ],
+          "text": "Magnetic Multiscale Mission",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-20",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            715,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-21",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.25,
+            735.75,
+            50.0,
+            21.4444
+          ],
+          "text": "OSAL",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-21",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            735.75,
+            288.0,
+            21.4444
+          ],
+          "text": "Operating System Abstraction Layer",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-21",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            741,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-22",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.75,
+            760.75,
+            51.0,
+            21.4444
+          ],
+          "text": "RBSP",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-22",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.75,
+            760.75,
+            217.25,
+            21.4444
+          ],
+          "text": "Radiation Belt Storm Probe",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-22",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            766,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-23",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.75,
+            786.75,
+            64.75,
+            21.4444
+          ],
+          "text": "RTEMS",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-23",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.75,
+            786.75,
+            386.0,
+            21.4444
+          ],
+          "text": "Real-Time Executive for Multiprocessor Systems",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-23",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            792,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-24",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.25,
+            811.75,
+            76.5,
+            21.4444
+          ],
+          "text": "SAMPEX",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-24",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            811.75,
+            438.0,
+            21.4444
+          ],
+          "text": "Solar Anomalous and Magnetospheric Particle Explorer",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-24",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            817,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-25",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.25,
+            837.75,
+            51.0,
+            21.4444
+          ],
+          "text": "SARB",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-25",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            837.75,
+            599.0,
+            21.4444
+          ],
+          "text": "Software Architecture Review Board (NASA Engineering and Safety Center)",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-25",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            843,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-26",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.25,
+            863.75,
+            41.25,
+            21.4444
+          ],
+          "text": "SDO",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-26",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            863.75,
+            229.0,
+            21.4444
+          ],
+          "text": "Solar Dynamics Observatory",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-26",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            869,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-27",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.25,
+            888.75,
+            53.0,
+            21.4444
+          ],
+          "text": "SMEX",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-27",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            888.75,
+            118.5,
+            21.4444
+          ],
+          "text": "Small Explorer",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-27",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            894,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-28",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.25,
+            914.75,
+            41.25,
+            21.4444
+          ],
+          "text": "ST-5",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-28",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            914.75,
+            164.0,
+            21.4444
+          ],
+          "text": "Space Technology 5",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-28",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            920,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-29",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.25,
+            939.75,
+            55.0,
+            21.4444
+          ],
+          "text": "SWAS",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-29",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.25,
+            939.75,
+            318.25,
+            21.4444
+          ],
+          "text": "Submillimeter Wave Astronomy Satellite",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-29",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            945,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-30",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.75,
+            965.75,
+            62.75,
+            21.4444
+          ],
+          "text": "TRACE",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-30",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.75,
+            965.75,
+            313.75,
+            21.4444
+          ],
+          "text": "Transition Region and Coronal Explorer",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-30",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            971,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-31",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.75,
+            991.5,
+            36.25,
+            21.4444
+          ],
+          "text": "TRL",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-31",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.75,
+            991.5,
+            230.0,
+            21.4444
+          ],
+          "text": "Technology Readiness Level",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-31",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            997,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-32",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            210.75,
+            1016.5,
+            56.0,
+            21.4444
+          ],
+          "text": "TRMM",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-32",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            469.75,
+            1016.75,
+            282.75,
+            21.4444
+          ],
+          "text": "Tropical Rainfall Measuring Mission",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-32",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            1022,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-33",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            211.0,
+            1042.5,
+            49.25,
+            21.4444
+          ],
+          "text": "WIRE",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-33",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            470.0,
+            1042.75,
+            215.75,
+            21.4444
+          ],
+          "text": "Widearea Infrared Explorer",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-33",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            1048,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        },
+        {
+          "id": "acronym-34",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            211.0,
+            1068.5,
+            37.25,
+            21.4444
+          ],
+          "text": "XTE",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "expansion-34",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            470.0,
+            1068.5,
+            181.5,
+            21.4444
+          ],
+          "text": "X-Ray Timing Explorer",
+          "font_family": "Arial",
+          "font_size": 17.777778,
+          "bold": false,
+          "color": "#666666",
+          "font_group": "table",
+          "fit": "strict"
+        },
+        {
+          "id": "bullet-34",
+          "kind": "shape",
+          "shape": "ellipse",
+          "z": 3,
+          "box": [
+            151,
+            1074,
+            8,
+            8
+          ],
+          "fill": "#66B7D9"
+        }
+      ]
+    }
+  ]
+}

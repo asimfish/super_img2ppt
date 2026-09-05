@@ -1,0 +1,362 @@
+{
+  "method": "Source bitmap ink bounds in manually isolated text regions, frozen before PPTX rendering. No PDF text coordinates used.",
+  "anchors": [
+    {
+      "id": "title",
+      "roi": [
+        450,
+        35,
+        1125,
+        118
+      ],
+      "ink_box": [
+        468,
+        50,
+        1107,
+        107
+      ],
+      "polarity": "light",
+      "threshold": 230
+    },
+    {
+      "id": "page-number",
+      "roi": [
+        1480,
+        1167,
+        1545,
+        1200
+      ],
+      "ink_box": [
+        1494,
+        1174,
+        1507,
+        1194
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "p1a",
+      "roi": [
+        95,
+        150,
+        1520,
+        215
+      ],
+      "ink_box": [
+        102,
+        163,
+        1479,
+        215
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "p1b",
+      "roi": [
+        95,
+        215,
+        245,
+        273
+      ],
+      "ink_box": [
+        103,
+        215,
+        215,
+        264
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "p2a",
+      "roi": [
+        95,
+        287,
+        1530,
+        348
+      ],
+      "ink_box": [
+        103,
+        296,
+        1505,
+        346
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "p2b",
+      "roi": [
+        95,
+        348,
+        920,
+        405
+      ],
+      "ink_box": [
+        100,
+        348,
+        885,
+        398
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "p3a",
+      "roi": [
+        95,
+        942,
+        1490,
+        1004
+      ],
+      "ink_box": [
+        105,
+        952,
+        1461,
+        1004
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "p3b",
+      "roi": [
+        95,
+        1004,
+        320,
+        1065
+      ],
+      "ink_box": [
+        102,
+        1004,
+        279,
+        1053
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "s1a",
+      "roi": [
+        165,
+        420,
+        1440,
+        473
+      ],
+      "ink_box": [
+        173,
+        429,
+        1406,
+        473
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "s1b",
+      "roi": [
+        165,
+        473,
+        515,
+        525
+      ],
+      "ink_box": [
+        171,
+        473,
+        493,
+        515
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "s2a",
+      "roi": [
+        165,
+        531,
+        1430,
+        584
+      ],
+      "ink_box": [
+        172,
+        539,
+        1400,
+        584
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "s2b",
+      "roi": [
+        165,
+        584,
+        355,
+        635
+      ],
+      "ink_box": [
+        173,
+        584,
+        322,
+        624
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "s3",
+      "roi": [
+        165,
+        642,
+        1300,
+        704
+      ],
+      "ink_box": [
+        173,
+        649,
+        1264,
+        692
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "t1a",
+      "roi": [
+        245,
+        708,
+        1535,
+        760
+      ],
+      "ink_box": [
+        253,
+        716,
+        1504,
+        759
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "t1b",
+      "roi": [
+        245,
+        760,
+        390,
+        807
+      ],
+      "ink_box": [
+        251,
+        760,
+        362,
+        792
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "t2",
+      "roi": [
+        245,
+        813,
+        1380,
+        871
+      ],
+      "ink_box": [
+        253,
+        821,
+        1324,
+        864
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "s4",
+      "roi": [
+        165,
+        877,
+        1250,
+        939
+      ],
+      "ink_box": [
+        173,
+        884,
+        1217,
+        927
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "dash-0",
+      "roi": [
+        114,
+        440,
+        140,
+        463
+      ],
+      "ink_box": [
+        121,
+        449,
+        134,
+        452
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "dash-1",
+      "roi": [
+        114,
+        550,
+        140,
+        573
+      ],
+      "ink_box": [
+        121,
+        559,
+        134,
+        562
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "dash-2",
+      "roi": [
+        114,
+        661,
+        140,
+        684
+      ],
+      "ink_box": [
+        121,
+        669,
+        134,
+        672
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "dash-3",
+      "roi": [
+        114,
+        896,
+        140,
+        919
+      ],
+      "ink_box": [
+        121,
+        904,
+        134,
+        907
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    }
+  ]
+}

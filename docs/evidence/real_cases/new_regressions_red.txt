@@ -1,0 +1,286 @@
+FFFFFF                                                                   [100%]
+=================================== FAILURES ===================================
+________ test_text_padding_can_touch_grid_or_shape_but_ink_cannot[line] ________
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 1280, 'height': 720, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10a03aa80>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-117/test_text_padding_can_touch_gr0')
+obstacle = 'line'
+
+    @pytest.mark.parametrize("obstacle", ["line", "shape"])
+    def test_text_padding_can_touch_grid_or_shape_but_ink_cannot(scene, fonts, tmp_path, obstacle):
+        text = scene["slides"][0]["elements"][0]
+        text.update(text="Hello", font_family="Arial", box=[80, 60, 250, 100], font_size=36)
+        element = {"id": "obstacle", "kind": obstacle, "z": 3}
+        if obstacle == "line":
+            element.update(points=[[70, 63], [340, 63]], stroke_width=1)
+        else:
+            element.update(box=[70, 61, 270, 3], shape="rect", fill="#000000")
+        scene["slides"][0]["elements"].append(element)
+        report = preflight(scene, layout_scene(scene, fonts), tmp_path)
+>       assert report["status"] == "pass", report["findings"]
+E       AssertionError: [{'slide': 'page_001', 'code': 'unintended_overlap', 'severity': 'error', 'elements': ['title', 'obstacle'], ...}]
+E       assert 'fail' == 'pass'
+E         
+E         - pass
+E         + fail
+
+tests/test_contract.py:147: AssertionError
+_______ test_text_padding_can_touch_grid_or_shape_but_ink_cannot[shape] ________
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 1280, 'height': 720, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10a03aa80>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-117/test_text_padding_can_touch_gr1')
+obstacle = 'shape'
+
+    @pytest.mark.parametrize("obstacle", ["line", "shape"])
+    def test_text_padding_can_touch_grid_or_shape_but_ink_cannot(scene, fonts, tmp_path, obstacle):
+        text = scene["slides"][0]["elements"][0]
+        text.update(text="Hello", font_family="Arial", box=[80, 60, 250, 100], font_size=36)
+        element = {"id": "obstacle", "kind": obstacle, "z": 3}
+        if obstacle == "line":
+            element.update(points=[[70, 63], [340, 63]], stroke_width=1)
+        else:
+            element.update(box=[70, 61, 270, 3], shape="rect", fill="#000000")
+        scene["slides"][0]["elements"].append(element)
+        report = preflight(scene, layout_scene(scene, fonts), tmp_path)
+>       assert report["status"] == "pass", report["findings"]
+E       AssertionError: [{'slide': 'page_001', 'code': 'unintended_overlap', 'severity': 'error', 'elements': ['title', 'obstacle'], ...}]
+E       assert 'fail' == 'pass'
+E         
+E         - pass
+E         + fail
+
+tests/test_contract.py:147: AssertionError
+_ test_font_discovery_failure_is_recorded_without_uncaught_traceback[timeout-check] _
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 1280, 'height': 720, 'reviewed': True, ...}]}
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-117/test_font_discovery_failure_is0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10a8046b0>
+capsys = <_pytest.capture.CaptureFixture object at 0x10a804800>
+command = 'check', failure = 'timeout'
+
+    @pytest.mark.parametrize("command", ["check", "build"])
+    @pytest.mark.parametrize("failure", ["timeout", "nonzero"])
+    def test_font_discovery_failure_is_recorded_without_uncaught_traceback(
+        scene, tmp_path, monkeypatch, capsys, command, failure
+    ):
+        from super_img2ppt import fonts as font_module
+    
+        def fail_discovery(*args, **kwargs):
+            if failure == "timeout":
+                raise subprocess.TimeoutExpired("fc-list", 30)
+            raise subprocess.CalledProcessError(1, "fc-list", stderr="fontconfig failed")
+    
+        source = tmp_path / "scene.json"
+        source.write_text(json.dumps(scene))
+        out = tmp_path / "failed"
+        font_module.discover_fonts.cache_clear()
+        monkeypatch.setattr(font_module.shutil, "which", lambda name: "/test/fc-list")
+        monkeypatch.setattr(font_module.subprocess, "run", fail_discovery)
+        try:
+>           assert cli_main([command, str(source), "--out", str(out)]) == 2
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_artifacts.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+skills/super-img2ppt/src/super_img2ppt/cli.py:238: in main
+    catalog = FontCatalog(scene.get("fonts"), tuple(args.font_dir))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+skills/super-img2ppt/src/super_img2ppt/fonts.py:177: in __init__
+    self.faces = discover_fonts(extra_dirs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+skills/super-img2ppt/src/super_img2ppt/fonts.py:95: in discover_fonts
+    for path, index in font_candidates(extra_dirs):
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+skills/super-img2ppt/src/super_img2ppt/fonts.py:52: in font_candidates
+    result = subprocess.run(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (['fc-list', '--format=%{file}\t%{index}\n'],)
+kwargs = {'capture_output': True, 'text': True, 'timeout': 30, 'check': True}
+
+    def fail_discovery(*args, **kwargs):
+        if failure == "timeout":
+>           raise subprocess.TimeoutExpired("fc-list", 30)
+E           subprocess.TimeoutExpired: Command 'fc-list' timed out after 30 seconds
+
+tests/test_artifacts.py:113: TimeoutExpired
+_ test_font_discovery_failure_is_recorded_without_uncaught_traceback[timeout-build] _
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 1280, 'height': 720, 'reviewed': True, ...}]}
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-117/test_font_discovery_failure_is1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10a8059d0>
+capsys = <_pytest.capture.CaptureFixture object at 0x10a8071a0>
+command = 'build', failure = 'timeout'
+
+    @pytest.mark.parametrize("command", ["check", "build"])
+    @pytest.mark.parametrize("failure", ["timeout", "nonzero"])
+    def test_font_discovery_failure_is_recorded_without_uncaught_traceback(
+        scene, tmp_path, monkeypatch, capsys, command, failure
+    ):
+        from super_img2ppt import fonts as font_module
+    
+        def fail_discovery(*args, **kwargs):
+            if failure == "timeout":
+                raise subprocess.TimeoutExpired("fc-list", 30)
+            raise subprocess.CalledProcessError(1, "fc-list", stderr="fontconfig failed")
+    
+        source = tmp_path / "scene.json"
+        source.write_text(json.dumps(scene))
+        out = tmp_path / "failed"
+        font_module.discover_fonts.cache_clear()
+        monkeypatch.setattr(font_module.shutil, "which", lambda name: "/test/fc-list")
+        monkeypatch.setattr(font_module.subprocess, "run", fail_discovery)
+        try:
+>           assert cli_main([command, str(source), "--out", str(out)]) == 2
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_artifacts.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+skills/super-img2ppt/src/super_img2ppt/cli.py:235: in main
+    result = build(args.scene, args.out, not args.no_render, tuple(args.font_dir))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+skills/super-img2ppt/src/super_img2ppt/cli.py:91: in build
+    catalog = FontCatalog(scene.get("fonts"), font_dirs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+skills/super-img2ppt/src/super_img2ppt/fonts.py:177: in __init__
+    self.faces = discover_fonts(extra_dirs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+skills/super-img2ppt/src/super_img2ppt/fonts.py:95: in discover_fonts
+    for path, index in font_candidates(extra_dirs):
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+skills/super-img2ppt/src/super_img2ppt/fonts.py:52: in font_candidates
+    result = subprocess.run(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (['fc-list', '--format=%{file}\t%{index}\n'],)
+kwargs = {'capture_output': True, 'text': True, 'timeout': 30, 'check': True}
+
+    def fail_discovery(*args, **kwargs):
+        if failure == "timeout":
+>           raise subprocess.TimeoutExpired("fc-list", 30)
+E           subprocess.TimeoutExpired: Command 'fc-list' timed out after 30 seconds
+
+tests/test_artifacts.py:113: TimeoutExpired
+_ test_font_discovery_failure_is_recorded_without_uncaught_traceback[nonzero-check] _
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 1280, 'height': 720, 'reviewed': True, ...}]}
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-117/test_font_discovery_failure_is2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10a807920>
+capsys = <_pytest.capture.CaptureFixture object at 0x10a807bc0>
+command = 'check', failure = 'nonzero'
+
+    @pytest.mark.parametrize("command", ["check", "build"])
+    @pytest.mark.parametrize("failure", ["timeout", "nonzero"])
+    def test_font_discovery_failure_is_recorded_without_uncaught_traceback(
+        scene, tmp_path, monkeypatch, capsys, command, failure
+    ):
+        from super_img2ppt import fonts as font_module
+    
+        def fail_discovery(*args, **kwargs):
+            if failure == "timeout":
+                raise subprocess.TimeoutExpired("fc-list", 30)
+            raise subprocess.CalledProcessError(1, "fc-list", stderr="fontconfig failed")
+    
+        source = tmp_path / "scene.json"
+        source.write_text(json.dumps(scene))
+        out = tmp_path / "failed"
+        font_module.discover_fonts.cache_clear()
+        monkeypatch.setattr(font_module.shutil, "which", lambda name: "/test/fc-list")
+        monkeypatch.setattr(font_module.subprocess, "run", fail_discovery)
+        try:
+>           assert cli_main([command, str(source), "--out", str(out)]) == 2
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_artifacts.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+skills/super-img2ppt/src/super_img2ppt/cli.py:238: in main
+    catalog = FontCatalog(scene.get("fonts"), tuple(args.font_dir))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+skills/super-img2ppt/src/super_img2ppt/fonts.py:177: in __init__
+    self.faces = discover_fonts(extra_dirs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+skills/super-img2ppt/src/super_img2ppt/fonts.py:95: in discover_fonts
+    for path, index in font_candidates(extra_dirs):
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+skills/super-img2ppt/src/super_img2ppt/fonts.py:52: in font_candidates
+    result = subprocess.run(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (['fc-list', '--format=%{file}\t%{index}\n'],)
+kwargs = {'capture_output': True, 'text': True, 'timeout': 30, 'check': True}
+
+    def fail_discovery(*args, **kwargs):
+        if failure == "timeout":
+            raise subprocess.TimeoutExpired("fc-list", 30)
+>       raise subprocess.CalledProcessError(1, "fc-list", stderr="fontconfig failed")
+E       subprocess.CalledProcessError: Command 'fc-list' returned non-zero exit status 1.
+
+tests/test_artifacts.py:114: CalledProcessError
+_ test_font_discovery_failure_is_recorded_without_uncaught_traceback[nonzero-build] _
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 1280, 'height': 720, 'reviewed': True, ...}]}
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-117/test_font_discovery_failure_is3')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10a813fe0>
+capsys = <_pytest.capture.CaptureFixture object at 0x10a8126f0>
+command = 'build', failure = 'nonzero'
+
+    @pytest.mark.parametrize("command", ["check", "build"])
+    @pytest.mark.parametrize("failure", ["timeout", "nonzero"])
+    def test_font_discovery_failure_is_recorded_without_uncaught_traceback(
+        scene, tmp_path, monkeypatch, capsys, command, failure
+    ):
+        from super_img2ppt import fonts as font_module
+    
+        def fail_discovery(*args, **kwargs):
+            if failure == "timeout":
+                raise subprocess.TimeoutExpired("fc-list", 30)
+            raise subprocess.CalledProcessError(1, "fc-list", stderr="fontconfig failed")
+    
+        source = tmp_path / "scene.json"
+        source.write_text(json.dumps(scene))
+        out = tmp_path / "failed"
+        font_module.discover_fonts.cache_clear()
+        monkeypatch.setattr(font_module.shutil, "which", lambda name: "/test/fc-list")
+        monkeypatch.setattr(font_module.subprocess, "run", fail_discovery)
+        try:
+>           assert cli_main([command, str(source), "--out", str(out)]) == 2
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_artifacts.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+skills/super-img2ppt/src/super_img2ppt/cli.py:235: in main
+    result = build(args.scene, args.out, not args.no_render, tuple(args.font_dir))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+skills/super-img2ppt/src/super_img2ppt/cli.py:91: in build
+    catalog = FontCatalog(scene.get("fonts"), font_dirs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+skills/super-img2ppt/src/super_img2ppt/fonts.py:177: in __init__
+    self.faces = discover_fonts(extra_dirs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+skills/super-img2ppt/src/super_img2ppt/fonts.py:95: in discover_fonts
+    for path, index in font_candidates(extra_dirs):
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+skills/super-img2ppt/src/super_img2ppt/fonts.py:52: in font_candidates
+    result = subprocess.run(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (['fc-list', '--format=%{file}\t%{index}\n'],)
+kwargs = {'capture_output': True, 'text': True, 'timeout': 30, 'check': True}
+
+    def fail_discovery(*args, **kwargs):
+        if failure == "timeout":
+            raise subprocess.TimeoutExpired("fc-list", 30)
+>       raise subprocess.CalledProcessError(1, "fc-list", stderr="fontconfig failed")
+E       subprocess.CalledProcessError: Command 'fc-list' returned non-zero exit status 1.
+
+tests/test_artifacts.py:114: CalledProcessError
+=========================== short test summary info ============================
+FAILED tests/test_contract.py::test_text_padding_can_touch_grid_or_shape_but_ink_cannot[line]
+FAILED tests/test_contract.py::test_text_padding_can_touch_grid_or_shape_but_ink_cannot[shape]
+FAILED tests/test_artifacts.py::test_font_discovery_failure_is_recorded_without_uncaught_traceback[timeout-check]
+FAILED tests/test_artifacts.py::test_font_discovery_failure_is_recorded_without_uncaught_traceback[timeout-build]
+FAILED tests/test_artifacts.py::test_font_discovery_failure_is_recorded_without_uncaught_traceback[nonzero-check]
+FAILED tests/test_artifacts.py::test_font_discovery_failure_is_recorded_without_uncaught_traceback[nonzero-build]
+6 failed, 24 deselected in 31.66s

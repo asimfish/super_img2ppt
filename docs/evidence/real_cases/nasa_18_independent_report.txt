@@ -1,0 +1,87 @@
+**NASA “Example Mission Applications” 第 18 页独立真实案例测试，2026-09-06**
+
+最终交付为可编辑 PPTX/SVG，综合状态 **review**。原生对象检查和实际渲染文字检查均为 **pass**；没有缺失文字、文字溢出、未解决容器错误或未声明碰撞。review 来自两个标志内部的栅格文字。实际检查使用 **LibreOffice/PDFium**，没有验证原生 PowerPoint/WPS。
+
+最佳产物位于 `build_03`：
+
+| 产物 | 路径 |
+|---|---|
+| 可编辑 PPTX | [editable.pptx](build_03/editable.pptx) |
+| 可编辑 SVG | [page_001.svg](build_03/svg/page_001.svg) |
+| 可复建场景 | [scene.resolved.json](build_03/scene.resolved.json) 与相邻 [assets/](build_03/assets/) |
+| 原始场景审计副本 | [scene.original.json](build_03/scene.original.json) |
+| 自动验证 | [validation.json](build_03/validation.json) |
+| 字体清单 | [fonts.json](build_03/fonts.json) |
+| 实际 PPTX 预览 | [page_001.png](build_03/render/page_001.png) |
+| 原图／真实 PPTX／差异对照 | [page_001_comparison.png](build_03/render/page_001_comparison.png) |
+| 执行命令及退出结果 | [commands.md](commands.md) |
+| 原生／栅格对象逐项清单 | [native_raster_inventory.json](evidence/native_raster_inventory.json) |
+| 源像素对齐测量 | [visual_metrics.json](evidence/visual_metrics.json) |
+| 输入与交付哈希 | [artifact_hashes.json](evidence/artifact_hashes.json) |
+
+本测试只读取指定 `SKILL.md`、其 reconstruction/scene/schema/qa references、授权原始截图、授权空白页眉裁片与自己的产物。没有读取软件源码、测试、其他案例产物、原 PDF 的原生对象或坐标；没有联网、安装依赖、修改仓库、操作 GitHub 或再委派。父任务提供的唯一环境补充是机器上已安装 Homebrew `fc-list`；之后仅对本测试进程优先该路径。环境实测记录见 [doctor.json](evidence/doctor.json)。
+
+输入截图为 1600 × 1200 像素，SHA256：
+
+```text
+02bb47bd5ef1b6d92bf4a4f89029f8cb3142a2f823454b216b54322162cda6e5
+```
+
+额外授权 `nasa_blank_header.png` 的 SHA256：
+
+```text
+531c7001ed0803d4567e5b9883613ac18d924a8697727127f9995141ae430ddc
+```
+
+prepare 生成单页，Vision OCR 成功。作者打开原图及 2 倍密集裁片后逐项校正 OCR：`cFS Applications` 保留小写 c，软件总线完整文字使用半角括号；原图下方绿色圆内本来就写成 `Software Bus)`，多余右括号按源图保留。没有把图例圆圈 OCR 成的 `◎` 当文字。原始演讲备注未提供，输出备注明确注明重建来源和限制。
+
+最终共有 **148 个可独立操作的对象：53 个原生文字框、35 个原生形状、57 段原生 connector、3 个栅格图片**。自己的 PPTX XML 清单确认仅有 3 个图片对象/媒体文件、57 个 connector 和 53 个非空文字框；52 个原生箭头端对应图中的双向或单向关系。SVG 同样包含 53 text、57 line、27 ellipse、3 image。完整源图作为比较基准存放在 assets 中，但没有作为可见对象放入 PPTX 或 SVG。
+
+| 区域 | 重建方式与编辑边界 |
+|---|---|
+| 标题、所有节点标签、仪器框、总线标题、连接说明、图例和页码 | 53 个原生文字框，保留源图各行位置；同级标签共享字号组。 |
+| 圆形应用节点、1553 青色后圈、GN&C 三层叠圆、仪器双层矩形、总线外/内框、硬件与通信框、图例、页脚线 | 原生 ellipse/rect/line；没有将这些图形作为截图裁片。 |
+| Mass Storage File System 圆柱 | 2 个椭圆、1 个白色 body 矩形、2 根边线和 3 个文字框组合；各组件原生可编辑，未使用不存在的 cylinder/arc 字段。 |
+| 总线连接、弯折线路、单向与双向箭头 | 原生直线段；双向关系由两个半线段表达，弯折关系由多个定点线段表达。节点移动后不会自动重新布线。 |
+| 左侧 NASA 标志 | 授权空白页眉的精确裁片 `[0,0,150,134]`；内部 NASA 字样不可编辑。 |
+| 中间星空纹理 | 授权空白页眉的精确裁片 `[150,0,1268,134]`；不含标题文字，可独立移动，原生标题位于其上。 |
+| 右侧 cFS 标志 | 授权空白页眉的精确裁片 `[1418,0,182,134]`；标志内部字样不可编辑。 |
+
+图的空间阅读顺序与 28 条逻辑连接均按原图保留：软件总线向上连接 6 个节点、向左连接 2 个节点、向右连接 3 个节点、向下连接 8 个节点；仪器、存储、硬件、命令及遥测的旁路连接亦保留。右侧横线与存储竖线的源图交叉未增加交点圆点。完整语义连接清单见 [connections.json](evidence/connections.json)。没有验证 Office 的辅助功能阅读顺序面板。
+
+字体使用本机 **Arial Regular / Arial Bold**。字形源身份无法仅凭像素唯一证明，但实际导出和渲染没有字体替换；字体清单给出真实文件哈希。全部文字为 `fit: strict`，没有以缩小字号消除错误，也没有降低最小字号。字体不嵌入、不分发；其他编辑机器需具有清单所列字体。
+
+自动门禁与修复过程保留如下：
+
+| 产物 | 状态 | 保留的证据与处置 |
+|---|---|---|
+| check_01 | fail，16 errors | 文字框的留白与容器边界、两个图例宽度、安全线宽边界、相接连接线的几何接触。修改相应框和逐对关系，未缩字。 |
+| check_02 / build_01 | fail，4 errors | 扩大透明圆柱分组框后，分组框碰到连接线；删除该多余分组。build_01 不包含成功渲染证据。 |
+| check_03 | fail，1 error | 跨圆柱 body 与底部椭圆的 File System 文字框无法完整属于单一椭圆容器。第三次、最后一次圆柱层修复改为明确命名这两个真实背景。 |
+| check_04 | review，0 errors | 2 个 logo raster_text 警告；19 个 text_frame_overlap_only 信息项均指透明留白相交而可见墨迹分离。 |
+| build_02 | review | native_objects pass，rendered_text pass；实际预览发现 Telemetry 首行上移 7 px 和总线标题右移 2 px。两处均已定点修正。 |
+| build_03 | review | preflight review，native_objects pass，rendered_text pass，53 文字框检查完成，无字体替换。 |
+
+同一圆柱区域共进行了三次局部层关系修复，第三次解决；此后没有继续调整该区域。重叠允许项限于源图可见的叠页/叠圆、圆柱组成和明确接触的线段/节点边界，均列出具体对象与理由，没有 blanket 豁免。文字框彼此的留白交叠由运行时按可见墨迹检查，没有强行豁免文字墨迹碰撞。
+
+已经打开并检查 build_02 与最终 build_03 的真实 PPTX 整页预览、三栏 comparison；另检查 2 倍上方密集区、底部节点、右侧叠圆、总线标题，以及 8 倍箭头头部。最终视觉检查记录仍独立于运行时的 `visual_review: required` 字段；不把自动通过当成像素完全一致。
+
+下面的差异均以同尺寸原图和实际 PPTX PNG 测量。文本取手工限定区域内 RGB 各通道 <100 的墨迹边界；填色边界取与源图取样颜色各通道相差不超过 2 的像素。边界格式为 `[左,上,右开边界,下开边界]`，所有数值单位为源像素。
+
+| 区域 | 原图 | 最终实际 PPTX | 判断 |
+|---|---|---|---|
+| 总线绿色填色 | `[280,431,1307,738]` | 相同 | 该阈值下四边一致。 |
+| 总线白色内区 | `[314,463,1272,705]` | 相同 | 该阈值下四边一致。 |
+| Scheduler 墨迹 | `[337,301,416,314]` | 相同 | 文字位置及宽高一致。 |
+| 总线完整标题墨迹 | `[501,676,1076,706]` | 相同 | 横向修正后四边一致。 |
+| Instruments 墨迹 | `[846,172,971,190]` | `[847,172,972,190]` | 向右约 1 px。 |
+| Telemetry 墨迹 | `[502,857,581,874]` | `[502,857,577,874]` | 基线高度已恢复；字宽仍少 4 px，保留同级字体设置。 |
+| 页码 18 墨迹 | `[1496,1174,1522,1193]` | `[1498,1174,1523,1193]` | 左缘右移 2 px，右缘右移 1 px。 |
+| Limit Checker 填色右/下边界 | 612 / 359 | 613 / 360 | 约 1 px 差异。 |
+| Scheduler 上/下箭头及底部箭头最大黑色横截面 | 13 px | 9 px | 三处抽查均窄 4 px；schema 只提供 arrow 布尔值，没有独立箭头尺寸。 |
+
+16 个抽查文字区域的绝对四边差异中位数为 0 px，最大值 4 px；它们只是所选区域的对齐证据，不是整页相似度。圆柱与叠圆由原生椭圆组合，轮廓/抗锯齿仍与截图不同；部分双向线段的中点在 8 倍预览下可见细微接缝。标准箭头头部更小是最明显的剩余样式差异，未通过加粗所有线条掩盖它。全文和线段方向未因这些差异丢失。
+
+最终对照工具报告 mean_absolute_pixel_error 为 0.014561；该指标受渲染抗锯齿影响，仅保留为诊断数据，不转成保真百分比或自动验收分数。
+
+本次前向测试暴露的实用边界：源像素测量 ROI 必须排除邻近圆弧；跨组合图形的标签不一定能归属单一原生背景形状；当前 schema 对独立箭头头部尺寸及 cylinder/arc 的表达有限。技能要求的真实 PPTX 预览有效地发现了纯文字/结构检查无法发现的 7 px 位置偏差。上述限制、失败目录和最佳草稿全部保留，未修改运行时代码。

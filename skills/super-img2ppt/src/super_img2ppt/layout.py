@@ -2,9 +2,11 @@
 
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass, replace
 
 import regex
+from PIL import Image, ImageDraw
 
 from .fonts import FontCatalog, FontFace, ink_bounds, is_cjk, measure, pil_font
 
@@ -240,11 +242,41 @@ def positioned_lines(element: dict, layout: TextLayout):
         y += line.height
 
 
+def text_ink_mask(element: dict, layout: TextLayout):
+    """Bounded 4x mask for refining collisions near sloping edges and glyph corners."""
+    boxes = text_ink_boxes(element, layout)
+    if not boxes:
+        return None
+    left = math.floor(min(b[0] for b in boxes)) - 1
+    top = math.floor(min(b[1] for b in boxes)) - 1
+    right = math.ceil(max(b[2] for b in boxes)) + 1
+    bottom = math.ceil(max(b[3] for b in boxes)) + 1
+    width, height = (right - left) * 4, (bottom - top) * 4
+    if width * height > 8_000_000:
+        return None  # Retain conservative box geometry for unusually large text.
+    mask = Image.new("L", (width, height))
+    draw = ImageDraw.Draw(mask)
+    for x, y, line in positioned_lines(element, layout):
+        for fragment in line.fragments:
+            draw.text(
+                ((x - left) * 4, (y + line.ascent - top) * 4),
+                fragment.text,
+                font=pil_font(fragment.face, fragment.size),
+                fill=255,
+                anchor="ls",
+            )
+            x += measure(fragment.face, fragment.text, fragment.size)[0]
+    return mask, left, top
+
+
 def text_ink_boxes(element: dict, layout: TextLayout) -> list[tuple[float, float, float, float]]:
     boxes = []
     for x, y, line in positioned_lines(element, layout):
         for fragment in line.fragments:
             bounds = ink_bounds(fragment.face, fragment.text, fragment.size)
+            if bounds is None and fragment.text.strip():
+                # Partial measurements must not hide an unmeasured large run.
+                return []
             if bounds is not None:
                 left, top, right, bottom = bounds
                 boxes.append((x + left, y + line.ascent + top, x + right, y + line.ascent + bottom))

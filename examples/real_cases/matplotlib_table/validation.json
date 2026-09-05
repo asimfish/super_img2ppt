@@ -1,0 +1,2623 @@
+{
+  "status": "fail",
+  "diagnostic_only": true,
+  "visual_review": "required",
+  "production_cli_blocked": true,
+  "automated_checks": {
+    "preflight": {
+      "status": "fail",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "raster_text",
+          "severity": "warning",
+          "elements": [
+            "rotated_y_axis_title"
+          ],
+          "message": "Text inside this independent image remains noneditable"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "bar_0_4",
+            "header_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "bar_1_4",
+            "header_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "bar_2_4",
+            "header_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "bar_3_4",
+            "header_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "bar_4_4",
+            "header_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "plot_baseline",
+            "header_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "plot_baseline",
+            "header_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "plot_baseline",
+            "header_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "plot_baseline",
+            "header_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "plot_baseline",
+            "header_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_1",
+            "header_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_1",
+            "header_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_1",
+            "header_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "table_horizontal_1",
+            "header_3"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 112.86
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_1",
+            "header_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_1",
+            "row_label_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_1",
+            "number_0_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_1",
+            "number_0_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_1",
+            "number_0_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_1",
+            "number_0_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_1",
+            "number_0_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_2",
+            "row_label_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_2",
+            "number_0_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_2",
+            "number_0_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_2",
+            "number_0_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_2",
+            "number_0_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_2",
+            "number_0_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_2",
+            "row_label_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_2",
+            "number_1_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_2",
+            "number_1_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_2",
+            "number_1_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_2",
+            "number_1_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_2",
+            "number_1_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_3",
+            "row_label_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_3",
+            "number_1_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_3",
+            "number_1_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_3",
+            "number_1_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_3",
+            "number_1_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_3",
+            "number_1_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_3",
+            "row_label_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_3",
+            "number_2_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_3",
+            "number_2_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_3",
+            "number_2_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_3",
+            "number_2_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_3",
+            "number_2_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_4",
+            "row_label_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_4",
+            "number_2_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_4",
+            "number_2_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_4",
+            "number_2_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_4",
+            "number_2_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_4",
+            "number_2_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_4",
+            "row_label_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_4",
+            "number_3_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_4",
+            "number_3_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_4",
+            "number_3_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_4",
+            "number_3_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_4",
+            "number_3_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_5",
+            "row_label_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_5",
+            "number_3_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_5",
+            "number_3_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_5",
+            "number_3_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_5",
+            "number_3_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_5",
+            "number_3_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_5",
+            "row_label_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_5",
+            "number_4_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_5",
+            "number_4_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_5",
+            "number_4_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_5",
+            "number_4_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_5",
+            "number_4_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_6",
+            "row_label_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_6",
+            "number_4_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_6",
+            "number_4_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_6",
+            "number_4_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_6",
+            "number_4_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_horizontal_6",
+            "number_4_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "header_0",
+            "number_0_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "header_1",
+            "number_0_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "header_2",
+            "number_0_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "header_3",
+            "number_0_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "header_4",
+            "number_0_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_label_0",
+            "row_label_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_0_0",
+            "number_1_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_0_1",
+            "number_1_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_0_2",
+            "number_1_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_0_3",
+            "number_1_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_0_4",
+            "number_1_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_label_1",
+            "row_label_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_1_0",
+            "number_2_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_1_1",
+            "number_2_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_1_2",
+            "number_2_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_1_3",
+            "number_2_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_1_4",
+            "number_2_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_label_2",
+            "row_label_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_2_0",
+            "number_3_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_2_1",
+            "number_3_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_2_2",
+            "number_3_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_2_3",
+            "number_3_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_2_4",
+            "number_3_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_label_3",
+            "row_label_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_3_0",
+            "number_4_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_3_1",
+            "number_4_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_3_2",
+            "number_4_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_3_3",
+            "number_4_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "number_3_4",
+            "number_4_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "shape": 31,
+            "line": 22,
+            "text": 41,
+            "image": 1
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "bar_0_4",
+                "plot_baseline"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 20.35
+            },
+            {
+              "elements": [
+                "bar_1_4",
+                "plot_baseline"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 20.35
+            },
+            {
+              "elements": [
+                "bar_2_4",
+                "plot_baseline"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 20.35
+            },
+            {
+              "elements": [
+                "bar_3_4",
+                "plot_baseline"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 20.35
+            },
+            {
+              "elements": [
+                "bar_4_4",
+                "plot_baseline"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 20.35
+            },
+            {
+              "elements": [
+                "plot_left",
+                "tick_500"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.605
+            },
+            {
+              "elements": [
+                "plot_left",
+                "tick_1000"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.605
+            },
+            {
+              "elements": [
+                "plot_left",
+                "tick_1500"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.605
+            },
+            {
+              "elements": [
+                "plot_left",
+                "tick_2000"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.605
+            },
+            {
+              "elements": [
+                "plot_baseline",
+                "table_vertical_1"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.743
+            },
+            {
+              "elements": [
+                "plot_baseline",
+                "table_vertical_2"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.742
+            },
+            {
+              "elements": [
+                "plot_baseline",
+                "table_vertical_3"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.742
+            },
+            {
+              "elements": [
+                "plot_baseline",
+                "table_vertical_4"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.743
+            },
+            {
+              "elements": [
+                "table_vertical_0",
+                "table_horizontal_1"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.822
+            },
+            {
+              "elements": [
+                "table_vertical_0",
+                "table_horizontal_2"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "table_vertical_0",
+                "table_horizontal_3"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.822
+            },
+            {
+              "elements": [
+                "table_vertical_0",
+                "table_horizontal_4"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "table_vertical_0",
+                "table_horizontal_5"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.822
+            },
+            {
+              "elements": [
+                "table_vertical_0",
+                "table_horizontal_6"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.911
+            },
+            {
+              "elements": [
+                "table_vertical_1",
+                "table_horizontal_1"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.822
+            },
+            {
+              "elements": [
+                "table_vertical_1",
+                "table_horizontal_2"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.822
+            },
+            {
+              "elements": [
+                "table_vertical_1",
+                "table_horizontal_3"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.822
+            },
+            {
+              "elements": [
+                "table_vertical_1",
+                "table_horizontal_4"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "table_vertical_1",
+                "table_horizontal_5"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.822
+            },
+            {
+              "elements": [
+                "table_vertical_1",
+                "table_horizontal_6"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.911
+            },
+            {
+              "elements": [
+                "table_vertical_2",
+                "table_horizontal_1"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "table_vertical_2",
+                "table_horizontal_2"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.822
+            },
+            {
+              "elements": [
+                "table_vertical_2",
+                "table_horizontal_3"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "table_vertical_2",
+                "table_horizontal_4"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "table_vertical_2",
+                "table_horizontal_5"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.822
+            },
+            {
+              "elements": [
+                "table_vertical_2",
+                "table_horizontal_6"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.911
+            },
+            {
+              "elements": [
+                "table_vertical_3",
+                "table_horizontal_1"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "table_vertical_3",
+                "table_horizontal_2"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "table_vertical_3",
+                "table_horizontal_3"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "table_vertical_3",
+                "table_horizontal_4"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "table_vertical_3",
+                "table_horizontal_5"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "table_vertical_3",
+                "table_horizontal_6"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.911
+            },
+            {
+              "elements": [
+                "table_vertical_4",
+                "table_horizontal_1"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.822
+            },
+            {
+              "elements": [
+                "table_vertical_4",
+                "table_horizontal_2"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "table_vertical_4",
+                "table_horizontal_3"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "table_vertical_4",
+                "table_horizontal_4"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "table_vertical_4",
+                "table_horizontal_5"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "table_vertical_4",
+                "table_horizontal_6"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.911
+            },
+            {
+              "elements": [
+                "table_vertical_5",
+                "table_horizontal_1"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.911
+            },
+            {
+              "elements": [
+                "table_vertical_5",
+                "table_horizontal_2"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.911
+            },
+            {
+              "elements": [
+                "table_vertical_5",
+                "table_horizontal_3"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.911
+            },
+            {
+              "elements": [
+                "table_vertical_5",
+                "table_horizontal_4"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.911
+            },
+            {
+              "elements": [
+                "table_vertical_5",
+                "table_horizontal_5"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.911
+            },
+            {
+              "elements": [
+                "row_labels_left",
+                "table_horizontal_2"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.911
+            },
+            {
+              "elements": [
+                "row_labels_left",
+                "table_horizontal_3"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.911
+            },
+            {
+              "elements": [
+                "row_labels_left",
+                "table_horizontal_4"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.911
+            },
+            {
+              "elements": [
+                "row_labels_left",
+                "table_horizontal_5"
+              ],
+              "reason": "Verified in the source image: these named grid, axis, tick or bar-boundary objects join at the plotted baseline or table intersection.",
+              "area_px2": 0.911
+            }
+          ],
+          "text_layouts": {
+            "title": {
+              "scale": 1,
+              "effective_font_size_px": 16.6667,
+              "width_px": 138.25,
+              "height_px": 20.5,
+              "available_width_px": 174,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 138.75,
+              "required_height_px": 21.0,
+              "fits": true,
+              "lines": [
+                "Loss by Disaster"
+              ]
+            },
+            "tick_label_0": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 9.0,
+              "height_px": 17.0,
+              "available_width_px": 40.5,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "0"
+              ]
+            },
+            "tick_label_500": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 27.0,
+              "height_px": 17.0,
+              "available_width_px": 40.5,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 27.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "500"
+              ]
+            },
+            "tick_label_1000": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 36.0,
+              "height_px": 17.0,
+              "available_width_px": 40.5,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "1000"
+              ]
+            },
+            "tick_label_1500": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 36.0,
+              "height_px": 17.0,
+              "available_width_px": 40.5,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "1500"
+              ]
+            },
+            "tick_label_2000": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 36.0,
+              "height_px": 17.0,
+              "available_width_px": 40.5,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "2000"
+              ]
+            },
+            "header_0": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 46.0,
+              "height_px": 17.0,
+              "available_width_px": 83.6,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 46.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "Freeze"
+              ]
+            },
+            "header_1": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 35.0,
+              "height_px": 17.0,
+              "available_width_px": 83.6,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 35.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "Wind"
+              ]
+            },
+            "header_2": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 37.5,
+              "height_px": 17.0,
+              "available_width_px": 83.6,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 38.0,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "Flood"
+              ]
+            },
+            "header_3": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 44.75,
+              "height_px": 17.0,
+              "available_width_px": 83.6,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 45.25,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "Quake"
+              ]
+            },
+            "header_4": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 26.5,
+              "height_px": 17.0,
+              "available_width_px": 83.6,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 27.0,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "Hail"
+              ]
+            },
+            "row_label_0": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 63.25,
+              "height_px": 17.0,
+              "available_width_px": 66.8,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 63.75,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "100 year"
+              ]
+            },
+            "number_0_0": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "431.5"
+              ]
+            },
+            "number_0_1": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 50.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 50.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "1049.4"
+              ]
+            },
+            "number_0_2": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "799.6"
+              ]
+            },
+            "number_0_3": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 50.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 50.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "2149.8"
+              ]
+            },
+            "number_0_4": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "917.9"
+              ]
+            },
+            "row_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 54.25,
+              "height_px": 17.0,
+              "available_width_px": 66.8,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 54.75,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "50 year"
+              ]
+            },
+            "number_1_0": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "292.2"
+              ]
+            },
+            "number_1_1": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "717.8"
+              ]
+            },
+            "number_1_2": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "456.4"
+              ]
+            },
+            "number_1_3": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 50.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 50.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "1368.5"
+              ]
+            },
+            "number_1_4": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "865.6"
+              ]
+            },
+            "row_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 54.25,
+              "height_px": 17.0,
+              "available_width_px": 66.8,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 54.75,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "20 year"
+              ]
+            },
+            "number_2_0": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "213.8"
+              ]
+            },
+            "number_2_1": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "636.0"
+              ]
+            },
+            "number_2_2": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "305.7"
+              ]
+            },
+            "number_2_3": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 50.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 50.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "1175.2"
+              ]
+            },
+            "number_2_4": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "796.0"
+              ]
+            },
+            "row_label_3": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 54.25,
+              "height_px": 17.0,
+              "available_width_px": 66.8,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 54.75,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "10 year"
+              ]
+            },
+            "number_3_0": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "124.6"
+              ]
+            },
+            "number_3_1": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "555.4"
+              ]
+            },
+            "number_3_2": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "153.2"
+              ]
+            },
+            "number_3_3": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "677.2"
+              ]
+            },
+            "number_3_4": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "192.5"
+              ]
+            },
+            "row_label_4": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 45.25,
+              "height_px": 17.0,
+              "available_width_px": 66.8,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 45.75,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "5 year"
+              ]
+            },
+            "number_4_0": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 32.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 32.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "66.4"
+              ]
+            },
+            "number_4_1": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "174.3"
+              ]
+            },
+            "number_4_2": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 32.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 32.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "75.1"
+              ]
+            },
+            "number_4_3": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 41.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "577.9"
+              ]
+            },
+            "number_4_4": {
+              "scale": 1,
+              "effective_font_size_px": 13.8889,
+              "width_px": 32.0,
+              "height_px": 17.0,
+              "available_width_px": 71.68,
+              "available_height_px": 18.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 32.5,
+              "required_height_px": 17.5,
+              "fits": true,
+              "lines": [
+                "32.0"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "pass",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [],
+      "text_boxes": [
+        {
+          "slide": "page_001",
+          "element": "title",
+          "expected": "Loss by Disaster",
+          "rendered": "Loss by Disaster",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 136.75,
+          "rendered_ink_width_px": 135.244
+        },
+        {
+          "slide": "page_001",
+          "element": "tick_label_0",
+          "expected": "0",
+          "rendered": "0",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 7.25,
+          "rendered_ink_width_px": 7.005
+        },
+        {
+          "slide": "page_001",
+          "element": "tick_label_500",
+          "expected": "500",
+          "rendered": "500",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 24.75,
+          "rendered_ink_width_px": 24.359
+        },
+        {
+          "slide": "page_001",
+          "element": "tick_label_1000",
+          "expected": "1000",
+          "rendered": "1000",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 33.25,
+          "rendered_ink_width_px": 32.576
+        },
+        {
+          "slide": "page_001",
+          "element": "tick_label_1500",
+          "expected": "1500",
+          "rendered": "1500",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 33.25,
+          "rendered_ink_width_px": 32.576
+        },
+        {
+          "slide": "page_001",
+          "element": "tick_label_2000",
+          "expected": "2000",
+          "rendered": "2000",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 34.0,
+          "rendered_ink_width_px": 33.37
+        },
+        {
+          "slide": "page_001",
+          "element": "header_0",
+          "expected": "Freeze",
+          "rendered": "Freeze ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 44.25,
+          "rendered_ink_width_px": 43.983
+        },
+        {
+          "slide": "page_001",
+          "element": "header_1",
+          "expected": "Wind",
+          "rendered": "Wind ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 33.25,
+          "rendered_ink_width_px": 33.161
+        },
+        {
+          "slide": "page_001",
+          "element": "header_2",
+          "expected": "Flood",
+          "rendered": "Flood ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 35.0,
+          "rendered_ink_width_px": 34.749
+        },
+        {
+          "slide": "page_001",
+          "element": "header_3",
+          "expected": "Quake",
+          "rendered": "Quake ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 43.5,
+          "rendered_ink_width_px": 43.022
+        },
+        {
+          "slide": "page_001",
+          "element": "header_4",
+          "expected": "Hail",
+          "rendered": "Hail",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 24.25,
+          "rendered_ink_width_px": 23.788
+        },
+        {
+          "slide": "page_001",
+          "element": "row_label_0",
+          "expected": "100 year",
+          "rendered": "100 year \r\n0 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 61.5,
+          "rendered_ink_width_px": 60.277
+        },
+        {
+          "slide": "page_001",
+          "element": "number_0_0",
+          "expected": "431.5",
+          "rendered": "431.5 \r\n2922 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 39.5,
+          "rendered_ink_width_px": 38.927
+        },
+        {
+          "slide": "page_001",
+          "element": "number_0_1",
+          "expected": "1049.4",
+          "rendered": "1049.4 \r\n8 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 47.5,
+          "rendered_ink_width_px": 46.712
+        },
+        {
+          "slide": "page_001",
+          "element": "number_0_2",
+          "expected": "799.6",
+          "rendered": "799.6 \r\n6",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 39.25,
+          "rendered_ink_width_px": 38.648
+        },
+        {
+          "slide": "page_001",
+          "element": "number_0_3",
+          "expected": "2149.8",
+          "rendered": "Q\r\n2149.8 \r\n368",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 48.25,
+          "rendered_ink_width_px": 47.353
+        },
+        {
+          "slide": "page_001",
+          "element": "number_0_4",
+          "expected": "917.9",
+          "rendered": "917.9\r\n866",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 39.25,
+          "rendered_ink_width_px": 38.76
+        },
+        {
+          "slide": "page_001",
+          "element": "row_label_1",
+          "expected": "50 year",
+          "rendered": "y\r\n50 year \r\n20 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 53.0,
+          "rendered_ink_width_px": 52.06
+        },
+        {
+          "slide": "page_001",
+          "element": "number_1_0",
+          "expected": "292.2",
+          "rendered": "292.2 \r\n238 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 39.0,
+          "rendered_ink_width_px": 38.439
+        },
+        {
+          "slide": "page_001",
+          "element": "number_1_1",
+          "expected": "717.8",
+          "rendered": "717.8 \r\n6360 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 39.25,
+          "rendered_ink_width_px": 38.565
+        },
+        {
+          "slide": "page_001",
+          "element": "number_1_2",
+          "expected": "456.4",
+          "rendered": "456.4 \r\n30",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 39.75,
+          "rendered_ink_width_px": 39.233
+        },
+        {
+          "slide": "page_001",
+          "element": "number_1_3",
+          "expected": "1368.5",
+          "rendered": "1368.5 \r\n2 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 47.25,
+          "rendered_ink_width_px": 46.406
+        },
+        {
+          "slide": "page_001",
+          "element": "number_1_4",
+          "expected": "865.6",
+          "rendered": "865.6\r\n960",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 39.5,
+          "rendered_ink_width_px": 38.857
+        },
+        {
+          "slide": "page_001",
+          "element": "row_label_2",
+          "expected": "20 year",
+          "rendered": "y\r\n20 year \r\n0 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 53.25,
+          "rendered_ink_width_px": 52.227
+        },
+        {
+          "slide": "page_001",
+          "element": "number_2_0",
+          "expected": "213.8",
+          "rendered": "213.8 \r\n26 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 39.25,
+          "rendered_ink_width_px": 38.509
+        },
+        {
+          "slide": "page_001",
+          "element": "number_2_1",
+          "expected": "636.0",
+          "rendered": "636.0 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 39.25,
+          "rendered_ink_width_px": 38.593
+        },
+        {
+          "slide": "page_001",
+          "element": "number_2_2",
+          "expected": "305.7",
+          "rendered": "305.7 \r\n32 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 39.25,
+          "rendered_ink_width_px": 38.425
+        },
+        {
+          "slide": "page_001",
+          "element": "number_2_3",
+          "expected": "1175.2",
+          "rendered": "1175.2 \r\n62 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 47.25,
+          "rendered_ink_width_px": 46.489
+        },
+        {
+          "slide": "page_001",
+          "element": "number_2_4",
+          "expected": "796.0",
+          "rendered": "796.0\r\n92",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 39.0,
+          "rendered_ink_width_px": 38.481
+        },
+        {
+          "slide": "page_001",
+          "element": "row_label_3",
+          "expected": "10 year",
+          "rendered": "y\r\n10 year ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 52.5,
+          "rendered_ink_width_px": 51.434
+        },
+        {
+          "slide": "page_001",
+          "element": "number_3_0",
+          "expected": "124.6",
+          "rendered": "124.6 \r\n66",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 38.5,
+          "rendered_ink_width_px": 37.799
+        },
+        {
+          "slide": "page_001",
+          "element": "number_3_1",
+          "expected": "555.4",
+          "rendered": "555.4 \r\n3 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 39.0,
+          "rendered_ink_width_px": 38.495
+        },
+        {
+          "slide": "page_001",
+          "element": "number_3_2",
+          "expected": "153.2",
+          "rendered": "153.2 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 38.25,
+          "rendered_ink_width_px": 37.646
+        },
+        {
+          "slide": "page_001",
+          "element": "number_3_3",
+          "expected": "677.2",
+          "rendered": "677.2 \r\n9 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 39.25,
+          "rendered_ink_width_px": 38.607
+        },
+        {
+          "slide": "page_001",
+          "element": "number_3_4",
+          "expected": "192.5",
+          "rendered": "192.5\r\n320",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 38.25,
+          "rendered_ink_width_px": 37.562
+        },
+        {
+          "slide": "page_001",
+          "element": "row_label_4",
+          "expected": "5 year",
+          "rendered": "y\r\n5 year ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 44.0,
+          "rendered_ink_width_px": 43.203
+        },
+        {
+          "slide": "page_001",
+          "element": "number_4_0",
+          "expected": "66.4",
+          "rendered": "66.4 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 30.5,
+          "rendered_ink_width_px": 29.986
+        },
+        {
+          "slide": "page_001",
+          "element": "number_4_1",
+          "expected": "174.3",
+          "rendered": "174.3 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 38.25,
+          "rendered_ink_width_px": 37.506
+        },
+        {
+          "slide": "page_001",
+          "element": "number_4_2",
+          "expected": "75.1",
+          "rendered": "75.1 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 29.5,
+          "rendered_ink_width_px": 29.066
+        },
+        {
+          "slide": "page_001",
+          "element": "number_4_3",
+          "expected": "577.9",
+          "rendered": "577.9 ",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 38.75,
+          "rendered_ink_width_px": 38.258
+        },
+        {
+          "slide": "page_001",
+          "element": "number_4_4",
+          "expected": "32.0",
+          "rendered": "32.0",
+          "matches": true,
+          "actual_fonts": [
+            "Verdana"
+          ],
+          "measured_ink_width_px": 30.0,
+          "rendered_ink_width_px": 29.54
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "One preflight ink/grid conflict at Quake; this draft is not an accepted conversion.",
+    "Rotated vertical axis title remains raster because scene v1 has no text rotation."
+  ],
+  "comparison": {
+    "mean_absolute_pixel_error": 0.030938,
+    "comparison": "comparison.png",
+    "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+  }
+}

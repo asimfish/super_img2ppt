@@ -1,0 +1,328 @@
+{
+  "method": "Source bitmap ink bounds in manually isolated text regions, frozen before PPTX rendering. No PDF text coordinates used.",
+  "anchors": [
+    {
+      "id": "title",
+      "roi": [
+        480,
+        30,
+        1060,
+        110
+      ],
+      "ink_box": [
+        493,
+        43,
+        1046,
+        88
+      ],
+      "polarity": "light",
+      "threshold": 230
+    },
+    {
+      "id": "page-number",
+      "roi": [
+        1480,
+        1167,
+        1545,
+        1200
+      ],
+      "ink_box": [
+        1496,
+        1174,
+        1522,
+        1194
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "number-1",
+      "roi": [
+        218,
+        195,
+        269,
+        252
+      ],
+      "ink_box": [
+        229,
+        203,
+        257,
+        232
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "goal-1",
+      "roi": [
+        280,
+        195,
+        1540,
+        252
+      ],
+      "ink_box": [
+        300,
+        202,
+        1244,
+        241
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "number-2",
+      "roi": [
+        218,
+        297,
+        269,
+        354
+      ],
+      "ink_box": [
+        227,
+        305,
+        257,
+        334
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "goal-2",
+      "roi": [
+        280,
+        297,
+        1540,
+        354
+      ],
+      "ink_box": [
+        300,
+        305,
+        1173,
+        343
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "number-3",
+      "roi": [
+        218,
+        399,
+        269,
+        456
+      ],
+      "ink_box": [
+        227,
+        407,
+        257,
+        437
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "goal-3",
+      "roi": [
+        280,
+        399,
+        1540,
+        456
+      ],
+      "ink_box": [
+        300,
+        406,
+        1121,
+        445
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "number-4",
+      "roi": [
+        218,
+        501,
+        269,
+        558
+      ],
+      "ink_box": [
+        227,
+        509,
+        257,
+        537
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "goal-4",
+      "roi": [
+        280,
+        501,
+        1540,
+        558
+      ],
+      "ink_box": [
+        300,
+        508,
+        1101,
+        546
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "number-5",
+      "roi": [
+        218,
+        603,
+        269,
+        660
+      ],
+      "ink_box": [
+        228,
+        611,
+        257,
+        640
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "goal-5",
+      "roi": [
+        280,
+        603,
+        1540,
+        660
+      ],
+      "ink_box": [
+        299,
+        609,
+        1523,
+        648
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "number-6",
+      "roi": [
+        218,
+        761,
+        269,
+        818
+      ],
+      "ink_box": [
+        227,
+        769,
+        257,
+        799
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "goal-6",
+      "roi": [
+        280,
+        761,
+        1540,
+        818
+      ],
+      "ink_box": [
+        299,
+        768,
+        1346,
+        799
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "number-7",
+      "roi": [
+        218,
+        863,
+        269,
+        920
+      ],
+      "ink_box": [
+        227,
+        872,
+        257,
+        900
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "goal-7",
+      "roi": [
+        280,
+        863,
+        1540,
+        920
+      ],
+      "ink_box": [
+        300,
+        870,
+        1363,
+        909
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "goal-5-continuation",
+      "roi": [
+        280,
+        660,
+        900,
+        711
+      ],
+      "ink_box": [
+        289,
+        667,
+        867,
+        705
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "callout-1",
+      "roi": [
+        185,
+        973,
+        1420,
+        1017
+      ],
+      "ink_box": [
+        195,
+        975,
+        1404,
+        1013
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    },
+    {
+      "id": "callout-2",
+      "roi": [
+        530,
+        1017,
+        1070,
+        1061
+      ],
+      "ink_box": [
+        548,
+        1020,
+        1051,
+        1058
+      ],
+      "polarity": "dark",
+      "threshold": 170
+    }
+  ]
+}

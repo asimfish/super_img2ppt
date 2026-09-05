@@ -82,6 +82,88 @@ def test_existing_output_is_preserved(tmp_path):
     assert marker.read_text() == "user content"
 
 
+def test_line_stroke_is_counted_once_at_page_boundary(scene, tmp_path):
+    line = {
+        "id": "rule",
+        "kind": "line",
+        "z": 0,
+        "points": [[0, 1], [1280, 1]],
+        "stroke": "#000000",
+        "stroke_width": 2,
+    }
+    scene["slides"][0]["elements"] = [line]
+    assert preflight(scene, {}, tmp_path)["status"] == "pass"
+    line["points"] = [[0, 0], [1280, 0]]
+    result = preflight(scene, {}, tmp_path)
+    assert any(f["code"] == "out_of_bounds" for f in result["findings"])
+
+
+def test_diamond_contains_visible_text_without_requiring_empty_frame_corners(
+    scene, fonts, tmp_path
+):
+    text = scene["slides"][0]["elements"][0]
+    text.update(text="A", font_family="Arial", box=[130, 40, 200, 130], container="decision")
+    scene["slides"][0]["elements"].append(
+        {
+            "id": "decision",
+            "kind": "shape",
+            "shape": "diamond",
+            "z": 0,
+            "box": [0, 0, 400, 200],
+            "fill": "#FFFFFF",
+        }
+    )
+    result = preflight(scene, layout_scene(scene, fonts), tmp_path)
+    assert result["status"] == "pass"
+    assert any(f["code"] == "text_frame_outside_container_only" for f in result["findings"])
+    text["box"][0] = 60
+    result = preflight(scene, layout_scene(scene, fonts), tmp_path)
+    assert any(f["code"] == "outside_container" for f in result["findings"])
+
+
+def test_blank_glyph_corner_is_not_ink_but_letter_stroke_is(scene, fonts, tmp_path):
+    text = scene["slides"][0]["elements"][0]
+    text.update(text="A", font_family="Arial", box=[100, 60, 100, 100])
+    corner = {
+        "id": "corner",
+        "kind": "shape",
+        "shape": "rect",
+        "z": 3,
+        "box": [100, 68, 5, 5],
+        "fill": "#000000",
+    }
+    scene["slides"][0]["elements"].append(corner)
+    assert preflight(scene, layout_scene(scene, fonts), tmp_path)["status"] == "pass"
+    corner["box"][0] = 110
+    result = preflight(scene, layout_scene(scene, fonts), tmp_path)
+    assert any(f["code"] == "unintended_overlap" for f in result["findings"])
+
+
+def test_partial_ink_measurement_cannot_hide_a_large_run_collision(scene, fonts, tmp_path):
+    slide = scene["slides"][0]
+    slide["width"] = 3000
+    text = slide["elements"][0]
+    text.pop("text")
+    text.update(
+        font_family="Arial",
+        font_size=320,
+        box=[80, 60, 2600, 420],
+        runs=[{"text": "MMMMMMMM"}, {"text": " A", "font_size": 36}],
+    )
+    slide["elements"].append(
+        {
+            "id": "obstacle",
+            "kind": "shape",
+            "shape": "rect",
+            "z": 3,
+            "box": [100, 120, 100, 100],
+            "fill": "#000000",
+        }
+    )
+    result = preflight(validate_scene(scene), layout_scene(scene, fonts), tmp_path)
+    assert any(f["code"] == "unintended_overlap" for f in result["findings"])
+
+
 def test_container_is_allowed_but_obstruction_is_blocked(scene, fonts, tmp_path):
     elements = scene["slides"][0]["elements"]
     elements[0]["container"] = "card"
@@ -131,6 +213,28 @@ def test_text_frame_padding_overlap_is_distinct_from_visible_collision(scene, fo
     result = preflight(scene, layout_scene(scene, fonts), tmp_path)
     assert result["status"] == "fail"
     assert any(f["code"] == "unintended_overlap" for f in result["findings"])
+
+
+@pytest.mark.parametrize("obstacle", ["line", "shape"])
+def test_text_padding_can_touch_grid_or_shape_but_ink_cannot(scene, fonts, tmp_path, obstacle):
+    text = scene["slides"][0]["elements"][0]
+    text.update(text="Hello", font_family="Arial", box=[80, 60, 250, 100], font_size=36)
+    element = {"id": "obstacle", "kind": obstacle, "z": 3}
+    if obstacle == "line":
+        element.update(points=[[70, 63], [340, 63]], stroke_width=1)
+    else:
+        element.update(box=[70, 61, 270, 3], shape="rect", fill="#000000")
+    scene["slides"][0]["elements"].append(element)
+    report = preflight(scene, layout_scene(scene, fonts), tmp_path)
+    assert report["status"] == "pass", report["findings"]
+    assert any(f["code"] == "text_frame_overlap_only" for f in report["findings"])
+    if obstacle == "line":
+        element["points"] = [[70, 85], [340, 85]]
+    else:
+        element["box"][1] = 83
+    report = preflight(scene, layout_scene(scene, fonts), tmp_path)
+    assert report["status"] == "fail"
+    assert any(f["code"] == "unintended_overlap" for f in report["findings"])
 
 
 def test_baked_text_overlap_cannot_be_exempted(scene, fonts, tmp_path):

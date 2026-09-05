@@ -1,0 +1,60 @@
+{
+  "version": "0.1.1",
+  "pytest": {
+    "passed": 43,
+    "failed": 0,
+    "seconds": 82.17,
+    "new_regressions": 10
+  },
+  "static": {
+    "ruff_check": "pass",
+    "ruff_format": "pass",
+    "skill_verifier": "pass",
+    "activation_cases": 8,
+    "capability_registry": "current",
+    "governance_audit": "PASS; semantic boundary review is documented separately"
+  },
+  "corpus": {
+    "command": "PATH=/opt/homebrew/bin:$PATH uv run python scripts/run_real_cases.py --out output/corpus_v011_verification",
+    "exit_code": 2,
+    "summary": {
+      "all_blocking_checks_passed": false,
+      "visual_review": "required",
+      "cases": [
+        {
+          "id": "consensus_zh",
+          "status": "pass",
+          "error": null
+        },
+        {
+          "id": "matplotlib_table",
+          "status": "fail",
+          "error": null
+        },
+        {
+          "id": "nasa_06",
+          "status": "review",
+          "error": null
+        },
+        {
+          "id": "nasa_16",
+          "status": "review",
+          "error": null
+        },
+        {
+          "id": "nasa_18",
+          "status": "review",
+          "error": null
+        },
+        {
+          "id": "nasa_28",
+          "status": "review",
+          "error": null
+        }
+      ]
+    },
+    "interpretation": "One blocked table remains; exit 2 is preserved rather than converted into success."
+  },
+  "package_sha256": "84a04e0b1510322b712da1c42a2c21131ef31801ce7c0aecc6ffdd676b4c5930",
+  "artifact_manifest_hashes": "all six verified"
+}

@@ -1,0 +1,1958 @@
+{
+  "status": "review",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "review",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "raster_text",
+          "severity": "warning",
+          "elements": [
+            "header_nasa"
+          ],
+          "message": "Text inside this independent image remains noneditable"
+        },
+        {
+          "slide": "page_001",
+          "code": "raster_text",
+          "severity": "warning",
+          "elements": [
+            "header_cfs"
+          ],
+          "message": "Text inside this independent image remains noneditable"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "limit_checker_label_1",
+            "limit_checker_label_2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "space_wire_label_1",
+            "space_wire_label_2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "instrument_manager_label_1",
+            "instrument_manager_label_2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "cfdp_transfer_label_1",
+            "cfdp_transfer_label_2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "stored_command_label_1",
+            "stored_command_label_2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "packet_manager_label_1",
+            "packet_manager_label_2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "storage_label_1",
+            "storage_label_2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "storage_label_2",
+            "storage_label_3"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "data_storage_line1",
+            "data_storage_line2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "file_manager_line1",
+            "file_manager_line2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "bus1553_label_1",
+            "bus1553_label_2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "telemetry_output_label_1",
+            "telemetry_output_label_2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "command_ingest_label_1",
+            "command_ingest_label_2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "software_service_label_1",
+            "software_service_label_2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "time_services_label_1",
+            "time_services_label_2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "executive_services_label_1",
+            "executive_services_label_2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "event_services_label_1",
+            "event_services_label_2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_services_label_1",
+            "table_services_label_2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "gnc_hardware_line1",
+            "gnc_hardware_line2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "communication_interfaces_line1",
+            "communication_interfaces_line2"
+          ],
+          "message": "Transparent text-frame padding intersects another object, but measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "image": 3,
+            "text": 53,
+            "shape": 35,
+            "line": 57
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "storage_bottom",
+                "storage_body"
+              ],
+              "reason": "Cylinder body intentionally hides the upper portion of its bottom ellipse.",
+              "area_px2": 2053.438
+            },
+            {
+              "elements": [
+                "storage_bottom",
+                "storage_left_side"
+              ],
+              "reason": "Side line forms the shared boundary of the editable cylinder components.",
+              "area_px2": 0.695
+            },
+            {
+              "elements": [
+                "storage_bottom",
+                "storage_right_side"
+              ],
+              "reason": "Side line forms the shared boundary of the editable cylinder components.",
+              "area_px2": 0.695
+            },
+            {
+              "elements": [
+                "storage_bottom",
+                "storage_label_2"
+              ],
+              "reason": "Editable cylinder label is drawn over the native body and bottom components.",
+              "area_px2": 249.374
+            },
+            {
+              "elements": [
+                "storage_bottom",
+                "storage_label_3"
+              ],
+              "reason": "Source File System label spans the editable cylinder body and bottom ellipse; neither single component encloses its complete font frame, so both exact background components are named.",
+              "area_px2": 2154.599
+            },
+            {
+              "elements": [
+                "storage_body",
+                "storage_left_side"
+              ],
+              "reason": "Cylinder body intentionally hides the upper portion of its bottom ellipse.",
+              "area_px2": 47.15
+            },
+            {
+              "elements": [
+                "storage_body",
+                "storage_right_side"
+              ],
+              "reason": "Cylinder body intentionally hides the upper portion of its bottom ellipse.",
+              "area_px2": 47.15
+            },
+            {
+              "elements": [
+                "storage_body",
+                "storage_top"
+              ],
+              "reason": "Cylinder body intentionally hides the upper portion of its bottom ellipse.",
+              "area_px2": 2053.438
+            },
+            {
+              "elements": [
+                "storage_body",
+                "storage_label_3"
+              ],
+              "reason": "Cylinder body intentionally hides the upper portion of its bottom ellipse.",
+              "area_px2": 1560.611
+            },
+            {
+              "elements": [
+                "storage_left_side",
+                "storage_top"
+              ],
+              "reason": "Side line forms the shared boundary of the editable cylinder components.",
+              "area_px2": 0.695
+            },
+            {
+              "elements": [
+                "storage_left_side",
+                "manager_storage_horizontal"
+              ],
+              "reason": "Side line forms the shared boundary of the editable cylinder components.",
+              "area_px2": 0.844
+            },
+            {
+              "elements": [
+                "storage_left_side",
+                "cfdp_storage"
+              ],
+              "reason": "Side line forms the shared boundary of the editable cylinder components.",
+              "area_px2": 1.436
+            },
+            {
+              "elements": [
+                "storage_right_side",
+                "storage_top"
+              ],
+              "reason": "Side line forms the shared boundary of the editable cylinder components.",
+              "area_px2": 0.695
+            },
+            {
+              "elements": [
+                "instruments_manager_b",
+                "instrument_manager"
+              ],
+              "reason": "Source instrument arrow meets and slightly crosses the instrument-manager circular outline.",
+              "area_px2": 9.379
+            },
+            {
+              "elements": [
+                "manager_storage_vertical",
+                "manager_storage_horizontal"
+              ],
+              "reason": "These two segments intentionally form the single source right-angle instrument-storage connector.",
+              "area_px2": 1.266
+            },
+            {
+              "elements": [
+                "cfdp_storage",
+                "cfdp_transfer"
+              ],
+              "reason": "Source arrow tip meets the cylinder left outline; 1.436 square pixel stroke contact. Source connector starts at the CFDP circle outline; 2.815 square pixel stroke contact.",
+              "area_px2": 2.815
+            },
+            {
+              "elements": [
+                "data_bus_b",
+                "file_storage_vertical"
+              ],
+              "reason": "Source bus arrow tip touches the data-storage circle; 0.610 square pixel stroke contact.",
+              "area_px2": 5.062
+            },
+            {
+              "elements": [
+                "data_bus_b",
+                "data_storage"
+              ],
+              "reason": "Source bus arrow tip touches the data-storage circle; 0.610 square pixel stroke contact.",
+              "area_px2": 0.61
+            },
+            {
+              "elements": [
+                "file_storage_vertical",
+                "file_storage_diagonal"
+              ],
+              "reason": "Source has an unjoined crossing of the file-storage vertical line with the data-storage bus link.",
+              "area_px2": 0.673
+            },
+            {
+              "elements": [
+                "commands_to_ingest_horizontal",
+                "commands_to_ingest_vertical"
+              ],
+              "reason": "These two segments intentionally form the single source command-ingest elbow.",
+              "area_px2": 0.81
+            },
+            {
+              "elements": [
+                "telemetry_down",
+                "telemetry_to_interfaces"
+              ],
+              "reason": "These two segments intentionally form the source real-time telemetry elbow.",
+              "area_px2": 0.81
+            },
+            {
+              "elements": [
+                "instruments_back",
+                "instruments_front"
+              ],
+              "reason": "Source shows two offset overlapping instrument rectangles.",
+              "area_px2": 6424.2
+            },
+            {
+              "elements": [
+                "instruments_back",
+                "instruments_label"
+              ],
+              "reason": "Label sits on the front instrument sheet, which covers the rear sheet.",
+              "area_px2": 4075.528
+            },
+            {
+              "elements": [
+                "gnc_back",
+                "gnc_middle"
+              ],
+              "reason": "Source mission GN&C is a stack of offset yellow circular applications.",
+              "area_px2": 8915.396
+            },
+            {
+              "elements": [
+                "gnc_back",
+                "gnc_front"
+              ],
+              "reason": "Source mission GN&C is a stack of offset yellow circular applications.",
+              "area_px2": 8062.613
+            },
+            {
+              "elements": [
+                "gnc_back",
+                "gnc_label"
+              ],
+              "reason": "The front circle and its label cover the rear circles of the source stack.",
+              "area_px2": 1002.976
+            },
+            {
+              "elements": [
+                "bus1553_shadow",
+                "bus1553"
+              ],
+              "reason": "Source has a thin cyan offset circle visible behind the yellow 1553 support circle.",
+              "area_px2": 9008.591
+            },
+            {
+              "elements": [
+                "bus1553_shadow",
+                "bus1553_label_1"
+              ],
+              "reason": "Text belongs to the yellow foreground application covering the cyan offset circle.",
+              "area_px2": 1782.783
+            },
+            {
+              "elements": [
+                "bus1553_shadow",
+                "bus1553_label_2"
+              ],
+              "reason": "Text belongs to the yellow foreground application covering the cyan offset circle.",
+              "area_px2": 1485.575
+            },
+            {
+              "elements": [
+                "gnc_middle",
+                "gnc_front"
+              ],
+              "reason": "Source mission GN&C is a stack of offset yellow circular applications.",
+              "area_px2": 8874.095
+            },
+            {
+              "elements": [
+                "gnc_middle",
+                "gnc_label"
+              ],
+              "reason": "Source mission GN&C is a stack of offset yellow circular applications.",
+              "area_px2": 1002.976
+            }
+          ],
+          "text_layouts": {
+            "title": {
+              "scale": 1,
+              "effective_font_size_px": 62.2222,
+              "width_px": 894.25,
+              "height_px": 69.75,
+              "available_width_px": 910,
+              "available_height_px": 81,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 894.75,
+              "required_height_px": 70.25,
+              "fits": true,
+              "lines": [
+                "Example Mission Applications"
+              ]
+            },
+            "instruments_label": {
+              "scale": 1,
+              "effective_font_size_px": 24.4444,
+              "width_px": 128.5,
+              "height_px": 27.5,
+              "available_width_px": 129.67,
+              "available_height_px": 31.778,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 129.0,
+              "required_height_px": 28.0,
+              "fits": true,
+              "lines": [
+                "Instruments"
+              ]
+            },
+            "software_bus_label": {
+              "scale": 1,
+              "effective_font_size_px": 31.1111,
+              "width_px": 577.75,
+              "height_px": 35.0,
+              "available_width_px": 582.91,
+              "available_height_px": 35.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 578.25,
+              "required_height_px": 35.5,
+              "fits": true,
+              "lines": [
+                "Inter-task Message Router (Software Bus)"
+              ]
+            },
+            "scheduler_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 79.75,
+              "height_px": 20.25,
+              "available_width_px": 82.32,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 80.25,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Scheduler"
+              ]
+            },
+            "limit_checker_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 37.5,
+              "height_px": 20.25,
+              "available_width_px": 39.54,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 38.0,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Limit"
+              ]
+            },
+            "limit_checker_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 66.25,
+              "height_px": 20.25,
+              "available_width_px": 68.46,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 66.75,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Checker"
+              ]
+            },
+            "memory_manager_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 64.0,
+              "height_px": 20.25,
+              "available_width_px": 66.21,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 64.5,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Memory"
+              ]
+            },
+            "memory_manager_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 69.75,
+              "height_px": 20.25,
+              "available_width_px": 72.43,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 70.25,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Manager"
+              ]
+            },
+            "space_wire_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 50.0,
+              "height_px": 20.25,
+              "available_width_px": 52.42,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 50.5,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Space"
+              ]
+            },
+            "space_wire_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 36.5,
+              "height_px": 20.25,
+              "available_width_px": 38.54,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 37.0,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Wire"
+              ]
+            },
+            "instrument_manager_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 83.75,
+              "height_px": 20.25,
+              "available_width_px": 86.0,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 84.25,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Instrument"
+              ]
+            },
+            "instrument_manager_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 69.75,
+              "height_px": 20.25,
+              "available_width_px": 72.43,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 70.25,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Manager"
+              ]
+            },
+            "cfdp_transfer_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 81.5,
+              "height_px": 20.25,
+              "available_width_px": 83.99,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 82.0,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "CFDP File"
+              ]
+            },
+            "cfdp_transfer_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 66.25,
+              "height_px": 20.25,
+              "available_width_px": 68.44,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 66.75,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Transfer"
+              ]
+            },
+            "stored_command_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 52.0,
+              "height_px": 20.25,
+              "available_width_px": 54.39,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 52.5,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Stored"
+              ]
+            },
+            "stored_command_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 81.25,
+              "height_px": 20.25,
+              "available_width_px": 84.02,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 81.75,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Command"
+              ]
+            },
+            "packet_manager_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 54.25,
+              "height_px": 20.25,
+              "available_width_px": 56.36,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 54.75,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Packet"
+              ]
+            },
+            "packet_manager_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 69.75,
+              "height_px": 20.25,
+              "available_width_px": 72.43,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 70.25,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Manager"
+              ]
+            },
+            "storage_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 42.5,
+              "height_px": 20.25,
+              "available_width_px": 44.48,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 43.0,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Mass"
+              ]
+            },
+            "storage_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 61.75,
+              "height_px": 20.25,
+              "available_width_px": 64.28,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 62.25,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Storage"
+              ]
+            },
+            "storage_label_3": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 92.75,
+              "height_px": 20.25,
+              "available_width_px": 94.87,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 93.25,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "File System"
+              ]
+            },
+            "data_storage_line1": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 42.5,
+              "height_px": 22.5,
+              "available_width_px": 44.24,
+              "available_height_px": 26.0,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 43.0,
+              "required_height_px": 23.0,
+              "fits": true,
+              "lines": [
+                "Data"
+              ]
+            },
+            "data_storage_line2": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 70.5,
+              "height_px": 22.5,
+              "available_width_px": 72.04,
+              "available_height_px": 26.0,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 71.0,
+              "required_height_px": 23.0,
+              "fits": true,
+              "lines": [
+                "Storage"
+              ]
+            },
+            "file_manager_line1": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 32.5,
+              "height_px": 22.5,
+              "available_width_px": 34.22,
+              "available_height_px": 26.0,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 33.0,
+              "required_height_px": 23.0,
+              "fits": true,
+              "lines": [
+                "File"
+              ]
+            },
+            "file_manager_line2": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 80.0,
+              "height_px": 22.5,
+              "available_width_px": 81.2,
+              "available_height_px": 26.0,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 80.5,
+              "required_height_px": 23.0,
+              "fits": true,
+              "lines": [
+                "Manager"
+              ]
+            },
+            "gnc_label": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 46.25,
+              "height_px": 18.0,
+              "available_width_px": 48.22,
+              "available_height_px": 20.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 46.75,
+              "required_height_px": 18.5,
+              "fits": true,
+              "lines": [
+                "GN&C"
+              ]
+            },
+            "bus1553_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 74.5,
+              "height_px": 20.25,
+              "available_width_px": 77.14,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 75.0,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "1553 Bus"
+              ]
+            },
+            "bus1553_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 61.75,
+              "height_px": 20.25,
+              "available_width_px": 64.28,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 62.25,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Support"
+              ]
+            },
+            "telemetry_output_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 78.75,
+              "height_px": 20.25,
+              "available_width_px": 81.01,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 79.25,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Telemetry"
+              ]
+            },
+            "telemetry_output_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 53.0,
+              "height_px": 20.25,
+              "available_width_px": 55.38,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 53.5,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Output"
+              ]
+            },
+            "command_ingest_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 81.25,
+              "height_px": 20.25,
+              "available_width_px": 84.02,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 81.75,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Command"
+              ]
+            },
+            "command_ingest_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 48.25,
+              "height_px": 20.25,
+              "available_width_px": 50.44,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 48.75,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Ingest"
+              ]
+            },
+            "software_service_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 69.75,
+              "height_px": 20.25,
+              "available_width_px": 72.17,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 70.25,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Software"
+              ]
+            },
+            "software_service_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 36.5,
+              "height_px": 20.25,
+              "available_width_px": 38.56,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 37.0,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Bus)"
+              ]
+            },
+            "time_services_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 39.25,
+              "height_px": 20.25,
+              "available_width_px": 41.5,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 39.75,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Time"
+              ]
+            },
+            "time_services_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 68.25,
+              "height_px": 20.25,
+              "available_width_px": 70.18,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.75,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Services"
+              ]
+            },
+            "executive_services_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 77.0,
+              "height_px": 20.25,
+              "available_width_px": 79.09,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 77.5,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Executive"
+              ]
+            },
+            "executive_services_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 68.25,
+              "height_px": 20.25,
+              "available_width_px": 70.18,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.75,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Services"
+              ]
+            },
+            "event_services_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 45.25,
+              "height_px": 20.25,
+              "available_width_px": 47.47,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 45.75,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Event"
+              ]
+            },
+            "event_services_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 68.25,
+              "height_px": 20.25,
+              "available_width_px": 70.18,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.75,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Services"
+              ]
+            },
+            "table_services_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 44.0,
+              "height_px": 20.25,
+              "available_width_px": 46.45,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 44.5,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Table"
+              ]
+            },
+            "table_services_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 68.25,
+              "height_px": 20.25,
+              "available_width_px": 70.18,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.75,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Services"
+              ]
+            },
+            "gnc_hardware_line1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 51.0,
+              "height_px": 20.25,
+              "available_width_px": 53.37,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 51.5,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "GN&C"
+              ]
+            },
+            "gnc_hardware_line2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 76.5,
+              "height_px": 20.25,
+              "available_width_px": 79.08,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 77.0,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Hardware"
+              ]
+            },
+            "communication_interfaces_line1": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 122.75,
+              "height_px": 20.25,
+              "available_width_px": 125.53,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 123.25,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Communication"
+              ]
+            },
+            "communication_interfaces_line2": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 78.0,
+              "height_px": 20.25,
+              "available_width_px": 80.08,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 78.5,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Interfaces"
+              ]
+            },
+            "commands_label": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 90.25,
+              "height_px": 20.25,
+              "available_width_px": 92.91,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 90.75,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Commands"
+              ]
+            },
+            "telemetry_path_label": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 159.5,
+              "height_px": 20.25,
+              "available_width_px": 162.024,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 160.0,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "Real-time Telemetry"
+              ]
+            },
+            "file_downlink_label": {
+              "scale": 1,
+              "effective_font_size_px": 17.7778,
+              "width_px": 102.25,
+              "height_px": 20.25,
+              "available_width_px": 104.78,
+              "available_height_px": 23.111,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 102.75,
+              "required_height_px": 20.75,
+              "fits": true,
+              "lines": [
+                "File downlink"
+              ]
+            },
+            "legend_cfs_label": {
+              "scale": 1,
+              "effective_font_size_px": 22.2222,
+              "width_px": 166.75,
+              "height_px": 25.0,
+              "available_width_px": 167.481,
+              "available_height_px": 28.889,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 167.25,
+              "required_height_px": 25.5,
+              "fits": true,
+              "lines": [
+                "cFS Applications"
+              ]
+            },
+            "legend_mission_label": {
+              "scale": 1,
+              "effective_font_size_px": 22.2222,
+              "width_px": 203.25,
+              "height_px": 25.0,
+              "available_width_px": 204.0,
+              "available_height_px": 28.889,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 203.75,
+              "required_height_px": 25.5,
+              "fits": true,
+              "lines": [
+                "Mission Applications"
+              ]
+            },
+            "legend_core_label": {
+              "scale": 1,
+              "effective_font_size_px": 22.2222,
+              "width_px": 268.0,
+              "height_px": 25.0,
+              "available_width_px": 269.0,
+              "available_height_px": 28.889,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 268.5,
+              "required_height_px": 25.5,
+              "fits": true,
+              "lines": [
+                "Core Services/Applications"
+              ]
+            },
+            "page_number": {
+              "scale": 1,
+              "effective_font_size_px": 26.6667,
+              "width_px": 30.0,
+              "height_px": 30.0,
+              "available_width_px": 31.66,
+              "available_height_px": 30.6,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 30.5,
+              "required_height_px": 30.5,
+              "fits": true,
+              "lines": [
+                "18"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "pass",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [],
+      "text_boxes": [
+        {
+          "slide": "page_001",
+          "element": "title",
+          "expected": "Example Mission Applications",
+          "rendered": "Example Mission Applications",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 887.0,
+          "rendered_ink_width_px": 884.998
+        },
+        {
+          "slide": "page_001",
+          "element": "instruments_label",
+          "expected": "Instruments",
+          "rendered": "Instruments",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 125.5,
+          "rendered_ink_width_px": 124.316
+        },
+        {
+          "slide": "page_001",
+          "element": "software_bus_label",
+          "expected": "Inter-task Message Router (Software Bus)",
+          "rendered": "Inter-task Message Router (Software Bus)",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 574.0,
+          "rendered_ink_width_px": 575.021
+        },
+        {
+          "slide": "page_001",
+          "element": "scheduler_label_1",
+          "expected": "Scheduler",
+          "rendered": "Scheduler",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 79.0,
+          "rendered_ink_width_px": 79.493
+        },
+        {
+          "slide": "page_001",
+          "element": "limit_checker_label_1",
+          "expected": "Limit",
+          "rendered": "Limit",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 36.25,
+          "rendered_ink_width_px": 36.086
+        },
+        {
+          "slide": "page_001",
+          "element": "limit_checker_label_2",
+          "expected": "Checker",
+          "rendered": "Checker",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 65.5,
+          "rendered_ink_width_px": 65.547
+        },
+        {
+          "slide": "page_001",
+          "element": "memory_manager_label_1",
+          "expected": "Memory",
+          "rendered": "Memory",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 62.5,
+          "rendered_ink_width_px": 62.715
+        },
+        {
+          "slide": "page_001",
+          "element": "memory_manager_label_2",
+          "expected": "Manager",
+          "rendered": "Manager",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 68.5,
+          "rendered_ink_width_px": 69.074
+        },
+        {
+          "slide": "page_001",
+          "element": "space_wire_label_1",
+          "expected": "Space",
+          "rendered": "Space",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 48.75,
+          "rendered_ink_width_px": 48.857
+        },
+        {
+          "slide": "page_001",
+          "element": "space_wire_label_2",
+          "expected": "Wire",
+          "rendered": "p\r\nWire",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 36.0,
+          "rendered_ink_width_px": 35.552
+        },
+        {
+          "slide": "page_001",
+          "element": "instrument_manager_label_1",
+          "expected": "Instrument",
+          "rendered": "Instrument",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 82.25,
+          "rendered_ink_width_px": 82.183
+        },
+        {
+          "slide": "page_001",
+          "element": "instrument_manager_label_2",
+          "expected": "Manager",
+          "rendered": "Manager",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 68.5,
+          "rendered_ink_width_px": 69.074
+        },
+        {
+          "slide": "page_001",
+          "element": "cfdp_transfer_label_1",
+          "expected": "CFDP File",
+          "rendered": "CFDP File",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 80.25,
+          "rendered_ink_width_px": 80.01
+        },
+        {
+          "slide": "page_001",
+          "element": "cfdp_transfer_label_2",
+          "expected": "Transfer",
+          "rendered": "Transfer",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 66.0,
+          "rendered_ink_width_px": 65.351
+        },
+        {
+          "slide": "page_001",
+          "element": "stored_command_label_1",
+          "expected": "Stored",
+          "rendered": "Stored",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 50.25,
+          "rendered_ink_width_px": 50.282
+        },
+        {
+          "slide": "page_001",
+          "element": "stored_command_label_2",
+          "expected": "Command",
+          "rendered": "Command",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 79.5,
+          "rendered_ink_width_px": 79.85
+        },
+        {
+          "slide": "page_001",
+          "element": "packet_manager_label_1",
+          "expected": "Packet",
+          "rendered": "Packet",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 53.0,
+          "rendered_ink_width_px": 52.847
+        },
+        {
+          "slide": "page_001",
+          "element": "packet_manager_label_2",
+          "expected": "Manager",
+          "rendered": "Manager",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 68.5,
+          "rendered_ink_width_px": 69.074
+        },
+        {
+          "slide": "page_001",
+          "element": "storage_label_1",
+          "expected": "Mass",
+          "rendered": "Mass",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 40.5,
+          "rendered_ink_width_px": 40.433
+        },
+        {
+          "slide": "page_001",
+          "element": "storage_label_2",
+          "expected": "Storage",
+          "rendered": "Storage",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 60.5,
+          "rendered_ink_width_px": 60.738
+        },
+        {
+          "slide": "page_001",
+          "element": "storage_label_3",
+          "expected": "File System",
+          "rendered": "File System",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 90.5,
+          "rendered_ink_width_px": 90.234
+        },
+        {
+          "slide": "page_001",
+          "element": "data_storage_line1",
+          "expected": "Data",
+          "rendered": "Data\r\nt",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 40.25,
+          "rendered_ink_width_px": 39.75
+        },
+        {
+          "slide": "page_001",
+          "element": "data_storage_line2",
+          "expected": "Storage",
+          "rendered": "Data\r\nStorage",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 69.0,
+          "rendered_ink_width_px": 68.189
+        },
+        {
+          "slide": "page_001",
+          "element": "file_manager_line1",
+          "expected": "File",
+          "rendered": "File",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 30.25,
+          "rendered_ink_width_px": 29.698
+        },
+        {
+          "slide": "page_001",
+          "element": "file_manager_line2",
+          "expected": "Manager",
+          "rendered": "Manager",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 78.75,
+          "rendered_ink_width_px": 77.562
+        },
+        {
+          "slide": "page_001",
+          "element": "gnc_label",
+          "expected": "GN&C",
+          "rendered": "GN&C",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 45.0,
+          "rendered_ink_width_px": 44.73
+        },
+        {
+          "slide": "page_001",
+          "element": "bus1553_label_1",
+          "expected": "1553 Bus",
+          "rendered": "1553 Bus",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 72.0,
+          "rendered_ink_width_px": 72.476
+        },
+        {
+          "slide": "page_001",
+          "element": "bus1553_label_2",
+          "expected": "Support",
+          "rendered": "Support",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 61.0,
+          "rendered_ink_width_px": 61.308
+        },
+        {
+          "slide": "page_001",
+          "element": "telemetry_output_label_1",
+          "expected": "Telemetry",
+          "rendered": "Telemetry",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 78.25,
+          "rendered_ink_width_px": 76.448
+        },
+        {
+          "slide": "page_001",
+          "element": "telemetry_output_label_2",
+          "expected": "Output",
+          "rendered": "Output",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 52.25,
+          "rendered_ink_width_px": 52.366
+        },
+        {
+          "slide": "page_001",
+          "element": "command_ingest_label_1",
+          "expected": "Command",
+          "rendered": "Command",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 79.5,
+          "rendered_ink_width_px": 79.85
+        },
+        {
+          "slide": "page_001",
+          "element": "command_ingest_label_2",
+          "expected": "Ingest",
+          "rendered": "Ingest",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 46.75,
+          "rendered_ink_width_px": 46.631
+        },
+        {
+          "slide": "page_001",
+          "element": "software_service_label_1",
+          "expected": "Software",
+          "rendered": "Software",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 68.5,
+          "rendered_ink_width_px": 68.593
+        },
+        {
+          "slide": "page_001",
+          "element": "software_service_label_2",
+          "expected": "Bus)",
+          "rendered": "Bus)",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 34.75,
+          "rendered_ink_width_px": 34.608
+        },
+        {
+          "slide": "page_001",
+          "element": "time_services_label_1",
+          "expected": "Time",
+          "rendered": "Time",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 38.5,
+          "rendered_ink_width_px": 37.69
+        },
+        {
+          "slide": "page_001",
+          "element": "time_services_label_2",
+          "expected": "Services",
+          "rendered": "Services",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 66.75,
+          "rendered_ink_width_px": 66.651
+        },
+        {
+          "slide": "page_001",
+          "element": "executive_services_label_1",
+          "expected": "Executive",
+          "rendered": "Executive",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 75.25,
+          "rendered_ink_width_px": 74.898
+        },
+        {
+          "slide": "page_001",
+          "element": "executive_services_label_2",
+          "expected": "Services",
+          "rendered": "Services",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 66.75,
+          "rendered_ink_width_px": 66.651
+        },
+        {
+          "slide": "page_001",
+          "element": "event_services_label_1",
+          "expected": "Event",
+          "rendered": "Event",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 44.0,
+          "rendered_ink_width_px": 43.906
+        },
+        {
+          "slide": "page_001",
+          "element": "event_services_label_2",
+          "expected": "Services",
+          "rendered": "Services",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 66.75,
+          "rendered_ink_width_px": 66.651
+        },
+        {
+          "slide": "page_001",
+          "element": "table_services_label_1",
+          "expected": "Table",
+          "rendered": "Table",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 43.25,
+          "rendered_ink_width_px": 41.359
+        },
+        {
+          "slide": "page_001",
+          "element": "table_services_label_2",
+          "expected": "Services",
+          "rendered": "Services",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 66.75,
+          "rendered_ink_width_px": 66.651
+        },
+        {
+          "slide": "page_001",
+          "element": "gnc_hardware_line1",
+          "expected": "GN&C",
+          "rendered": "GN&C",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 49.75,
+          "rendered_ink_width_px": 49.73
+        },
+        {
+          "slide": "page_001",
+          "element": "gnc_hardware_line2",
+          "expected": "Hardware",
+          "rendered": "Hardware",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 74.75,
+          "rendered_ink_width_px": 74.898
+        },
+        {
+          "slide": "page_001",
+          "element": "communication_interfaces_line1",
+          "expected": "Communication",
+          "rendered": "Communication",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 121.0,
+          "rendered_ink_width_px": 121.369
+        },
+        {
+          "slide": "page_001",
+          "element": "communication_interfaces_line2",
+          "expected": "Interfaces",
+          "rendered": "Interfaces",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 75.75,
+          "rendered_ink_width_px": 75.7
+        },
+        {
+          "slide": "page_001",
+          "element": "commands_label",
+          "expected": "Commands",
+          "rendered": "Commands",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 88.75,
+          "rendered_ink_width_px": 89.308
+        },
+        {
+          "slide": "page_001",
+          "element": "telemetry_path_label",
+          "expected": "Real-time Telemetry",
+          "rendered": "Real-time Telemetry",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 158.0,
+          "rendered_ink_width_px": 156.119
+        },
+        {
+          "slide": "page_001",
+          "element": "file_downlink_label",
+          "expected": "File downlink",
+          "rendered": "File downlink",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 101.0,
+          "rendered_ink_width_px": 101.206
+        },
+        {
+          "slide": "page_001",
+          "element": "legend_cfs_label",
+          "expected": "cFS Applications",
+          "rendered": "cFS Applications",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 165.25,
+          "rendered_ink_width_px": 162.46
+        },
+        {
+          "slide": "page_001",
+          "element": "legend_mission_label",
+          "expected": "Mission Applications",
+          "rendered": "Mission Applications",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 201.0,
+          "rendered_ink_width_px": 197.5
+        },
+        {
+          "slide": "page_001",
+          "element": "legend_core_label",
+          "expected": "Core Services/Applications",
+          "rendered": "Core Services/Applications",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 266.25,
+          "rendered_ink_width_px": 263.445
+        },
+        {
+          "slide": "page_001",
+          "element": "page_number",
+          "expected": "18",
+          "rendered": "18",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 26.0,
+          "rendered_ink_width_px": 25.526
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "478150776312a71d36125aa0b285878ec24b9effdabdab67da76e175550a2a43",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "page_001",
+      "mean_absolute_pixel_error": 0.014561,
+      "comparison": "page_001_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}
