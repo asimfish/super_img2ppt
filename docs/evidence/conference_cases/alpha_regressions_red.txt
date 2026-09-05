@@ -1,0 +1,172 @@
+FFFFFF                                                                   [100%]
+=================================== FAILURES ===================================
+_ test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions[0-contain] _
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10c402570>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-138/test_transparent_artwork_corne0')
+fit = 'contain', rotation = 0
+
+    @pytest.mark.parametrize("fit", ["contain", "cover", "stretch"])
+    @pytest.mark.parametrize("rotation", [0, 90])
+    def test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions(scene, fonts, tmp_path, fit, rotation):
+        spec = diagram(scene)
+        artwork = Image.new("RGBA", (100, 100))
+        ImageDraw.Draw(artwork).rectangle((60, 0, 99, 99), fill="red")
+        artwork.save(tmp_path / "artwork.png")
+        img = {"id": "art", "kind": "image", "z": 0, "box": [0, 0, 120, 80],
+               "path": "artwork.png", "contains_text": False, "image_fit": fit,
+               "provenance": "Independent artwork with transparent left side"}
+        label = {"id": "label", "kind": "text", "z": 1, "box": [10, 20, 50, 30],
+                 "font_family": "Arial", "font_size": 20, "text": "Hi", "rotation": rotation}
+        spec["slides"][0]["elements"] = [img, label]
+        result = preflight(spec, layout_scene(spec, fonts), tmp_path)
+>       assert not any(f["severity"] == "error" for f in result["findings"]), result
+E       AssertionError: {'status': 'fail', 'findings': [{'slide': 'page_001', 'code': 'unintended_overlap', 'severity': 'error', 'elements': [... [], 'text_layouts': {'label': {'scale': 1, 'effective_font_size_px': 20, 'width_px': 19.0, 'height_px': 23.0, ...}}}]}
+E       assert not True
+E        +  where True = any(<generator object test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions.<locals>.<genexpr> at 0x10c67fac0>)
+
+tests/test_diagram_features.py:232: AssertionError
+_ test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions[0-cover] _
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10c402570>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-138/test_transparent_artwork_corne1')
+fit = 'cover', rotation = 0
+
+    @pytest.mark.parametrize("fit", ["contain", "cover", "stretch"])
+    @pytest.mark.parametrize("rotation", [0, 90])
+    def test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions(scene, fonts, tmp_path, fit, rotation):
+        spec = diagram(scene)
+        artwork = Image.new("RGBA", (100, 100))
+        ImageDraw.Draw(artwork).rectangle((60, 0, 99, 99), fill="red")
+        artwork.save(tmp_path / "artwork.png")
+        img = {"id": "art", "kind": "image", "z": 0, "box": [0, 0, 120, 80],
+               "path": "artwork.png", "contains_text": False, "image_fit": fit,
+               "provenance": "Independent artwork with transparent left side"}
+        label = {"id": "label", "kind": "text", "z": 1, "box": [10, 20, 50, 30],
+                 "font_family": "Arial", "font_size": 20, "text": "Hi", "rotation": rotation}
+        spec["slides"][0]["elements"] = [img, label]
+        result = preflight(spec, layout_scene(spec, fonts), tmp_path)
+>       assert not any(f["severity"] == "error" for f in result["findings"]), result
+E       AssertionError: {'status': 'fail', 'findings': [{'slide': 'page_001', 'code': 'unintended_overlap', 'severity': 'error', 'elements': [... [], 'text_layouts': {'label': {'scale': 1, 'effective_font_size_px': 20, 'width_px': 19.0, 'height_px': 23.0, ...}}}]}
+E       assert not True
+E        +  where True = any(<generator object test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions.<locals>.<genexpr> at 0x10cc13d30>)
+
+tests/test_diagram_features.py:232: AssertionError
+_ test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions[0-stretch] _
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10c402570>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-138/test_transparent_artwork_corne2')
+fit = 'stretch', rotation = 0
+
+    @pytest.mark.parametrize("fit", ["contain", "cover", "stretch"])
+    @pytest.mark.parametrize("rotation", [0, 90])
+    def test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions(scene, fonts, tmp_path, fit, rotation):
+        spec = diagram(scene)
+        artwork = Image.new("RGBA", (100, 100))
+        ImageDraw.Draw(artwork).rectangle((60, 0, 99, 99), fill="red")
+        artwork.save(tmp_path / "artwork.png")
+        img = {"id": "art", "kind": "image", "z": 0, "box": [0, 0, 120, 80],
+               "path": "artwork.png", "contains_text": False, "image_fit": fit,
+               "provenance": "Independent artwork with transparent left side"}
+        label = {"id": "label", "kind": "text", "z": 1, "box": [10, 20, 50, 30],
+                 "font_family": "Arial", "font_size": 20, "text": "Hi", "rotation": rotation}
+        spec["slides"][0]["elements"] = [img, label]
+        result = preflight(spec, layout_scene(spec, fonts), tmp_path)
+>       assert not any(f["severity"] == "error" for f in result["findings"]), result
+E       AssertionError: {'status': 'fail', 'findings': [{'slide': 'page_001', 'code': 'image_stretched', 'severity': 'warning', 'elements': ['... [], 'text_layouts': {'label': {'scale': 1, 'effective_font_size_px': 20, 'width_px': 19.0, 'height_px': 23.0, ...}}}]}
+E       assert not True
+E        +  where True = any(<generator object test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions.<locals>.<genexpr> at 0x10cdab5e0>)
+
+tests/test_diagram_features.py:232: AssertionError
+_ test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions[90-contain] _
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10c402570>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-138/test_transparent_artwork_corne3')
+fit = 'contain', rotation = 90
+
+    @pytest.mark.parametrize("fit", ["contain", "cover", "stretch"])
+    @pytest.mark.parametrize("rotation", [0, 90])
+    def test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions(scene, fonts, tmp_path, fit, rotation):
+        spec = diagram(scene)
+        artwork = Image.new("RGBA", (100, 100))
+        ImageDraw.Draw(artwork).rectangle((60, 0, 99, 99), fill="red")
+        artwork.save(tmp_path / "artwork.png")
+        img = {"id": "art", "kind": "image", "z": 0, "box": [0, 0, 120, 80],
+               "path": "artwork.png", "contains_text": False, "image_fit": fit,
+               "provenance": "Independent artwork with transparent left side"}
+        label = {"id": "label", "kind": "text", "z": 1, "box": [10, 20, 50, 30],
+                 "font_family": "Arial", "font_size": 20, "text": "Hi", "rotation": rotation}
+        spec["slides"][0]["elements"] = [img, label]
+        result = preflight(spec, layout_scene(spec, fonts), tmp_path)
+>       assert not any(f["severity"] == "error" for f in result["findings"]), result
+E       AssertionError: {'status': 'fail', 'findings': [{'slide': 'page_001', 'code': 'unintended_overlap', 'severity': 'error', 'elements': [... [], 'text_layouts': {'label': {'scale': 1, 'effective_font_size_px': 20, 'width_px': 19.0, 'height_px': 23.0, ...}}}]}
+E       assert not True
+E        +  where True = any(<generator object test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions.<locals>.<genexpr> at 0x10cda8fb0>)
+
+tests/test_diagram_features.py:232: AssertionError
+_ test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions[90-cover] _
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10c402570>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-138/test_transparent_artwork_corne4')
+fit = 'cover', rotation = 90
+
+    @pytest.mark.parametrize("fit", ["contain", "cover", "stretch"])
+    @pytest.mark.parametrize("rotation", [0, 90])
+    def test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions(scene, fonts, tmp_path, fit, rotation):
+        spec = diagram(scene)
+        artwork = Image.new("RGBA", (100, 100))
+        ImageDraw.Draw(artwork).rectangle((60, 0, 99, 99), fill="red")
+        artwork.save(tmp_path / "artwork.png")
+        img = {"id": "art", "kind": "image", "z": 0, "box": [0, 0, 120, 80],
+               "path": "artwork.png", "contains_text": False, "image_fit": fit,
+               "provenance": "Independent artwork with transparent left side"}
+        label = {"id": "label", "kind": "text", "z": 1, "box": [10, 20, 50, 30],
+                 "font_family": "Arial", "font_size": 20, "text": "Hi", "rotation": rotation}
+        spec["slides"][0]["elements"] = [img, label]
+        result = preflight(spec, layout_scene(spec, fonts), tmp_path)
+>       assert not any(f["severity"] == "error" for f in result["findings"]), result
+E       AssertionError: {'status': 'fail', 'findings': [{'slide': 'page_001', 'code': 'unintended_overlap', 'severity': 'error', 'elements': [... [], 'text_layouts': {'label': {'scale': 1, 'effective_font_size_px': 20, 'width_px': 19.0, 'height_px': 23.0, ...}}}]}
+E       assert not True
+E        +  where True = any(<generator object test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions.<locals>.<genexpr> at 0x10ccea260>)
+
+tests/test_diagram_features.py:232: AssertionError
+_ test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions[90-stretch] _
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10c402570>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-138/test_transparent_artwork_corne5')
+fit = 'stretch', rotation = 90
+
+    @pytest.mark.parametrize("fit", ["contain", "cover", "stretch"])
+    @pytest.mark.parametrize("rotation", [0, 90])
+    def test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions(scene, fonts, tmp_path, fit, rotation):
+        spec = diagram(scene)
+        artwork = Image.new("RGBA", (100, 100))
+        ImageDraw.Draw(artwork).rectangle((60, 0, 99, 99), fill="red")
+        artwork.save(tmp_path / "artwork.png")
+        img = {"id": "art", "kind": "image", "z": 0, "box": [0, 0, 120, 80],
+               "path": "artwork.png", "contains_text": False, "image_fit": fit,
+               "provenance": "Independent artwork with transparent left side"}
+        label = {"id": "label", "kind": "text", "z": 1, "box": [10, 20, 50, 30],
+                 "font_family": "Arial", "font_size": 20, "text": "Hi", "rotation": rotation}
+        spec["slides"][0]["elements"] = [img, label]
+        result = preflight(spec, layout_scene(spec, fonts), tmp_path)
+>       assert not any(f["severity"] == "error" for f in result["findings"]), result
+E       AssertionError: {'status': 'fail', 'findings': [{'slide': 'page_001', 'code': 'image_stretched', 'severity': 'warning', 'elements': ['... [], 'text_layouts': {'label': {'scale': 1, 'effective_font_size_px': 20, 'width_px': 19.0, 'height_px': 23.0, ...}}}]}
+E       assert not True
+E        +  where True = any(<generator object test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions.<locals>.<genexpr> at 0x10cdabe00>)
+
+tests/test_diagram_features.py:232: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_diagram_features.py::test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions[0-contain]
+FAILED tests/test_diagram_features.py::test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions[0-cover]
+FAILED tests/test_diagram_features.py::test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions[0-stretch]
+FAILED tests/test_diagram_features.py::test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions[90-contain]
+FAILED tests/test_diagram_features.py::test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions[90-cover]
+FAILED tests/test_diagram_features.py::test_transparent_artwork_corners_do_not_hide_or_invent_text_collisions[90-stretch]
+6 failed, 7 deselected in 2.14s

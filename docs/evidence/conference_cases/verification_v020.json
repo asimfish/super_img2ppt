@@ -1,0 +1,193 @@
+{
+  "version": "0.2.0",
+  "evaluated": "2026-09-06",
+  "result": "conditional",
+  "scope": "Local release checks pass; three conference cases pass automatic blocking checks; visual approximations and cross-editor limitations remain. Legacy dense table intentionally remains failed.",
+  "tests": {
+    "passed": 56,
+    "skipped": 0,
+    "seconds": 139.71,
+    "raw_output": "full_tests_candidate.txt"
+  },
+  "checks": [
+    {
+      "command": [
+        "uv",
+        "run",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "exit_code": 0,
+      "stdout": "48 files already formatted\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/verify_skill.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"pass\",\n  \"activation_cases\": 8,\n  \"problems\": [],\n  \"scope\": \"Static package checks; semantic review and forward tests are separate evidence\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/build_capability_registry.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "Capability registry is current\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "/Users/liyufeng/.agents/skills/skill-quality-gate/scripts/audit_skill_governance.py",
+        "--repo",
+        "/Users/liyufeng/code/super_img2ppt",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"verdict\": \"PASS\",\n  \"skills_checked\": [\n    \"super-img2ppt\"\n  ],\n  \"findings\": [],\n  \"semantic_review\": \"REQUIRED — deterministic checks do not prove behavior-description alignment\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/build_package.py"
+      ],
+      "exit_code": 0,
+      "stdout": "$REPO/dist/super-img2ppt.skill\nSHA256 6ac1655a25619379ebcd1b72d0782d72299a88f5cd6c1d8a32f1ee03ba08e227\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "package_sha256": "6ac1655a25619379ebcd1b72d0782d72299a88f5cd6c1d8a32f1ee03ba08e227",
+  "package_smoke": "package_smoke_v020.json",
+  "artifacts": [
+    {
+      "case": "vit",
+      "verified_hashes": {
+        "source": "527ce51f7e73944e3cb247aad0584a5dd34943f982d6776e51499996ec7d9e6a",
+        "scene": "0d892668995c7f519f84142d989d456f98ce42734684c3d7772d765adba09bcd",
+        "pptx": "67cd0b7b1d52bdeef9f204a958580e46ee73d2b3e821643beabc442e73d97217",
+        "anchors": "9bd28d7a243c111c144ab84e94a3d994cd63dde763a9b0318b00be40b2fa46d5"
+      },
+      "scene_counts": {
+        "text": 35,
+        "shape": 47,
+        "line": 55,
+        "image": 10
+      },
+      "replay_text_regions": 23,
+      "max_absolute_edge_delta_px": 2
+    },
+    {
+      "case": "spatial_mamba",
+      "verified_hashes": {
+        "source": "a9b3706ca9a29d791d225300922fb064bb2c6441d4f7a5684b3fd6aaa16f2541",
+        "scene": "47e148299abf380282c8eb925e40bd7259be9f99a91162c7d1809d92df279bfd",
+        "pptx": "660e6cd7c3d0694784754256d083a28fe745d7c76510ca0a1f6ec8ec154a0cc9",
+        "anchors": "7fcf6003591f3ac0f8470e9329c145b90994536cbd7c76a7dbfec4c96619431a"
+      },
+      "scene_counts": {
+        "line": 375,
+        "image": 1,
+        "shape": 129,
+        "text": 39
+      },
+      "replay_text_regions": 33,
+      "max_absolute_edge_delta_px": 1
+    }
+  ],
+  "verified_raw_records": 38,
+  "conference_replay": {
+    "all_blocking_checks_passed": true,
+    "visual_review": "required",
+    "cases": [
+      {
+        "id": "vit",
+        "status": "pass",
+        "error": null
+      },
+      {
+        "id": "spatial_mamba",
+        "status": "pass",
+        "error": null
+      }
+    ]
+  },
+  "legacy_replay": {
+    "all_blocking_checks_passed": false,
+    "visual_review": "required",
+    "cases": [
+      {
+        "id": "consensus_zh",
+        "status": "pass",
+        "error": null
+      },
+      {
+        "id": "matplotlib_table",
+        "status": "fail",
+        "error": null
+      },
+      {
+        "id": "nasa_06",
+        "status": "review",
+        "error": null
+      },
+      {
+        "id": "nasa_16",
+        "status": "review",
+        "error": null
+      },
+      {
+        "id": "nasa_18",
+        "status": "review",
+        "error": null
+      },
+      {
+        "id": "nasa_28",
+        "status": "review",
+        "error": null
+      }
+    ]
+  },
+  "native_editors": {
+    "PowerPoint": "unverified",
+    "WPS": "unverified"
+  },
+  "remote_ci": "Recorded for the exact release commit in GitHub Actions and release notes after push"
+}

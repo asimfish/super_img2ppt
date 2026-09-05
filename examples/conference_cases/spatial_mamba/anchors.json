@@ -1,0 +1,367 @@
+{
+  "anchors": [
+    {
+      "id": "stem_label",
+      "roi": [
+        200,
+        124,
+        235,
+        200
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "down_1_label",
+      "roi": [
+        513,
+        70,
+        549,
+        254
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "down_2_label",
+      "roi": [
+        846,
+        70,
+        882,
+        254
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "down_3_label",
+      "roi": [
+        1179,
+        70,
+        1215,
+        254
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "head_label",
+      "roi": [
+        1528,
+        124,
+        1563,
+        199
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "block_ln_1_label",
+      "roi": [
+        270,
+        473,
+        305,
+        519
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "block_ssm_label",
+      "roi": [
+        350,
+        406,
+        412,
+        588
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "block_ln_2_label",
+      "roi": [
+        526,
+        473,
+        561,
+        519
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "block_ffn_label",
+      "roi": [
+        623,
+        466,
+        658,
+        525
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "ssm_linear_top_label",
+      "roi": [
+        921,
+        384,
+        956,
+        466
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "ssm_linear_bottom_label",
+      "roi": [
+        921,
+        506,
+        956,
+        588
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "ssm_conv_label",
+      "roi": [
+        1002,
+        391,
+        1035,
+        460
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "ssm_sasf_label",
+      "roi": [
+        1132,
+        387,
+        1167,
+        464
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "ssm_ln_label",
+      "roi": [
+        1217,
+        401,
+        1252,
+        450
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "ssm_linear_out_label",
+      "roi": [
+        1374,
+        385,
+        1409,
+        467
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "stage_1_name",
+      "roi": [
+        290,
+        99,
+        467,
+        139
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "stage_1_word",
+      "roi": [
+        331,
+        138,
+        428,
+        171
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "stage_1_layers",
+      "roi": [
+        360,
+        200,
+        388,
+        238
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "stage_1_index",
+      "roi": [
+        388,
+        211,
+        410,
+        239
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "stage_2_name",
+      "roi": [
+        623,
+        99,
+        800,
+        139
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "stage_2_word",
+      "roi": [
+        664,
+        138,
+        761,
+        171
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "stage_2_layers",
+      "roi": [
+        693,
+        200,
+        721,
+        238
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "stage_2_index",
+      "roi": [
+        721,
+        211,
+        743,
+        239
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "stage_3_name",
+      "roi": [
+        956,
+        99,
+        1133,
+        139
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "stage_3_word",
+      "roi": [
+        997,
+        138,
+        1094,
+        171
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "stage_3_layers",
+      "roi": [
+        1026,
+        200,
+        1054,
+        238
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "stage_3_index",
+      "roi": [
+        1054,
+        211,
+        1076,
+        239
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "stage_4_name",
+      "roi": [
+        1289,
+        99,
+        1466,
+        139
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "stage_4_word",
+      "roi": [
+        1330,
+        138,
+        1427,
+        171
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "stage_4_layers",
+      "roi": [
+        1359,
+        200,
+        1387,
+        238
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "stage_4_index",
+      "roi": [
+        1387,
+        211,
+        1409,
+        239
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "caption_block",
+      "roi": [
+        435,
+        572,
+        724,
+        610
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    },
+    {
+      "id": "caption_ssm",
+      "roi": [
+        1130,
+        573,
+        1410,
+        610
+      ],
+      "threshold": 90,
+      "polarity": "dark"
+    }
+  ]
+}

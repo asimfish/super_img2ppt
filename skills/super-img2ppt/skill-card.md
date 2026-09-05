@@ -1,6 +1,6 @@
 # Super Img2PPT capability card
 
-Owner: super_img2ppt contributors. Version: 0.1.1. Risk: scoped_change.
+Owner: super_img2ppt contributors. Version: 0.2.0. Risk: scoped_change.
 Canonical owner: this repository's `skills/super-img2ppt`.
 
 Reads: user-selected image/PDF/PPTX files; scene JSON and relative local assets; installed font

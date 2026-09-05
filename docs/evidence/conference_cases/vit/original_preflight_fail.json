@@ -1,0 +1,999 @@
+{
+  "status": "fail",
+  "findings": [
+    {
+      "slide": "page_001",
+      "code": "image_stretched",
+      "severity": "warning",
+      "elements": [
+        "photo_grid"
+      ],
+      "message": "Stretching changes the asset aspect ratio"
+    },
+    {
+      "slide": "page_001",
+      "code": "image_stretched",
+      "severity": "warning",
+      "elements": [
+        "patch_photo_1"
+      ],
+      "message": "Stretching changes the asset aspect ratio"
+    },
+    {
+      "slide": "page_001",
+      "code": "image_stretched",
+      "severity": "warning",
+      "elements": [
+        "patch_photo_2"
+      ],
+      "message": "Stretching changes the asset aspect ratio"
+    },
+    {
+      "slide": "page_001",
+      "code": "image_stretched",
+      "severity": "warning",
+      "elements": [
+        "patch_photo_3"
+      ],
+      "message": "Stretching changes the asset aspect ratio"
+    },
+    {
+      "slide": "page_001",
+      "code": "image_stretched",
+      "severity": "warning",
+      "elements": [
+        "patch_photo_4"
+      ],
+      "message": "Stretching changes the asset aspect ratio"
+    },
+    {
+      "slide": "page_001",
+      "code": "image_stretched",
+      "severity": "warning",
+      "elements": [
+        "patch_photo_5"
+      ],
+      "message": "Stretching changes the asset aspect ratio"
+    },
+    {
+      "slide": "page_001",
+      "code": "image_stretched",
+      "severity": "warning",
+      "elements": [
+        "patch_photo_6"
+      ],
+      "message": "Stretching changes the asset aspect ratio"
+    },
+    {
+      "slide": "page_001",
+      "code": "image_stretched",
+      "severity": "warning",
+      "elements": [
+        "patch_photo_7"
+      ],
+      "message": "Stretching changes the asset aspect ratio"
+    },
+    {
+      "slide": "page_001",
+      "code": "image_stretched",
+      "severity": "warning",
+      "elements": [
+        "patch_photo_8"
+      ],
+      "message": "Stretching changes the asset aspect ratio"
+    },
+    {
+      "slide": "page_001",
+      "code": "image_stretched",
+      "severity": "warning",
+      "elements": [
+        "patch_photo_9"
+      ],
+      "message": "Stretching changes the asset aspect ratio"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_overflow",
+      "severity": "error",
+      "elements": [
+        "encoder_norm_top_label"
+      ],
+      "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+      "layout": {
+        "scale": 1,
+        "effective_font_size_px": 19.75,
+        "width_px": 46.75,
+        "height_px": 22.712,
+        "available_width_px": 47.0,
+        "available_height_px": 23.712,
+        "safety_reserve_px": 0.5,
+        "required_width_px": 47.25,
+        "required_height_px": 23.212,
+        "fits": false,
+        "lines": [
+          "Norm"
+        ]
+      }
+    },
+    {
+      "slide": "page_001",
+      "code": "text_overflow",
+      "severity": "error",
+      "elements": [
+        "encoder_norm_bottom_label"
+      ],
+      "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+      "layout": {
+        "scale": 1,
+        "effective_font_size_px": 19.75,
+        "width_px": 46.75,
+        "height_px": 22.712,
+        "available_width_px": 47.0,
+        "available_height_px": 23.712,
+        "safety_reserve_px": 0.5,
+        "required_width_px": 47.25,
+        "required_height_px": 23.212,
+        "fits": false,
+        "lines": [
+          "Norm"
+        ]
+      }
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "class",
+        "bird"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "bird",
+        "ball"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "ball",
+        "car"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "car",
+        "ellipsis"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "head_mlp",
+        "head_head"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "embedding_line_1",
+        "embedding_line_2"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "note_extra",
+        "note_class"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "note_extra",
+        "note_embedding"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "encoder_attention_line_1",
+        "encoder_attention_line_2"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "encoder_embedded_line_1",
+        "encoder_embedded_line_2"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    }
+  ],
+  "slides": [
+    {
+      "id": "page_001",
+      "counts": {
+        "text": 35,
+        "shape": 47,
+        "line": 69,
+        "image": 10
+      },
+      "intentional_overlaps": [
+        {
+          "elements": [
+            "encoder_panel",
+            "embedded_to_norm"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 27.2
+        },
+        {
+          "elements": [
+            "encoder_panel",
+            "encoder_out"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 13.6
+        },
+        {
+          "elements": [
+            "token_shaft_0",
+            "token_arrow_0"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 2.24
+        },
+        {
+          "elements": [
+            "token_shaft_1",
+            "token_arrow_1"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 2.24
+        },
+        {
+          "elements": [
+            "token_shaft_2",
+            "token_arrow_2"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 2.24
+        },
+        {
+          "elements": [
+            "token_shaft_3",
+            "token_arrow_3"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 2.24
+        },
+        {
+          "elements": [
+            "token_shaft_4",
+            "token_arrow_4"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 2.24
+        },
+        {
+          "elements": [
+            "token_shaft_5",
+            "token_arrow_5"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 2.24
+        },
+        {
+          "elements": [
+            "token_shaft_6",
+            "token_arrow_6"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 2.24
+        },
+        {
+          "elements": [
+            "token_shaft_7",
+            "token_arrow_7"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 2.24
+        },
+        {
+          "elements": [
+            "token_shaft_8",
+            "token_arrow_8"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 2.24
+        },
+        {
+          "elements": [
+            "token_shaft_9",
+            "token_arrow_9"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 2.24
+        },
+        {
+          "elements": [
+            "embedded_to_norm",
+            "residual_bottom_1"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 1.28
+        },
+        {
+          "elements": [
+            "norm_bottom_stem",
+            "attention_bus"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 2.56
+        },
+        {
+          "elements": [
+            "attention_bus",
+            "attention_left"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 0.64
+        },
+        {
+          "elements": [
+            "attention_bus",
+            "attention_right"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 0.64
+        },
+        {
+          "elements": [
+            "attention_left",
+            "attention_arrow_left"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 2.4
+        },
+        {
+          "elements": [
+            "attention_right",
+            "attention_arrow_right"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 2.4
+        },
+        {
+          "elements": [
+            "add_to_norm",
+            "residual_top_1"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 1.28
+        },
+        {
+          "elements": [
+            "norm_top_shaft",
+            "norm_top_arrow"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 1.6
+        },
+        {
+          "elements": [
+            "encoder_out",
+            "encoder_out_arrow"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 1.6
+        },
+        {
+          "elements": [
+            "residual_top_1",
+            "residual_top_2"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 0.64
+        },
+        {
+          "elements": [
+            "residual_top_2",
+            "residual_top_3"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 0.64
+        },
+        {
+          "elements": [
+            "residual_bottom_1",
+            "residual_bottom_2"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 0.64
+        },
+        {
+          "elements": [
+            "residual_bottom_2",
+            "residual_bottom_3"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 0.64
+        },
+        {
+          "elements": [
+            "plus_h_top",
+            "plus_v_top"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 3.062
+        },
+        {
+          "elements": [
+            "plus_h_bottom",
+            "plus_v_bottom"
+          ],
+          "reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "area_px2": 3.062
+        }
+      ],
+      "text_layouts": {
+        "title_vit": {
+          "scale": 1,
+          "effective_font_size_px": 21,
+          "width_px": 233.25,
+          "height_px": 24.15,
+          "available_width_px": 234.188,
+          "available_height_px": 25.15,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 233.75,
+          "required_height_px": 24.65,
+          "fits": true,
+          "lines": [
+            "Vision Transformer (ViT)"
+          ]
+        },
+        "title_encoder": {
+          "scale": 1,
+          "effective_font_size_px": 21,
+          "width_px": 197.5,
+          "height_px": 24.15,
+          "available_width_px": 198.469,
+          "available_height_px": 25.15,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 198.0,
+          "required_height_px": 24.65,
+          "fits": true,
+          "lines": [
+            "Transformer Encoder"
+          ]
+        },
+        "class": {
+          "scale": 1,
+          "effective_font_size_px": 18.5,
+          "width_px": 42.25,
+          "height_px": 21.275,
+          "available_width_px": 43.25,
+          "available_height_px": 22.275,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 42.75,
+          "required_height_px": 21.775,
+          "fits": true,
+          "lines": [
+            "Class"
+          ]
+        },
+        "bird": {
+          "scale": 1,
+          "effective_font_size_px": 15.75,
+          "width_px": 28.25,
+          "height_px": 18.112,
+          "available_width_px": 29.25,
+          "available_height_px": 19.112,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 28.75,
+          "required_height_px": 18.612,
+          "fits": true,
+          "lines": [
+            "Bird"
+          ]
+        },
+        "ball": {
+          "scale": 1,
+          "effective_font_size_px": 15.75,
+          "width_px": 26.5,
+          "height_px": 18.112,
+          "available_width_px": 27.5,
+          "available_height_px": 19.112,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 27.0,
+          "required_height_px": 18.612,
+          "fits": true,
+          "lines": [
+            "Ball"
+          ]
+        },
+        "car": {
+          "scale": 1,
+          "effective_font_size_px": 15.75,
+          "width_px": 23.0,
+          "height_px": 18.112,
+          "available_width_px": 23.75,
+          "available_height_px": 19.112,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 23.5,
+          "required_height_px": 18.612,
+          "fits": true,
+          "lines": [
+            "Car"
+          ]
+        },
+        "ellipsis": {
+          "scale": 1,
+          "effective_font_size_px": 13,
+          "width_px": 9.75,
+          "height_px": 14.95,
+          "available_width_px": 10.75,
+          "available_height_px": 15.95,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 10.25,
+          "required_height_px": 15.45,
+          "fits": true,
+          "lines": [
+            "..."
+          ]
+        },
+        "head_mlp": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 40.5,
+          "height_px": 22.712,
+          "available_width_px": 41.5,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 41.0,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "MLP"
+          ]
+        },
+        "head_head": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 41.75,
+          "height_px": 22.712,
+          "available_width_px": 42.75,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 42.25,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "Head"
+          ]
+        },
+        "main_encoder_label": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 169.75,
+          "height_px": 22.712,
+          "available_width_px": 170.488,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 170.25,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "Transformer Encoder"
+          ]
+        },
+        "projection_label": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 303.75,
+          "height_px": 22.712,
+          "available_width_px": 304.75,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 304.25,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "Linear Projection of Flattened Patches"
+          ]
+        },
+        "position_label_0": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 10.0,
+          "height_px": 22.712,
+          "available_width_px": 11.0,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 10.5,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "0"
+          ]
+        },
+        "class_star": {
+          "scale": 1,
+          "effective_font_size_px": 18,
+          "width_px": 9.0,
+          "height_px": 20.7,
+          "available_width_px": 10.0,
+          "available_height_px": 21.7,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 9.5,
+          "required_height_px": 21.2,
+          "fits": true,
+          "lines": [
+            "*"
+          ]
+        },
+        "position_label_1": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 10.0,
+          "height_px": 22.712,
+          "available_width_px": 11.0,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 10.5,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "1"
+          ]
+        },
+        "position_label_2": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 10.0,
+          "height_px": 22.712,
+          "available_width_px": 11.0,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 10.5,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "2"
+          ]
+        },
+        "position_label_3": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 10.0,
+          "height_px": 22.712,
+          "available_width_px": 11.0,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 10.5,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "3"
+          ]
+        },
+        "position_label_4": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 10.0,
+          "height_px": 22.712,
+          "available_width_px": 11.0,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 10.5,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "4"
+          ]
+        },
+        "position_label_5": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 10.0,
+          "height_px": 22.712,
+          "available_width_px": 11.0,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 10.5,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "5"
+          ]
+        },
+        "position_label_6": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 10.0,
+          "height_px": 22.712,
+          "available_width_px": 11.0,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 10.5,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "6"
+          ]
+        },
+        "position_label_7": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 10.0,
+          "height_px": 22.712,
+          "available_width_px": 11.0,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 10.5,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "7"
+          ]
+        },
+        "position_label_8": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 10.0,
+          "height_px": 22.712,
+          "available_width_px": 11.0,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 10.5,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "8"
+          ]
+        },
+        "position_label_9": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 10.0,
+          "height_px": 22.712,
+          "available_width_px": 11.0,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 10.5,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "9"
+          ]
+        },
+        "embedding_line_1": {
+          "scale": 1,
+          "effective_font_size_px": 15.5,
+          "width_px": 108.0,
+          "height_px": 17.825,
+          "available_width_px": 109.0,
+          "available_height_px": 18.825,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 108.5,
+          "required_height_px": 18.325,
+          "fits": true,
+          "lines": [
+            "Patch + Position"
+          ]
+        },
+        "embedding_line_2": {
+          "scale": 1,
+          "effective_font_size_px": 15.5,
+          "width_px": 76.25,
+          "height_px": 17.825,
+          "available_width_px": 77.25,
+          "available_height_px": 18.825,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 76.75,
+          "required_height_px": 18.325,
+          "fits": true,
+          "lines": [
+            "Embedding"
+          ]
+        },
+        "note_extra": {
+          "scale": 1,
+          "effective_font_size_px": 13,
+          "width_px": 88.25,
+          "height_px": 14.95,
+          "available_width_px": 89.25,
+          "available_height_px": 15.95,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 88.75,
+          "required_height_px": 15.45,
+          "fits": true,
+          "lines": [
+            "* Extra learnable"
+          ]
+        },
+        "note_class": {
+          "scale": 1,
+          "effective_font_size_px": 11.5,
+          "width_px": 49.0,
+          "height_px": 13.25,
+          "available_width_px": 50.0,
+          "available_height_px": 14.25,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 49.5,
+          "required_height_px": 13.75,
+          "fits": true,
+          "lines": [
+            "[class]"
+          ]
+        },
+        "note_embedding": {
+          "scale": 1,
+          "effective_font_size_px": 13,
+          "width_px": 57.5,
+          "height_px": 14.95,
+          "available_width_px": 58.5,
+          "available_height_px": 15.95,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 58.0,
+          "required_height_px": 15.45,
+          "fits": true,
+          "lines": [
+            "embedding"
+          ]
+        },
+        "repeat": {
+          "scale": 1,
+          "effective_font_size_px": 18,
+          "width_px": 25.75,
+          "height_px": 20.7,
+          "available_width_px": 26.738,
+          "available_height_px": 21.7,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 26.25,
+          "required_height_px": 21.2,
+          "fits": true,
+          "lines": [
+            "L ×"
+          ]
+        },
+        "encoder_mlp_label": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 40.5,
+          "height_px": 22.712,
+          "available_width_px": 41.5,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 41.0,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "MLP"
+          ]
+        },
+        "encoder_norm_top_label": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 46.75,
+          "height_px": 22.712,
+          "available_width_px": 47.0,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 47.25,
+          "required_height_px": 23.212,
+          "fits": false,
+          "lines": [
+            "Norm"
+          ]
+        },
+        "encoder_attention_line_1": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 92.25,
+          "height_px": 22.712,
+          "available_width_px": 93.25,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 92.75,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "Multi-Head"
+          ]
+        },
+        "encoder_attention_line_2": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 75.0,
+          "height_px": 22.712,
+          "available_width_px": 76.0,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 75.5,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "Attention"
+          ]
+        },
+        "encoder_norm_bottom_label": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 46.75,
+          "height_px": 22.712,
+          "available_width_px": 47.0,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 47.25,
+          "required_height_px": 23.212,
+          "fits": false,
+          "lines": [
+            "Norm"
+          ]
+        },
+        "encoder_embedded_line_1": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 84.75,
+          "height_px": 22.712,
+          "available_width_px": 85.75,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 85.25,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "Embedded"
+          ]
+        },
+        "encoder_embedded_line_2": {
+          "scale": 1,
+          "effective_font_size_px": 19.75,
+          "width_px": 60.5,
+          "height_px": 22.712,
+          "available_width_px": 61.5,
+          "available_height_px": 23.712,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 61.0,
+          "required_height_px": 23.212,
+          "fits": true,
+          "lines": [
+            "Patches"
+          ]
+        }
+      }
+    }
+  ]
+}

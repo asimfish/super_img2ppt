@@ -13,6 +13,7 @@ from typing import Protocol
 import pypdfium2 as pdfium
 
 from .fonts import font_identifiers, normalize_font_name
+from .geometry import box_points, rotate_points
 from .layout import text_ink_boxes
 from .qa import compact_text
 from .scene import InputError, slide_transform, text_content
@@ -116,7 +117,10 @@ def verify_rendered_text(pdf: Path, scene: dict, layouts: dict | None = None) ->
                 for element in slide["elements"]:
                     if element["kind"] != "text":
                         continue
-                    ix, iy, iw, ih = tx.box(element["box"])
+                    corners = rotate_points(box_points(element["box"]), element)
+                    x0, y0 = min(x for x, y in corners), min(y for x, y in corners)
+                    x1, y1 = max(x for x, y in corners), max(y for x, y in corners)
+                    ix, iy, iw, ih = tx.box([x0, y0, x1 - x0, y1 - y0])
                     left = ix / tx.width_inches * pw
                     top = ph - iy / tx.height_inches * ph
                     right = left + iw / tx.width_inches * pw
@@ -165,7 +169,9 @@ def verify_rendered_text(pdf: Path, scene: dict, layouts: dict | None = None) ->
                         x0, y0, x1, y1 = textpage.get_charbox(char_index)
                         cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
                         if left <= cx <= right and bottom <= cy <= top:
-                            rendered_ink.append((x0, x1))
+                            rendered_ink.append(
+                                (y0, y1) if element.get("rotation", 0) % 180 else (x0, x1)
+                            )
                             length = pdfium.raw.FPDFText_GetFontInfo(
                                 textpage, char_index, None, 0, None
                             )

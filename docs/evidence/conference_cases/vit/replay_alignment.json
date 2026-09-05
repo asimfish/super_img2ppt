@@ -1,0 +1,489 @@
+{
+  "method": "Frozen isolated regions; original source size; exclusive right/bottom edges",
+  "interpretation": "Diagnostic bounds only, not a fidelity score or a full-page acceptance gate",
+  "regions": [
+    {
+      "id": "title_vit",
+      "source": [
+        180,
+        26,
+        410,
+        44
+      ],
+      "rendered": [
+        180,
+        26,
+        411,
+        45
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "title_encoder",
+      "source": [
+        686,
+        26,
+        884,
+        41
+      ],
+      "rendered": [
+        686,
+        26,
+        884,
+        41
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "class",
+      "source": [
+        50,
+        75,
+        90,
+        88
+      ],
+      "rendered": [
+        50,
+        75,
+        91,
+        88
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "bird",
+      "source": [
+        57,
+        93,
+        84,
+        104
+      ],
+      "rendered": [
+        57,
+        93,
+        83,
+        104
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "id": "mlp_head_1",
+      "source": [
+        164,
+        96,
+        204,
+        109
+      ],
+      "rendered": [
+        166,
+        96,
+        204,
+        109
+      ],
+      "edge_delta_px": [
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mlp_head_2",
+      "source": [
+        164,
+        116,
+        204,
+        129
+      ],
+      "rendered": [
+        164,
+        115,
+        203,
+        129
+      ],
+      "edge_delta_px": [
+        0,
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "id": "main_encoder",
+      "source": [
+        285,
+        200,
+        453,
+        213
+      ],
+      "rendered": [
+        285,
+        200,
+        453,
+        214
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "projection",
+      "source": [
+        251,
+        329,
+        553,
+        346
+      ],
+      "rendered": [
+        252,
+        328,
+        552,
+        346
+      ],
+      "edge_delta_px": [
+        1,
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "id": "embedding_line1",
+      "source": [
+        13,
+        279,
+        120,
+        289
+      ],
+      "rendered": [
+        14,
+        279,
+        119,
+        289
+      ],
+      "edge_delta_px": [
+        1,
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "id": "embedding_line2",
+      "source": [
+        29,
+        295,
+        105,
+        308
+      ],
+      "rendered": [
+        30,
+        295,
+        105,
+        309
+      ],
+      "edge_delta_px": [
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "note_line1",
+      "source": [
+        19,
+        318,
+        110,
+        327
+      ],
+      "rendered": [
+        19,
+        318,
+        109,
+        327
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "id": "note_line2",
+      "source": [
+        21,
+        332,
+        127,
+        344
+      ],
+      "rendered": [
+        20,
+        332,
+        126,
+        344
+      ],
+      "edge_delta_px": [
+        -1,
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "id": "encoder_mlp",
+      "source": [
+        761,
+        130,
+        800,
+        143
+      ],
+      "rendered": [
+        762,
+        130,
+        800,
+        143
+      ],
+      "edge_delta_px": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "norm_top",
+      "source": [
+        758,
+        189,
+        802,
+        202
+      ],
+      "rendered": [
+        758,
+        189,
+        802,
+        202
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "norm_bottom",
+      "source": [
+        758,
+        363,
+        802,
+        376
+      ],
+      "rendered": [
+        758,
+        363,
+        802,
+        377
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "attention_1",
+      "source": [
+        735,
+        280,
+        825,
+        293
+      ],
+      "rendered": [
+        735,
+        280,
+        825,
+        294
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "attention_2",
+      "source": [
+        744,
+        300,
+        817,
+        313
+      ],
+      "rendered": [
+        743,
+        300,
+        816,
+        314
+      ],
+      "edge_delta_px": [
+        -1,
+        0,
+        -1,
+        1
+      ]
+    },
+    {
+      "id": "embedded_1",
+      "source": [
+        738,
+        429,
+        820,
+        443
+      ],
+      "rendered": [
+        738,
+        429,
+        820,
+        443
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "embedded_2",
+      "source": [
+        750,
+        449,
+        808,
+        463
+      ],
+      "rendered": [
+        751,
+        449,
+        808,
+        463
+      ],
+      "edge_delta_px": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "repeats",
+      "source": [
+        706,
+        74,
+        728,
+        86
+      ],
+      "rendered": [
+        706,
+        74,
+        728,
+        86
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "zero",
+      "source": [
+        163,
+        281,
+        173,
+        299
+      ],
+      "rendered": [
+        163,
+        281,
+        175,
+        299
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "id": "one",
+      "source": [
+        212,
+        285,
+        215,
+        297
+      ],
+      "rendered": [
+        212,
+        285,
+        214,
+        299
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        -1,
+        2
+      ]
+    },
+    {
+      "id": "note_class_only",
+      "source": [
+        21,
+        333,
+        62,
+        343
+      ],
+      "rendered": [
+        20,
+        334,
+        62,
+        344
+      ],
+      "edge_delta_px": [
+        -1,
+        1,
+        0,
+        1
+      ]
+    }
+  ]
+}

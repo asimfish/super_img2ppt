@@ -77,7 +77,8 @@ Use parallel page work only if it is separately authorized and supported by the 
   (default 85% of the requested size). Give same-level text a shared `font_group` to preserve
   relative sizes. Do not lower minimums repeatedly just to make a failing layout pass.
 - Preserve manual line breaks and set `wrap: true` only when wrapping is intended. Rich text
-  remains editable; if superscript, rotation, vertical writing, freeform geometry or effects
+  remains editable; quarter-turn text uses `rotation` (see scene reference). If superscript,
+  arbitrary-angle rotation, vertical writing, freeform geometry or effects
   exceed the schema, use separate measured text/shape objects or report the unsupported region.
   Do not silently drop style information.
 - Declare text's background shape through `container`, with that shape behind its content.
@@ -107,8 +108,12 @@ For dense pages, measure source and rendered ink in the same isolated regions. R
 edge/baseline differences in source pixels, including failures; a matching font name alone does
 not prove alignment. Line coordinates describe stroke centers, while bitmap pixel indices
 describe cells: account for the half-pixel center when measuring thin grid lines.
-Standard `arrow: true` heads scale with the connector stroke and may be smaller than the source;
-inspect arrowhead size separately and disclose this limit when it is visible.
+For source-sized arrows, use `arrow: true` and `arrow_head: {length, width}` in source pixels.
+These export as editable freeform arrows; their heads participate in collision checks.
+Legacy `arrow: true` without dimensions uses an Office connector with renderer-dependent heads.
+Use `dash: [on_length, gap_length]` for dashed lines or shape outlines. Inspect the actual head
+and dash sizes. Rotated labels use a horizontal box rotated about its center; measure their
+final visible position instead of fitting horizontal text into a narrow vertical box.
 
 - `fail`: blocking structural or rendered-text error; repair the scene before calling it done.
 - `review`: blocking checks passed, but font substitutions, spacing drift, recognition or raster text need review.

@@ -1,5 +1,43 @@
 # Bounded reconstruction evidence
 
+## v0.2.0 conference figure extension
+
+On 2026-09-06, three independent evaluators reconstructed raw bitmaps from ViT (ICLR 2021),
+MobileViT (ICLR 2022, Figure 1), and Spatial-Mamba (ICLR 2025, Figure 4). The evaluator inputs
+were the skill and image only. The shared runtime was then modified in response to initial
+findings; original reports and controlled candidate retests are separate. This was not a blind
+comparison of two frozen released versions, and no source PDF vectors/text coordinates were
+used as reconstruction answers.
+
+All three final actual LibreOffice builds pass blocking checks, with measured limitations:
+
+- ViT: 147 objects, including 35 text boxes and five custom arrow freeforms. Two residual
+  arrowheads recovered the source's measured raster spans. Representative text edges differ
+  by 0–1 px; some edges by 2 px; 11 stroke-center anchors differ by at most 0.715 px.
+- Spatial-Mamba: 544 objects, 39 text boxes including 15 native rotated labels, and one photo.
+  The 15 rotated labels have mean absolute edge delta 0.383 px and maximum 1 px. Eighteen
+  horizontal text anchors have mean 0.417 px and maximum 1 px. Shadows/rounded dashes remain
+  approximations, and four multiplication symbols differ by up to 2 px.
+- MobileViT: the scene changed from 1207 to 697 objects after native dashed borders, retaining
+  91 editable text boxes and eight text-free pictures. Twenty-five horizontal text ROIs have
+  median absolute edge delta 1 px and maximum 9 px; the title's right edge improved from
+  -28 px to 0. Ten tilted labels remain horizontal and six tensor interiors remain raster.
+
+The runtime improvements add quarter-turn text, source-sized native arrows, native dash
+patterns, alpha-aware text/image collision refinement and corrected matching-aspect stretch
+warnings. Thirteen focused regressions, including actual Office rendering and opaque/baked-text
+negative controls, bring the local suite to 56 passing tests. The six previous cases replay
+without changed statuses; the old dense table still fails. No new dependencies were added.
+
+The owning repository's `docs/conference_cases.md` links original findings, failed candidates,
+frozen text ROIs, source/artifact hashes and actual previews. Two redistributable cases are in
+`examples/conference_cases`; MobileViT artwork remains local because redistribution permission
+was not established for its downloaded paper. The fixed-source fetch recipe is repository-only.
+Source fonts are approximations, not identified ground truth; Times New Roman and, for ViT's
+small note, Liberation Mono are required for the captured rendering. Fonts are not embedded.
+Pixel edge measurements are local diagnostics, not a global fidelity score or population
+accuracy estimate. PowerPoint/WPS and another computer's font availability remain unverified.
+
 ## v0.1.1 real-case extension
 
 On 2026-09-06, six published images from three sources were reconstructed: a Chinese consensus

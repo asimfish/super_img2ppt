@@ -66,20 +66,23 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", required=True, type=Path)
     parser.add_argument("--cases", nargs="+")
+    parser.add_argument("--corpus", type=Path, default=CORPUS)
+    parser.add_argument("--font-dir", type=Path, action="append", default=[])
     args = parser.parse_args()
-    manifest = json.loads((CORPUS / "manifest.json").read_text())
+    corpus = args.corpus.resolve()
+    manifest = json.loads((corpus / "manifest.json").read_text())
     known = {c["id"]: c for c in manifest["cases"]}
     requested = args.cases or list(known)
     if len(set(requested)) != len(requested) or any(c not in known for c in requested):
-        parser.error("Case IDs must be unique members of examples/real_cases/manifest.json")
+        parser.error("Case IDs must be unique members of the selected corpus manifest.json")
     fresh_directory(args.out)
     summary = {"all_blocking_checks_passed": False, "visual_review": "required", "cases": []}
     for case_id in requested:
         case = known[case_id]
-        scene_path = safe_asset(CORPUS, case["scene"])
+        scene_path = safe_asset(corpus, case["scene"])
         out = args.out / case_id
         try:
-            report = build(scene_path, out)
+            report = build(scene_path, out, font_dirs=tuple(args.font_dir))
             anchors_path = scene_path.parent / "anchors.json"
             scene = load_scene(scene_path)
             content_png = out / "render" / f"{scene['slides'][0]['id']}_content.png"

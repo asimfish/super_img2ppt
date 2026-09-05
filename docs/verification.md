@@ -1,5 +1,27 @@
 # 验收记录
 
+## v0.2.0：真实顶会复杂图
+
+2026-09-06：本地 **56 passed in 139.71s**，无跳过，包含 13 项新增回归。
+原生旋转文字、自定义箭头、虚线经过实际 LibreOffice 导出；透明图片角落检测包含三个
+缩放模式和旋转文字，并验证真实不透明碰撞、烘焙文字覆盖依然阻断。
+ruff、格式、skill 结构与 8 个激活/排除静态案例、能力登记、确定性治理审计均通过。
+
+ViT、MobileViT、Spatial-Mamba 三张正式 ICLR 论文图完成独立重建和候选复测，全部通过
+自动阻断检查。两组可分发归档场景已在父任务重新导出并测量 23 / 33 个文字 ROI；
+最大边缘差分别 2 / 1 px。MobileViT 的本地最终产物保留数学间距和斜角文字差异。
+细节、来源、可编辑文件和失败证据见 [顶会测试报告](conference_cases.md)。
+原有六例复跑仍为五例通过阻断检查、一例失败，运行器保持退出码 2。
+这些检查不表示所有图像均能对齐或正确识别，也没有新增 PowerPoint/WPS 原生验收。
+
+最终检查与归档文件哈希见 [verification_v020.json](evidence/conference_cases/verification_v020.json)。
+安装包 SHA256 为 `6ac1655a25619379ebcd1b72d0782d72299a88f5cd6c1d8a32f1ee03ba08e227`；
+已在全新临时环境离线安装锁定依赖和解包后的 skill，并实际重建 ViT、Spatial-Mamba，
+两例均 pass，详见 [独立安装记录](evidence/conference_cases/package_smoke_v020.json)。
+
+运行环境和依赖保持与 v0.1.1 相同，没有引入新的第三方依赖。安装包与远程 CI 证据见
+[v0.2.0 发布记录](https://github.com/asimfish/super_img2ppt/releases/tag/v0.2.0)。
+
 ## v0.1.1：真实案例与几何修复
 
 2026-09-06：全套 **43 项测试通过**，新增 10 项回归；ruff、格式、skill 元数据/引用和能力登记检查通过。

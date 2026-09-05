@@ -1,0 +1,95 @@
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+_______________ test_diagram_contract_rejects_silent_style_loss ________________
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+
+    def test_diagram_contract_rejects_silent_style_loss(scene):
+        spec = diagram(scene)
+>       assert validate_scene(spec) == spec
+               ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_diagram_features.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+
+    def validate_scene(scene: dict) -> dict:
+        _validate_finite(scene)
+        errors = sorted(Draft202012Validator(SCHEMA).iter_errors(scene), key=lambda e: str(e.path))
+        if errors:
+>           raise InputError(
+                "; ".join(f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5])
+            )
+E           super_img2ppt.scene.InputError: slides/0/elements/0: Additional properties are not allowed ('rotation' was unexpected); slides/0/elements/1: Additional properties are not allowed ('arrow_head' was unexpected); slides/0/elements/2: Additional properties are not allowed ('dash' was unexpected)
+
+skills/super-img2ppt/src/super_img2ppt/scene.py:183: InputError
+_______ test_rotated_ink_and_custom_head_participate_in_collision_checks _______
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10a5d0380>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-131/test_rotated_ink_and_custom_he0')
+
+    def test_rotated_ink_and_custom_head_participate_in_collision_checks(scene, fonts, tmp_path):
+        spec = diagram(scene)
+        page = spec["slides"][0]
+        assert preflight(spec, layout_scene(spec, fonts), tmp_path)["status"] == "pass"
+        page["elements"].append({"id": "obstacle", "kind": "shape", "z": 3,
+                                 "shape": "rect", "box": [458, 81, 5, 3], "fill": "#000000"})
+        report = preflight(spec, layout_scene(spec, fonts), tmp_path)
+>       assert any(f["code"] == "unintended_overlap" and f["elements"] == ["arrow", "obstacle"]
+                   for f in report["findings"])
+E       assert False
+E        +  where False = any(<generator object test_rotated_ink_and_custom_head_participate_in_collision_checks.<locals>.<genexpr> at 0x10b26d700>)
+
+tests/test_diagram_features.py:50: AssertionError
+_______________ test_native_diagram_styles_survive_pptx_and_svg ________________
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10a5d0380>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-131/test_native_diagram_styles_sur0')
+
+    def test_native_diagram_styles_survive_pptx_and_svg(scene, fonts, tmp_path):
+        spec = diagram(scene)
+        layouts = layout_scene(spec, fonts)
+        out = tmp_path / "diagram.pptx"
+        write_pptx(spec, layouts, tmp_path, out)
+        shapes = {s.name: s for s in Presentation(out).slides[0].shapes}
+>       assert shapes["vertical"].rotation == 90
+E       assert 0.0 == 90
+E        +  where 0.0 = <pptx.shapes.autoshape.Shape object at 0x10b391910>.rotation
+
+tests/test_diagram_features.py:66: AssertionError
+____ test_actual_diagram_render_preserves_orientation_arrow_size_and_dashes ____
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10a5d0380>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-131/test_actual_diagram_render_pre0')
+
+    @pytest.mark.render
+    @pytest.mark.skipif(shutil.which("soffice") is None, reason="LibreOffice not installed")
+    def test_actual_diagram_render_preserves_orientation_arrow_size_and_dashes(scene, fonts, tmp_path):
+        spec = diagram(scene)
+        page = spec["slides"][0]
+        base = copy.deepcopy(page["elements"][0])
+        page["elements"].extend([{**base, "id": "negative", "box": [0, 135, 180, 40], "rotation": -90},
+                                 {**base, "id": "upside_down", "box": [280, 290, 180, 40], "rotation": 180}])
+        layouts = layout_scene(spec, fonts)
+        out = tmp_path / "diagram.pptx"
+        write_pptx(spec, layouts, tmp_path, out)
+        pdf = make_renderer().render(out, tmp_path / "render")
+        report = verify_rendered_text(pdf, spec, layouts)
+>       assert report["status"] == "pass", report
+E       AssertionError: {'status': 'review', 'renderer': 'LibreOffice/PDFium', 'findings': [{'code': 'rendered_ink_width_drift', 'severity': '..., {'slide': 'page_001', 'element': 'upside_down', 'expected': 'Down Sampling', 'rendered': 'Down Sampling', ...}], ...}
+E       assert 'review' == 'pass'
+E         
+E         - pass
+E         + review
+
+tests/test_diagram_features.py:91: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_diagram_features.py::test_diagram_contract_rejects_silent_style_loss
+FAILED tests/test_diagram_features.py::test_rotated_ink_and_custom_head_participate_in_collision_checks
+FAILED tests/test_diagram_features.py::test_native_diagram_styles_survive_pptx_and_svg
+FAILED tests/test_diagram_features.py::test_actual_diagram_render_preserves_orientation_arrow_size_and_dashes
+4 failed in 12.11s

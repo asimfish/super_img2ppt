@@ -57,6 +57,7 @@ ELEMENT = {
         **STYLE,
         "align": {"enum": ["left", "center", "right"]},
         "valign": {"enum": ["top", "middle", "bottom"]},
+        "rotation": {"enum": [-90, 0, 90, 180, 270]},
         "wrap": {"type": "boolean"},
         "line_height": {"type": "number", "minimum": 1, "maximum": 3},
         "padding": {
@@ -75,6 +76,21 @@ ELEMENT = {
         "radius": {"type": "number", "minimum": 0, "maximum": 10000},
         "points": {"type": "array", "items": POINT, "minItems": 2, "maxItems": 2},
         "arrow": {"type": "boolean"},
+        "arrow_head": {
+            "type": "object",
+            "required": ["length", "width"],
+            "properties": {
+                key: {"type": "number", "exclusiveMinimum": 0, "maximum": 1000}
+                for key in ["length", "width"]
+            },
+            "additionalProperties": False,
+        },
+        "dash": {
+            "type": "array",
+            "items": {"type": "number", "minimum": 0.1, "maximum": 1000},
+            "minItems": 2,
+            "maxItems": 2,
+        },
         "path": {"type": "string", "minLength": 1, "maxLength": 1000},
         "image_fit": {"enum": ["contain", "cover", "stretch"]},
         "provenance": {"type": "string", "minLength": 8, "maxLength": 1000},
@@ -202,6 +218,7 @@ def validate_scene(scene: dict) -> dict:
                     *STYLE,
                     "align",
                     "valign",
+                    "rotation",
                     "wrap",
                     "line_height",
                     "padding",
@@ -209,9 +226,9 @@ def validate_scene(scene: dict) -> dict:
                     "min_font_size",
                     "font_group",
                 },
-                "shape": {"box", "shape", "fill", "stroke", "stroke_width", "radius"},
+                "shape": {"box", "shape", "fill", "stroke", "stroke_width", "radius", "dash"},
                 "image": {"box", "path", "image_fit", "provenance", "contains_text"},
-                "line": {"points", "stroke", "stroke_width", "arrow"},
+                "line": {"points", "stroke", "stroke_width", "arrow", "arrow_head", "dash"},
             }
             unexpected = set(element) - set(COMMON) - fields_by_kind[element["kind"]]
             if unexpected:
@@ -243,6 +260,34 @@ def validate_scene(scene: dict) -> dict:
                     raise InputError(f"{element['id']}: padding consumes the text box")
             if element["kind"] == "line" and element["points"][0] == element["points"][1]:
                 raise InputError(f"{element['id']}: zero-length line")
+            if "dash" in element and (
+                element.get("stroke_width", 1) <= 0
+                or (element["kind"] == "shape" and not element.get("stroke"))
+            ):
+                raise InputError(
+                    f"{element['id']}: dashes require a visible, positive-width stroke"
+                )
+            if "dash" in element and any(
+                length / element.get("stroke_width", 1) > 21474 for length in element["dash"]
+            ):
+                raise InputError(
+                    f"{element['id']}: dash/stroke ratio exceeds the Office integer range"
+                )
+            if "arrow_head" in element:
+                head = element["arrow_head"]
+                length = math.dist(*element["points"])
+                if not element.get("arrow") or "dash" in element:
+                    raise InputError(
+                        f"{element['id']}: custom heads require arrow=true and a solid shaft"
+                    )
+                if element.get("stroke_width", 1) <= 0:
+                    raise InputError(
+                        f"{element['id']}: a custom arrow requires a positive shaft width"
+                    )
+                if head["length"] >= length or head["width"] < element.get("stroke_width", 1):
+                    raise InputError(
+                        f"{element['id']}: arrow head must be shorter than the line and at least as wide as its stroke"
+                    )
         for element in elements.values():
             seen = {element["id"]}
             current = element

@@ -10,17 +10,14 @@ from pathlib import Path
 
 from PIL import Image, ImageChops, ImageDraw, ImageStat
 
+from .geometry import box_points, convex_hull, line_parts, rotate_points
 from .layout import TextLayout, text_ink_boxes, text_ink_mask
 from .scene import InputError, safe_asset, text_content
 
 
 def polygon(element: dict) -> list[tuple[float, float]]:
     if element["kind"] == "line":
-        (x1, y1), (x2, y2) = element["points"]
-        length = math.hypot(x2 - x1, y2 - y1)
-        half = max(element.get("stroke_width", 1), 0.1) / 2
-        dx, dy = -(y2 - y1) / length * half, (x2 - x1) / length * half
-        return [(x1 - dx, y1 - dy), (x2 - dx, y2 - dy), (x2 + dx, y2 + dy), (x1 + dx, y1 + dy)]
+        return convex_hull([p for part in line_parts(element) for p in part])
     x, y, w, h = element["box"]
     shape = element.get("shape")
     if shape == "ellipse":
@@ -35,7 +32,7 @@ def polygon(element: dict) -> list[tuple[float, float]]:
         return [(x + w / 2, y), (x + w, y + h), (x, y + h)]
     if shape == "diamond":
         return [(x + w / 2, y), (x + w, y + h / 2), (x + w / 2, y + h), (x, y + h / 2)]
-    return [(x, y), (x + w, y), (x + w, y + h), (x, y + h)]
+    return rotate_points(box_points(element["box"]), element)
 
 
 def area(poly: list[tuple[float, float]]) -> float:
@@ -88,6 +85,31 @@ def is_ancestor(parent: dict, child: dict, elements: dict) -> bool:
     return False
 
 
+def _alpha_in_text_frame(alpha, image, text, size, left, top):
+    x, y, w, h = image["box"]
+    iw, ih = alpha.size
+    fx, fy = w / iw, h / ih
+    fit = image.get("image_fit", "contain")
+    if fit != "stretch":
+        fx = fy = min(fx, fy) if fit == "contain" else max(fx, fy)
+        x += (w - iw * fx) / 2
+        y += (h - ih * fy) / 2
+    origin, along_x, along_y = rotate_points(
+        [(left, top), (left + 0.25, top), (left, top + 0.25)], text
+    )
+    affine = (
+        (along_x[0] - origin[0]) / fx,
+        (along_y[0] - origin[0]) / fx,
+        (origin[0] - x) / fx,
+        (along_x[1] - origin[1]) / fy,
+        (along_y[1] - origin[1]) / fy,
+        (origin[1] - y) / fy,
+    )
+    return alpha.transform(
+        size, Image.Transform.AFFINE, affine, resample=Image.Resampling.BILINEAR, fillcolor=0
+    )
+
+
 def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Path) -> dict:
     findings = []
     pages = []
@@ -125,13 +147,17 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                 if im.size != (slide["width"], slide["height"]):
                     raise InputError(f"Source dimensions disagree with {slide['id']}")
         polys = {eid: polygon(e) for eid, e in elements.items()}
+        footprints = {
+            eid: line_parts(e) if e["kind"] == "line" else [polys[eid]]
+            for eid, e in elements.items()
+        }
         text_footprints = {}
         for eid, element in elements.items():
             if element["kind"] == "text" and layouts[slide["id"], eid].fits:
                 ink = text_ink_boxes(element, layouts[slide["id"], eid])
                 if ink:
                     text_footprints[eid] = [
-                        polygon({"kind": "text", "box": [x0, y0, x1 - x0, y1 - y0]})
+                        rotate_points(box_points([x0, y0, x1 - x0, y1 - y0]), element)
                         for x0, y0, x1, y1 in ink
                     ]
 
@@ -139,17 +165,38 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
         def ink_mask(eid, elements=elements, slide_id=slide["id"]):
             return text_ink_mask(elements[eid], layouts[slide_id, eid])
 
-        def ink_area(eid, other, *, outside=False):
+        @lru_cache(maxsize=2)
+        def artwork_alpha(eid, elements=elements):
+            element = elements[eid]
+            if element["kind"] != "image" or element["contains_text"]:
+                return None
+            with Image.open(safe_asset(root, element["path"])) as im:
+                if im.width * im.height > 8_000_000:
+                    return None
+                if "A" not in im.getbands() and "transparency" not in im.info:
+                    return None
+                return im.convert("RGBA").getchannel("A")
+
+        def ink_area(eid, other, *, outside=False, other_id=None, elements=elements):
             measured = ink_mask(eid)
             if measured is None:
                 return None
             mask, left, top = measured
             clip = Image.new("L", mask.size)
-            ImageDraw.Draw(clip).polygon(
-                [((x - left) * 4, (y - top) * 4) for x, y in other], fill=255
-            )
+            for part in other:
+                local = rotate_points(part, elements[eid], inverse=True)
+                ImageDraw.Draw(clip).polygon(
+                    [((x - left) * 4, (y - top) * 4) for x, y in local], fill=255
+                )
             if outside:
                 clip = ImageChops.invert(clip)
+            if other_id is not None:
+                alpha = artwork_alpha(other_id)
+                if alpha is not None:
+                    visible = _alpha_in_text_frame(
+                        alpha, elements[other_id], elements[eid], mask.size, left, top
+                    )
+                    clip = ImageChops.multiply(clip, visible)
             coverage = ImageChops.multiply(mask, clip)
             return ImageStat.Stat(coverage).sum[0] / (255 * 16)
 
@@ -180,7 +227,7 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                     area(intersection(part, container)) < area(part) - 0.5 for part in content
                 )
                 if outside and eid in text_footprints:
-                    refined = ink_area(eid, container, outside=True)
+                    refined = ink_area(eid, [container], outside=True)
                     if refined is not None:
                         outside = refined > 0.5
                 if outside:
@@ -224,6 +271,7 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                         raise InputError("Asset exceeds 40 million pixels")
                     if im.format not in {"PNG", "JPEG", "WEBP"}:
                         raise InputError("Image assets must be PNG, JPEG or WebP")
+                    image_ratio = im.width / im.height
                 if source and (
                     path == source or hashlib.sha256(path.read_bytes()).digest() == source_hash
                 ):
@@ -241,7 +289,9 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                         "Text inside this independent image remains noneditable",
                         "warning",
                     )
-                if e.get("image_fit", "contain") == "stretch":
+                if e.get("image_fit", "contain") == "stretch" and not math.isclose(
+                    e["box"][2] / e["box"][3], image_ratio, rel_tol=0.001
+                ):
                     issue(
                         slide,
                         "image_stretched",
@@ -266,7 +316,9 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                 a, b = bounds[lo], bounds[hi]
                 if min(a[2], b[2]) <= max(a[0], b[0]) or min(a[3], b[3]) <= max(a[1], b[1]):
                     continue
-                overlap = area(intersection(polys[lo], polys[hi]))
+                overlap = sum(
+                    area(intersection(a, b)) for a in footprints[lo] for b in footprints[hi]
+                )
                 if overlap <= 0.5:
                     continue
                 # Baked text is a separate problem that overlap exemptions cannot waive.
@@ -291,12 +343,12 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                 if lo in text_footprints or hi in text_footprints:
                     ink_overlap = sum(
                         area(intersection(a, b))
-                        for a in text_footprints.get(lo, [polys[lo]])
-                        for b in text_footprints.get(hi, [polys[hi]])
+                        for a in text_footprints.get(lo, footprints[lo])
+                        for b in text_footprints.get(hi, footprints[hi])
                     )
                     if ink_overlap > 0.5 and (lo in text_footprints) != (hi in text_footprints):
                         text_id, other_id = (lo, hi) if lo in text_footprints else (hi, lo)
-                        refined = ink_area(text_id, polys[other_id])
+                        refined = ink_area(text_id, footprints[other_id], other_id=other_id)
                         if refined is not None:
                             ink_overlap = refined
                     if ink_overlap <= 0.5:
@@ -327,6 +379,7 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                     area_px2=round(overlap, 3),
                 )
         ink_mask.cache_clear()
+        artwork_alpha.cache_clear()
         pages.append(
             {
                 "id": slide["id"],

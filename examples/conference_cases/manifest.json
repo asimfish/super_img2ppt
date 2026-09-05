@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "evaluated": "2026-09-06",
+  "runtime_version": "0.2.0",
+  "method": "Independent image-only reconstruction followed by controlled candidate runtime retests. Raw findings retained. PDF used only to rasterize supplied source, not to extract text or geometry.",
+  "renderer": "LibreOffice 26.2.4.2 / PDFium 5.13.0 on macOS 26.2",
+  "visual_review": "required",
+  "cases": [
+    {
+      "id": "vit",
+      "scene": "vit/scene.resolved.json",
+      "source": "assets/527ce51f7e73944e3cb2.png",
+      "source_sha256": "527ce51f7e73944e3cb247aad0584a5dd34943f982d6776e51499996ec7d9e6a",
+      "scene_sha256": "0d892668995c7f519f84142d989d456f98ce42734684c3d7772d765adba09bcd",
+      "pptx": "vit/editable.pptx",
+      "pptx_sha256": "67cd0b7b1d52bdeef9f204a958580e46ee73d2b3e821643beabc442e73d97217",
+      "observed_status": "pass",
+      "native_counts": {
+        "text": 35,
+        "shape": 47,
+        "line": 55,
+        "image": 10
+      },
+      "preview": "vit/render/page_001.png",
+      "venue": "ICLR 2021",
+      "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+      "source_url": "https://iclr.cc/virtual/2021/oral/3458",
+      "download_url": "https://raw.githubusercontent.com/google-research/vision_transformer/64801f1b3b367b3611cc27a3d45cc22870a36fb3/vit_figure.png",
+      "reuse": "Apache-2.0, author repository image; see NOTICE.md",
+      "required_fonts": [
+        "Times New Roman",
+        "Liberation Mono"
+      ],
+      "anchors_sha256": "9bd28d7a243c111c144ab84e94a3d994cd63dde763a9b0318b00be40b2fa46d5"
+    },
+    {
+      "id": "spatial_mamba",
+      "scene": "spatial_mamba/scene.resolved.json",
+      "source": "assets/a9b3706ca9a29d791d22.png",
+      "source_sha256": "a9b3706ca9a29d791d225300922fb064bb2c6441d4f7a5684b3fd6aaa16f2541",
+      "scene_sha256": "47e148299abf380282c8eb925e40bd7259be9f99a91162c7d1809d92df279bfd",
+      "pptx": "spatial_mamba/editable.pptx",
+      "pptx_sha256": "660e6cd7c3d0694784754256d083a28fe745d7c76510ca0a1f6ec8ec154a0cc9",
+      "observed_status": "pass",
+      "native_counts": {
+        "line": 375,
+        "image": 1,
+        "shape": 129,
+        "text": 39
+      },
+      "preview": "spatial_mamba/render/page_001.png",
+      "venue": "ICLR 2025",
+      "title": "Spatial-Mamba: Effective Visual State Space Models via Structure-Aware State Fusion",
+      "source_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/b7216f4a324864e1f592c18de4d83d10-Abstract-Conference.html",
+      "download_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/b7216f4a324864e1f592c18de4d83d10-Paper-Conference.pdf",
+      "source_page": 5,
+      "source_figure": 4,
+      "reuse": "CC BY 4.0, OpenReview paper record; see NOTICE.md",
+      "required_fonts": [
+        "Times New Roman"
+      ],
+      "anchors_sha256": "7fcf6003591f3ac0f8470e9329c145b90994536cbd7c76a7dbfec4c96619431a"
+    }
+  ],
+  "additional_local_case": "MobileViT ICLR 2022 Figure 1 was tested and documented; source and derived artwork are retained locally, outside this redistribution corpus."
+}

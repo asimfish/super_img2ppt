@@ -1,0 +1,1562 @@
+{
+  "build": "/tmp/super-img2ppt-conference-spatial-jzSWZJ/build_native_01",
+  "source": "/tmp/super-img2ppt-conference-spatial-jzSWZJ/job/pages/page_001/source.png",
+  "render": "/tmp/super-img2ppt-conference-spatial-jzSWZJ/build_native_01/render/page_001.png",
+  "size": [
+    1600,
+    624
+  ],
+  "method": "Thresholded visible-ink bounding boxes in identical isolated source/render regions. Pixel indices represent cells, reported ink extents are exclusive right/bottom boundaries. Shape/line centers use midpoints, preserving half-pixel locations. No OCR or PDF positions used in source metrics. Full row-level evidence retained; this is not a perceptual similarity score.",
+  "summary": {
+    "horizontal_text": {
+      "count": 18,
+      "mean_absolute_edge_delta_px": 1.139,
+      "max_absolute_edge_delta_px": 3,
+      "mean_absolute_center_delta_px": 1.028
+    },
+    "line_edge": {
+      "count": 1,
+      "mean_absolute_edge_delta_px": 0.25,
+      "max_absolute_edge_delta_px": 1,
+      "mean_absolute_center_delta_px": 0.25
+    },
+    "rotated_label": {
+      "count": 15,
+      "mean_absolute_edge_delta_px": 1.433,
+      "max_absolute_edge_delta_px": 4,
+      "mean_absolute_center_delta_px": 1.0
+    },
+    "shape_edge": {
+      "count": 6,
+      "mean_absolute_edge_delta_px": 0.208,
+      "max_absolute_edge_delta_px": 1,
+      "mean_absolute_center_delta_px": 0.208
+    },
+    "symbol": {
+      "count": 6,
+      "mean_absolute_edge_delta_px": 1.167,
+      "max_absolute_edge_delta_px": 3,
+      "mean_absolute_center_delta_px": 0.833
+    }
+  },
+  "rows": [
+    {
+      "id": "stem_label",
+      "kind": "rotated_label",
+      "region": [
+        200,
+        124,
+        235,
+        200
+      ],
+      "source_ink_bbox": [
+        206,
+        132,
+        226,
+        192
+      ],
+      "render_ink_bbox": [
+        207,
+        133,
+        227,
+        191
+      ],
+      "edge_delta_px": [
+        1,
+        1,
+        1,
+        -1
+      ],
+      "center_delta_px": [
+        1.0,
+        0.0
+      ],
+      "max_abs_edge_delta_px": 1
+    },
+    {
+      "id": "down_1_label",
+      "kind": "rotated_label",
+      "region": [
+        513,
+        70,
+        549,
+        254
+      ],
+      "source_ink_bbox": [
+        521,
+        77,
+        544,
+        247
+      ],
+      "render_ink_bbox": [
+        524,
+        78,
+        548,
+        246
+      ],
+      "edge_delta_px": [
+        3,
+        1,
+        4,
+        -1
+      ],
+      "center_delta_px": [
+        3.5,
+        0.0
+      ],
+      "max_abs_edge_delta_px": 4
+    },
+    {
+      "id": "down_2_label",
+      "kind": "rotated_label",
+      "region": [
+        846,
+        70,
+        882,
+        254
+      ],
+      "source_ink_bbox": [
+        854,
+        77,
+        878,
+        248
+      ],
+      "render_ink_bbox": [
+        858,
+        78,
+        881,
+        246
+      ],
+      "edge_delta_px": [
+        4,
+        1,
+        3,
+        -2
+      ],
+      "center_delta_px": [
+        3.5,
+        -0.5
+      ],
+      "max_abs_edge_delta_px": 4
+    },
+    {
+      "id": "down_3_label",
+      "kind": "rotated_label",
+      "region": [
+        1179,
+        70,
+        1215,
+        254
+      ],
+      "source_ink_bbox": [
+        1187,
+        77,
+        1211,
+        248
+      ],
+      "render_ink_bbox": [
+        1191,
+        78,
+        1214,
+        246
+      ],
+      "edge_delta_px": [
+        4,
+        1,
+        3,
+        -2
+      ],
+      "center_delta_px": [
+        3.5,
+        -0.5
+      ],
+      "max_abs_edge_delta_px": 4
+    },
+    {
+      "id": "head_label",
+      "kind": "rotated_label",
+      "region": [
+        1528,
+        124,
+        1563,
+        199
+      ],
+      "source_ink_bbox": [
+        1533,
+        130,
+        1555,
+        191
+      ],
+      "render_ink_bbox": [
+        1535,
+        131,
+        1555,
+        188
+      ],
+      "edge_delta_px": [
+        2,
+        1,
+        0,
+        -3
+      ],
+      "center_delta_px": [
+        1.0,
+        -1.0
+      ],
+      "max_abs_edge_delta_px": 3
+    },
+    {
+      "id": "block_ln_1_label",
+      "kind": "rotated_label",
+      "region": [
+        270,
+        473,
+        305,
+        519
+      ],
+      "source_ink_bbox": [
+        278,
+        481,
+        295,
+        512
+      ],
+      "render_ink_bbox": [
+        278,
+        483,
+        293,
+        510
+      ],
+      "edge_delta_px": [
+        0,
+        2,
+        -2,
+        -2
+      ],
+      "center_delta_px": [
+        -1.0,
+        0.0
+      ],
+      "max_abs_edge_delta_px": 2
+    },
+    {
+      "id": "block_ssm_label",
+      "kind": "rotated_label",
+      "region": [
+        350,
+        406,
+        412,
+        588
+      ],
+      "source_ink_bbox": [
+        357,
+        414,
+        406,
+        582
+      ],
+      "render_ink_bbox": [
+        356,
+        415,
+        405,
+        582
+      ],
+      "edge_delta_px": [
+        -1,
+        1,
+        -1,
+        0
+      ],
+      "center_delta_px": [
+        -1.0,
+        0.5
+      ],
+      "max_abs_edge_delta_px": 1
+    },
+    {
+      "id": "block_ln_2_label",
+      "kind": "rotated_label",
+      "region": [
+        526,
+        473,
+        561,
+        519
+      ],
+      "source_ink_bbox": [
+        534,
+        480,
+        551,
+        511
+      ],
+      "render_ink_bbox": [
+        534,
+        482,
+        549,
+        509
+      ],
+      "edge_delta_px": [
+        0,
+        2,
+        -2,
+        -2
+      ],
+      "center_delta_px": [
+        -1.0,
+        0.0
+      ],
+      "max_abs_edge_delta_px": 2
+    },
+    {
+      "id": "block_ffn_label",
+      "kind": "rotated_label",
+      "region": [
+        623,
+        466,
+        658,
+        525
+      ],
+      "source_ink_bbox": [
+        631,
+        473,
+        648,
+        517
+      ],
+      "render_ink_bbox": [
+        631,
+        474,
+        647,
+        515
+      ],
+      "edge_delta_px": [
+        0,
+        1,
+        -1,
+        -2
+      ],
+      "center_delta_px": [
+        -0.5,
+        -0.5
+      ],
+      "max_abs_edge_delta_px": 2
+    },
+    {
+      "id": "ssm_linear_top_label",
+      "kind": "rotated_label",
+      "region": [
+        921,
+        384,
+        956,
+        466
+      ],
+      "source_ink_bbox": [
+        928,
+        392,
+        945,
+        459
+      ],
+      "render_ink_bbox": [
+        927,
+        395,
+        944,
+        459
+      ],
+      "edge_delta_px": [
+        -1,
+        3,
+        -1,
+        0
+      ],
+      "center_delta_px": [
+        -1.0,
+        1.5
+      ],
+      "max_abs_edge_delta_px": 3
+    },
+    {
+      "id": "ssm_linear_bottom_label",
+      "kind": "rotated_label",
+      "region": [
+        921,
+        506,
+        956,
+        588
+      ],
+      "source_ink_bbox": [
+        928,
+        515,
+        945,
+        581
+      ],
+      "render_ink_bbox": [
+        927,
+        517,
+        944,
+        581
+      ],
+      "edge_delta_px": [
+        -1,
+        2,
+        -1,
+        0
+      ],
+      "center_delta_px": [
+        -1.0,
+        1.0
+      ],
+      "max_abs_edge_delta_px": 2
+    },
+    {
+      "id": "ssm_conv_label",
+      "kind": "rotated_label",
+      "region": [
+        1002,
+        391,
+        1035,
+        460
+      ],
+      "source_ink_bbox": [
+        1008,
+        397,
+        1025,
+        452
+      ],
+      "render_ink_bbox": [
+        1006,
+        398,
+        1024,
+        451
+      ],
+      "edge_delta_px": [
+        -2,
+        1,
+        -1,
+        -1
+      ],
+      "center_delta_px": [
+        -1.5,
+        0.0
+      ],
+      "max_abs_edge_delta_px": 2
+    },
+    {
+      "id": "ssm_sasf_label",
+      "kind": "rotated_label",
+      "region": [
+        1132,
+        387,
+        1167,
+        464
+      ],
+      "source_ink_bbox": [
+        1141,
+        395,
+        1158,
+        455
+      ],
+      "render_ink_bbox": [
+        1140,
+        396,
+        1157,
+        455
+      ],
+      "edge_delta_px": [
+        -1,
+        1,
+        -1,
+        0
+      ],
+      "center_delta_px": [
+        -1.0,
+        0.5
+      ],
+      "max_abs_edge_delta_px": 1
+    },
+    {
+      "id": "ssm_ln_label",
+      "kind": "rotated_label",
+      "region": [
+        1217,
+        401,
+        1252,
+        450
+      ],
+      "source_ink_bbox": [
+        1224,
+        409,
+        1241,
+        441
+      ],
+      "render_ink_bbox": [
+        1224,
+        412,
+        1240,
+        439
+      ],
+      "edge_delta_px": [
+        0,
+        3,
+        -1,
+        -2
+      ],
+      "center_delta_px": [
+        -0.5,
+        0.5
+      ],
+      "max_abs_edge_delta_px": 3
+    },
+    {
+      "id": "ssm_linear_out_label",
+      "kind": "rotated_label",
+      "region": [
+        1374,
+        385,
+        1409,
+        467
+      ],
+      "source_ink_bbox": [
+        1381,
+        394,
+        1398,
+        461
+      ],
+      "render_ink_bbox": [
+        1380,
+        397,
+        1397,
+        461
+      ],
+      "edge_delta_px": [
+        -1,
+        3,
+        -1,
+        0
+      ],
+      "center_delta_px": [
+        -1.0,
+        1.5
+      ],
+      "max_abs_edge_delta_px": 3
+    },
+    {
+      "id": "stage_1_name",
+      "kind": "horizontal_text",
+      "region": [
+        290,
+        99,
+        467,
+        139
+      ],
+      "source_ink_bbox": [
+        300,
+        111,
+        461,
+        135
+      ],
+      "render_ink_bbox": [
+        298,
+        109,
+        462,
+        134
+      ],
+      "edge_delta_px": [
+        -2,
+        -2,
+        1,
+        -1
+      ],
+      "center_delta_px": [
+        -0.5,
+        -1.5
+      ],
+      "max_abs_edge_delta_px": 2
+    },
+    {
+      "id": "stage_1_word",
+      "kind": "horizontal_text",
+      "region": [
+        331,
+        138,
+        428,
+        171
+      ],
+      "source_ink_bbox": [
+        350,
+        143,
+        410,
+        161
+      ],
+      "render_ink_bbox": [
+        350,
+        142,
+        411,
+        161
+      ],
+      "edge_delta_px": [
+        0,
+        -1,
+        1,
+        0
+      ],
+      "center_delta_px": [
+        0.5,
+        -0.5
+      ],
+      "max_abs_edge_delta_px": 1
+    },
+    {
+      "id": "stage_1_repeat",
+      "kind": "symbol",
+      "region": [
+        360,
+        171,
+        404,
+        199
+      ],
+      "source_ink_bbox": [
+        373,
+        177,
+        387,
+        191
+      ],
+      "render_ink_bbox": [
+        374,
+        180,
+        385,
+        192
+      ],
+      "edge_delta_px": [
+        1,
+        3,
+        -2,
+        1
+      ],
+      "center_delta_px": [
+        -0.5,
+        2.0
+      ],
+      "max_abs_edge_delta_px": 3
+    },
+    {
+      "id": "stage_1_layers",
+      "kind": "horizontal_text",
+      "region": [
+        360,
+        200,
+        388,
+        238
+      ],
+      "source_ink_bbox": [
+        373,
+        208,
+        385,
+        225
+      ],
+      "render_ink_bbox": [
+        373,
+        207,
+        386,
+        225
+      ],
+      "edge_delta_px": [
+        0,
+        -1,
+        1,
+        0
+      ],
+      "center_delta_px": [
+        0.5,
+        -0.5
+      ],
+      "max_abs_edge_delta_px": 1
+    },
+    {
+      "id": "stage_1_index",
+      "kind": "horizontal_text",
+      "region": [
+        388,
+        211,
+        410,
+        239
+      ],
+      "source_ink_bbox": [
+        391,
+        219,
+        393,
+        230
+      ],
+      "render_ink_bbox": [
+        393,
+        218,
+        395,
+        229
+      ],
+      "edge_delta_px": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "center_delta_px": [
+        2.0,
+        -1.0
+      ],
+      "max_abs_edge_delta_px": 2
+    },
+    {
+      "id": "stage_2_name",
+      "kind": "horizontal_text",
+      "region": [
+        623,
+        99,
+        800,
+        139
+      ],
+      "source_ink_bbox": [
+        633,
+        111,
+        794,
+        135
+      ],
+      "render_ink_bbox": [
+        631,
+        109,
+        795,
+        134
+      ],
+      "edge_delta_px": [
+        -2,
+        -2,
+        1,
+        -1
+      ],
+      "center_delta_px": [
+        -0.5,
+        -1.5
+      ],
+      "max_abs_edge_delta_px": 2
+    },
+    {
+      "id": "stage_2_word",
+      "kind": "horizontal_text",
+      "region": [
+        664,
+        138,
+        761,
+        171
+      ],
+      "source_ink_bbox": [
+        683,
+        143,
+        743,
+        161
+      ],
+      "render_ink_bbox": [
+        683,
+        142,
+        744,
+        161
+      ],
+      "edge_delta_px": [
+        0,
+        -1,
+        1,
+        0
+      ],
+      "center_delta_px": [
+        0.5,
+        -0.5
+      ],
+      "max_abs_edge_delta_px": 1
+    },
+    {
+      "id": "stage_2_repeat",
+      "kind": "symbol",
+      "region": [
+        693,
+        171,
+        737,
+        199
+      ],
+      "source_ink_bbox": [
+        706,
+        177,
+        720,
+        191
+      ],
+      "render_ink_bbox": [
+        707,
+        180,
+        718,
+        192
+      ],
+      "edge_delta_px": [
+        1,
+        3,
+        -2,
+        1
+      ],
+      "center_delta_px": [
+        -0.5,
+        2.0
+      ],
+      "max_abs_edge_delta_px": 3
+    },
+    {
+      "id": "stage_2_layers",
+      "kind": "horizontal_text",
+      "region": [
+        693,
+        200,
+        721,
+        238
+      ],
+      "source_ink_bbox": [
+        706,
+        208,
+        718,
+        225
+      ],
+      "render_ink_bbox": [
+        706,
+        207,
+        719,
+        225
+      ],
+      "edge_delta_px": [
+        0,
+        -1,
+        1,
+        0
+      ],
+      "center_delta_px": [
+        0.5,
+        -0.5
+      ],
+      "max_abs_edge_delta_px": 1
+    },
+    {
+      "id": "stage_2_index",
+      "kind": "horizontal_text",
+      "region": [
+        721,
+        211,
+        743,
+        239
+      ],
+      "source_ink_bbox": [
+        721,
+        218,
+        728,
+        230
+      ],
+      "render_ink_bbox": [
+        723,
+        217,
+        730,
+        229
+      ],
+      "edge_delta_px": [
+        2,
+        -1,
+        2,
+        -1
+      ],
+      "center_delta_px": [
+        2.0,
+        -1.0
+      ],
+      "max_abs_edge_delta_px": 2
+    },
+    {
+      "id": "stage_3_name",
+      "kind": "horizontal_text",
+      "region": [
+        956,
+        99,
+        1133,
+        139
+      ],
+      "source_ink_bbox": [
+        966,
+        112,
+        1127,
+        136
+      ],
+      "render_ink_bbox": [
+        964,
+        109,
+        1128,
+        134
+      ],
+      "edge_delta_px": [
+        -2,
+        -3,
+        1,
+        -2
+      ],
+      "center_delta_px": [
+        -0.5,
+        -2.5
+      ],
+      "max_abs_edge_delta_px": 3
+    },
+    {
+      "id": "stage_3_word",
+      "kind": "horizontal_text",
+      "region": [
+        997,
+        138,
+        1094,
+        171
+      ],
+      "source_ink_bbox": [
+        1016,
+        144,
+        1077,
+        162
+      ],
+      "render_ink_bbox": [
+        1016,
+        142,
+        1077,
+        161
+      ],
+      "edge_delta_px": [
+        0,
+        -2,
+        0,
+        -1
+      ],
+      "center_delta_px": [
+        0.0,
+        -1.5
+      ],
+      "max_abs_edge_delta_px": 2
+    },
+    {
+      "id": "stage_3_repeat",
+      "kind": "symbol",
+      "region": [
+        1026,
+        171,
+        1070,
+        199
+      ],
+      "source_ink_bbox": [
+        1039,
+        177,
+        1053,
+        191
+      ],
+      "render_ink_bbox": [
+        1040,
+        180,
+        1051,
+        192
+      ],
+      "edge_delta_px": [
+        1,
+        3,
+        -2,
+        1
+      ],
+      "center_delta_px": [
+        -0.5,
+        2.0
+      ],
+      "max_abs_edge_delta_px": 3
+    },
+    {
+      "id": "stage_3_layers",
+      "kind": "horizontal_text",
+      "region": [
+        1026,
+        200,
+        1054,
+        238
+      ],
+      "source_ink_bbox": [
+        1039,
+        208,
+        1052,
+        226
+      ],
+      "render_ink_bbox": [
+        1039,
+        207,
+        1052,
+        225
+      ],
+      "edge_delta_px": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "center_delta_px": [
+        0.0,
+        -1.0
+      ],
+      "max_abs_edge_delta_px": 1
+    },
+    {
+      "id": "stage_3_index",
+      "kind": "horizontal_text",
+      "region": [
+        1054,
+        211,
+        1076,
+        239
+      ],
+      "source_ink_bbox": [
+        1054,
+        219,
+        1060,
+        230
+      ],
+      "render_ink_bbox": [
+        1057,
+        217,
+        1063,
+        229
+      ],
+      "edge_delta_px": [
+        3,
+        -2,
+        3,
+        -1
+      ],
+      "center_delta_px": [
+        3.0,
+        -1.5
+      ],
+      "max_abs_edge_delta_px": 3
+    },
+    {
+      "id": "stage_4_name",
+      "kind": "horizontal_text",
+      "region": [
+        1289,
+        99,
+        1466,
+        139
+      ],
+      "source_ink_bbox": [
+        1299,
+        111,
+        1460,
+        135
+      ],
+      "render_ink_bbox": [
+        1297,
+        109,
+        1461,
+        134
+      ],
+      "edge_delta_px": [
+        -2,
+        -2,
+        1,
+        -1
+      ],
+      "center_delta_px": [
+        -0.5,
+        -1.5
+      ],
+      "max_abs_edge_delta_px": 2
+    },
+    {
+      "id": "stage_4_word",
+      "kind": "horizontal_text",
+      "region": [
+        1330,
+        138,
+        1427,
+        171
+      ],
+      "source_ink_bbox": [
+        1349,
+        143,
+        1409,
+        161
+      ],
+      "render_ink_bbox": [
+        1349,
+        142,
+        1410,
+        161
+      ],
+      "edge_delta_px": [
+        0,
+        -1,
+        1,
+        0
+      ],
+      "center_delta_px": [
+        0.5,
+        -0.5
+      ],
+      "max_abs_edge_delta_px": 1
+    },
+    {
+      "id": "stage_4_repeat",
+      "kind": "symbol",
+      "region": [
+        1359,
+        171,
+        1403,
+        199
+      ],
+      "source_ink_bbox": [
+        1372,
+        177,
+        1386,
+        191
+      ],
+      "render_ink_bbox": [
+        1373,
+        180,
+        1384,
+        192
+      ],
+      "edge_delta_px": [
+        1,
+        3,
+        -2,
+        1
+      ],
+      "center_delta_px": [
+        -0.5,
+        2.0
+      ],
+      "max_abs_edge_delta_px": 3
+    },
+    {
+      "id": "stage_4_layers",
+      "kind": "horizontal_text",
+      "region": [
+        1359,
+        200,
+        1387,
+        238
+      ],
+      "source_ink_bbox": [
+        1372,
+        208,
+        1385,
+        225
+      ],
+      "render_ink_bbox": [
+        1372,
+        207,
+        1385,
+        225
+      ],
+      "edge_delta_px": [
+        0,
+        -1,
+        0,
+        0
+      ],
+      "center_delta_px": [
+        0.0,
+        -0.5
+      ],
+      "max_abs_edge_delta_px": 1
+    },
+    {
+      "id": "stage_4_index",
+      "kind": "horizontal_text",
+      "region": [
+        1387,
+        211,
+        1409,
+        239
+      ],
+      "source_ink_bbox": [
+        1387,
+        218,
+        1394,
+        230
+      ],
+      "render_ink_bbox": [
+        1389,
+        218,
+        1396,
+        229
+      ],
+      "edge_delta_px": [
+        2,
+        0,
+        2,
+        -1
+      ],
+      "center_delta_px": [
+        2.0,
+        -0.5
+      ],
+      "max_abs_edge_delta_px": 2
+    },
+    {
+      "id": "caption_block",
+      "kind": "horizontal_text",
+      "region": [
+        435,
+        572,
+        724,
+        610
+      ],
+      "source_ink_bbox": [
+        446,
+        578,
+        716,
+        606
+      ],
+      "render_ink_bbox": [
+        448,
+        576,
+        718,
+        605
+      ],
+      "edge_delta_px": [
+        2,
+        -2,
+        2,
+        -1
+      ],
+      "center_delta_px": [
+        2.0,
+        -1.5
+      ],
+      "max_abs_edge_delta_px": 2
+    },
+    {
+      "id": "caption_ssm",
+      "kind": "horizontal_text",
+      "region": [
+        1130,
+        573,
+        1410,
+        610
+      ],
+      "source_ink_bbox": [
+        1139,
+        579,
+        1403,
+        600
+      ],
+      "render_ink_bbox": [
+        1142,
+        578,
+        1405,
+        599
+      ],
+      "edge_delta_px": [
+        3,
+        -1,
+        2,
+        -1
+      ],
+      "center_delta_px": [
+        2.5,
+        -1.0
+      ],
+      "max_abs_edge_delta_px": 3
+    },
+    {
+      "id": "sigma_1",
+      "kind": "symbol",
+      "region": [
+        1064,
+        409,
+        1091,
+        437
+      ],
+      "source_ink_bbox": [
+        1064,
+        409,
+        1091,
+        437
+      ],
+      "render_ink_bbox": [
+        1064,
+        409,
+        1091,
+        437
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "center_delta_px": [
+        0.0,
+        0.0
+      ],
+      "max_abs_edge_delta_px": 0
+    },
+    {
+      "id": "sigma_2",
+      "kind": "symbol",
+      "region": [
+        1064,
+        531,
+        1091,
+        559
+      ],
+      "source_ink_bbox": [
+        1064,
+        531,
+        1091,
+        559
+      ],
+      "render_ink_bbox": [
+        1064,
+        531,
+        1091,
+        559
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "center_delta_px": [
+        0.0,
+        0.0
+      ],
+      "max_abs_edge_delta_px": 0
+    },
+    {
+      "id": "stage_1_blue_left",
+      "kind": "shape_edge",
+      "region": [
+        274,
+        111,
+        292,
+        214
+      ],
+      "source_ink_bbox": [
+        281,
+        111,
+        284,
+        214
+      ],
+      "render_ink_bbox": [
+        281,
+        111,
+        283,
+        214
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        -1,
+        0
+      ],
+      "center_delta_px": [
+        -0.5,
+        0.0
+      ],
+      "max_abs_edge_delta_px": 1
+    },
+    {
+      "id": "stage_1_blue_top",
+      "kind": "shape_edge",
+      "region": [
+        321,
+        69,
+        431,
+        87
+      ],
+      "source_ink_bbox": [
+        321,
+        77,
+        431,
+        79
+      ],
+      "render_ink_bbox": [
+        321,
+        76,
+        431,
+        79
+      ],
+      "edge_delta_px": [
+        0,
+        -1,
+        0,
+        0
+      ],
+      "center_delta_px": [
+        0.0,
+        -0.5
+      ],
+      "max_abs_edge_delta_px": 1
+    },
+    {
+      "id": "stage_1_blue_right",
+      "kind": "shape_edge",
+      "region": [
+        466,
+        111,
+        484,
+        214
+      ],
+      "source_ink_bbox": [
+        473,
+        111,
+        476,
+        214
+      ],
+      "render_ink_bbox": [
+        474,
+        111,
+        476,
+        214
+      ],
+      "edge_delta_px": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "center_delta_px": [
+        0.5,
+        0.0
+      ],
+      "max_abs_edge_delta_px": 1
+    },
+    {
+      "id": "stage_1_blue_bottom",
+      "kind": "shape_edge",
+      "region": [
+        321,
+        236,
+        431,
+        255
+      ],
+      "source_ink_bbox": [
+        321,
+        244,
+        431,
+        246
+      ],
+      "render_ink_bbox": [
+        321,
+        244,
+        431,
+        247
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "center_delta_px": [
+        0.0,
+        0.5
+      ],
+      "max_abs_edge_delta_px": 1
+    },
+    {
+      "id": "down_1_orange_left",
+      "kind": "shape_edge",
+      "region": [
+        490,
+        91,
+        505,
+        233
+      ],
+      "source_ink_bbox": [
+        496,
+        91,
+        499,
+        233
+      ],
+      "render_ink_bbox": [
+        496,
+        91,
+        498,
+        233
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        -1,
+        0
+      ],
+      "center_delta_px": [
+        -0.5,
+        0.0
+      ],
+      "max_abs_edge_delta_px": 1
+    },
+    {
+      "id": "block_ln_1_top",
+      "kind": "shape_edge",
+      "region": [
+        267,
+        447,
+        309,
+        460
+      ],
+      "source_ink_bbox": [
+        267,
+        452,
+        309,
+        454
+      ],
+      "render_ink_bbox": [
+        267,
+        452,
+        309,
+        454
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "center_delta_px": [
+        0.0,
+        0.0
+      ],
+      "max_abs_edge_delta_px": 0
+    },
+    {
+      "id": "residual_main_baseline",
+      "kind": "line_edge",
+      "region": [
+        427,
+        487,
+        440,
+        506
+      ],
+      "source_ink_bbox": [
+        427,
+        495,
+        440,
+        499
+      ],
+      "render_ink_bbox": [
+        427,
+        495,
+        440,
+        498
+      ],
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        -1
+      ],
+      "center_delta_px": [
+        0.0,
+        -0.5
+      ],
+      "max_abs_edge_delta_px": 1
+    }
+  ]
+}

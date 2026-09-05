@@ -1,0 +1,187 @@
+{
+  "build_01": {
+    "shape_count": 161,
+    "native_types": {
+      "AUTO_SHAPE (1)": 47,
+      "LINE (9)": 69,
+      "PICTURE (13)": 10,
+      "TEXT_BOX (17)": 35
+    },
+    "native_freeforms": [],
+    "validation": {
+      "preflight": "pass",
+      "native_objects": "pass",
+      "rendered_text": "pass"
+    },
+    "status": "pass",
+    "font_substitutions": [],
+    "fonts": [
+      {
+        "family": "Courier New",
+        "east_asian_typeface": "Courier New",
+        "file": "Courier New.ttf",
+        "face_index": 0,
+        "weight": 400,
+        "italic": false,
+        "sha256": "c886ca3172d8ce9189976992d145ec090500a4ff516ecb9d4df56b1a78336247",
+        "embedding_fs_type": 8
+      },
+      {
+        "family": "Times New Roman",
+        "east_asian_typeface": "Times New Roman",
+        "file": "Times New Roman.ttf",
+        "face_index": 0,
+        "weight": 400,
+        "italic": false,
+        "sha256": "f3b4ffff71c2a0c7227d37497683b2498fb2d0a4e8beae26f022e3ccfcaabfa3",
+        "embedding_fs_type": 8
+      },
+      {
+        "family": "Times New Roman",
+        "east_asian_typeface": "Times New Roman",
+        "file": "Times New Roman Bold.ttf",
+        "face_index": 0,
+        "weight": 700,
+        "italic": false,
+        "sha256": "50f5b1f27b7d34621090e437e8b1dd4510a22d2823fc876b3286bed327b64bbb",
+        "embedding_fs_type": 8
+      }
+    ],
+    "diagnostic_comparisons": [
+      {
+        "slide": "page_001",
+        "mean_absolute_pixel_error": 0.025746,
+        "comparison": "page_001_comparison.png",
+        "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+      }
+    ]
+  },
+  "build_candidate_01": {
+    "shape_count": 147,
+    "native_types": {
+      "AUTO_SHAPE (1)": 47,
+      "LINE (9)": 50,
+      "FREEFORM (5)": 5,
+      "PICTURE (13)": 10,
+      "TEXT_BOX (17)": 35
+    },
+    "native_freeforms": [
+      "class_output",
+      "embedding_arrow",
+      "patches_arrow",
+      "residual_top_3",
+      "residual_bottom_3"
+    ],
+    "validation": {
+      "preflight": "pass",
+      "native_objects": "pass",
+      "rendered_text": "fail"
+    },
+    "status": "fail",
+    "font_substitutions": [],
+    "fonts": [
+      {
+        "family": "Courier",
+        "east_asian_typeface": "Courier",
+        "file": "Courier.ttc",
+        "face_index": 0,
+        "weight": 400,
+        "italic": false,
+        "sha256": "449a068ddd88f179b50b4d6dbb86aa08a30981148b510d5cc30d4ff0cb29e9a6",
+        "embedding_fs_type": null
+      },
+      {
+        "family": "Times New Roman",
+        "east_asian_typeface": "Times New Roman",
+        "file": "Times New Roman.ttf",
+        "face_index": 0,
+        "weight": 400,
+        "italic": false,
+        "sha256": "f3b4ffff71c2a0c7227d37497683b2498fb2d0a4e8beae26f022e3ccfcaabfa3",
+        "embedding_fs_type": 8
+      },
+      {
+        "family": "Times New Roman",
+        "east_asian_typeface": "Times New Roman",
+        "file": "Times New Roman Bold.ttf",
+        "face_index": 0,
+        "weight": 700,
+        "italic": false,
+        "sha256": "50f5b1f27b7d34621090e437e8b1dd4510a22d2823fc876b3286bed327b64bbb",
+        "embedding_fs_type": 8
+      }
+    ],
+    "diagnostic_comparisons": [
+      {
+        "slide": "page_001",
+        "mean_absolute_pixel_error": 0.018876,
+        "comparison": "page_001_comparison.png",
+        "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+      }
+    ]
+  },
+  "build_candidate_02": {
+    "shape_count": 147,
+    "native_types": {
+      "AUTO_SHAPE (1)": 47,
+      "LINE (9)": 50,
+      "FREEFORM (5)": 5,
+      "PICTURE (13)": 10,
+      "TEXT_BOX (17)": 35
+    },
+    "native_freeforms": [
+      "class_output",
+      "embedding_arrow",
+      "patches_arrow",
+      "residual_top_3",
+      "residual_bottom_3"
+    ],
+    "validation": {
+      "preflight": "pass",
+      "native_objects": "pass",
+      "rendered_text": "pass"
+    },
+    "status": "pass",
+    "font_substitutions": [],
+    "fonts": [
+      {
+        "family": "Liberation Mono",
+        "east_asian_typeface": "Liberation Mono",
+        "file": "LiberationMono-Regular.ttf",
+        "face_index": 0,
+        "weight": 400,
+        "italic": false,
+        "sha256": "f2b83c763e8afd21709333370bed4774337fae82267937e2b5aea7e2fbd922c1",
+        "embedding_fs_type": 0
+      },
+      {
+        "family": "Times New Roman",
+        "east_asian_typeface": "Times New Roman",
+        "file": "Times New Roman.ttf",
+        "face_index": 0,
+        "weight": 400,
+        "italic": false,
+        "sha256": "f3b4ffff71c2a0c7227d37497683b2498fb2d0a4e8beae26f022e3ccfcaabfa3",
+        "embedding_fs_type": 8
+      },
+      {
+        "family": "Times New Roman",
+        "east_asian_typeface": "Times New Roman",
+        "file": "Times New Roman Bold.ttf",
+        "face_index": 0,
+        "weight": 700,
+        "italic": false,
+        "sha256": "50f5b1f27b7d34621090e437e8b1dd4510a22d2823fc876b3286bed327b64bbb",
+        "embedding_fs_type": 8
+      }
+    ],
+    "diagnostic_comparisons": [
+      {
+        "slide": "page_001",
+        "mean_absolute_pixel_error": 0.018684,
+        "comparison": "page_001_comparison.png",
+        "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+      }
+    ]
+  }
+}

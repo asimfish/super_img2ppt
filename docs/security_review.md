@@ -11,6 +11,21 @@ conservative box geometry. Baked-text overlay, path and existing-output boundari
 place and their negative tests pass. Public test assets have separate source/license notices;
 the standalone skill package contains neither fonts nor the external real-case corpus.
 
+The v0.2.0 delta adds no dependencies, credentials or runtime network capability. Rotation is
+restricted to quarter turns so rectangular PDF glyph-bound checks remain meaningful. Custom
+arrow dimensions and dash/stroke ratios are validated before OOXML serialization; extreme
+ratios cannot overflow Office integer attributes. Alpha refinement only reads confined,
+text-free local assets, with at most 8 million source pixels and two cached alpha masks;
+larger assets retain conservative geometry. Text masks keep the existing 8 million pixel cap.
+Tests preserve rejection of actual opaque collisions and baked-text overlays in all three
+image fitting modes, including rotated labels. No asset instructions are executed.
+
+The repository-only source fetcher has fixed public URLs and SHA-256 values, writes only to a
+new output directory, bounds each download to 25 MB, and checks the hash before parsing a PDF.
+It is outside the standalone skill package. MobileViT source/derived artwork stays in local
+test output because its downloaded paper's non-exclusive arXiv license was not treated as a
+redistribution grant. Its provenance, findings and fetch recipe are documented separately.
+
 ## Sources and sinks
 
 | Source | Sink | Enforcement/evidence |

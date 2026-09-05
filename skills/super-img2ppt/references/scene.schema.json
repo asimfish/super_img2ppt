@@ -254,6 +254,15 @@
                     "bottom"
                   ]
                 },
+                "rotation": {
+                  "enum": [
+                    -90,
+                    0,
+                    90,
+                    180,
+                    270
+                  ]
+                },
                 "wrap": {
                   "type": "boolean"
                 },
@@ -346,6 +355,36 @@
                 },
                 "arrow": {
                   "type": "boolean"
+                },
+                "arrow_head": {
+                  "type": "object",
+                  "required": [
+                    "length",
+                    "width"
+                  ],
+                  "properties": {
+                    "length": {
+                      "type": "number",
+                      "exclusiveMinimum": 0,
+                      "maximum": 1000
+                    },
+                    "width": {
+                      "type": "number",
+                      "exclusiveMinimum": 0,
+                      "maximum": 1000
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "dash": {
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "minimum": 0.1,
+                    "maximum": 1000
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
                 },
                 "path": {
                   "type": "string",

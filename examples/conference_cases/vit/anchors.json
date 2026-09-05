@@ -1,0 +1,257 @@
+{
+  "anchors": [
+    {
+      "id": "title_vit",
+      "roi": [
+        174,
+        19,
+        420,
+        48
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "title_encoder",
+      "roi": [
+        681,
+        19,
+        890,
+        48
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "class",
+      "roi": [
+        44,
+        70,
+        96,
+        91
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "bird",
+      "roi": [
+        48,
+        91,
+        90,
+        107
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "mlp_head_1",
+      "roi": [
+        155,
+        91,
+        215,
+        112
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "mlp_head_2",
+      "roi": [
+        153,
+        111,
+        218,
+        133
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "main_encoder",
+      "roi": [
+        280,
+        193,
+        460,
+        221
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "projection",
+      "roi": [
+        242,
+        323,
+        561,
+        347
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "embedding_line1",
+      "roi": [
+        8,
+        274,
+        124,
+        293
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "embedding_line2",
+      "roi": [
+        20,
+        292,
+        116,
+        311
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "note_line1",
+      "roi": [
+        15,
+        314,
+        120,
+        331
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "note_line2",
+      "roi": [
+        15,
+        330,
+        132,
+        347
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "encoder_mlp",
+      "roi": [
+        750,
+        123,
+        810,
+        150
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "norm_top",
+      "roi": [
+        748,
+        184,
+        811,
+        208
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "norm_bottom",
+      "roi": [
+        748,
+        358,
+        812,
+        383
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "attention_1",
+      "roi": [
+        725,
+        277,
+        835,
+        299
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "attention_2",
+      "roi": [
+        733,
+        297,
+        825,
+        319
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "embedded_1",
+      "roi": [
+        730,
+        424,
+        830,
+        448
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "embedded_2",
+      "roi": [
+        742,
+        447,
+        820,
+        466
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "repeats",
+      "roi": [
+        699,
+        69,
+        739,
+        92
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "zero",
+      "roi": [
+        163,
+        281,
+        175,
+        302
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "one",
+      "roi": [
+        209,
+        280,
+        219,
+        302
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    },
+    {
+      "id": "note_class_only",
+      "roi": [
+        17,
+        330,
+        66,
+        347
+      ],
+      "threshold": 100,
+      "polarity": "dark"
+    }
+  ]
+}

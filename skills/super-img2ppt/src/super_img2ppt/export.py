@@ -16,6 +16,7 @@ from pptx.oxml.xmlchemy import OxmlElement
 from pptx.util import Inches, Pt
 
 from .fonts import east_asian_name
+from .geometry import arrow_outline
 from .layout import TextLayout, positioned_lines
 from .scene import safe_asset, slide_transform
 
@@ -62,8 +63,22 @@ def _fill_and_line(shape, element: dict, point_scale: float):
     if element.get("stroke") is not None:
         shape.line.color.rgb = _color(element["stroke"])
         shape.line.width = Pt(element.get("stroke_width", 1) * point_scale)
+        _dash(shape, element)
     else:
         shape.line.fill.background()
+
+
+def _dash(shape, element):
+    if "dash" not in element:
+        return
+    dash = OxmlElement("a:custDash")
+    pair = OxmlElement("a:ds")
+    on, off = element["dash"]
+    width = element.get("stroke_width", 1)
+    pair.set("d", str(round(on / width * 100000)))
+    pair.set("sp", str(round(off / width * 100000)))
+    dash.append(pair)
+    shape.line._get_or_add_ln().append(dash)
 
 
 def _image_data(path: Path) -> tuple[io.BytesIO, tuple[int, int]]:
@@ -92,24 +107,35 @@ def write_pptx(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pa
         for element in sorted(spec["elements"], key=lambda e: e["z"]):
             kind = element["kind"]
             if kind == "line":
-                p1, p2 = [tx.point(*point) for point in element["points"]]
-                shape = slide.shapes.add_connector(
-                    MSO_CONNECTOR.STRAIGHT,
-                    Inches(p1[0]),
-                    Inches(p1[1]),
-                    Inches(p2[0]),
-                    Inches(p2[1]),
-                )
-                shape.line.color.rgb = _color(element.get("stroke", "#111827"))
-                shape.line.width = Pt(element.get("stroke_width", 1) * point_scale)
-                if element.get("arrow", False):
-                    arrow = OxmlElement("a:tailEnd")
-                    arrow.set("type", "triangle")
-                    shape.line._get_or_add_ln().append(arrow)
+                if "arrow_head" in element:
+                    points = [(x * 1000, y * 1000) for x, y in arrow_outline(element)]
+                    builder = slide.shapes.build_freeform(*points[0], scale=tx.scale * 914.4)
+                    builder.add_line_segments(points[1:], close=True)
+                    shape = builder.convert_to_shape(Inches(tx.x), Inches(tx.y))
+                    shape.fill.solid()
+                    shape.fill.fore_color.rgb = _color(element.get("stroke", "#111827"))
+                    shape.line.fill.background()
+                else:
+                    p1, p2 = [tx.point(*point) for point in element["points"]]
+                    shape = slide.shapes.add_connector(
+                        MSO_CONNECTOR.STRAIGHT,
+                        Inches(p1[0]),
+                        Inches(p1[1]),
+                        Inches(p2[0]),
+                        Inches(p2[1]),
+                    )
+                    shape.line.color.rgb = _color(element.get("stroke", "#111827"))
+                    shape.line.width = Pt(element.get("stroke_width", 1) * point_scale)
+                    _dash(shape, element)
+                    if element.get("arrow", False):
+                        arrow = OxmlElement("a:tailEnd")
+                        arrow.set("type", "triangle")
+                        shape.line._get_or_add_ln().append(arrow)
             else:
                 x, y, w, h = tx.box(element["box"])
                 if kind == "text":
                     shape = slide.shapes.add_textbox(Inches(x), Inches(y), Inches(w), Inches(h))
+                    shape.rotation = element.get("rotation", 0)
                     frame = shape.text_frame
                     frame.clear()
                     frame.word_wrap = False
@@ -204,6 +230,9 @@ def write_svg(slide: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
         group = ET.SubElement(svg, "g", {"id": element["id"]})
         kind = element["kind"]
         if kind == "text":
+            if element.get("rotation", 0):
+                x, y, w, h = element["box"]
+                group.set("transform", f"rotate({element['rotation']} {x + w / 2} {y + h / 2})")
             for x, y, line in positioned_lines(element, layouts[slide["id"], element["id"]]):
                 text_node = ET.SubElement(
                     group,
@@ -228,6 +257,16 @@ def write_svg(slide: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                     )
                     tspan.text = fragment.text
         elif kind == "line":
+            if "arrow_head" in element:
+                ET.SubElement(
+                    group,
+                    "polygon",
+                    {
+                        "points": " ".join(f"{x},{y}" for x, y in arrow_outline(element)),
+                        "fill": element.get("stroke", "#111827"),
+                    },
+                )
+                continue
             (x1, y1), (x2, y2) = element["points"]
             attrs = {
                 "x1": str(x1),
@@ -237,6 +276,8 @@ def write_svg(slide: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                 "stroke": element.get("stroke", "#111827"),
                 "stroke-width": str(element.get("stroke_width", 1)),
             }
+            if "dash" in element:
+                attrs["stroke-dasharray"] = " ".join(map(str, element["dash"]))
             if element.get("arrow", False):
                 marker_id = f"marker-{element['id']}"
                 marker = ET.SubElement(
@@ -274,6 +315,8 @@ def write_svg(slide: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                     "stroke": element.get("stroke") or "none",
                     "stroke-width": str(element.get("stroke_width", 1)),
                 }
+                if "dash" in element:
+                    style["stroke-dasharray"] = " ".join(map(str, element["dash"]))
                 name = element["shape"]
                 if name in {"rect", "round_rect"}:
                     if name == "round_rect":

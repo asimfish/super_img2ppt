@@ -1,0 +1,27 @@
+{
+  "status": "fail",
+  "findings": [
+    {
+      "slide": "page_001",
+      "code": "unreviewed_scene",
+      "severity": "warning",
+      "elements": [],
+      "message": "Confirm OCR and geometry against the source, then set reviewed=true"
+    },
+    {
+      "slide": "page_001",
+      "code": "empty_slide",
+      "severity": "error",
+      "elements": [],
+      "message": "Scene has no reconstructed elements"
+    }
+  ],
+  "slides": [
+    {
+      "id": "page_001",
+      "counts": {},
+      "intentional_overlaps": [],
+      "text_layouts": {}
+    }
+  ]
+}

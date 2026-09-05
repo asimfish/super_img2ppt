@@ -1,0 +1,959 @@
+{
+  "build": "build_04",
+  "units": "source-image pixels",
+  "threshold": "max RGB <155 for dark text; red/blue explicit channel isolation",
+  "text_anchors": [
+    {
+      "id": "vit_linear_1_text",
+      "roi": [
+        564,
+        99,
+        639,
+        130
+      ],
+      "source_ink_bbox": [
+        566,
+        104,
+        636,
+        122
+      ],
+      "render_ink_bbox": [
+        566,
+        104,
+        636,
+        124
+      ],
+      "edge_delta_px": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 2
+      },
+      "width_delta_px": 0,
+      "height_delta_px": 2,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "vit_transformer_text",
+      "roi": [
+        915,
+        99,
+        1053,
+        130
+      ],
+      "source_ink_bbox": [
+        917,
+        103,
+        1051,
+        122
+      ],
+      "render_ink_bbox": [
+        917,
+        103,
+        1049,
+        123
+      ],
+      "edge_delta_px": {
+        "left": 0,
+        "top": 0,
+        "right": -2,
+        "bottom": 1
+      },
+      "width_delta_px": -2,
+      "height_delta_px": 1,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "vit_logits",
+      "roi": [
+        1240,
+        94,
+        1320,
+        132
+      ],
+      "source_ink_bbox": [
+        1242,
+        101,
+        1310,
+        125
+      ],
+      "render_ink_bbox": [
+        1242,
+        101,
+        1309,
+        126
+      ],
+      "edge_delta_px": {
+        "left": 0,
+        "top": 0,
+        "right": -1,
+        "bottom": 1
+      },
+      "width_delta_px": -1,
+      "height_delta_px": 1,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "flatten_text",
+      "roi": [
+        296,
+        244,
+        541,
+        276
+      ],
+      "source_ink_bbox": [
+        301,
+        245,
+        535,
+        269
+      ],
+      "render_ink_bbox": [
+        302,
+        245,
+        533,
+        270
+      ],
+      "edge_delta_px": {
+        "left": 1,
+        "top": 0,
+        "right": -2,
+        "bottom": 1
+      },
+      "width_delta_px": -3,
+      "height_delta_px": 1,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "position_text",
+      "roi": [
+        713,
+        240,
+        940,
+        273
+      ],
+      "source_ink_bbox": [
+        720,
+        242,
+        932,
+        266
+      ],
+      "render_ink_bbox": [
+        721,
+        242,
+        931,
+        267
+      ],
+      "edge_delta_px": {
+        "left": 1,
+        "top": 0,
+        "right": -1,
+        "bottom": 1
+      },
+      "width_delta_px": -2,
+      "height_delta_px": 1,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "caption_title",
+      "roi": [
+        560,
+        294,
+        1100,
+        334
+      ],
+      "source_ink_bbox": [
+        565,
+        300,
+        1091,
+        331
+      ],
+      "render_ink_bbox": [
+        565,
+        300,
+        1091,
+        333
+      ],
+      "edge_delta_px": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 2
+      },
+      "width_delta_px": 0,
+      "height_delta_px": 2,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "mobilevit_title",
+      "roi": [
+        700,
+        345,
+        903,
+        374
+      ],
+      "source_ink_bbox": [
+        710,
+        348,
+        895,
+        366
+      ],
+      "render_ink_bbox": [
+        711,
+        348,
+        896,
+        366
+      ],
+      "edge_delta_px": {
+        "left": 1,
+        "top": 0,
+        "right": 1,
+        "bottom": 0
+      },
+      "width_delta_px": 0,
+      "height_delta_px": 0,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "local_title_2",
+      "roi": [
+        286,
+        457,
+        424,
+        478
+      ],
+      "source_ink_bbox": [
+        288,
+        457,
+        422,
+        475
+      ],
+      "render_ink_bbox": [
+        289,
+        457,
+        418,
+        475
+      ],
+      "edge_delta_px": {
+        "left": 1,
+        "top": 0,
+        "right": -4,
+        "bottom": 0
+      },
+      "width_delta_px": -5,
+      "height_delta_px": 0,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "global_title",
+      "roi": [
+        576,
+        416,
+        856,
+        437
+      ],
+      "source_ink_bbox": [
+        583,
+        420,
+        846,
+        434
+      ],
+      "render_ink_bbox": [
+        583,
+        420,
+        840,
+        434
+      ],
+      "edge_delta_px": {
+        "left": 0,
+        "top": 0,
+        "right": -6,
+        "bottom": 0
+      },
+      "width_delta_px": -6,
+      "height_delta_px": 0,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "inner_transformer_text",
+      "roi": [
+        691,
+        506,
+        772,
+        525
+      ],
+      "source_ink_bbox": [
+        693,
+        511,
+        770,
+        522
+      ],
+      "render_ink_bbox": [
+        693,
+        511,
+        769,
+        522
+      ],
+      "edge_delta_px": {
+        "left": 0,
+        "top": 0,
+        "right": -1,
+        "bottom": 0
+      },
+      "width_delta_px": -1,
+      "height_delta_px": 0,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "fusion_title",
+      "roi": [
+        1236,
+        552,
+        1309,
+        575
+      ],
+      "source_ink_bbox": [
+        1243,
+        556,
+        1302,
+        570
+      ],
+      "render_ink_bbox": [
+        1244,
+        556,
+        1299,
+        570
+      ],
+      "edge_delta_px": {
+        "left": 1,
+        "top": 0,
+        "right": -3,
+        "bottom": 0
+      },
+      "width_delta_px": -4,
+      "height_delta_px": 0,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "mv2_1_text",
+      "roi": [
+        340,
+        767,
+        389,
+        801
+      ],
+      "source_ink_bbox": [
+        343,
+        777,
+        384,
+        790
+      ],
+      "render_ink_bbox": [
+        344,
+        777,
+        384,
+        791
+      ],
+      "edge_delta_px": {
+        "left": 1,
+        "top": 0,
+        "right": 0,
+        "bottom": 1
+      },
+      "width_delta_px": -1,
+      "height_delta_px": 1,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "mvit_1_text",
+      "roi": [
+        685,
+        761,
+        778,
+        784
+      ],
+      "source_ink_bbox": [
+        688,
+        767,
+        776,
+        780
+      ],
+      "render_ink_bbox": [
+        689,
+        766,
+        776,
+        780
+      ],
+      "edge_delta_px": {
+        "left": 1,
+        "top": -1,
+        "right": 0,
+        "bottom": 0
+      },
+      "width_delta_px": -1,
+      "height_delta_px": 1,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "mvit_1_patch",
+      "roi": [
+        683,
+        824,
+        784,
+        850
+      ],
+      "source_ink_bbox": [
+        688,
+        827,
+        775,
+        841
+      ],
+      "render_ink_bbox": [
+        688,
+        827,
+        766,
+        842
+      ],
+      "edge_delta_px": {
+        "left": 0,
+        "top": 0,
+        "right": -9,
+        "bottom": 1
+      },
+      "width_delta_px": -9,
+      "height_delta_px": 1,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "dim128",
+      "roi": [
+        195,
+        864,
+        309,
+        896
+      ],
+      "source_ink_bbox": [
+        202,
+        869,
+        303,
+        887
+      ],
+      "render_ink_bbox": [
+        202,
+        869,
+        301,
+        888
+      ],
+      "edge_delta_px": {
+        "left": 0,
+        "top": 0,
+        "right": -2,
+        "bottom": 1
+      },
+      "width_delta_px": -2,
+      "height_delta_px": 1,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "dim64",
+      "roi": [
+        404,
+        864,
+        497,
+        896
+      ],
+      "source_ink_bbox": [
+        411,
+        869,
+        489,
+        887
+      ],
+      "render_ink_bbox": [
+        411,
+        869,
+        487,
+        888
+      ],
+      "edge_delta_px": {
+        "left": 0,
+        "top": 0,
+        "right": -2,
+        "bottom": 1
+      },
+      "width_delta_px": -2,
+      "height_delta_px": 1,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "dim32",
+      "roi": [
+        577,
+        864,
+        671,
+        896
+      ],
+      "source_ink_bbox": [
+        583,
+        869,
+        661,
+        887
+      ],
+      "render_ink_bbox": [
+        583,
+        869,
+        659,
+        888
+      ],
+      "edge_delta_px": {
+        "left": 0,
+        "top": 0,
+        "right": -2,
+        "bottom": 1
+      },
+      "width_delta_px": -2,
+      "height_delta_px": 1,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "dim16",
+      "roi": [
+        797,
+        864,
+        889,
+        896
+      ],
+      "source_ink_bbox": [
+        803,
+        869,
+        880,
+        887
+      ],
+      "render_ink_bbox": [
+        803,
+        869,
+        877,
+        888
+      ],
+      "edge_delta_px": {
+        "left": 0,
+        "top": 0,
+        "right": -3,
+        "bottom": 1
+      },
+      "width_delta_px": -3,
+      "height_delta_px": 1,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "dim8",
+      "roi": [
+        1026,
+        864,
+        1097,
+        896
+      ],
+      "source_ink_bbox": [
+        1033,
+        869,
+        1086,
+        887
+      ],
+      "render_ink_bbox": [
+        1033,
+        869,
+        1083,
+        888
+      ],
+      "edge_delta_px": {
+        "left": 0,
+        "top": 0,
+        "right": -3,
+        "bottom": 1
+      },
+      "width_delta_px": -3,
+      "height_delta_px": 1,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "dim1",
+      "roi": [
+        1409,
+        864,
+        1481,
+        896
+      ],
+      "source_ink_bbox": [
+        1417,
+        870,
+        1468,
+        886
+      ],
+      "render_ink_bbox": [
+        1417,
+        871,
+        1463,
+        888
+      ],
+      "edge_delta_px": {
+        "left": 0,
+        "top": 1,
+        "right": -5,
+        "bottom": 2
+      },
+      "width_delta_px": -5,
+      "height_delta_px": 1,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "stem_down",
+      "roi": [
+        231,
+        783,
+        273,
+        807
+      ],
+      "source_ink_bbox": [
+        240,
+        786,
+        263,
+        803
+      ],
+      "render_ink_bbox": [
+        240,
+        788,
+        263,
+        806
+      ],
+      "edge_delta_px": {
+        "left": 0,
+        "top": 2,
+        "right": 0,
+        "bottom": 3
+      },
+      "width_delta_px": 0,
+      "height_delta_px": 1,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "mv2_2_down",
+      "roi": [
+        432,
+        783,
+        472,
+        807
+      ],
+      "source_ink_bbox": [
+        438,
+        786,
+        461,
+        803
+      ],
+      "render_ink_bbox": [
+        441,
+        788,
+        464,
+        806
+      ],
+      "edge_delta_px": {
+        "left": 3,
+        "top": 2,
+        "right": 3,
+        "bottom": 3
+      },
+      "width_delta_px": 0,
+      "height_delta_px": 1,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "mv2_4_down",
+      "roi": [
+        604,
+        783,
+        645,
+        807
+      ],
+      "source_ink_bbox": [
+        610,
+        787,
+        634,
+        803
+      ],
+      "render_ink_bbox": [
+        613,
+        788,
+        636,
+        806
+      ],
+      "edge_delta_px": {
+        "left": 3,
+        "top": 1,
+        "right": 2,
+        "bottom": 3
+      },
+      "width_delta_px": -1,
+      "height_delta_px": 2,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "mv2_5_down",
+      "roi": [
+        823,
+        783,
+        862,
+        807
+      ],
+      "source_ink_bbox": [
+        829,
+        786,
+        853,
+        803
+      ],
+      "render_ink_bbox": [
+        832,
+        788,
+        855,
+        806
+      ],
+      "edge_delta_px": {
+        "left": 3,
+        "top": 2,
+        "right": 2,
+        "bottom": 3
+      },
+      "width_delta_px": -1,
+      "height_delta_px": 1,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    },
+    {
+      "id": "mv2_6_down",
+      "roi": [
+        1042,
+        783,
+        1081,
+        807
+      ],
+      "source_ink_bbox": [
+        1048,
+        786,
+        1071,
+        803
+      ],
+      "render_ink_bbox": [
+        1051,
+        788,
+        1074,
+        806
+      ],
+      "edge_delta_px": {
+        "left": 3,
+        "top": 2,
+        "right": 3,
+        "bottom": 3
+      },
+      "width_delta_px": 0,
+      "height_delta_px": 1,
+      "bottom_edge_is_baseline_proxy": "No separate typographic baseline can be recovered uniquely from the bitmap; bottom edge is reported directly."
+    }
+  ],
+  "shape_anchors": [
+    {
+      "id": "vit_linear_left",
+      "roi": [
+        557,
+        92,
+        565,
+        133
+      ],
+      "axis": "x",
+      "source_stroke_center_px": 561.5,
+      "render_stroke_center_px": 561.0,
+      "delta_px": -0.5
+    },
+    {
+      "id": "vit_linear_top",
+      "roi": [
+        570,
+        79,
+        632,
+        89
+      ],
+      "axis": "y",
+      "source_stroke_center_px": 84.0,
+      "render_stroke_center_px": 84.0,
+      "delta_px": 0.0
+    },
+    {
+      "id": "mobilevit_panel_left",
+      "roi": [
+        167,
+        349,
+        177,
+        622
+      ],
+      "axis": "x",
+      "source_stroke_center_px": 171.5,
+      "render_stroke_center_px": 171.5,
+      "delta_px": 0.0
+    },
+    {
+      "id": "mobilevit_panel_bottom",
+      "roi": [
+        180,
+        624,
+        1430,
+        634
+      ],
+      "axis": "y",
+      "source_stroke_center_px": 628.5,
+      "render_stroke_center_px": 628.5,
+      "delta_px": 0.0
+    },
+    {
+      "id": "stem_left",
+      "roi": [
+        194,
+        761,
+        204,
+        806
+      ],
+      "axis": "x",
+      "source_stroke_center_px": 199.0,
+      "render_stroke_center_px": 198.5,
+      "delta_px": -0.5
+    },
+    {
+      "id": "stem_top",
+      "roi": [
+        211,
+        743,
+        294,
+        754
+      ],
+      "axis": "y",
+      "source_stroke_center_px": 748.5,
+      "render_stroke_center_px": 748.5,
+      "delta_px": 0.0
+    },
+    {
+      "id": "inner_transformer_left",
+      "roi": [
+        685,
+        501,
+        694,
+        532
+      ],
+      "axis": "x",
+      "source_stroke_center_px": 689.0,
+      "render_stroke_center_px": 689.5,
+      "delta_px": 0.5
+    },
+    {
+      "id": "bottom_arrow_shaft",
+      "roi": [
+        176,
+        778,
+        191,
+        790
+      ],
+      "axis": "y",
+      "source_stroke_center_px": 783.5,
+      "render_stroke_center_px": 783.5,
+      "delta_px": 0.0
+    }
+  ],
+  "unsupported_oblique_labels": [
+    {
+      "id": "vit_dim_3p",
+      "source_ink_bbox": [
+        451,
+        22,
+        476,
+        55
+      ],
+      "render_ink_bbox": [
+        451,
+        24,
+        480,
+        44
+      ],
+      "edge_delta_px": [
+        0,
+        2,
+        4,
+        -11
+      ],
+      "limitation": "Source oblique rotation not expressible by schema; text kept native and horizontal."
+    },
+    {
+      "id": "vit_dim_d",
+      "source_ink_bbox": [
+        712,
+        29,
+        726,
+        50
+      ],
+      "render_ink_bbox": [
+        713,
+        30,
+        727,
+        49
+      ],
+      "edge_delta_px": [
+        1,
+        1,
+        1,
+        -1
+      ],
+      "limitation": "Source oblique rotation not expressible by schema; text kept native and horizontal."
+    },
+    {
+      "id": "local_tensor_d",
+      "source_ink_bbox": [
+        476,
+        474,
+        484,
+        486
+      ],
+      "render_ink_bbox": [
+        475,
+        474,
+        483,
+        485
+      ],
+      "edge_delta_px": [
+        -1,
+        0,
+        -1,
+        -1
+      ],
+      "limitation": "Source oblique rotation not expressible by schema; text kept native and horizontal."
+    },
+    {
+      "id": "fusion_upper_2c",
+      "source_ink_bbox": [
+        1122,
+        370,
+        1137,
+        390
+      ],
+      "render_ink_bbox": [
+        1120,
+        373,
+        1139,
+        384
+      ],
+      "edge_delta_px": [
+        -2,
+        3,
+        2,
+        -6
+      ],
+      "limitation": "Source oblique rotation not expressible by schema; text kept native and horizontal."
+    }
+  ],
+  "summary": {
+    "text_edge_abs_median_px": 1.0,
+    "text_edge_abs_max_px": 9,
+    "shape_center_abs_median_px": 0.0,
+    "shape_center_abs_max_px": 0.5
+  }
+}

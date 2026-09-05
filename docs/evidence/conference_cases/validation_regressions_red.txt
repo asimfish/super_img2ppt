@@ -1,0 +1,37 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+______________ test_extreme_dash_ratio_is_rejected_before_export _______________
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+
+    def test_extreme_dash_ratio_is_rejected_before_export(scene):
+        spec = diagram(scene)
+        spec["slides"][0]["elements"][2]["stroke_width"] = 1e-310
+>       with pytest.raises(InputError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE InputError
+
+tests/test_diagram_features.py:175: Failed
+____________ test_matching_aspect_stretch_does_not_claim_distortion ____________
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10bf8ca10>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-135/test_matching_aspect_stretch_d0')
+
+    def test_matching_aspect_stretch_does_not_claim_distortion(scene, fonts, tmp_path):
+        spec = diagram(scene)
+        Image.new("RGB", (100, 50), "green").save(tmp_path / "image.png")
+        spec["slides"][0]["elements"] = [{"id": "image", "kind": "image", "z": 0,
+            "box": [20, 20, 200, 100], "path": "image.png", "image_fit": "stretch",
+            "contains_text": False, "provenance": "Isolated source artwork with matching aspect ratio"}]
+>       assert preflight(spec, layout_scene(spec, fonts), tmp_path)["status"] == "pass"
+E       AssertionError: assert 'review' == 'pass'
+E         
+E         - pass
+E         + review
+
+tests/test_diagram_features.py:185: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_diagram_features.py::test_extreme_dash_ratio_is_rejected_before_export
+FAILED tests/test_diagram_features.py::test_matching_aspect_stretch_does_not_claim_distortion
+2 failed, 5 deselected in 5.60s

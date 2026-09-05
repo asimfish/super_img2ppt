@@ -30,9 +30,9 @@ size in PPTX equals `font_size * transform.scale * 72`.
 
 | Object | Required fields beyond `id`, `kind`, `z` | Useful optional fields |
 | --- | --- | --- |
-| text | `box`, `font_size`, exactly one of `text` or `runs` | `font_family`, `cjk_font_family`, `bold`, `italic`, `color`, `align`, `valign`, `padding`, `wrap`, `line_height`, `fit`, `min_font_size`, `font_group` |
-| shape | `box`, `shape` | `fill`, `stroke`, `stroke_width`, `radius` |
-| line | `points: [[x1,y1],[x2,y2]]` | `stroke`, `stroke_width`, `arrow` |
+| text | `box`, `font_size`, exactly one of `text` or `runs` | `font_family`, `cjk_font_family`, `bold`, `italic`, `color`, `align`, `valign`, `padding`, `wrap`, `line_height`, `fit`, `min_font_size`, `font_group`, `rotation` |
+| shape | `box`, `shape` | `fill`, `stroke`, `stroke_width`, `radius`, `dash` |
+| line | `points: [[x1,y1],[x2,y2]]` | `stroke`, `stroke_width`, `arrow`, `arrow_head`, `dash` |
 | image | `box`, `path`, `provenance`, `contains_text` | `image_fit: contain/cover/stretch` |
 
 Shapes: `rect`, `round_rect`, `ellipse`, `triangle`, `diamond`, `chevron`. Colors: `#RRGGBB`.
@@ -44,10 +44,27 @@ newlines. The exporter writes explicit measured lines with Office autofit disabl
 
 A run contains `text` and optional font fields from the containing textbox; run size and
 emphasis are preserved. Escape newlines in JSON strings as `\n`. Unknown fields are rejected.
-Rotation, gradients and editable chart data are not part of v1; do not silently add ignored keys.
+The v0.2 runtime extends scene v1 with the optional fields below. Arbitrary-angle rotation,
+gradients and editable chart data remain unsupported; do not silently add ignored keys.
+
+- `rotation`: text only, one of `-90`, `0`, `90`, `180`, `270`, clockwise in screen coordinates.
+  The `box` is the **unrotated horizontal** text frame. Fit its text normally, then rotate about
+  `[x+w/2, y+h/2]`. For a final vertical footprint `[x,y,w,h]`, use horizontal box
+  `[x+w/2-h/2, y+h/2-w/2, h, w]` and `rotation: 90` or `-90`. This preserves native text,
+  font runs and editability. Geometry and actual PDF checks use the rotated position.
+- `dash: [on, off]`: positive source-pixel dash and gap lengths for lines or shape outlines.
+  Requires a positive visible stroke. No automatic split into hundreds of line elements.
+  Collision checks conservatively treat the complete stroke as occupied, including gaps.
+- `arrow_head: {"length": 12, "width": 10}`: requires `arrow: true`, a positive solid shaft,
+  a head shorter than the point-to-point distance, and width at least the shaft width.
+  The final point is the tip. The arrow exports as one editable native freeform, with geometry
+  shared by SVG and QA; it does not reconnect automatically when a node is moved.
+  Combining custom heads with `dash` is rejected. Legacy arrows without `arrow_head` retain
+  native Office connector heads; QA uses conservative SVG-sized head bounds.
 
 All objects may have `container`, `confidence`, `role`, `allow_overlap_with`, `overlap_reason`.
-`container` must refer to a shape at a lower z-order and contain the entire child.
+`container` must refer to a shape at a lower z-order and contain the child's visible text ink
+(including its rotation), or the full geometry of a non-text child.
 `role: background` permits a text-free background behind content; it does not authorize copying
 the source screenshot. All asset paths are local, relative to the scene directory, and confined
 to it even after resolving symlinks. URLs and absolute paths are rejected.

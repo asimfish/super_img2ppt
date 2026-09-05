@@ -1,0 +1,3220 @@
+{
+  "version": 1,
+  "title": "ViT Figure 1 editable reconstruction from author bitmap",
+  "fonts": {
+    "latin": [
+      "Times New Roman",
+      "Liberation Mono",
+      "Courier New"
+    ]
+  },
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 930,
+      "height": 485,
+      "source": "assets/527ce51f7e73944e3cb2.png",
+      "background": "#FFFFFF",
+      "reviewed": true,
+      "notes": "Candidate working-tree reconstruction from the provided ViT bitmap. All text, panels and lines editable; ten text-free photographic crops remain raster. Explicit arrow_head dimensions reconstruct horizontal heads as native editable freeforms. The separator uses source-pixel native dashes. Residual paths still use square joins because schema lacks rounded polylines. Only actual LibreOffice PPTX rendering is tested, not native PowerPoint/WPS.",
+      "elements": [
+        {
+          "id": "title_vit",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            178.625,
+            20.6,
+            240.188,
+            26.15
+          ],
+          "font_size": 21.4,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "runs": [
+            {
+              "text": "Vision Transformer (ViT)",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 21.4,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "title_encoder",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            685.0,
+            20.6,
+            203.469,
+            26.15
+          ],
+          "font_size": 21.4,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "runs": [
+            {
+              "text": "Transformer Encoder",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 21.4,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "class_capsule",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            40.5,
+            53,
+            59,
+            120
+          ],
+          "shape": "round_rect",
+          "fill": "#FECD9D",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 29.5
+        },
+        {
+          "id": "mlp_head",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            146.5,
+            86,
+            74,
+            55
+          ],
+          "shape": "round_rect",
+          "fill": "#FECD9D",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 5
+        },
+        {
+          "id": "main_encoder",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            146.7,
+            168,
+            444.6,
+            79.5
+          ],
+          "shape": "round_rect",
+          "fill": "#E1E1E1",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 5
+        },
+        {
+          "id": "projection",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            211.5,
+            319,
+            380,
+            35
+          ],
+          "shape": "round_rect",
+          "fill": "#FBDDDC",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 5
+        },
+        {
+          "id": "class",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            49.375,
+            70.35,
+            43.25,
+            22.275
+          ],
+          "font_size": 18.5,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "class_capsule",
+          "runs": [
+            {
+              "text": "Class",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 18.5,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "bird",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            55.875,
+            88.85,
+            29.25,
+            19.112
+          ],
+          "font_size": 15.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "class_capsule",
+          "runs": [
+            {
+              "text": "Bird",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "ball",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            56.875,
+            105.85,
+            27.5,
+            19.112
+          ],
+          "font_size": 15.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "class_capsule",
+          "runs": [
+            {
+              "text": "Ball",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "car",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            58.375,
+            121.6,
+            23.75,
+            19.112
+          ],
+          "font_size": 15.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "class_capsule",
+          "runs": [
+            {
+              "text": "Car",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "ellipsis",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            65.125,
+            139.1,
+            10.75,
+            15.95
+          ],
+          "font_size": 13,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "class_capsule",
+          "runs": [
+            {
+              "text": "...",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 13,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "head_mlp",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            164.0,
+            90.35,
+            41.5,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "mlp_head",
+          "runs": [
+            {
+              "text": "MLP",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "head_head",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            162.625,
+            110.1,
+            42.75,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "mlp_head",
+          "runs": [
+            {
+              "text": "Head",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "main_encoder_label",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            284.75,
+            195.1,
+            170.488,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "main_encoder",
+          "runs": [
+            {
+              "text": "Transformer Encoder",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "projection_label",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            250.25,
+            323.1,
+            304.75,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "projection",
+          "runs": [
+            {
+              "text": "Linear Projection of Flattened Patches",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "class_output",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              146.5,
+              113
+            ],
+            [
+              101,
+              113
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": true,
+          "allow_overlap_with": [
+            "mlp_head",
+            "class_capsule"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "arrow_head": {
+            "length": 14.5,
+            "width": 10
+          }
+        },
+        {
+          "id": "encoder_to_head",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              183.5,
+              168
+            ],
+            [
+              183.5,
+              141
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "main_encoder",
+            "mlp_head"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "position_0",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            161.5,
+            278.5,
+            15,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#CAB4CB",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "token_0",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            177,
+            278.5,
+            14.5,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#FBDDDC",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "position_label_0",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            164.0,
+            280.6,
+            11.0,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "position_0",
+          "runs": [
+            {
+              "text": "0",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "class_star",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            179.75,
+            283.35,
+            10.0,
+            21.7
+          ],
+          "font_size": 18,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "token_0",
+          "runs": [
+            {
+              "text": "*",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 18,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_shaft_0",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              183.5,
+              278.5
+            ],
+            [
+              183.5,
+              261.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "token_0",
+            "token_arrow_0"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "token_arrow_0",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            179.1,
+            249.3,
+            8.8,
+            13.6
+          ],
+          "shape": "triangle",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0
+        },
+        {
+          "id": "position_1",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            206,
+            277.5,
+            15,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#CAB4CB",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "token_1",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            221,
+            277.5,
+            14.5,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#FBDDDC",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "position_label_1",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            208.5,
+            279.6,
+            11.0,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "position_1",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_shaft_1",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              228.5,
+              277.5
+            ],
+            [
+              228.5,
+              261.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "token_1",
+            "token_arrow_1"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "token_arrow_1",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            224.1,
+            249.3,
+            8.8,
+            13.6
+          ],
+          "shape": "triangle",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0
+        },
+        {
+          "id": "projection_to_token_1",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              228.5,
+              319
+            ],
+            [
+              228.5,
+              305.0
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection",
+            "token_1"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "patch_to_projection_1",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              228.5,
+              380
+            ],
+            [
+              228.5,
+              354
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "position_2",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            249.5,
+            277.5,
+            15,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#CAB4CB",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "token_2",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            264.5,
+            277.5,
+            14.5,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#FBDDDC",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "position_label_2",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            252.25,
+            279.6,
+            11.0,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "position_2",
+          "runs": [
+            {
+              "text": "2",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_shaft_2",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              271.5,
+              277.5
+            ],
+            [
+              271.5,
+              261.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "token_2",
+            "token_arrow_2"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "token_arrow_2",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            267.1,
+            249.3,
+            8.8,
+            13.6
+          ],
+          "shape": "triangle",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0
+        },
+        {
+          "id": "projection_to_token_2",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              271.5,
+              319
+            ],
+            [
+              271.5,
+              305.0
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection",
+            "token_2"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "patch_to_projection_2",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              271.5,
+              380
+            ],
+            [
+              271.5,
+              354
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "position_3",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            290.5,
+            277.5,
+            15,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#CAB4CB",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "token_3",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            305.5,
+            277.5,
+            14.5,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#FBDDDC",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "position_label_3",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            293.5,
+            279.6,
+            11.0,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "position_3",
+          "runs": [
+            {
+              "text": "3",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_shaft_3",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              312.5,
+              277.5
+            ],
+            [
+              312.5,
+              261.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "token_3",
+            "token_arrow_3"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "token_arrow_3",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            308.1,
+            249.3,
+            8.8,
+            13.6
+          ],
+          "shape": "triangle",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0
+        },
+        {
+          "id": "projection_to_token_3",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              312.5,
+              319
+            ],
+            [
+              312.5,
+              305.0
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection",
+            "token_3"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "patch_to_projection_3",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              312.5,
+              380
+            ],
+            [
+              312.5,
+              354
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "position_4",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            334.5,
+            277.5,
+            15,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#CAB4CB",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "token_4",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            349.5,
+            277.5,
+            14.5,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#FBDDDC",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "position_label_4",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            337.25,
+            279.6,
+            11.0,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "position_4",
+          "runs": [
+            {
+              "text": "4",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_shaft_4",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              356.5,
+              277.5
+            ],
+            [
+              356.5,
+              261.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "token_4",
+            "token_arrow_4"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "token_arrow_4",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            352.1,
+            249.3,
+            8.8,
+            13.6
+          ],
+          "shape": "triangle",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0
+        },
+        {
+          "id": "projection_to_token_4",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              356.5,
+              319
+            ],
+            [
+              356.5,
+              305.0
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection",
+            "token_4"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "patch_to_projection_4",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              356.5,
+              380
+            ],
+            [
+              356.5,
+              354
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "position_5",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            375,
+            277.5,
+            15,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#CAB4CB",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "token_5",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            390,
+            277.5,
+            14.5,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#FBDDDC",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "position_label_5",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            377.75,
+            279.35,
+            11.0,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "position_5",
+          "runs": [
+            {
+              "text": "5",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_shaft_5",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              397,
+              277.5
+            ],
+            [
+              397,
+              261.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "token_5",
+            "token_arrow_5"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "token_arrow_5",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            392.6,
+            249.3,
+            8.8,
+            13.6
+          ],
+          "shape": "triangle",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0
+        },
+        {
+          "id": "projection_to_token_5",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              397,
+              319
+            ],
+            [
+              397,
+              305.0
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection",
+            "token_5"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "patch_to_projection_5",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              397,
+              380
+            ],
+            [
+              397,
+              354
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "position_6",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            419,
+            277.5,
+            15,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#CAB4CB",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "token_6",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            434,
+            277.5,
+            14.5,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#FBDDDC",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "position_label_6",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            421.5,
+            279.6,
+            11.0,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "position_6",
+          "runs": [
+            {
+              "text": "6",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_shaft_6",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              441,
+              277.5
+            ],
+            [
+              441,
+              261.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "token_6",
+            "token_arrow_6"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "token_arrow_6",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            436.6,
+            249.3,
+            8.8,
+            13.6
+          ],
+          "shape": "triangle",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0
+        },
+        {
+          "id": "projection_to_token_6",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              441,
+              319
+            ],
+            [
+              441,
+              305.0
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection",
+            "token_6"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "patch_to_projection_6",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              441,
+              380
+            ],
+            [
+              441,
+              354
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "position_7",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            464,
+            277.5,
+            15,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#CAB4CB",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "token_7",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            479,
+            277.5,
+            14.5,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#FBDDDC",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "position_label_7",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            466.625,
+            279.35,
+            11.0,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "position_7",
+          "runs": [
+            {
+              "text": "7",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_shaft_7",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              486,
+              277.5
+            ],
+            [
+              486,
+              261.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "token_7",
+            "token_arrow_7"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "token_arrow_7",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            481.6,
+            249.3,
+            8.8,
+            13.6
+          ],
+          "shape": "triangle",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0
+        },
+        {
+          "id": "projection_to_token_7",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              486,
+              319
+            ],
+            [
+              486,
+              305.0
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection",
+            "token_7"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "patch_to_projection_7",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              486,
+              380
+            ],
+            [
+              486,
+              354
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "position_8",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            504,
+            277.5,
+            15,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#CAB4CB",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "token_8",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            519,
+            277.5,
+            14.5,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#FBDDDC",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "position_label_8",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            506.5,
+            279.6,
+            11.0,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "position_8",
+          "runs": [
+            {
+              "text": "8",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_shaft_8",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              526,
+              277.5
+            ],
+            [
+              526,
+              261.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "token_8",
+            "token_arrow_8"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "token_arrow_8",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            521.6,
+            249.3,
+            8.8,
+            13.6
+          ],
+          "shape": "triangle",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0
+        },
+        {
+          "id": "projection_to_token_8",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              526,
+              319
+            ],
+            [
+              526,
+              305.0
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection",
+            "token_8"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "patch_to_projection_8",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              526,
+              380
+            ],
+            [
+              526,
+              354
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "position_9",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            548,
+            277.5,
+            15,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#CAB4CB",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "token_9",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            563,
+            277.5,
+            14.5,
+            27.5
+          ],
+          "shape": "round_rect",
+          "fill": "#FBDDDC",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 7
+        },
+        {
+          "id": "position_label_9",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            550.625,
+            279.6,
+            11.0,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "position_9",
+          "runs": [
+            {
+              "text": "9",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_shaft_9",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              570.5,
+              277.5
+            ],
+            [
+              570.5,
+              261.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "token_9",
+            "token_arrow_9"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "token_arrow_9",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            566.1,
+            249.3,
+            8.8,
+            13.6
+          ],
+          "shape": "triangle",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0
+        },
+        {
+          "id": "projection_to_token_9",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              570.5,
+              319
+            ],
+            [
+              570.5,
+              305.0
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection",
+            "token_9"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "patch_to_projection_9",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              570.5,
+              380
+            ],
+            [
+              570.5,
+              354
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "projection"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "embedding_line_1",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            12.375,
+            274.6,
+            109.0,
+            18.825
+          ],
+          "font_size": 15.5,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "runs": [
+            {
+              "text": "Patch + Position",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15.5,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "embedding_line_2",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            28.875,
+            290.6,
+            77.25,
+            18.825
+          ],
+          "font_size": 15.5,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "runs": [
+            {
+              "text": "Embedding",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15.5,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "note_extra",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            18.125,
+            314.35,
+            94.25,
+            16.95
+          ],
+          "font_size": 13.5,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "runs": [
+            {
+              "text": "* Extra learnable",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 13.5,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "note_class",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            18.25,
+            331.0,
+            48.5,
+            14.649999999999999
+          ],
+          "font_size": 11,
+          "font_family": "Liberation Mono",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "runs": [
+            {
+              "text": "[class]",
+              "font_family": "Liberation Mono",
+              "cjk_font_family": "Liberation Mono",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "note_embedding",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            67.625,
+            328.35,
+            61.5,
+            16.95
+          ],
+          "font_size": 13.5,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "runs": [
+            {
+              "text": "embedding",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 13.5,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "embedding_arrow",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              127,
+              293.5
+            ],
+            [
+              149.5,
+              293.5
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 1.6,
+          "arrow": true,
+          "arrow_head": {
+            "length": 14.5,
+            "width": 10
+          }
+        },
+        {
+          "id": "patches_arrow",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              121.5,
+              400.5
+            ],
+            [
+              206,
+              400.5
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 1.6,
+          "arrow": true,
+          "arrow_head": {
+            "length": 14.5,
+            "width": 10
+          }
+        },
+        {
+          "id": "photo_grid",
+          "kind": "image",
+          "z": 10,
+          "box": [
+            23,
+            358,
+            93,
+            91
+          ],
+          "path": "assets/87bdade975c17b364c39.png",
+          "contains_text": false,
+          "image_fit": "contain",
+          "provenance": "Exact photograph-only crop from provided ViT figure bitmap; source rectangle [23, 358, 93, 91]. No text or diagram borders."
+        },
+        {
+          "id": "patch_photo_1",
+          "kind": "image",
+          "z": 10,
+          "box": [
+            211,
+            382,
+            36,
+            36
+          ],
+          "path": "assets/c75534d06ef165a5cc7c.png",
+          "contains_text": false,
+          "image_fit": "contain",
+          "provenance": "Exact photograph-only crop from provided ViT figure bitmap; source rectangle [211, 382, 36, 36]. No text or diagram borders."
+        },
+        {
+          "id": "patch_photo_2",
+          "kind": "image",
+          "z": 10,
+          "box": [
+            253,
+            382,
+            36,
+            36
+          ],
+          "path": "assets/2c7ae5ba0a9b988db579.png",
+          "contains_text": false,
+          "image_fit": "contain",
+          "provenance": "Exact photograph-only crop from provided ViT figure bitmap; source rectangle [253, 382, 36, 36]. No text or diagram borders."
+        },
+        {
+          "id": "patch_photo_3",
+          "kind": "image",
+          "z": 10,
+          "box": [
+            295,
+            382,
+            36,
+            36
+          ],
+          "path": "assets/2f1b32ee8e4715bfef02.png",
+          "contains_text": false,
+          "image_fit": "contain",
+          "provenance": "Exact photograph-only crop from provided ViT figure bitmap; source rectangle [295, 382, 36, 36]. No text or diagram borders."
+        },
+        {
+          "id": "patch_photo_4",
+          "kind": "image",
+          "z": 10,
+          "box": [
+            338,
+            382,
+            36,
+            36
+          ],
+          "path": "assets/f0e91828663ba2f93a9c.png",
+          "contains_text": false,
+          "image_fit": "contain",
+          "provenance": "Exact photograph-only crop from provided ViT figure bitmap; source rectangle [338, 382, 36, 36]. No text or diagram borders."
+        },
+        {
+          "id": "patch_photo_5",
+          "kind": "image",
+          "z": 10,
+          "box": [
+            380,
+            382,
+            36,
+            36
+          ],
+          "path": "assets/b0d49d8281d7a052e8be.png",
+          "contains_text": false,
+          "image_fit": "contain",
+          "provenance": "Exact photograph-only crop from provided ViT figure bitmap; source rectangle [380, 382, 36, 36]. No text or diagram borders."
+        },
+        {
+          "id": "patch_photo_6",
+          "kind": "image",
+          "z": 10,
+          "box": [
+            423,
+            382,
+            36,
+            36
+          ],
+          "path": "assets/465324165f702dc7fb8c.png",
+          "contains_text": false,
+          "image_fit": "contain",
+          "provenance": "Exact photograph-only crop from provided ViT figure bitmap; source rectangle [423, 382, 36, 36]. No text or diagram borders."
+        },
+        {
+          "id": "patch_photo_7",
+          "kind": "image",
+          "z": 10,
+          "box": [
+            465,
+            382,
+            36,
+            36
+          ],
+          "path": "assets/253a8c775a50168ab77d.png",
+          "contains_text": false,
+          "image_fit": "contain",
+          "provenance": "Exact photograph-only crop from provided ViT figure bitmap; source rectangle [465, 382, 36, 36]. No text or diagram borders."
+        },
+        {
+          "id": "patch_photo_8",
+          "kind": "image",
+          "z": 10,
+          "box": [
+            508,
+            382,
+            36,
+            36
+          ],
+          "path": "assets/08fa6bf54c13a3f7f735.png",
+          "contains_text": false,
+          "image_fit": "contain",
+          "provenance": "Exact photograph-only crop from provided ViT figure bitmap; source rectangle [508, 382, 36, 36]. No text or diagram borders."
+        },
+        {
+          "id": "patch_photo_9",
+          "kind": "image",
+          "z": 10,
+          "box": [
+            550,
+            382,
+            36,
+            36
+          ],
+          "path": "assets/d231d0bfa633c2dea4e5.png",
+          "contains_text": false,
+          "image_fit": "contain",
+          "provenance": "Exact photograph-only crop from provided ViT figure bitmap; source rectangle [550, 382, 36, 36]. No text or diagram borders."
+        },
+        {
+          "id": "separator_dash_0",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              640,
+              30.5
+            ],
+            [
+              640,
+              39.0
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 3.2,
+          "arrow": false
+        },
+        {
+          "id": "separator_dash_16",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              640,
+              455.0
+            ],
+            [
+              640,
+              464
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 3.2,
+          "arrow": false
+        },
+        {
+          "id": "encoder_panel",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            691,
+            65.5,
+            188.5,
+            340
+          ],
+          "shape": "round_rect",
+          "fill": "#E1E1E1",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 5
+        },
+        {
+          "id": "encoder_mlp",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            713.5,
+            119.5,
+            133,
+            35
+          ],
+          "shape": "round_rect",
+          "fill": "#BAE0F5",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 5,
+          "container": "encoder_panel"
+        },
+        {
+          "id": "encoder_norm_top",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            713.5,
+            179,
+            133,
+            35
+          ],
+          "shape": "round_rect",
+          "fill": "#FFEAA3",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 5,
+          "container": "encoder_panel"
+        },
+        {
+          "id": "encoder_attention",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            713.5,
+            273,
+            133,
+            49.5
+          ],
+          "shape": "round_rect",
+          "fill": "#C0E5A4",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 5,
+          "container": "encoder_panel"
+        },
+        {
+          "id": "encoder_norm_bottom",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            713.5,
+            353.5,
+            133,
+            35
+          ],
+          "shape": "round_rect",
+          "fill": "#FFEAA3",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 5,
+          "container": "encoder_panel"
+        },
+        {
+          "id": "encoder_embedded",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            713.5,
+            419.5,
+            130.5,
+            50
+          ],
+          "shape": "round_rect",
+          "fill": "#FBDDDC",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "radius": 5
+        },
+        {
+          "id": "add_top",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            763.5,
+            74,
+            33,
+            33
+          ],
+          "shape": "ellipse",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "container": "encoder_panel"
+        },
+        {
+          "id": "add_bottom",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            763.5,
+            227.5,
+            33,
+            33
+          ],
+          "shape": "ellipse",
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "stroke_width": 1.65,
+          "container": "encoder_panel"
+        },
+        {
+          "id": "plus_h_top",
+          "kind": "line",
+          "z": 21,
+          "points": [
+            [
+              773.5,
+              90.5
+            ],
+            [
+              786.5,
+              90.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.75,
+          "arrow": false,
+          "container": "add_top",
+          "allow_overlap_with": [
+            "plus_v_top"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "plus_v_top",
+          "kind": "line",
+          "z": 21,
+          "points": [
+            [
+              780,
+              84.0
+            ],
+            [
+              780,
+              97.0
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.75,
+          "arrow": false,
+          "container": "add_top"
+        },
+        {
+          "id": "plus_h_bottom",
+          "kind": "line",
+          "z": 21,
+          "points": [
+            [
+              773.5,
+              244
+            ],
+            [
+              786.5,
+              244
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.75,
+          "arrow": false,
+          "container": "add_bottom",
+          "allow_overlap_with": [
+            "plus_v_bottom"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "plus_v_bottom",
+          "kind": "line",
+          "z": 21,
+          "points": [
+            [
+              780,
+              237.5
+            ],
+            [
+              780,
+              250.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.75,
+          "arrow": false,
+          "container": "add_bottom"
+        },
+        {
+          "id": "repeat",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            704.75,
+            68.85,
+            26.738,
+            21.7
+          ],
+          "font_size": 18,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "encoder_panel",
+          "runs": [
+            {
+              "text": "L ×",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 18,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "encoder_mlp_label",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            760.0,
+            124.35,
+            41.5,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "encoder_mlp",
+          "runs": [
+            {
+              "text": "MLP",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "encoder_norm_top_label",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            757.125,
+            183.35,
+            47.5,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "encoder_norm_top",
+          "runs": [
+            {
+              "text": "Norm",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "encoder_attention_line_1",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            733.875,
+            275.1,
+            93.25,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "encoder_attention",
+          "runs": [
+            {
+              "text": "Multi-Head",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "encoder_attention_line_2",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            742.5,
+            295.1,
+            76.0,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "encoder_attention",
+          "runs": [
+            {
+              "text": "Attention",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "encoder_norm_bottom_label",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            757.125,
+            357.35,
+            47.5,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "encoder_norm_bottom",
+          "runs": [
+            {
+              "text": "Norm",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "encoder_embedded_line_1",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            736.5,
+            424.1,
+            85.75,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "encoder_embedded",
+          "runs": [
+            {
+              "text": "Embedded",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "encoder_embedded_line_2",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            749.0,
+            444.1,
+            61.5,
+            23.712
+          ],
+          "font_size": 19.75,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.15,
+          "container": "encoder_embedded",
+          "runs": [
+            {
+              "text": "Patches",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "embedded_to_norm",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              779,
+              419.5
+            ],
+            [
+              779,
+              388.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "encoder_embedded",
+            "encoder_norm_bottom",
+            "encoder_panel",
+            "residual_bottom_1"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "norm_bottom_stem",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              779,
+              353.5
+            ],
+            [
+              779,
+              338
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "encoder_panel",
+          "allow_overlap_with": [
+            "encoder_norm_bottom",
+            "attention_bus",
+            "attention_arrow_mid"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "attention_bus",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              743.5,
+              344.5
+            ],
+            [
+              818,
+              344.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "encoder_panel",
+          "allow_overlap_with": [
+            "norm_bottom_stem",
+            "attention_left",
+            "attention_right"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "attention_left",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              743.5,
+              344.5
+            ],
+            [
+              743.5,
+              336.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "encoder_panel",
+          "allow_overlap_with": [
+            "attention_arrow_left"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "attention_arrow_left",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            739.0,
+            324,
+            9,
+            14
+          ],
+          "shape": "triangle",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "encoder_panel"
+        },
+        {
+          "id": "attention_arrow_mid",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            774.5,
+            324,
+            9,
+            14
+          ],
+          "shape": "triangle",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "encoder_panel"
+        },
+        {
+          "id": "attention_right",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              818,
+              344.5
+            ],
+            [
+              818,
+              336.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "encoder_panel",
+          "allow_overlap_with": [
+            "attention_arrow_right"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "attention_arrow_right",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            813.5,
+            324,
+            9,
+            14
+          ],
+          "shape": "triangle",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "encoder_panel"
+        },
+        {
+          "id": "attention_to_add",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              780,
+              273
+            ],
+            [
+              780,
+              260.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "encoder_panel",
+          "allow_overlap_with": [
+            "encoder_attention",
+            "add_bottom"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "add_to_norm",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              780,
+              227.5
+            ],
+            [
+              780,
+              214
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "encoder_panel",
+          "allow_overlap_with": [
+            "add_bottom",
+            "encoder_norm_top",
+            "residual_top_1"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "norm_top_shaft",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              780,
+              179
+            ],
+            [
+              780,
+              169
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "encoder_panel",
+          "allow_overlap_with": [
+            "encoder_norm_top",
+            "norm_top_arrow"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "norm_top_arrow",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            775.5,
+            156,
+            9,
+            14
+          ],
+          "shape": "triangle",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "encoder_panel"
+        },
+        {
+          "id": "mlp_to_add",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              780,
+              119.5
+            ],
+            [
+              780,
+              107
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "encoder_panel",
+          "allow_overlap_with": [
+            "encoder_mlp",
+            "add_top"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "encoder_out",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              780,
+              74
+            ],
+            [
+              780,
+              61
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "allow_overlap_with": [
+            "add_top",
+            "encoder_panel",
+            "encoder_out_arrow"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "encoder_out_arrow",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            775.5,
+            48.5,
+            9,
+            13.5
+          ],
+          "shape": "triangle",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0
+        },
+        {
+          "id": "residual_top_1",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              780,
+              221
+            ],
+            [
+              856.5,
+              221
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "encoder_panel",
+          "allow_overlap_with": [
+            "residual_top_2"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "residual_top_2",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              856.5,
+              221
+            ],
+            [
+              856.5,
+              90.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "encoder_panel",
+          "allow_overlap_with": [
+            "residual_top_3"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "residual_top_3",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              856.5,
+              90.5
+            ],
+            [
+              798,
+              90.5
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": true,
+          "container": "encoder_panel",
+          "allow_overlap_with": [
+            "add_top"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "arrow_head": {
+            "length": 15,
+            "width": 10
+          }
+        },
+        {
+          "id": "residual_bottom_1",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              779,
+              397
+            ],
+            [
+              856.5,
+              397
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "encoder_panel",
+          "allow_overlap_with": [
+            "residual_bottom_2"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "residual_bottom_2",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              856.5,
+              397
+            ],
+            [
+              856.5,
+              244
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "encoder_panel",
+          "allow_overlap_with": [
+            "residual_bottom_3"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint."
+        },
+        {
+          "id": "residual_bottom_3",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              856.5,
+              244
+            ],
+            [
+              798,
+              244
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.6,
+          "arrow": true,
+          "container": "encoder_panel",
+          "allow_overlap_with": [
+            "add_bottom"
+          ],
+          "overlap_reason": "Source-verified connector joins the named shape boundary or connected line endpoint.",
+          "arrow_head": {
+            "length": 15,
+            "width": 10
+          }
+        },
+        {
+          "id": "separator_middle",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              640,
+              52.2
+            ],
+            [
+              640,
+              442.2
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 3.2,
+          "dash": [
+            13.4,
+            13.4
+          ]
+        }
+      ]
+    }
+  ]
+}

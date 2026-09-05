@@ -1,0 +1,107 @@
+{
+  "package_sha256": "6ac1655a25619379ebcd1b72d0782d72299a88f5cd6c1d8a32f1ee03ba08e227",
+  "steps": [
+    {
+      "command": [
+        "uv",
+        "venv",
+        "$SMOKE/env",
+        "--python",
+        "$REPO/.venv/bin/python"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Using CPython 3.12.12 interpreter at: $REPO/.venv/bin/python\nCreating virtual environment at: $SMOKE/env\nActivate with: source $SMOKE/env/bin/activate\n"
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--offline",
+        "--python",
+        "$SMOKE/env/bin/python",
+        "--require-hashes",
+        "-r",
+        "$SMOKE/unpacked/super-img2ppt/requirements.lock"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Using Python 3.12.12 environment at: $SMOKE/env\nResolved 13 packages in 162ms\nInstalled 13 packages in 89ms\n + attrs==26.1.0\n + fonttools==4.64.0\n + jsonschema==4.26.0\n + jsonschema-specifications==2025.9.1\n + lxml==6.1.3\n + pillow==12.3.0\n + pypdfium2==5.13.0\n + python-pptx==1.0.2\n + referencing==0.37.0\n + regex==2026.9.3\n + rpds-py==2026.6.3\n + typing-extensions==4.16.0\n + xlsxwriter==3.2.9\n"
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--offline",
+        "--python",
+        "$SMOKE/env/bin/python",
+        "--no-deps",
+        "$SMOKE/unpacked/super-img2ppt"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Using Python 3.12.12 environment at: $SMOKE/env\nResolved 1 package in 2ms\n   Building super-img2ppt @ file://$SMOKE/unpacked/super-img2ppt\n      Built super-img2ppt @ file://$SMOKE/unpacked/super-img2ppt\nPrepared 1 package in 868ms\nInstalled 1 package in 2ms\n + super-img2ppt==0.2.0 (from file://$SMOKE/unpacked/super-img2ppt)\n"
+    },
+    {
+      "command": [
+        "$SMOKE/env/bin/super-img2ppt",
+        "doctor"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"python\": \"3.12.12\",\n  \"packages\": {\n    \"super-img2ppt\": \"0.2.0\",\n    \"python-pptx\": \"1.0.2\",\n    \"Pillow\": \"12.3.0\",\n    \"fonttools\": \"4.64.0\",\n    \"pypdfium2\": \"5.13.0\",\n    \"jsonschema\": \"4.26.0\"\n  },\n  \"tools\": {\n    \"soffice\": \"/opt/homebrew/bin/soffice\",\n    \"tesseract\": \"/opt/homebrew/bin/tesseract\",\n    \"swift\": \"/usr/bin/swift\",\n    \"fc-list\": \"/opt/homebrew/bin/fc-list\"\n  },\n  \"network_required_for_conversion\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "$SMOKE/env/bin/python",
+        "-c",
+        "import super_img2ppt; from pathlib import Path; assert super_img2ppt.__version__ == '0.2.0'; assert Path(super_img2ppt.__file__).with_name('vision_ocr.swift').is_file(); assert 'site-packages' in super_img2ppt.__file__; print(super_img2ppt.__file__)"
+      ],
+      "exit_code": 0,
+      "stdout": "$SMOKE/env/lib/python3.12/site-packages/super_img2ppt/__init__.py\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "$SMOKE/env/bin/super-img2ppt",
+        "build",
+        "$SMOKE/inputs/vit/scene.resolved.json",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+        "--out",
+        "$SMOKE/results/vit"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"pass\", \"output\": \"/private$SMOKE/results/vit\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "$SMOKE/env/bin/super-img2ppt",
+        "build",
+        "$SMOKE/inputs/spatial_mamba/scene.resolved.json",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+        "--out",
+        "$SMOKE/results/spatial_mamba"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"pass\", \"output\": \"/private$SMOKE/results/spatial_mamba\"}\n",
+      "stderr": ""
+    }
+  ],
+  "actual_builds": [
+    {
+      "case": "vit",
+      "status": "pass"
+    },
+    {
+      "case": "spatial_mamba",
+      "status": "pass"
+    }
+  ],
+  "result": "pass",
+  "path_redactions": "Repository and temporary directory replaced with $REPO and $SMOKE"
+}
