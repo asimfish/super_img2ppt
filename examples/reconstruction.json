@@ -1,0 +1,515 @@
+{
+  "version": 1,
+  "title": "Super Img2PPT acceptance examples",
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 1280,
+      "height": 720,
+      "background": "#F6F8FC",
+      "source": "source_01.png",
+      "notes": "第 1 页备注：逐字保留。\nKeep speaker notes intact.",
+      "reviewed": true,
+      "elements": [
+        {
+          "id": "title",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            52,
+            32,
+            1150,
+            72
+          ],
+          "text": "从图片到可编辑文稿",
+          "font_size": 44,
+          "font_family": "PingFang SC",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": true
+        },
+        {
+          "id": "subtitle",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            54,
+            116,
+            1130,
+            48
+          ],
+          "text": "Measured fonts · Explicit layers · Actual PPTX checks",
+          "font_size": 25,
+          "font_family": "Arial",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": false
+        },
+        {
+          "id": "font",
+          "kind": "shape",
+          "z": 0,
+          "box": [
+            54,
+            212,
+            372,
+            282
+          ],
+          "shape": "round_rect",
+          "radius": 12,
+          "fill": "#E8EFFC"
+        },
+        {
+          "id": "font-heading",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            78,
+            236,
+            324,
+            58
+          ],
+          "text": "字体度量",
+          "font_size": 32,
+          "font_family": "PingFang SC",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": true,
+          "container": "font"
+        },
+        {
+          "id": "font-row1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            78,
+            325,
+            324,
+            46
+          ],
+          "text": "中文与 English",
+          "font_size": 25,
+          "font_family": "PingFang SC",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": false,
+          "container": "font"
+        },
+        {
+          "id": "font-row2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            78,
+            390,
+            324,
+            46
+          ],
+          "text": "Aa WWW iii 123",
+          "font_size": 25,
+          "font_family": "Arial",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": false,
+          "container": "font"
+        },
+        {
+          "id": "layout",
+          "kind": "shape",
+          "z": 0,
+          "box": [
+            454,
+            212,
+            372,
+            282
+          ],
+          "shape": "round_rect",
+          "radius": 12,
+          "fill": "#E6F3EE"
+        },
+        {
+          "id": "layout-heading",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            478,
+            236,
+            324,
+            58
+          ],
+          "text": "布局关系",
+          "font_size": 32,
+          "font_family": "PingFang SC",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": true,
+          "container": "layout"
+        },
+        {
+          "id": "layout-row1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            478,
+            325,
+            324,
+            46
+          ],
+          "text": "文字放进容器",
+          "font_size": 25,
+          "font_family": "PingFang SC",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": false,
+          "container": "layout"
+        },
+        {
+          "id": "layout-row2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            478,
+            390,
+            324,
+            46
+          ],
+          "text": "保留间距与层级",
+          "font_size": 25,
+          "font_family": "PingFang SC",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": false,
+          "container": "layout"
+        },
+        {
+          "id": "render",
+          "kind": "shape",
+          "z": 0,
+          "box": [
+            854,
+            212,
+            372,
+            282
+          ],
+          "shape": "round_rect",
+          "radius": 12,
+          "fill": "#F9ECDD"
+        },
+        {
+          "id": "render-heading",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            878,
+            236,
+            324,
+            58
+          ],
+          "text": "渲染验收",
+          "font_size": 32,
+          "font_family": "PingFang SC",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": true,
+          "container": "render"
+        },
+        {
+          "id": "render-row1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            878,
+            325,
+            324,
+            46
+          ],
+          "text": "检查真实输出",
+          "font_size": 25,
+          "font_family": "PingFang SC",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": false,
+          "container": "render"
+        },
+        {
+          "id": "render-row2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            878,
+            390,
+            324,
+            46
+          ],
+          "text": "缺字与溢出可定位",
+          "font_size": 25,
+          "font_family": "PingFang SC",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": false,
+          "container": "render"
+        },
+        {
+          "id": "footer",
+          "kind": "shape",
+          "z": 0,
+          "box": [
+            54,
+            550,
+            1172,
+            106
+          ],
+          "shape": "round_rect",
+          "radius": 12,
+          "fill": "#17233B"
+        },
+        {
+          "id": "footer-text",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            80,
+            568,
+            1120,
+            60
+          ],
+          "text": "文字可编辑，简单形状可调整，复杂图片独立保留。",
+          "font_size": 30,
+          "font_family": "PingFang SC",
+          "cjk_font_family": "PingFang SC",
+          "color": "#FFFFFF",
+          "bold": false,
+          "container": "footer"
+        }
+      ]
+    },
+    {
+      "id": "page_002",
+      "width": 960,
+      "height": 720,
+      "background": "#F6F8FC",
+      "source": "source_02.png",
+      "notes": "第 2 页备注：逐字保留。\nKeep speaker notes intact.",
+      "reviewed": true,
+      "elements": [
+        {
+          "id": "title",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            52,
+            36,
+            854,
+            66
+          ],
+          "text": "Layout and reading order",
+          "font_size": 38,
+          "font_family": "Arial",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": true
+        },
+        {
+          "id": "input",
+          "kind": "shape",
+          "z": 0,
+          "box": [
+            60,
+            176,
+            220,
+            104
+          ],
+          "shape": "round_rect",
+          "radius": 12,
+          "fill": "#DCE8FB"
+        },
+        {
+          "id": "input-label",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            92,
+            194,
+            166,
+            55
+          ],
+          "text": "INPUT",
+          "font_size": 31,
+          "font_family": "Arial",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": false,
+          "container": "input"
+        },
+        {
+          "id": "edit",
+          "kind": "shape",
+          "z": 0,
+          "box": [
+            370,
+            176,
+            220,
+            104
+          ],
+          "shape": "round_rect",
+          "radius": 12,
+          "fill": "#D9EEE4"
+        },
+        {
+          "id": "edit-label",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            402,
+            194,
+            166,
+            55
+          ],
+          "text": "EDIT",
+          "font_size": 31,
+          "font_family": "Arial",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": false,
+          "container": "edit"
+        },
+        {
+          "id": "check",
+          "kind": "shape",
+          "z": 0,
+          "box": [
+            680,
+            176,
+            220,
+            104
+          ],
+          "shape": "round_rect",
+          "radius": 12,
+          "fill": "#F9E5D6"
+        },
+        {
+          "id": "check-label",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            712,
+            194,
+            166,
+            55
+          ],
+          "text": "CHECK",
+          "font_size": 31,
+          "font_family": "Arial",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": false,
+          "container": "check"
+        },
+        {
+          "id": "arrow-0",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              288,
+              228
+            ],
+            [
+              362,
+              228
+            ]
+          ],
+          "stroke": "#53637F",
+          "stroke_width": 3,
+          "arrow": true
+        },
+        {
+          "id": "arrow-1",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              598,
+              228
+            ],
+            [
+              672,
+              228
+            ]
+          ],
+          "stroke": "#53637F",
+          "stroke_width": 3,
+          "arrow": true
+        },
+        {
+          "id": "body",
+          "kind": "shape",
+          "z": 0,
+          "box": [
+            60,
+            342,
+            840,
+            264
+          ],
+          "shape": "round_rect",
+          "radius": 12,
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "line1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            84,
+            368,
+            786,
+            55
+          ],
+          "text": "Long labels stay inside their assigned boxes.",
+          "font_size": 29,
+          "font_family": "Arial",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": false,
+          "container": "body"
+        },
+        {
+          "id": "line2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            84,
+            447,
+            786,
+            55
+          ],
+          "text": "Punctuation: (A + B) / C = 0.125",
+          "font_size": 29,
+          "font_family": "Arial",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": false,
+          "container": "body"
+        },
+        {
+          "id": "line3",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            84,
+            520,
+            786,
+            55
+          ],
+          "text": "多页保持顺序，4:3 与 16:9 等比适配。",
+          "font_size": 29,
+          "font_family": "PingFang SC",
+          "cjk_font_family": "PingFang SC",
+          "color": "#17233B",
+          "bold": false,
+          "container": "body"
+        }
+      ]
+    }
+  ]
+}

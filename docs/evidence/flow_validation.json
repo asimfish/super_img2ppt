@@ -1,0 +1,366 @@
+{
+  "status": "pass",
+  "source_scene_sha256": "ca4871d9994f071be4b39933704a1b6bc54a51c542f07cf334d8dde9d0742f4b",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "pass",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "aspect_ratio",
+            "aspect_ratio_first"
+          ],
+          "message": "Text frame padding overlaps, but measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "text": 11,
+            "shape": 4,
+            "line": 2
+          },
+          "intentional_overlaps": [],
+          "text_layouts": {
+            "title": {
+              "scale": 1,
+              "effective_font_size_px": 38,
+              "width_px": 459.75,
+              "height_px": 43.7,
+              "available_width_px": 840,
+              "available_height_px": 62,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 460.25,
+              "required_height_px": 44.2,
+              "fits": true,
+              "lines": [
+                "Layout and reading order"
+              ]
+            },
+            "input_label": {
+              "scale": 1,
+              "effective_font_size_px": 31,
+              "width_px": 93.25,
+              "height_px": 35.65,
+              "available_width_px": 164,
+              "available_height_px": 60,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 93.75,
+              "required_height_px": 36.15,
+              "fits": true,
+              "lines": [
+                "INPUT"
+              ]
+            },
+            "edit_label": {
+              "scale": 1,
+              "effective_font_size_px": 31,
+              "width_px": 70.75,
+              "height_px": 35.65,
+              "available_width_px": 164,
+              "available_height_px": 60,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 71.25,
+              "required_height_px": 36.15,
+              "fits": true,
+              "lines": [
+                "EDIT"
+              ]
+            },
+            "check_label": {
+              "scale": 1,
+              "effective_font_size_px": 31,
+              "width_px": 109.0,
+              "height_px": 35.65,
+              "available_width_px": 164,
+              "available_height_px": 60,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 109.5,
+              "required_height_px": 36.15,
+              "fits": true,
+              "lines": [
+                "CHECK"
+              ]
+            },
+            "long_labels": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 578.0,
+              "height_px": 33.35,
+              "available_width_px": 792,
+              "available_height_px": 52,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 578.5,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "Long labels stay inside their assigned boxes."
+              ]
+            },
+            "punctuation": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 411.75,
+              "height_px": 33.35,
+              "available_width_px": 792,
+              "available_height_px": 52,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 412.25,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "Punctuation: (A + B) / C = 0.125"
+              ]
+            },
+            "aspect_ratio": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 203.0,
+              "height_px": 40.75,
+              "available_width_px": 203.5,
+              "available_height_px": 57,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 203.5,
+              "required_height_px": 41.25,
+              "fits": true,
+              "lines": [
+                "多页保持顺序，"
+              ]
+            },
+            "aspect_ratio_first": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 42.75,
+              "height_px": 40.75,
+              "available_width_px": 52,
+              "available_height_px": 57,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 43.25,
+              "required_height_px": 41.25,
+              "fits": true,
+              "lines": [
+                "4:3"
+              ]
+            },
+            "aspect_ratio_and": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 29.0,
+              "height_px": 40.75,
+              "available_width_px": 39,
+              "available_height_px": 57,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 29.5,
+              "required_height_px": 41.25,
+              "fits": true,
+              "lines": [
+                "与"
+              ]
+            },
+            "aspect_ratio_second": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 54.5,
+              "height_px": 40.75,
+              "available_width_px": 64,
+              "available_height_px": 57,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 55.0,
+              "required_height_px": 41.25,
+              "fits": true,
+              "lines": [
+                "16:9"
+              ]
+            },
+            "aspect_ratio_suffix": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 145.0,
+              "height_px": 40.75,
+              "available_width_px": 145.5,
+              "available_height_px": 57,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 145.5,
+              "required_height_px": 41.25,
+              "fits": true,
+              "lines": [
+                "等比适配。"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "pass",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [],
+      "text_boxes": [
+        {
+          "slide": "page_001",
+          "element": "title",
+          "expected": "Layout and reading order",
+          "rendered": "Layout and reading order",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 457.0,
+          "rendered_ink_width_px": 455.662
+        },
+        {
+          "slide": "page_001",
+          "element": "input_label",
+          "expected": "INPUT",
+          "rendered": "INPUT ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 90.0,
+          "rendered_ink_width_px": 89.405
+        },
+        {
+          "slide": "page_001",
+          "element": "edit_label",
+          "expected": "EDIT",
+          "rendered": "EDIT ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 68.0,
+          "rendered_ink_width_px": 67.48
+        },
+        {
+          "slide": "page_001",
+          "element": "check_label",
+          "expected": "CHECK",
+          "rendered": "CHECK",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 107.5,
+          "rendered_ink_width_px": 106.802
+        },
+        {
+          "slide": "page_001",
+          "element": "long_labels",
+          "expected": "Long labels stay inside their assigned boxes.",
+          "rendered": "Long labels stay inside their assigned boxes.",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 573.75,
+          "rendered_ink_width_px": 570.652
+        },
+        {
+          "slide": "page_001",
+          "element": "punctuation",
+          "expected": "Punctuation: (A + B) / C = 0.125",
+          "rendered": "Punctuation: (A + B) / C = 0.125",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 408.5,
+          "rendered_ink_width_px": 405.972
+        },
+        {
+          "slide": "page_001",
+          "element": "aspect_ratio",
+          "expected": "多页保持顺序，",
+          "rendered": "多页保持顺序，",
+          "matches": true,
+          "actual_fonts": [
+            "PingFangSC-Regular"
+          ],
+          "measured_ink_width_px": 179.0,
+          "rendered_ink_width_px": 178.831
+        },
+        {
+          "slide": "page_001",
+          "element": "aspect_ratio_first",
+          "expected": "4:3",
+          "rendered": "4:3 ",
+          "matches": true,
+          "actual_fonts": [
+            "PingFangSC-Regular"
+          ],
+          "measured_ink_width_px": 40.75,
+          "rendered_ink_width_px": 40.307
+        },
+        {
+          "slide": "page_001",
+          "element": "aspect_ratio_and",
+          "expected": "与",
+          "rendered": "与 ",
+          "matches": true,
+          "actual_fonts": [
+            "PingFangSC-Regular"
+          ],
+          "measured_ink_width_px": 24.75,
+          "rendered_ink_width_px": 24.329
+        },
+        {
+          "slide": "page_001",
+          "element": "aspect_ratio_second",
+          "expected": "16:9",
+          "rendered": "16:9 ",
+          "matches": true,
+          "actual_fonts": [
+            "PingFangSC-Regular"
+          ],
+          "measured_ink_width_px": 51.75,
+          "rendered_ink_width_px": 51.355
+        },
+        {
+          "slide": "page_001",
+          "element": "aspect_ratio_suffix",
+          "expected": "等比适配。",
+          "rendered": "等比适配。",
+          "matches": true,
+          "actual_fonts": [
+            "PingFangSC-Regular"
+          ],
+          "measured_ink_width_px": 125.75,
+          "rendered_ink_width_px": 125.445
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "page_001",
+      "mean_absolute_pixel_error": 0.007422,
+      "comparison": "page_001_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

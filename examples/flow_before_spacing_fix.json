@@ -1,0 +1,256 @@
+{
+  "version": 1,
+  "title": "Layout and reading order — editable reconstruction",
+  "fonts": {
+    "latin": [
+      "Arial"
+    ],
+    "cjk": [
+      "PingFang SC"
+    ]
+  },
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 960,
+      "height": 720,
+      "background": "#F6F8FC",
+      "source": "source_02.png",
+      "notes": "",
+      "reviewed": true,
+      "elements": [
+        {
+          "id": "title",
+          "kind": "text",
+          "z": 1,
+          "box": [
+            52,
+            35,
+            840,
+            62
+          ],
+          "text": "Layout and reading order",
+          "font_family": "Arial",
+          "font_size": 38,
+          "bold": true,
+          "color": "#17233B",
+          "fit": "strict",
+          "wrap": false,
+          "confidence": 1
+        },
+        {
+          "id": "input_card",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            60,
+            176,
+            221,
+            105
+          ],
+          "shape": "round_rect",
+          "radius": 13,
+          "fill": "#DCE8FB"
+        },
+        {
+          "id": "edit_card",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            370,
+            176,
+            221,
+            105
+          ],
+          "shape": "round_rect",
+          "radius": 13,
+          "fill": "#D9EEE4"
+        },
+        {
+          "id": "check_card",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            680,
+            176,
+            221,
+            105
+          ],
+          "shape": "round_rect",
+          "radius": 13,
+          "fill": "#F9E5D6"
+        },
+        {
+          "id": "input_to_edit",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              288,
+              228
+            ],
+            [
+              363,
+              228
+            ]
+          ],
+          "stroke": "#53637F",
+          "stroke_width": 3,
+          "arrow": true
+        },
+        {
+          "id": "edit_to_check",
+          "kind": "line",
+          "z": 6,
+          "points": [
+            [
+              598,
+              228
+            ],
+            [
+              673,
+              228
+            ]
+          ],
+          "stroke": "#53637F",
+          "stroke_width": 3,
+          "arrow": true
+        },
+        {
+          "id": "input_label",
+          "kind": "text",
+          "z": 7,
+          "container": "input_card",
+          "box": [
+            92,
+            194,
+            164,
+            60
+          ],
+          "text": "INPUT",
+          "font_family": "Arial",
+          "font_size": 31,
+          "font_group": "flow_labels",
+          "color": "#17233B",
+          "fit": "strict",
+          "wrap": false,
+          "confidence": 1
+        },
+        {
+          "id": "edit_label",
+          "kind": "text",
+          "z": 8,
+          "container": "edit_card",
+          "box": [
+            402,
+            194,
+            164,
+            60
+          ],
+          "text": "EDIT",
+          "font_family": "Arial",
+          "font_size": 31,
+          "font_group": "flow_labels",
+          "color": "#17233B",
+          "fit": "strict",
+          "wrap": false,
+          "confidence": 1
+        },
+        {
+          "id": "check_label",
+          "kind": "text",
+          "z": 9,
+          "container": "check_card",
+          "box": [
+            712,
+            194,
+            164,
+            60
+          ],
+          "text": "CHECK",
+          "font_family": "Arial",
+          "font_size": 31,
+          "font_group": "flow_labels",
+          "color": "#17233B",
+          "fit": "strict",
+          "wrap": false,
+          "confidence": 1
+        },
+        {
+          "id": "body_panel",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            60,
+            342,
+            841,
+            265
+          ],
+          "shape": "round_rect",
+          "radius": 14,
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "long_labels",
+          "kind": "text",
+          "z": 11,
+          "container": "body_panel",
+          "box": [
+            84,
+            367,
+            792,
+            52
+          ],
+          "text": "Long labels stay inside their assigned boxes.",
+          "font_family": "Arial",
+          "font_size": 29,
+          "font_group": "body_english",
+          "color": "#17233B",
+          "fit": "strict",
+          "wrap": false,
+          "confidence": 1
+        },
+        {
+          "id": "punctuation",
+          "kind": "text",
+          "z": 12,
+          "container": "body_panel",
+          "box": [
+            84,
+            447,
+            792,
+            52
+          ],
+          "text": "Punctuation: (A + B) / C = 0.125",
+          "font_family": "Arial",
+          "font_size": 29,
+          "font_group": "body_english",
+          "color": "#17233B",
+          "fit": "strict",
+          "wrap": false,
+          "confidence": 1
+        },
+        {
+          "id": "aspect_ratio",
+          "kind": "text",
+          "z": 13,
+          "container": "body_panel",
+          "box": [
+            84,
+            516,
+            792,
+            57
+          ],
+          "text": "多页保持顺序，4:3 与 16:9 等比适配。",
+          "font_family": "PingFang SC",
+          "cjk_font_family": "PingFang SC",
+          "font_size": 29,
+          "color": "#17233B",
+          "fit": "strict",
+          "wrap": false,
+          "confidence": 1
+        }
+      ]
+    }
+  ]
+}

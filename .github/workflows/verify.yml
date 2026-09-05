@@ -1,0 +1,22 @@
+name: Verify
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: astral-sh/setup-uv@d0d8abe699bfb85fec6de9f7adb5ae17292296ff
+        with:
+          version: "0.9.28"
+          enable-cache: true
+      - name: Local rendering and language dependencies
+        run: sudo apt-get update && sudo apt-get install -y libreoffice-impress fonts-noto-cjk fonts-liberation tesseract-ocr tesseract-ocr-chi-sim
+      - run: uv sync --frozen --python 3.12
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+      - run: uv run pytest -q
+      - run: uv run python scripts/verify_skill.py
+      - run: uv run python scripts/build_capability_registry.py --check
+      - run: uv run python scripts/build_package.py

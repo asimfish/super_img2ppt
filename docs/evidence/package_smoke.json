@@ -1,0 +1,67 @@
+{
+  "package_sha256": "ee1104a6edba6d81a3320b4e42898001cf981833076f3b0e6c2765be689f1418",
+  "result": "pass",
+  "path_redactions": "Temporary install directory replaced with $SMOKE; repository directory replaced with $REPO",
+  "steps": [
+    {
+      "command": [
+        "uv",
+        "venv",
+        "$SMOKE/env",
+        "--python",
+        "3.12"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "$SMOKE/env/bin/python",
+        "--require-hashes",
+        "-r",
+        "$SMOKE/unpacked/super-img2ppt/requirements.lock"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "$SMOKE/env/bin/python",
+        "--no-deps",
+        "$SMOKE/unpacked/super-img2ppt"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "$SMOKE/env/bin/super-img2ppt",
+        "doctor"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "$SMOKE/env/bin/python",
+        "-c",
+        "import super_img2ppt; from pathlib import Path; p=Path(super_img2ppt.__file__).with_name('vision_ocr.swift'); assert p.is_file(); print(p)"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "$SMOKE/env/bin/super-img2ppt",
+        "build",
+        "$REPO/examples/flow_reconstruction.json",
+        "--out",
+        "$SMOKE/result"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

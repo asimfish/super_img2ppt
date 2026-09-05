@@ -1,0 +1,24 @@
+[project]
+name = "super-img2ppt"
+version = "0.1.0"
+description = "Measured, editable image reconstruction with real PPTX rendering checks."
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = [
+  "python-pptx>=1.0.2,<2",
+  "Pillow>=11.3,<13",
+  "fonttools>=4.59,<5",
+  "pypdfium2>=4.30,<6",
+  "jsonschema>=4.25,<5",
+  "regex>=2025.7.34",
+]
+
+[project.scripts]
+super-img2ppt = "super_img2ppt.cli:main"
+
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/super_img2ppt"]
