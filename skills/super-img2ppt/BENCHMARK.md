@@ -1,5 +1,54 @@
 # Bounded reconstruction evidence
 
+## v0.3.0 diverse figure extension
+
+On 2026-09-07, three independent evaluators reconstructed CLIP (ICML 2021), Swin Transformer
+(ICCV 2021) and a Matplotlib annotated heatmap from specified raw images. They started from a
+frozen v0.2.0 skill/runtime; parent-authored fixes were then tested in separate frozen candidate
+trees. Original reports, failures, fixed ROI definitions and file hashes remain unchanged.
+DDPM's NeurIPS 2020 author-published table/rate-distortion figure was reconstructed by the parent
+from its bitmap and is explicitly a development case, not an independent blind evaluation.
+No source plotting code, chart data or PDF text/vector coordinates were used as answers.
+
+- CLIP: four encoder trapezoids are native polygons. Final scene has 293 native objects,
+  including 131 text objects, and two photographic regions. The original 20 px subscript
+  candidate had nine false text/text collisions with zero measured glyph intersections.
+  Comparing both glyph masks permits those original mathematical placements, while true
+  duplicate glyphs remain blocked. Twenty-one fixed text ROIs improve from maximum edge
+  delta 2 px to 1 px; nine grid/shape centers remain exact. Two runtime ink-width warnings
+  remain `review`, even though those labels' actual/source widths agree at about 43 px.
+- Swin: 497 native objects (92 text, 30 shapes, 375 lines/arrows) and 34 photo crops. Thirty
+  fixed ROIs have median mean edge distance 0.573 px, maximum per-ROI mean 3.151 px. Several
+  ROI masks also include borders/lines and are not used as isolated typography evidence.
+  Formula multiplication signs, arrow silhouettes and photo-grid crop seams retain differences.
+  Adjacent caret text was wrongly assigned to a neighboring z frame in an actual PDF check;
+  the case uses native line hats as a scene workaround, not a claimed PDF ownership fix.
+- Heatmap: one native 16-stop linear gradient replaces 358 solid bands. Source-size colorbar
+  interior RGB MAE improves from 9.341/255 to 0.665/255; supplemental high-resolution dark
+  residual runs fall from 203 to zero. The original 72 ROI plan improves from 70 to 72 within
+  its fixed tolerances (text <=2 px, grids <=1 px). All 49 matrix values remain native text.
+  Seven approximately 30-degree top labels remain one raster crop; final status is `review`.
+  Mean native text-mask IoU is 0.5437, so edge agreement is not pixel-identical glyphs.
+- DDPM: 254 native objects, including 69 text objects and 157 thin blue rectangles tracing
+  the visible curve. Sixty-six fixed ROIs improve from maximum edge delta 29 px to 14 px;
+  median absolute edge delta stays 1 px. Bold numerical widths, inequalities and loss notation
+  still differ. This is not a data-linked chart or automatic mathematical typesetting.
+
+Nine added regressions bring the local suite to 65 passing tests with no skips. Actual
+LibreOffice tests cover both gradient directions and polygon geometry; negative controls
+reject ambiguous polygons/gradients and actual glyph collisions. Runtime dependencies are
+unchanged. The parent replays all three new redistributable scenes, local DDPM, the six old
+general cases and two redistributable ICLR cases using the final code. The old dense table
+still fails; the historical MobileViT local artwork is not counted as a new replay.
+
+The owning repository's `docs/diverse_cases.md` and `docs/evidence/diverse_cases` contain
+original/candidate reports, measurements, failures and hash manifests. Three attributed
+redistributable cases are in `examples/diverse_cases`; DDPM artwork stays local because a
+general redistribution license for the author-site image was not established. Selected font
+families are Arial, Courier New, Times New Roman and DejaVu Sans; none are embedded. These
+results do not imply universal alignment, exact source-font identification or population
+accuracy. Validation uses LibreOffice/PDFium; native PowerPoint/WPS remain unverified.
+
 ## v0.2.0 conference figure extension
 
 On 2026-09-06, three independent evaluators reconstructed raw bitmaps from ViT (ICLR 2021),

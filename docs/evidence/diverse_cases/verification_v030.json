@@ -1,0 +1,210 @@
+{
+  "version": "0.3.0",
+  "evaluated": "2026-09-07",
+  "result": "conditional",
+  "scope": "Local release checks pass. Four new actual-render reconstructions pass blocking checks, with documented visual/editability limitations. Three have redistributable artwork. The prior dense table still fails. PowerPoint/WPS appearance remains unverified.",
+  "tests": {
+    "passed": 65,
+    "skipped": 0,
+    "seconds": 58.88,
+    "raw_output": "full_tests_candidate2.txt"
+  },
+  "checks": [
+    {
+      "command": [
+        "uv",
+        "run",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "seconds": 0.101,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "exit_code": 0,
+      "seconds": 0.262,
+      "stdout": "65 files already formatted\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/verify_skill.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.211,
+      "stdout": "{\n  \"status\": \"pass\",\n  \"activation_cases\": 8,\n  \"problems\": [],\n  \"scope\": \"Static package checks; semantic review and forward tests are separate evidence\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/build_capability_registry.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.063,
+      "stdout": "Capability registry is current\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "/Users/liyufeng/.whalent-agent/profiles/acct-63aacf96110c0e9595f3/agents/rjguoiuibvgcfiv8w56gq7bu5/codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/super-img2ppt"
+      ],
+      "exit_code": 0,
+      "seconds": 0.066,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "/Users/liyufeng/.agents/skills/skill-quality-gate/scripts/audit_skill_governance.py",
+        "--repo",
+        "/Users/liyufeng/code/super_img2ppt",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.067,
+      "stdout": "{\n  \"verdict\": \"PASS\",\n  \"skills_checked\": [\n    \"super-img2ppt\"\n  ],\n  \"findings\": [],\n  \"semantic_review\": \"REQUIRED — deterministic checks do not prove behavior-description alignment\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.029,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/build_package.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.061,
+      "stdout": "/Users/liyufeng/code/super_img2ppt/dist/super-img2ppt.skill\nSHA256 e3d30fc3e760a42aa085e707349e7632bd66e2f3301064e7a9706539e7a928e9\n",
+      "stderr": ""
+    }
+  ],
+  "package_sha256": "e3d30fc3e760a42aa085e707349e7632bd66e2f3301064e7a9706539e7a928e9",
+  "package_smoke": "package_smoke_v030.json",
+  "verified_raw_records": 121,
+  "artifact_verification": "artifact_verification.json",
+  "candidate2_runtime_files_match_final": 13,
+  "final_replay": "final_replay.json",
+  "new_case_statuses": [
+    {
+      "id": "clip",
+      "status": "review",
+      "decoded_render_rgb_identical": true
+    },
+    {
+      "id": "swin",
+      "status": "pass",
+      "decoded_render_rgb_identical": true
+    },
+    {
+      "id": "heatmap",
+      "status": "review",
+      "decoded_render_rgb_identical": true
+    }
+  ],
+  "local_development_case": {
+    "id": "ddpm",
+    "status": "pass",
+    "decoded_render_rgb_identical": true,
+    "difference_bbox": null,
+    "artwork": "local only"
+  },
+  "legacy_replay": {
+    "all_blocking_checks_passed": false,
+    "visual_review": "required",
+    "cases": [
+      {
+        "id": "consensus_zh",
+        "status": "pass",
+        "error": null
+      },
+      {
+        "id": "matplotlib_table",
+        "status": "fail",
+        "error": null
+      },
+      {
+        "id": "nasa_06",
+        "status": "review",
+        "error": null
+      },
+      {
+        "id": "nasa_16",
+        "status": "review",
+        "error": null
+      },
+      {
+        "id": "nasa_18",
+        "status": "review",
+        "error": null
+      },
+      {
+        "id": "nasa_28",
+        "status": "review",
+        "error": null
+      }
+    ]
+  },
+  "legacy_exit_code": 2,
+  "previous_conference_replay": {
+    "all_blocking_checks_passed": true,
+    "visual_review": "required",
+    "cases": [
+      {
+        "id": "vit",
+        "status": "pass",
+        "error": null
+      },
+      {
+        "id": "spatial_mamba",
+        "status": "pass",
+        "error": null
+      }
+    ]
+  },
+  "independent_baseline_reports": {
+    "clip": "078b222d5088d702fb0543732af72c650305b1b83e4e97cdd2454038f297730c",
+    "swin": "335cfff24ab33c010992ad5041d67b41e8aff9e3073755e76790c11dd302655a",
+    "heatmap": "c1c5581e496ebb875f0ad981c6ffd2089bef7262658f6c73418d1fadc5202a55"
+  },
+  "native_editors": {
+    "PowerPoint": "unverified",
+    "WPS": "unverified"
+  },
+  "remote_ci": "Record exact release commit and package digest in GitHub Actions and the v0.3.0 release after push"
+}

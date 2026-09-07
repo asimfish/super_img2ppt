@@ -1,0 +1,95 @@
+{
+  "created_utc": "2026-09-07T08:36:27.968397+00:00",
+  "local_repair_attempt": 1,
+  "source_candidate": "scene_candidate_01.json",
+  "new_candidate": "scene_candidate_02.json",
+  "unchanged_roi_plan_sha256": "beda47e44850c08a708b839d14fb99e19fcb71e409cbc22c60e8559b1b3e78cf",
+  "changes": [
+    {
+      "element": "row_label_1",
+      "delta_source_px": [
+        -1,
+        0
+      ],
+      "evidence": "Original fixed ROI row labels have +1..+3 left-edge and 0..+1 right-edge drift. Common font size and relative spacing kept fixed; same-level labels shifted left 1 source px."
+    },
+    {
+      "element": "row_label_2",
+      "delta_source_px": [
+        -1,
+        0
+      ],
+      "evidence": "Original fixed ROI row labels have +1..+3 left-edge and 0..+1 right-edge drift. Common font size and relative spacing kept fixed; same-level labels shifted left 1 source px."
+    },
+    {
+      "element": "row_label_3",
+      "delta_source_px": [
+        -1,
+        0
+      ],
+      "evidence": "Original fixed ROI row labels have +1..+3 left-edge and 0..+1 right-edge drift. Common font size and relative spacing kept fixed; same-level labels shifted left 1 source px."
+    },
+    {
+      "element": "row_label_4",
+      "delta_source_px": [
+        -1,
+        0
+      ],
+      "evidence": "Original fixed ROI row labels have +1..+3 left-edge and 0..+1 right-edge drift. Common font size and relative spacing kept fixed; same-level labels shifted left 1 source px."
+    },
+    {
+      "element": "row_label_5",
+      "delta_source_px": [
+        -1,
+        0
+      ],
+      "evidence": "Original fixed ROI row labels have +1..+3 left-edge and 0..+1 right-edge drift. Common font size and relative spacing kept fixed; same-level labels shifted left 1 source px."
+    },
+    {
+      "element": "row_label_6",
+      "delta_source_px": [
+        -1,
+        0
+      ],
+      "evidence": "Original fixed ROI row labels have +1..+3 left-edge and 0..+1 right-edge drift. Common font size and relative spacing kept fixed; same-level labels shifted left 1 source px."
+    },
+    {
+      "element": "row_label_7",
+      "delta_source_px": [
+        -1,
+        0
+      ],
+      "evidence": "Original fixed ROI row labels have +1..+3 left-edge and 0..+1 right-edge drift. Common font size and relative spacing kept fixed; same-level labels shifted left 1 source px."
+    },
+    {
+      "element": "colorbar_label",
+      "delta_source_px": [
+        2.5,
+        0
+      ],
+      "evidence": "Original fixed ROI left/right edge drift -2/-3 px; horizontal translation of rotated frame corrects measured visible position."
+    },
+    {
+      "element": "colorbar_gradient",
+      "stop_index": 0,
+      "old": "#004226",
+      "new": "#004629",
+      "source_sample": [
+        550,
+        99
+      ],
+      "evidence": "Original source y98 and y455 are contaminated by black outline antialiasing; nearest interior pixels y99/y454 preserve clean source gradient endpoints. No source plotting data consulted."
+    },
+    {
+      "element": "colorbar_gradient",
+      "stop_index": -1,
+      "old": "#F1F1D8",
+      "new": "#FFFFE4",
+      "source_sample": [
+        550,
+        454
+      ],
+      "evidence": "Original source y98 and y455 are contaminated by black outline antialiasing; nearest interior pixels y99/y454 preserve clean source gradient endpoints. No source plotting data consulted."
+    }
+  ]
+}

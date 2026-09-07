@@ -1,0 +1,78 @@
+{
+  "note": "Ordered execution manifest, including nonzero exit codes; every output directory was new. Author scripts and immutable scene snapshots preserve the inputs at each step.",
+  "commands": [
+    {
+      "phase": "prepare",
+      "exit_code": 0,
+      "command": "PATH=/opt/homebrew/bin:$PATH PYTHONPATH=/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v020-frozen-25jvlm15/super-img2ppt/src /Users/liyufeng/Code/super_img2ppt/.venv/bin/python -m super_img2ppt prepare /Users/liyufeng/Code/super_img2ppt/output/diverse_cases_20260906/raw/swin-transformer_figures_teaser.png --out /tmp/super-img2ppt-diverse-swin-j37k7e_x/job"
+    },
+    {
+      "phase": "author",
+      "exit_code": 0,
+      "command": "PATH=/opt/homebrew/bin:$PATH PYTHONPATH=/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v020-frozen-25jvlm15/super-img2ppt/src /Users/liyufeng/Code/super_img2ppt/.venv/bin/python /tmp/super-img2ppt-diverse-swin-j37k7e_x/author_scene.py"
+    },
+    {
+      "phase": "check_01",
+      "exit_code": 2,
+      "command": "PATH=/opt/homebrew/bin:$PATH PYTHONPATH=/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v020-frozen-25jvlm15/super-img2ppt/src /Users/liyufeng/Code/super_img2ppt/.venv/bin/python -m super_img2ppt check /tmp/super-img2ppt-diverse-swin-j37k7e_x/job/scene.json --out /tmp/super-img2ppt-diverse-swin-j37k7e_x/check_01 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "source_candidate": "scene_candidate_01.json"
+    },
+    {
+      "phase": "repair_02",
+      "exit_code": 0,
+      "command": "/Users/liyufeng/Code/super_img2ppt/.venv/bin/python /tmp/super-img2ppt-diverse-swin-j37k7e_x/repair_02.py"
+    },
+    {
+      "phase": "check_02",
+      "exit_code": 0,
+      "command": "PATH=/opt/homebrew/bin:$PATH PYTHONPATH=/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v020-frozen-25jvlm15/super-img2ppt/src /Users/liyufeng/Code/super_img2ppt/.venv/bin/python -m super_img2ppt check /tmp/super-img2ppt-diverse-swin-j37k7e_x/job/scene.json --out /tmp/super-img2ppt-diverse-swin-j37k7e_x/check_02 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "source_candidate": "scene_candidate_02.json"
+    },
+    {
+      "phase": "build_02",
+      "exit_code": 2,
+      "command": "PATH=/opt/homebrew/bin:$PATH PYTHONPATH=/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v020-frozen-25jvlm15/super-img2ppt/src /Users/liyufeng/Code/super_img2ppt/.venv/bin/python -m super_img2ppt build /tmp/super-img2ppt-diverse-swin-j37k7e_x/job/scene.json --out /tmp/super-img2ppt-diverse-swin-j37k7e_x/build_02 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "source_candidate": "scene_candidate_02.json"
+    },
+    {
+      "phase": "measure_02",
+      "exit_code": 0,
+      "command": "/Users/liyufeng/Code/super_img2ppt/.venv/bin/python /tmp/super-img2ppt-diverse-swin-j37k7e_x/measure_edges.py /tmp/super-img2ppt-diverse-swin-j37k7e_x/build_02 measurements_02.json"
+    },
+    {
+      "phase": "repair_03",
+      "exit_code": 0,
+      "command": "/Users/liyufeng/Code/super_img2ppt/.venv/bin/python /tmp/super-img2ppt-diverse-swin-j37k7e_x/repair_03.py"
+    },
+    {
+      "phase": "check_03",
+      "exit_code": 2,
+      "command": "PATH=/opt/homebrew/bin:$PATH PYTHONPATH=/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v020-frozen-25jvlm15/super-img2ppt/src /Users/liyufeng/Code/super_img2ppt/.venv/bin/python -m super_img2ppt check /tmp/super-img2ppt-diverse-swin-j37k7e_x/job/scene.json --out /tmp/super-img2ppt-diverse-swin-j37k7e_x/check_03 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "source_candidate": "scene_candidate_03.json"
+    },
+    {
+      "phase": "repair_04",
+      "exit_code": 0,
+      "command": "Recorded exact inline mutation in repair_04_notes.json and immutable scene_candidate_04.json: rotated text box y -= 0.5, height = 50; all other fields retained."
+    },
+    {
+      "phase": "check_04",
+      "exit_code": 0,
+      "command": "PATH=/opt/homebrew/bin:$PATH PYTHONPATH=/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v020-frozen-25jvlm15/super-img2ppt/src /Users/liyufeng/Code/super_img2ppt/.venv/bin/python -m super_img2ppt check /tmp/super-img2ppt-diverse-swin-j37k7e_x/job/scene.json --out /tmp/super-img2ppt-diverse-swin-j37k7e_x/check_04 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "source_candidate": "scene_candidate_04.json"
+    },
+    {
+      "phase": "build_04",
+      "exit_code": 0,
+      "command": "PATH=/opt/homebrew/bin:$PATH PYTHONPATH=/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v020-frozen-25jvlm15/super-img2ppt/src /Users/liyufeng/Code/super_img2ppt/.venv/bin/python -m super_img2ppt build /tmp/super-img2ppt-diverse-swin-j37k7e_x/job/scene.json --out /tmp/super-img2ppt-diverse-swin-j37k7e_x/build_04 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "source_candidate": "scene_candidate_04.json"
+    },
+    {
+      "phase": "measure_04",
+      "exit_code": 0,
+      "command": "/Users/liyufeng/Code/super_img2ppt/.venv/bin/python /tmp/super-img2ppt-diverse-swin-j37k7e_x/measure_edges.py /tmp/super-img2ppt-diverse-swin-j37k7e_x/build_04 measurements_04.json"
+    }
+  ],
+  "rebuild_final_command": "PATH=/opt/homebrew/bin:$PATH PYTHONPATH=/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v020-frozen-25jvlm15/super-img2ppt/src /Users/liyufeng/Code/super_img2ppt/.venv/bin/python -m super_img2ppt build /tmp/super-img2ppt-diverse-swin-j37k7e_x/build_04/scene.resolved.json --out /tmp/super-img2ppt-diverse-swin-j37k7e_x/rebuild_final_NEW --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+  "reproduce_rendered_caret_failure_command": "PATH=/opt/homebrew/bin:$PATH PYTHONPATH=/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v020-frozen-25jvlm15/super-img2ppt/src /Users/liyufeng/Code/super_img2ppt/.venv/bin/python -m super_img2ppt build /tmp/super-img2ppt-diverse-swin-j37k7e_x/build_02/scene.resolved.json --out /tmp/super-img2ppt-diverse-swin-j37k7e_x/reproduce_caret_NEW --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+}

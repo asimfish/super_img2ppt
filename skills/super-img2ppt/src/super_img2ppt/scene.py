@@ -11,6 +11,8 @@ from pathlib import Path
 
 from jsonschema import Draft202012Validator
 
+from .geometry import strictly_convex
+
 
 class InputError(ValueError):
     """An input cannot be processed without changing its declared meaning."""
@@ -69,8 +71,43 @@ ELEMENT = {
         "fit": {"enum": ["strict", "shrink"]},
         "min_font_size": {"type": "number", "minimum": 1, "maximum": 1000},
         "font_group": ID,
-        "shape": {"enum": ["rect", "round_rect", "ellipse", "triangle", "diamond", "chevron"]},
+        "shape": {
+            "enum": ["rect", "round_rect", "ellipse", "triangle", "diamond", "chevron", "polygon"]
+        },
+        "vertices": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 32,
+            "items": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2,
+                "items": {"type": "number", "minimum": 0, "maximum": 1},
+            },
+        },
         "fill": {"anyOf": [COLOR, {"type": "null"}]},
+        "gradient": {
+            "type": "object",
+            "required": ["direction", "stops"],
+            "properties": {
+                "direction": {"enum": ["vertical", "horizontal"]},
+                "stops": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 16,
+                    "items": {
+                        "type": "object",
+                        "required": ["offset", "color"],
+                        "properties": {
+                            "offset": {"type": "number", "minimum": 0, "maximum": 1},
+                            "color": COLOR,
+                        },
+                        "additionalProperties": False,
+                    },
+                },
+            },
+            "additionalProperties": False,
+        },
         "stroke": {"anyOf": [COLOR, {"type": "null"}]},
         "stroke_width": {"type": "number", "minimum": 0, "maximum": 100},
         "radius": {"type": "number", "minimum": 0, "maximum": 10000},
@@ -226,7 +263,17 @@ def validate_scene(scene: dict) -> dict:
                     "min_font_size",
                     "font_group",
                 },
-                "shape": {"box", "shape", "fill", "stroke", "stroke_width", "radius", "dash"},
+                "shape": {
+                    "box",
+                    "shape",
+                    "fill",
+                    "stroke",
+                    "stroke_width",
+                    "radius",
+                    "dash",
+                    "vertices",
+                    "gradient",
+                },
                 "image": {"box", "path", "image_fit", "provenance", "contains_text"},
                 "line": {"points", "stroke", "stroke_width", "arrow", "arrow_head", "dash"},
             }
@@ -260,6 +307,29 @@ def validate_scene(scene: dict) -> dict:
                     raise InputError(f"{element['id']}: padding consumes the text box")
             if element["kind"] == "line" and element["points"][0] == element["points"][1]:
                 raise InputError(f"{element['id']}: zero-length line")
+            if element.get("shape") == "polygon":
+                if "vertices" not in element or not strictly_convex(element["vertices"]):
+                    raise InputError(
+                        f"{element['id']}: polygon requires 3–32 distinct strictly convex vertices in perimeter order"
+                    )
+                if "radius" in element:
+                    raise InputError(f"{element['id']}: polygon does not support corner radius")
+            elif "vertices" in element:
+                raise InputError(f"{element['id']}: vertices require shape=polygon")
+            if "gradient" in element:
+                offsets = [stop["offset"] for stop in element["gradient"]["stops"]]
+                if (
+                    element.get("fill") is not None
+                    or offsets[0] != 0
+                    or offsets[-1] != 1
+                    or any(
+                        round(b * 100000) <= round(a * 100000)
+                        for a, b in zip(offsets, offsets[1:], strict=False)
+                    )
+                ):
+                    raise InputError(
+                        f"{element['id']}: gradient needs distinct ascending Office stop positions from 0 to 1 and no solid fill"
+                    )
             if "dash" in element and (
                 element.get("stroke_width", 1) <= 0
                 or (element["kind"] == "shape" and not element.get("stroke"))

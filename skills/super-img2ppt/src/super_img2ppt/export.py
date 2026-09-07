@@ -16,7 +16,7 @@ from pptx.oxml.xmlchemy import OxmlElement
 from pptx.util import Inches, Pt
 
 from .fonts import east_asian_name
-from .geometry import arrow_outline
+from .geometry import arrow_outline, polygon_points
 from .layout import TextLayout, positioned_lines
 from .scene import safe_asset, slide_transform
 
@@ -55,7 +55,25 @@ def _set_font(font, fragment, point_scale):
 
 
 def _fill_and_line(shape, element: dict, point_scale: float):
-    if element.get("fill") is not None:
+    if "gradient" in element:
+        shape.fill.gradient()
+        grad = shape._element.spPr.gradFill
+        for child in list(grad):
+            grad.remove(child)
+        stops = OxmlElement("a:gsLst")
+        for stop in element["gradient"]["stops"]:
+            gs = OxmlElement("a:gs")
+            gs.set("pos", str(round(stop["offset"] * 100000)))
+            color = OxmlElement("a:srgbClr")
+            color.set("val", stop["color"].removeprefix("#"))
+            gs.append(color)
+            stops.append(gs)
+        grad.append(stops)
+        linear = OxmlElement("a:lin")
+        linear.set("ang", "5400000" if element["gradient"]["direction"] == "vertical" else "0")
+        linear.set("scaled", "1")
+        grad.append(linear)
+    elif element.get("fill") is not None:
         shape.fill.solid()
         shape.fill.fore_color.rgb = _color(element["fill"])
     else:
@@ -169,10 +187,18 @@ def write_pptx(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pa
                             run.text = fragment.text
                             _set_font(run.font, fragment, point_scale)
                 elif kind == "shape":
-                    shape = slide.shapes.add_shape(
-                        SHAPES[element["shape"]], Inches(x), Inches(y), Inches(w), Inches(h)
-                    )
+                    if element["shape"] == "polygon":
+                        points = [(px * 1000, py * 1000) for px, py in polygon_points(element)]
+                        builder = slide.shapes.build_freeform(*points[0], scale=tx.scale * 914.4)
+                        builder.add_line_segments(points[1:], close=True)
+                        shape = builder.convert_to_shape(Inches(tx.x), Inches(tx.y))
+                    else:
+                        shape = slide.shapes.add_shape(
+                            SHAPES[element["shape"]], Inches(x), Inches(y), Inches(w), Inches(h)
+                        )
                     _fill_and_line(shape, element, point_scale)
+                    if element["shape"] == "polygon":
+                        shape.line._get_or_add_ln().append(OxmlElement("a:round"))
                     if element["shape"] == "round_rect":
                         radius = element.get("radius", min(element["box"][2:]) * 0.12)
                         shape.adjustments[0] = min(0.5, radius / min(element["box"][2:]))
@@ -317,6 +343,27 @@ def write_svg(slide: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                 }
                 if "dash" in element:
                     style["stroke-dasharray"] = " ".join(map(str, element["dash"]))
+                if "gradient" in element:
+                    gid = f"gradient-{element['id']}"
+                    vertical = element["gradient"]["direction"] == "vertical"
+                    gradient = ET.SubElement(
+                        ET.SubElement(group, "defs"),
+                        "linearGradient",
+                        {
+                            "id": gid,
+                            "x1": "0%",
+                            "y1": "0%",
+                            "x2": "0%" if vertical else "100%",
+                            "y2": "100%" if vertical else "0%",
+                        },
+                    )
+                    for stop in element["gradient"]["stops"]:
+                        ET.SubElement(
+                            gradient,
+                            "stop",
+                            {"offset": str(stop["offset"]), "stop-color": stop["color"]},
+                        )
+                    style["fill"] = f"url(#{gid})"
                 name = element["shape"]
                 if name in {"rect", "round_rect"}:
                     if name == "round_rect":
@@ -337,7 +384,10 @@ def write_svg(slide: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                         },
                     )
                 else:
-                    if name == "triangle":
+                    if name == "polygon":
+                        points = polygon_points(element)
+                        style["stroke-linejoin"] = "round"
+                    elif name == "triangle":
                         points = [(x + w / 2, y), (x + w, y + h), (x, y + h)]
                     elif name == "diamond":
                         points = [

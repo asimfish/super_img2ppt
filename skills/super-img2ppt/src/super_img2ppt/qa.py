@@ -10,7 +10,7 @@ from pathlib import Path
 
 from PIL import Image, ImageChops, ImageDraw, ImageStat
 
-from .geometry import box_points, convex_hull, line_parts, rotate_points
+from .geometry import box_points, convex_hull, line_parts, polygon_points, rotate_points
 from .layout import TextLayout, text_ink_boxes, text_ink_mask
 from .scene import InputError, safe_asset, text_content
 
@@ -20,6 +20,8 @@ def polygon(element: dict) -> list[tuple[float, float]]:
         return convex_hull([p for part in line_parts(element) for p in part])
     x, y, w, h = element["box"]
     shape = element.get("shape")
+    if shape == "polygon":
+        return polygon_points(element)
     if shape == "ellipse":
         return [
             (
@@ -110,6 +112,23 @@ def _alpha_in_text_frame(alpha, image, text, size, left, top):
     )
 
 
+def _text_mask_in_text_frame(other_mask, other, text, size, left, top):
+    mask, ox, oy = other_mask
+    points = rotate_points([(left, top), (left + 0.25, top), (left, top + 0.25)], text)
+    origin, dx, dy = rotate_points(points, other, inverse=True)
+    affine = (
+        (dx[0] - origin[0]) * 4,
+        (dy[0] - origin[0]) * 4,
+        (origin[0] - ox) * 4,
+        (dx[1] - origin[1]) * 4,
+        (dy[1] - origin[1]) * 4,
+        (origin[1] - oy) * 4,
+    )
+    return mask.transform(
+        size, Image.Transform.AFFINE, affine, resample=Image.Resampling.BILINEAR, fillcolor=0
+    )
+
+
 def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Path) -> dict:
     findings = []
     pages = []
@@ -191,12 +210,21 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
             if outside:
                 clip = ImageChops.invert(clip)
             if other_id is not None:
-                alpha = artwork_alpha(other_id)
-                if alpha is not None:
-                    visible = _alpha_in_text_frame(
-                        alpha, elements[other_id], elements[eid], mask.size, left, top
+                if elements[other_id]["kind"] == "text":
+                    other_mask = ink_mask(other_id)
+                    if other_mask is None:
+                        return None
+                    visible = _text_mask_in_text_frame(
+                        other_mask, elements[other_id], elements[eid], mask.size, left, top
                     )
                     clip = ImageChops.multiply(clip, visible)
+                else:
+                    alpha = artwork_alpha(other_id)
+                    if alpha is not None:
+                        visible = _alpha_in_text_frame(
+                            alpha, elements[other_id], elements[eid], mask.size, left, top
+                        )
+                        clip = ImageChops.multiply(clip, visible)
             coverage = ImageChops.multiply(mask, clip)
             return ImageStat.Stat(coverage).sum[0] / (255 * 16)
 
@@ -346,7 +374,7 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                         for a in text_footprints.get(lo, footprints[lo])
                         for b in text_footprints.get(hi, footprints[hi])
                     )
-                    if ink_overlap > 0.5 and (lo in text_footprints) != (hi in text_footprints):
+                    if ink_overlap > 0.5:
                         text_id, other_id = (lo, hi) if lo in text_footprints else (hi, lo)
                         refined = ink_area(text_id, footprints[other_id], other_id=other_id)
                         if refined is not None:

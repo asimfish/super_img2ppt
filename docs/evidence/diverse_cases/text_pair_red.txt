@@ -1,0 +1,66 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+____ test_separate_subscript_ink_is_allowed_but_duplicate_ink_is_blocked[0] ____
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 300, 'height': 300, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x1081c2870>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-204/test_separate_subscript_ink_is0')
+rotation = 0
+
+    @pytest.mark.parametrize("rotation", [0, 90])
+    def test_separate_subscript_ink_is_allowed_but_duplicate_ink_is_blocked(scene, fonts, tmp_path, rotation):
+        page = scene["slides"][0]
+        page.update(width=300, height=300)
+        page["elements"] = [
+            {"id": "base", "kind": "text", "z": 1, "box": [61.25, 43.5, 17.75, 33.6],
+             "text": "T", "font_family": "Times New Roman", "font_size": 24},
+            {"id": "sub", "kind": "text", "z": 2, "box": [75, 52.5, 13, 28],
+             "text": "2", "font_family": "Times New Roman", "font_size": 20},
+        ]
+        if rotation:
+            for e in page["elements"]:
+                x, y, w, h = e["box"]
+                cx, cy = 200 - (y + h / 2), x + w / 2
+                e["box"] = [cx - w / 2, cy - h / 2, w, h]
+                e["rotation"] = rotation
+        result = preflight(scene, layout_scene(scene, fonts), tmp_path)
+>       assert not any(f["code"] == "unintended_overlap" for f in result["findings"]), result
+E       AssertionError: {'status': 'fail', 'findings': [{'slide': 'page_001', 'code': 'unintended_overlap', 'severity': 'error', 'elements': [...height_px': 27.6, ...}, 'sub': {'scale': 1, 'effective_font_size_px': 20, 'width_px': 10.0, 'height_px': 23.0, ...}}}]}
+E       assert not True
+E        +  where True = any(<generator object test_separate_subscript_ink_is_allowed_but_duplicate_ink_is_blocked.<locals>.<genexpr> at 0x108387370>)
+
+tests/test_text_pair_ink.py:25: AssertionError
+___ test_separate_subscript_ink_is_allowed_but_duplicate_ink_is_blocked[90] ____
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 300, 'height': 300, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x1081c2870>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-204/test_separate_subscript_ink_is1')
+rotation = 90
+
+    @pytest.mark.parametrize("rotation", [0, 90])
+    def test_separate_subscript_ink_is_allowed_but_duplicate_ink_is_blocked(scene, fonts, tmp_path, rotation):
+        page = scene["slides"][0]
+        page.update(width=300, height=300)
+        page["elements"] = [
+            {"id": "base", "kind": "text", "z": 1, "box": [61.25, 43.5, 17.75, 33.6],
+             "text": "T", "font_family": "Times New Roman", "font_size": 24},
+            {"id": "sub", "kind": "text", "z": 2, "box": [75, 52.5, 13, 28],
+             "text": "2", "font_family": "Times New Roman", "font_size": 20},
+        ]
+        if rotation:
+            for e in page["elements"]:
+                x, y, w, h = e["box"]
+                cx, cy = 200 - (y + h / 2), x + w / 2
+                e["box"] = [cx - w / 2, cy - h / 2, w, h]
+                e["rotation"] = rotation
+        result = preflight(scene, layout_scene(scene, fonts), tmp_path)
+>       assert not any(f["code"] == "unintended_overlap" for f in result["findings"]), result
+E       AssertionError: {'status': 'fail', 'findings': [{'slide': 'page_001', 'code': 'unintended_overlap', 'severity': 'error', 'elements': [...height_px': 27.6, ...}, 'sub': {'scale': 1, 'effective_font_size_px': 20, 'width_px': 10.0, 'height_px': 23.0, ...}}}]}
+E       assert not True
+E        +  where True = any(<generator object test_separate_subscript_ink_is_allowed_but_duplicate_ink_is_blocked.<locals>.<genexpr> at 0x1083e2e90>)
+
+tests/test_text_pair_ink.py:25: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_text_pair_ink.py::test_separate_subscript_ink_is_allowed_but_duplicate_ink_is_blocked[0]
+FAILED tests/test_text_pair_ink.py::test_separate_subscript_ink_is_allowed_but_duplicate_ink_is_blocked[90]
+2 failed in 2.44s

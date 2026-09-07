@@ -29,7 +29,9 @@ glyph or claim a text-content check proves exact spacing.
 ## Geometry and assets
 
 Use a background color for flat backgrounds and native shapes for panels, rules and simple
-symbols. Give an element a stable ID and explicit integer `z`. A textbox inside a panel names
+symbols. Slanted convex nodes use polygon vertices; continuous colorbars can use a native linear
+gradient sampled from the source. Adjacent tiny fill strips can reveal seams in actual document
+renderers, even when their scene coordinates touch. Give an element a stable ID and explicit integer `z`. A textbox inside a panel names
 the panel in `container`. Touching edges do not count as overlap; positive-area collisions do.
 Bounding checks for ellipses/triangles use their actual convex footprint, while rounded rectangles
 and chevrons use conservative bounding rectangles. A conservative warning can be reviewed with

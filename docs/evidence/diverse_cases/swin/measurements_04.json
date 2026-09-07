@@ -1,0 +1,1166 @@
+{
+  "source": "/tmp/super-img2ppt-diverse-swin-j37k7e_x/job/pages/page_001/source.png",
+  "render": "/tmp/super-img2ppt-diverse-swin-j37k7e_x/build_04/render/page_001.png",
+  "actual_render_dimensions": [
+    1600,
+    880
+  ],
+  "measurement_dimensions": [
+    2386,
+    1312
+  ],
+  "render_resampling": "LANCZOS to source size",
+  "roi_definition_sha256": "9b797ef3325e69c0a497c55d33108b5f2186ed345bae24acda80ae216f0c3973",
+  "method": "Binary-mask four-neighbour boundary; symmetric Euclidean-chamfer nearest-boundary distance in source pixels. Black threshold max RGB < 150; red r-g > 50 and r-b > 40 and r > 70. No ROI changes after first candidate.",
+  "results": [
+    {
+      "id": "a_classification",
+      "type": "text",
+      "box": [
+        160,
+        82,
+        377,
+        124
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        171,
+        89,
+        368,
+        116
+      ],
+      "rendered_ink_bbox": [
+        171,
+        90,
+        366,
+        117
+      ],
+      "source_ink_pixels": 1461,
+      "rendered_ink_pixels": 1511,
+      "source_boundary_pixels": 981,
+      "rendered_boundary_pixels": 949,
+      "bbox_edge_delta_px": [
+        0,
+        1,
+        -2,
+        1
+      ],
+      "symmetric_boundary_mean_px": 0.577,
+      "symmetric_boundary_p95_px": 1.414,
+      "symmetric_boundary_max_px": 3.0,
+      "mask_iou": 0.6196,
+      "metric_status": "measured"
+    },
+    {
+      "id": "a_segmentation",
+      "type": "text",
+      "box": [
+        393,
+        39,
+        612,
+        85
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        403,
+        45,
+        601,
+        80
+      ],
+      "rendered_ink_bbox": [
+        404,
+        45,
+        600,
+        80
+      ],
+      "source_ink_pixels": 1478,
+      "rendered_ink_pixels": 1532,
+      "source_boundary_pixels": 1027,
+      "rendered_boundary_pixels": 994,
+      "bbox_edge_delta_px": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "symmetric_boundary_mean_px": 0.345,
+      "symmetric_boundary_p95_px": 1.0,
+      "symmetric_boundary_max_px": 2.0,
+      "mask_iou": 0.7572,
+      "metric_status": "measured"
+    },
+    {
+      "id": "a_detection",
+      "type": "text",
+      "box": [
+        424,
+        84,
+        622,
+        126
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        433,
+        90,
+        613,
+        117
+      ],
+      "rendered_ink_bbox": [
+        434,
+        90,
+        612,
+        117
+      ],
+      "source_ink_pixels": 1046,
+      "rendered_ink_pixels": 1086,
+      "source_boundary_pixels": 700,
+      "rendered_boundary_pixels": 688,
+      "bbox_edge_delta_px": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "symmetric_boundary_mean_px": 0.322,
+      "symmetric_boundary_p95_px": 1.0,
+      "symmetric_boundary_max_px": 2.0,
+      "mask_iou": 0.7693,
+      "metric_status": "measured"
+    },
+    {
+      "id": "a_caption",
+      "type": "text",
+      "box": [
+        86,
+        578,
+        433,
+        626
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        98,
+        583,
+        420,
+        618
+      ],
+      "rendered_ink_bbox": [
+        98,
+        583,
+        417,
+        617
+      ],
+      "source_ink_pixels": 2194,
+      "rendered_ink_pixels": 2311,
+      "source_boundary_pixels": 1504,
+      "rendered_boundary_pixels": 1447,
+      "bbox_edge_delta_px": [
+        0,
+        0,
+        -3,
+        -1
+      ],
+      "symmetric_boundary_mean_px": 0.831,
+      "symmetric_boundary_p95_px": 2.0,
+      "symmetric_boundary_max_px": 3.414,
+      "mask_iou": 0.427,
+      "metric_status": "measured"
+    },
+    {
+      "id": "a_top_red_edge",
+      "type": "grid",
+      "box": [
+        160,
+        160,
+        467,
+        173
+      ],
+      "mask": "red",
+      "source_ink_bbox": [
+        160,
+        166,
+        465,
+        173
+      ],
+      "rendered_ink_bbox": [
+        160,
+        166,
+        464,
+        173
+      ],
+      "source_ink_pixels": 532,
+      "rendered_ink_pixels": 633,
+      "source_boundary_pixels": 522,
+      "rendered_boundary_pixels": 618,
+      "bbox_edge_delta_px": [
+        0,
+        0,
+        -1,
+        0
+      ],
+      "symmetric_boundary_mean_px": 0.109,
+      "symmetric_boundary_p95_px": 1.0,
+      "symmetric_boundary_max_px": 1.0,
+      "mask_iou": 0.826,
+      "metric_status": "measured"
+    },
+    {
+      "id": "a_bottom_red_edge",
+      "type": "grid",
+      "box": [
+        1,
+        526,
+        111,
+        563
+      ],
+      "mask": "red",
+      "source_ink_bbox": [
+        2,
+        526,
+        111,
+        561
+      ],
+      "rendered_ink_bbox": [
+        3,
+        526,
+        111,
+        561
+      ],
+      "source_ink_pixels": 521,
+      "rendered_ink_pixels": 727,
+      "source_boundary_pixels": 427,
+      "rendered_boundary_pixels": 639,
+      "bbox_edge_delta_px": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "symmetric_boundary_mean_px": 0.37,
+      "symmetric_boundary_p95_px": 1.0,
+      "symmetric_boundary_max_px": 1.0,
+      "mask_iou": 0.6041,
+      "metric_status": "measured"
+    },
+    {
+      "id": "b_layer1",
+      "type": "text",
+      "box": [
+        798,
+        145,
+        923,
+        192
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        798,
+        154,
+        923,
+        192
+      ],
+      "rendered_ink_bbox": [
+        809,
+        154,
+        912,
+        189
+      ],
+      "source_ink_pixels": 803,
+      "rendered_ink_pixels": 723,
+      "source_boundary_pixels": 580,
+      "rendered_boundary_pixels": 450,
+      "bbox_edge_delta_px": [
+        11,
+        0,
+        -11,
+        -3
+      ],
+      "symmetric_boundary_mean_px": 1.862,
+      "symmetric_boundary_p95_px": 11.828,
+      "symmetric_boundary_max_px": 16.556,
+      "mask_iou": 0.5034,
+      "metric_status": "measured"
+    },
+    {
+      "id": "b_layer_next",
+      "type": "text",
+      "box": [
+        1180,
+        144,
+        1345,
+        192
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        1183,
+        152,
+        1337,
+        192
+      ],
+      "rendered_ink_bbox": [
+        1189,
+        153,
+        1328,
+        187
+      ],
+      "source_ink_pixels": 1160,
+      "rendered_ink_pixels": 861,
+      "source_boundary_pixels": 907,
+      "rendered_boundary_pixels": 590,
+      "bbox_edge_delta_px": [
+        6,
+        1,
+        -9,
+        -5
+      ],
+      "symmetric_boundary_mean_px": 3.151,
+      "symmetric_boundary_p95_px": 14.243,
+      "symmetric_boundary_max_px": 17.971,
+      "mask_iou": 0.3805,
+      "metric_status": "measured"
+    },
+    {
+      "id": "b_caption",
+      "type": "text",
+      "box": [
+        1068,
+        578,
+        1382,
+        625
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        1076,
+        583,
+        1372,
+        618
+      ],
+      "rendered_ink_bbox": [
+        1076,
+        583,
+        1369,
+        617
+      ],
+      "source_ink_pixels": 2199,
+      "rendered_ink_pixels": 2320,
+      "source_boundary_pixels": 1462,
+      "rendered_boundary_pixels": 1401,
+      "bbox_edge_delta_px": [
+        0,
+        0,
+        -3,
+        -1
+      ],
+      "symmetric_boundary_mean_px": 0.537,
+      "symmetric_boundary_p95_px": 1.414,
+      "symmetric_boundary_max_px": 3.414,
+      "mask_iou": 0.6535,
+      "metric_status": "measured"
+    },
+    {
+      "id": "b_red_top_left",
+      "type": "grid",
+      "box": [
+        691,
+        186,
+        860,
+        204
+      ],
+      "mask": "red",
+      "source_ink_bbox": [
+        697,
+        191,
+        854,
+        204
+      ],
+      "rendered_ink_bbox": [
+        696,
+        191,
+        854,
+        204
+      ],
+      "source_ink_pixels": 531,
+      "rendered_ink_pixels": 542,
+      "source_boundary_pixels": 354,
+      "rendered_boundary_pixels": 351,
+      "bbox_edge_delta_px": [
+        -1,
+        0,
+        0,
+        0
+      ],
+      "symmetric_boundary_mean_px": 0.041,
+      "symmetric_boundary_p95_px": 0.0,
+      "symmetric_boundary_max_px": 1.0,
+      "mask_iou": 0.9724,
+      "metric_status": "measured"
+    },
+    {
+      "id": "b_red_vertical_left",
+      "type": "grid",
+      "box": [
+        691,
+        197,
+        705,
+        343
+      ],
+      "mask": "red",
+      "source_ink_bbox": [
+        697,
+        197,
+        700,
+        343
+      ],
+      "rendered_ink_bbox": [
+        696,
+        197,
+        700,
+        343
+      ],
+      "source_ink_pixels": 438,
+      "rendered_ink_pixels": 584,
+      "source_boundary_pixels": 294,
+      "rendered_boundary_pixels": 296,
+      "bbox_edge_delta_px": [
+        -1,
+        0,
+        0,
+        0
+      ],
+      "symmetric_boundary_mean_px": 0.492,
+      "symmetric_boundary_p95_px": 1.0,
+      "symmetric_boundary_max_px": 1.0,
+      "mask_iou": 0.75,
+      "metric_status": "measured"
+    },
+    {
+      "id": "b_red_center_top",
+      "type": "grid",
+      "box": [
+        1178,
+        270,
+        1345,
+        287
+      ],
+      "mask": "red",
+      "source_ink_bbox": [
+        1184,
+        277,
+        1340,
+        287
+      ],
+      "rendered_ink_bbox": [
+        1182,
+        277,
+        1340,
+        287
+      ],
+      "source_ink_pixels": 510,
+      "rendered_ink_pixels": 537,
+      "source_boundary_pixels": 340,
+      "rendered_boundary_pixels": 340,
+      "bbox_edge_delta_px": [
+        -2,
+        0,
+        0,
+        0
+      ],
+      "symmetric_boundary_mean_px": 0.08,
+      "symmetric_boundary_p95_px": 1.0,
+      "symmetric_boundary_max_px": 2.0,
+      "mask_iou": 0.9461,
+      "metric_status": "measured"
+    },
+    {
+      "id": "b_red_arrow",
+      "type": "connector",
+      "box": [
+        1026,
+        350,
+        1088,
+        376
+      ],
+      "mask": "red",
+      "source_ink_bbox": [
+        1030,
+        354,
+        1083,
+        372
+      ],
+      "rendered_ink_bbox": [
+        1031,
+        354,
+        1082,
+        372
+      ],
+      "source_ink_pixels": 244,
+      "rendered_ink_pixels": 300,
+      "source_boundary_pixels": 137,
+      "rendered_boundary_pixels": 129,
+      "bbox_edge_delta_px": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "symmetric_boundary_mean_px": 0.564,
+      "symmetric_boundary_p95_px": 1.0,
+      "symmetric_boundary_max_px": 2.828,
+      "mask_iou": 0.7548,
+      "metric_status": "measured"
+    },
+    {
+      "id": "b_patch_label",
+      "type": "text",
+      "box": [
+        1507,
+        405,
+        1620,
+        444
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        1515,
+        412,
+        1605,
+        438
+      ],
+      "rendered_ink_bbox": [
+        1516,
+        413,
+        1604,
+        440
+      ],
+      "source_ink_pixels": 487,
+      "rendered_ink_pixels": 548,
+      "source_boundary_pixels": 377,
+      "rendered_boundary_pixels": 400,
+      "bbox_edge_delta_px": [
+        1,
+        1,
+        -1,
+        2
+      ],
+      "symmetric_boundary_mean_px": 0.761,
+      "symmetric_boundary_p95_px": 2.0,
+      "symmetric_boundary_max_px": 3.0,
+      "mask_iou": 0.4476,
+      "metric_status": "measured"
+    },
+    {
+      "id": "c_mlp1",
+      "type": "text",
+      "box": [
+        1810,
+        139,
+        1900,
+        177
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        1810,
+        139,
+        1900,
+        177
+      ],
+      "rendered_ink_bbox": [
+        1810,
+        139,
+        1900,
+        177
+      ],
+      "source_ink_pixels": 430,
+      "rendered_ink_pixels": 458,
+      "source_boundary_pixels": 326,
+      "rendered_boundary_pixels": 326,
+      "bbox_edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "symmetric_boundary_mean_px": 0.568,
+      "symmetric_boundary_p95_px": 1.0,
+      "symmetric_boundary_max_px": 2.414,
+      "mask_iou": 0.4874,
+      "metric_status": "measured"
+    },
+    {
+      "id": "c_ln1",
+      "type": "text",
+      "box": [
+        1828,
+        240,
+        1883,
+        279
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        1828,
+        242,
+        1883,
+        279
+      ],
+      "rendered_ink_bbox": [
+        1828,
+        242,
+        1883,
+        279
+      ],
+      "source_ink_pixels": 364,
+      "rendered_ink_pixels": 474,
+      "source_boundary_pixels": 266,
+      "rendered_boundary_pixels": 269,
+      "bbox_edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "symmetric_boundary_mean_px": 0.442,
+      "symmetric_boundary_p95_px": 1.0,
+      "symmetric_boundary_max_px": 2.0,
+      "mask_iou": 0.7386,
+      "metric_status": "measured"
+    },
+    {
+      "id": "c_wmsa1",
+      "type": "text",
+      "box": [
+        1804,
+        351,
+        1910,
+        389
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        1808,
+        358,
+        1902,
+        377
+      ],
+      "rendered_ink_bbox": [
+        1809,
+        358,
+        1900,
+        378
+      ],
+      "source_ink_pixels": 599,
+      "rendered_ink_pixels": 718,
+      "source_boundary_pixels": 429,
+      "rendered_boundary_pixels": 420,
+      "bbox_edge_delta_px": [
+        1,
+        0,
+        -2,
+        1
+      ],
+      "symmetric_boundary_mean_px": 0.439,
+      "symmetric_boundary_p95_px": 1.0,
+      "symmetric_boundary_max_px": 2.0,
+      "mask_iou": 0.7238,
+      "metric_status": "measured"
+    },
+    {
+      "id": "c_input_arrow",
+      "type": "connector",
+      "box": [
+        1844,
+        478,
+        1868,
+        533
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        1844,
+        478,
+        1868,
+        533
+      ],
+      "rendered_ink_bbox": [
+        1844,
+        478,
+        1868,
+        533
+      ],
+      "source_ink_pixels": 262,
+      "rendered_ink_pixels": 346,
+      "source_boundary_pixels": 164,
+      "rendered_boundary_pixels": 187,
+      "bbox_edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "symmetric_boundary_mean_px": 1.142,
+      "symmetric_boundary_p95_px": 4.414,
+      "symmetric_boundary_max_px": 10.0,
+      "mask_iou": 0.5833,
+      "metric_status": "measured"
+    },
+    {
+      "id": "c_residual_horizontal",
+      "type": "connector",
+      "box": [
+        1870,
+        62,
+        1943,
+        81
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        1870,
+        62,
+        1943,
+        81
+      ],
+      "rendered_ink_bbox": [
+        1870,
+        62,
+        1943,
+        81
+      ],
+      "source_ink_pixels": 274,
+      "rendered_ink_pixels": 359,
+      "source_boundary_pixels": 195,
+      "rendered_boundary_pixels": 186,
+      "bbox_edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "symmetric_boundary_mean_px": 0.542,
+      "symmetric_boundary_p95_px": 1.414,
+      "symmetric_boundary_max_px": 3.414,
+      "mask_iou": 0.7201,
+      "metric_status": "measured"
+    },
+    {
+      "id": "d_stage1",
+      "type": "text",
+      "box": [
+        655,
+        734,
+        780,
+        781
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        665,
+        741,
+        770,
+        775
+      ],
+      "rendered_ink_bbox": [
+        664,
+        741,
+        766,
+        774
+      ],
+      "source_ink_pixels": 782,
+      "rendered_ink_pixels": 815,
+      "source_boundary_pixels": 525,
+      "rendered_boundary_pixels": 507,
+      "bbox_edge_delta_px": [
+        -1,
+        0,
+        -4,
+        -1
+      ],
+      "symmetric_boundary_mean_px": 0.944,
+      "symmetric_boundary_p95_px": 3.0,
+      "symmetric_boundary_max_px": 4.414,
+      "mask_iou": 0.3815,
+      "metric_status": "measured"
+    },
+    {
+      "id": "d_stage2",
+      "type": "text",
+      "box": [
+        1070,
+        734,
+        1202,
+        781
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        1082,
+        741,
+        1190,
+        775
+      ],
+      "rendered_ink_bbox": [
+        1084,
+        741,
+        1189,
+        774
+      ],
+      "source_ink_pixels": 825,
+      "rendered_ink_pixels": 842,
+      "source_boundary_pixels": 556,
+      "rendered_boundary_pixels": 543,
+      "bbox_edge_delta_px": [
+        2,
+        0,
+        -1,
+        -1
+      ],
+      "symmetric_boundary_mean_px": 0.653,
+      "symmetric_boundary_p95_px": 1.414,
+      "symmetric_boundary_max_px": 2.828,
+      "mask_iou": 0.5609,
+      "metric_status": "measured"
+    },
+    {
+      "id": "d_images",
+      "type": "text",
+      "box": [
+        239,
+        959,
+        366,
+        1002
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        249,
+        966,
+        356,
+        1000
+      ],
+      "rendered_ink_bbox": [
+        251,
+        966,
+        359,
+        1000
+      ],
+      "source_ink_pixels": 821,
+      "rendered_ink_pixels": 943,
+      "source_boundary_pixels": 573,
+      "rendered_boundary_pixels": 587,
+      "bbox_edge_delta_px": [
+        2,
+        0,
+        3,
+        0
+      ],
+      "symmetric_boundary_mean_px": 0.849,
+      "symmetric_boundary_p95_px": 2.0,
+      "symmetric_boundary_max_px": 3.0,
+      "mask_iou": 0.418,
+      "metric_status": "measured"
+    },
+    {
+      "id": "d_partition_vertical",
+      "type": "text",
+      "box": [
+        446,
+        846,
+        485,
+        1108
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        451,
+        852,
+        480,
+        1102
+      ],
+      "rendered_ink_bbox": [
+        448,
+        854,
+        479,
+        1101
+      ],
+      "source_ink_pixels": 1990,
+      "rendered_ink_pixels": 2173,
+      "source_boundary_pixels": 1205,
+      "rendered_boundary_pixels": 1201,
+      "bbox_edge_delta_px": [
+        -3,
+        2,
+        -1,
+        -1
+      ],
+      "symmetric_boundary_mean_px": 1.033,
+      "symmetric_boundary_p95_px": 2.828,
+      "symmetric_boundary_max_px": 4.243,
+      "mask_iou": 0.4536,
+      "metric_status": "measured"
+    },
+    {
+      "id": "d_swin1",
+      "type": "text",
+      "box": [
+        759,
+        911,
+        849,
+        953
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        764,
+        920,
+        839,
+        947
+      ],
+      "rendered_ink_bbox": [
+        763,
+        920,
+        839,
+        947
+      ],
+      "source_ink_pixels": 533,
+      "rendered_ink_pixels": 612,
+      "source_boundary_pixels": 360,
+      "rendered_boundary_pixels": 373,
+      "bbox_edge_delta_px": [
+        -1,
+        0,
+        0,
+        0
+      ],
+      "symmetric_boundary_mean_px": 0.362,
+      "symmetric_boundary_p95_px": 1.0,
+      "symmetric_boundary_max_px": 1.0,
+      "mask_iou": 0.7643,
+      "metric_status": "measured"
+    },
+    {
+      "id": "d_transformer1",
+      "type": "text",
+      "box": [
+        702,
+        957,
+        903,
+        1002
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        708,
+        957,
+        903,
+        1002
+      ],
+      "rendered_ink_bbox": [
+        705,
+        966,
+        895,
+        994
+      ],
+      "source_ink_pixels": 1387,
+      "rendered_ink_pixels": 1462,
+      "source_boundary_pixels": 946,
+      "rendered_boundary_pixels": 916,
+      "bbox_edge_delta_px": [
+        -3,
+        9,
+        -8,
+        -8
+      ],
+      "symmetric_boundary_mean_px": 1.084,
+      "symmetric_boundary_p95_px": 2.0,
+      "symmetric_boundary_max_px": 21.314,
+      "mask_iou": 0.4655,
+      "metric_status": "measured"
+    },
+    {
+      "id": "d_block1",
+      "type": "text",
+      "box": [
+        750,
+        1004,
+        856,
+        1048
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        756,
+        1011,
+        846,
+        1038
+      ],
+      "rendered_ink_bbox": [
+        757,
+        1011,
+        845,
+        1038
+      ],
+      "source_ink_pixels": 687,
+      "rendered_ink_pixels": 800,
+      "source_boundary_pixels": 453,
+      "rendered_boundary_pixels": 470,
+      "bbox_edge_delta_px": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "symmetric_boundary_mean_px": 0.435,
+      "symmetric_boundary_p95_px": 1.0,
+      "symmetric_boundary_max_px": 1.414,
+      "mask_iou": 0.7371,
+      "metric_status": "measured"
+    },
+    {
+      "id": "d_image_arrow",
+      "type": "connector",
+      "box": [
+        383,
+        959,
+        432,
+        998
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        383,
+        959,
+        432,
+        998
+      ],
+      "rendered_ink_bbox": [
+        383,
+        959,
+        432,
+        998
+      ],
+      "source_ink_pixels": 538,
+      "rendered_ink_pixels": 644,
+      "source_boundary_pixels": 172,
+      "rendered_boundary_pixels": 224,
+      "bbox_edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "symmetric_boundary_mean_px": 2.03,
+      "symmetric_boundary_p95_px": 12.0,
+      "symmetric_boundary_max_px": 17.0,
+      "mask_iou": 0.7281,
+      "metric_status": "measured"
+    },
+    {
+      "id": "d_block_top_border",
+      "type": "box",
+      "box": [
+        691,
+        795,
+        912,
+        825
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        696,
+        801,
+        905,
+        825
+      ],
+      "rendered_ink_bbox": [
+        696,
+        800,
+        906,
+        825
+      ],
+      "source_ink_pixels": 1139,
+      "rendered_ink_pixels": 1107,
+      "source_boundary_pixels": 436,
+      "rendered_boundary_pixels": 438,
+      "bbox_edge_delta_px": [
+        0,
+        -1,
+        1,
+        0
+      ],
+      "symmetric_boundary_mean_px": 0.923,
+      "symmetric_boundary_p95_px": 1.0,
+      "symmetric_boundary_max_px": 2.0,
+      "mask_iou": 0.69,
+      "metric_status": "measured"
+    },
+    {
+      "id": "d_caption",
+      "type": "text",
+      "box": [
+        1098,
+        1247,
+        1353,
+        1298
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        1107,
+        1253,
+        1343,
+        1288
+      ],
+      "rendered_ink_bbox": [
+        1107,
+        1253,
+        1341,
+        1286
+      ],
+      "source_ink_pixels": 1651,
+      "rendered_ink_pixels": 1732,
+      "source_boundary_pixels": 1123,
+      "rendered_boundary_pixels": 1091,
+      "bbox_edge_delta_px": [
+        0,
+        0,
+        -2,
+        -2
+      ],
+      "symmetric_boundary_mean_px": 0.675,
+      "symmetric_boundary_p95_px": 1.414,
+      "symmetric_boundary_max_px": 2.414,
+      "mask_iou": 0.5576,
+      "metric_status": "measured"
+    },
+    {
+      "id": "d_formula_first",
+      "type": "text_and_fraction",
+      "box": [
+        440,
+        639,
+        626,
+        716
+      ],
+      "mask": "black",
+      "source_ink_bbox": [
+        444,
+        649,
+        620,
+        704
+      ],
+      "rendered_ink_bbox": [
+        443,
+        649,
+        625,
+        705
+      ],
+      "source_ink_pixels": 1289,
+      "rendered_ink_pixels": 1199,
+      "source_boundary_pixels": 915,
+      "rendered_boundary_pixels": 791,
+      "bbox_edge_delta_px": [
+        -1,
+        0,
+        5,
+        1
+      ],
+      "symmetric_boundary_mean_px": 1.423,
+      "symmetric_boundary_p95_px": 4.243,
+      "symmetric_boundary_max_px": 9.899,
+      "mask_iou": 0.2958,
+      "metric_status": "measured"
+    }
+  ],
+  "summary": {
+    "roi_count": 30,
+    "median_roi_mean_boundary_distance_px": 0.573,
+    "max_roi_mean_boundary_distance_px": 3.151,
+    "rois_with_mean_over_2px": [
+      "b_layer_next",
+      "d_image_arrow"
+    ]
+  }
+}

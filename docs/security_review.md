@@ -1,6 +1,6 @@
 # Scoped security and capability review
 
-Reviewed 2026-09-06. Scope: the complete skill directory and its local runtime, repository setup,
+Reviewed 2026-09-07. Scope: the complete skill directory and its local runtime, repository setup,
 fixtures and packaging scripts. Verdict: no known blocking source-to-sink finding after the
 controls below; this is not a claim that native third-party document parsers are sandboxed.
 
@@ -20,11 +20,26 @@ larger assets retain conservative geometry. Text masks keep the existing 8 milli
 Tests preserve rejection of actual opaque collisions and baked-text overlays in all three
 image fitting modes, including rotated labels. No asset instructions are executed.
 
+The v0.3.0 delta adds no dependencies or runtime external effects. Convex polygon vertices are
+bounded to 3–32 normalized points, with every edge checked against all other vertices before
+clipping/export. Duplicate, collinear, concave and self-intersecting paths are rejected. Native
+linear gradients accept 2–16 opaque color stops in two directions; positions must be distinct
+after rounding to Office's 1/100000 units. XML APIs serialize these bounded values and colors.
+Text/text refinement transforms the second glyph mask into the first's coordinate frame;
+both masks and the transformed output remain under the existing 8 million pixel per-entry
+limit. Missing complete masks retain conservative collision geometry. Actual duplicate text
+still blocks in horizontal and quarter-turn tests; baked-text checks are unchanged.
+
 The repository-only source fetcher has fixed public URLs and SHA-256 values, writes only to a
 new output directory, bounds each download to 25 MB, and checks the hash before parsing a PDF.
 It is outside the standalone skill package. MobileViT source/derived artwork stays in local
 test output because its downloaded paper's non-exclusive arXiv license was not treated as a
 redistribution grant. Its provenance, findings and fetch recipe are documented separately.
+The new CLIP/Swin author-repository figures and Matplotlib documentation image have explicit
+attribution and complete license notices; the DDPM author-site artwork stays local because a
+general redistribution grant was not established. The Matplotlib URL returned two PNG byte
+encodings with identical RGB data. The first hash rejection is retained; only the two inspected
+byte hashes are allowed, with no arbitrary-content or decoded-pixel acceptance fallback.
 
 ## Sources and sinks
 

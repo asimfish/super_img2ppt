@@ -18,6 +18,33 @@ def box_points(box):
     return [(x, y), (x + w, y), (x + w, y + h), (x, y + h)]
 
 
+def polygon_points(element):
+    x, y, w, h = element["box"]
+    points = [(x + u * w, y + v * h) for u, v in element["vertices"]]
+    # The clipping routine expects positive winding in screen coordinates.
+    signed = sum(
+        a[0] * b[1] - b[0] * a[1] for a, b in zip(points, points[1:] + points[:1], strict=True)
+    )
+    return points if signed > 0 else list(reversed(points))
+
+
+def strictly_convex(vertices):
+    direction = None
+    for i, a in enumerate(vertices):
+        b = vertices[(i + 1) % len(vertices)]
+        for j, p in enumerate(vertices):
+            if j in {i, (i + 1) % len(vertices)}:
+                continue
+            cross = (b[0] - a[0]) * (p[1] - a[1]) - (b[1] - a[1]) * (p[0] - a[0])
+            if abs(cross) <= 1e-9:
+                return False
+            if direction is None:
+                direction = cross > 0
+            elif (cross > 0) != direction:
+                return False
+    return True
+
+
 def line_parts(element):
     (x1, y1), (x2, y2) = element["points"]
     length = math.hypot(x2 - x1, y2 - y1)

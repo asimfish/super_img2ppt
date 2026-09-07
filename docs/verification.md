@@ -1,5 +1,26 @@
 # 验收记录
 
+## v0.3.0：四种新图与实际失败修复
+
+2026-09-07，本地 **65 passed in 58.88s**，无跳过。新增九项回归覆盖原生凸多边形、
+水平/垂直渐变的真实渲染、主字符/下标相交误报及真正重叠的负例。
+旧版本运行这些新增测试的失败输出与最终全套结果均保留。
+
+CLIP、Swin、热力图完成冻结基线和独立前向测试；DDPM 表格/曲线为父任务的开发验证。
+三组可分发产物包含 PPTX、SVG、源图、scene、实际 PDF/PNG、字体与验证报告。
+CLIP 保留两条字宽审阅提示，热力图保留七个斜排标签的图片区域；DDPM 数学字宽仍有差异。
+范围、测量方法、失败与可编辑文件见 [四种新案例报告](diverse_cases.md)。
+
+最终代码已复跑上述四例、原有六个通用案例以及两例可分发 ICLR 场景。
+旧密集表格仍失败，批处理退出码为 2；未把通过自动检查解释成全图对齐验收。
+渲染器为本机 LibreOffice 26.2.4.2 / PDFium 5.13.0，PowerPoint/WPS 未新增验证。
+没有新增第三方依赖或安装字体。字体解析依赖本机现有文件，清单与文件哈希随产物保留。
+
+最终命令、产物与原始证据摘要见 [verification_v030.json](evidence/diverse_cases/verification_v030.json)，
+独立安装见 [package_smoke_v030.json](evidence/diverse_cases/package_smoke_v030.json)。
+安装包 SHA-256、对应提交和 GitHub Actions 结果在
+[v0.3.0 发布记录](https://github.com/asimfish/super_img2ppt/releases/tag/v0.3.0)中固定。
+
 ## v0.2.0：真实顶会复杂图
 
 2026-09-06：本地 **56 passed in 139.71s**，无跳过，包含 13 项新增回归。

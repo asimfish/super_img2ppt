@@ -1,0 +1,2239 @@
+{
+  "from": "scene_02.json",
+  "to": "scene_03.json",
+  "evidence": [
+    "Fixed ROI measurements showed uniform Arial +1 px and Courier +2 to +3 px downward ink shift.",
+    "Dense source/render crop revealed independently positioned prompt a / object / dog words needed baseline corrections.",
+    "Source subscript 1 spans 4 by 13-14 dark pixels; size-18 actual rendering spans 2 by 12 pixels. Requested subscript size increased to 20, keeping source ink anchors.",
+    "All font sizes use fit strict. No minima lowered; no overlap exemptions added; no shape or grid geometry changed."
+  ],
+  "changes": [
+    {
+      "id": "title_1",
+      "before_box": [
+        4.25,
+        2.5,
+        360.5,
+        42.0
+      ],
+      "after_box": [
+        4.25,
+        1.5,
+        360.5,
+        42.0
+      ],
+      "before_font_size": 30,
+      "after_font_size": 30
+    },
+    {
+      "id": "title_2",
+      "before_box": [
+        1104.25,
+        2.5,
+        567.0,
+        42.0
+      ],
+      "after_box": [
+        1104.25,
+        1.5,
+        567.0,
+        42.0
+      ],
+      "before_font_size": 30,
+      "after_font_size": 30
+    },
+    {
+      "id": "title_3",
+      "before_box": [
+        1104.25,
+        402.5,
+        417.0,
+        42.0
+      ],
+      "after_box": [
+        1104.25,
+        401.5,
+        417.0,
+        42.0
+      ],
+      "before_font_size": 30,
+      "after_font_size": 30
+    },
+    {
+      "id": "pepper_line_1",
+      "before_box": [
+        34.0,
+        159.75,
+        148.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        34.0,
+        157.75,
+        148.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "pepper_line_2",
+      "before_box": [
+        34.25,
+        188.25,
+        148.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        34.25,
+        185.25,
+        148.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "train_text_label_1",
+      "before_box": [
+        357.5,
+        174.5,
+        49.70703125,
+        33.599999999999994
+      ],
+      "after_box": [
+        357.5,
+        173.5,
+        49.70703125,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "train_text_label_2",
+      "before_box": [
+        335.25,
+        202.5,
+        92.25,
+        33.599999999999994
+      ],
+      "after_box": [
+        335.25,
+        201.5,
+        92.25,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "train_image_label_1",
+      "before_box": [
+        346.75,
+        534.5,
+        69.5,
+        33.599999999999994
+      ],
+      "after_box": [
+        346.75,
+        533.5,
+        69.5,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "train_image_label_2",
+      "before_box": [
+        335.25,
+        562.5,
+        92.25,
+        33.599999999999994
+      ],
+      "after_box": [
+        335.25,
+        561.5,
+        92.25,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "classifier_text_label_1",
+      "before_box": [
+        1637.5,
+        184.5,
+        49.70703125,
+        33.599999999999994
+      ],
+      "after_box": [
+        1637.5,
+        183.5,
+        49.70703125,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "classifier_text_label_2",
+      "before_box": [
+        1615.25,
+        212.5,
+        92.25,
+        33.599999999999994
+      ],
+      "after_box": [
+        1615.25,
+        211.5,
+        92.25,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "prediction_image_label_1",
+      "before_box": [
+        1486.75,
+        554.5,
+        69.5,
+        33.599999999999994
+      ],
+      "after_box": [
+        1486.75,
+        553.5,
+        69.5,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "prediction_image_label_2",
+      "before_box": [
+        1475.25,
+        582.5,
+        92.25,
+        33.599999999999994
+      ],
+      "after_box": [
+        1475.25,
+        581.5,
+        92.25,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "train_T_1_base",
+      "before_box": [
+        687.25,
+        284.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        687.25,
+        283.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "train_T_1_sub",
+      "before_box": [
+        702.75,
+        294.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        702.0,
+        292.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "train_T_2_base",
+      "before_box": [
+        767.25,
+        284.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        767.25,
+        283.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "train_T_2_sub",
+      "before_box": [
+        782.75,
+        294.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        782.0,
+        292.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "train_T_3_base",
+      "before_box": [
+        847.25,
+        284.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        847.25,
+        283.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "train_T_3_sub",
+      "before_box": [
+        862.25,
+        294.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        861.75,
+        292.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "train_T_N_base",
+      "before_box": [
+        1005.25,
+        284.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        1005.25,
+        283.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "train_T_N_sub",
+      "before_box": [
+        1021.25,
+        294.75,
+        16.0,
+        25.2
+      ],
+      "after_box": [
+        1020.75,
+        293.25,
+        17.5,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "train_I_1_base",
+      "before_box": [
+        591.5,
+        384.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        591.0,
+        383.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "train_I_1_sub",
+      "before_box": [
+        599.75,
+        394.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        599.0,
+        392.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "train_I_2_base",
+      "before_box": [
+        591.5,
+        464.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        591.0,
+        463.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "train_I_2_sub",
+      "before_box": [
+        599.75,
+        474.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        599.0,
+        472.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "train_I_3_base",
+      "before_box": [
+        591.5,
+        544.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        591.0,
+        543.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "train_I_3_sub",
+      "before_box": [
+        599.25,
+        554.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        598.75,
+        552.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "train_I_N_base",
+      "before_box": [
+        589.5,
+        704.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        589.0,
+        703.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "train_I_N_sub",
+      "before_box": [
+        598.25,
+        714.75,
+        16.0,
+        25.2
+      ],
+      "after_box": [
+        597.75,
+        713.25,
+        17.5,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_1_1_ibase",
+      "before_box": [
+        675.5,
+        384.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        675.0,
+        383.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_1_1_isub",
+      "before_box": [
+        683.75,
+        395.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        683.0,
+        393.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_1_1_tbase",
+      "before_box": [
+        701.25,
+        384.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        701.25,
+        383.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_1_1_tsub",
+      "before_box": [
+        715.75,
+        395.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        715.0,
+        393.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_1_2_ibase",
+      "before_box": [
+        755.5,
+        384.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        755.0,
+        383.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_1_2_isub",
+      "before_box": [
+        763.75,
+        395.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        763.0,
+        393.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_1_2_tbase",
+      "before_box": [
+        781.25,
+        384.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        781.25,
+        383.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_1_2_tsub",
+      "before_box": [
+        795.75,
+        394.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        795.0,
+        392.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_1_3_ibase",
+      "before_box": [
+        835.5,
+        384.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        835.0,
+        383.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_1_3_isub",
+      "before_box": [
+        843.75,
+        395.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        843.0,
+        393.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_1_3_tbase",
+      "before_box": [
+        861.25,
+        384.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        861.25,
+        383.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_1_3_tsub",
+      "before_box": [
+        875.25,
+        394.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        874.75,
+        392.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_1_N_ibase",
+      "before_box": [
+        992.5,
+        384.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        992.0,
+        383.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_1_N_isub",
+      "before_box": [
+        1000.75,
+        395.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        1000.0,
+        393.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_1_N_tbase",
+      "before_box": [
+        1018.25,
+        384.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        1018.25,
+        383.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_1_N_tsub",
+      "before_box": [
+        1034.25,
+        394.75,
+        16.0,
+        25.2
+      ],
+      "after_box": [
+        1033.75,
+        393.25,
+        17.5,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_2_1_ibase",
+      "before_box": [
+        675.5,
+        464.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        675.0,
+        463.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_2_1_isub",
+      "before_box": [
+        682.75,
+        474.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        682.0,
+        472.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_2_1_tbase",
+      "before_box": [
+        701.25,
+        464.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        701.25,
+        463.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_2_1_tsub",
+      "before_box": [
+        715.75,
+        475.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        715.0,
+        473.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_2_2_ibase",
+      "before_box": [
+        755.5,
+        464.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        755.0,
+        463.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_2_2_isub",
+      "before_box": [
+        762.75,
+        474.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        762.0,
+        472.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_2_2_tbase",
+      "before_box": [
+        781.25,
+        464.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        781.25,
+        463.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_2_2_tsub",
+      "before_box": [
+        795.75,
+        474.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        795.0,
+        472.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_2_3_ibase",
+      "before_box": [
+        835.5,
+        464.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        835.0,
+        463.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_2_3_isub",
+      "before_box": [
+        842.75,
+        474.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        842.0,
+        472.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_2_3_tbase",
+      "before_box": [
+        861.25,
+        464.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        861.25,
+        463.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_2_3_tsub",
+      "before_box": [
+        875.25,
+        474.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        874.75,
+        472.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_2_N_ibase",
+      "before_box": [
+        992.5,
+        464.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        992.0,
+        463.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_2_N_isub",
+      "before_box": [
+        1000.75,
+        474.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        1000.0,
+        472.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_2_N_tbase",
+      "before_box": [
+        1018.25,
+        464.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        1018.25,
+        463.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_2_N_tsub",
+      "before_box": [
+        1034.25,
+        474.75,
+        16.0,
+        25.2
+      ],
+      "after_box": [
+        1033.75,
+        473.25,
+        17.5,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_3_1_ibase",
+      "before_box": [
+        675.5,
+        544.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        675.0,
+        543.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_3_1_isub",
+      "before_box": [
+        683.25,
+        554.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        682.75,
+        552.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_3_1_tbase",
+      "before_box": [
+        701.25,
+        544.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        701.25,
+        543.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_3_1_tsub",
+      "before_box": [
+        715.75,
+        555.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        715.0,
+        553.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_3_2_ibase",
+      "before_box": [
+        755.5,
+        544.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        755.0,
+        543.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_3_2_isub",
+      "before_box": [
+        763.25,
+        554.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        762.75,
+        552.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_3_2_tbase",
+      "before_box": [
+        781.25,
+        544.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        781.25,
+        543.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_3_2_tsub",
+      "before_box": [
+        795.75,
+        554.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        795.0,
+        552.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_3_3_ibase",
+      "before_box": [
+        835.5,
+        544.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        835.0,
+        543.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_3_3_isub",
+      "before_box": [
+        843.25,
+        554.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        842.75,
+        552.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_3_3_tbase",
+      "before_box": [
+        861.25,
+        544.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        861.25,
+        543.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_3_3_tsub",
+      "before_box": [
+        875.25,
+        554.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        874.75,
+        552.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_3_N_ibase",
+      "before_box": [
+        992.5,
+        544.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        992.0,
+        543.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_3_N_isub",
+      "before_box": [
+        1001.25,
+        554.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        1000.75,
+        552.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_3_N_tbase",
+      "before_box": [
+        1018.25,
+        544.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        1018.25,
+        543.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_3_N_tsub",
+      "before_box": [
+        1034.25,
+        554.75,
+        16.0,
+        25.2
+      ],
+      "after_box": [
+        1033.75,
+        553.25,
+        17.5,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_N_1_ibase",
+      "before_box": [
+        672.5,
+        704.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        672.0,
+        703.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_N_1_isub",
+      "before_box": [
+        681.25,
+        714.75,
+        16.0,
+        25.2
+      ],
+      "after_box": [
+        680.75,
+        713.25,
+        17.5,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_N_1_tbase",
+      "before_box": [
+        703.25,
+        704.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        703.25,
+        703.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_N_1_tsub",
+      "before_box": [
+        717.75,
+        715.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        717.0,
+        713.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_N_2_ibase",
+      "before_box": [
+        752.5,
+        704.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        752.0,
+        703.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_N_2_isub",
+      "before_box": [
+        761.25,
+        714.75,
+        16.0,
+        25.2
+      ],
+      "after_box": [
+        760.75,
+        713.25,
+        17.5,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_N_2_tbase",
+      "before_box": [
+        783.25,
+        704.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        783.25,
+        703.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_N_2_tsub",
+      "before_box": [
+        797.75,
+        714.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        797.0,
+        712.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_N_3_ibase",
+      "before_box": [
+        832.5,
+        704.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        832.0,
+        703.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_N_3_isub",
+      "before_box": [
+        841.25,
+        714.75,
+        16.0,
+        25.2
+      ],
+      "after_box": [
+        840.75,
+        713.25,
+        17.5,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_N_3_tbase",
+      "before_box": [
+        863.25,
+        704.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        863.25,
+        703.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_N_3_tsub",
+      "before_box": [
+        878.25,
+        714.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        877.75,
+        712.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_N_N_ibase",
+      "before_box": [
+        990.5,
+        704.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        990.0,
+        703.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_N_N_isub",
+      "before_box": [
+        999.25,
+        714.75,
+        16.0,
+        25.2
+      ],
+      "after_box": [
+        998.75,
+        713.25,
+        17.5,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "matrix_N_N_tbase",
+      "before_box": [
+        1021.25,
+        704.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        1021.25,
+        703.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "matrix_N_N_tsub",
+      "before_box": [
+        1036.25,
+        714.75,
+        16.0,
+        25.2
+      ],
+      "after_box": [
+        1035.75,
+        713.25,
+        17.5,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "class_word_plane",
+      "before_box": [
+        1133.5,
+        77.75,
+        75.5,
+        33.599999999999994
+      ],
+      "after_box": [
+        1133.5,
+        75.75,
+        75.5,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "class_word_car",
+      "before_box": [
+        1148.0,
+        137.5,
+        46.5,
+        33.599999999999994
+      ],
+      "after_box": [
+        1148.0,
+        135.5,
+        46.5,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "class_word_dog",
+      "before_box": [
+        1148.5,
+        197.75,
+        46.5,
+        33.599999999999994
+      ],
+      "after_box": [
+        1148.5,
+        194.75,
+        46.5,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "class_word_bird",
+      "before_box": [
+        1141.5,
+        317.25,
+        61.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        1141.5,
+        315.25,
+        61.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "class_prompt_line_1",
+      "before_box": [
+        1347.75,
+        183.75,
+        148.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        1347.75,
+        181.75,
+        148.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "class_prompt_a",
+      "before_box": [
+        1340.25,
+        207.5,
+        17.5,
+        33.599999999999994
+      ],
+      "after_box": [
+        1340.25,
+        210.5,
+        17.5,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "class_prompt_object",
+      "before_box": [
+        1367.25,
+        212.25,
+        119.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        1369.25,
+        211.25,
+        119.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "class_prompt_period",
+      "before_box": [
+        1482.5,
+        213.0,
+        17.5,
+        33.599999999999994
+      ],
+      "after_box": [
+        1484.5,
+        211.0,
+        17.5,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "predict_T_1_base",
+      "before_box": [
+        1787.25,
+        464.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        1787.25,
+        463.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "predict_T_1_sub",
+      "before_box": [
+        1802.75,
+        474.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        1802.0,
+        472.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "predict_T_2_base",
+      "before_box": [
+        1867.25,
+        464.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        1867.25,
+        463.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "predict_T_2_sub",
+      "before_box": [
+        1882.75,
+        474.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        1882.0,
+        472.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "predict_T_3_base",
+      "before_box": [
+        1947.25,
+        464.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        1947.25,
+        463.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "predict_T_3_sub",
+      "before_box": [
+        1962.25,
+        474.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        1961.75,
+        472.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "predict_T_N_base",
+      "before_box": [
+        2105.25,
+        464.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        2105.25,
+        463.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "predict_T_N_sub",
+      "before_box": [
+        2121.25,
+        474.75,
+        16.0,
+        25.2
+      ],
+      "after_box": [
+        2120.75,
+        473.25,
+        17.5,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "predict_I_1_base",
+      "before_box": [
+        1691.5,
+        564.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        1691.0,
+        563.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "predict_I_1_sub",
+      "before_box": [
+        1699.75,
+        574.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        1699.0,
+        572.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "predict_result_1_1_ibase",
+      "before_box": [
+        1775.5,
+        564.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        1775.0,
+        563.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "predict_result_1_1_isub",
+      "before_box": [
+        1783.75,
+        575.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        1783.0,
+        573.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "predict_result_1_1_tbase",
+      "before_box": [
+        1801.25,
+        564.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        1801.25,
+        563.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "predict_result_1_1_tsub",
+      "before_box": [
+        1815.75,
+        575.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        1815.0,
+        573.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "predict_result_1_2_ibase",
+      "before_box": [
+        1855.5,
+        564.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        1855.0,
+        563.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "predict_result_1_2_isub",
+      "before_box": [
+        1863.75,
+        575.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        1863.0,
+        573.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "predict_result_1_2_tbase",
+      "before_box": [
+        1881.25,
+        564.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        1881.25,
+        563.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "predict_result_1_2_tsub",
+      "before_box": [
+        1895.75,
+        574.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        1895.0,
+        572.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "predict_result_1_3_ibase",
+      "before_box": [
+        1935.5,
+        564.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        1935.0,
+        563.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "predict_result_1_3_isub",
+      "before_box": [
+        1943.75,
+        575.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        1943.0,
+        573.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "predict_result_1_3_tbase",
+      "before_box": [
+        1961.25,
+        564.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        1961.25,
+        563.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "predict_result_1_3_tsub",
+      "before_box": [
+        1975.25,
+        574.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        1974.75,
+        572.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "predict_result_1_N_ibase",
+      "before_box": [
+        2092.5,
+        564.5,
+        11.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        2092.0,
+        563.5,
+        11.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "predict_result_1_N_isub",
+      "before_box": [
+        2100.75,
+        575.0,
+        12.0,
+        25.2
+      ],
+      "after_box": [
+        2100.0,
+        573.5,
+        13.0,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "predict_result_1_N_tbase",
+      "before_box": [
+        2118.25,
+        564.5,
+        17.75,
+        33.599999999999994
+      ],
+      "after_box": [
+        2118.25,
+        563.5,
+        17.75,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "predict_result_1_N_tsub",
+      "before_box": [
+        2134.25,
+        574.75,
+        16.0,
+        25.2
+      ],
+      "after_box": [
+        2133.75,
+        573.25,
+        17.5,
+        28
+      ],
+      "before_font_size": 18,
+      "after_font_size": 20
+    },
+    {
+      "id": "dog_output_line_1",
+      "before_box": [
+        1887.75,
+        693.75,
+        148.0,
+        33.599999999999994
+      ],
+      "after_box": [
+        1887.75,
+        691.75,
+        148.0,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "dog_output_a",
+      "before_box": [
+        1923.25,
+        721.5,
+        17.5,
+        33.599999999999994
+      ],
+      "after_box": [
+        1924.25,
+        720.5,
+        17.5,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "dog_output_dog",
+      "before_box": [
+        1954.5,
+        725.75,
+        46.5,
+        33.599999999999994
+      ],
+      "after_box": [
+        1952.5,
+        720.75,
+        46.5,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    },
+    {
+      "id": "dog_output_period",
+      "before_box": [
+        1995.5,
+        723.0,
+        17.5,
+        33.599999999999994
+      ],
+      "after_box": [
+        1995.5,
+        721.0,
+        17.5,
+        33.599999999999994
+      ],
+      "before_font_size": 24,
+      "after_font_size": 24
+    }
+  ]
+}

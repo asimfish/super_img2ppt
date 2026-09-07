@@ -1,0 +1,2794 @@
+{
+  "status": "fail",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "fail",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "row_15_col_0"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 19,
+            "width_px": 52.25,
+            "height_px": 21.85,
+            "available_width_px": 52,
+            "available_height_px": 24,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 52.75,
+            "required_height_px": 22.35,
+            "fits": false,
+            "lines": [
+              "Ours ("
+            ]
+          }
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_rule_3",
+            "row_3_col_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_rule_3",
+            "row_3_col_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_rule_5",
+            "row_15_col_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_rule_5",
+            "row_15_col_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "table_rule_5",
+            "loss_subscript"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_0_col_0",
+            "row_1_col_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_0_col_1",
+            "row_1_col_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_0_col_2",
+            "row_1_col_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_1_col_0",
+            "row_2_col_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_1_col_1",
+            "row_2_col_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_1_col_2",
+            "row_2_col_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_2_col_0",
+            "row_3_col_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_2_col_1",
+            "row_3_col_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_2_col_2",
+            "row_3_col_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_4_col_0",
+            "row_5_col_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_4_col_3",
+            "row_5_col_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_5_col_0",
+            "row_6_col_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_5_col_3",
+            "row_6_col_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_6_col_0",
+            "row_7_col_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_7_col_0",
+            "row_8_col_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_7_col_1",
+            "row_8_col_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_7_col_2",
+            "row_8_col_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_8_col_0",
+            "row_9_col_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_8_col_2",
+            "row_9_col_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_9_col_0",
+            "row_10_col_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_9_col_2",
+            "row_10_col_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_10_col_0",
+            "row_11_col_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_10_col_1",
+            "row_11_col_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_10_col_2",
+            "row_11_col_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_11_col_0",
+            "row_12_col_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_11_col_1",
+            "row_12_col_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_11_col_2",
+            "row_12_col_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_12_col_0",
+            "row_13_col_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_12_col_1",
+            "row_13_col_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_12_col_2",
+            "row_13_col_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_13_col_0",
+            "row_14_col_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_13_col_1",
+            "row_14_col_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_13_col_2",
+            "row_14_col_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_14_col_0",
+            "row_15_col_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_14_col_0",
+            "loss_L"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_14_col_0",
+            "loss_close"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_14_col_1",
+            "row_15_col_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_14_col_2",
+            "row_15_col_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "row_14_col_3",
+            "row_15_col_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "row_15_col_0",
+            "loss_L"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 24.0
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "loss_L",
+            "loss_subscript"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "loss_subscript",
+            "loss_close"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "text": 69,
+            "line": 28,
+            "shape": 157
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "grid_h_0",
+                "grid_v_0"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_0",
+                "grid_v_1"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_0",
+                "grid_v_2"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_0",
+                "grid_v_3"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_0",
+                "grid_v_4"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_0",
+                "grid_v_5"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_0",
+                "grid_v_6"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_0",
+                "grid_v_7"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_1",
+                "grid_v_0"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_1",
+                "grid_v_1"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_1",
+                "grid_v_2"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_1",
+                "grid_v_3"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_1",
+                "grid_v_4"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_1",
+                "grid_v_5"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_1",
+                "grid_v_6"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_1",
+                "grid_v_7"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_1",
+                "blue_strip_1"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_1",
+                "blue_strip_2"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_1",
+                "blue_strip_3"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_1",
+                "blue_strip_4"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_1",
+                "blue_strip_5"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_1",
+                "blue_strip_6"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_1",
+                "blue_strip_7"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_2",
+                "grid_v_0"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_2",
+                "grid_v_1"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_2",
+                "grid_v_2"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_2",
+                "grid_v_3"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_2",
+                "grid_v_4"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_2",
+                "grid_v_5"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_2",
+                "grid_v_6"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_2",
+                "grid_v_7"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_2",
+                "blue_strip_1"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_2",
+                "blue_strip_2"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_2",
+                "blue_strip_3"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_2",
+                "blue_strip_4"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_2",
+                "blue_strip_5"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_2",
+                "blue_strip_6"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_2",
+                "blue_strip_7"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_3",
+                "grid_v_0"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_3",
+                "grid_v_1"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_3",
+                "grid_v_2"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_3",
+                "grid_v_3"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_3",
+                "grid_v_4"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_3",
+                "grid_v_5"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_3",
+                "grid_v_6"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_3",
+                "grid_v_7"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_3",
+                "blue_strip_1"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_3",
+                "blue_strip_2"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_3",
+                "blue_strip_3"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_3",
+                "blue_strip_4"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_3",
+                "blue_strip_5"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_3",
+                "blue_strip_6"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_3",
+                "blue_strip_7"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_4",
+                "grid_v_0"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_4",
+                "grid_v_1"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_4",
+                "grid_v_2"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_4",
+                "grid_v_3"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_4",
+                "grid_v_4"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_4",
+                "grid_v_5"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_4",
+                "grid_v_6"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_4",
+                "grid_v_7"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_4",
+                "blue_strip_1"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_4",
+                "blue_strip_2"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_4",
+                "blue_strip_3"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_4",
+                "blue_strip_4"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_4",
+                "blue_strip_5"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_4",
+                "blue_strip_6"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_4",
+                "blue_strip_7"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_5",
+                "grid_v_0"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_5",
+                "grid_v_1"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_5",
+                "grid_v_2"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_5",
+                "grid_v_3"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_5",
+                "grid_v_4"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_5",
+                "grid_v_5"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_5",
+                "grid_v_6"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_5",
+                "grid_v_7"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_5",
+                "blue_strip_1"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_5",
+                "blue_strip_2"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_5",
+                "blue_strip_3"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_5",
+                "blue_strip_4"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_5",
+                "blue_strip_5"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_5",
+                "blue_strip_6"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_5",
+                "blue_strip_7"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_5",
+                "blue_strip_8"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_6",
+                "grid_v_0"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_6",
+                "grid_v_1"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_6",
+                "grid_v_2"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_6",
+                "grid_v_3"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_6",
+                "grid_v_4"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_6",
+                "grid_v_5"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_6",
+                "grid_v_6"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_6",
+                "grid_v_7"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_6",
+                "blue_strip_3"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_6",
+                "blue_strip_4"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_6",
+                "blue_strip_5"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_6",
+                "blue_strip_6"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_6",
+                "blue_strip_7"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_6",
+                "blue_strip_8"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_6",
+                "blue_strip_9"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_7",
+                "grid_v_0"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_7",
+                "grid_v_1"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_7",
+                "grid_v_2"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_7",
+                "grid_v_3"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_7",
+                "grid_v_4"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_7",
+                "grid_v_5"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_7",
+                "grid_v_6"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_7",
+                "grid_v_7"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_7",
+                "blue_strip_7"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_7",
+                "blue_strip_8"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_7",
+                "blue_strip_9"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_7",
+                "blue_strip_10"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_7",
+                "blue_strip_11"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_7",
+                "blue_strip_12"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_7",
+                "blue_strip_13"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "grid_v_0"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "grid_v_1"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "grid_v_2"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "grid_v_3"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "grid_v_4"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "grid_v_5"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "grid_v_6"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "grid_v_7"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "blue_strip_20"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "blue_strip_21"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "blue_strip_22"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "blue_strip_23"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "blue_strip_24"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "blue_strip_25"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "blue_strip_26"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "blue_strip_27"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "blue_strip_28"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "blue_strip_29"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "blue_strip_30"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "blue_strip_31"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "blue_strip_32"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "blue_strip_33"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_8",
+                "blue_strip_34"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_9",
+                "grid_v_0"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_9",
+                "grid_v_1"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_9",
+                "grid_v_2"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_9",
+                "grid_v_3"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_9",
+                "grid_v_4"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_9",
+                "grid_v_5"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_9",
+                "grid_v_6"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_9",
+                "grid_v_7"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "grid_h_9",
+                "blue_strip_153"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_h_9",
+                "blue_strip_154"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            },
+            {
+              "elements": [
+                "grid_v_0",
+                "blue_strip_3"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 45.375
+            },
+            {
+              "elements": [
+                "grid_v_0",
+                "blue_strip_4"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 47.25
+            },
+            {
+              "elements": [
+                "grid_v_1",
+                "blue_strip_38"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 5.25
+            },
+            {
+              "elements": [
+                "grid_v_2",
+                "blue_strip_72"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 2.625
+            },
+            {
+              "elements": [
+                "grid_v_2",
+                "blue_strip_73"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 2.625
+            },
+            {
+              "elements": [
+                "grid_v_3",
+                "blue_strip_106"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 1.5
+            },
+            {
+              "elements": [
+                "grid_v_3",
+                "blue_strip_107"
+              ],
+              "reason": "Source-verified plotted marks and grid/rule junctions; no text is exempted.",
+              "area_px2": 0.75
+            }
+          ],
+          "text_layouts": {
+            "caption": {
+              "scale": 1,
+              "effective_font_size_px": 25,
+              "width_px": 542.25,
+              "height_px": 28.75,
+              "available_width_px": 543.5,
+              "available_height_px": 29.749999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 542.75,
+              "required_height_px": 29.25,
+              "fits": true,
+              "lines": [
+                "Table 1: CIFAR10 results. NLL measured in bits/dim."
+              ]
+            },
+            "head_0": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 49.75,
+              "height_px": 21.85,
+              "available_width_px": 51.5,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 50.25,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "Model"
+              ]
+            },
+            "head_1": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 16.75,
+              "height_px": 21.85,
+              "available_width_px": 18.0,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 17.25,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "IS"
+              ]
+            },
+            "head_2": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 30.5,
+              "height_px": 21.85,
+              "available_width_px": 32,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 31.0,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "FID"
+              ]
+            },
+            "head_3": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 132.75,
+              "height_px": 21.85,
+              "available_width_px": 134.0,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 133.25,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "NLL Test (Train)"
+              ]
+            },
+            "conditional": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 95.75,
+              "height_px": 21.85,
+              "available_width_px": 97.75,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 96.25,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "Conditional"
+              ]
+            },
+            "unconditional": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 114.75,
+              "height_px": 21.85,
+              "available_width_px": 116.75,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 115.25,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "Unconditional"
+              ]
+            },
+            "row_0_col_0": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 77.5,
+              "height_px": 21.85,
+              "available_width_px": 78.25,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 78.0,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "EBM [11]"
+              ]
+            },
+            "row_0_col_1": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 35.75,
+              "height_px": 23.287,
+              "available_width_px": 38,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.25,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "8.30"
+              ]
+            },
+            "row_0_col_2": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 35.75,
+              "height_px": 23.287,
+              "available_width_px": 38,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.25,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "37.9"
+              ]
+            },
+            "row_1_col_0": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 72.25,
+              "height_px": 21.85,
+              "available_width_px": 73.0,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 72.75,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "JEM [15]"
+              ]
+            },
+            "row_1_col_1": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 35.75,
+              "height_px": 23.287,
+              "available_width_px": 37,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.25,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "8.76"
+              ]
+            },
+            "row_1_col_2": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 35.75,
+              "height_px": 23.287,
+              "available_width_px": 38,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.25,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "38.4"
+              ]
+            },
+            "row_2_col_0": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 95.5,
+              "height_px": 21.85,
+              "available_width_px": 96.25,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 96.0,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "BigGAN [3]"
+              ]
+            },
+            "row_2_col_1": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 35.75,
+              "height_px": 23.287,
+              "available_width_px": 37,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.25,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "9.22"
+              ]
+            },
+            "row_2_col_2": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 46.0,
+              "height_px": 23.287,
+              "available_width_px": 48,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 46.5,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "14.73"
+              ]
+            },
+            "row_3_col_0": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 187.5,
+              "height_px": 21.85,
+              "available_width_px": 188.25,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 188.0,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "StyleGAN2 + ADA [28]"
+              ]
+            },
+            "row_3_col_1": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 46.0,
+              "height_px": 23.287,
+              "available_width_px": 54,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 46.5,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "10.06"
+              ]
+            },
+            "row_3_col_2": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 35.75,
+              "height_px": 23.287,
+              "available_width_px": 43,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.25,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "2.67"
+              ]
+            },
+            "row_4_col_0": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 185.25,
+              "height_px": 21.85,
+              "available_width_px": 186.0,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 185.75,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "Diffusion (original) [50]"
+              ]
+            },
+            "row_4_col_3": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 51.75,
+              "height_px": 23.287,
+              "available_width_px": 60,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 52.25,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "≤ 5.40"
+              ]
+            },
+            "row_5_col_0": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 165.75,
+              "height_px": 21.85,
+              "available_width_px": 166.5,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 166.25,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "Gated PixelCNN [56]"
+              ]
+            },
+            "row_5_col_1": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 35.75,
+              "height_px": 23.287,
+              "available_width_px": 39,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.25,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "4.60"
+              ]
+            },
+            "row_5_col_2": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 46.0,
+              "height_px": 23.287,
+              "available_width_px": 49,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 46.5,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "65.93"
+              ]
+            },
+            "row_5_col_3": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 90.0,
+              "height_px": 23.287,
+              "available_width_px": 96,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 90.5,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "3.03 (2.90)"
+              ]
+            },
+            "row_6_col_0": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 177.0,
+              "height_px": 21.85,
+              "available_width_px": 177.75,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 177.5,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "Sparse Transformer [7]"
+              ]
+            },
+            "row_6_col_3": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 35.75,
+              "height_px": 23.287,
+              "available_width_px": 41,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.25,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "2.80"
+              ]
+            },
+            "row_7_col_0": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 109.0,
+              "height_px": 21.85,
+              "available_width_px": 109.75,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 109.5,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "PixelIQN [40]"
+              ]
+            },
+            "row_7_col_1": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 35.75,
+              "height_px": 23.287,
+              "available_width_px": 38,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.25,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "5.29"
+              ]
+            },
+            "row_7_col_2": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 46.0,
+              "height_px": 23.287,
+              "available_width_px": 48,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 46.5,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "49.46"
+              ]
+            },
+            "row_8_col_0": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 77.5,
+              "height_px": 21.85,
+              "available_width_px": 78.25,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 78.0,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "EBM [11]"
+              ]
+            },
+            "row_8_col_1": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 35.75,
+              "height_px": 23.287,
+              "available_width_px": 38,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.25,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "6.78"
+              ]
+            },
+            "row_8_col_2": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 35.75,
+              "height_px": 23.287,
+              "available_width_px": 38,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.25,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "38.2"
+              ]
+            },
+            "row_9_col_0": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 106.25,
+              "height_px": 21.85,
+              "available_width_px": 106.75,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 106.75,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "NCSNv2 [53]"
+              ]
+            },
+            "row_9_col_2": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 46.0,
+              "height_px": 23.287,
+              "available_width_px": 48,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 46.5,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "31.75"
+              ]
+            },
+            "row_10_col_0": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 87.25,
+              "height_px": 21.85,
+              "available_width_px": 87.75,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 87.75,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "NCSN [52]"
+              ]
+            },
+            "row_10_col_1": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 92.5,
+              "height_px": 23.287,
+              "available_width_px": 95,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 93.0,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "8.87 ± 0.12"
+              ]
+            },
+            "row_10_col_2": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 46.0,
+              "height_px": 23.287,
+              "available_width_px": 48,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 46.5,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "25.32"
+              ]
+            },
+            "row_11_col_0": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 101.75,
+              "height_px": 21.85,
+              "available_width_px": 102.5,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 102.25,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "SNGAN [36]"
+              ]
+            },
+            "row_11_col_1": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 92.5,
+              "height_px": 23.287,
+              "available_width_px": 95,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 93.0,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "8.22 ± 0.05"
+              ]
+            },
+            "row_11_col_2": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 35.75,
+              "height_px": 23.287,
+              "available_width_px": 39,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.25,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "21.7"
+              ]
+            },
+            "row_12_col_0": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 148.0,
+              "height_px": 21.85,
+              "available_width_px": 148.75,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 148.5,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "SNGAN-DDLS [4]"
+              ]
+            },
+            "row_12_col_1": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 92.5,
+              "height_px": 23.287,
+              "available_width_px": 95,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 93.0,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "9.09 ± 0.10"
+              ]
+            },
+            "row_12_col_2": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 46.0,
+              "height_px": 23.287,
+              "available_width_px": 47.0,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 46.5,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "15.42"
+              ]
+            },
+            "row_13_col_0": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 187.5,
+              "height_px": 21.85,
+              "available_width_px": 188.25,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 188.0,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "StyleGAN2 + ADA [28]"
+              ]
+            },
+            "row_13_col_1": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 92.5,
+              "height_px": 23.287,
+              "available_width_px": 106,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 93.0,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "9.74 ± 0.05"
+              ]
+            },
+            "row_13_col_2": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 35.75,
+              "height_px": 23.287,
+              "available_width_px": 38,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.25,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "3.26"
+              ]
+            },
+            "row_14_col_0": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 201.25,
+              "height_px": 21.85,
+              "available_width_px": 207,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 201.75,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "Ours (L, fixed isotropic Σ)"
+              ]
+            },
+            "row_14_col_1": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 92.5,
+              "height_px": 23.287,
+              "available_width_px": 95,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 93.0,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "7.67 ± 0.13"
+              ]
+            },
+            "row_14_col_2": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 46.0,
+              "height_px": 23.287,
+              "available_width_px": 47.0,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 46.5,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "13.51"
+              ]
+            },
+            "row_14_col_3": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 106.0,
+              "height_px": 23.287,
+              "available_width_px": 118,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 106.5,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "≤ 3.70 (3.69)"
+              ]
+            },
+            "row_15_col_0": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 52.25,
+              "height_px": 21.85,
+              "available_width_px": 52,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 52.75,
+              "required_height_px": 22.35,
+              "fits": false,
+              "lines": [
+                "Ours ("
+              ]
+            },
+            "row_15_col_1": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 92.5,
+              "height_px": 23.287,
+              "available_width_px": 94,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 93.0,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "9.46 ± 0.11"
+              ]
+            },
+            "row_15_col_2": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 35.75,
+              "height_px": 23.287,
+              "available_width_px": 43,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.25,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "3.17"
+              ]
+            },
+            "row_15_col_3": {
+              "scale": 1,
+              "effective_font_size_px": 20.25,
+              "width_px": 106.0,
+              "height_px": 23.287,
+              "available_width_px": 118,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 106.5,
+              "required_height_px": 23.787,
+              "fits": true,
+              "lines": [
+                "≤ 3.75 (3.72)"
+              ]
+            },
+            "ytick_0": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 9.0,
+              "height_px": 20.7,
+              "available_width_px": 11,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "0"
+              ]
+            },
+            "ytick_1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 18.0,
+              "height_px": 20.7,
+              "available_width_px": 22,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "20"
+              ]
+            },
+            "ytick_2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 18.0,
+              "height_px": 20.7,
+              "available_width_px": 23,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "40"
+              ]
+            },
+            "ytick_3": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 18.0,
+              "height_px": 20.7,
+              "available_width_px": 22,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "60"
+              ]
+            },
+            "ytick_4": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 18.0,
+              "height_px": 20.7,
+              "available_width_px": 22,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "80"
+              ]
+            },
+            "xtick_0": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 9.0,
+              "height_px": 20.7,
+              "available_width_px": 11,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "0"
+              ]
+            },
+            "xtick_1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 22.5,
+              "height_px": 20.7,
+              "available_width_px": 28,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 23.0,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "0.5"
+              ]
+            },
+            "xtick_2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 9.0,
+              "height_px": 20.7,
+              "available_width_px": 10,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "xtick_3": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 22.5,
+              "height_px": 20.7,
+              "available_width_px": 27,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 23.0,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "1.5"
+              ]
+            },
+            "rate_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 108.5,
+              "height_px": 20.7,
+              "available_width_px": 110.0,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 109.0,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Rate (bits/dim)"
+              ]
+            },
+            "distortion_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 138.5,
+              "height_px": 20.7,
+              "available_width_px": 145.75,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 139.0,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Distortion (RMSE)"
+              ]
+            },
+            "loss_L": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 11.25,
+              "height_px": 21.85,
+              "available_width_px": 16,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.75,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "L"
+              ]
+            },
+            "loss_subscript": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 37.75,
+              "height_px": 16.1,
+              "available_width_px": 57,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 38.25,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "simple"
+              ]
+            },
+            "loss_close": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 6.25,
+              "height_px": 21.85,
+              "available_width_px": 12,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.75,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                ")"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "ecc02e5a44e208d5ec646423b6047822844b107d45ae4601b9dbe94078160530",
+  "font_substitutions": []
+}

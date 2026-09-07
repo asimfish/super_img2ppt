@@ -1,0 +1,88 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+_________ test_gradient_contract_rejects_ambiguous_or_unbounded_stops __________
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 400, 'height': 400, 'reviewed': True, ...}]}
+
+    def test_gradient_contract_rejects_ambiguous_or_unbounded_stops(scene):
+        spec = colorbar(scene)
+>       validate_scene(spec)
+
+tests/test_gradients.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 400, 'height': 400, 'reviewed': True, ...}]}
+
+    def validate_scene(scene: dict) -> dict:
+        _validate_finite(scene)
+        errors = sorted(Draft202012Validator(SCHEMA).iter_errors(scene), key=lambda e: str(e.path))
+        if errors:
+>           raise InputError(
+                "; ".join(f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5])
+            )
+E           super_img2ppt.scene.InputError: slides/0/elements/0: Additional properties are not allowed ('gradient' was unexpected)
+
+skills/super-img2ppt/src/super_img2ppt/scene.py:214: InputError
+_____ test_single_native_gradient_has_continuous_actual_colorbar[vertical] _____
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 400, 'height': 400, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10abf2870>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-199/test_single_native_gradient_ha0')
+direction = 'vertical'
+
+    @pytest.mark.render
+    @pytest.mark.skipif(shutil.which("soffice") is None, reason="LibreOffice not installed")
+    @pytest.mark.parametrize("direction", ["vertical", "horizontal"])
+    def test_single_native_gradient_has_continuous_actual_colorbar(scene, fonts, tmp_path, direction):
+        spec = colorbar(scene, direction)
+>       validate_scene(spec)
+
+tests/test_gradients.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 400, 'height': 400, 'reviewed': True, ...}]}
+
+    def validate_scene(scene: dict) -> dict:
+        _validate_finite(scene)
+        errors = sorted(Draft202012Validator(SCHEMA).iter_errors(scene), key=lambda e: str(e.path))
+        if errors:
+>           raise InputError(
+                "; ".join(f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5])
+            )
+E           super_img2ppt.scene.InputError: slides/0/elements/0: Additional properties are not allowed ('gradient' was unexpected)
+
+skills/super-img2ppt/src/super_img2ppt/scene.py:214: InputError
+____ test_single_native_gradient_has_continuous_actual_colorbar[horizontal] ____
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 400, 'height': 400, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10abf2870>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-199/test_single_native_gradient_ha1')
+direction = 'horizontal'
+
+    @pytest.mark.render
+    @pytest.mark.skipif(shutil.which("soffice") is None, reason="LibreOffice not installed")
+    @pytest.mark.parametrize("direction", ["vertical", "horizontal"])
+    def test_single_native_gradient_has_continuous_actual_colorbar(scene, fonts, tmp_path, direction):
+        spec = colorbar(scene, direction)
+>       validate_scene(spec)
+
+tests/test_gradients.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 400, 'height': 400, 'reviewed': True, ...}]}
+
+    def validate_scene(scene: dict) -> dict:
+        _validate_finite(scene)
+        errors = sorted(Draft202012Validator(SCHEMA).iter_errors(scene), key=lambda e: str(e.path))
+        if errors:
+>           raise InputError(
+                "; ".join(f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5])
+            )
+E           super_img2ppt.scene.InputError: slides/0/elements/0: Additional properties are not allowed ('gradient' was unexpected)
+
+skills/super-img2ppt/src/super_img2ppt/scene.py:214: InputError
+=========================== short test summary info ============================
+FAILED tests/test_gradients.py::test_gradient_contract_rejects_ambiguous_or_unbounded_stops
+FAILED tests/test_gradients.py::test_single_native_gradient_has_continuous_actual_colorbar[vertical]
+FAILED tests/test_gradients.py::test_single_native_gradient_has_continuous_actual_colorbar[horizontal]
+3 failed in 9.69s

@@ -1,0 +1,72 @@
+{
+  "status": "pass",
+  "automated_checks": {
+    "preflight": "pass",
+    "native_objects": "pass",
+    "rendered_text": "pass"
+  },
+  "visual_review": "performed on full slide, actual source/render/difference comparison, C and D enlarged crops, and fixed ROI contact sheet; residual differences listed",
+  "counts": {
+    "image": 34,
+    "line": 375,
+    "text": 92,
+    "shape": 30
+  },
+  "native_count": 497,
+  "native_objects_with_matching_ids": 531,
+  "pptx_xml_counts": {
+    "sp": 147,
+    "cxnSp": 350,
+    "pic": 34
+  },
+  "svg_tag_counts": {
+    "svg": 1,
+    "rect": 27,
+    "g": 531,
+    "image": 34,
+    "line": 350,
+    "polygon": 25,
+    "ellipse": 4,
+    "text": 92,
+    "tspan": 95
+  },
+  "metrics": {
+    "roi_count": 30,
+    "median_roi_mean_boundary_distance_px": 0.573,
+    "max_roi_mean_boundary_distance_px": 3.151,
+    "rois_with_mean_over_2px": [
+      "b_layer_next",
+      "d_image_arrow"
+    ]
+  },
+  "font_substitutions": [],
+  "limitations": [
+    "Only 34 exact-source photograph crops remain raster. All readable labels, formulas, red/gray grids, module boxes, rounded groups and connectors are native objects. No full-page image is visible in the output.",
+    "Perspective photograph assets use alpha clipping around their visible quadrilateral and source grid strips. Thin antialias remnants and small pale gaps at grid bands are visible in close inspection; their underlying photographic pixels are not editable vectors.",
+    "Superscripts, fractions and hats remain separately positioned editable text and native line components, not Office equation objects.",
+    "The source architecture and residual arrows have concave rear head edges. The runtime custom arrow contract gives triangular heads; all remain editable, but head silhouettes are approximate. The fixed d_image_arrow ROI has a 2.03 px mean boundary distance and 12 px p95.",
+    "Rounded-corner curvature and dash phase differ slightly from source. Some labels retain small width/letter-spacing drift. No assertion of exact source font identification is made.",
+    "Two pre-fixed Layer-title ROIs also include dark-red border pixels because the specified black threshold admits that color. d_transformer1 includes a sliver of the source module border. c_mlp1 contains partial text plus box/connector and c_ln1 contains a module edge/connector rather than the LN label. These mixed ROIs remain unchanged and are reported verbatim, not used as isolated typography evidence.",
+    "Actual rendered evidence is from LibreOffice 26.2.4.2 and pypdfium2, not native PowerPoint or WPS. Fonts are not embedded."
+  ],
+  "runtime_version": "0.2.0",
+  "python_version": "3.12.12",
+  "libreoffice_version": "26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+  "runtime_tree_sha256": "962eb15fef9ec133cbe98a2ff7df0158978f23999b382f4fa01b883e3aa444d1",
+  "artifacts": {
+    "pptx": "/tmp/super-img2ppt-diverse-swin-j37k7e_x/build_04/editable.pptx",
+    "svg": "/tmp/super-img2ppt-diverse-swin-j37k7e_x/build_04/svg/page_001.svg",
+    "scene_resolved": "/tmp/super-img2ppt-diverse-swin-j37k7e_x/build_04/scene.resolved.json",
+    "fonts": "/tmp/super-img2ppt-diverse-swin-j37k7e_x/build_04/fonts.json",
+    "validation": "/tmp/super-img2ppt-diverse-swin-j37k7e_x/build_04/validation.json",
+    "preview": "/tmp/super-img2ppt-diverse-swin-j37k7e_x/build_04/render/page_001.png",
+    "comparison": "/tmp/super-img2ppt-diverse-swin-j37k7e_x/build_04/render/page_001_comparison.png",
+    "measurement": "/tmp/super-img2ppt-diverse-swin-j37k7e_x/measurements_04.json",
+    "roi_definitions": "/tmp/super-img2ppt-diverse-swin-j37k7e_x/roi_fixed.json",
+    "object_inventory": "/tmp/super-img2ppt-diverse-swin-j37k7e_x/native_object_inventory_04.json",
+    "commands": "/tmp/super-img2ppt-diverse-swin-j37k7e_x/commands.json",
+    "provenance": "/tmp/super-img2ppt-diverse-swin-j37k7e_x/provenance.json",
+    "first_preflight_failure": "/tmp/super-img2ppt-diverse-swin-j37k7e_x/check_01/validation.json",
+    "first_render_failure": "/tmp/super-img2ppt-diverse-swin-j37k7e_x/build_02/validation.json"
+  }
+}

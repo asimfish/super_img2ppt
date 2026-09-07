@@ -1,0 +1,11 @@
+{
+  "parent_scene": "scene_candidate_01.json",
+  "reason": "check_01 failures and source pixel ink remeasurement",
+  "changes": [
+    "Explicit container relationships for in-group residual connectors/math and stage-internal arrows.",
+    "C module typography changed from 32.5 to 27.5 source pixels after direct source measurement: actual source MLP/LN/MSA ink height is 18–19 px. Same style all eight labels.",
+    "Corrected d_input_dimension frame to required width 139; font remains 40 px.",
+    "Right-block upper superscripts moved left to clear addition circles; superscript size matched to source 18.5 px.",
+    "One named transparent-crop/connector overlap for a_scale16_line."
+  ]
+}

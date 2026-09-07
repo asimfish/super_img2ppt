@@ -53,7 +53,9 @@ installed working tool with a command-local PATH; do not alter global settings o
    layer decisions, and local repair procedure. Read [scene.md](references/scene.md) while
    authoring `scene.json`; [scene.schema.json](references/scene.schema.json) is machine-readable.
 4. Rebuild readable text as `text`/`runs`, simple geometry as native `shape`, and connectors
-   as `line`. Split independent assets out of the source using exact crops when appropriate.
+   as `line`. Slanted convex nodes can use `shape: "polygon"` and normalized `vertices`
+   (see scene reference); continuous colorbars can use sampled `gradient` stops on one shape.
+   Split independent assets out of the source using exact crops when appropriate.
    Store approved assets under the job directory. Do not regenerate logos, invent chart data,
    or put editable text over baked text. Never reuse the entire source as a fake reconstruction.
 5. Correct OCR against the image, including punctuation, superscripts, numeric signs and

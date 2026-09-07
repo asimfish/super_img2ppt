@@ -44,6 +44,15 @@ heads participate in overlap and page-bound checks as triangles, separately from
 so empty corners beside a head do not become filled bounding-box obstacles. Legacy Office
 arrow heads use conservative SVG-sized bounds. Dash gaps are conservatively occupied for QA.
 
+Convex polygons use their perimeter for overlap and containment, including their empty slanted
+corners. Both vertex windings are normalized for clipping. Vertex count and coordinates are
+bounded before geometry is evaluated; invalid or self-crossing polygons are rejected.
+
+Text/text candidates also compare both bounded glyph masks in one coordinate frame, including
+quarter-turn rotation. Separate main letters and subscripts may have overlapping ink rectangles
+without overlapping pixels. Real glyph intersections still block. If either complete mask is
+unavailable, the check retains conservative geometry rather than using a partial measurement.
+
 Source grid crossings can be declared with named overlap pairs and a concrete source-based
 reason. Do not blanket-exempt table text. Thin source lines must be measured at their stroke
 centers; an integer bitmap row denotes a pixel cell, not its center. A line polygon already

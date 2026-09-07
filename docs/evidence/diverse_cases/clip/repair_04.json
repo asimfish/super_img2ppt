@@ -1,0 +1,7 @@
+{
+  "from": "scene_03.json",
+  "to": "scene_04.json",
+  "decision": "Retain the entire math text subscene from the previously measured and passing scene_02, while retaining ordinary-text source-coordinate repairs from scene_03.",
+  "limitation": "The passing size-18 math subscripts are visibly thinner than source. The source-height size-20 trial raised nine native glyph collision errors; no overlaps were exempted to hide this.",
+  "unchanged": "No new exemptions, no relaxed fit/minimum constraints, no geometry rearrangement."
+}

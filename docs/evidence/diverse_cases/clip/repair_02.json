@@ -1,0 +1,9 @@
+{
+  "from": "scene_01.json",
+  "to": "scene_02.json",
+  "changes": [
+    "Added exactly six source-verified front-text/back-card overlap pairs to describe source occlusion.",
+    "No text size, text position, geometry, or content changed."
+  ],
+  "trigger": "check_01 six unintended_overlap errors"
+}

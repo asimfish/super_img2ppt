@@ -1,0 +1,35 @@
+{
+  "base_scene": "/tmp/super-img2ppt-diverse-clip-f11ta96b/job/scene_04.json",
+  "base_scene_sha256": "0b9c36930fa628cfc60fbc339393080b8181d71e28266bb57c0f908108823351",
+  "removed": [
+    "train_text_encoder_fill",
+    "train_text_encoder_edge_0",
+    "train_text_encoder_edge_1",
+    "train_text_encoder_edge_2",
+    "train_text_encoder_edge_3",
+    "train_image_encoder_fill",
+    "train_image_encoder_edge_0",
+    "train_image_encoder_edge_1",
+    "train_image_encoder_edge_2",
+    "train_image_encoder_edge_3",
+    "classifier_text_encoder_fill",
+    "classifier_text_encoder_edge_0",
+    "classifier_text_encoder_edge_1",
+    "classifier_text_encoder_edge_2",
+    "classifier_text_encoder_edge_3",
+    "prediction_image_encoder_fill",
+    "prediction_image_encoder_edge_0",
+    "prediction_image_encoder_edge_1",
+    "prediction_image_encoder_edge_2",
+    "prediction_image_encoder_edge_3"
+  ],
+  "added": [
+    "train_text_encoder_polygon",
+    "train_image_encoder_polygon",
+    "classifier_text_encoder_polygon",
+    "prediction_image_encoder_polygon"
+  ],
+  "only_other_changes": "Eight encoder text elements now declare their corresponding polygon as container.",
+  "geometry": "All polygon corners match baseline native outline endpoints and the source exactly; no text or grid position/font changes.",
+  "fixed_roi_sha256": "f3fc7a3bd9f080ee9070cc0331fe35449e6b73c59d7a4c570d2c695c7041fefb"
+}

@@ -1,0 +1,119 @@
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+__________ test_convex_polygon_contract_and_rejected_ambiguous_shapes __________
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 480, 'height': 260, 'reviewed': True, ...}]}
+
+    def test_convex_polygon_contract_and_rejected_ambiguous_shapes(scene):
+        spec = trapezoid(scene)
+>       assert validate_scene(spec) == spec
+               ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_polygons.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 480, 'height': 260, 'reviewed': True, ...}]}
+
+    def validate_scene(scene: dict) -> dict:
+        _validate_finite(scene)
+        errors = sorted(Draft202012Validator(SCHEMA).iter_errors(scene), key=lambda e: str(e.path))
+        if errors:
+>           raise InputError(
+                "; ".join(f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5])
+            )
+E           super_img2ppt.scene.InputError: slides/0/elements/0/shape: 'polygon' is not one of ['rect', 'round_rect', 'ellipse', 'triangle', 'diamond', 'chevron']; slides/0/elements/0: Additional properties are not allowed ('vertices' was unexpected)
+
+skills/super-img2ppt/src/super_img2ppt/scene.py:199: InputError
+____ test_polygon_containment_and_empty_corner_use_visible_geometry[False] _____
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 480, 'height': 260, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x107e7bbc0>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-195/test_polygon_containment_and_e0')
+reverse = False
+
+    @pytest.mark.parametrize("reverse", [False, True])
+    def test_polygon_containment_and_empty_corner_use_visible_geometry(scene, fonts, tmp_path, reverse):
+        spec = trapezoid(scene)
+        page = spec["slides"][0]
+        if reverse:
+            page["elements"][0]["vertices"].reverse()
+>       validate_scene(spec)
+
+tests/test_polygons.py:73: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 480, 'height': 260, 'reviewed': True, ...}]}
+
+    def validate_scene(scene: dict) -> dict:
+        _validate_finite(scene)
+        errors = sorted(Draft202012Validator(SCHEMA).iter_errors(scene), key=lambda e: str(e.path))
+        if errors:
+>           raise InputError(
+                "; ".join(f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5])
+            )
+E           super_img2ppt.scene.InputError: slides/0/elements/0/shape: 'polygon' is not one of ['rect', 'round_rect', 'ellipse', 'triangle', 'diamond', 'chevron']; slides/0/elements/0: Additional properties are not allowed ('vertices' was unexpected)
+
+skills/super-img2ppt/src/super_img2ppt/scene.py:199: InputError
+_____ test_polygon_containment_and_empty_corner_use_visible_geometry[True] _____
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 480, 'height': 260, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x107e7bbc0>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-195/test_polygon_containment_and_e1')
+reverse = True
+
+    @pytest.mark.parametrize("reverse", [False, True])
+    def test_polygon_containment_and_empty_corner_use_visible_geometry(scene, fonts, tmp_path, reverse):
+        spec = trapezoid(scene)
+        page = spec["slides"][0]
+        if reverse:
+            page["elements"][0]["vertices"].reverse()
+>       validate_scene(spec)
+
+tests/test_polygons.py:73: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 480, 'height': 260, 'reviewed': True, ...}]}
+
+    def validate_scene(scene: dict) -> dict:
+        _validate_finite(scene)
+        errors = sorted(Draft202012Validator(SCHEMA).iter_errors(scene), key=lambda e: str(e.path))
+        if errors:
+>           raise InputError(
+                "; ".join(f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5])
+            )
+E           super_img2ppt.scene.InputError: slides/0/elements/0/shape: 'polygon' is not one of ['rect', 'round_rect', 'ellipse', 'triangle', 'diamond', 'chevron']; slides/0/elements/0: Additional properties are not allowed ('vertices' was unexpected)
+
+skills/super-img2ppt/src/super_img2ppt/scene.py:199: InputError
+_______ test_polygon_is_editable_and_actual_render_keeps_slanted_corners _______
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 480, 'height': 260, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x107e7bbc0>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-195/test_polygon_is_editable_and_a0')
+
+    @pytest.mark.render
+    @pytest.mark.skipif(shutil.which("soffice") is None, reason="LibreOffice not installed")
+    def test_polygon_is_editable_and_actual_render_keeps_slanted_corners(scene, fonts, tmp_path):
+        spec = trapezoid(scene)
+>       validate_scene(spec)
+
+tests/test_polygons.py:92: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 480, 'height': 260, 'reviewed': True, ...}]}
+
+    def validate_scene(scene: dict) -> dict:
+        _validate_finite(scene)
+        errors = sorted(Draft202012Validator(SCHEMA).iter_errors(scene), key=lambda e: str(e.path))
+        if errors:
+>           raise InputError(
+                "; ".join(f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5])
+            )
+E           super_img2ppt.scene.InputError: slides/0/elements/0/shape: 'polygon' is not one of ['rect', 'round_rect', 'ellipse', 'triangle', 'diamond', 'chevron']; slides/0/elements/0: Additional properties are not allowed ('vertices' was unexpected)
+
+skills/super-img2ppt/src/super_img2ppt/scene.py:199: InputError
+=========================== short test summary info ============================
+FAILED tests/test_polygons.py::test_convex_polygon_contract_and_rejected_ambiguous_shapes
+FAILED tests/test_polygons.py::test_polygon_containment_and_empty_corner_use_visible_geometry[False]
+FAILED tests/test_polygons.py::test_polygon_containment_and_empty_corner_use_visible_geometry[True]
+FAILED tests/test_polygons.py::test_polygon_is_editable_and_actual_render_keeps_slanted_corners
+4 failed in 2.12s

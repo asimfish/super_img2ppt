@@ -1,0 +1,133 @@
+{
+  "evaluated": "2026-09-07",
+  "runtime_version": "0.3.0",
+  "method": "Rebuild archived resolved scenes with final production Python files. Compare decoded RGB actual PPTX renders with the independent final renders at their unchanged output dimensions. Exact equality permits reusing those original ROI measurements without changing masks or coordinates.",
+  "cases": [
+    {
+      "id": "clip",
+      "status": "review",
+      "size": [
+        1600,
+        564
+      ],
+      "decoded_render_rgb_identical": true,
+      "difference_bbox": null,
+      "scene_counts": {
+        "text": 131,
+        "shape": 134,
+        "line": 28,
+        "image": 2
+      },
+      "independent_roi_plan_sha256": "f3fc7a3bd9f080ee9070cc0331fe35449e6b73c59d7a4c570d2c695c7041fefb"
+    },
+    {
+      "id": "swin",
+      "status": "pass",
+      "size": [
+        1600,
+        880
+      ],
+      "decoded_render_rgb_identical": true,
+      "difference_bbox": null,
+      "scene_counts": {
+        "image": 34,
+        "line": 375,
+        "text": 92,
+        "shape": 30
+      },
+      "independent_roi_plan_sha256": "9b797ef3325e69c0a497c55d33108b5f2186ed345bae24acda80ae216f0c3973"
+    },
+    {
+      "id": "heatmap",
+      "status": "review",
+      "size": [
+        1600,
+        1200
+      ],
+      "decoded_render_rgb_identical": true,
+      "difference_bbox": null,
+      "scene_counts": {
+        "shape": 51,
+        "text": 64,
+        "line": 21,
+        "image": 1
+      },
+      "independent_roi_plan_sha256": "beda47e44850c08a708b839d14fb99e19fcb71e409cbc22c60e8559b1b3e78cf"
+    }
+  ],
+  "local_development_case": {
+    "id": "ddpm",
+    "status": "pass",
+    "decoded_render_rgb_identical": true,
+    "difference_bbox": null,
+    "artwork": "local only"
+  },
+  "legacy": {
+    "all_blocking_checks_passed": false,
+    "visual_review": "required",
+    "cases": [
+      {
+        "id": "consensus_zh",
+        "status": "pass",
+        "error": null
+      },
+      {
+        "id": "matplotlib_table",
+        "status": "fail",
+        "error": null
+      },
+      {
+        "id": "nasa_06",
+        "status": "review",
+        "error": null
+      },
+      {
+        "id": "nasa_16",
+        "status": "review",
+        "error": null
+      },
+      {
+        "id": "nasa_18",
+        "status": "review",
+        "error": null
+      },
+      {
+        "id": "nasa_28",
+        "status": "review",
+        "error": null
+      }
+    ]
+  },
+  "legacy_exit_code": 2,
+  "previous_conference": {
+    "all_blocking_checks_passed": true,
+    "visual_review": "required",
+    "cases": [
+      {
+        "id": "vit",
+        "status": "pass",
+        "error": null
+      },
+      {
+        "id": "spatial_mamba",
+        "status": "pass",
+        "error": null
+      }
+    ]
+  },
+  "previous_conference_exit_code": 0,
+  "runtime_python_file_hashes": {
+    "__init__.py": "0e35488fc4939a332486fca7de7bc0ced9cd425f902b40ada802ad21ca9b373a",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "cli.py": "b024e045a496ef3b85e7294ffbc3fd3f155f7d689c72ae0122c7138edd56dc16",
+    "export.py": "a950605202a19cee13d0d00e9ccb1b935b37c2e491249a0c9163ca7ea7a903f8",
+    "fonts.py": "9d241e02e3f7929ff8fae9570e2143e6120630c6d8d828dca16428d4c5debde9",
+    "geometry.py": "df740783a63fb24ee5b657f5909a92f43b16a22bd6bdd2afcb6b1fc04c764a9f",
+    "layout.py": "5be7a48c98d7954cd70b9cb70dd4949a90c653ee8d1e56dcc86bd8a4987558e9",
+    "ocr.py": "e92fd445ebfbdefa0350f750d10d7128f5a35bfa06606704c12e63646849a1c3",
+    "prepare.py": "7d0d2c50dd5acdc7982f47b0e8082a922755acabafc51ef2cd8d20d1058d31be",
+    "qa.py": "44872030847cccf42cd55c87fadbd5e5118f49d82ba659c238ef9e354113ef97",
+    "render.py": "9d8ef5f90249e9b9a29984b5ceb7d08f39b4b4ecf6b26c096c0d9681d8aaa87d",
+    "scene.py": "53a564c40fcc85cebee3670b11ff07a6b8ec2a133e18013e7dc02343bf2761cc"
+  }
+}

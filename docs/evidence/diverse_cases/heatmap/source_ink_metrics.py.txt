@@ -1,0 +1,13 @@
+from PIL import Image
+from pathlib import Path
+import json
+r=Path('/tmp/super-img2ppt-diverse-heatmap-UhTqQQ'); p=json.loads((r/'roi_plan_frozen.json').read_text()); im=Image.open(r/'job/pages/page_001/source.png').convert('RGB')
+for a in p['rois']:
+ if a['kind']=='text':
+  l,t,rr,b=a['region']; bg=a['background_rgb']; coords=[]
+  for y in range(t,b):
+   for x in range(l,rr):
+    rgb=im.getpixel((x,y))
+    if max(abs(rgb[k]-bg[k]) for k in range(3))>=70:coords.append((x,y))
+  bbox=[min(x for x,y in coords),min(y for x,y in coords),max(x for x,y in coords)+1,max(y for x,y in coords)+1] if coords else None
+  print(a['id'],a['expected_text'],'bg',bg,'bbox',bbox)

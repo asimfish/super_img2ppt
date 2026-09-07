@@ -1,0 +1,337 @@
+{
+  "coordinate_system": "source pixels, [x,y,width,height]; text measured at threshold 100; grid lines at pixel-cell centers",
+  "frozen_before_first_build": true,
+  "source_sha256": "aac9fc38897a498a481722ac09affac792ad46b762155b25fdc053f963daaf61",
+  "rois": [
+    {
+      "id": "title_1",
+      "type": "text",
+      "box": [
+        0,
+        0,
+        430,
+        50
+      ],
+      "mask": "black"
+    },
+    {
+      "id": "title_2",
+      "type": "text",
+      "box": [
+        1095,
+        0,
+        685,
+        50
+      ],
+      "mask": "black"
+    },
+    {
+      "id": "title_3",
+      "type": "text",
+      "box": [
+        1095,
+        394,
+        620,
+        56
+      ],
+      "mask": "black"
+    },
+    {
+      "id": "pepper_line_1",
+      "type": "text",
+      "box": [
+        20,
+        156,
+        175,
+        33
+      ],
+      "mask": "black"
+    },
+    {
+      "id": "pepper_line_2",
+      "type": "text",
+      "box": [
+        20,
+        190,
+        175,
+        31
+      ],
+      "mask": "black"
+    },
+    {
+      "id": "train_text_label_1",
+      "type": "text",
+      "box": [
+        326,
+        170,
+        118,
+        32
+      ],
+      "mask": "black"
+    },
+    {
+      "id": "train_text_label_2",
+      "type": "text",
+      "box": [
+        326,
+        202,
+        118,
+        33
+      ],
+      "mask": "black"
+    },
+    {
+      "id": "train_image_label_1",
+      "type": "text",
+      "box": [
+        326,
+        530,
+        118,
+        35
+      ],
+      "mask": "black"
+    },
+    {
+      "id": "train_image_label_2",
+      "type": "text",
+      "box": [
+        326,
+        563,
+        118,
+        31
+      ],
+      "mask": "black"
+    },
+    {
+      "id": "class_word_plane",
+      "type": "text",
+      "box": [
+        1123,
+        74,
+        94,
+        38
+      ],
+      "mask": "pink"
+    },
+    {
+      "id": "class_word_car",
+      "type": "text",
+      "box": [
+        1123,
+        134,
+        94,
+        38
+      ],
+      "mask": "pink"
+    },
+    {
+      "id": "class_word_dog",
+      "type": "text",
+      "box": [
+        1123,
+        194,
+        94,
+        38
+      ],
+      "mask": "pink"
+    },
+    {
+      "id": "class_word_bird",
+      "type": "text",
+      "box": [
+        1123,
+        314,
+        94,
+        38
+      ],
+      "mask": "pink"
+    },
+    {
+      "id": "class_prompt_line_1",
+      "type": "text",
+      "box": [
+        1331,
+        179,
+        180,
+        32
+      ],
+      "mask": "black"
+    },
+    {
+      "id": "classifier_text_label_1",
+      "type": "text",
+      "box": [
+        1600,
+        182,
+        120,
+        32
+      ],
+      "mask": "black"
+    },
+    {
+      "id": "classifier_text_label_2",
+      "type": "text",
+      "box": [
+        1600,
+        214,
+        120,
+        31
+      ],
+      "mask": "black"
+    },
+    {
+      "id": "prediction_image_label_1",
+      "type": "text",
+      "box": [
+        1460,
+        550,
+        120,
+        35
+      ],
+      "mask": "black"
+    },
+    {
+      "id": "prediction_image_label_2",
+      "type": "text",
+      "box": [
+        1460,
+        583,
+        120,
+        31
+      ],
+      "mask": "black"
+    },
+    {
+      "id": "math_T1",
+      "type": "text",
+      "box": [
+        668,
+        280,
+        65,
+        47
+      ],
+      "mask": "black"
+    },
+    {
+      "id": "math_I1T1",
+      "type": "text",
+      "box": [
+        664,
+        380,
+        73,
+        45
+      ],
+      "mask": "black"
+    },
+    {
+      "id": "math_predict_I1T3",
+      "type": "text",
+      "box": [
+        1924,
+        560,
+        73,
+        45
+      ],
+      "mask": "black"
+    },
+    {
+      "id": "matrix_top_grid",
+      "type": "grid_horizontal",
+      "box": [
+        665,
+        355,
+        390,
+        13
+      ],
+      "mask": "grayblue"
+    },
+    {
+      "id": "matrix_mid_grid",
+      "type": "grid_horizontal",
+      "box": [
+        665,
+        435,
+        390,
+        13
+      ],
+      "mask": "grayblue"
+    },
+    {
+      "id": "matrix_bottom_grid",
+      "type": "grid_horizontal",
+      "box": [
+        665,
+        751,
+        390,
+        11
+      ],
+      "mask": "grayblue"
+    },
+    {
+      "id": "matrix_left_grid",
+      "type": "grid_vertical",
+      "box": [
+        655,
+        365,
+        13,
+        386
+      ],
+      "mask": "grayblue"
+    },
+    {
+      "id": "matrix_col_1_grid",
+      "type": "grid_vertical",
+      "box": [
+        735,
+        365,
+        13,
+        386
+      ],
+      "mask": "grayblue"
+    },
+    {
+      "id": "class_plane_top",
+      "type": "shape_horizontal",
+      "box": [
+        1125,
+        55,
+        92,
+        13
+      ],
+      "mask": "gray"
+    },
+    {
+      "id": "text_feature_top",
+      "type": "shape_horizontal",
+      "box": [
+        665,
+        255,
+        390,
+        13
+      ],
+      "mask": "purpleedge"
+    },
+    {
+      "id": "predict_feature_top",
+      "type": "shape_horizontal",
+      "box": [
+        1765,
+        435,
+        390,
+        13
+      ],
+      "mask": "purpleedge"
+    },
+    {
+      "id": "predict_row_bottom",
+      "type": "shape_horizontal",
+      "box": [
+        1765,
+        615,
+        390,
+        13
+      ],
+      "mask": "grayblue"
+    }
+  ]
+}

@@ -1,0 +1,6490 @@
+{
+  "version": 1,
+  "title": "CLIP editable reconstruction - frozen v0.2.0 independent trial",
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 2162,
+      "height": 762,
+      "background": "#FFFFFF",
+      "source": "assets/aac9fc38897a498a4817.png",
+      "notes": "",
+      "reviewed": true,
+      "elements": [
+        {
+          "id": "title_1",
+          "kind": "text",
+          "box": [
+            4.25,
+            1.5,
+            360.5,
+            42.0
+          ],
+          "font_size": 30,
+          "font_family": "Arial",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "runs": [
+            {
+              "text": "(1) Contrastive pre-training",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 30,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "title_2",
+          "kind": "text",
+          "box": [
+            1104.25,
+            1.5,
+            567.0,
+            42.0
+          ],
+          "font_size": 30,
+          "font_family": "Arial",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "runs": [
+            {
+              "text": "(2) Create dataset classifier from label text",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 30,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "title_3",
+          "kind": "text",
+          "box": [
+            1104.25,
+            401.5,
+            417.0,
+            42.0
+          ],
+          "font_size": 30,
+          "font_family": "Arial",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "runs": [
+            {
+              "text": "(3) Use for zero-shot prediction",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 30,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "text_card_3",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            46,
+            166,
+            180,
+            100
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 14,
+          "allow_overlap_with": [
+            "text_card_0",
+            "text_card_1",
+            "text_card_2"
+          ],
+          "overlap_reason": "The four source input cards are intentionally stacked with ten-pixel offsets."
+        },
+        {
+          "id": "text_card_2",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            36,
+            156,
+            180,
+            100
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 15,
+          "allow_overlap_with": [
+            "text_card_0",
+            "text_card_1",
+            "text_card_3"
+          ],
+          "overlap_reason": "The four source input cards are intentionally stacked with ten-pixel offsets."
+        },
+        {
+          "id": "text_card_1",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            26,
+            146,
+            180,
+            100
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 16,
+          "allow_overlap_with": [
+            "text_card_0",
+            "text_card_2",
+            "text_card_3"
+          ],
+          "overlap_reason": "The four source input cards are intentionally stacked with ten-pixel offsets."
+        },
+        {
+          "id": "text_card_0",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            16,
+            136,
+            180,
+            100
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 17,
+          "allow_overlap_with": [
+            "text_card_1",
+            "text_card_2",
+            "text_card_3"
+          ],
+          "overlap_reason": "The four source input cards are intentionally stacked with ten-pixel offsets."
+        },
+        {
+          "id": "pepper_line_1",
+          "kind": "text",
+          "box": [
+            34.0,
+            157.75,
+            148.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Courier New",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "text_card_0",
+          "allow_overlap_with": [
+            "text_card_1",
+            "text_card_2",
+            "text_card_3"
+          ],
+          "overlap_reason": "The source front input card occludes the three back cards; its text is visible only on that front card.",
+          "runs": [
+            {
+              "text": "Pepper the",
+              "font_family": "Courier New",
+              "cjk_font_family": "Courier New",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "pepper_line_2",
+          "kind": "text",
+          "box": [
+            34.25,
+            185.25,
+            148.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Courier New",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "text_card_0",
+          "allow_overlap_with": [
+            "text_card_1",
+            "text_card_2",
+            "text_card_3"
+          ],
+          "overlap_reason": "The source front input card occludes the three back cards; its text is visible only on that front card.",
+          "runs": [
+            {
+              "text": "aussie pup",
+              "font_family": "Courier New",
+              "cjk_font_family": "Courier New",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "text_input_arrow",
+          "kind": "line",
+          "points": [
+            [
+              227,
+              201
+            ],
+            [
+              300,
+              201
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          }
+        },
+        {
+          "id": "train_text_label_1",
+          "kind": "text",
+          "box": [
+            357.5,
+            173.5,
+            49.70703125,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Arial",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_text_encoder_polygon",
+          "runs": [
+            {
+              "text": "Text",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_text_label_2",
+          "kind": "text",
+          "box": [
+            335.25,
+            201.5,
+            92.25,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Arial",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_text_encoder_polygon",
+          "runs": [
+            {
+              "text": "Encoder",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_image_label_1",
+          "kind": "text",
+          "box": [
+            346.75,
+            533.5,
+            69.5,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Arial",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_image_encoder_polygon",
+          "runs": [
+            {
+              "text": "Image",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_image_label_2",
+          "kind": "text",
+          "box": [
+            335.25,
+            561.5,
+            92.25,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Arial",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_image_encoder_polygon",
+          "runs": [
+            {
+              "text": "Encoder",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "classifier_text_label_1",
+          "kind": "text",
+          "box": [
+            1637.5,
+            183.5,
+            49.70703125,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Arial",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "classifier_text_encoder_polygon",
+          "runs": [
+            {
+              "text": "Text",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "classifier_text_label_2",
+          "kind": "text",
+          "box": [
+            1615.25,
+            211.5,
+            92.25,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Arial",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "classifier_text_encoder_polygon",
+          "runs": [
+            {
+              "text": "Encoder",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "prediction_image_label_1",
+          "kind": "text",
+          "box": [
+            1486.75,
+            553.5,
+            69.5,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Arial",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "prediction_image_encoder_polygon",
+          "runs": [
+            {
+              "text": "Image",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "prediction_image_label_2",
+          "kind": "text",
+          "box": [
+            1475.25,
+            581.5,
+            92.25,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Arial",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "prediction_image_encoder_polygon",
+          "runs": [
+            {
+              "text": "Encoder",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_photo_stack",
+          "kind": "image",
+          "box": [
+            45,
+            485,
+            152,
+            152
+          ],
+          "path": "assets/35ca18f940a2f02c8e54.png",
+          "provenance": "Exact independent text-free photo crop from the supplied CLIP source image.",
+          "contains_text": false,
+          "z": 18
+        },
+        {
+          "id": "prediction_photo",
+          "kind": "image",
+          "box": [
+            1260,
+            520,
+            122,
+            122
+          ],
+          "path": "assets/53deed0269c8d5abee22.png",
+          "provenance": "Exact independent text-free photo crop from the supplied CLIP source image.",
+          "contains_text": false,
+          "z": 18
+        },
+        {
+          "id": "image_input_arrow",
+          "kind": "line",
+          "points": [
+            [
+              198,
+              559
+            ],
+            [
+              300,
+              559
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          }
+        },
+        {
+          "id": "train_T_cell_0",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            661,
+            261,
+            80,
+            80
+          ],
+          "fill": "#E1D5E7",
+          "stroke": "#9673A6",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "train_T_1_base",
+          "kind": "text",
+          "box": [
+            687.25,
+            283.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_T_cell_0",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_T_1_sub",
+          "kind": "text",
+          "box": [
+            702.0,
+            292.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_T_cell_0",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_T_cell_1",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            741,
+            261,
+            80,
+            80
+          ],
+          "fill": "#E1D5E7",
+          "stroke": "#9673A6",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "train_T_2_base",
+          "kind": "text",
+          "box": [
+            767.25,
+            283.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_T_cell_1",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_T_2_sub",
+          "kind": "text",
+          "box": [
+            782.0,
+            292.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_T_cell_1",
+          "runs": [
+            {
+              "text": "2",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_T_cell_2",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            821,
+            261,
+            80,
+            80
+          ],
+          "fill": "#E1D5E7",
+          "stroke": "#9673A6",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "train_T_3_base",
+          "kind": "text",
+          "box": [
+            847.25,
+            283.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_T_cell_2",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_T_3_sub",
+          "kind": "text",
+          "box": [
+            861.75,
+            292.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_T_cell_2",
+          "runs": [
+            {
+              "text": "3",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_T_cell_3",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            901,
+            261,
+            80,
+            80
+          ],
+          "fill": "#E1D5E7",
+          "stroke": "#9673A6",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "train_T_ellipsis_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            935,
+            306,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "train_T_cell_3"
+        },
+        {
+          "id": "train_T_ellipsis_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            940,
+            306,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "train_T_cell_3"
+        },
+        {
+          "id": "train_T_ellipsis_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            945,
+            306,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "train_T_cell_3"
+        },
+        {
+          "id": "train_T_cell_4",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            981,
+            261,
+            80,
+            80
+          ],
+          "fill": "#E1D5E7",
+          "stroke": "#9673A6",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "train_T_N_base",
+          "kind": "text",
+          "box": [
+            1005.25,
+            283.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_T_cell_4",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_T_N_sub",
+          "kind": "text",
+          "box": [
+            1020.75,
+            293.25,
+            17.5,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_T_cell_4",
+          "runs": [
+            {
+              "text": "N",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_I_cell_0",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            561,
+            361,
+            80,
+            80
+          ],
+          "fill": "#D5E8D4",
+          "stroke": "#82B366",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "train_I_1_base",
+          "kind": "text",
+          "box": [
+            591.0,
+            383.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_I_cell_0",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_I_1_sub",
+          "kind": "text",
+          "box": [
+            599.0,
+            392.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_I_cell_0",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_I_cell_1",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            561,
+            441,
+            80,
+            80
+          ],
+          "fill": "#D5E8D4",
+          "stroke": "#82B366",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "train_I_2_base",
+          "kind": "text",
+          "box": [
+            591.0,
+            463.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_I_cell_1",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_I_2_sub",
+          "kind": "text",
+          "box": [
+            599.0,
+            472.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_I_cell_1",
+          "runs": [
+            {
+              "text": "2",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_I_cell_2",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            561,
+            521,
+            80,
+            80
+          ],
+          "fill": "#D5E8D4",
+          "stroke": "#82B366",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "train_I_3_base",
+          "kind": "text",
+          "box": [
+            591.0,
+            543.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_I_cell_2",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_I_3_sub",
+          "kind": "text",
+          "box": [
+            598.75,
+            552.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_I_cell_2",
+          "runs": [
+            {
+              "text": "3",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_I_cell_3",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            561,
+            601,
+            80,
+            80
+          ],
+          "fill": "#D5E8D4",
+          "stroke": "#82B366",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "train_I_ellipsis_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            600,
+            633,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "train_I_cell_3"
+        },
+        {
+          "id": "train_I_ellipsis_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            600,
+            639,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "train_I_cell_3"
+        },
+        {
+          "id": "train_I_ellipsis_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            600,
+            645,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "train_I_cell_3"
+        },
+        {
+          "id": "train_I_cell_4",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            561,
+            681,
+            80,
+            80
+          ],
+          "fill": "#D5E8D4",
+          "stroke": "#82B366",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "train_I_N_base",
+          "kind": "text",
+          "box": [
+            589.0,
+            703.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_I_cell_4",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_I_N_sub",
+          "kind": "text",
+          "box": [
+            597.75,
+            713.25,
+            17.5,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "train_I_cell_4",
+          "runs": [
+            {
+              "text": "N",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_cell_0_0",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            661,
+            361,
+            80,
+            80
+          ],
+          "fill": "#DAE8FC",
+          "stroke": "#6C8EBF",
+          "stroke_width": 2,
+          "z": 12
+        },
+        {
+          "id": "matrix_1_1_ibase",
+          "kind": "text",
+          "box": [
+            675.0,
+            383.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_0_0",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_1_1_isub",
+          "kind": "text",
+          "box": [
+            683.0,
+            393.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_0_0",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_1_1_tbase",
+          "kind": "text",
+          "box": [
+            701.25,
+            383.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_0_0",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_1_1_tsub",
+          "kind": "text",
+          "box": [
+            715.0,
+            393.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_0_0",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_1_1_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            696,
+            396,
+            2,
+            3
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_0_0"
+        },
+        {
+          "id": "matrix_cell_0_1",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            741,
+            361,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_1_2_ibase",
+          "kind": "text",
+          "box": [
+            755.0,
+            383.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_0_1",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_1_2_isub",
+          "kind": "text",
+          "box": [
+            763.0,
+            393.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_0_1",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_1_2_tbase",
+          "kind": "text",
+          "box": [
+            781.25,
+            383.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_0_1",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_1_2_tsub",
+          "kind": "text",
+          "box": [
+            795.0,
+            392.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_0_1",
+          "runs": [
+            {
+              "text": "2",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_1_2_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            776,
+            396,
+            2,
+            3
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_0_1"
+        },
+        {
+          "id": "matrix_cell_0_2",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            821,
+            361,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_1_3_ibase",
+          "kind": "text",
+          "box": [
+            835.0,
+            383.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_0_2",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_1_3_isub",
+          "kind": "text",
+          "box": [
+            843.0,
+            393.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_0_2",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_1_3_tbase",
+          "kind": "text",
+          "box": [
+            861.25,
+            383.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_0_2",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_1_3_tsub",
+          "kind": "text",
+          "box": [
+            874.75,
+            392.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_0_2",
+          "runs": [
+            {
+              "text": "3",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_1_3_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            856,
+            396,
+            2,
+            3
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_0_2"
+        },
+        {
+          "id": "matrix_cell_0_3",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            901,
+            361,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_hdots_0_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            935,
+            406,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_0_3"
+        },
+        {
+          "id": "matrix_hdots_0_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            940,
+            406,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_0_3"
+        },
+        {
+          "id": "matrix_hdots_0_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            945,
+            406,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_0_3"
+        },
+        {
+          "id": "matrix_cell_0_4",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            981,
+            361,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_1_N_ibase",
+          "kind": "text",
+          "box": [
+            992.0,
+            383.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_0_4",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_1_N_isub",
+          "kind": "text",
+          "box": [
+            1000.0,
+            393.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_0_4",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_1_N_tbase",
+          "kind": "text",
+          "box": [
+            1018.25,
+            383.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_0_4",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_1_N_tsub",
+          "kind": "text",
+          "box": [
+            1033.75,
+            393.25,
+            17.5,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_0_4",
+          "runs": [
+            {
+              "text": "N",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_1_N_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            1013,
+            396,
+            3,
+            3
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_0_4"
+        },
+        {
+          "id": "matrix_cell_1_0",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            661,
+            441,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_2_1_ibase",
+          "kind": "text",
+          "box": [
+            675.0,
+            463.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_1_0",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_2_1_isub",
+          "kind": "text",
+          "box": [
+            682.0,
+            472.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_1_0",
+          "runs": [
+            {
+              "text": "2",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_2_1_tbase",
+          "kind": "text",
+          "box": [
+            701.25,
+            463.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_1_0",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_2_1_tsub",
+          "kind": "text",
+          "box": [
+            715.0,
+            473.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_1_0",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_2_1_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            696,
+            476,
+            2,
+            3
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_1_0"
+        },
+        {
+          "id": "matrix_cell_1_1",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            741,
+            441,
+            80,
+            80
+          ],
+          "fill": "#DAE8FC",
+          "stroke": "#6C8EBF",
+          "stroke_width": 2,
+          "z": 12
+        },
+        {
+          "id": "matrix_2_2_ibase",
+          "kind": "text",
+          "box": [
+            755.0,
+            463.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_1_1",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_2_2_isub",
+          "kind": "text",
+          "box": [
+            762.0,
+            472.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_1_1",
+          "runs": [
+            {
+              "text": "2",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_2_2_tbase",
+          "kind": "text",
+          "box": [
+            781.25,
+            463.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_1_1",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_2_2_tsub",
+          "kind": "text",
+          "box": [
+            795.0,
+            472.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_1_1",
+          "runs": [
+            {
+              "text": "2",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_2_2_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            776,
+            476,
+            2,
+            3
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_1_1"
+        },
+        {
+          "id": "matrix_cell_1_2",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            821,
+            441,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_2_3_ibase",
+          "kind": "text",
+          "box": [
+            835.0,
+            463.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_1_2",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_2_3_isub",
+          "kind": "text",
+          "box": [
+            842.0,
+            472.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_1_2",
+          "runs": [
+            {
+              "text": "2",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_2_3_tbase",
+          "kind": "text",
+          "box": [
+            861.25,
+            463.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_1_2",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_2_3_tsub",
+          "kind": "text",
+          "box": [
+            874.75,
+            472.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_1_2",
+          "runs": [
+            {
+              "text": "3",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_2_3_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            856,
+            476,
+            2,
+            3
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_1_2"
+        },
+        {
+          "id": "matrix_cell_1_3",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            901,
+            441,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_hdots_1_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            935,
+            486,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_1_3"
+        },
+        {
+          "id": "matrix_hdots_1_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            940,
+            486,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_1_3"
+        },
+        {
+          "id": "matrix_hdots_1_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            945,
+            486,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_1_3"
+        },
+        {
+          "id": "matrix_cell_1_4",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            981,
+            441,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_2_N_ibase",
+          "kind": "text",
+          "box": [
+            992.0,
+            463.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_1_4",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_2_N_isub",
+          "kind": "text",
+          "box": [
+            1000.0,
+            472.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_1_4",
+          "runs": [
+            {
+              "text": "2",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_2_N_tbase",
+          "kind": "text",
+          "box": [
+            1018.25,
+            463.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_1_4",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_2_N_tsub",
+          "kind": "text",
+          "box": [
+            1033.75,
+            473.25,
+            17.5,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_1_4",
+          "runs": [
+            {
+              "text": "N",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_2_N_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            1013,
+            476,
+            3,
+            3
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_1_4"
+        },
+        {
+          "id": "matrix_cell_2_0",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            661,
+            521,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_3_1_ibase",
+          "kind": "text",
+          "box": [
+            675.0,
+            543.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_2_0",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_3_1_isub",
+          "kind": "text",
+          "box": [
+            682.75,
+            552.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_2_0",
+          "runs": [
+            {
+              "text": "3",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_3_1_tbase",
+          "kind": "text",
+          "box": [
+            701.25,
+            543.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_2_0",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_3_1_tsub",
+          "kind": "text",
+          "box": [
+            715.0,
+            553.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_2_0",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_3_1_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            696,
+            556,
+            2,
+            3
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_2_0"
+        },
+        {
+          "id": "matrix_cell_2_1",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            741,
+            521,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_3_2_ibase",
+          "kind": "text",
+          "box": [
+            755.0,
+            543.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_2_1",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_3_2_isub",
+          "kind": "text",
+          "box": [
+            762.75,
+            552.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_2_1",
+          "runs": [
+            {
+              "text": "3",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_3_2_tbase",
+          "kind": "text",
+          "box": [
+            781.25,
+            543.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_2_1",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_3_2_tsub",
+          "kind": "text",
+          "box": [
+            795.0,
+            552.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_2_1",
+          "runs": [
+            {
+              "text": "2",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_3_2_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            776,
+            556,
+            2,
+            3
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_2_1"
+        },
+        {
+          "id": "matrix_cell_2_2",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            821,
+            521,
+            80,
+            80
+          ],
+          "fill": "#DAE8FC",
+          "stroke": "#6C8EBF",
+          "stroke_width": 2,
+          "z": 12
+        },
+        {
+          "id": "matrix_3_3_ibase",
+          "kind": "text",
+          "box": [
+            835.0,
+            543.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_2_2",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_3_3_isub",
+          "kind": "text",
+          "box": [
+            842.75,
+            552.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_2_2",
+          "runs": [
+            {
+              "text": "3",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_3_3_tbase",
+          "kind": "text",
+          "box": [
+            861.25,
+            543.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_2_2",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_3_3_tsub",
+          "kind": "text",
+          "box": [
+            874.75,
+            552.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_2_2",
+          "runs": [
+            {
+              "text": "3",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_3_3_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            856,
+            556,
+            2,
+            3
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_2_2"
+        },
+        {
+          "id": "matrix_cell_2_3",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            901,
+            521,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_hdots_2_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            935,
+            566,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_2_3"
+        },
+        {
+          "id": "matrix_hdots_2_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            940,
+            566,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_2_3"
+        },
+        {
+          "id": "matrix_hdots_2_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            945,
+            566,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_2_3"
+        },
+        {
+          "id": "matrix_cell_2_4",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            981,
+            521,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_3_N_ibase",
+          "kind": "text",
+          "box": [
+            992.0,
+            543.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_2_4",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_3_N_isub",
+          "kind": "text",
+          "box": [
+            1000.75,
+            552.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_2_4",
+          "runs": [
+            {
+              "text": "3",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_3_N_tbase",
+          "kind": "text",
+          "box": [
+            1018.25,
+            543.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_2_4",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_3_N_tsub",
+          "kind": "text",
+          "box": [
+            1033.75,
+            553.25,
+            17.5,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_2_4",
+          "runs": [
+            {
+              "text": "N",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_3_N_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            1013,
+            556,
+            3,
+            3
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_2_4"
+        },
+        {
+          "id": "matrix_cell_3_0",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            661,
+            601,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_vdots_0_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            700,
+            634,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_3_0"
+        },
+        {
+          "id": "matrix_vdots_0_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            700,
+            640,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_3_0"
+        },
+        {
+          "id": "matrix_vdots_0_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            700,
+            646,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_3_0"
+        },
+        {
+          "id": "matrix_cell_3_1",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            741,
+            601,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_vdots_1_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            780,
+            634,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_3_1"
+        },
+        {
+          "id": "matrix_vdots_1_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            780,
+            640,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_3_1"
+        },
+        {
+          "id": "matrix_vdots_1_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            780,
+            646,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_3_1"
+        },
+        {
+          "id": "matrix_cell_3_2",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            821,
+            601,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_vdots_2_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            860,
+            634,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_3_2"
+        },
+        {
+          "id": "matrix_vdots_2_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            860,
+            640,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_3_2"
+        },
+        {
+          "id": "matrix_vdots_2_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            860,
+            646,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_3_2"
+        },
+        {
+          "id": "matrix_cell_3_3",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            901,
+            601,
+            80,
+            80
+          ],
+          "fill": "#DAE8FC",
+          "stroke": "#6C8EBF",
+          "stroke_width": 2,
+          "z": 12
+        },
+        {
+          "id": "matrix_diag_dots_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            935,
+            634,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_3_3"
+        },
+        {
+          "id": "matrix_diag_dots_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            940,
+            640,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_3_3"
+        },
+        {
+          "id": "matrix_diag_dots_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            945,
+            646,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_3_3"
+        },
+        {
+          "id": "matrix_cell_3_4",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            981,
+            601,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_vdots_4_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            1020,
+            634,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_3_4"
+        },
+        {
+          "id": "matrix_vdots_4_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            1020,
+            640,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_3_4"
+        },
+        {
+          "id": "matrix_vdots_4_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            1020,
+            646,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_3_4"
+        },
+        {
+          "id": "matrix_cell_4_0",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            661,
+            681,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_N_1_ibase",
+          "kind": "text",
+          "box": [
+            672.0,
+            703.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_4_0",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_N_1_isub",
+          "kind": "text",
+          "box": [
+            680.75,
+            713.25,
+            17.5,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_4_0",
+          "runs": [
+            {
+              "text": "N",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_N_1_tbase",
+          "kind": "text",
+          "box": [
+            703.25,
+            703.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_4_0",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_N_1_tsub",
+          "kind": "text",
+          "box": [
+            717.0,
+            713.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_4_0",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_N_1_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            698,
+            717,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_4_0"
+        },
+        {
+          "id": "matrix_cell_4_1",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            741,
+            681,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_N_2_ibase",
+          "kind": "text",
+          "box": [
+            752.0,
+            703.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_4_1",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_N_2_isub",
+          "kind": "text",
+          "box": [
+            760.75,
+            713.25,
+            17.5,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_4_1",
+          "runs": [
+            {
+              "text": "N",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_N_2_tbase",
+          "kind": "text",
+          "box": [
+            783.25,
+            703.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_4_1",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_N_2_tsub",
+          "kind": "text",
+          "box": [
+            797.0,
+            712.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_4_1",
+          "runs": [
+            {
+              "text": "2",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_N_2_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            778,
+            717,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_4_1"
+        },
+        {
+          "id": "matrix_cell_4_2",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            821,
+            681,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_N_3_ibase",
+          "kind": "text",
+          "box": [
+            832.0,
+            703.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_4_2",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_N_3_isub",
+          "kind": "text",
+          "box": [
+            840.75,
+            713.25,
+            17.5,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_4_2",
+          "runs": [
+            {
+              "text": "N",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_N_3_tbase",
+          "kind": "text",
+          "box": [
+            863.25,
+            703.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_4_2",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_N_3_tsub",
+          "kind": "text",
+          "box": [
+            877.75,
+            712.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_4_2",
+          "runs": [
+            {
+              "text": "3",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_N_3_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            858,
+            717,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_4_2"
+        },
+        {
+          "id": "matrix_cell_4_3",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            901,
+            681,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "matrix_hdots_4_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            935,
+            726,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_4_3"
+        },
+        {
+          "id": "matrix_hdots_4_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            940,
+            726,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_4_3"
+        },
+        {
+          "id": "matrix_hdots_4_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            945,
+            726,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_4_3"
+        },
+        {
+          "id": "matrix_cell_4_4",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            981,
+            681,
+            80,
+            80
+          ],
+          "fill": "#DAE8FC",
+          "stroke": "#6C8EBF",
+          "stroke_width": 2,
+          "z": 12
+        },
+        {
+          "id": "matrix_N_N_ibase",
+          "kind": "text",
+          "box": [
+            990.0,
+            703.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_4_4",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_N_N_isub",
+          "kind": "text",
+          "box": [
+            998.75,
+            713.25,
+            17.5,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_4_4",
+          "runs": [
+            {
+              "text": "N",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_N_N_tbase",
+          "kind": "text",
+          "box": [
+            1021.25,
+            703.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_4_4",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_N_N_tsub",
+          "kind": "text",
+          "box": [
+            1035.75,
+            713.25,
+            17.5,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "matrix_cell_4_4",
+          "runs": [
+            {
+              "text": "N",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "matrix_N_N_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            1016,
+            716,
+            2,
+            3
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "matrix_cell_4_4"
+        },
+        {
+          "id": "train_text_bus",
+          "kind": "line",
+          "points": [
+            [
+              462,
+              201
+            ],
+            [
+              1021,
+              201
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "allow_overlap_with": [
+            "train_text_down_0",
+            "train_text_down_1",
+            "train_text_down_2",
+            "train_text_down_3"
+          ],
+          "overlap_reason": "The source vertical branch starts at the shared horizontal text-feature bus."
+        },
+        {
+          "id": "train_text_down_0",
+          "kind": "line",
+          "points": [
+            [
+              701,
+              201
+            ],
+            [
+              701,
+              260
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          },
+          "allow_overlap_with": [
+            "train_text_bus"
+          ],
+          "overlap_reason": "The source vertical branch starts at the shared horizontal text-feature bus."
+        },
+        {
+          "id": "train_text_down_1",
+          "kind": "line",
+          "points": [
+            [
+              781,
+              201
+            ],
+            [
+              781,
+              260
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          },
+          "allow_overlap_with": [
+            "train_text_bus"
+          ],
+          "overlap_reason": "The source vertical branch starts at the shared horizontal text-feature bus."
+        },
+        {
+          "id": "train_text_down_2",
+          "kind": "line",
+          "points": [
+            [
+              861,
+              201
+            ],
+            [
+              861,
+              260
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          },
+          "allow_overlap_with": [
+            "train_text_bus"
+          ],
+          "overlap_reason": "The source vertical branch starts at the shared horizontal text-feature bus."
+        },
+        {
+          "id": "train_text_down_3",
+          "kind": "line",
+          "points": [
+            [
+              1021,
+              201
+            ],
+            [
+              1021,
+              260
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          },
+          "allow_overlap_with": [
+            "train_text_bus"
+          ],
+          "overlap_reason": "The source vertical branch starts at the shared horizontal text-feature bus."
+        },
+        {
+          "id": "train_text_bus_ellipsis_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            935,
+            227,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30
+        },
+        {
+          "id": "train_text_bus_ellipsis_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            940,
+            227,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30
+        },
+        {
+          "id": "train_text_bus_ellipsis_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            945,
+            227,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30
+        },
+        {
+          "id": "train_image_to_bus",
+          "kind": "line",
+          "points": [
+            [
+              462,
+              561
+            ],
+            [
+              511,
+              561
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "allow_overlap_with": [
+            "train_image_bus",
+            "train_image_right_2"
+          ],
+          "overlap_reason": "Collinear source connector sections meet at the image-feature bus."
+        },
+        {
+          "id": "train_image_bus",
+          "kind": "line",
+          "points": [
+            [
+              511,
+              401
+            ],
+            [
+              511,
+              721
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "allow_overlap_with": [
+            "train_image_right_0",
+            "train_image_right_1",
+            "train_image_right_2",
+            "train_image_right_3",
+            "train_image_to_bus"
+          ],
+          "overlap_reason": "The source row feature arrow meets the vertical image-feature bus at its start."
+        },
+        {
+          "id": "train_image_right_0",
+          "kind": "line",
+          "points": [
+            [
+              511,
+              401
+            ],
+            [
+              560,
+              401
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          },
+          "allow_overlap_with": [
+            "train_image_bus"
+          ],
+          "overlap_reason": "The source row feature arrow meets the vertical image-feature bus at its start."
+        },
+        {
+          "id": "train_image_right_1",
+          "kind": "line",
+          "points": [
+            [
+              511,
+              481
+            ],
+            [
+              560,
+              481
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          },
+          "allow_overlap_with": [
+            "train_image_bus"
+          ],
+          "overlap_reason": "The source row feature arrow meets the vertical image-feature bus at its start."
+        },
+        {
+          "id": "train_image_right_2",
+          "kind": "line",
+          "points": [
+            [
+              511,
+              561
+            ],
+            [
+              560,
+              561
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          },
+          "allow_overlap_with": [
+            "train_image_bus",
+            "train_image_to_bus"
+          ],
+          "overlap_reason": "Collinear source connector sections meet at the image-feature bus."
+        },
+        {
+          "id": "train_image_right_3",
+          "kind": "line",
+          "points": [
+            [
+              511,
+              721
+            ],
+            [
+              560,
+              721
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          },
+          "allow_overlap_with": [
+            "train_image_bus"
+          ],
+          "overlap_reason": "The source row feature arrow meets the vertical image-feature bus at its start."
+        },
+        {
+          "id": "train_image_bus_ellipsis_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            529,
+            634,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30
+        },
+        {
+          "id": "train_image_bus_ellipsis_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            529,
+            640,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30
+        },
+        {
+          "id": "train_image_bus_ellipsis_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            529,
+            646,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30
+        },
+        {
+          "id": "class_plane",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            1121,
+            61,
+            100,
+            60
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "class_word_plane",
+          "kind": "text",
+          "box": [
+            1133.5,
+            75.75,
+            75.5,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Courier New",
+          "color": "#B5739D",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "class_plane",
+          "runs": [
+            {
+              "text": "plane",
+              "font_family": "Courier New",
+              "cjk_font_family": "Courier New",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#B5739D"
+            }
+          ]
+        },
+        {
+          "id": "class_car",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            1121,
+            121,
+            100,
+            60
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "class_word_car",
+          "kind": "text",
+          "box": [
+            1148.0,
+            135.5,
+            46.5,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Courier New",
+          "color": "#B5739D",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "class_car",
+          "runs": [
+            {
+              "text": "car",
+              "font_family": "Courier New",
+              "cjk_font_family": "Courier New",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#B5739D"
+            }
+          ]
+        },
+        {
+          "id": "class_dog",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            1121,
+            181,
+            100,
+            60
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "class_word_dog",
+          "kind": "text",
+          "box": [
+            1148.5,
+            194.75,
+            46.5,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Courier New",
+          "color": "#B5739D",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "class_dog",
+          "runs": [
+            {
+              "text": "dog",
+              "font_family": "Courier New",
+              "cjk_font_family": "Courier New",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#B5739D"
+            }
+          ]
+        },
+        {
+          "id": "class_bird",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            1121,
+            301,
+            100,
+            60
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "class_word_bird",
+          "kind": "text",
+          "box": [
+            1141.5,
+            315.25,
+            61.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Courier New",
+          "color": "#B5739D",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "class_bird",
+          "runs": [
+            {
+              "text": "bird",
+              "font_family": "Courier New",
+              "cjk_font_family": "Courier New",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#B5739D"
+            }
+          ]
+        },
+        {
+          "id": "class_list_dots_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            1170,
+            262,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30
+        },
+        {
+          "id": "class_list_dots_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            1170,
+            268,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30
+        },
+        {
+          "id": "class_list_dots_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            1170,
+            274,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30
+        },
+        {
+          "id": "class_bus_dots_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            1250,
+            262,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30
+        },
+        {
+          "id": "class_bus_dots_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            1250,
+            268,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30
+        },
+        {
+          "id": "class_bus_dots_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            1250,
+            274,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30
+        },
+        {
+          "id": "class_bus",
+          "kind": "line",
+          "points": [
+            [
+              1271,
+              91
+            ],
+            [
+              1271,
+              331
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "allow_overlap_with": [
+            "class_branch_0",
+            "class_branch_1",
+            "class_branch_2",
+            "class_branch_3",
+            "class_prompt_arrow"
+          ],
+          "overlap_reason": "The prompt arrow departs from the source classifier input bus."
+        },
+        {
+          "id": "class_branch_0",
+          "kind": "line",
+          "points": [
+            [
+              1222,
+              91
+            ],
+            [
+              1271,
+              91
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "allow_overlap_with": [
+            "class_bus"
+          ],
+          "overlap_reason": "Source label branches meet the classifier input bus at named T-junctions."
+        },
+        {
+          "id": "class_branch_1",
+          "kind": "line",
+          "points": [
+            [
+              1222,
+              151
+            ],
+            [
+              1271,
+              151
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "allow_overlap_with": [
+            "class_bus"
+          ],
+          "overlap_reason": "Source label branches meet the classifier input bus at named T-junctions."
+        },
+        {
+          "id": "class_branch_2",
+          "kind": "line",
+          "points": [
+            [
+              1222,
+              211
+            ],
+            [
+              1271,
+              211
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "allow_overlap_with": [
+            "class_bus",
+            "class_prompt_arrow"
+          ],
+          "overlap_reason": "The dog label branch and prompt arrow meet on the source bus."
+        },
+        {
+          "id": "class_branch_3",
+          "kind": "line",
+          "points": [
+            [
+              1222,
+              331
+            ],
+            [
+              1271,
+              331
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "allow_overlap_with": [
+            "class_bus"
+          ],
+          "overlap_reason": "Source label branches meet the classifier input bus at named T-junctions."
+        },
+        {
+          "id": "class_prompt_arrow",
+          "kind": "line",
+          "points": [
+            [
+              1271,
+              211
+            ],
+            [
+              1320,
+              211
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          },
+          "allow_overlap_with": [
+            "class_branch_2",
+            "class_bus"
+          ],
+          "overlap_reason": "The dog label branch and prompt arrow meet on the source bus."
+        },
+        {
+          "id": "class_prompt",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            1321,
+            171,
+            200,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "class_prompt_line_1",
+          "kind": "text",
+          "box": [
+            1347.75,
+            181.75,
+            148.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Courier New",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "class_prompt",
+          "runs": [
+            {
+              "text": "A photo of",
+              "font_family": "Courier New",
+              "cjk_font_family": "Courier New",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "class_prompt_a",
+          "kind": "text",
+          "box": [
+            1340.25,
+            210.5,
+            17.5,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Courier New",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "class_prompt",
+          "runs": [
+            {
+              "text": "a",
+              "font_family": "Courier New",
+              "cjk_font_family": "Courier New",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "class_prompt_object",
+          "kind": "text",
+          "box": [
+            1369.25,
+            211.25,
+            119.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Courier New",
+          "color": "#B5739D",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "class_prompt",
+          "runs": [
+            {
+              "text": "{object}",
+              "font_family": "Courier New",
+              "cjk_font_family": "Courier New",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#B5739D"
+            }
+          ]
+        },
+        {
+          "id": "class_prompt_period",
+          "kind": "text",
+          "box": [
+            1484.5,
+            211.0,
+            17.5,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Courier New",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "class_prompt",
+          "runs": [
+            {
+              "text": ".",
+              "font_family": "Courier New",
+              "cjk_font_family": "Courier New",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "prompt_text_encoder_arrow",
+          "kind": "line",
+          "points": [
+            [
+              1522,
+              211
+            ],
+            [
+              1580,
+              211
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          }
+        },
+        {
+          "id": "classifier_text_bus",
+          "kind": "line",
+          "points": [
+            [
+              1742,
+              211
+            ],
+            [
+              2121,
+              211
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "allow_overlap_with": [
+            "classifier_text_down_0",
+            "classifier_text_down_1",
+            "classifier_text_down_2",
+            "classifier_text_down_3"
+          ],
+          "overlap_reason": "Source zero-shot classifier feature arrows descend from the shared horizontal output bus."
+        },
+        {
+          "id": "classifier_text_down_0",
+          "kind": "line",
+          "points": [
+            [
+              1801,
+              211
+            ],
+            [
+              1801,
+              440
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          },
+          "allow_overlap_with": [
+            "classifier_text_bus"
+          ],
+          "overlap_reason": "Source zero-shot classifier feature arrows descend from the shared horizontal output bus."
+        },
+        {
+          "id": "classifier_text_down_1",
+          "kind": "line",
+          "points": [
+            [
+              1881,
+              211
+            ],
+            [
+              1881,
+              440
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          },
+          "allow_overlap_with": [
+            "classifier_text_bus"
+          ],
+          "overlap_reason": "Source zero-shot classifier feature arrows descend from the shared horizontal output bus."
+        },
+        {
+          "id": "classifier_text_down_2",
+          "kind": "line",
+          "points": [
+            [
+              1961,
+              211
+            ],
+            [
+              1961,
+              440
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          },
+          "allow_overlap_with": [
+            "classifier_text_bus"
+          ],
+          "overlap_reason": "Source zero-shot classifier feature arrows descend from the shared horizontal output bus."
+        },
+        {
+          "id": "classifier_text_down_3",
+          "kind": "line",
+          "points": [
+            [
+              2121,
+              211
+            ],
+            [
+              2121,
+              440
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          },
+          "allow_overlap_with": [
+            "classifier_text_bus"
+          ],
+          "overlap_reason": "Source zero-shot classifier feature arrows descend from the shared horizontal output bus."
+        },
+        {
+          "id": "classifier_text_bus_ellipsis_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            2035,
+            267,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30
+        },
+        {
+          "id": "classifier_text_bus_ellipsis_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            2040,
+            267,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30
+        },
+        {
+          "id": "classifier_text_bus_ellipsis_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            2045,
+            267,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30
+        },
+        {
+          "id": "predict_T_cell_0",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            1761,
+            441,
+            80,
+            80
+          ],
+          "fill": "#E1D5E7",
+          "stroke": "#9673A6",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "predict_T_1_base",
+          "kind": "text",
+          "box": [
+            1787.25,
+            463.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_T_cell_0",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_T_1_sub",
+          "kind": "text",
+          "box": [
+            1802.0,
+            472.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_T_cell_0",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_T_cell_1",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            1841,
+            441,
+            80,
+            80
+          ],
+          "fill": "#E1D5E7",
+          "stroke": "#9673A6",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "predict_T_2_base",
+          "kind": "text",
+          "box": [
+            1867.25,
+            463.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_T_cell_1",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_T_2_sub",
+          "kind": "text",
+          "box": [
+            1882.0,
+            472.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_T_cell_1",
+          "runs": [
+            {
+              "text": "2",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_T_cell_2",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            1921,
+            441,
+            80,
+            80
+          ],
+          "fill": "#E1D5E7",
+          "stroke": "#9673A6",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "predict_T_3_base",
+          "kind": "text",
+          "box": [
+            1947.25,
+            463.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_T_cell_2",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_T_3_sub",
+          "kind": "text",
+          "box": [
+            1961.75,
+            472.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_T_cell_2",
+          "runs": [
+            {
+              "text": "3",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_T_cell_3",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            2001,
+            441,
+            80,
+            80
+          ],
+          "fill": "#E1D5E7",
+          "stroke": "#9673A6",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "predict_T_ellipsis_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            2035,
+            486,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "predict_T_cell_3"
+        },
+        {
+          "id": "predict_T_ellipsis_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            2040,
+            486,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "predict_T_cell_3"
+        },
+        {
+          "id": "predict_T_ellipsis_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            2045,
+            486,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "predict_T_cell_3"
+        },
+        {
+          "id": "predict_T_cell_4",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            2081,
+            441,
+            80,
+            80
+          ],
+          "fill": "#E1D5E7",
+          "stroke": "#9673A6",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "predict_T_N_base",
+          "kind": "text",
+          "box": [
+            2105.25,
+            463.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_T_cell_4",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_T_N_sub",
+          "kind": "text",
+          "box": [
+            2120.75,
+            473.25,
+            17.5,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_T_cell_4",
+          "runs": [
+            {
+              "text": "N",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_I_cell",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            1661,
+            541,
+            80,
+            80
+          ],
+          "fill": "#D5E8D4",
+          "stroke": "#82B366",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "predict_I_1_base",
+          "kind": "text",
+          "box": [
+            1691.0,
+            563.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_I_cell",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_I_1_sub",
+          "kind": "text",
+          "box": [
+            1699.0,
+            572.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_I_cell",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_result_cell_0",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            1761,
+            541,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "predict_result_1_1_ibase",
+          "kind": "text",
+          "box": [
+            1775.0,
+            563.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_result_cell_0",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_result_1_1_isub",
+          "kind": "text",
+          "box": [
+            1783.0,
+            573.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_result_cell_0",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_result_1_1_tbase",
+          "kind": "text",
+          "box": [
+            1801.25,
+            563.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_result_cell_0",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_result_1_1_tsub",
+          "kind": "text",
+          "box": [
+            1815.0,
+            573.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_result_cell_0",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_result_1_1_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            1796,
+            576,
+            2,
+            3
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "predict_result_cell_0"
+        },
+        {
+          "id": "predict_result_cell_1",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            1841,
+            541,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "predict_result_1_2_ibase",
+          "kind": "text",
+          "box": [
+            1855.0,
+            563.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_result_cell_1",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_result_1_2_isub",
+          "kind": "text",
+          "box": [
+            1863.0,
+            573.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_result_cell_1",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_result_1_2_tbase",
+          "kind": "text",
+          "box": [
+            1881.25,
+            563.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_result_cell_1",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_result_1_2_tsub",
+          "kind": "text",
+          "box": [
+            1895.0,
+            572.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_result_cell_1",
+          "runs": [
+            {
+              "text": "2",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_result_1_2_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            1876,
+            576,
+            2,
+            3
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "predict_result_cell_1"
+        },
+        {
+          "id": "predict_result_cell_2",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            1921,
+            541,
+            80,
+            80
+          ],
+          "fill": "#DAE8FC",
+          "stroke": "#6C8EBF",
+          "stroke_width": 2,
+          "z": 12
+        },
+        {
+          "id": "predict_result_1_3_ibase",
+          "kind": "text",
+          "box": [
+            1935.0,
+            563.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_result_cell_2",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_result_1_3_isub",
+          "kind": "text",
+          "box": [
+            1943.0,
+            573.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_result_cell_2",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_result_1_3_tbase",
+          "kind": "text",
+          "box": [
+            1961.25,
+            563.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_result_cell_2",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_result_1_3_tsub",
+          "kind": "text",
+          "box": [
+            1974.75,
+            572.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_result_cell_2",
+          "runs": [
+            {
+              "text": "3",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_result_1_3_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            1956,
+            576,
+            2,
+            3
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "predict_result_cell_2"
+        },
+        {
+          "id": "predict_result_cell_3",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            2001,
+            541,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "predict_result_ellipsis_0",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            2035,
+            586,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "predict_result_cell_3"
+        },
+        {
+          "id": "predict_result_ellipsis_1",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            2040,
+            586,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "predict_result_cell_3"
+        },
+        {
+          "id": "predict_result_ellipsis_2",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            2045,
+            586,
+            2,
+            2
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "predict_result_cell_3"
+        },
+        {
+          "id": "predict_result_cell_4",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            2081,
+            541,
+            80,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "predict_result_1_N_ibase",
+          "kind": "text",
+          "box": [
+            2092.0,
+            563.5,
+            11.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_result_cell_4",
+          "runs": [
+            {
+              "text": "I",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_result_1_N_isub",
+          "kind": "text",
+          "box": [
+            2100.0,
+            573.5,
+            13.0,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_result_cell_4",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_result_1_N_tbase",
+          "kind": "text",
+          "box": [
+            2118.25,
+            563.5,
+            17.75,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_result_cell_4",
+          "runs": [
+            {
+              "text": "T",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_result_1_N_tsub",
+          "kind": "text",
+          "box": [
+            2133.75,
+            573.25,
+            17.5,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Times New Roman",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "predict_result_cell_4",
+          "runs": [
+            {
+              "text": "N",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "predict_result_1_N_dot",
+          "kind": "shape",
+          "shape": "ellipse",
+          "box": [
+            2113,
+            576,
+            3,
+            3
+          ],
+          "fill": "#000000",
+          "stroke": null,
+          "z": 30,
+          "container": "predict_result_cell_4"
+        },
+        {
+          "id": "prediction_photo_arrow",
+          "kind": "line",
+          "points": [
+            [
+              1383,
+              581
+            ],
+            [
+              1440,
+              581
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          }
+        },
+        {
+          "id": "prediction_encoder_arrow",
+          "kind": "line",
+          "points": [
+            [
+              1602,
+              581
+            ],
+            [
+              1660,
+              581
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          }
+        },
+        {
+          "id": "dog_output_arrow",
+          "kind": "line",
+          "points": [
+            [
+              1961,
+              622
+            ],
+            [
+              1961,
+              680
+            ]
+          ],
+          "stroke": "#4D4D4D",
+          "stroke_width": 2,
+          "z": 8,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 18
+          }
+        },
+        {
+          "id": "dog_output_prompt",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            1861,
+            681,
+            200,
+            80
+          ],
+          "fill": "#FFFFFF",
+          "stroke": "#000000",
+          "stroke_width": 2,
+          "z": 10
+        },
+        {
+          "id": "dog_output_line_1",
+          "kind": "text",
+          "box": [
+            1887.75,
+            691.75,
+            148.0,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Courier New",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "dog_output_prompt",
+          "runs": [
+            {
+              "text": "A photo of",
+              "font_family": "Courier New",
+              "cjk_font_family": "Courier New",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "dog_output_a",
+          "kind": "text",
+          "box": [
+            1924.25,
+            720.5,
+            17.5,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Courier New",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "dog_output_prompt",
+          "runs": [
+            {
+              "text": "a",
+              "font_family": "Courier New",
+              "cjk_font_family": "Courier New",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "dog_output_dog",
+          "kind": "text",
+          "box": [
+            1952.5,
+            720.75,
+            46.5,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Courier New",
+          "color": "#B5739D",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "dog_output_prompt",
+          "runs": [
+            {
+              "text": "dog",
+              "font_family": "Courier New",
+              "cjk_font_family": "Courier New",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#B5739D"
+            }
+          ]
+        },
+        {
+          "id": "dog_output_period",
+          "kind": "text",
+          "box": [
+            1995.5,
+            721.0,
+            17.5,
+            33.599999999999994
+          ],
+          "font_size": 24,
+          "font_family": "Courier New",
+          "color": "#000000",
+          "z": 30,
+          "wrap": false,
+          "fit": "strict",
+          "container": "dog_output_prompt",
+          "runs": [
+            {
+              "text": ".",
+              "font_family": "Courier New",
+              "cjk_font_family": "Courier New",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "train_text_encoder_polygon",
+          "kind": "shape",
+          "shape": "polygon",
+          "box": [
+            301,
+            81,
+            160,
+            240
+          ],
+          "vertices": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0.16666666666666666
+            ],
+            [
+              1,
+              0.8333333333333334
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "fill": "#E1D5E7",
+          "stroke": "#9673A6",
+          "stroke_width": 2,
+          "z": 9
+        },
+        {
+          "id": "train_image_encoder_polygon",
+          "kind": "shape",
+          "shape": "polygon",
+          "box": [
+            301,
+            441,
+            160,
+            240
+          ],
+          "vertices": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0.16666666666666666
+            ],
+            [
+              1,
+              0.8333333333333334
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "fill": "#D5E8D4",
+          "stroke": "#82B366",
+          "stroke_width": 2,
+          "z": 9
+        },
+        {
+          "id": "classifier_text_encoder_polygon",
+          "kind": "shape",
+          "shape": "polygon",
+          "box": [
+            1581,
+            91,
+            160,
+            240
+          ],
+          "vertices": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0.16666666666666666
+            ],
+            [
+              1,
+              0.8333333333333334
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "fill": "#E1D5E7",
+          "stroke": "#9673A6",
+          "stroke_width": 2,
+          "z": 9
+        },
+        {
+          "id": "prediction_image_encoder_polygon",
+          "kind": "shape",
+          "shape": "polygon",
+          "box": [
+            1441,
+            461,
+            160,
+            240
+          ],
+          "vertices": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0.16666666666666666
+            ],
+            [
+              1,
+              0.8333333333333334
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "fill": "#D5E8D4",
+          "stroke": "#82B366",
+          "stroke_width": 2,
+          "z": 9
+        }
+      ]
+    }
+  ]
+}

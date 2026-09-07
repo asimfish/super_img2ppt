@@ -1,0 +1,1473 @@
+{
+  "build": "/tmp/super-img2ppt-diverse-clip-f11ta96b/candidate2/job/build_01",
+  "source_size": [
+    2162,
+    762
+  ],
+  "actual_pdf_size_pt": [
+    960.0094604492188,
+    338.3432922363281
+  ],
+  "actual_pdf_raster_size": [
+    2162,
+    762
+  ],
+  "fixed_roi_file": "/tmp/super-img2ppt-diverse-clip-f11ta96b/candidate2/fixed_rois.json",
+  "method": "Rasterize the actual LibreOffice PPTX PDF at source width; use fixed source ROIs and color/ink masks. Pixel cells have centers index+0.5. Text baseline proxy is the bottom visible ink edge, not a claimed recoverable font baseline.",
+  "native_objects": {
+    "text_frames_including_empty": 284,
+    "editable_nonempty_text_objects": 131,
+    "sp_objects": 284,
+    "connectors": 9,
+    "pictures": 2,
+    "custom_geometry_shapes": 23,
+    "native_nonpicture_objects": 293,
+    "total_objects": 295
+  },
+  "rois": [
+    {
+      "id": "title_1",
+      "type": "text",
+      "box": [
+        0,
+        0,
+        430,
+        50
+      ],
+      "mask": "black",
+      "source": {
+        "ink_bbox": [
+          6,
+          8,
+          359,
+          36
+        ],
+        "selected_pixels": 2331,
+        "ink_bottom_baseline_proxy": 36
+      },
+      "rendered": {
+        "ink_bbox": [
+          6,
+          8,
+          358,
+          36
+        ],
+        "selected_pixels": 2100,
+        "ink_bottom_baseline_proxy": 36
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        -1,
+        0
+      ],
+      "max_abs_edge_delta_px": 1,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "title_2",
+      "type": "text",
+      "box": [
+        1095,
+        0,
+        685,
+        50
+      ],
+      "mask": "black",
+      "source": {
+        "ink_bbox": [
+          1106,
+          8,
+          1667,
+          36
+        ],
+        "selected_pixels": 3762,
+        "ink_bottom_baseline_proxy": 36
+      },
+      "rendered": {
+        "ink_bbox": [
+          1106,
+          8,
+          1666,
+          36
+        ],
+        "selected_pixels": 3370,
+        "ink_bottom_baseline_proxy": 36
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        -1,
+        0
+      ],
+      "max_abs_edge_delta_px": 1,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "title_3",
+      "type": "text",
+      "box": [
+        1095,
+        394,
+        620,
+        56
+      ],
+      "mask": "black",
+      "source": {
+        "ink_bbox": [
+          1106,
+          408,
+          1516,
+          436
+        ],
+        "selected_pixels": 2669,
+        "ink_bottom_baseline_proxy": 436
+      },
+      "rendered": {
+        "ink_bbox": [
+          1106,
+          408,
+          1515,
+          436
+        ],
+        "selected_pixels": 2370,
+        "ink_bottom_baseline_proxy": 436
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        -1,
+        0
+      ],
+      "max_abs_edge_delta_px": 1,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "pepper_line_1",
+      "type": "text",
+      "box": [
+        20,
+        156,
+        175,
+        33
+      ],
+      "mask": "black",
+      "source": {
+        "ink_bbox": [
+          36,
+          165,
+          176,
+          184
+        ],
+        "selected_pixels": 355,
+        "ink_bottom_baseline_proxy": 184
+      },
+      "rendered": {
+        "ink_bbox": [
+          36,
+          165,
+          176,
+          184
+        ],
+        "selected_pixels": 309,
+        "ink_bottom_baseline_proxy": 184
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "pepper_line_2",
+      "type": "text",
+      "box": [
+        20,
+        190,
+        175,
+        31
+      ],
+      "mask": "black",
+      "source": {
+        "ink_bbox": [
+          36,
+          193,
+          176,
+          212
+        ],
+        "selected_pixels": 340,
+        "ink_bottom_baseline_proxy": 212
+      },
+      "rendered": {
+        "ink_bbox": [
+          36,
+          193,
+          177,
+          212
+        ],
+        "selected_pixels": 286,
+        "ink_bottom_baseline_proxy": 212
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "max_abs_edge_delta_px": 1,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "train_text_label_1",
+      "type": "text",
+      "box": [
+        326,
+        170,
+        118,
+        32
+      ],
+      "mask": "black",
+      "source": {
+        "ink_bbox": [
+          358,
+          179,
+          401,
+          196
+        ],
+        "selected_pixels": 260,
+        "ink_bottom_baseline_proxy": 196
+      },
+      "rendered": {
+        "ink_bbox": [
+          358,
+          179,
+          401,
+          196
+        ],
+        "selected_pixels": 240,
+        "ink_bottom_baseline_proxy": 196
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "train_text_label_2",
+      "type": "text",
+      "box": [
+        326,
+        202,
+        118,
+        33
+      ],
+      "mask": "black",
+      "source": {
+        "ink_bbox": [
+          337,
+          207,
+          424,
+          224
+        ],
+        "selected_pixels": 511,
+        "ink_bottom_baseline_proxy": 224
+      },
+      "rendered": {
+        "ink_bbox": [
+          337,
+          207,
+          425,
+          224
+        ],
+        "selected_pixels": 484,
+        "ink_bottom_baseline_proxy": 224
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "max_abs_edge_delta_px": 1,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "train_image_label_1",
+      "type": "text",
+      "box": [
+        326,
+        530,
+        118,
+        35
+      ],
+      "mask": "black",
+      "source": {
+        "ink_bbox": [
+          349,
+          539,
+          412,
+          561
+        ],
+        "selected_pixels": 414,
+        "ink_bottom_baseline_proxy": 561
+      },
+      "rendered": {
+        "ink_bbox": [
+          349,
+          539,
+          412,
+          561
+        ],
+        "selected_pixels": 378,
+        "ink_bottom_baseline_proxy": 561
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "train_image_label_2",
+      "type": "text",
+      "box": [
+        326,
+        563,
+        118,
+        31
+      ],
+      "mask": "black",
+      "source": {
+        "ink_bbox": [
+          337,
+          567,
+          424,
+          584
+        ],
+        "selected_pixels": 511,
+        "ink_bottom_baseline_proxy": 584
+      },
+      "rendered": {
+        "ink_bbox": [
+          337,
+          567,
+          425,
+          584
+        ],
+        "selected_pixels": 482,
+        "ink_bottom_baseline_proxy": 584
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "max_abs_edge_delta_px": 1,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "class_word_plane",
+      "type": "text",
+      "box": [
+        1123,
+        74,
+        94,
+        38
+      ],
+      "mask": "pink",
+      "source": {
+        "ink_bbox": [
+          1134,
+          83,
+          1204,
+          103
+        ],
+        "selected_pixels": 284,
+        "ink_bottom_baseline_proxy": 103
+      },
+      "rendered": {
+        "ink_bbox": [
+          1134,
+          84,
+          1204,
+          104
+        ],
+        "selected_pixels": 251,
+        "ink_bottom_baseline_proxy": 104
+      },
+      "edge_delta_px": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "max_abs_edge_delta_px": 1,
+      "ink_bottom_baseline_proxy_delta_px": 1
+    },
+    {
+      "id": "class_word_car",
+      "type": "text",
+      "box": [
+        1123,
+        134,
+        94,
+        38
+      ],
+      "mask": "pink",
+      "source": {
+        "ink_bbox": [
+          1150,
+          147,
+          1190,
+          159
+        ],
+        "selected_pixels": 150,
+        "ink_bottom_baseline_proxy": 159
+      },
+      "rendered": {
+        "ink_bbox": [
+          1150,
+          147,
+          1190,
+          159
+        ],
+        "selected_pixels": 122,
+        "ink_bottom_baseline_proxy": 159
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "class_word_dog",
+      "type": "text",
+      "box": [
+        1123,
+        194,
+        94,
+        38
+      ],
+      "mask": "pink",
+      "source": {
+        "ink_bbox": [
+          1150,
+          203,
+          1191,
+          223
+        ],
+        "selected_pixels": 201,
+        "ink_bottom_baseline_proxy": 223
+      },
+      "rendered": {
+        "ink_bbox": [
+          1150,
+          203,
+          1191,
+          223
+        ],
+        "selected_pixels": 181,
+        "ink_bottom_baseline_proxy": 223
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "class_word_bird",
+      "type": "text",
+      "box": [
+        1123,
+        314,
+        94,
+        38
+      ],
+      "mask": "pink",
+      "source": {
+        "ink_bbox": [
+          1142,
+          322,
+          1199,
+          338
+        ],
+        "selected_pixels": 222,
+        "ink_bottom_baseline_proxy": 338
+      },
+      "rendered": {
+        "ink_bbox": [
+          1142,
+          322,
+          1199,
+          338
+        ],
+        "selected_pixels": 182,
+        "ink_bottom_baseline_proxy": 338
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "class_prompt_line_1",
+      "type": "text",
+      "box": [
+        1331,
+        179,
+        180,
+        32
+      ],
+      "mask": "black",
+      "source": {
+        "ink_bbox": [
+          1348,
+          189,
+          1490,
+          208
+        ],
+        "selected_pixels": 308,
+        "ink_bottom_baseline_proxy": 208
+      },
+      "rendered": {
+        "ink_bbox": [
+          1348,
+          189,
+          1490,
+          208
+        ],
+        "selected_pixels": 265,
+        "ink_bottom_baseline_proxy": 208
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "classifier_text_label_1",
+      "type": "text",
+      "box": [
+        1600,
+        182,
+        120,
+        32
+      ],
+      "mask": "black",
+      "source": {
+        "ink_bbox": [
+          1638,
+          189,
+          1681,
+          206
+        ],
+        "selected_pixels": 260,
+        "ink_bottom_baseline_proxy": 206
+      },
+      "rendered": {
+        "ink_bbox": [
+          1638,
+          189,
+          1681,
+          206
+        ],
+        "selected_pixels": 240,
+        "ink_bottom_baseline_proxy": 206
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "classifier_text_label_2",
+      "type": "text",
+      "box": [
+        1600,
+        214,
+        120,
+        31
+      ],
+      "mask": "black",
+      "source": {
+        "ink_bbox": [
+          1617,
+          217,
+          1704,
+          234
+        ],
+        "selected_pixels": 511,
+        "ink_bottom_baseline_proxy": 234
+      },
+      "rendered": {
+        "ink_bbox": [
+          1617,
+          217,
+          1704,
+          234
+        ],
+        "selected_pixels": 476,
+        "ink_bottom_baseline_proxy": 234
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "prediction_image_label_1",
+      "type": "text",
+      "box": [
+        1460,
+        550,
+        120,
+        35
+      ],
+      "mask": "black",
+      "source": {
+        "ink_bbox": [
+          1489,
+          559,
+          1552,
+          581
+        ],
+        "selected_pixels": 414,
+        "ink_bottom_baseline_proxy": 581
+      },
+      "rendered": {
+        "ink_bbox": [
+          1489,
+          559,
+          1552,
+          581
+        ],
+        "selected_pixels": 378,
+        "ink_bottom_baseline_proxy": 581
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "prediction_image_label_2",
+      "type": "text",
+      "box": [
+        1460,
+        583,
+        120,
+        31
+      ],
+      "mask": "black",
+      "source": {
+        "ink_bbox": [
+          1477,
+          587,
+          1564,
+          604
+        ],
+        "selected_pixels": 511,
+        "ink_bottom_baseline_proxy": 604
+      },
+      "rendered": {
+        "ink_bbox": [
+          1477,
+          587,
+          1564,
+          604
+        ],
+        "selected_pixels": 475,
+        "ink_bottom_baseline_proxy": 604
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "math_T1",
+      "type": "text",
+      "box": [
+        668,
+        280,
+        65,
+        47
+      ],
+      "mask": "black",
+      "source": {
+        "ink_bbox": [
+          688,
+          290,
+          709,
+          312
+        ],
+        "selected_pixels": 76,
+        "ink_bottom_baseline_proxy": 312
+      },
+      "rendered": {
+        "ink_bbox": [
+          688,
+          290,
+          708,
+          311
+        ],
+        "selected_pixels": 77,
+        "ink_bottom_baseline_proxy": 311
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        -1,
+        -1
+      ],
+      "max_abs_edge_delta_px": 1,
+      "ink_bottom_baseline_proxy_delta_px": -1
+    },
+    {
+      "id": "math_I1T1",
+      "type": "text",
+      "box": [
+        664,
+        380,
+        73,
+        45
+      ],
+      "mask": "black",
+      "source": {
+        "ink_bbox": [
+          676,
+          390,
+          722,
+          412
+        ],
+        "selected_pixels": 148,
+        "ink_bottom_baseline_proxy": 412
+      },
+      "rendered": {
+        "ink_bbox": [
+          677,
+          390,
+          721,
+          412
+        ],
+        "selected_pixels": 124,
+        "ink_bottom_baseline_proxy": 412
+      },
+      "edge_delta_px": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "max_abs_edge_delta_px": 1,
+      "ink_bottom_baseline_proxy_delta_px": 0
+    },
+    {
+      "id": "math_predict_I1T3",
+      "type": "text",
+      "box": [
+        1924,
+        560,
+        73,
+        45
+      ],
+      "mask": "black",
+      "source": {
+        "ink_bbox": [
+          1936,
+          570,
+          1984,
+          592
+        ],
+        "selected_pixels": 159,
+        "ink_bottom_baseline_proxy": 592
+      },
+      "rendered": {
+        "ink_bbox": [
+          1937,
+          570,
+          1983,
+          593
+        ],
+        "selected_pixels": 136,
+        "ink_bottom_baseline_proxy": 593
+      },
+      "edge_delta_px": [
+        1,
+        0,
+        -1,
+        1
+      ],
+      "max_abs_edge_delta_px": 1,
+      "ink_bottom_baseline_proxy_delta_px": 1
+    },
+    {
+      "id": "matrix_top_grid",
+      "type": "grid_horizontal",
+      "box": [
+        665,
+        355,
+        390,
+        13
+      ],
+      "mask": "grayblue",
+      "source": {
+        "ink_bbox": [
+          665,
+          360,
+          1055,
+          368
+        ],
+        "selected_pixels": 828,
+        "stroke_center": 361.0,
+        "profile": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          390,
+          390,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "rendered": {
+        "ink_bbox": [
+          665,
+          360,
+          1055,
+          368
+        ],
+        "selected_pixels": 828,
+        "stroke_center": 361.0,
+        "profile": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          390,
+          390,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "stroke_center_delta_px": 0.0
+    },
+    {
+      "id": "matrix_mid_grid",
+      "type": "grid_horizontal",
+      "box": [
+        665,
+        435,
+        390,
+        13
+      ],
+      "mask": "grayblue",
+      "source": {
+        "ink_bbox": [
+          665,
+          435,
+          1055,
+          448
+        ],
+        "selected_pixels": 868,
+        "stroke_center": 441.0,
+        "profile": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          390,
+          390,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "rendered": {
+        "ink_bbox": [
+          665,
+          435,
+          1055,
+          448
+        ],
+        "selected_pixels": 868,
+        "stroke_center": 441.0,
+        "profile": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          390,
+          390,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "stroke_center_delta_px": 0.0
+    },
+    {
+      "id": "matrix_bottom_grid",
+      "type": "grid_horizontal",
+      "box": [
+        665,
+        751,
+        390,
+        11
+      ],
+      "mask": "grayblue",
+      "source": {
+        "ink_bbox": [
+          665,
+          751,
+          1055,
+          762
+        ],
+        "selected_pixels": 852,
+        "stroke_center": 761.0,
+        "profile": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          390,
+          390
+        ]
+      },
+      "rendered": {
+        "ink_bbox": [
+          665,
+          751,
+          1055,
+          762
+        ],
+        "selected_pixels": 852,
+        "stroke_center": 761.0,
+        "profile": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          390,
+          390
+        ]
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "stroke_center_delta_px": 0.0
+    },
+    {
+      "id": "matrix_left_grid",
+      "type": "grid_vertical",
+      "box": [
+        655,
+        365,
+        13,
+        386
+      ],
+      "mask": "grayblue",
+      "source": {
+        "ink_bbox": [
+          660,
+          365,
+          668,
+          751
+        ],
+        "selected_pixels": 820,
+        "stroke_center": 661.0,
+        "profile": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          386,
+          386,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "rendered": {
+        "ink_bbox": [
+          660,
+          365,
+          668,
+          751
+        ],
+        "selected_pixels": 820,
+        "stroke_center": 661.0,
+        "profile": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          386,
+          386,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "stroke_center_delta_px": 0.0
+    },
+    {
+      "id": "matrix_col_1_grid",
+      "type": "grid_vertical",
+      "box": [
+        735,
+        365,
+        13,
+        386
+      ],
+      "mask": "grayblue",
+      "source": {
+        "ink_bbox": [
+          735,
+          365,
+          748,
+          751
+        ],
+        "selected_pixels": 860,
+        "stroke_center": 741.0,
+        "profile": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          386,
+          386,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "rendered": {
+        "ink_bbox": [
+          735,
+          365,
+          748,
+          751
+        ],
+        "selected_pixels": 860,
+        "stroke_center": 741.0,
+        "profile": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          386,
+          386,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "stroke_center_delta_px": 0.0
+    },
+    {
+      "id": "class_plane_top",
+      "type": "shape_horizontal",
+      "box": [
+        1125,
+        55,
+        92,
+        13
+      ],
+      "mask": "gray",
+      "source": {
+        "ink_bbox": [
+          1125,
+          60,
+          1217,
+          62
+        ],
+        "selected_pixels": 184,
+        "stroke_center": 61.0,
+        "profile": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          92,
+          92,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "rendered": {
+        "ink_bbox": [
+          1125,
+          60,
+          1217,
+          62
+        ],
+        "selected_pixels": 184,
+        "stroke_center": 61.0,
+        "profile": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          92,
+          92,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "stroke_center_delta_px": 0.0
+    },
+    {
+      "id": "text_feature_top",
+      "type": "shape_horizontal",
+      "box": [
+        665,
+        255,
+        390,
+        13
+      ],
+      "mask": "purpleedge",
+      "source": {
+        "ink_bbox": [
+          665,
+          260,
+          1055,
+          268
+        ],
+        "selected_pixels": 828,
+        "stroke_center": 261.0,
+        "profile": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          390,
+          390,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "rendered": {
+        "ink_bbox": [
+          665,
+          255,
+          1055,
+          268
+        ],
+        "selected_pixels": 829,
+        "stroke_center": 261.0,
+        "profile": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          390,
+          390,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "edge_delta_px": [
+        0,
+        -5,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 5,
+      "stroke_center_delta_px": 0.0
+    },
+    {
+      "id": "predict_feature_top",
+      "type": "shape_horizontal",
+      "box": [
+        1765,
+        435,
+        390,
+        13
+      ],
+      "mask": "purpleedge",
+      "source": {
+        "ink_bbox": [
+          1765,
+          440,
+          2155,
+          448
+        ],
+        "selected_pixels": 828,
+        "stroke_center": 441.0,
+        "profile": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          390,
+          390,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "rendered": {
+        "ink_bbox": [
+          1765,
+          435,
+          2155,
+          448
+        ],
+        "selected_pixels": 831,
+        "stroke_center": 441.0,
+        "profile": [
+          3,
+          0,
+          0,
+          0,
+          0,
+          390,
+          390,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "edge_delta_px": [
+        0,
+        -5,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 5,
+      "stroke_center_delta_px": 0.0
+    },
+    {
+      "id": "predict_row_bottom",
+      "type": "shape_horizontal",
+      "box": [
+        1765,
+        615,
+        390,
+        13
+      ],
+      "mask": "grayblue",
+      "source": {
+        "ink_bbox": [
+          1765,
+          615,
+          2155,
+          622
+        ],
+        "selected_pixels": 820,
+        "stroke_center": 621.0,
+        "profile": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          390,
+          390,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "rendered": {
+        "ink_bbox": [
+          1765,
+          615,
+          2155,
+          622
+        ],
+        "selected_pixels": 820,
+        "stroke_center": 621.0,
+        "profile": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          390,
+          390,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "edge_delta_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_abs_edge_delta_px": 0,
+      "stroke_center_delta_px": 0.0
+    }
+  ],
+  "summary": {
+    "text_roi_count": 21,
+    "shape_grid_roi_count": 9,
+    "text_max_abs_edge_delta_px": 1,
+    "text_median_max_abs_edge_delta_px": 0,
+    "text_max_abs_ink_bottom_baseline_proxy_delta_px": 1,
+    "max_abs_stroke_center_delta_px": 0.0
+  }
+}

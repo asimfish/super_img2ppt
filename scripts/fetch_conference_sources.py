@@ -1,4 +1,4 @@
-"""Fetch hash-pinned public paper images for local reconstruction experiments."""
+"""Fetch hash-pinned public paper and chart images for local reconstruction experiments."""
 
 import argparse
 import hashlib
@@ -10,6 +10,32 @@ import pypdfium2 as pdfium
 from super_img2ppt.prepare import fresh_directory, json_write
 
 SOURCES = {
+    "heatmap": {
+        "url": "https://matplotlib.org/3.11.1/_images/sphx_glr_image_annotated_heatmap_002.png",
+        "sha256": "7d07f73d16e3dafb7f74fbbac2b8aa2739e29e39e5e430bf918d811606baacd8",
+        "alternate_sha256": ["38bbe92c47b0ee9f99fd5619a261e7fc26bd523df43f080e2b1454db4292e7ba"],
+        "variant_note": "Both observed PNG responses decode to identical RGB pixels; one omits Software and DPI metadata.",
+        "format": "png",
+        "source": "Matplotlib 3.11.1 documentation, not a conference paper",
+    },
+    "clip": {
+        "url": "https://raw.githubusercontent.com/openai/CLIP/d05afc436d78f1c48dc0dbf8e5980a9d471f35f6/CLIP.png",
+        "sha256": "308a3ca4503f1c7a07803916c369d78c4ef501e5ab7fc727da9b5e1d2f9ec85b",
+        "format": "png",
+        "venue": "ICML 2021",
+    },
+    "swin": {
+        "url": "https://raw.githubusercontent.com/microsoft/Swin-Transformer/f82860bfb5225915aca09c3227159ee9e1df874d/figures/teaser.png",
+        "sha256": "4edbd1fbd66972804cf11d66c6224f24b54209a2ec4607ac36ab9a7c1e18dfa2",
+        "format": "png",
+        "venue": "ICCV 2021",
+    },
+    "ddpm_rate": {
+        "url": "https://hojonathanho.github.io/diffusion/assets/img/rate.png",
+        "sha256": "2eada145639eb6df706dfd401477fd3ad2955066eeb52a926ec7911a84305c20",
+        "format": "png",
+        "venue": "NeurIPS 2020",
+    },
     "vit": {
         "url": "https://raw.githubusercontent.com/google-research/vision_transformer/64801f1b3b367b3611cc27a3d45cc22870a36fb3/vit_figure.png",
         "sha256": "4614d5404f0feb77c6d1dfc6b9db00969acf08387f3ec886f9fd06bb81d51b26",
@@ -54,7 +80,7 @@ def main():
                         raise ValueError("Source exceeds the 25 MB download limit")
                     target.write(block)
                     digest.update(block)
-            if digest.hexdigest() != spec["sha256"]:
+            if digest.hexdigest() not in {spec["sha256"], *spec.get("alternate_sha256", [])}:
                 raise ValueError("Source hash changed; review the upstream revision before reuse")
             if spec["format"] == "pdf":
                 with (
@@ -66,7 +92,13 @@ def main():
                         bitmap.to_pil().crop(spec["crop_at_scale_4"]).save(args.out / f"{name}.png")
                     finally:
                         bitmap.close()
-            record = {"id": name, "status": "verified", "bytes": size, **spec}
+            record = {
+                "id": name,
+                "status": "verified",
+                "bytes": size,
+                "download_sha256": digest.hexdigest(),
+                **spec,
+            }
         except (OSError, ValueError, RuntimeError) as exc:
             record = {"id": name, "status": "fail", "error": str(exc), **spec}
         report["cases"].append(record)

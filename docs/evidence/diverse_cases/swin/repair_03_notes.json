@@ -1,0 +1,15 @@
+{
+  "parent_scene": "scene_candidate_02.json",
+  "changes": [
+    "All text color explicitly black to match source (default had been #111827).",
+    "Ordinary label baselines raised 1.5 px and fraction-component text 2.5 px based on fixed ROI deltas. C module text, whose measured edges matched, retained.",
+    "Vertical modules source-measured against real render: source partition ink 250 px tall vs render 234 px, embedding 310 vs 295, merging 242 vs 231. Same-level font corrected from 40 to 42.25 px and text center adjusted 2 px left / 4 px up.",
+    "Two separate caret text objects replaced with four native line strokes at source circumflex positions, removing adjacent-text glyph attribution failure without rasterizing text. z raised to match source baseline.",
+    "Added four native horizontal addition-circle strokes omitted from first candidate.",
+    "Replaced filled red arrow head with two native head lines matching source open head."
+  ],
+  "not_changed": [
+    "The 30 ROI boxes and original mask definition remain frozen. The source black threshold includes a little dark red outline in two Layer-title ROIs; those metrics will be disclosed as mixed-content regions.",
+    "D architecture native custom arrows remain triangular, whereas source heads have a concave rear edge; measured limitation retained."
+  ]
+}

@@ -1,0 +1,26 @@
+from pathlib import Path
+from PIL import Image
+from zipfile import ZipFile
+from lxml import etree
+import json,statistics,datetime,sys,hashlib
+root=Path('/tmp/super-img2ppt-diverse-heatmap-UhTqQQ');tag=sys.argv[1];build=root/tag;dest=root/('measurements_'+tag)
+src=Image.open(root/'job/pages/page_001/source.png').convert('RGB');actual=Image.open(build/'render/page_001.png').convert('RGB');ren=Image.open(dest/'actual_pptx_at_source_size.png').convert('RGB');rect=[545,100,558,454];diffs=[];dark_diffs=[];rows=[]
+for y in range(rect[1],rect[3]):
+ ds=[];ls=[]
+ for x in range(rect[0],rect[2]):
+  s=src.getpixel((x,y));r=ren.getpixel((x,y));ds.extend(abs(s[k]-r[k]) for k in range(3));ls.append(sum([.2126,.7152,.0722][k]*(s[k]-r[k]) for k in range(3)))
+ rows.append({'source_y':y,'rgb_mae_0_255':statistics.mean(ds),'mean_luminance_darkening_0_255':statistics.mean(ls)});diffs.extend(ds);dark_diffs.extend(ls)
+srcup=src.resize(actual.size,Image.Resampling.BILINEAR);scale=actual.width/src.width;x=int(550*scale);profile=[]
+for y in range(int(100*scale),int(454*scale)):
+ a=actual.getpixel((x,y));s=srcup.getpixel((x,y));delta=sum([.2126,.7152,.0722][k]*(s[k]-a[k]) for k in range(3));profile.append({'render_y':y,'source_y':(y+.5)/scale,'luminance_darkening':delta})
+seamrun=0;inrun=False
+for p in profile:
+ hit=p['luminance_darkening']>12
+ if hit and not inrun:seamrun+=1
+ inrun=hit
+with ZipFile(build/'editable.pptx') as z:
+ xml=etree.fromstring(z.read('ppt/slides/slide1.xml'));ns={'p':'http://schemas.openxmlformats.org/presentationml/2006/main','a':'http://schemas.openxmlformats.org/drawingml/2006/main'};shape=next(e for e in xml.findall('.//p:sp',ns) if e.find('p:nvSpPr/p:cNvPr',ns).get('name')=='colorbar_gradient');gradient=shape.find('p:spPr/a:gradFill',ns);gs=gradient.findall('a:gsLst/a:gs',ns);media=[s for s in z.namelist() if s.startswith('ppt/media/')];gradxml=etree.tostring(shape).decode();(dest/'native_gradient_shape.xml').write_text(gradxml)
+ native={'named_shape':'colorbar_gradient','has_native_pptx_gradFill':gradient is not None,'stop_count':len(gs),'native_stops':[{'pos':e.get('pos'),'color':e.find('a:srgbClr',ns).get('val')} for e in gs],'linear_angle':gradient.find('a:lin',ns).get('ang'),'pptx_picture_count':len(xml.findall('.//p:pic',ns)),'pptx_media_count':len(media),'media_paths':media,'all_shapes_total':len(xml.findall('.//p:sp',ns)),'all_text_elements':len(xml.findall('.//a:t',ns))}
+svg=etree.parse(str(build/'svg/page_001.svg'));sns={'svg':'http://www.w3.org/2000/svg'};native['svg_linear_gradient_count']=len(svg.findall('.//svg:linearGradient',sns));native['svg_text_count']=len(svg.findall('.//svg:text',sns))
+result={'created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'candidate':tag,'roi_origin':'Same supplemental colorbar ROI and method frozen after baseline visual seam discovery; unchanged for this candidate. The main 72 ROIs remain independently fixed before the original first candidate.','source_roi':rect,'normalized_640x480_rgb_mae_0_255':statistics.mean(diffs),'normalized_mean_luminance_darkening_0_255':statistics.mean(dark_diffs),'source_scan_rows':len(rows),'source_scan_rows_darkened_more_than_10':sum(r['mean_luminance_darkening_0_255']>10 for r in rows),'source_scan_rows_darkened_more_than_20':sum(r['mean_luminance_darkening_0_255']>20 for r in rows),'actual_render_resolution':list(actual.size),'high_resolution_center_column_x':x,'high_resolution_dark_seam_runs_threshold_12':seamrun,'high_resolution_profile':profile,'normalized_source_rows':rows,'native_gradient_evidence':native,'measurement_script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
+(dest/'colorbar_supplemental.json').write_text(json.dumps(result,indent=2));print(json.dumps({k:v for k,v in result.items() if k not in ['high_resolution_profile','normalized_source_rows']},indent=2))

@@ -1,0 +1,40 @@
+{
+  "cases": [
+    {
+      "id": "clip",
+      "status": "verified",
+      "bytes": 252444,
+      "url": "https://raw.githubusercontent.com/openai/CLIP/d05afc436d78f1c48dc0dbf8e5980a9d471f35f6/CLIP.png",
+      "sha256": "308a3ca4503f1c7a07803916c369d78c4ef501e5ab7fc727da9b5e1d2f9ec85b",
+      "format": "png",
+      "venue": "ICML 2021"
+    },
+    {
+      "id": "swin",
+      "status": "verified",
+      "bytes": 930622,
+      "url": "https://raw.githubusercontent.com/microsoft/Swin-Transformer/f82860bfb5225915aca09c3227159ee9e1df874d/figures/teaser.png",
+      "sha256": "4edbd1fbd66972804cf11d66c6224f24b54209a2ec4607ac36ab9a7c1e18dfa2",
+      "format": "png",
+      "venue": "ICCV 2021"
+    },
+    {
+      "id": "heatmap",
+      "status": "fail",
+      "error": "Source hash changed; review the upstream revision before reuse",
+      "url": "https://matplotlib.org/3.11.1/_images/sphx_glr_image_annotated_heatmap_002.png",
+      "sha256": "7d07f73d16e3dafb7f74fbbac2b8aa2739e29e39e5e430bf918d811606baacd8",
+      "format": "png",
+      "source": "Matplotlib 3.11.1 documentation, not a conference paper"
+    },
+    {
+      "id": "ddpm_rate",
+      "status": "verified",
+      "bytes": 120164,
+      "url": "https://hojonathanho.github.io/diffusion/assets/img/rate.png",
+      "sha256": "2eada145639eb6df706dfd401477fd3ad2955066eeb52a926ec7911a84305c20",
+      "format": "png",
+      "venue": "NeurIPS 2020"
+    }
+  ]
+}

@@ -14,11 +14,12 @@
 可直接下载仓库中的 [可编辑样例](examples/editable_demo.pptx)，对照
 [原图](examples/source_02.png) 和 [重建场景](examples/flow_reconstruction.json)。
 
-**v0.2.0 用 ViT、MobileViT、Spatial-Mamba 三张真实 ICLR 论文图继续改进。**
-新增原生旋转文字、指定尺寸的可编辑箭头、原生虚线和透明图片角落检测，全套 **56 项测试通过**。
-Spatial-Mamba 的 15 个旋转标签全部转为可编辑文字；MobileViT 的虚线减少了 510 个小线段。
-原图、实际 PPTX 对照和未解决区域见 [顶会复杂图报告](docs/conference_cases.md)。
-原有 [六个真实案例](docs/real_cases.md) 也已复跑，密集表格仍保留一处字体/网格冲突。
+**v0.3.0 新测 CLIP、Swin、密集热力图和 DDPM 表格/曲线四种真实图。**
+增加原生凸多边形、线性渐变，修复文字与下标的碰撞误报，全套 **65 项测试通过**。
+CLIP 的四个编码器成为原生梯形，热力图色条不再由数百条小矩形拼接，实际渲染的黑缝消失。
+可编辑文件、原图对照和剩余差异见 [四种新案例报告](docs/diverse_cases.md)。
+累计测试 13 张真实图片；此前的 [ICLR 论文图](docs/conference_cases.md) 和
+[六个通用案例](docs/real_cases.md) 保留独立记录，旧密集表格仍有一处字体/网格冲突。
 
 ## 有哪些实际改进
 
@@ -36,6 +37,9 @@ Spatial-Mamba 的 15 个旋转标签全部转为可编辑文字；MobileViT 的�
 | 箭头头部与原图差得很远 | 可指定头部长宽，生成可编辑 freeform，头部也参与碰撞检查 |
 | 虚线拆成数百个小对象 | 线条和形状描边支持按源像素指定实线/间隙长度 |
 | 透明张量图片角落挡住文字的误报 | 按实际 alpha 和图片缩放方式检查；不透明交叠仍阻断 |
+| 主字符与下标的字框相交被误报 | 比较两边的实际字形遮罩，真正重叠的文字仍阻断 |
+| 梯形编码器只能用图片填充 | 原生凸多边形同时保留顶点、填充、轮廓与斜边碰撞检查 |
+| 数百条色带在实际 PPTX 中出现黑缝 | 使用原生线性渐变，支持水平/垂直方向及 2–16 个色标 |
 | 字体检测挂起，失败没有报告 | 记录具体字体工具路径及超时/非零退出；check/build 都生成失败诊断 |
 | 原图文字与新增文字重影 | 禁止把整张源图当成重建背景，阻止烘焙文字与可编辑文字叠加 |
 | 程序说成功，但文件有问题 | 复查 PPTX 原生对象，再渲染真实文件，检查文字、字形范围和字体 |
@@ -109,10 +113,12 @@ Tesseract 的中文需要本地语言包，可使用 `--ocr tesseract --language
 - 图片无法唯一确定原字体；字体不嵌入文件，另一台电脑需要安装清单中的字体。
 - 照片、复杂插画保留为独立图片，其内部内容不自动变成可编辑对象。
 - 表格/图表可重建为形状和文字，尚不生成 Excel 数据驱动的原生图表；连线移动后不会自动重连。
-- 支持 90° 倍数的旋转文字；任意角度、竖排、自由曲线路径、渐变、复杂数学排版仍有限制。
+- 支持 90° 倍数的旋转文字、凸多边形和水平/垂直线性渐变；任意角度文字、竖排、
+  自由曲线、凹多边形、径向渐变和复杂数学排版仍有限制。
   未指定尺寸的标准 Office 箭头头部仍可能与原图不同。
 - 自动验收以 LibreOffice/PDFium 为依据；原生 PowerPoint、WPS 兼容性需单独核验。
-- 已覆盖六个通用真实案例和三张 ICLR 论文图，仍缺用户自己的失败样本；密集表格保留了一例未通过。
+- 已覆盖 13 张真实图片，仍缺用户自己的失败样本；密集表格保留了一例未通过。
+  热力图斜排标签仍为图片，DDPM 数学字宽仍有差异，Swin 的相邻帽号需要原生线条绕开 PDF 归属误报。
 
 ## 开发与验证
 
@@ -127,7 +133,8 @@ uv run python scripts/build_package.py
 见 [架构决策](docs/architecture.md)、[场景协议](skills/super-img2ppt/references/scene.md)
 和 [验证记录](docs/verification.md)。核心依赖以 `uv.lock` 锁定，独立 skill 另附带哈希的
 `requirements.lock`。原有样例图片由本仓库脚本绘制；新增公开真实案例的来源及单独许可证见
-[NOTICE](examples/real_cases/NOTICE.md)，不包含外部私有素材。
+[通用案例 NOTICE](examples/real_cases/NOTICE.md)、[ICLR 案例 NOTICE](examples/conference_cases/NOTICE.md)
+及 [新增案例 NOTICE](examples/diverse_cases/NOTICE.md)，不包含外部私有素材。
 `examples/reconstruction.json` 另覆盖两页不同宽高比；`flow_before_spacing_fix.json` 保留混排间距
 问题的复现输入。后者在本次验证环境中会返回 `review`，用来证明诊断能识别旧问题。
 

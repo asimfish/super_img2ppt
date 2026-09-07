@@ -1,0 +1,42 @@
+from PIL import Image,ImageChops,ImageDraw
+from pathlib import Path
+from collections import Counter
+import json,sys,hashlib,datetime,statistics,math
+root=Path('/tmp/super-img2ppt-diverse-heatmap-UhTqQQ'); tag=sys.argv[1]; build=root/tag;dest=root/('measurements_'+tag);dest.mkdir(exist_ok=False)
+planpath=root/'roi_plan_frozen.json';p=json.loads(planpath.read_text()); src=Image.open(root/'job/pages/page_001/source.png').convert('RGB');actual=Image.open(build/'render/page_001.png').convert('RGB');ren=actual.resize(src.size,Image.Resampling.LANCZOS);ren.save(dest/'actual_pptx_at_source_size.png')
+def mask(im,a):
+ l,t,r,b=a['region'];res=set();kind=a['kind'];bg=a.get('background_rgb',[255,255,255])
+ for y in range(t,b):
+  for x in range(l,r):
+   rgb=im.getpixel((x,y));okay=False
+   if kind in ['text','text_raster']: okay=max(abs(rgb[k]-bg[k]) for k in range(3))>=70
+   elif 'grid' in kind:okay=min(rgb)>=250
+   elif kind=='outline':okay=max(rgb)<=80 and max(rgb)-min(rgb)<=8
+   if okay:res.add((x,y))
+ return res
+
+def bbox(m):return [min(x for x,y in m),min(y for x,y in m),max(x for x,y in m)+1,max(y for x,y in m)+1] if m else None
+out=[]
+for a in p['rois']:
+ sm=mask(src,a);rm=mask(ren,a);sb=bbox(sm);rb=bbox(rm);d=[rb[i]-sb[i] for i in range(4)] if sb and rb else None;kind=a['kind']
+ if kind=='vertical_grid':delta=[d[0],d[2]] if d else None;threshold=1
+ elif kind=='horizontal_grid':delta=[d[1],d[3]] if d else None;threshold=1
+ else:delta=d;threshold=2
+ union=len(sm|rm);intersection=len(sm&rm)
+ result={**a,'source_ink_bbox':sb,'rendered_ink_bbox':rb,'edge_delta_ltrb_px':d,'max_abs_relevant_edge_delta_px':max(abs(v) for v in delta) if delta else None,'within_precommitted_edge_tolerance':bool(delta and max(abs(v) for v in delta)<=threshold),'source_ink_pixels':len(sm),'rendered_ink_pixels':len(rm),'mask_iou':intersection/union if union else 1}
+ if kind in ['text','text_raster'] and d:result['bottom_ink_edge_delta_px']=d[3]
+ if kind=='vertical_grid' and d:result['grid_stroke_center_delta_px']=(d[0]+d[2])/2;result['grid_width_delta_px']=d[2]-d[0]
+ if kind=='horizontal_grid' and d:result['grid_stroke_center_delta_px']=(d[1]+d[3])/2;result['grid_width_delta_px']=d[3]-d[1]
+ out.append(result)
+summary={}
+for group,pred in [('all',lambda a:True),('native_text',lambda a:a['kind']=='text'),('values_49',lambda a:a['id'].startswith('value_')),('grid_6',lambda a:'grid' in a['kind']),('raster_top_labels',lambda a:a['kind']=='text_raster')]:
+ vals=[a for a in out if pred(a)];errors=[a['max_abs_relevant_edge_delta_px'] for a in vals if a['max_abs_relevant_edge_delta_px'] is not None]
+ summary[group]={'n':len(vals),'within_tolerance':sum(a['within_precommitted_edge_tolerance'] for a in vals),'max_edge_error_px':max(errors) if errors else None,'mean_max_edge_error_px':statistics.mean(errors) if errors else None,'mean_mask_iou':statistics.mean(a['mask_iou'] for a in vals) if vals else None}
+validation=json.loads((build/'validation.json').read_text());checks=validation.get('automated_checks',{});gate={k:{'status':v.get('status'),'findings':v.get('findings',[])} for k,v in checks.items()};gate['aggregate']=validation['status']
+result={'timestamp_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'candidate':tag,'source_size':list(src.size),'actual_render_size':list(actual.size),'render_provenance':'Actual exported editable.pptx -> LibreOffice PDF -> package PDF raster, opened and visually inspected','resample_for_common_coordinates':'PIL LANCZOS downsample actual PPTX render to 640x480 source coordinates','roi_plan_sha256':hashlib.sha256(planpath.read_bytes()).hexdigest(),'measurement_script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'definitions':p['mask_threshold_precommit'],'gates':gate,'summary':summary,'regions':out}
+(dest/'measurements.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
+# Source and actual PPTX at source dimensions, with a magnified dense crop and colorbar crop.
+compare=Image.new('RGB',(1280,480),'white');compare.paste(src,(0,0));compare.paste(ren,(640,0));compare.save(dest/'source_vs_actual.png')
+for name,rect in [('dense_matrix',(150,97,515,457)),('colorbar',(536,90,607,470)),('labels',(64,105,147,444))]:
+ a=src.crop(rect);b=ren.crop(rect);canvas=Image.new('RGB',(a.width*2,a.height),'white');canvas.paste(a,(0,0));canvas.paste(b,(a.width,0));canvas.resize((canvas.width*2,canvas.height*2),Image.Resampling.NEAREST).save(dest/(name+'_source_vs_actual_2x.png'))
+print(json.dumps({'summary':summary,'gates':gate,'failed_regions':[(a['id'],a['edge_delta_ltrb_px']) for a in out if not a['within_precommitted_edge_tolerance']]},indent=2))

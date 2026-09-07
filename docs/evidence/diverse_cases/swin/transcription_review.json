@@ -1,0 +1,15 @@
+{
+  "source_reviewed": true,
+  "ocr_backend": "vision",
+  "corrections": [
+    "OCR arrow misrecognized as Chinese character; reconstructed as native blue arrow.",
+    "Layer l and Layer l+1 use letter l, not digit one.",
+    "Formulas: H/4 × W/4 ×48; H/4 × W/4 ×C; H/8 × W/8 ×2C; H/32 × W/32 ×8C.",
+    "All repetitions: ×2, ×2, ×6, ×2. OCR missed second and fourth.",
+    "Stage 3 corrected from OCR Stages.",
+    "Residual superscripts l−1, l, and l+1; hats retained as separate native text."
+  ],
+  "uncertain_text": [],
+  "raster_boundary": "34 independent photo crops only, without text. Gray grid strips are clipped from image assets; red perimeters and gray patch lines are editable native lines.",
+  "native_math_limitation": "Superscripts and fraction components are separately positioned native text and rule objects; they are not PowerPoint equation objects."
+}

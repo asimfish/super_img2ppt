@@ -1,0 +1,76 @@
+from pathlib import Path
+import json, sys, statistics, zipfile
+from xml.etree import ElementTree as ET
+from PIL import Image
+import pypdfium2 as pdfium
+
+ROOT=Path('/tmp/super-img2ppt-diverse-clip-f11ta96b')
+BUILD=ROOT/'job'/sys.argv[1]
+src=Image.open(ROOT/'job/pages/page_001/source.png').convert('RGB')
+pdf=pdfium.PdfDocument(str(BUILD/'render/editable.pdf'));page=pdf[0]
+scale=src.width/page.get_width();ren=page.render(scale=scale).to_pil().convert('RGB')
+ren.save(BUILD/'render/page_001_source_px.png')
+fixed=json.loads((ROOT/'fixed_rois.json').read_text())
+targets={'gray':[(153,153,153)],'grayblue':[(153,153,153),(108,142,191)],'purpleedge':[(150,115,166)]}
+def selected(rgb,mode):
+    r,g,b=rgb
+    if mode=='black':return max(rgb)<100
+    if mode=='pink':return r>g+20 and b>g+15 and r<230
+    return any(sum((a-b)**2 for a,b in zip(rgb,t))<40**2 for t in targets[mode])
+def measure(image,roi):
+    x,y,w,h=roi['box'];crop=image.crop((x,y,x+w,y+h));pixels=list(crop.getdata())
+    data=[selected(p,roi['mask']) for p in pixels]
+    m=Image.new('L',crop.size);m.putdata([255 if p else 0 for p in data]);bb=m.getbbox()
+    result={'ink_bbox':([x+bb[0],y+bb[1],x+bb[2],y+bb[3]] if bb else None),'selected_pixels':sum(data)}
+    if bb and roi['type']=='text':result['ink_bottom_baseline_proxy']=y+bb[3]
+    if roi['type'].endswith('horizontal'):
+        density=[sum(data[j*w:(j+1)*w]) for j in range(h)]
+        selected_rows=[(j,v) for j,v in enumerate(density) if v>0.5*w]
+        result['stroke_center']=sum((y+j+0.5)*v for j,v in selected_rows)/sum(v for j,v in selected_rows) if selected_rows else None
+        result['profile']=density
+    if roi['type'].endswith('vertical'):
+        density=[sum(data[j*w+i] for j in range(h)) for i in range(w)]
+        selected_cols=[(i,v) for i,v in enumerate(density) if v>0.5*h]
+        result['stroke_center']=sum((x+i+0.5)*v for i,v in selected_cols)/sum(v for i,v in selected_cols) if selected_cols else None
+        result['profile']=density
+    return result
+rows=[]
+for roi in fixed['rois']:
+    s=measure(src,roi);r=measure(ren,roi)
+    d=dict(roi,source=s,rendered=r)
+    if s['ink_bbox'] and r['ink_bbox']:
+        d['edge_delta_px']=[b-a for a,b in zip(s['ink_bbox'],r['ink_bbox'])]
+        d['max_abs_edge_delta_px']=max(abs(v) for v in d['edge_delta_px'])
+    if roi['type']=='text' and 'ink_bottom_baseline_proxy' in s and 'ink_bottom_baseline_proxy' in r:
+        d['ink_bottom_baseline_proxy_delta_px']=r['ink_bottom_baseline_proxy']-s['ink_bottom_baseline_proxy']
+    if 'stroke_center' in s and s['stroke_center'] is not None and r.get('stroke_center') is not None:
+        d['stroke_center_delta_px']=r['stroke_center']-s['stroke_center']
+    rows.append(d)
+ns={'p':'http://schemas.openxmlformats.org/presentationml/2006/main','a':'http://schemas.openxmlformats.org/drawingml/2006/main'}
+with zipfile.ZipFile(BUILD/'editable.pptx') as z:
+    xml=ET.fromstring(z.read('ppt/slides/slide1.xml'))
+    native={'text_frames_including_empty':len(xml.findall('.//p:sp/p:txBody',ns)),
+            'editable_nonempty_text_objects':sum(bool(''.join(e.itertext()).strip()) for e in xml.findall('.//p:sp/p:txBody/a:p/a:r/a:t/..',ns)),
+            'sp_objects':len(xml.findall('.//p:sp',ns)),
+            'connectors':len(xml.findall('.//p:cxnSp',ns)),
+            'pictures':len(xml.findall('.//p:pic',ns)),
+            'custom_geometry_shapes':len(xml.findall('.//a:custGeom',ns))}
+    native['editable_nonempty_text_objects']=sum(any((t.text or '').strip() for t in e.findall('.//a:t',ns)) for e in xml.findall('.//p:sp',ns))
+    native['native_nonpicture_objects']=native['sp_objects']+native['connectors']
+    native['total_objects']=native['native_nonpicture_objects']+native['pictures']
+text_rows=[r for r in rows if r['type']=='text'];line_rows=[r for r in rows if 'stroke_center_delta_px' in r]
+result={'build':str(BUILD),'source_size':list(src.size),'actual_pdf_size_pt':[page.get_width(),page.get_height()],
+        'actual_pdf_raster_size':list(ren.size),'fixed_roi_file':str(ROOT/'fixed_rois.json'),
+        'method':'Rasterize the actual LibreOffice PPTX PDF at source width; use fixed source ROIs and color/ink masks. Pixel cells have centers index+0.5. Text baseline proxy is the bottom visible ink edge, not a claimed recoverable font baseline.',
+        'native_objects':native,'rois':rows,
+        'summary':{'text_roi_count':len(text_rows),'shape_grid_roi_count':len(line_rows),
+                   'text_max_abs_edge_delta_px':max(r.get('max_abs_edge_delta_px',0) for r in text_rows),
+                   'text_median_max_abs_edge_delta_px':statistics.median(r.get('max_abs_edge_delta_px',0) for r in text_rows),
+                   'text_max_abs_ink_bottom_baseline_proxy_delta_px':max(abs(r.get('ink_bottom_baseline_proxy_delta_px',0)) for r in text_rows),
+                   'max_abs_stroke_center_delta_px':max(abs(r['stroke_center_delta_px']) for r in line_rows)}}
+out=ROOT/('measurements_'+sys.argv[1]+'.json');out.write_text(json.dumps(result,indent=2))
+print(json.dumps({'output':str(out),'native_objects':native,'summary':result['summary']},indent=2))
+for r in rows:print(r['id'],r.get('edge_delta_px'),r.get('stroke_center_delta_px'))
+# Dense comparison crops retain source and actual render at 1:1 source pixels.
+for name,b in {'matrix':(550,250,1070,762),'captions':(1110,50,1750,365),'prediction':(1250,440,2162,762)}.items():
+    a=src.crop(b);c=ren.crop(b);pair=Image.new('RGB',(a.width*2,a.height),'white');pair.paste(a,(0,0));pair.paste(c,(a.width,0));pair.save(BUILD/'render'/('compare_'+name+'_source_px.png'))

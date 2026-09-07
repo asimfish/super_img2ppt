@@ -303,8 +303,24 @@
                     "ellipse",
                     "triangle",
                     "diamond",
-                    "chevron"
+                    "chevron",
+                    "polygon"
                   ]
+                },
+                "vertices": {
+                  "type": "array",
+                  "minItems": 3,
+                  "maxItems": 32,
+                  "items": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "items": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  }
                 },
                 "fill": {
                   "anyOf": [
@@ -316,6 +332,46 @@
                       "type": "null"
                     }
                   ]
+                },
+                "gradient": {
+                  "type": "object",
+                  "required": [
+                    "direction",
+                    "stops"
+                  ],
+                  "properties": {
+                    "direction": {
+                      "enum": [
+                        "vertical",
+                        "horizontal"
+                      ]
+                    },
+                    "stops": {
+                      "type": "array",
+                      "minItems": 2,
+                      "maxItems": 16,
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "offset",
+                          "color"
+                        ],
+                        "properties": {
+                          "offset": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                          },
+                          "color": {
+                            "type": "string",
+                            "pattern": "^#[0-9a-fA-F]{6}$"
+                          }
+                        },
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "additionalProperties": false
                 },
                 "stroke": {
                   "anyOf": [

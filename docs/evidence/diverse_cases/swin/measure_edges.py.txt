@@ -1,0 +1,75 @@
+from pathlib import Path
+from PIL import Image, ImageDraw
+import json,sys,math,statistics,hashlib
+
+P=Path('/tmp/super-img2ppt-diverse-swin-j37k7e_x')
+build=Path(sys.argv[1]);out=P/sys.argv[2]
+if out.exists():raise SystemExit(f'Refusing to overwrite {out}')
+cfg=json.loads((P/'roi_fixed.json').read_text())
+src=Image.open(P/'job/pages/page_001/source.png').convert('RGB')
+raw=Image.open(build/'render/page_001.png').convert('RGB')
+ren=raw.resize(src.size,Image.Resampling.LANCZOS)
+
+def mask(im,roi):
+    c=im.crop(roi['box']);a=[]
+    for r,g,b in c.getdata():
+        a.append((max(r,g,b)<150) if roi['mask']=='black' else (r>70 and r-g>50 and r-b>40))
+    return a,c.size
+def edges(a,w,h):
+    e=[]
+    for y in range(h):
+        for x in range(w):
+            i=y*w+x
+            if a[i] and (x==0 or y==0 or x==w-1 or y==h-1 or not(a[i-1] and a[i+1] and a[i-w] and a[i+w])):e.append(i)
+    return e
+def transform(e,w,h):
+    d=[1e9]*(w*h)
+    for i in e:d[i]=0.
+    rt=math.sqrt(2)
+    for y in range(h):
+        for x in range(w):
+            i=y*w+x;v=d[i]
+            if x:v=min(v,d[i-1]+1)
+            if y:
+                v=min(v,d[i-w]+1)
+                if x:v=min(v,d[i-w-1]+rt)
+                if x<w-1:v=min(v,d[i-w+1]+rt)
+            d[i]=v
+    for y in range(h-1,-1,-1):
+        for x in range(w-1,-1,-1):
+            i=y*w+x;v=d[i]
+            if x<w-1:v=min(v,d[i+1]+1)
+            if y<h-1:
+                v=min(v,d[i+w]+1)
+                if x:v=min(v,d[i+w-1]+rt)
+                if x<w-1:v=min(v,d[i+w+1]+rt)
+            d[i]=v
+    return d
+def bbox(a,w,h,ox,oy):
+    pts=[i for i,v in enumerate(a) if v]
+    if not pts:return None
+    xs=[i%w for i in pts];ys=[i//w for i in pts]
+    return [min(xs)+ox,min(ys)+oy,max(xs)+ox+1,max(ys)+oy+1]
+def q95(a):return sorted(a)[max(0,math.ceil(.95*len(a))-1)]
+results=[]
+for roi in cfg['rois']:
+    a,(w,h)=mask(src,roi);b,_=mask(ren,roi);ea=edges(a,w,h);eb=edges(b,w,h)
+    da=transform(ea,w,h);db=transform(eb,w,h)
+    ds=[db[i] for i in ea]+[da[i] for i in eb]
+    sa=bbox(a,w,h,*roi['box'][:2]);rb=bbox(b,w,h,*roi['box'][:2])
+    inter=sum(x and y for x,y in zip(a,b));union=sum(x or y for x,y in zip(a,b))
+    e=dict(roi,source_ink_bbox=sa,rendered_ink_bbox=rb,source_ink_pixels=sum(a),rendered_ink_pixels=sum(b),source_boundary_pixels=len(ea),rendered_boundary_pixels=len(eb),bbox_edge_delta_px=[rb[i]-sa[i] for i in range(4)] if sa and rb else None,symmetric_boundary_mean_px=round(statistics.mean(ds),3) if ds else None,symmetric_boundary_p95_px=round(q95(ds),3) if ds else None,symmetric_boundary_max_px=round(max(ds),3) if ds else None,mask_iou=round(inter/union,4) if union else None,metric_status='measured' if sa and rb else 'missing_foreground')
+    results.append(e)
+out.write_text(json.dumps({'source':str(P/'job/pages/page_001/source.png'),'render':str(build/'render/page_001.png'),'actual_render_dimensions':list(raw.size),'measurement_dimensions':list(src.size),'render_resampling':'LANCZOS to source size' if raw.size!=src.size else 'identity','roi_definition_sha256':hashlib.sha256((P/'roi_fixed.json').read_bytes()).hexdigest(),'method':cfg['edge_measurement'],'results':results,'summary':{'roi_count':len(results),'median_roi_mean_boundary_distance_px':round(statistics.median(r['symmetric_boundary_mean_px'] for r in results),3),'max_roi_mean_boundary_distance_px':max(r['symmetric_boundary_mean_px'] for r in results),'rois_with_mean_over_2px':[r['id'] for r in results if r['symmetric_boundary_mean_px']>2]}},ensure_ascii=False,indent=2))
+thumbs=[]
+for r in results:
+    bb=r['box'];w=bb[2]-bb[0];h=bb[3]-bb[1]
+    scale=min(2,700/(2*w));cw=round(w*scale);ch=round(h*scale)
+    tile=Image.new('RGB',(740,ch+34),'#EEEEEE');d=ImageDraw.Draw(tile)
+    d.text((5,4),f"{r['id']} | mean {r['symmetric_boundary_mean_px']} px; p95 {r['symmetric_boundary_p95_px']} px",fill='black')
+    tile.paste(src.crop(bb).resize((cw,ch)),(0,30));tile.paste(ren.crop(bb).resize((cw,ch)),(cw+8,30));thumbs.append(tile)
+height=sum(t.height for t in thumbs)
+sheet=Image.new('RGB',(740,height),'white');yy=0
+for t in thumbs:sheet.paste(t,(0,yy));yy+=t.height
+sheet.save(out.with_suffix('.png'))
+print(json.dumps(json.loads(out.read_text())['summary']))
