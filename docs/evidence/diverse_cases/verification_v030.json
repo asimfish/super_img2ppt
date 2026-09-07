@@ -116,7 +116,7 @@
   ],
   "package_sha256": "e3d30fc3e760a42aa085e707349e7632bd66e2f3301064e7a9706539e7a928e9",
   "package_smoke": "package_smoke_v030.json",
-  "verified_raw_records": 121,
+  "verified_raw_records": 122,
   "artifact_verification": "artifact_verification.json",
   "candidate2_runtime_files_match_final": 13,
   "final_replay": "final_replay.json",
@@ -206,5 +206,19 @@
     "PowerPoint": "unverified",
     "WPS": "unverified"
   },
-  "remote_ci": "Record exact release commit and package digest in GitHub Actions and the v0.3.0 release after push"
+  "remote_ci": "Record exact release commit and package digest in GitHub Actions and the v0.3.0 release after push",
+  "raw_evidence_whitespace": {
+    "initial_check": "raw_whitespace_check.json",
+    "initial_exit_code": 2,
+    "cause": "Pytest raw failure transcripts contain trailing spaces; the upstream CLIP license ends with a blank line. Their exact bytes must remain unchanged.",
+    "repair": "Extend the existing explicit .gitattributes raw-evidence exceptions to the three new raw pytest transcripts and that one upstream license. Production code, docs and all other files retain normal whitespace checks.",
+    "full_change_check_exit_code": 0,
+    "command": [
+      "git",
+      "diff",
+      "--check",
+      "HEAD^",
+      "HEAD"
+    ]
+  }
 }

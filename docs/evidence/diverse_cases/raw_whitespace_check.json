@@ -1,0 +1,14 @@
+{
+  "scope": "Whitespace check of the complete new commit including unmodified raw pytest transcripts and upstream license bytes",
+  "command": [
+    "git",
+    "diff",
+    "--check",
+    "HEAD^",
+    "HEAD"
+  ],
+  "commit": "c2ce6cb32581a1d2ce666758d80972b9f747cf0e",
+  "exit_code": 2,
+  "stdout": "docs/evidence/diverse_cases/gradient_red.txt:11: trailing whitespace.\n+tests/test_gradients.py:29: \ndocs/evidence/diverse_cases/gradient_red.txt:12: trailing whitespace.\n+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndocs/evidence/diverse_cases/gradient_red.txt:40: trailing whitespace.\n+tests/test_gradients.py:48: \ndocs/evidence/diverse_cases/gradient_red.txt:41: trailing whitespace.\n+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndocs/evidence/diverse_cases/gradient_red.txt:69: trailing whitespace.\n+tests/test_gradients.py:48: \ndocs/evidence/diverse_cases/gradient_red.txt:70: trailing whitespace.\n+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndocs/evidence/diverse_cases/polygon_red.txt:12: trailing whitespace.\n+tests/test_polygons.py:46: \ndocs/evidence/diverse_cases/polygon_red.txt:13: trailing whitespace.\n+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndocs/evidence/diverse_cases/polygon_red.txt:42: trailing whitespace.\n+tests/test_polygons.py:73: \ndocs/evidence/diverse_cases/polygon_red.txt:43: trailing whitespace.\n+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndocs/evidence/diverse_cases/polygon_red.txt:72: trailing whitespace.\n+tests/test_polygons.py:73: \ndocs/evidence/diverse_cases/polygon_red.txt:73: trailing whitespace.\n+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ndocs/evidence/diverse_cases/polygon_red.txt:99: trailing whitespace.\n+tests/test_polygons.py:92: \ndocs/evidence/diverse_cases/polygon_red.txt:100: trailing whitespace.\n+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nexamples/diverse_cases/licenses/CLIP_MIT.txt:22: new blank line at EOF.\n",
+  "stderr": ""
+}
