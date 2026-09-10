@@ -1,0 +1,5 @@
+import subprocess,os,time,json,pathlib
+root=pathlib.Path('/tmp/lora-forward-LO8vEs'); env=os.environ.copy();env['PATH']='/opt/homebrew/bin:'+env['PATH'];env['PYTHONPATH']='/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-teaser-v030-vjfeo8j1/super-img2ppt/src'
+import sys
+args=sys.argv[1:];t=time.time();p=subprocess.run(['/Users/liyufeng/Code/super_img2ppt/.venv/bin/python','-m','super_img2ppt']+args,env=env,capture_output=True,text=True)
+i=len(list(root.glob('command_*.json')))+1;(root/f'command_{i:02}.json').write_text(json.dumps({'argv':args,'exit_code':p.returncode,'duration_seconds':time.time()-t,'stdout':p.stdout,'stderr':p.stderr},indent=2));print(p.stdout,p.stderr);sys.exit(p.returncode)

@@ -1,0 +1,9 @@
+import json
+from pathlib import Path
+p=Path('/tmp/teaser-routing-Dg29E2/job');s=json.loads((p/'scene.json').read_text());e=s['slides'][0]['elements']
+for d in e:
+ if d['id']=='inactive_word':d['font_size']=17.5;d['box']=[194,350,66,32]
+ if d['id']=='mergelabel':d['text']='Weighted';d['box']=[1287,342,106,31];d['font_size']=20
+for id,t,y in [('merge_word','merge',368),('additive_word','(additive)',394)]:
+ d=next(x for x in e if x['id']=='mergelabel').copy();d.update(id=id,text=t,box=[1292,y,101,31]);e.append(d)
+(p/'scene.json').write_text(json.dumps(s,indent=2));(p/'scene_02.json').write_text(json.dumps(s,indent=2))

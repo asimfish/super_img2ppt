@@ -1,0 +1,221 @@
+{
+  "version": "0.3.1",
+  "evaluated": "2026-09-10",
+  "result": "CONDITIONAL",
+  "tests": {
+    "command": [
+      "uv",
+      "run",
+      "pytest",
+      "-q"
+    ],
+    "exit_code": 0,
+    "seconds": 41.479,
+    "stdout": "...................................................................      [100%]\n67 passed in 41.08s\n",
+    "stderr": ""
+  },
+  "checks": [
+    {
+      "command": [
+        "uv",
+        "run",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "seconds": 0.125,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "exit_code": 0,
+      "seconds": 0.053,
+      "stdout": "74 files already formatted\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/verify_skill.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.181,
+      "stdout": "{\n  \"status\": \"pass\",\n  \"activation_cases\": 8,\n  \"problems\": [],\n  \"scope\": \"Static package checks; semantic review and forward tests are separate evidence\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/build_capability_registry.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.061,
+      "stdout": "Capability registry is current\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "/Users/liyufeng/.whalent-agent/profiles/acct-63aacf96110c0e9595f3/agents/rjguoiuibvgcfiv8w56gq7bu5/codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/super-img2ppt"
+      ],
+      "exit_code": 0,
+      "seconds": 0.054,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "/Users/liyufeng/.agents/skills/skill-quality-gate/scripts/audit_skill_governance.py",
+        "--repo",
+        "/Users/liyufeng/code/super_img2ppt",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.071,
+      "stdout": "{\n  \"verdict\": \"PASS\",\n  \"skills_checked\": [\n    \"super-img2ppt\"\n  ],\n  \"findings\": [],\n  \"semantic_review\": \"REQUIRED — deterministic checks do not prove behavior-description alignment\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.032,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/build_package.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.069,
+      "stdout": "/Users/liyufeng/code/super_img2ppt/dist/super-img2ppt.skill\nSHA256 43fe49a7d98df73a4abbc974249c607544f955c34adf549bae02348e554561bb\n",
+      "stderr": ""
+    }
+  ],
+  "replays": [
+    {
+      "corpus": "teaser_cases",
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/run_real_cases.py",
+        "--corpus",
+        "examples/teaser_cases",
+        "--out",
+        "/Users/liyufeng/code/super_img2ppt/output/teaser_cases_20260910/replay_teaser_cases",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+      ],
+      "exit_code": 0,
+      "seconds": 14.939,
+      "lora_render_pixels_identical": true,
+      "routing_render_pixels_identical": true,
+      "embodied_render_pixels_identical": true
+    },
+    {
+      "corpus": "real_cases",
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/run_real_cases.py",
+        "--corpus",
+        "examples/real_cases",
+        "--out",
+        "/Users/liyufeng/code/super_img2ppt/output/teaser_cases_20260910/replay_real_cases",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+      ],
+      "exit_code": 2,
+      "seconds": 23.066
+    },
+    {
+      "corpus": "conference_cases",
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/run_real_cases.py",
+        "--corpus",
+        "examples/conference_cases",
+        "--out",
+        "/Users/liyufeng/code/super_img2ppt/output/teaser_cases_20260910/replay_conference_cases",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+      ],
+      "exit_code": 0,
+      "seconds": 8.742
+    },
+    {
+      "corpus": "diverse_cases",
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/run_real_cases.py",
+        "--corpus",
+        "examples/diverse_cases",
+        "--out",
+        "/Users/liyufeng/code/super_img2ppt/output/teaser_cases_20260910/replay_diverse_cases",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+      ],
+      "exit_code": 0,
+      "seconds": 12.56
+    },
+    {
+      "corpus": "ddpm_local",
+      "command": [
+        "uv",
+        "run",
+        "super-img2ppt",
+        "build",
+        "output/diverse_cases_20260906/ddpm/build_final/scene.resolved.json",
+        "--out",
+        "/Users/liyufeng/code/super_img2ppt/output/teaser_cases_20260910/replay_ddpm",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+      ],
+      "exit_code": 0,
+      "seconds": 5.477
+    }
+  ],
+  "package_sha256": "43fe49a7d98df73a4abbc974249c607544f955c34adf549bae02348e554561bb",
+  "evidence_index_sha256": "388124ae240c995d16ece3c8adc5710f79f7b419afe93bd0ab5682e1daa463db",
+  "artifact_manifest_sha256": "e2bd3fc77aad98eca8d89fff1b7171201f001cf111347745e5f25778c0641de4",
+  "semantic_review": "No new declared capabilities or external effects; unique PDF ownership only refines ink/font checks, with missing API/ambiguous ownership retaining conservative checks. Full regression suite and actual corpus builds preserve negative outcomes. Independent source-only reports and raw failures retained.",
+  "remaining": [
+    "LoRA only 8/18 strict regions pass; embodied only 4/26. Routing uses different, looser thresholds, not a shared fidelity score.",
+    "Original dense table remains fail; prior real corpus exits 2.",
+    "Native PowerPoint/WPS appearance unverified.",
+    "Package smoke reuses installed dependencies and does not claim a new clean installation."
+  ]
+}

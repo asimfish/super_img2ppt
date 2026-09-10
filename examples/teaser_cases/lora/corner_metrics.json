@@ -1,0 +1,158 @@
+[
+  {
+    "id": "input_upper",
+    "source": {
+      "fit_radius_px": 13.6,
+      "fit_rmse_px": 0.6528575490701964
+    },
+    "build_05": {
+      "render_to_source": {
+        "mean_px": 0.4523524849670132,
+        "p95_px": 2.23606797749979,
+        "max_px": 3.605551275463989
+      },
+      "source_to_render": {
+        "mean_px": 0.7715297891159661,
+        "p95_px": 2.0,
+        "max_px": 4.0
+      },
+      "dark_mask_iou": 0.422360248447205,
+      "fit_radius_px": 0.0,
+      "fit_rmse_px": 0.0,
+      "radius_error_vs_source_px": -13.6
+    },
+    "candidate": {
+      "render_to_source": {
+        "mean_px": 0.031914893617021274,
+        "p95_px": 0.0,
+        "max_px": 1.0
+      },
+      "source_to_render": {
+        "mean_px": 0.4202461407364971,
+        "p95_px": 2.0,
+        "max_px": 2.0
+      },
+      "dark_mask_iou": 0.6408450704225352,
+      "fit_radius_px": 13.3,
+      "fit_rmse_px": 0.1442556994641209,
+      "radius_error_vs_source_px": -0.29999999999999893
+    }
+  },
+  {
+    "id": "input_lower",
+    "source": {
+      "fit_radius_px": 15.5,
+      "fit_rmse_px": 0.874600149747036
+    },
+    "build_05": {
+      "render_to_source": {
+        "mean_px": 0.7707748706021982,
+        "p95_px": 2.8284271247461903,
+        "max_px": 4.242640687119285
+      },
+      "source_to_render": {
+        "mean_px": 0.9986699777112107,
+        "p95_px": 3.0,
+        "max_px": 4.0
+      },
+      "dark_mask_iou": 0.30409356725146197,
+      "fit_radius_px": 0.0,
+      "fit_rmse_px": 0.0,
+      "radius_error_vs_source_px": -15.5
+    },
+    "candidate": {
+      "render_to_source": {
+        "mean_px": 0.16842105263157894,
+        "p95_px": 1.0,
+        "max_px": 1.0
+      },
+      "source_to_render": {
+        "mean_px": 0.4870420707344666,
+        "p95_px": 2.0,
+        "max_px": 2.0
+      },
+      "dark_mask_iou": 0.5448275862068965,
+      "fit_radius_px": 13.5,
+      "fit_rmse_px": 0.15006201746825085,
+      "radius_error_vs_source_px": -2.0
+    }
+  },
+  {
+    "id": "output_upper",
+    "source": {
+      "fit_radius_px": 12.5,
+      "fit_rmse_px": 0.36851552180803765
+    },
+    "build_05": {
+      "render_to_source": {
+        "mean_px": 0.3258341551530674,
+        "p95_px": 2.23606797749979,
+        "max_px": 3.605551275463989
+      },
+      "source_to_render": {
+        "mean_px": 0.3223684210526316,
+        "p95_px": 2.0,
+        "max_px": 3.0
+      },
+      "dark_mask_iou": 0.6424581005586593,
+      "fit_radius_px": 0.0,
+      "fit_rmse_px": 0.0,
+      "radius_error_vs_source_px": -12.5
+    },
+    "candidate": {
+      "render_to_source": {
+        "mean_px": 0.030303030303030304,
+        "p95_px": 0.0,
+        "max_px": 1.0
+      },
+      "source_to_render": {
+        "mean_px": 0.16061982606824404,
+        "p95_px": 1.0,
+        "max_px": 1.4142135623730951
+      },
+      "dark_mask_iou": 0.8205128205128205,
+      "fit_radius_px": 13.7,
+      "fit_rmse_px": 0.2618976424340527,
+      "radius_error_vs_source_px": 1.1999999999999993
+    }
+  },
+  {
+    "id": "output_lower",
+    "source": {
+      "fit_radius_px": 11.5,
+      "fit_rmse_px": 0.32626077403486575
+    },
+    "build_05": {
+      "render_to_source": {
+        "mean_px": 0.38571801931907984,
+        "p95_px": 2.23606797749979,
+        "max_px": 3.605551275463989
+      },
+      "source_to_render": {
+        "mean_px": 0.0967741935483871,
+        "p95_px": 1.0,
+        "max_px": 2.0
+      },
+      "dark_mask_iou": 0.715,
+      "fit_radius_px": 0.0,
+      "fit_rmse_px": 0.0,
+      "radius_error_vs_source_px": -11.5
+    },
+    "candidate": {
+      "render_to_source": {
+        "mean_px": 0.12778176150151038,
+        "p95_px": 1.0,
+        "max_px": 1.4142135623730951
+      },
+      "source_to_render": {
+        "mean_px": 0.07741935483870968,
+        "p95_px": 1.0,
+        "max_px": 1.0
+      },
+      "dark_mask_iou": 0.8171428571428572,
+      "fit_radius_px": 13.9,
+      "fit_rmse_px": 0.17114691065886653,
+      "radius_error_vs_source_px": 2.4000000000000004
+    }
+  }
+]

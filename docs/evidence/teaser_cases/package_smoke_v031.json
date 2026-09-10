@@ -1,0 +1,74 @@
+{
+  "package_sha256": "43fe49a7d98df73a4abbc974249c607544f955c34adf549bae02348e554561bb",
+  "method": "Unpacked self-contained skill, external working directory, PYTHONPATH set only to unpacked source; existing dependency environment reused. No new environment/dependency installation; not a fresh-install claim.",
+  "steps": [
+    {
+      "command": [
+        "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+        "-c",
+        "import super_img2ppt; print(super_img2ppt.__file__); print(super_img2ppt.__version__)"
+      ],
+      "exit_code": 0,
+      "seconds": 0.023,
+      "stdout": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v031-package-d47fmghj/super-img2ppt/src/super_img2ppt/__init__.py\n0.3.1\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+        "-m",
+        "super_img2ppt",
+        "build",
+        "/Users/liyufeng/code/super_img2ppt/examples/teaser_cases/lora/scene.resolved.json",
+        "--out",
+        "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v031-package-d47fmghj/lora",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+      ],
+      "exit_code": 0,
+      "seconds": 4.915,
+      "stdout": "{\"status\": \"pass\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v031-package-d47fmghj/lora\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+        "-m",
+        "super_img2ppt",
+        "build",
+        "/Users/liyufeng/code/super_img2ppt/examples/teaser_cases/routing/scene.resolved.json",
+        "--out",
+        "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v031-package-d47fmghj/routing",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+      ],
+      "exit_code": 0,
+      "seconds": 3.993,
+      "stdout": "{\"status\": \"pass\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v031-package-d47fmghj/routing\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+        "-m",
+        "super_img2ppt",
+        "build",
+        "/Users/liyufeng/code/super_img2ppt/examples/teaser_cases/embodied/scene.resolved.json",
+        "--out",
+        "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v031-package-d47fmghj/embodied",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+      ],
+      "exit_code": 0,
+      "seconds": 6.518,
+      "stdout": "{\"status\": \"review\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v031-package-d47fmghj/embodied\"}\n",
+      "stderr": ""
+    }
+  ],
+  "statuses": {
+    "lora": "pass",
+    "routing": "pass",
+    "embodied": "review"
+  },
+  "root": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v031-package-d47fmghj"
+}

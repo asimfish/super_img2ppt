@@ -1,0 +1,52 @@
+from pathlib import Path
+import json,hashlib
+r=Path('/tmp/embodied-forward-TNEbMc');rows=json.loads((r/'build_06/roi_measurements.json').read_text());scene=json.loads((r/'build_06/scene.resolved.json').read_text());cmds=[json.loads(x) for x in (r/'commands.jsonl').read_text().splitlines()]
+s='''# Embodied pi0.5 independent forward reconstruction report — original frozen runtime
+
+Input is a super_teaser-generated explanatory schematic, NOT an original paper figure. Source was visually opened before ROI selection and scene authoring. Read only frozen SKILL.md, its three references and supplied image/OCR; implementation files were hashed, not inspected. No dependency/font installation, external upload, source-repository edit or delegation.
+
+## Result
+
+Final deliverable: `build_06/editable.pptx`, `build_06/svg/page_001.svg`, `build_06/scene.resolved.json`, sibling assets, fonts.json and validation.json. True LibreOffice PPTX→PDF→PNG render exists. Automated aggregate **review**, preflight and native objects pass. Independent fidelity result **FAIL**: only 4/26 fixed ROI tests pass; all 22 text ROIs fail at least one locked threshold. This is a usable editable draft, not a faithful reconstruction acceptance. Source font is unknown. No PowerPoint/WPS verification.
+
+95 scene elements: 45 native text objects, 16 native shapes, 20 native line/arrow objects, 14 independently movable raster crops. Text content was checked visually against source; corrected OCR's `9t`→q_t, full-width brackets, `ioint`→joint, and subscript math. Source title pi0.5 and numbered stages 1/2/3 retained. Labels Task→VLA subtask prediction→Pick up the plate→context, camera input branch to both prediction and action expert, noise up-arrow, action chunk down-arrow, and sequence arrows were individually checked. No new inferred scientific data.
+
+Raster boundaries: main robot illustration; three camera crops; three action-stage illustrations; three braces; joint-chain glyph diagram; camera separator/diamond; complex noise/trajectory strokes with three baked symbolic ellipses. The final trajectory crop correctly declares contains_text=true; initial build_01–05 metadata erroneously said false, corrected in build_06 without appearance changes. Photos, braces and trajectory details remain nonnative. No full-page background source image and no native text overlay on baked text.
+
+## Frozen evidence and iteration history
+
+`roi_contract.json` has 26 source-pixel xywh regions and SHA256 fixed before authoring. Thresholds unchanged: max bbox edge error≤4px, max ink centroid axis error≤4px, ink IoU≥0.45. Evaluator uses min(R,G,B)<160 ink threshold and resizes real render to original 1586×992 before measuring. Same evaluator for build_03/04/05/06. Pixel antialiasing and font difference affect IoU; it is not a perceptual/scientific score. Some glyph edges hit fixed ROI limits and thus width errors can be lower bounds. Keep every failure.
+
+build_01: exit2, three text overflows and named connector/brace joins. build_02: exit2, prediction still needs 253.5px while frame is250px. build_03: exit0/review after extending its frame to258px. build_04: exit2 after evidence-led narrow-font/baseline correction, caused by runtime attributing adjacent Action's A to Flow matching. build_05: exit0/review with only the Flow matching empty frame shortened120→96px; visible text and glyph positions unchanged. build_06: exit0/review, only truthful raster-text metadata correction.
+
+Repairs per affected region bounded: prediction had 3 repairs (font/size, width, source-ink font/position), then stopped; flow_title had 3 repairs (font family, source-ink font/position, blank-frame trim), then stopped. Other text regions at most2. Real text overlap at initial subtask lines repaired by valid font size and frame height; never exempted. Only source-visible connector joins/crossings have named exemptions.
+
+The initial diagnostic message over-attributed width failure to Arial→DejaVu substitution. Correction: manifests contain multiple fonts. Final resolved runs show only Unicode subscript ₜ in images/state and ⋯ in action chunk fall back to DejaVu Sans. Other text uses explicit Liberation Sans or Liberation Sans Narrow; regular/bold/italic/bold-italic are resolved distinctly. Font substitution summary alone cannot locate affected text. Five remaining runtime width warnings concern task_sub, obs_o, q, a_start and a_end. Their positional proximity to subscript objects may contribute to glyph attribution; not independently proved for these five and not waived.
+
+## Confirmed runtime regression trigger
+
+Original `build_04/scene.original.json`, `.resolved.json`, PDF, validation and source assets retained untouched. Rebuild its original scene from original job-relative assets or use self-contained resolved scene. No candidate implementation read.
+
+`flow_title` text is “Flow matching”, frame [1051,430.75,120,25]. Runtime emitted rendered_glyph_overflow glyphs='A' and measured-vs-rendered width90.5→123.589. Actual PDF extracted glyph evidence in `pdf_flow_evidence.json`: its own glyphs span x1051.845–1142.106; the neighboring “Action” A spans x1166.242–1175.432, y443.731–453.269. These are different native text objects and visibly disjoint. Thus A is wrongly assigned to the empty edge of Flow matching's frame. The blank-frame-only build_05 contrast removes the false overflow and false flow_title width warning while preserving visible ink. This is a rendered-check glyph ownership defect, not a true collision or a font availability failure.
+
+## Visual limitations
+
+Opened true full-slide renders and dense source/output crops for hierarchy, flow/action expert, left observation panel and execution sequence. Source labels are often narrow with taller glyphs; fitting Liberation Sans Narrow improves some widths but worsens several baselines and does not reproduce the original font. Main title, task title, expert title, Camera views, flow matching, context, step captions and footer retain visible font/position drift. Multiline Images/robot state and inference-mode label line spacing differs. Context math uses upright native o/q with subscript Unicode rather than the source's exact italic typography. Mathematical a/q/o weights differ. Text all remains readable; full fidelity not accepted.
+
+Red routed arrow uses angular native segments in place of unsupported source round corners; source hierarchy topology and direction retained. Simple green boxes have flat fill replacing subtle source texture. Original photo crops are not retouched but LibreOffice image resampling softens trajectory lines, joint nodes and brace edges. No source line data was invented.
+
+## Environment
+
+Python3.12.12, super-img2ppt0.3.0, python-pptx1.0.2, Pillow12.3.0, fonttools4.64.0, pypdfium2 5.13.0, jsonschema4.26.0. LibreOffice26.2.4.2 (see exact version file). Installed /opt/homebrew/bin fontconfig and soffice selected with command-local PATH; font-dir is existing LibreOffice truetype directory. No packages installed. Auxiliary ROI script first failed with ModuleNotFoundError:numpy (exit1); rewritten with Pillow/pure Python, no new dependency. This auxiliary failure is not a skill-runtime defect.
+
+## Command results
+
+Full commands, env overrides, elapsed seconds and inner process exit codes are in commands.jsonl. The wrapper itself exits0 even if inner command fails: always use recorded inner exit_code, not shell wrapper status.
+
+'''
+for c in cmds:s+='- '+str(c['command'])+' — exit '+str(c['exit_code'])+', '+str(round(c['elapsed_seconds'],3))+' s\n'
+s+='\n## Fixed ROI results (final)\n\n|ROI|bbox max px|centroid max px|IoU|Result|\n|---|---:|---:|---:|---|\n'
+for x in rows:s+=f"|{x['id']}|{x['max_edge_error_px']}|{x['max_centroid_error_px']:.3f}|{x['ink_iou']:.3f}|{'pass' if x['pass'] else 'FAIL'}|\n"
+s+='\nAll product hashes are in artifact_hashes.json (manifest excludes itself to avoid recursion). Frozen package hashes in frozen_skill_hashes.json. Reproducible author/repair/measure scripts retained. Original report must not be overwritten by any candidate retest.\n'
+(r/'report_original.md').write_text(s)
+manifest={str(p.relative_to(r)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(r.rglob('*')) if p.is_file() and p.name!='artifact_hashes.json'};(r/'artifact_hashes.json').write_text(json.dumps(manifest,indent=2));print('report and',len(manifest),'artifact hashes saved')

@@ -1,0 +1,83 @@
+{
+  "embedded": false,
+  "fonts": [
+    {
+      "family": "DejaVu Sans",
+      "east_asian_typeface": "DejaVu Sans",
+      "file": "DejaVuSans.ttf",
+      "face_index": 0,
+      "weight": 400,
+      "italic": false,
+      "sha256": "7da195a74c55bef988d0d48f9508bd5d849425c1770dba5d7bfc6ce9ed848954",
+      "embedding_fs_type": 0
+    },
+    {
+      "family": "Liberation Sans",
+      "east_asian_typeface": "Liberation Sans",
+      "file": "LiberationSans-Italic.ttf",
+      "face_index": 0,
+      "weight": 400,
+      "italic": true,
+      "sha256": "e5bae5c4cde31f22142753855f4f8fb86da6ff39955ed3c0a11248b0d16948b0",
+      "embedding_fs_type": 0
+    },
+    {
+      "family": "Liberation Sans",
+      "east_asian_typeface": "Liberation Sans",
+      "file": "LiberationSans-Regular.ttf",
+      "face_index": 0,
+      "weight": 400,
+      "italic": false,
+      "sha256": "76d04c18ea243f426b7de1f3ad208e927008f961dc5945e5aad352d0dfde8ee8",
+      "embedding_fs_type": 0
+    },
+    {
+      "family": "Liberation Sans",
+      "east_asian_typeface": "Liberation Sans",
+      "file": "LiberationSans-Bold.ttf",
+      "face_index": 0,
+      "weight": 700,
+      "italic": false,
+      "sha256": "788abee4c806d660e8aee46689dd8540cd4bb98da03dcc9d171ce3efd99a9173",
+      "embedding_fs_type": 0
+    },
+    {
+      "family": "Liberation Sans",
+      "east_asian_typeface": "Liberation Sans",
+      "file": "LiberationSans-BoldItalic.ttf",
+      "face_index": 0,
+      "weight": 700,
+      "italic": true,
+      "sha256": "698da70fc191cc5f33ad4d6d3fe830fe4624b898ea2e3169955928b7c491f1ee",
+      "embedding_fs_type": 0
+    },
+    {
+      "family": "Liberation Sans Narrow",
+      "east_asian_typeface": "Liberation Sans Narrow",
+      "file": "LiberationSansNarrow-Regular.ttf",
+      "face_index": 0,
+      "weight": 400,
+      "italic": false,
+      "sha256": "546e8957e5dccece4ac07ea02f57a5cdb3dc3b0e902ea75a837a7784ba4b7eef",
+      "embedding_fs_type": 0
+    },
+    {
+      "family": "Liberation Sans Narrow",
+      "east_asian_typeface": "Liberation Sans Narrow",
+      "file": "LiberationSansNarrow-Bold.ttf",
+      "face_index": 0,
+      "weight": 700,
+      "italic": false,
+      "sha256": "8e5eb5090ef4a3143794c230b82f174f7f2fbbfcd6cb789ccfa1f90bf8795d54",
+      "embedding_fs_type": 0
+    }
+  ],
+  "substitutions": [
+    {
+      "code": "font_substitution",
+      "requested": "Liberation Sans",
+      "resolved": "DejaVu Sans"
+    }
+  ],
+  "portability": "Install the listed font families on the editing computer. Font files are not copied or embedded."
+}

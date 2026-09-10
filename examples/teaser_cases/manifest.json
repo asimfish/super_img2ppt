@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "evaluated": "2026-09-10",
+  "runtime_version": "0.3.1",
+  "source_commit": "6b1d41b0b81ed09ed5cd692182ae05fc5573ac12",
+  "method": "Independent image-only reconstructions on frozen v0.3.0; separate candidate runtime replay for embodied. Fixed per-case ROI methods differ and cannot be pooled as an accuracy score.",
+  "visual_review": "required",
+  "cases": [
+    {
+      "id": "lora",
+      "scene": "lora/scene.resolved.json",
+      "scene_sha256": "338b2b6e12a4c78612e8f41ff2f16a88b1de3dd0a919777b4d4a89702652e561",
+      "pptx": "lora/editable.pptx",
+      "pptx_sha256": "6f5bdaf3302978fb70ad671402bb7cc63ad1231c26dcb943ce08d8f983ba7548",
+      "preview": "lora/render/page_001.png",
+      "source": "assets/e3eeb61a4cd125b9d9b5.png",
+      "source_sha256": "e3eeb61a4cd125b9d9b57aa6f91fc723a6b3db5dc1acf768faa046191ba3078f",
+      "download_url": "https://raw.githubusercontent.com/asimfish/super_teaser/6b1d41b0b81ed09ed5cd692182ae05fc5573ac12/examples/images/lora-clean.png",
+      "download_sha256": "19afb88cb69b32f27290eb30e9097091997a2fab8cbe8846becb6987cdc6079a",
+      "scene_counts": {
+        "shape": 13,
+        "line": 61,
+        "text": 15,
+        "image": 3
+      },
+      "observed_status": "pass",
+      "roi_plan_sha256": "b1aa6aaf588dfae93f3b14180af149f03b046240139c5f6930b32c87f9bda11a",
+      "reuse": "MIT-0 generated illustration; see NOTICE.md",
+      "strict_roi_pass": 8,
+      "strict_roi_total": 18
+    },
+    {
+      "id": "routing",
+      "scene": "routing/scene.resolved.json",
+      "scene_sha256": "180e65d0ef5e71a1168a6e54a303a05322638a2b5c17027ae5321ae92e151e31",
+      "pptx": "routing/editable.pptx",
+      "pptx_sha256": "b17786badf4d73b9224035d5960a9272e27d7f2f6d255f2ea98c3745549768e9",
+      "preview": "routing/render/page_001.png",
+      "source": "assets/8640cc0b952d25de83f7.png",
+      "source_sha256": "8640cc0b952d25de83f7b29b0893f99ecc6a4be228121a8c586086325ac19f5c",
+      "download_url": "https://raw.githubusercontent.com/asimfish/super_teaser/6b1d41b0b81ed09ed5cd692182ae05fc5573ac12/examples/images/fixtures/fixture-routed-branches.png",
+      "download_sha256": "dbb4273914d4fa86e82b63b7053ede38f5f40890f0e90891f4f009e7c283831b",
+      "scene_counts": {
+        "shape": 22,
+        "text": 37,
+        "line": 28
+      },
+      "observed_status": "pass",
+      "roi_plan_sha256": "b09e2e3e27df89f27777db8252097a70e3942dc6c1e6d982db9a624cd7128807",
+      "reuse": "MIT-0 generated illustration; see NOTICE.md",
+      "strict_roi_pass": 25,
+      "strict_roi_total": 25
+    },
+    {
+      "id": "embodied",
+      "scene": "embodied/scene.resolved.json",
+      "scene_sha256": "c3c479705d3413b8f84dd773c52be7b1307c17ddd9649d84c4a574a847d17eb7",
+      "pptx": "embodied/editable.pptx",
+      "pptx_sha256": "7fd92f737e026fefb7c7b754aeedffd0d294e72c4a0d533b84f04d5034bea59a",
+      "preview": "embodied/render/page_001.png",
+      "source": "assets/2528086b727f8c2fc940.png",
+      "source_sha256": "2528086b727f8c2fc940bc888bace32c43f7a308a85205d48734bf4a9102a1bb",
+      "download_url": "https://raw.githubusercontent.com/asimfish/super_teaser/6b1d41b0b81ed09ed5cd692182ae05fc5573ac12/examples/images/embodied/pi05-hierarchy-v3.png",
+      "download_sha256": "830083551c6d6bd3db1553f1fff0a3e33e7bbded09f931851ca74263c357ae06",
+      "scene_counts": {
+        "image": 14,
+        "text": 45,
+        "shape": 16,
+        "line": 20
+      },
+      "observed_status": "review",
+      "roi_plan_sha256": "19590bc0c0cf162f0f1c6395dd1e71ba1de9f95211449f41e1e33149a255e4e6",
+      "reuse": "MIT-0 generated illustration; see NOTICE.md",
+      "strict_roi_pass": 4,
+      "strict_roi_total": 26
+    }
+  ]
+}

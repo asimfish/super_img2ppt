@@ -1,0 +1,10 @@
+from pathlib import Path
+import json
+p=Path('/tmp/teaser-routing-Dg29E2/job');s=json.loads((p/'scene.json').read_text());e=s['slides'][0]['elements']
+for d in e:
+ if d['id']=='title':d['font_size']=23;d['box'][0]+=1;d['box'][1]-=1
+ if d['id']=='footer':d['font_size']=21.2;d['box'][0]-=4;d['box'][1]-=2
+ if d['id']=='result':d['text']='y = 0.6 E1(x)';d['box']=[1415,422,142,31]
+ if d['id']=='go1':d['points']=[[529,244.5],[711,244.5]];d['arrow_head']={'length':17,'width':16}
+d=next(x for x in e if x['id']=='result').copy();d.update(id='result_second',text='+ 0.4 E3(x)',box=[1417,451,142,31]);e.append(d)
+(p/'scene.json').write_text(json.dumps(s,indent=2));(p/'scene_04.json').write_text(json.dumps(s,indent=2))

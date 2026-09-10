@@ -1,0 +1,42 @@
+from pathlib import Path
+import hashlib,json
+from PIL import Image,ImageChops
+r=Path('/tmp/embodied-candidate-DDfRv2');old=Path('/tmp/embodied-forward-TNEbMc')
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+checks={};checks['exact_original04_scene']=sha(r/'input_04/scene.resolved.json')==sha(old/'build_04/scene.resolved.json');checks['roi_contract_unchanged']=sha(r/'roi_contract.json')==sha(old/'roi_contract.json')
+a=json.loads((old/'build_06/scene.resolved.json').read_text());b=json.loads((r/'input_06/scene.resolved.json').read_text());next(e for e in a['slides'][0]['elements'] if e['id']=='flow_title')['box'][2]=120;checks['06_only_width_restoration']=a==b;checks['06_contains_text_true']=next(e for e in b['slides'][0]['elements'] if e['id']=='flow_trajectories')['contains_text'] is True
+orig_manifest=json.loads((old/'artifact_hashes.json').read_text());mismatch=[p for p,h in orig_manifest.items() if sha(old/p)!=h];checks['original_183_artifacts_unchanged']=not mismatch
+for n,orig in [('replay_04','build_04'),('replay_06_restored','build_06')]:
+ x=Image.open(r/n/'render/page_001.png').convert('RGB');y=Image.open(old/orig/'render/page_001.png').convert('RGB');checks[n+'_render_pixels_identical_to_original']=x.size==y.size and ImageChops.difference(x,y).getbbox() is None
+(r/'integrity_checks.json').write_text(json.dumps(checks,indent=2))
+s='''# Candidate independent forward replay — embodied pi0.5
+
+The candidate was copied opaquely from `/Users/liyufeng/Code/super_img2ppt/skills/super-img2ppt` into `frozen_skill/`; 26 copied files hashed in candidate_hashes.json without inspecting implementation. No repository edits, package/font installs, external uploads, or agent delegation. Original report_original.md and all183 original artifacts hash-verified unchanged. Input is a super_teaser schematic, not a paper-original figure.
+
+## Outcome
+
+- `replay_04`: exact byte-identical original build_04 scene.resolved.json replay; exit0,6.199s, aggregate review; preflight/native objects pass.
+- `replay_06_restored`: final build_06 scene with only flow_title frame width96→120; contains_text=true preserved for raster trajectories. Exit0,9.722s, aggregate review; preflight/native objects pass.
+- Original false `rendered_glyph_overflow` for foreign A is absent in both. Original false flow_title rendered-ink drift is absent. Four previous nearby-subscript width warnings (obs_o,q,a_start,a_end) are also absent. No error or warning was manually exempted.
+- Both retain task_sub rendered_ink_width_drift: measured54.75px versus actual51.952px. This remaining warning is not waived.
+- **Source fidelity remains FAIL:4/26 locked ROIs pass in both, all22 text ROIs fail at least one threshold.** The runtime fix improves glyph ownership checks, not source alignment or font fidelity.
+
+## Actual render and visual evidence
+
+Opened both real LibreOffice PPTX-rendered full pages and dense Flow matching/Action comparisons. Flow matching and Action remain distinct, visible, and nonoverlapping; no own-text clipping observed. Original evidence at `/tmp/embodied-forward-TNEbMc/pdf_flow_evidence.json` assigns Flow matching ink x1051.845–1142.106 and Action A x1166.242–1175.432. The120px frame is retained in the candidate; no blank-frame workaround is required. Native text content, arrow hierarchy, imagery and geometry are otherwise unchanged. Candidate bitmap equality checks below distinguish unchanged artwork from QA-only effects.
+
+Known unresolved fidelity: narrow-font/baseline drift in title/task/expert/camera/context/flow/step captions/footer, multiline spacing differences, upright rather than exact italic context math, mathematical weight differences, angular red connector corners and softened raster details.14 movable raster crops still include all robot scenes, braces, joints, separator and complex trajectory marks/ellipses.45 native text objects,16 shapes,20 lines/arrows retained. No full-page bitmap workaround and no native text overlays on baked labels.
+
+## Reproduction
+
+Commands are recorded exactly with environment overrides, inner exit code and duration in commands.jsonl. Same existing Python3.12.12 and LibreOffice26.2.4.2 environment, command-local PATH=/opt/homebrew/bin:$PATH, PYTHONPATH=`frozen_skill/src`, --font-dir=/Applications/LibreOffice.app/Contents/Resources/fonts/truetype. Candidate doctor still reports distribution version0.3.0; use candidate file hashes to identify this candidate. Runtime implementation was never read. Original scene04 SHA256 is b4721027490ff5ffcedf76cbfaa05527273a2be91bf6363e97a4e85aba72c42a.
+
+## Integrity checks
+
+'''
+for k,v in checks.items():s+=f'- {k}: {v}\n'
+s+='\n## Locked ROI measurements\n\nOriginal26 ROI boxes, edge≤4px, centroid≤4px, IoU≥0.45 unchanged. Same min-channel<160 ink mask and source-size resizing evaluator as original. Both replays have identical ROI outcomes.\n\n|ROI|bbox max px|centroid max px|IoU|Outcome|\n|---|---:|---:|---:|---|\n'
+rows=json.loads((r/'replay_06_restored/roi_measurements.json').read_text())
+for q in rows:s+=f"|{q['id']}|{q['max_edge_error_px']}|{q['max_centroid_error_px']:.3f}|{q['ink_iou']:.3f}|{'pass' if q['pass'] else 'FAIL'}|\n"
+s+='\nRaw validation, PPTX, SVG, resolved/original scenes, fonts, actual PDFs, PNGs, density crops and ROI JSON are under each replay directory. All candidate artifacts are hashed in artifact_hashes.json (self excluded).\n';(r/'report_candidate.md').write_text(s)
+h={str(p.relative_to(r)):sha(p) for p in sorted(r.rglob('*')) if p.is_file() and p.name!='artifact_hashes.json'};(r/'artifact_hashes.json').write_text(json.dumps(h,indent=2));print(json.dumps(checks,indent=2));print('hashed',len(h))

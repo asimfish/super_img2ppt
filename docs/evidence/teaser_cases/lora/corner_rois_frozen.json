@@ -1,0 +1,50 @@
+{
+  "supplemental_after_discovery": true,
+  "not_original_18": true,
+  "thresholds": {
+    "dark_rgb_max": 110,
+    "p95_nearest_distance_px_max": 2
+  },
+  "regions": [
+    {
+      "id": "input_upper",
+      "box": [
+        263,
+        180,
+        35,
+        35
+      ],
+      "radius_px": 12
+    },
+    {
+      "id": "input_lower",
+      "box": [
+        263,
+        556,
+        35,
+        36
+      ],
+      "radius_px": 12
+    },
+    {
+      "id": "output_upper",
+      "box": [
+        1226,
+        180,
+        36,
+        36
+      ],
+      "radius_px": 12
+    },
+    {
+      "id": "output_lower",
+      "box": [
+        1226,
+        556,
+        36,
+        36
+      ],
+      "radius_px": 12
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "observed": "pi0.5 build_04 flow_title falsely reports rendered_glyph_overflow A, although its text is Flow matching",
+  "hypotheses": [
+    {"cause": "Actual Flow matching glyph exceeds its box", "evidence": "PDF glyphs lie at x1051.8 through1142.1, inside its x1051 through1171 frame", "result": "rejected"},
+    {"cause": "Neighbor Action A center lies inside Flow matching blank frame and every center-selected character is measured as its own", "evidence": "A x1166.24 through1175.43, center inside flow frame; distinct native PDF text objects contain Flow matching and Action", "result": "supported"},
+    {"cause": "Renderer changed the intended text or font", "evidence": "Native object content and actual PDF text preserve both labels; changing only empty flow frame width removes A error", "result": "not the source of the A overflow"}
+  ],
+  "fix_scope": "Use native PDF text object groups to exclude foreign glyphs from font, ink-width and overflow diagnostics only when group text and all glyph centers select one unique scene text frame. Ambiguous groups retain conservative geometry. Do not loosen glyph-bound tolerance.",
+  "counterfactual": "Original build_04 scene and PDF must pass flow_title diagnostics without moving frames or glyphs, while true overflow, missing text, spacing and font mutation controls remain rejected or reviewed."
+}

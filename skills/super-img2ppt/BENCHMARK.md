@@ -1,5 +1,30 @@
 # Bounded reconstruction evidence
 
+## v0.3.1 super_teaser extension
+
+On 2026-09-10, three independent image-only reconstructions used commit-pinned super_teaser
+MIT-0 generated illustrations: LoRA, routed experts and embodied hierarchical inference.
+They are conceptual illustrations, not original conference figures or experimental evidence.
+Frozen v0.3.0 baseline reports and failures remain unchanged. A separate frozen candidate
+replays the exact embodied failure; the parent replays all three final scenes and prior corpora.
+
+LoRA has 89 native objects and three local rasters. Eight of 18 fixed regions meet both
+edge <=3 px and IoU >=0.70; four supplemental rounded-corner regions improve bidirectional
+P95 distance to <=2 px through native line approximations. Routed experts have 87 native
+objects and no rasters; 25/25 regions meet edge/centroid <=4 px and ink-count delta <=25%.
+Embodied inference has 81 native objects and 14 local rasters; only four line regions of
+26 fixed regions meet edge/centroid <=4 px and IoU >=0.45. All 22 text regions retain failures.
+These different masks and thresholds cannot be combined into population accuracy.
+
+The PDF check previously attributed a neighboring Action's A to Flow matching's empty frame.
+Unique complete PDF text-object ownership fixes this false overflow without changing render
+pixels or source fidelity. Missing/ambiguous ownership retains conservative checks. Two actual
+LibreOffice regressions cover horizontal/quarter-turn labels plus missing-text, true-overflow
+and duplicate-owner negative controls. The local suite has 67 passes, no skips. No new runtime
+dependencies, fonts or external capabilities were added. Native PowerPoint/WPS remain untested.
+The owning repository's docs/teaser_cases.md and docs/evidence/teaser_cases retain measurements,
+raw failures, original/candidate reports and hashes; examples/teaser_cases contains the artwork.
+
 ## v0.3.0 diverse figure extension
 
 On 2026-09-07, three independent evaluators reconstructed CLIP (ICML 2021), Swin Transformer

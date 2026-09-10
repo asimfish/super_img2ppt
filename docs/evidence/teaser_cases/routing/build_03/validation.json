@@ -1,0 +1,1304 @@
+{
+  "status": "pass",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "pass",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "legendw",
+            "legend_weight"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "legendplus",
+            "legend_merge"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "merge",
+            "additive_word"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "trunk",
+            "inactive_word"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "inactive_e",
+            "inactive_word"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "proc_label1",
+            "process1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "proc_label2",
+            "gatedoff"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "proc_label3",
+            "process3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "mergelabel",
+            "merge_word"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "plus",
+            "additive_word"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "legendtext1",
+            "legendtext2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "legendtext2",
+            "legendtext3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "merge_word",
+            "additive_word"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "shape": 22,
+            "text": 36,
+            "line": 28
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "gate",
+                "inputshaft"
+              ],
+              "reason": "Source token connector crosses dashed gate boundary and enters branch node.",
+              "area_px2": 60.0
+            },
+            {
+              "elements": [
+                "gate",
+                "topbranch"
+              ],
+              "reason": "Source token connector crosses dashed gate boundary and enters branch node.",
+              "area_px2": 126.0
+            },
+            {
+              "elements": [
+                "gate",
+                "botbranch"
+              ],
+              "reason": "Source token connector crosses dashed gate boundary and enters branch node.",
+              "area_px2": 126.0
+            },
+            {
+              "elements": [
+                "sel1a",
+                "sel1b"
+              ],
+              "reason": "Source checkmark strokes join at their shared vertex.",
+              "area_px2": 1.618
+            },
+            {
+              "elements": [
+                "sel2a",
+                "sel2b"
+              ],
+              "reason": "Source inactive cross has two intersecting strokes.",
+              "area_px2": 6.25
+            },
+            {
+              "elements": [
+                "sel3a",
+                "sel3b"
+              ],
+              "reason": "Source checkmark strokes join at their shared vertex.",
+              "area_px2": 1.618
+            },
+            {
+              "elements": [
+                "key1a",
+                "key1b"
+              ],
+              "reason": "Source checkmark strokes join at their shared vertex.",
+              "area_px2": 1.618
+            },
+            {
+              "elements": [
+                "key2a",
+                "key2b"
+              ],
+              "reason": "Source inactive cross has two intersecting strokes.",
+              "area_px2": 6.25
+            },
+            {
+              "elements": [
+                "inputshaft",
+                "trunk"
+              ],
+              "reason": "Source token connector crosses dashed gate boundary and enters branch node.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "trunk",
+                "topbranch"
+              ],
+              "reason": "Source token route has a shared trunk junction.",
+              "area_px2": 2.25
+            },
+            {
+              "elements": [
+                "trunk",
+                "botbranch"
+              ],
+              "reason": "Source token route has a shared trunk junction.",
+              "area_px2": 2.25
+            },
+            {
+              "elements": [
+                "trunk",
+                "septopL"
+              ],
+              "reason": "Source token route has a shared trunk junction.",
+              "area_px2": 5.4
+            },
+            {
+              "elements": [
+                "trunk",
+                "sepbottomL"
+              ],
+              "reason": "Source token route has a shared trunk junction.",
+              "area_px2": 5.4
+            },
+            {
+              "elements": [
+                "upperhorizontal",
+                "uppervertical"
+              ],
+              "reason": "Source upper elbow joins the downward merge route.",
+              "area_px2": 2.25
+            },
+            {
+              "elements": [
+                "uppervertical",
+                "septopR"
+              ],
+              "reason": "Source dashed lane divider crosses merge route.",
+              "area_px2": 5.4
+            },
+            {
+              "elements": [
+                "lowerhorizontal",
+                "lowervertical"
+              ],
+              "reason": "Source lower elbow joins the upward merge route.",
+              "area_px2": 2.25
+            },
+            {
+              "elements": [
+                "lowervertical",
+                "sepbottomR"
+              ],
+              "reason": "Source dashed lane divider crosses merge route.",
+              "area_px2": 5.4
+            }
+          ],
+          "text_layouts": {
+            "title": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 335.5,
+              "height_px": 27.6,
+              "available_width_px": 390,
+              "available_height_px": 41,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 336.0,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "One token, two active branches"
+              ]
+            },
+            "gate_title": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 118.0,
+              "height_px": 24.15,
+              "available_width_px": 152,
+              "available_height_px": 37,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 118.5,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "Branch Gate"
+              ]
+            },
+            "instruction": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 113.75,
+              "height_px": 46.0,
+              "available_width_px": 150,
+              "available_height_px": 57,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 114.25,
+              "required_height_px": 46.5,
+              "fits": true,
+              "lines": [
+                "Select active",
+                "branches"
+              ]
+            },
+            "input_text": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 53.75,
+              "height_px": 75.9,
+              "available_width_px": 88,
+              "available_height_px": 87,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 54.25,
+              "required_height_px": 76.4,
+              "fits": true,
+              "lines": [
+                "Input",
+                "token",
+                "x"
+              ]
+            },
+            "active1": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 107.0,
+              "height_px": 29.9,
+              "available_width_px": 127,
+              "available_height_px": 44,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 107.5,
+              "required_height_px": 30.4,
+              "fits": true,
+              "lines": [
+                "E1 active"
+              ]
+            },
+            "active3": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 107.0,
+              "height_px": 29.9,
+              "available_width_px": 127,
+              "available_height_px": 43,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 107.5,
+              "required_height_px": 30.4,
+              "fits": true,
+              "lines": [
+                "E3 active"
+              ]
+            },
+            "inactive_e": {
+              "scale": 1,
+              "effective_font_size_px": 27,
+              "width_px": 33.0,
+              "height_px": 31.05,
+              "available_width_px": 41,
+              "available_height_px": 41,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 33.5,
+              "required_height_px": 31.55,
+              "fits": true,
+              "lines": [
+                "E2"
+              ]
+            },
+            "inactive_word": {
+              "scale": 1,
+              "effective_font_size_px": 17.5,
+              "width_px": 59.5,
+              "height_px": 20.125,
+              "available_width_px": 66,
+              "available_height_px": 32,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 60.0,
+              "required_height_px": 20.625,
+              "fits": true,
+              "lines": [
+                "inactive"
+              ]
+            },
+            "gate_label1": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 35.5,
+              "height_px": 33.35,
+              "available_width_px": 65,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.0,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "E1"
+              ]
+            },
+            "gate_label2": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 35.5,
+              "height_px": 33.35,
+              "available_width_px": 65,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.0,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "E2"
+              ]
+            },
+            "gate_label3": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 35.5,
+              "height_px": 33.35,
+              "available_width_px": 65,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.0,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "E3"
+              ]
+            },
+            "proc_label1": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 36.75,
+              "height_px": 34.5,
+              "available_width_px": 104,
+              "available_height_px": 43,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 37.25,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "E1"
+              ]
+            },
+            "proc_label2": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 36.75,
+              "height_px": 34.5,
+              "available_width_px": 104,
+              "available_height_px": 43,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 37.25,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "E2"
+              ]
+            },
+            "proc_label3": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 36.75,
+              "height_px": 34.5,
+              "available_width_px": 104,
+              "available_height_px": 43,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 37.25,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "E3"
+              ]
+            },
+            "process1": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 112.25,
+              "height_px": 24.15,
+              "available_width_px": 148,
+              "available_height_px": 37,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 112.75,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "processes x"
+              ]
+            },
+            "process3": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 112.25,
+              "height_px": 24.15,
+              "available_width_px": 148,
+              "available_height_px": 37,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 112.75,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "processes x"
+              ]
+            },
+            "gatedoff": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 133.5,
+              "height_px": 48.3,
+              "available_width_px": 158,
+              "available_height_px": 56,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 134.0,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "gated off",
+                "(no execution)"
+              ]
+            },
+            "weighttitle": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 156.5,
+              "height_px": 48.3,
+              "available_width_px": 203,
+              "available_height_px": 64,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 157.0,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "Gate weight",
+                "(fixture constant)"
+              ]
+            },
+            "weight06": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 40.5,
+              "height_px": 33.35,
+              "available_width_px": 111,
+              "available_height_px": 44,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.0,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "0.6"
+              ]
+            },
+            "weight04": {
+              "scale": 1,
+              "effective_font_size_px": 27,
+              "width_px": 37.5,
+              "height_px": 31.05,
+              "available_width_px": 111,
+              "available_height_px": 41,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 38.0,
+              "required_height_px": 31.55,
+              "fits": true,
+              "lines": [
+                "0.4"
+              ]
+            },
+            "mergelabel": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 85.25,
+              "height_px": 23.0,
+              "available_width_px": 106,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 85.75,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "Weighted"
+              ]
+            },
+            "plus": {
+              "scale": 1,
+              "effective_font_size_px": 32,
+              "width_px": 18.75,
+              "height_px": 36.8,
+              "available_width_px": 53,
+              "available_height_px": 53,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 19.25,
+              "required_height_px": 37.3,
+              "fits": true,
+              "lines": [
+                "+"
+              ]
+            },
+            "result": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 119.5,
+              "height_px": 48.3,
+              "available_width_px": 142,
+              "available_height_px": 64,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 120.0,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "y = 0.6 E1(x)",
+                "+ 0.4 E3(x)"
+              ]
+            },
+            "footer": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 401.5,
+              "height_px": 24.15,
+              "available_width_px": 481,
+              "available_height_px": 42,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 402.0,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "Synthetic fixture | schematic, not measured"
+              ]
+            },
+            "keytext1": {
+              "scale": 1,
+              "effective_font_size_px": 15.5,
+              "width_px": 119.75,
+              "height_px": 17.825,
+              "available_width_px": 151,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 120.25,
+              "required_height_px": 18.325,
+              "fits": true,
+              "lines": [
+                "active (selected)"
+              ]
+            },
+            "keytext2": {
+              "scale": 1,
+              "effective_font_size_px": 15.5,
+              "width_px": 137.5,
+              "height_px": 17.825,
+              "available_width_px": 155,
+              "available_height_px": 32,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 138.0,
+              "required_height_px": 18.325,
+              "fits": true,
+              "lines": [
+                "inactive (gated off)"
+              ]
+            },
+            "legendtitle": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 64.0,
+              "height_px": 20.7,
+              "available_width_px": 120,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 64.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Legend"
+              ]
+            },
+            "legendw": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 11.75,
+              "height_px": 17.25,
+              "available_width_px": 39,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 12.25,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "w"
+              ]
+            },
+            "legendplus": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 11.0,
+              "height_px": 21.85,
+              "available_width_px": 23,
+              "available_height_px": 32,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.5,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "+"
+              ]
+            },
+            "legendtext1": {
+              "scale": 1,
+              "effective_font_size_px": 15.5,
+              "width_px": 139.25,
+              "height_px": 17.825,
+              "available_width_px": 242,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 139.75,
+              "required_height_px": 18.325,
+              "fits": true,
+              "lines": [
+                "Data path (token x)"
+              ]
+            },
+            "legendtext2": {
+              "scale": 1,
+              "effective_font_size_px": 15.5,
+              "width_px": 182.5,
+              "height_px": 17.825,
+              "available_width_px": 242,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 183.0,
+              "required_height_px": 18.325,
+              "fits": true,
+              "lines": [
+                "Executed branch (active)"
+              ]
+            },
+            "legendtext3": {
+              "scale": 1,
+              "effective_font_size_px": 15.5,
+              "width_px": 196.75,
+              "height_px": 17.825,
+              "available_width_px": 242,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 197.25,
+              "required_height_px": 18.325,
+              "fits": true,
+              "lines": [
+                "Gated-off branch (inactive)"
+              ]
+            },
+            "legendtext4": {
+              "scale": 1,
+              "effective_font_size_px": 15.5,
+              "width_px": 218.25,
+              "height_px": 17.825,
+              "available_width_px": 242,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 218.75,
+              "required_height_px": 18.325,
+              "fits": true,
+              "lines": [
+                "Gate weight (fixture constant)"
+              ]
+            },
+            "legendtext5": {
+              "scale": 1,
+              "effective_font_size_px": 15.5,
+              "width_px": 111.5,
+              "height_px": 17.825,
+              "available_width_px": 242,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 112.0,
+              "required_height_px": 18.325,
+              "fits": true,
+              "lines": [
+                "Additive merge"
+              ]
+            },
+            "merge_word": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 57.25,
+              "height_px": 23.0,
+              "available_width_px": 101,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 57.75,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "merge"
+              ]
+            },
+            "additive_word": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 83.0,
+              "height_px": 23.0,
+              "available_width_px": 101,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 83.5,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "(additive)"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "pass",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [],
+      "text_boxes": [
+        {
+          "slide": "page_001",
+          "element": "title",
+          "expected": "One token, two active branches",
+          "rendered": "One token, two active branches",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 333.75,
+          "rendered_ink_width_px": 333.612
+        },
+        {
+          "slide": "page_001",
+          "element": "gate_title",
+          "expected": "Branch Gate",
+          "rendered": "Branch Gate",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 115.75,
+          "rendered_ink_width_px": 115.41
+        },
+        {
+          "slide": "page_001",
+          "element": "instruction",
+          "expected": "Select active\nbranches",
+          "rendered": "Select active\r\nbranches",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 112.25,
+          "rendered_ink_width_px": 111.622
+        },
+        {
+          "slide": "page_001",
+          "element": "input_text",
+          "expected": "Input\ntoken\nx",
+          "rendered": "Input\r\ntoken\r\nx",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 52.0,
+          "rendered_ink_width_px": 51.81
+        },
+        {
+          "slide": "page_001",
+          "element": "active1",
+          "expected": "E1 active",
+          "rendered": "E1 active",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 104.0,
+          "rendered_ink_width_px": 103.661
+        },
+        {
+          "slide": "page_001",
+          "element": "active3",
+          "expected": "E3 active",
+          "rendered": "E3 active",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 104.0,
+          "rendered_ink_width_px": 103.661
+        },
+        {
+          "slide": "page_001",
+          "element": "inactive_e",
+          "expected": "E2",
+          "rendered": "E2 ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 29.75,
+          "rendered_ink_width_px": 29.502
+        },
+        {
+          "slide": "page_001",
+          "element": "inactive_word",
+          "expected": "inactive",
+          "rendered": "inactive",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 58.0,
+          "rendered_ink_width_px": 57.258
+        },
+        {
+          "slide": "page_001",
+          "element": "gate_label1",
+          "expected": "E1",
+          "rendered": "E1",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 28.0,
+          "rendered_ink_width_px": 27.739
+        },
+        {
+          "slide": "page_001",
+          "element": "gate_label2",
+          "expected": "E2",
+          "rendered": "E2",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 31.75,
+          "rendered_ink_width_px": 31.495
+        },
+        {
+          "slide": "page_001",
+          "element": "gate_label3",
+          "expected": "E3",
+          "rendered": "E3",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 32.0,
+          "rendered_ink_width_px": 31.727
+        },
+        {
+          "slide": "page_001",
+          "element": "proc_label1",
+          "expected": "E1",
+          "rendered": "E1",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 29.0,
+          "rendered_ink_width_px": 28.727
+        },
+        {
+          "slide": "page_001",
+          "element": "proc_label2",
+          "expected": "E2",
+          "rendered": "E2",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 33.0,
+          "rendered_ink_width_px": 32.617
+        },
+        {
+          "slide": "page_001",
+          "element": "proc_label3",
+          "expected": "E3",
+          "rendered": "E3",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 33.25,
+          "rendered_ink_width_px": 32.857
+        },
+        {
+          "slide": "page_001",
+          "element": "process1",
+          "expected": "processes x",
+          "rendered": "processes x",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 111.0,
+          "rendered_ink_width_px": 110.459
+        },
+        {
+          "slide": "page_001",
+          "element": "process3",
+          "expected": "processes x",
+          "rendered": "processes x",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 111.0,
+          "rendered_ink_width_px": 110.459
+        },
+        {
+          "slide": "page_001",
+          "element": "gatedoff",
+          "expected": "gated off\n(no execution)",
+          "rendered": "gated off\r\n(no execution)",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 131.5,
+          "rendered_ink_width_px": 130.977
+        },
+        {
+          "slide": "page_001",
+          "element": "weighttitle",
+          "expected": "Gate weight\n(fixture constant)",
+          "rendered": "Gate weight\r\n(fixture constant)",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 154.5,
+          "rendered_ink_width_px": 154.264
+        },
+        {
+          "slide": "page_001",
+          "element": "weight06",
+          "expected": "0.6",
+          "rendered": "0.6",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 38.25,
+          "rendered_ink_width_px": 37.621
+        },
+        {
+          "slide": "page_001",
+          "element": "weight04",
+          "expected": "0.4",
+          "rendered": "0.4",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 35.25,
+          "rendered_ink_width_px": 35.142
+        },
+        {
+          "slide": "page_001",
+          "element": "mergelabel",
+          "expected": "Weighted",
+          "rendered": "Weighted",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 83.5,
+          "rendered_ink_width_px": 82.447
+        },
+        {
+          "slide": "page_001",
+          "element": "plus",
+          "expected": "+",
+          "rendered": "+ ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 15.25,
+          "rendered_ink_width_px": 15.119
+        },
+        {
+          "slide": "page_001",
+          "element": "result",
+          "expected": "y = 0.6 E1(x)\n+ 0.4 E3(x)",
+          "rendered": "y = 0.6 E1(x)\r\n+ 0.4 E3(x)",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 118.5,
+          "rendered_ink_width_px": 118.431
+        },
+        {
+          "slide": "page_001",
+          "element": "footer",
+          "expected": "Synthetic fixture | schematic, not measured",
+          "rendered": "Synthetic fixture | schematic, not measured",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 399.25,
+          "rendered_ink_width_px": 398.406
+        },
+        {
+          "slide": "page_001",
+          "element": "keytext1",
+          "expected": "active (selected)",
+          "rendered": "active (selected)",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 118.5,
+          "rendered_ink_width_px": 119.111
+        },
+        {
+          "slide": "page_001",
+          "element": "keytext2",
+          "expected": "inactive (gated off)",
+          "rendered": "inactive (gated off)",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 135.75,
+          "rendered_ink_width_px": 135.701
+        },
+        {
+          "slide": "page_001",
+          "element": "legendtitle",
+          "expected": "Legend",
+          "rendered": "Legend",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 61.75,
+          "rendered_ink_width_px": 61.552
+        },
+        {
+          "slide": "page_001",
+          "element": "legendw",
+          "expected": "w",
+          "rendered": "w",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 11.75,
+          "rendered_ink_width_px": 11.511
+        },
+        {
+          "slide": "page_001",
+          "element": "legendplus",
+          "expected": "+",
+          "rendered": "+",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 9.75,
+          "rendered_ink_width_px": 9.507
+        },
+        {
+          "slide": "page_001",
+          "element": "legendtext1",
+          "expected": "Data path (token x)",
+          "rendered": "Data path (token x)",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 137.5,
+          "rendered_ink_width_px": 137.442
+        },
+        {
+          "slide": "page_001",
+          "element": "legendtext2",
+          "expected": "Executed branch (active)",
+          "rendered": "Executed branch (active)",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 180.75,
+          "rendered_ink_width_px": 181.302
+        },
+        {
+          "slide": "page_001",
+          "element": "legendtext3",
+          "expected": "Gated-off branch (inactive)",
+          "rendered": "Gated-off branch (inactive)",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 195.5,
+          "rendered_ink_width_px": 195.435
+        },
+        {
+          "slide": "page_001",
+          "element": "legendtext4",
+          "expected": "Gate weight (fixture constant)",
+          "rendered": "Gate weight (fixture constant)",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 217.0,
+          "rendered_ink_width_px": 216.907
+        },
+        {
+          "slide": "page_001",
+          "element": "legendtext5",
+          "expected": "Additive merge",
+          "rendered": "Additive merge",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 111.0,
+          "rendered_ink_width_px": 111.26
+        },
+        {
+          "slide": "page_001",
+          "element": "merge_word",
+          "expected": "merge",
+          "rendered": "g\r\nmerge",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 55.25,
+          "rendered_ink_width_px": 54.551
+        },
+        {
+          "slide": "page_001",
+          "element": "additive_word",
+          "expected": "(additive)",
+          "rendered": "g\r\n(additive)",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 81.25,
+          "rendered_ink_width_px": 80.327
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "6ed91c5f114a319708b0d9af445715b888b8ccab45b6ced5517e9c4ae2fe85d5",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "page_001",
+      "mean_absolute_pixel_error": 0.021057,
+      "comparison": "page_001_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

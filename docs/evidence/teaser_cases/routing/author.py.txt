@@ -1,0 +1,64 @@
+import json
+from pathlib import Path
+P=Path('/tmp/teaser-routing-Dg29E2/job'); E=[]; teal='#007570'; gold='#B28B00'; black='#101010'
+def shape(id,box,kind='rect',color=teal,fill='#FFFFFF',container=None,dash=None):
+ d=dict(id=id,kind='shape',z=1 if not container else 2,box=box,shape=kind,stroke=color,stroke_width=2,fill=fill)
+ if container:d['container']=container
+ if dash:d['dash']=dash
+ E.append(d)
+def text(id,s,box,size=22,color=black,container=None,align='center'):
+ d=dict(id=id,kind='text',z=5,box=box,text=s,font_family='Arial',font_size=size,bold=True,color=color,align=align,valign='middle',fit='strict',wrap=False)
+ if container:d['container']=container
+ E.append(d)
+def line(id,a,b,color=black,arrow=False,dash=None,container=None):
+ d=dict(id=id,kind='line',z=3,points=[a,b],stroke=color,stroke_width=2.5)
+ if arrow:d.update(arrow=True,arrow_head={'length':16,'width':15})
+ if dash:d['dash']=dash;d['stroke_width']=1.8
+ if container:d['container']=container
+ E.append(d)
+def exempt(a,b,why):
+ d=next(d for d in E if d['id']==a);d.setdefault('allow_overlap_with',[]).append(b);d['overlap_reason']=why
+shape('gate',[311,135,218,585],'round_rect',dash=[10,5]);shape('input',[36,365,104,105],'round_rect',black)
+shape('e1gate',[331,221,81,49],'round_rect',container='gate');shape('e2gate',[331,394,81,50],'round_rect',gold,container='gate');shape('e3gate',[331,567,81,50],'round_rect',container='gate')
+shape('e1proc',[715,200,178,89]);shape('e2proc',[715,363,178,112],color=gold,dash=[9,5]);shape('e3proc',[715,550,178,88])
+shape('w06',[1020,204,137,80]);shape('w04',[1020,564,137,57]);shape('merge',[1225,403,84,87],'ellipse');shape('output',[1408,411,156,84],'round_rect',black)
+shape('legend',[36,743,359,196],'round_rect',black)
+text('title','One token, two active branches',[605,14,390,41],24)
+text('gate_title','Branch Gate',[345,94,152,37],21,teal)
+text('instruction','Select active\nbranches',[346,147,150,57],20,container='gate')
+text('input_text','Input\ntoken\nx',[44,373,88,87],22,container='input')
+text('active1','E1 active',[57,175,127,44],26,teal);text('active3','E3 active',[57,563,127,43],26,teal)
+text('inactive_e','E2',[154,344,41,41],27,gold);text('inactive_word','inactive',[195,350,73,32],19,gold)
+for n,y in [(1,224),(2,397),(3,570)]: text('gate_label'+str(n),'E'+str(n),[339,y,65,40],29, gold if n==2 else teal,'e'+str(n)+'gate')
+for n,y in [(1,208),(2,371),(3,558)]:
+ text('proc_label'+str(n),'E'+str(n),[752,y,104,43],30,gold if n==2 else teal,'e'+str(n)+'proc')
+text('process1','processes x',[730,246,148,37],21,container='e1proc');text('process3','processes x',[730,595,148,37],21,container='e3proc')
+text('gatedoff','gated off\n(no execution)',[725,409,158,56],21,container='e2proc')
+text('weighttitle','Gate weight\n(fixture constant)',[987,126,203,64],21,teal)
+text('weight06','0.6',[1033,223,111,44],29,teal,'w06');text('weight04','0.4',[1033,572,111,41],27,teal,'w04')
+text('mergelabel','Weighted\nmerge\n(additive)',[1287,341,106,83],21,teal)
+text('plus','+',[1240,420,53,53],32,teal,'merge')
+text('result','y = 0.6 E1(x)\n+ 0.4 E3(x)',[1415,423,142,64],21,container='output')
+text('footer','Synthetic fixture | schematic, not measured',[557,940,481,42],21)
+for tag,cx,cy,r,on in [('sel1',471,243,21,True),('sel2',471,417,21,False),('sel3',471,590,21,True),('key1',343,658,11,True),('key2',343,691,11,False)]:
+ shape(tag,[cx-r,cy-r,2*r,2*r],'ellipse',teal if on else gold,teal if on else gold,'gate')
+ if on:
+  line(tag+'a',[cx-r*.48,cy],[cx-r*.1,cy+r*.34],'#FFFFFF',container=tag);line(tag+'b',[cx-r*.1,cy+r*.34],[cx+r*.50,cy-r*.38],'#FFFFFF',container=tag);exempt(tag+'a',tag+'b','Source checkmark strokes join at their shared vertex.')
+ else:
+  line(tag+'a',[cx-r*.32,cy-r*.32],[cx+r*.32,cy+r*.32],'#FFFFFF',container=tag);line(tag+'b',[cx-r*.32,cy+r*.32],[cx+r*.32,cy-r*.32],'#FFFFFF',container=tag);exempt(tag+'a',tag+'b','Source inactive cross has two intersecting strokes.')
+text('keytext1','active (selected)',[367,642,151,31],15.5,container='gate',align='left');text('keytext2','inactive (gated off)',[367,675,155,32],15.5,container='gate',align='left')
+line('inputshaft',[140,419],[331,419]);line('trunk',[261,245],[261,591]);line('topbranch',[261,245],[329,245],arrow=True);line('botbranch',[261,591],[329,591],arrow=True)
+for a,b in [('inputshaft','trunk'),('trunk','topbranch'),('trunk','botbranch')]:exempt(a,b,'Source token route has a shared trunk junction.')
+for id,a,b in [('go1',[529,245],[711,245]),('go3',[529,591],[711,591]),('to06',[893,245],[1016,245]),('to04',[893,593],[1016,593]),('out',[1309,446],[1404,446])]:line(id,a,b,arrow=True)
+line('upperhorizontal',[1157,245],[1267,245]);line('uppervertical',[1267,245],[1267,399],arrow=True)
+line('lowerhorizontal',[1157,593],[1267,593]);line('lowervertical',[1267,593],[1267,494],arrow=True)
+exempt('upperhorizontal','uppervertical','Source upper elbow joins the downward merge route.');exempt('lowerhorizontal','lowervertical','Source lower elbow joins the upward merge route.')
+for k,y in [('top',313),('bottom',535)]:
+ line('sep'+k+'L',[43,y],[310,y],'#999999',dash=[11,6]);line('sep'+k+'R',[530,y],[1548,y],'#999999',dash=[11,6]);exempt('sep'+k+'L','trunk','Source dashed lane divider crosses token trunk.');exempt('sep'+k+'R','uppervertical' if k=='top' else 'lowervertical','Source dashed lane divider crosses merge route.')
+for id in ['inputshaft','topbranch','botbranch']:exempt(id,'gate','Source token connector crosses dashed gate boundary and enters branch node.')
+text('legendtitle','Legend',[53,744,120,31],18,container='legend',align='left')
+line('legend_arrow',[58,788],[119,788],arrow=True,container='legend')
+shape('legend_active',[59,806,55,21],container='legend');shape('legend_inactive',[59,835,55,21],color=gold,container='legend',dash=[8,4]);shape('legend_weight',[59,864,55,21],container='legend');shape('legend_merge',[69,894,35,35],'ellipse',container='legend')
+text('legendw','w',[67,861,39,27],15,teal,'legend_weight');text('legendplus','+',[75,895,23,32],19,teal,'legend_merge')
+for i,s,y in [(1,'Data path (token x)',775),(2,'Executed branch (active)',803),(3,'Gated-off branch (inactive)',831),(4,'Gate weight (fixture constant)',861),(5,'Additive merge',898)]:text('legendtext'+str(i),s,[146,y,242,29],15.5,container='legend',align='left')
+scene={'version':1,'slides':[{'id':'page_001','width':1586,'height':992,'source':'pages/page_001/source.png','background':'#FFFFFF','reviewed':True,'notes':'Reconstruction of super_teaser synthetic schematic; not a paper-original figure. All text and geometry native. Source face uncertain; Arial used.','elements':E}]};(P/'scene.json').write_text(json.dumps(scene,indent=2));(P/'scene_01.json').write_text(json.dumps(scene,indent=2))

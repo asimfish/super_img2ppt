@@ -1,0 +1,11 @@
+from pathlib import Path
+from PIL import Image,ImageDraw
+import json,sys
+r=Path('/tmp/embodied-forward-TNEbMc');b=r/sys.argv[1];s=Image.open(r/'job/pages/page_001/source.png').convert('RGB');p=Image.open(b/'render/page_001.png').convert('RGB').resize(s.size,Image.Resampling.LANCZOS);p.save(b/'render/source_size.png');c=json.loads((r/'roi_contract.json').read_text());rows=[]
+def stats(a):
+ m={(x,y) for y in range(a.height) for x in range(a.width) if min(a.getpixel((x,y)))<160};xs=[v[0] for v in m];ys=[v[1] for v in m];return m,[min(xs),min(ys),max(xs)+1,max(ys)+1],[sum(xs)/len(xs),sum(ys)/len(ys)]
+for q in c['rois']:
+ x,y,w,h=q['box'];a,ab,ac=stats(s.crop((x,y,x+w,y+h)));v,vb,vc=stats(p.crop((x,y,x+w,y+h)));edge=max(abs(i-j) for i,j in zip(ab,vb));cent=max(abs(i-j) for i,j in zip(ac,vc));iou=len(a&v)/len(a|v);rows.append({**q,'source_bbox':ab,'render_bbox':vb,'max_edge_error_px':edge,'max_centroid_error_px':cent,'ink_iou':iou,'pass':edge<=4 and cent<=4 and iou>=.45})
+(b/'roi_measurements.json').write_text(json.dumps(rows,indent=2));print(json.dumps(rows,indent=2))
+for name,box in [('hierarchy',(750,140,1580,675)),('dense',(780,360,1390,670)),('left',(150,70,725,760)),('steps',(750,675,1570,970))]:
+ a=s.crop(box);v=p.crop(box);out=Image.new('RGB',(a.width*2,a.height+26),'white');out.paste(a,(0,26));out.paste(v,(a.width,26));d=ImageDraw.Draw(out);d.text((8,6),'SOURCE',fill='black');d.text((a.width+8,6),'ACTUAL LIBREOFFICE PPTX',fill='black');out.save(b/'render'/('detail_'+name+'.png'))

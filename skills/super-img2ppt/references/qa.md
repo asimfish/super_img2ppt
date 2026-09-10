@@ -10,6 +10,12 @@
 | comparison image | Source beside a rasterization of the actual PPTX and a difference heatmap | Automatic fidelity acceptance; antialiasing affects pixel differences |
 | fonts manifest | Actual locally resolved font files and substitutions | Availability/licensing on a different computer |
 
+PDF ink and font checks attribute a complete native PDF text object only when its text and
+all glyph centers identify one scene text element. This prevents neighboring labels from
+contaminating the empty part of a text frame. Missing or ambiguous ownership retains the
+conservative geometric checks. Actual owned glyph overflow, missing text and font substitutions
+remain checked; this is not a guarantee of exact source typography.
+
 The aggregate status is `fail`, `review`, `pass` or `unverified`; `visual_review` stays `required`
 because that is an agent/user inspection, not a machine truth. Keep a short visual-review note
 with inspected page IDs, concrete remaining differences and the renderer/application used.

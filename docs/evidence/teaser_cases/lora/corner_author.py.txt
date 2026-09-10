@@ -1,0 +1,16 @@
+from pathlib import Path
+import json,math
+r=Path('/tmp/lora-forward-LO8vEs');p=r/'job/scene.json';s=json.loads(p.read_text());els=s['slides'][0]['elements'];by={e['id']:e for e in els}
+corners=[('input_upper','up',1,'upEnd',0,(287,205),180,270),('input_lower','down',1,'downEnd',0,(287,568),180,90),('output_upper','wRoute',1,'wDown',0,(1238,204),270,360),('output_lower','ar',1,'arUp',0,(1238,568),90,0)]
+for name,a,ai,b,bi,c,start,end in corners:
+ pts=[[round(c[0]+12*math.cos(math.radians(start+(end-start)*i/4)),6),round(c[1]+12*math.sin(math.radians(start+(end-start)*i/4)),6)] for i in range(5)]
+ by[a]['points'][ai]=pts[0];by[b]['points'][bi]=pts[-1]
+ for x,y in [(a,b),(b,a)]:by[x]['allow_overlap_with']=[z for z in by[x].get('allow_overlap_with',[]) if z!=y]
+ arc=[]
+ for i in range(4):
+  e={'id':name+'_arc'+str(i),'kind':'line','z':2,'points':pts[i:i+2],'stroke':'#111111','stroke_width':by[a]['stroke_width']+(by[b]['stroke_width']-by[a]['stroke_width'])*(i+.5)/4,'allow_overlap_with':[],'overlap_reason':'Source verified rounded connector approximated by four bounded native chords; only adjacent chord endpoint joins.'};els.append(e);by[e['id']]=e;arc.append(e['id'])
+ chain=[a]+arc+[b]
+ for x,y in zip(chain,chain[1:]):
+  for v,w in [(x,y),(y,x)]:by[v].setdefault('allow_overlap_with',[]).append(w)
+s['slides'][0]['notes']+=' Corner candidate: four 12 source-pixel elbows approximated with four native line chords each; no runtime curved path capability.'
+(r/'job/scene_corner_candidate.json').write_text(json.dumps(s,indent=2))

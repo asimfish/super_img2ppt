@@ -1,6 +1,6 @@
 # Scoped security and capability review
 
-Reviewed 2026-09-07. Scope: the complete skill directory and its local runtime, repository setup,
+Reviewed 2026-09-10. Scope: the complete skill directory and its local runtime, repository setup,
 fixtures and packaging scripts. Verdict: no known blocking source-to-sink finding after the
 controls below; this is not a claim that native third-party document parsers are sandboxed.
 
@@ -40,6 +40,14 @@ attribution and complete license notices; the DDPM author-site artwork stays loc
 general redistribution grant was not established. The Matplotlib URL returned two PNG byte
 encodings with identical RGB data. The first hash rejection is retained; only the two inspected
 byte hashes are allowed, with no arbitrary-content or decoded-pixel acceptance fallback.
+
+The v0.3.1 delta groups already-parsed PDF glyphs by native text-object identity and applies
+only unique content-and-position ownership to ink/font measurements. The source is a local
+LibreOffice PDF; the sink is the validation report. Ambiguous ownership retains conservative
+bounds, with duplicate-owner, true-overflow and missing-text negative controls. Storage is
+linear in PDF character count; no new parser, subprocess, network, credential or installation
+capability is introduced. The repository fetcher adds three commit-pinned MIT-0 generated
+illustrations with exact SHA-256 checks. Native PDF parsing remains outside an OS sandbox.
 
 ## Sources and sinks
 

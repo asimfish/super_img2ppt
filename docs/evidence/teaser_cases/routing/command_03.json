@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/Users/liyufeng/Code/super_img2ppt/.venv/bin/python",
+    "-m",
+    "super_img2ppt",
+    "build",
+    "--help"
+  ],
+  "env_overrides": {
+    "PATH": "/opt/homebrew/bin:/Users/liyufeng/.nvm/versions/node/v24.14.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/codex-path:/Users/liyufeng/.kimi-code/bin:/Users/liyufeng/.bun/bin:/Users/liyufeng/.local/bin:/Users/liyufeng/.nvm/versions/node/v24.14.0/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pmk/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/VMware Fusion.app/Contents/Public:/opt/homebrew/bin:/Users/liyufeng/.whalent-agent/profiles/acct-63aacf96110c0e9595f3/agents/rjguoiuibvgcfiv8w56gq7bu5/codex/tmp/arg0/codex-arg0F6Haky:/Users/liyufeng/.nvm/versions/node/v24.14.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/codex-path:/Users/liyufeng/.kimi-code/bin:/Users/liyufeng/.bun/bin:/Users/liyufeng/.local/bin:/Users/liyufeng/.nvm/versions/node/v24.14.0/bin:/Users/liyufeng/.cargo/bin:/Users/liyufeng/Library/pnpm:/Applications/Obsidian.app/Contents/MacOS:/Applications/Obsidian.app/Contents/MacOS",
+    "PYTHONPATH": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-teaser-v030-vjfeo8j1/super-img2ppt/src"
+  },
+  "exit_code": 0,
+  "seconds": 0.2792196670197882,
+  "stdout": "usage: super-img2ppt build [-h] --out OUT [--font-dir FONT_DIR] [--no-render]\n                           scene\n\npositional arguments:\n  scene\n\noptions:\n  -h, --help           show this help message and exit\n  --out OUT\n  --font-dir FONT_DIR\n  --no-render          Produce an explicitly unverified draft\n",
+  "stderr": ""
+}

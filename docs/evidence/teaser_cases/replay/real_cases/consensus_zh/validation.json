@@ -1,0 +1,494 @@
+{
+  "status": "pass",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "pass",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "edit_question_line1",
+            "edit_decision"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "edit_question_line2",
+            "edit_decision"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "edit_question_mark",
+            "edit_decision"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "shape": 6,
+            "line": 8,
+            "text": 15
+          },
+          "intentional_overlaps": [],
+          "text_layouts": {
+            "past_text": {
+              "scale": 1,
+              "effective_font_size_px": 42,
+              "width_px": 210.0,
+              "height_px": 48.3,
+              "available_width_px": 218,
+              "available_height_px": 51,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 210.5,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "过去的共识"
+              ]
+            },
+            "edit_text": {
+              "scale": 1,
+              "effective_font_size_px": 42,
+              "width_px": 84.0,
+              "height_px": 48.3,
+              "available_width_px": 94,
+              "available_height_px": 51,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 84.5,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "编辑"
+              ]
+            },
+            "seek_text": {
+              "scale": 1,
+              "effective_font_size_px": 42,
+              "width_px": 168.0,
+              "height_px": 48.3,
+              "available_width_px": 178,
+              "available_height_px": 51,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 168.5,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "寻求共识"
+              ]
+            },
+            "new_text": {
+              "scale": 1,
+              "effective_font_size_px": 42,
+              "width_px": 168.0,
+              "height_px": 48.3,
+              "available_width_px": 178,
+              "available_height_px": 51,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 168.5,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "新的共识"
+              ]
+            },
+            "edit_question_line1": {
+              "scale": 1,
+              "effective_font_size_px": 38,
+              "width_px": 228.0,
+              "height_px": 43.7,
+              "available_width_px": 229.0,
+              "available_height_px": 44.699999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 228.5,
+              "required_height_px": 44.2,
+              "fits": true,
+              "lines": [
+                "将当时的条目"
+              ]
+            },
+            "edit_question_line2": {
+              "scale": 1,
+              "effective_font_size_px": 38,
+              "width_px": 190.0,
+              "height_px": 43.7,
+              "available_width_px": 191.0,
+              "available_height_px": 44.699999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 190.5,
+              "required_height_px": 44.2,
+              "fits": true,
+              "lines": [
+                "进一步编辑"
+              ]
+            },
+            "edit_question_mark": {
+              "scale": 1,
+              "effective_font_size_px": 38,
+              "width_px": 21.25,
+              "height_px": 42.75,
+              "available_width_px": 22,
+              "available_height_px": 43.25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 21.75,
+              "required_height_px": 43.25,
+              "fits": true,
+              "lines": [
+                "?"
+              ]
+            },
+            "consensus_question_phrase": {
+              "scale": 1,
+              "effective_font_size_px": 42,
+              "width_px": 168.0,
+              "height_px": 48.3,
+              "available_width_px": 169,
+              "available_height_px": 51,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 168.5,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "赞成变更"
+              ]
+            },
+            "consensus_question_mark": {
+              "scale": 1,
+              "effective_font_size_px": 42,
+              "width_px": 24.0,
+              "height_px": 48.3,
+              "available_width_px": 25,
+              "available_height_px": 51,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 24.5,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "?"
+              ]
+            },
+            "wait_label": {
+              "scale": 1,
+              "effective_font_size_px": 34,
+              "width_px": 68.0,
+              "height_px": 39.1,
+              "available_width_px": 76,
+              "available_height_px": 41,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.5,
+              "required_height_px": 39.6,
+              "fits": true,
+              "lines": [
+                "等待"
+              ]
+            },
+            "execute_label": {
+              "scale": 1,
+              "effective_font_size_px": 34,
+              "width_px": 68.0,
+              "height_px": 39.1,
+              "available_width_px": 76,
+              "available_height_px": 41,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.5,
+              "required_height_px": 39.6,
+              "fits": true,
+              "lines": [
+                "执行"
+              ]
+            },
+            "yes_label": {
+              "scale": 1,
+              "effective_font_size_px": 34,
+              "width_px": 34.0,
+              "height_px": 39.1,
+              "available_width_px": 42,
+              "available_height_px": 41,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 34.5,
+              "required_height_px": 39.6,
+              "fits": true,
+              "lines": [
+                "是"
+              ]
+            },
+            "no_label": {
+              "scale": 1,
+              "effective_font_size_px": 34,
+              "width_px": 34.0,
+              "height_px": 39.1,
+              "available_width_px": 42,
+              "available_height_px": 41,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 34.5,
+              "required_height_px": 39.6,
+              "fits": true,
+              "lines": [
+                "否"
+              ]
+            },
+            "opposition_label": {
+              "scale": 1,
+              "effective_font_size_px": 34,
+              "width_px": 68.0,
+              "height_px": 39.1,
+              "available_width_px": 76,
+              "available_height_px": 41,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.5,
+              "required_height_px": 39.6,
+              "fits": true,
+              "lines": [
+                "反对"
+              ]
+            },
+            "approval_label": {
+              "scale": 1,
+              "effective_font_size_px": 34,
+              "width_px": 68.0,
+              "height_px": 39.1,
+              "available_width_px": 76,
+              "available_height_px": 41,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.5,
+              "required_height_px": 39.6,
+              "fits": true,
+              "lines": [
+                "赞成"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "pass",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [],
+      "text_boxes": [
+        {
+          "slide": "page_001",
+          "element": "past_text",
+          "expected": "过去的共识",
+          "rendered": "过去的共识",
+          "matches": true,
+          "actual_fonts": [
+            "HiraginoSansGB-W3"
+          ],
+          "measured_ink_width_px": 207.25,
+          "rendered_ink_width_px": 207.272
+        },
+        {
+          "slide": "page_001",
+          "element": "edit_text",
+          "expected": "编辑",
+          "rendered": "编辑 ",
+          "matches": true,
+          "actual_fonts": [
+            "HiraginoSansGB-W3"
+          ],
+          "measured_ink_width_px": 80.75,
+          "rendered_ink_width_px": 80.657
+        },
+        {
+          "slide": "page_001",
+          "element": "seek_text",
+          "expected": "寻求共识",
+          "rendered": "寻求共识",
+          "matches": true,
+          "actual_fonts": [
+            "HiraginoSansGB-W3"
+          ],
+          "measured_ink_width_px": 164.0,
+          "rendered_ink_width_px": 163.919
+        },
+        {
+          "slide": "page_001",
+          "element": "new_text",
+          "expected": "新的共识",
+          "rendered": "新的共识",
+          "matches": true,
+          "actual_fonts": [
+            "HiraginoSansGB-W3"
+          ],
+          "measured_ink_width_px": 165.75,
+          "rendered_ink_width_px": 165.684
+        },
+        {
+          "slide": "page_001",
+          "element": "edit_question_line1",
+          "expected": "将当时的条目",
+          "rendered": "将当时的条目",
+          "matches": true,
+          "actual_fonts": [
+            "HiraginoSansGB-W3"
+          ],
+          "measured_ink_width_px": 220.25,
+          "rendered_ink_width_px": 220.133
+        },
+        {
+          "slide": "page_001",
+          "element": "edit_question_line2",
+          "expected": "进一步编辑",
+          "rendered": "进一步编辑 ",
+          "matches": true,
+          "actual_fonts": [
+            "HiraginoSansGB-W3"
+          ],
+          "measured_ink_width_px": 187.5,
+          "rendered_ink_width_px": 187.328
+        },
+        {
+          "slide": "page_001",
+          "element": "edit_question_mark",
+          "expected": "?",
+          "rendered": "?",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 17.75,
+          "rendered_ink_width_px": 17.562
+        },
+        {
+          "slide": "page_001",
+          "element": "consensus_question_phrase",
+          "expected": "赞成变更",
+          "rendered": "赞成变更 ",
+          "matches": true,
+          "actual_fonts": [
+            "HiraginoSansGB-W3"
+          ],
+          "measured_ink_width_px": 164.75,
+          "rendered_ink_width_px": 164.465
+        },
+        {
+          "slide": "page_001",
+          "element": "consensus_question_mark",
+          "expected": "?",
+          "rendered": "?",
+          "matches": true,
+          "actual_fonts": [
+            "HiraginoSansGB-W3"
+          ],
+          "measured_ink_width_px": 21.5,
+          "rendered_ink_width_px": 21.467
+        },
+        {
+          "slide": "page_001",
+          "element": "wait_label",
+          "expected": "等待",
+          "rendered": "等待",
+          "matches": true,
+          "actual_fonts": [
+            "HiraginoSansGB-W3"
+          ],
+          "measured_ink_width_px": 64.5,
+          "rendered_ink_width_px": 64.201
+        },
+        {
+          "slide": "page_001",
+          "element": "execute_label",
+          "expected": "执行",
+          "rendered": "执行",
+          "matches": true,
+          "actual_fonts": [
+            "HiraginoSansGB-W3"
+          ],
+          "measured_ink_width_px": 64.5,
+          "rendered_ink_width_px": 64.337
+        },
+        {
+          "slide": "page_001",
+          "element": "yes_label",
+          "expected": "是",
+          "rendered": "是",
+          "matches": true,
+          "actual_fonts": [
+            "HiraginoSansGB-W3"
+          ],
+          "measured_ink_width_px": 30.75,
+          "rendered_ink_width_px": 30.418
+        },
+        {
+          "slide": "page_001",
+          "element": "no_label",
+          "expected": "否",
+          "rendered": "否",
+          "matches": true,
+          "actual_fonts": [
+            "HiraginoSansGB-W3"
+          ],
+          "measured_ink_width_px": 30.75,
+          "rendered_ink_width_px": 30.52
+        },
+        {
+          "slide": "page_001",
+          "element": "opposition_label",
+          "expected": "反对",
+          "rendered": "反对",
+          "matches": true,
+          "actual_fonts": [
+            "HiraginoSansGB-W3"
+          ],
+          "measured_ink_width_px": 64.75,
+          "rendered_ink_width_px": 64.609
+        },
+        {
+          "slide": "page_001",
+          "element": "approval_label",
+          "expected": "赞成",
+          "rendered": "赞成",
+          "matches": true,
+          "actual_fonts": [
+            "HiraginoSansGB-W3"
+          ],
+          "measured_ink_width_px": 65.0,
+          "rendered_ink_width_px": 64.847
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "83c7f69ac7c857dff3953168bc9333530839fa5067a1e18c2573ac4bb4254ee4",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "page_001",
+      "mean_absolute_pixel_error": 0.022191,
+      "comparison": "page_001_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

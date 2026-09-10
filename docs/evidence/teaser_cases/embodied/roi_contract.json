@@ -1,0 +1,245 @@
+{
+  "coordinate_system": "source pixels xywh",
+  "frozen_before_authoring": true,
+  "thresholds": {
+    "ink_bbox_max_edge_error_px": 4,
+    "ink_centroid_max_error_px": 4,
+    "min_ink_iou": 0.45
+  },
+  "rois": [
+    {
+      "id": "title",
+      "box": [
+        18,
+        12,
+        395,
+        28
+      ]
+    },
+    {
+      "id": "task",
+      "box": [
+        156,
+        78,
+        211,
+        29
+      ]
+    },
+    {
+      "id": "observation",
+      "box": [
+        193,
+        167,
+        154,
+        29
+      ]
+    },
+    {
+      "id": "images_header",
+      "box": [
+        562,
+        148,
+        115,
+        48
+      ]
+    },
+    {
+      "id": "camera_label",
+      "box": [
+        561,
+        210,
+        118,
+        28
+      ]
+    },
+    {
+      "id": "task_tokens_header",
+      "box": [
+        850,
+        42,
+        203,
+        28
+      ]
+    },
+    {
+      "id": "token_put",
+      "box": [
+        857,
+        83,
+        34,
+        25
+      ]
+    },
+    {
+      "id": "token_dishes",
+      "box": [
+        1024,
+        83,
+        59,
+        25
+      ]
+    },
+    {
+      "id": "prediction",
+      "box": [
+        875,
+        196,
+        236,
+        34
+      ]
+    },
+    {
+      "id": "predicted_label",
+      "box": [
+        1201,
+        171,
+        155,
+        29
+      ]
+    },
+    {
+      "id": "predicted_text",
+      "box": [
+        1201,
+        207,
+        158,
+        32
+      ]
+    },
+    {
+      "id": "modes",
+      "box": [
+        1430,
+        261,
+        133,
+        67
+      ]
+    },
+    {
+      "id": "expert",
+      "box": [
+        976,
+        375,
+        207,
+        35
+      ]
+    },
+    {
+      "id": "context",
+      "box": [
+        809,
+        394,
+        64,
+        25
+      ]
+    },
+    {
+      "id": "flow_title",
+      "box": [
+        1044,
+        423,
+        105,
+        25
+      ]
+    },
+    {
+      "id": "robot_label",
+      "box": [
+        566,
+        639,
+        104,
+        29
+      ]
+    },
+    {
+      "id": "noise",
+      "box": [
+        1000,
+        618,
+        48,
+        25
+      ]
+    },
+    {
+      "id": "step1",
+      "box": [
+        811,
+        866,
+        113,
+        34
+      ]
+    },
+    {
+      "id": "step2",
+      "box": [
+        1066,
+        866,
+        169,
+        34
+      ]
+    },
+    {
+      "id": "step3",
+      "box": [
+        1331,
+        866,
+        196,
+        34
+      ]
+    },
+    {
+      "id": "execution",
+      "box": [
+        1060,
+        930,
+        190,
+        32
+      ]
+    },
+    {
+      "id": "footer",
+      "box": [
+        16,
+        943,
+        500,
+        28
+      ]
+    },
+    {
+      "id": "token_top",
+      "box": [
+        846,
+        73,
+        330,
+        7
+      ]
+    },
+    {
+      "id": "vla_left",
+      "box": [
+        844,
+        166,
+        8,
+        94
+      ]
+    },
+    {
+      "id": "green_bottom",
+      "box": [
+        792,
+        655,
+        586,
+        8
+      ]
+    },
+    {
+      "id": "down_arrow",
+      "box": [
+        1307,
+        551,
+        19,
+        132
+      ]
+    }
+  ]
+}

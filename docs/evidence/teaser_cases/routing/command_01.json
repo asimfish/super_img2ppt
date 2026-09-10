@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/liyufeng/Code/super_img2ppt/.venv/bin/python",
+    "-m",
+    "super_img2ppt",
+    "doctor"
+  ],
+  "env_overrides": {
+    "PATH": "/opt/homebrew/bin:/Users/liyufeng/.nvm/versions/node/v24.14.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/codex-path:/Users/liyufeng/.kimi-code/bin:/Users/liyufeng/.bun/bin:/Users/liyufeng/.local/bin:/Users/liyufeng/.nvm/versions/node/v24.14.0/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pmk/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/VMware Fusion.app/Contents/Public:/opt/homebrew/bin:/Users/liyufeng/.whalent-agent/profiles/acct-63aacf96110c0e9595f3/agents/rjguoiuibvgcfiv8w56gq7bu5/codex/tmp/arg0/codex-arg0F6Haky:/Users/liyufeng/.nvm/versions/node/v24.14.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/codex-path:/Users/liyufeng/.kimi-code/bin:/Users/liyufeng/.bun/bin:/Users/liyufeng/.local/bin:/Users/liyufeng/.nvm/versions/node/v24.14.0/bin:/Users/liyufeng/.cargo/bin:/Users/liyufeng/Library/pnpm:/Applications/Obsidian.app/Contents/MacOS:/Applications/Obsidian.app/Contents/MacOS",
+    "PYTHONPATH": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-teaser-v030-vjfeo8j1/super-img2ppt/src"
+  },
+  "exit_code": 0,
+  "seconds": 0.30608987499726936,
+  "stdout": "{\n  \"python\": \"3.12.12\",\n  \"packages\": {\n    \"super-img2ppt\": \"0.3.0\",\n    \"python-pptx\": \"1.0.2\",\n    \"Pillow\": \"12.3.0\",\n    \"fonttools\": \"4.64.0\",\n    \"pypdfium2\": \"5.13.0\",\n    \"jsonschema\": \"4.26.0\"\n  },\n  \"tools\": {\n    \"soffice\": \"/opt/homebrew/bin/soffice\",\n    \"tesseract\": \"/opt/homebrew/bin/tesseract\",\n    \"swift\": \"/usr/bin/swift\",\n    \"fc-list\": \"/opt/homebrew/bin/fc-list\"\n  },\n  \"network_required_for_conversion\": false\n}\n",
+  "stderr": ""
+}

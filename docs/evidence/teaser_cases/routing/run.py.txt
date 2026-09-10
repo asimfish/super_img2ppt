@@ -1,0 +1,4 @@
+import os,sys,time,subprocess,json
+from pathlib import Path
+root=Path('/tmp/teaser-routing-Dg29E2'); env=os.environ.copy();env['PATH']='/opt/homebrew/bin:'+env['PATH'];env['PYTHONPATH']='/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-teaser-v030-vjfeo8j1/super-img2ppt/src'
+args=[sys.executable,'-m','super_img2ppt']+sys.argv[1:]; t=time.monotonic(); p=subprocess.run(args,env=env,capture_output=True,text=True); d={'command':args,'env_overrides':{k:env[k] for k in ['PATH','PYTHONPATH']},'exit_code':p.returncode,'seconds':time.monotonic()-t,'stdout':p.stdout,'stderr':p.stderr}; n=len(list(root.glob('command_*.json')))+1;(root/f'command_{n:02d}.json').write_text(json.dumps(d,indent=2)); print(json.dumps(d,indent=2));sys.exit(p.returncode)

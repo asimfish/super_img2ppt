@@ -1,0 +1,10 @@
+from pathlib import Path
+import shutil,hashlib,json
+r=Path('/tmp/embodied-candidate-DDfRv2');old=Path('/tmp/embodied-forward-TNEbMc');src=Path('/Users/liyufeng/Code/super_img2ppt/skills/super-img2ppt');shutil.copytree(src,r/'frozen_skill',ignore=shutil.ignore_patterns('__pycache__','*.pyc'));h={str(p.relative_to(r/'frozen_skill')):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((r/'frozen_skill').rglob('*')) if p.is_file()};(r/'candidate_hashes.json').write_text(json.dumps(h,indent=2))
+for n in ['04','06']:
+ shutil.copytree(old/('build_'+n),r/('input_'+n));
+p=r/'input_06/scene.resolved.json';s=json.loads(p.read_text());next(e for e in s['slides'][0]['elements'] if e['id']=='flow_title')['box'][2]=120;p.write_text(json.dumps(s,indent=2))
+shutil.copy2(old/'roi_contract.json',r/'roi_contract.json');shutil.copy2(old/'roi_contract.sha256',r/'roi_contract.sha256')
+s=(old/'run.py').read_text().replace('/tmp/embodied-forward-TNEbMc','/tmp/embodied-candidate-DDfRv2').replace('/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-teaser-v030-vjfeo8j1/super-img2ppt/src','/tmp/embodied-candidate-DDfRv2/frozen_skill/src');(r/'run.py').write_text(s)
+s=(old/'measure.py').read_text().replace("r=Path('/tmp/embodied-forward-TNEbMc')","r=Path('/tmp/embodied-candidate-DDfRv2')").replace("r/'job/pages/page_001/source.png'","Path('/tmp/embodied-forward-TNEbMc/job/pages/page_001/source.png')");(r/'measure.py').write_text(s)
+print('Opaque freeze files:',len(h));print('Original04 scene hash',hashlib.sha256((old/'build_04/scene.resolved.json').read_bytes()).hexdigest());print('Copied04 scene hash',hashlib.sha256((r/'input_04/scene.resolved.json').read_bytes()).hexdigest())

@@ -14,12 +14,12 @@
 可直接下载仓库中的 [可编辑样例](examples/editable_demo.pptx)，对照
 [原图](examples/source_02.png) 和 [重建场景](examples/flow_reconstruction.json)。
 
-**v0.3.0 新测 CLIP、Swin、密集热力图和 DDPM 表格/曲线四种真实图。**
-增加原生凸多边形、线性渐变，修复文字与下标的碰撞误报，全套 **65 项测试通过**。
-CLIP 的四个编码器成为原生梯形，热力图色条不再由数百条小矩形拼接，实际渲染的黑缝消失。
-可编辑文件、原图对照和剩余差异见 [四种新案例报告](docs/diverse_cases.md)。
-累计测试 13 张真实图片；此前的 [ICLR 论文图](docs/conference_cases.md) 和
-[六个通用案例](docs/real_cases.md) 保留独立记录，旧密集表格仍有一处字体/网格冲突。
+**v0.3.1 新测 super_teaser 的 LoRA、专家路由、具身分层推理三类图。**
+修复 PDF 检查把邻近文字误算进空白文本框的问题，全套 **67 项测试通过**。
+路由图 25 个固定区域达标；LoRA 和具身图仍有字体、公式等保真差异，未宣称整图通过。
+可编辑文件、实际渲染和失败证据见 [三类复杂图报告](docs/teaser_cases.md)。
+此前的 [四种新案例](docs/diverse_cases.md)、[ICLR 论文图](docs/conference_cases.md) 和
+[六个通用案例](docs/real_cases.md) 保留记录，旧密集表格仍有字体/网格冲突。
 
 ## 有哪些实际改进
 

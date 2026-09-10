@@ -1,0 +1,267 @@
+{
+  "source_size": [
+    1586,
+    992
+  ],
+  "source_sha256": "dbb4273914d4fa86e82b63b7053ede38f5f40890f0e90891f4f009e7c283831b",
+  "fixed_before_scene": true,
+  "thresholds": {
+    "dark_ink_rgb_max": 170,
+    "colored_ink_min_chroma": 45,
+    "bbox_edge_max_delta_px": 4,
+    "centroid_max_delta_px": 4,
+    "ink_count_relative_max_delta": 0.25
+  },
+  "rois": [
+    {
+      "id": "title",
+      "box": [
+        625,
+        15,
+        975,
+        55
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "gate_title",
+      "box": [
+        350,
+        94,
+        485,
+        124
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "gate_instruction",
+      "box": [
+        355,
+        147,
+        485,
+        201
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "active1_label",
+      "box": [
+        60,
+        175,
+        180,
+        215
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "active3_label",
+      "box": [
+        60,
+        563,
+        182,
+        604
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "inactive_label",
+      "box": [
+        150,
+        344,
+        270,
+        382
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "input_text",
+      "box": [
+        55,
+        373,
+        121,
+        463
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "E1_gate",
+      "box": [
+        350,
+        223,
+        392,
+        264
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "E2_gate",
+      "box": [
+        350,
+        397,
+        392,
+        437
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "E3_gate",
+      "box": [
+        350,
+        570,
+        392,
+        610
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "E1_processor",
+      "box": [
+        738,
+        210,
+        869,
+        279
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "E2_processor",
+      "box": [
+        730,
+        375,
+        879,
+        464
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "E3_processor",
+      "box": [
+        738,
+        561,
+        869,
+        629
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "weight_title",
+      "box": [
+        998,
+        125,
+        1178,
+        186
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "weight06",
+      "box": [
+        1059,
+        223,
+        1122,
+        264
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "weight04",
+      "box": [
+        1060,
+        572,
+        1124,
+        613
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "merge_label",
+      "box": [
+        1287,
+        340,
+        1397,
+        421
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "output",
+      "box": [
+        1418,
+        419,
+        1555,
+        485
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "footer",
+      "box": [
+        580,
+        941,
+        1005,
+        976
+      ],
+      "kind": "text"
+    },
+    {
+      "id": "top_connector",
+      "box": [
+        536,
+        234,
+        710,
+        256
+      ],
+      "kind": "line"
+    },
+    {
+      "id": "bottom_connector",
+      "box": [
+        536,
+        579,
+        710,
+        602
+      ],
+      "kind": "line"
+    },
+    {
+      "id": "upper_merge_vertical",
+      "box": [
+        1256,
+        250,
+        1279,
+        398
+      ],
+      "kind": "line"
+    },
+    {
+      "id": "lower_merge_vertical",
+      "box": [
+        1256,
+        494,
+        1279,
+        586
+      ],
+      "kind": "line"
+    },
+    {
+      "id": "separator_top",
+      "box": [
+        541,
+        304,
+        1205,
+        321
+      ],
+      "kind": "line"
+    },
+    {
+      "id": "legend_text",
+      "box": [
+        140,
+        776,
+        375,
+        928
+      ],
+      "kind": "text"
+    }
+  ]
+}

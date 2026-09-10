@@ -1,0 +1,17 @@
+from PIL import Image
+from pathlib import Path
+import json,sys
+p=Path('/tmp/teaser-routing-Dg29E2');c=json.loads((p/'roi_contract.json').read_text());src=Image.open(p/'job/pages/page_001/source.png').convert('RGB');run=sys.argv[1];out=Image.open(p/run/'render/page_001.png').convert('RGB').resize(src.size,Image.Resampling.LANCZOS)
+out.save(p/(run+'_normalized.png'));out.crop((290,125,910,730)).save(p/(run+'_dense.png'));out.crop((1210,330,1575,630)).save(p/(run+'_merge.png'))
+def ink(im,b):
+ px=im.crop(b);coords=[]
+ for y in range(px.height):
+  for x in range(px.width):
+   rgb=px.getpixel((x,y))
+   if max(rgb)<170 or (max(rgb)-min(rgb)>45 and min(rgb)<170): coords.append((x+b[0],y+b[1]))
+ if not coords:return None
+ return {'bbox':[min(a[0] for a in coords),min(a[1] for a in coords),max(a[0] for a in coords)+1,max(a[1] for a in coords)+1],'centroid':[sum(a[k] for a in coords)/len(coords) for k in [0,1]],'count':len(coords)}
+rows=[]
+for r in c['rois']:
+ a=ink(src,r['box']);b=ink(out,r['box']);edge=max(abs(x-y) for x,y in zip(a['bbox'],b['bbox']));cen=max(abs(x-y) for x,y in zip(a['centroid'],b['centroid']));delta=abs(b['count']/a['count']-1);rows.append(dict(**r,source=a,render=b,max_edge_delta_px=edge,max_centroid_delta_px=cen,ink_count_relative_delta=delta,pass_fixed_thresholds=edge<=4 and cen<=4 and delta<=.25))
+(p/(run+'_roi_measurements.json')).write_text(json.dumps(rows,indent=2));print(json.dumps([{k:r[k] for k in ['id','max_edge_delta_px','max_centroid_delta_px','ink_count_relative_delta','pass_fixed_thresholds']} for r in rows],indent=2))

@@ -1,0 +1,998 @@
+{
+  "status": "pass",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "pass",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "title",
+            "titleSub"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "formula1",
+            "formulaSub"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "shape": 13,
+            "line": 45,
+            "text": 15,
+            "image": 3
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "W",
+                "Wv1"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 510.0
+            },
+            {
+              "elements": [
+                "W",
+                "Wv2"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 510.0
+            },
+            {
+              "elements": [
+                "W",
+                "Wv3"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 510.0
+            },
+            {
+              "elements": [
+                "W",
+                "Wv4"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 510.0
+            },
+            {
+              "elements": [
+                "W",
+                "Wv5"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 510.0
+            },
+            {
+              "elements": [
+                "W",
+                "Wh1"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 768.0
+            },
+            {
+              "elements": [
+                "W",
+                "Wh2"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 768.0
+            },
+            {
+              "elements": [
+                "W",
+                "Wh3"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 768.0
+            },
+            {
+              "elements": [
+                "A",
+                "Av1"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 258.0
+            },
+            {
+              "elements": [
+                "A",
+                "Av2"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 258.0
+            },
+            {
+              "elements": [
+                "A",
+                "Av3"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 258.0
+            },
+            {
+              "elements": [
+                "A",
+                "Av4"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 258.0
+            },
+            {
+              "elements": [
+                "A",
+                "Av5"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 258.0
+            },
+            {
+              "elements": [
+                "A",
+                "Ah1"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 768.0
+            },
+            {
+              "elements": [
+                "B",
+                "Bv1"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 897.0
+            },
+            {
+              "elements": [
+                "B",
+                "Bh1"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 240.0
+            },
+            {
+              "elements": [
+                "B",
+                "Bh2"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 240.0
+            },
+            {
+              "elements": [
+                "B",
+                "Bh3"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 240.0
+            },
+            {
+              "elements": [
+                "B",
+                "Bh4"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 240.0
+            },
+            {
+              "elements": [
+                "B",
+                "Bh5"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 240.0
+            },
+            {
+              "elements": [
+                "B",
+                "Bh6"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 240.0
+            },
+            {
+              "elements": [
+                "input",
+                "input0"
+              ],
+              "reason": "Source vector cell separator joins border.",
+              "area_px2": 126.0
+            },
+            {
+              "elements": [
+                "input",
+                "input1"
+              ],
+              "reason": "Source vector cell separator joins border.",
+              "area_px2": 126.0
+            },
+            {
+              "elements": [
+                "input",
+                "input2"
+              ],
+              "reason": "Source vector cell separator joins border.",
+              "area_px2": 126.0
+            },
+            {
+              "elements": [
+                "input",
+                "input3"
+              ],
+              "reason": "Source vector cell separator joins border.",
+              "area_px2": 126.0
+            },
+            {
+              "elements": [
+                "input",
+                "input4"
+              ],
+              "reason": "Source vector cell separator joins border.",
+              "area_px2": 126.0
+            },
+            {
+              "elements": [
+                "output",
+                "output0"
+              ],
+              "reason": "Source vector cell separator joins border.",
+              "area_px2": 126.0
+            },
+            {
+              "elements": [
+                "output",
+                "output1"
+              ],
+              "reason": "Source vector cell separator joins border.",
+              "area_px2": 126.0
+            },
+            {
+              "elements": [
+                "output",
+                "output2"
+              ],
+              "reason": "Source vector cell separator joins border.",
+              "area_px2": 126.0
+            },
+            {
+              "elements": [
+                "output",
+                "output3"
+              ],
+              "reason": "Source vector cell separator joins border.",
+              "area_px2": 126.0
+            },
+            {
+              "elements": [
+                "output",
+                "output4"
+              ],
+              "reason": "Source vector cell separator joins border.",
+              "area_px2": 126.0
+            },
+            {
+              "elements": [
+                "Wv1",
+                "Wh1"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Wv1",
+                "Wh2"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Wv1",
+                "Wh3"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Wv2",
+                "Wh1"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Wv2",
+                "Wh2"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Wv2",
+                "Wh3"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Wv3",
+                "Wh1"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Wv3",
+                "Wh2"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Wv3",
+                "Wh3"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Wv4",
+                "Wh1"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Wv4",
+                "Wh2"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Wv4",
+                "Wh3"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Wv5",
+                "Wh1"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Wv5",
+                "Wh2"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Wv5",
+                "Wh3"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Av1",
+                "Ah1"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Av2",
+                "Ah1"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Av3",
+                "Ah1"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Av4",
+                "Ah1"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Av5",
+                "Ah1"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Bv1",
+                "Bh1"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Bv1",
+                "Bh2"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Bv1",
+                "Bh3"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Bv1",
+                "Bh4"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Bv1",
+                "Bh5"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "Bv1",
+                "Bh6"
+              ],
+              "reason": "Source matrix border and grid join intersections; no text in matrix.",
+              "area_px2": 9.0
+            },
+            {
+              "elements": [
+                "plusH",
+                "plusV"
+              ],
+              "reason": "Source plus sign cross intersection.",
+              "area_px2": 25.0
+            },
+            {
+              "elements": [
+                "split",
+                "up"
+              ],
+              "reason": "Source verified connector endpoint join.",
+              "area_px2": 2.25
+            },
+            {
+              "elements": [
+                "split",
+                "down"
+              ],
+              "reason": "Source verified connector endpoint join.",
+              "area_px2": 2.25
+            },
+            {
+              "elements": [
+                "up",
+                "upEnd"
+              ],
+              "reason": "Source verified connector endpoint join.",
+              "area_px2": 2.25
+            },
+            {
+              "elements": [
+                "down",
+                "downEnd"
+              ],
+              "reason": "Source verified connector endpoint join.",
+              "area_px2": 2.25
+            },
+            {
+              "elements": [
+                "wRoute",
+                "wDown"
+              ],
+              "reason": "Source verified connector endpoint join.",
+              "area_px2": 3.0
+            },
+            {
+              "elements": [
+                "ar",
+                "arUp"
+              ],
+              "reason": "Source verified connector endpoint join.",
+              "area_px2": 4.0
+            }
+          ],
+          "text_layouts": {
+            "x": {
+              "scale": 1,
+              "effective_font_size_px": 36,
+              "width_px": 20.0,
+              "height_px": 41.4,
+              "available_width_px": 38,
+              "available_height_px": 46,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 20.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "x"
+              ]
+            },
+            "h": {
+              "scale": 1,
+              "effective_font_size_px": 36,
+              "width_px": 22.0,
+              "height_px": 41.4,
+              "available_width_px": 38,
+              "available_height_px": 46,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 22.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "h"
+              ]
+            },
+            "title": {
+              "scale": 1,
+              "effective_font_size_px": 34,
+              "width_px": 153.25,
+              "height_px": 39.1,
+              "available_width_px": 160,
+              "available_height_px": 50,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 153.75,
+              "required_height_px": 39.6,
+              "fits": true,
+              "lines": [
+                "Frozen W"
+              ]
+            },
+            "titleSub": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 13.25,
+              "height_px": 27.6,
+              "available_width_px": 20,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 13.75,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "0"
+              ]
+            },
+            "dimW": {
+              "scale": 1,
+              "effective_font_size_px": 36,
+              "width_px": 76.0,
+              "height_px": 41.4,
+              "available_width_px": 100,
+              "available_height_px": 48,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 76.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "d x k"
+              ]
+            },
+            "labelA": {
+              "scale": 1,
+              "effective_font_size_px": 34,
+              "width_px": 174.25,
+              "height_px": 39.1,
+              "available_width_px": 200,
+              "available_height_px": 51,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 174.75,
+              "required_height_px": 39.6,
+              "fits": true,
+              "lines": [
+                "Trainable A"
+              ]
+            },
+            "labelB": {
+              "scale": 1,
+              "effective_font_size_px": 34,
+              "width_px": 174.25,
+              "height_px": 39.1,
+              "available_width_px": 205,
+              "available_height_px": 51,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 174.75,
+              "required_height_px": 39.6,
+              "fits": true,
+              "lines": [
+                "Trainable B"
+              ]
+            },
+            "dimA": {
+              "scale": 1,
+              "effective_font_size_px": 36,
+              "width_px": 68.0,
+              "height_px": 41.4,
+              "available_width_px": 100,
+              "available_height_px": 48,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "r x k"
+              ]
+            },
+            "dimB": {
+              "scale": 1,
+              "effective_font_size_px": 36,
+              "width_px": 70.5,
+              "height_px": 41.4,
+              "available_width_px": 100,
+              "available_height_px": 48,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 71.0,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "d x r"
+              ]
+            },
+            "alpha": {
+              "scale": 1,
+              "effective_font_size_px": 32,
+              "width_px": 98.25,
+              "height_px": 36.8,
+              "available_width_px": 121,
+              "available_height_px": 48,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 98.75,
+              "required_height_px": 37.3,
+              "fits": true,
+              "lines": [
+                "alpha/r"
+              ]
+            },
+            "legendFrozen": {
+              "scale": 1,
+              "effective_font_size_px": 31,
+              "width_px": 96.5,
+              "height_px": 35.65,
+              "available_width_px": 160,
+              "available_height_px": 47,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 97.0,
+              "required_height_px": 36.15,
+              "fits": true,
+              "lines": [
+                "Frozen"
+              ]
+            },
+            "legendTrainable": {
+              "scale": 1,
+              "effective_font_size_px": 31,
+              "width_px": 129.5,
+              "height_px": 35.65,
+              "available_width_px": 170,
+              "available_height_px": 47,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 130.0,
+              "required_height_px": 36.15,
+              "fits": true,
+              "lines": [
+                "Trainable"
+              ]
+            },
+            "formula1": {
+              "scale": 1,
+              "effective_font_size_px": 46,
+              "width_px": 121.25,
+              "height_px": 52.9,
+              "available_width_px": 134,
+              "available_height_px": 65,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 121.75,
+              "required_height_px": 53.4,
+              "fits": true,
+              "lines": [
+                "h = W"
+              ]
+            },
+            "formulaSub": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 16.25,
+              "height_px": 33.35,
+              "available_width_px": 23,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 16.75,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "0"
+              ]
+            },
+            "formula2": {
+              "scale": 1,
+              "effective_font_size_px": 48,
+              "width_px": 385.25,
+              "height_px": 55.2,
+              "available_width_px": 420,
+              "available_height_px": 65,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 385.75,
+              "required_height_px": 55.7,
+              "fits": true,
+              "lines": [
+                "x + (alpha/r) B A x"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "pass",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [],
+      "text_boxes": [
+        {
+          "slide": "page_001",
+          "element": "x",
+          "expected": "x",
+          "rendered": "x ",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 19.75,
+          "rendered_ink_width_px": 19.482
+        },
+        {
+          "slide": "page_001",
+          "element": "h",
+          "expected": "h",
+          "rendered": "h",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 17.25,
+          "rendered_ink_width_px": 16.997
+        },
+        {
+          "slide": "page_001",
+          "element": "title",
+          "expected": "Frozen W",
+          "rendered": "Frozen W0",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 150.75,
+          "rendered_ink_width_px": 150.412
+        },
+        {
+          "slide": "page_001",
+          "element": "titleSub",
+          "expected": "0",
+          "rendered": "0",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 11.5,
+          "rendered_ink_width_px": 11.18
+        },
+        {
+          "slide": "page_001",
+          "element": "dimW",
+          "expected": "d x k",
+          "rendered": "d x k",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 75.0,
+          "rendered_ink_width_px": 74.615
+        },
+        {
+          "slide": "page_001",
+          "element": "labelA",
+          "expected": "Trainable A",
+          "rendered": "Trainable A",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 173.5,
+          "rendered_ink_width_px": 169.861
+        },
+        {
+          "slide": "page_001",
+          "element": "labelB",
+          "expected": "Trainable B",
+          "rendered": "Trainable B",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 171.75,
+          "rendered_ink_width_px": 169.895
+        },
+        {
+          "slide": "page_001",
+          "element": "dimA",
+          "expected": "r x k",
+          "rendered": "r x k",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 65.75,
+          "rendered_ink_width_px": 65.468
+        },
+        {
+          "slide": "page_001",
+          "element": "dimB",
+          "expected": "d x r",
+          "rendered": "d x r",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 69.5,
+          "rendered_ink_width_px": 69.25
+        },
+        {
+          "slide": "page_001",
+          "element": "alpha",
+          "expected": "alpha/r",
+          "rendered": "alpha/r",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 97.25,
+          "rendered_ink_width_px": 97.183
+        },
+        {
+          "slide": "page_001",
+          "element": "legendFrozen",
+          "expected": "Frozen",
+          "rendered": "Frozen",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 92.0,
+          "rendered_ink_width_px": 91.547
+        },
+        {
+          "slide": "page_001",
+          "element": "legendTrainable",
+          "expected": "Trainable",
+          "rendered": "Trainable",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 127.75,
+          "rendered_ink_width_px": 125.765
+        },
+        {
+          "slide": "page_001",
+          "element": "formula1",
+          "expected": "h = W",
+          "rendered": "h = W 0 ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 117.75,
+          "rendered_ink_width_px": 117.731
+        },
+        {
+          "slide": "page_001",
+          "element": "formulaSub",
+          "expected": "0",
+          "rendered": "0 ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 13.75,
+          "rendered_ink_width_px": 13.505
+        },
+        {
+          "slide": "page_001",
+          "element": "formula2",
+          "expected": "x + (alpha/r) B A x",
+          "rendered": "x + (alpha/r) B A x",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 384.75,
+          "rendered_ink_width_px": 379.038
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "372e357825c63f6cd3b7fa948fe0f860b493672373d7d5dd1965b1117b6a4cda",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "page_001",
+      "mean_absolute_pixel_error": 0.018069,
+      "comparison": "page_001_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

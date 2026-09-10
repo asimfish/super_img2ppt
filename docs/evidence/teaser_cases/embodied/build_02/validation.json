@@ -1,0 +1,943 @@
+{
+  "status": "fail",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "fail",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "prediction"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 22,
+            "width_px": 253.0,
+            "height_px": 25.3,
+            "available_width_px": 250,
+            "available_height_px": 36,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 253.5,
+            "required_height_px": 25.8,
+            "fits": false,
+            "lines": [
+              "VLA: subtask prediction"
+            ]
+          }
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "right_brace",
+            "joint_label"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "mode_brace",
+            "modes"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "bottom_brace",
+            "execution"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "task",
+            "task_sub"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "observation",
+            "obs_o"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "obs_o",
+            "obs_t"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "q",
+            "q_sub"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "q",
+            "joint_label"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "q_sub",
+            "joint_label"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "flow_title",
+            "trajectories"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "a_start",
+            "a_start_sub"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "a_end",
+            "a_end_sub"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "image": 14,
+            "text": 45,
+            "shape": 16,
+            "line": 20
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "right_brace",
+                "camera_to_prediction1"
+              ],
+              "reason": "Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted",
+              "area_px2": 14.0
+            },
+            {
+              "elements": [
+                "right_brace",
+                "observation_action"
+              ],
+              "reason": "Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted",
+              "area_px2": 16.0
+            },
+            {
+              "elements": [
+                "camera_to_prediction1",
+                "camera_to_prediction2"
+              ],
+              "reason": "Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted",
+              "area_px2": 1.0
+            },
+            {
+              "elements": [
+                "camera_to_prediction2",
+                "camera_to_prediction3"
+              ],
+              "reason": "Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted",
+              "area_px2": 1.0
+            },
+            {
+              "elements": [
+                "expert_box",
+                "subtask_route5"
+              ],
+              "reason": "Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted",
+              "area_px2": 6.507
+            },
+            {
+              "elements": [
+                "expert_box",
+                "chunk_down"
+              ],
+              "reason": "Source output arrow exits through panel bottom border",
+              "area_px2": 212.0
+            },
+            {
+              "elements": [
+                "flow_box",
+                "encoder_flow"
+              ],
+              "reason": "Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted",
+              "area_px2": 11.364
+            },
+            {
+              "elements": [
+                "decoder",
+                "flow_chunk"
+              ],
+              "reason": "Source arrow visibly enters slanted decoder",
+              "area_px2": 63.0
+            },
+            {
+              "elements": [
+                "subtask_route1",
+                "subtask_route2"
+              ],
+              "reason": "Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted",
+              "area_px2": 1.0
+            },
+            {
+              "elements": [
+                "subtask_route4",
+                "subtask_route5"
+              ],
+              "reason": "Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted",
+              "area_px2": 0.535
+            }
+          ],
+          "text_layouts": {
+            "title": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 394.75,
+              "height_px": 24.15,
+              "available_width_px": 440,
+              "available_height_px": 33,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 395.25,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "pi0.5 | From a task to continuous action"
+              ]
+            },
+            "task": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 210.0,
+              "height_px": 25.3,
+              "available_width_px": 255,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 210.5,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "Put away the dishes"
+              ]
+            },
+            "task_sub": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 57.0,
+              "height_px": 23.0,
+              "available_width_px": 75,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 57.5,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "(Task)"
+              ]
+            },
+            "observation": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 118.5,
+              "height_px": 25.3,
+              "available_width_px": 127,
+              "available_height_px": 32,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 119.0,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "Observation"
+              ]
+            },
+            "obs_o": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 13.5,
+              "height_px": 25.3,
+              "available_width_px": 17,
+              "available_height_px": 32,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.0,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "o"
+              ]
+            },
+            "obs_t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 5.0,
+              "height_px": 15.0,
+              "available_width_px": 12,
+              "available_height_px": 18,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 5.5,
+              "required_height_px": 15.5,
+              "fits": true,
+              "lines": [
+                "t"
+              ]
+            },
+            "images_header": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 108.5,
+              "height_px": 48.3,
+              "available_width_px": 114,
+              "available_height_px": 53,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 109.0,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "Images +",
+                "robot state"
+              ]
+            },
+            "camera_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 114.0,
+              "height_px": 20.7,
+              "available_width_px": 127,
+              "available_height_px": 28,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 114.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Camera views"
+              ]
+            },
+            "camera_ellipsis": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 19.5,
+              "height_px": 26.45,
+              "available_width_px": 34,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 20.0,
+              "required_height_px": 26.95,
+              "fits": true,
+              "lines": [
+                "..."
+              ]
+            },
+            "robot_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 92.0,
+              "height_px": 20.7,
+              "available_width_px": 122,
+              "available_height_px": 28,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 92.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Robot state"
+              ]
+            },
+            "q": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 12.75,
+              "height_px": 24.15,
+              "available_width_px": 18,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 13.25,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "q"
+              ]
+            },
+            "q_sub": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 3.75,
+              "height_px": 13.8,
+              "available_width_px": 10,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 4.25,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "t"
+              ]
+            },
+            "joint_label": {
+              "scale": 1,
+              "effective_font_size_px": 17,
+              "width_px": 114.75,
+              "height_px": 19.55,
+              "available_width_px": 140,
+              "available_height_px": 28,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 115.25,
+              "required_height_px": 20.05,
+              "fits": true,
+              "lines": [
+                "(joint positions)"
+              ]
+            },
+            "tokens_header": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 210.5,
+              "height_px": 23.0,
+              "available_width_px": 260,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 211.0,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "Task (language tokens)"
+              ]
+            },
+            "token_text0": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 24.25,
+              "height_px": 18.4,
+              "available_width_px": 42,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 24.75,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "Put"
+              ]
+            },
+            "token_text1": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 37.5,
+              "height_px": 18.4,
+              "available_width_px": 60,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 38.0,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "away"
+              ]
+            },
+            "token_text2": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 22.5,
+              "height_px": 18.4,
+              "available_width_px": 40,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 23.0,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "the"
+              ]
+            },
+            "token_text3": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 46.5,
+              "height_px": 18.4,
+              "available_width_px": 71,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 47.0,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "dishes"
+              ]
+            },
+            "token_text4": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 44.5,
+              "height_px": 18.4,
+              "available_width_px": 73,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 45.0,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "<eos>"
+              ]
+            },
+            "tokens_ellipsis": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 19.5,
+              "height_px": 26.45,
+              "available_width_px": 35,
+              "available_height_px": 28,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 20.0,
+              "required_height_px": 26.95,
+              "fits": true,
+              "lines": [
+                "..."
+              ]
+            },
+            "prediction": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 253.0,
+              "height_px": 25.3,
+              "available_width_px": 250,
+              "available_height_px": 36,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 253.5,
+              "required_height_px": 25.8,
+              "fits": false,
+              "lines": [
+                "VLA: subtask prediction"
+              ]
+            },
+            "predicted_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 155.25,
+              "height_px": 20.7,
+              "available_width_px": 169,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 155.75,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Predicted subtask"
+              ]
+            },
+            "predicted_text": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 148.5,
+              "height_px": 23.0,
+              "available_width_px": 157,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 149.0,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "Pick up the plate"
+              ]
+            },
+            "modes": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 133.0,
+              "height_px": 62.1,
+              "available_width_px": 137,
+              "available_height_px": 72,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 133.5,
+              "required_height_px": 62.6,
+              "fits": true,
+              "lines": [
+                "Same trained",
+                "model, two",
+                "inference modes"
+              ]
+            },
+            "expert": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 224.75,
+              "height_px": 27.6,
+              "available_width_px": 256,
+              "available_height_px": 36,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 225.25,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "VLA + action expert"
+              ]
+            },
+            "context": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 55.5,
+              "height_px": 18.4,
+              "available_width_px": 80,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 56.0,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "Context"
+              ]
+            },
+            "images_box_text": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 76.0,
+              "height_px": 17.75,
+              "available_width_px": 89,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 76.5,
+              "required_height_px": 18.25,
+              "fits": true,
+              "lines": [
+                "Images (oₜ)"
+              ]
+            },
+            "state_box_text": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 97.25,
+              "height_px": 16.5,
+              "available_width_px": 99,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 97.75,
+              "required_height_px": 17.0,
+              "fits": true,
+              "lines": [
+                "Robot state (qₜ)"
+              ]
+            },
+            "subtask_line1": {
+              "scale": 1,
+              "effective_font_size_px": 12.5,
+              "width_px": 100.0,
+              "height_px": 14.375,
+              "available_width_px": 102,
+              "available_height_px": 18,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 100.5,
+              "required_height_px": 14.875,
+              "fits": true,
+              "lines": [
+                "Predicted subtask"
+              ]
+            },
+            "subtask_line2": {
+              "scale": 1,
+              "effective_font_size_px": 12.5,
+              "width_px": 101.25,
+              "height_px": 14.375,
+              "available_width_px": 102,
+              "available_height_px": 18,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 101.75,
+              "required_height_px": 14.875,
+              "fits": true,
+              "lines": [
+                "(Pick up the plate)"
+              ]
+            },
+            "flow_title": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 105.5,
+              "height_px": 17.25,
+              "available_width_px": 120,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 106.0,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "Flow matching"
+              ]
+            },
+            "flow_noise": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 35.5,
+              "height_px": 16.1,
+              "available_width_px": 60,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.0,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Noise"
+              ]
+            },
+            "trajectories": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 68.5,
+              "height_px": 32.2,
+              "available_width_px": 79,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 69.0,
+              "required_height_px": 32.7,
+              "fits": true,
+              "lines": [
+                "Action",
+                "trajectories"
+              ]
+            },
+            "continuous": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 93.0,
+              "height_px": 34.5,
+              "available_width_px": 96,
+              "available_height_px": 46,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 93.5,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "Continuous",
+                "action chunk"
+              ]
+            },
+            "a_start": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 12.25,
+              "height_px": 25.3,
+              "available_width_px": 20,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 12.75,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "a"
+              ]
+            },
+            "a_start_sub": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 4.5,
+              "height_px": 13.8,
+              "available_width_px": 10,
+              "available_height_px": 18,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 5.0,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "t"
+              ]
+            },
+            "a_dots": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 21.0,
+              "height_px": 24.5,
+              "available_width_px": 24,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 21.5,
+              "required_height_px": 25.0,
+              "fits": true,
+              "lines": [
+                "⋯"
+              ]
+            },
+            "a_end": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 12.25,
+              "height_px": 25.3,
+              "available_width_px": 20,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 12.75,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "a"
+              ]
+            },
+            "a_end_sub": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 20.0,
+              "height_px": 13.8,
+              "available_width_px": 29,
+              "available_height_px": 18,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 20.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "t+H"
+              ]
+            },
+            "noise": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 41.0,
+              "height_px": 18.4,
+              "available_width_px": 48,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.5,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "Noise"
+              ]
+            },
+            "step1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 97.0,
+              "height_px": 20.7,
+              "available_width_px": 150,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 97.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "1. Approach"
+              ]
+            },
+            "step2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 158.0,
+              "height_px": 20.7,
+              "available_width_px": 205,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 158.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "2. Close (grasp rim)"
+              ]
+            },
+            "step3": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 184.0,
+              "height_px": 20.7,
+              "available_width_px": 237,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 184.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "3. Lift (clear of surface)"
+              ]
+            },
+            "execution": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 193.0,
+              "height_px": 24.15,
+              "available_width_px": 240,
+              "available_height_px": 32,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 193.5,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "Execution schematic"
+              ]
+            },
+            "footer": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 505.75,
+              "height_px": 18.4,
+              "available_width_px": 580,
+              "available_height_px": 28,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 506.25,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "Inference schematic; independently illustrated scenes; training omitted."
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "2a5db6ac3a879038d991613741e082559e18176994d4423bbf16ba86f1dfc158",
+  "font_substitutions": [
+    {
+      "code": "font_substitution",
+      "requested": "Liberation Sans",
+      "resolved": "DejaVu Sans"
+    }
+  ]
+}

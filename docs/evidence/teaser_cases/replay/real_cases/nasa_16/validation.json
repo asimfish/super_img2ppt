@@ -1,0 +1,601 @@
+{
+  "status": "review",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "review",
+      "findings": [
+        {
+          "slide": "nasa_16",
+          "code": "raster_text",
+          "severity": "warning",
+          "elements": [
+            "nasa-logo"
+          ],
+          "message": "Text inside this independent image remains noneditable"
+        },
+        {
+          "slide": "nasa_16",
+          "code": "raster_text",
+          "severity": "warning",
+          "elements": [
+            "cfs-logo"
+          ],
+          "message": "Text inside this independent image remains noneditable"
+        },
+        {
+          "slide": "nasa_16",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "callout-1",
+            "callout-2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "nasa_16",
+          "counts": {
+            "image": 7,
+            "text": 19,
+            "line": 1,
+            "shape": 1
+          },
+          "intentional_overlaps": [],
+          "text_layouts": {
+            "title": {
+              "scale": 1,
+              "effective_font_size_px": 62.2222,
+              "width_px": 556.25,
+              "height_px": 71.556,
+              "available_width_px": 559.25,
+              "available_height_px": 72.5556,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 556.75,
+              "required_height_px": 72.056,
+              "fits": true,
+              "lines": [
+                "Architecture Goals"
+              ]
+            },
+            "page-number": {
+              "scale": 1,
+              "effective_font_size_px": 26.6667,
+              "width_px": 30.0,
+              "height_px": 30.667,
+              "available_width_px": 33.0,
+              "available_height_px": 31.25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 30.5,
+              "required_height_px": 31.167,
+              "fits": true,
+              "lines": [
+                "16"
+              ]
+            },
+            "number-1": {
+              "scale": 1,
+              "effective_font_size_px": 40.12,
+              "width_px": 33.25,
+              "height_px": 46.138,
+              "available_width_px": 36.25,
+              "available_height_px": 47.138,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 33.75,
+              "required_height_px": 46.638,
+              "fits": true,
+              "lines": [
+                "1."
+              ]
+            },
+            "goal-1": {
+              "scale": 1,
+              "effective_font_size_px": 40.12,
+              "width_px": 945.5,
+              "height_px": 46.138,
+              "available_width_px": 948.5,
+              "available_height_px": 47.138,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 946.0,
+              "required_height_px": 46.638,
+              "fits": true,
+              "lines": [
+                "Reduce time to deploy high quality flight software"
+              ]
+            },
+            "number-2": {
+              "scale": 1,
+              "effective_font_size_px": 40.12,
+              "width_px": 33.25,
+              "height_px": 46.138,
+              "available_width_px": 36.25,
+              "available_height_px": 47.138,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 33.75,
+              "required_height_px": 46.638,
+              "fits": true,
+              "lines": [
+                "2."
+              ]
+            },
+            "goal-2": {
+              "scale": 1,
+              "effective_font_size_px": 40.12,
+              "width_px": 875.5,
+              "height_px": 46.138,
+              "available_width_px": 878.5,
+              "available_height_px": 47.138,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 876.0,
+              "required_height_px": 46.638,
+              "fits": true,
+              "lines": [
+                "Reduce project schedule and cost uncertainty"
+              ]
+            },
+            "number-3": {
+              "scale": 1,
+              "effective_font_size_px": 40.12,
+              "width_px": 33.25,
+              "height_px": 46.138,
+              "available_width_px": 36.25,
+              "available_height_px": 47.138,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 33.75,
+              "required_height_px": 46.638,
+              "fits": true,
+              "lines": [
+                "3."
+              ]
+            },
+            "goal-3": {
+              "scale": 1,
+              "effective_font_size_px": 40.12,
+              "width_px": 823.0,
+              "height_px": 46.138,
+              "available_width_px": 826.0,
+              "available_height_px": 47.138,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 823.5,
+              "required_height_px": 46.638,
+              "fits": true,
+              "lines": [
+                "Directly facilitate formalized software reuse"
+              ]
+            },
+            "number-4": {
+              "scale": 1,
+              "effective_font_size_px": 40.12,
+              "width_px": 33.25,
+              "height_px": 46.138,
+              "available_width_px": 36.25,
+              "available_height_px": 47.138,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 33.75,
+              "required_height_px": 46.638,
+              "fits": true,
+              "lines": [
+                "4."
+              ]
+            },
+            "goal-4": {
+              "scale": 1,
+              "effective_font_size_px": 40.12,
+              "width_px": 804.25,
+              "height_px": 46.138,
+              "available_width_px": 807.25,
+              "available_height_px": 47.138,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 804.75,
+              "required_height_px": 46.638,
+              "fits": true,
+              "lines": [
+                "Enable collaboration across organizations"
+              ]
+            },
+            "number-5": {
+              "scale": 1,
+              "effective_font_size_px": 40.12,
+              "width_px": 33.25,
+              "height_px": 46.138,
+              "available_width_px": 36.25,
+              "available_height_px": 47.138,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 33.75,
+              "required_height_px": 46.638,
+              "fits": true,
+              "lines": [
+                "5."
+              ]
+            },
+            "goal-5": {
+              "scale": 1,
+              "effective_font_size_px": 40.12,
+              "width_px": 1225.0,
+              "height_px": 46.138,
+              "available_width_px": 1228.0,
+              "available_height_px": 47.138,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 1225.5,
+              "required_height_px": 46.638,
+              "fits": true,
+              "lines": [
+                "Simplify sustaining engineering (i.e. On Orbit FSW maintenance)"
+              ]
+            },
+            "number-6": {
+              "scale": 1,
+              "effective_font_size_px": 40.12,
+              "width_px": 33.25,
+              "height_px": 46.138,
+              "available_width_px": 36.25,
+              "available_height_px": 47.138,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 33.75,
+              "required_height_px": 46.638,
+              "fits": true,
+              "lines": [
+                "6."
+              ]
+            },
+            "goal-6": {
+              "scale": 1,
+              "effective_font_size_px": 40.12,
+              "width_px": 1047.75,
+              "height_px": 46.138,
+              "available_width_px": 1050.75,
+              "available_height_px": 47.138,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 1048.25,
+              "required_height_px": 46.638,
+              "fits": true,
+              "lines": [
+                "Scale from small instruments to Hubble class missions"
+              ]
+            },
+            "number-7": {
+              "scale": 1,
+              "effective_font_size_px": 40.12,
+              "width_px": 33.25,
+              "height_px": 46.138,
+              "available_width_px": 36.25,
+              "available_height_px": 47.138,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 33.75,
+              "required_height_px": 46.638,
+              "fits": true,
+              "lines": [
+                "7."
+              ]
+            },
+            "goal-7": {
+              "scale": 1,
+              "effective_font_size_px": 40.12,
+              "width_px": 1066.25,
+              "height_px": 46.138,
+              "available_width_px": 1069.25,
+              "available_height_px": 47.138,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 1066.75,
+              "required_height_px": 46.638,
+              "fits": true,
+              "lines": [
+                "Build a platform for advanced concepts and prototyping"
+              ]
+            },
+            "goal-5-continuation": {
+              "scale": 1,
+              "effective_font_size_px": 40.12,
+              "width_px": 581.5,
+              "height_px": 46.138,
+              "available_width_px": 584.5,
+              "available_height_px": 47.138,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 582.0,
+              "required_height_px": 46.638,
+              "fits": true,
+              "lines": [
+                "Missions last 10 years or more"
+              ]
+            },
+            "callout-1": {
+              "scale": 1,
+              "effective_font_size_px": 40.12,
+              "width_px": 1210.0,
+              "height_px": 46.138,
+              "available_width_px": 1213.0,
+              "available_height_px": 47.138,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 1210.5,
+              "required_height_px": 46.638,
+              "fits": true,
+              "lines": [
+                "These goals were written in 2006 and have remained essentially"
+              ]
+            },
+            "callout-2": {
+              "scale": 1,
+              "effective_font_size_px": 40.12,
+              "width_px": 509.0,
+              "height_px": 46.138,
+              "available_width_px": 512.0,
+              "available_height_px": 47.138,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 509.5,
+              "required_height_px": 46.638,
+              "fits": true,
+              "lines": [
+                "unchanged over the years!"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "pass",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [],
+      "text_boxes": [
+        {
+          "slide": "nasa_16",
+          "element": "title",
+          "expected": "Architecture Goals",
+          "rendered": "Architecture Goals",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 553.5,
+          "rendered_ink_width_px": 553.357
+        },
+        {
+          "slide": "nasa_16",
+          "element": "page-number",
+          "expected": "16",
+          "rendered": "16",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 26.0,
+          "rendered_ink_width_px": 25.473
+        },
+        {
+          "slide": "nasa_16",
+          "element": "number-1",
+          "expected": "1.",
+          "rendered": "1. ",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 27.75,
+          "rendered_ink_width_px": 27.41
+        },
+        {
+          "slide": "nasa_16",
+          "element": "goal-1",
+          "expected": "Reduce time to deploy high quality flight software",
+          "rendered": "Reduce time to deploy high quality flight software",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 941.25,
+          "rendered_ink_width_px": 941.753
+        },
+        {
+          "slide": "nasa_16",
+          "element": "number-2",
+          "expected": "2.",
+          "rendered": "2. ",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 29.75,
+          "rendered_ink_width_px": 29.571
+        },
+        {
+          "slide": "nasa_16",
+          "element": "goal-2",
+          "expected": "Reduce project schedule and cost uncertainty",
+          "rendered": "Reduce project schedule and cost uncertainty",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 872.25,
+          "rendered_ink_width_px": 871.767
+        },
+        {
+          "slide": "nasa_16",
+          "element": "number-3",
+          "expected": "3.",
+          "rendered": "3. ",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 29.25,
+          "rendered_ink_width_px": 29.051
+        },
+        {
+          "slide": "nasa_16",
+          "element": "goal-3",
+          "expected": "Directly facilitate formalized software reuse",
+          "rendered": "Directly facilitate formalized software reuse",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 818.75,
+          "rendered_ink_width_px": 820.027
+        },
+        {
+          "slide": "nasa_16",
+          "element": "number-4",
+          "expected": "4.",
+          "rendered": "4. ",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 30.25,
+          "rendered_ink_width_px": 29.811
+        },
+        {
+          "slide": "nasa_16",
+          "element": "goal-4",
+          "expected": "Enable collaboration across organizations",
+          "rendered": "Enable collaboration across organizations",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 799.75,
+          "rendered_ink_width_px": 799.299
+        },
+        {
+          "slide": "nasa_16",
+          "element": "number-5",
+          "expected": "5.",
+          "rendered": "5. ",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 29.0,
+          "rendered_ink_width_px": 28.811
+        },
+        {
+          "slide": "nasa_16",
+          "element": "goal-5",
+          "expected": "Simplify sustaining engineering (i.e. On Orbit FSW maintenance)",
+          "rendered": "Simplify sustaining engineering (i.e. On Orbit FSW maintenance)",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 1221.75,
+          "rendered_ink_width_px": 1222.458
+        },
+        {
+          "slide": "nasa_16",
+          "element": "number-6",
+          "expected": "6.",
+          "rendered": "6. ",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 29.25,
+          "rendered_ink_width_px": 28.891
+        },
+        {
+          "slide": "nasa_16",
+          "element": "goal-6",
+          "expected": "Scale from small instruments to Hubble class missions",
+          "rendered": "Scale from small instruments to Hubble class missions",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 1044.75,
+          "rendered_ink_width_px": 1045.272
+        },
+        {
+          "slide": "nasa_16",
+          "element": "number-7",
+          "expected": "7.",
+          "rendered": "7. ",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 29.25,
+          "rendered_ink_width_px": 28.891
+        },
+        {
+          "slide": "nasa_16",
+          "element": "goal-7",
+          "expected": "Build a platform for advanced concepts and prototyping",
+          "rendered": "Build a platform for advanced concepts and prototyping",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 1061.0,
+          "rendered_ink_width_px": 1060.718
+        },
+        {
+          "slide": "nasa_16",
+          "element": "goal-5-continuation",
+          "expected": "Missions last 10 years or more",
+          "rendered": "Missions last 10 years or more",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 577.25,
+          "rendered_ink_width_px": 577.937
+        },
+        {
+          "slide": "nasa_16",
+          "element": "callout-1",
+          "expected": "These goals were written in 2006 and have remained essentially",
+          "rendered": "These goals were written in 2006 and have remained essentially",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 1208.75,
+          "rendered_ink_width_px": 1209.533
+        },
+        {
+          "slide": "nasa_16",
+          "element": "callout-2",
+          "expected": "unchanged over the years!",
+          "rendered": "unchanged over the years!",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 502.75,
+          "rendered_ink_width_px": 502.228
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "2908c4c1e09536566547577a57d17e1efc9c249cd6af70b51ec086077d9db9f6",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "nasa_16",
+      "mean_absolute_pixel_error": 0.026188,
+      "comparison": "nasa_16_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

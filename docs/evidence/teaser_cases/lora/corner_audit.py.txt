@@ -1,0 +1,24 @@
+from pathlib import Path
+from PIL import Image,ImageDraw
+import json,math
+r=Path('/tmp/lora-forward-LO8vEs');src=Image.open(r/'job/pages/page_001/source.png').convert('RGB');old=Image.open(r/'build_05/render/source_size.png').convert('RGB');new=Image.open(r/'build_corner_01/render/page_001.png').convert('RGB').resize(src.size,Image.Resampling.LANCZOS);new.save(r/'build_corner_01/render/source_size.png');rois=json.loads((r/'corner_rois_frozen.json').read_text())['regions'];vs=[(275,193,1,1),(275,580,1,-1),(1250,192,-1,1),(1250,580,-1,-1)]
+canvas=Image.new('RGB',(680,650),'white');d=ImageDraw.Draw(canvas);results=[]
+def mask(im,b):
+ x,y,w,h=b;return {(i+.5,j+.5) for j in range(y,y+h) for i in range(x,x+w) if max(im.getpixel((i,j)))<110}
+def dist(a,b):
+ v=sorted(math.sqrt(min((x-u)**2+(y-v)**2 for u,v in b)) for x,y in a);return {'mean_px':sum(v)/len(v),'p95_px':v[int(.95*(len(v)-1))],'max_px':v[-1]}
+def rad(m,v):
+ x,y,sx,sy=v;rows=[]
+ for t in range(4,16):
+  vals=sorted((px-x)*sx for px,py in m if t-.5<=(py-y)*sy<t+.5 and -4<(px-x)*sx<18)
+  if vals:rows.append((t,sum(vals)/len(vals)))
+ def mse(radius):
+  return sum((u-(radius-math.sqrt(max(0,radius**2-(t-radius)**2)) if t<radius else 0))**2 for t,u in rows)/len(rows)
+ radius=min([i/10 for i in range(181)],key=mse);return {'fit_radius_px':radius,'fit_rmse_px':math.sqrt(mse(radius))}
+for i,(q,v) in enumerate(zip(rois,vs)):
+ b=q['box'];x,y,w,h=b;sm=mask(src,b);sr=rad(sm,v);row={'id':q['id'],'source':sr}
+ for label,im in [('build_05',old),('candidate',new)]:
+  mm=mask(im,b);rr=rad(mm,v);row[label]={'render_to_source':dist(mm,sm),'source_to_render':dist(sm,mm),'dark_mask_iou':len(sm&mm)/len(sm|mm),**rr,'radius_error_vs_source_px':rr['fit_radius_px']-sr['fit_radius_px']}
+ for k,im in enumerate([src,old,new]):canvas.paste(im.crop((x,y,x+w,y+h)).resize((140,140)),(200*k+65,i*160+18))
+ d.text((0,i*160+1),q['id']+' / source - old - candidate',fill='black');results.append(row)
+(r/'build_corner_01/corner_metrics.json').write_text(json.dumps(results,indent=2));canvas.save(r/'build_corner_01/corner_closeup.png');print(json.dumps(results,indent=2))

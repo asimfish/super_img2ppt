@@ -19,6 +19,52 @@ from .qa import compact_text
 from .scene import InputError, slide_transform, text_content
 
 
+def _pdf_text_frame(element, tx, page_width, page_height):
+    corners = rotate_points(box_points(element["box"]), element)
+    x0, y0 = min(x for x, y in corners), min(y for x, y in corners)
+    x1, y1 = max(x for x, y in corners), max(y for x, y in corners)
+    ix, iy, iw, ih = tx.box([x0, y0, x1 - x0, y1 - y0])
+    left = ix / tx.width_inches * page_width
+    top = page_height - iy / tx.height_inches * page_height
+    right = left + iw / tx.width_inches * page_width
+    bottom = top - ih / tx.height_inches * page_height
+    return left, bottom, right, top
+
+
+def _pdf_glyph_owners(textpage, elements, frames):
+    get_object = getattr(pdfium.raw, "FPDFText_GetTextObject", None)
+    if get_object is None:
+        return {}
+    groups = {}
+    for index in range(textpage.count_chars()):
+        char = textpage.get_text_range(index, 1)
+        if not char.strip():
+            continue
+        obj = get_object(textpage, index)
+        key = ctypes.cast(obj, ctypes.c_void_p).value
+        if key is not None:
+            groups.setdefault(key, []).append((index, char, textpage.get_charbox(index)))
+    expected = {element["id"]: compact_text(text_content(element)) for element in elements}
+    owners = {}
+    for glyphs in groups.values():
+        text = compact_text("".join(char for _, char, _ in glyphs))
+        candidates = []
+        for eid, (left, bottom, right, top) in frames.items():
+            if (
+                text
+                and text in expected[eid]
+                and all(
+                    left <= (x0 + x1) / 2 <= right and bottom <= (y0 + y1) / 2 <= top
+                    for _, _, (x0, y0, x1, y1) in glyphs
+                )
+            ):
+                candidates.append(eid)
+        # Only a complete PDF text object with one possible owner can exclude a neighbor.
+        if len(candidates) == 1:
+            owners.update((index, candidates[0]) for index, _, _ in glyphs)
+    return owners
+
+
 class Renderer(Protocol):
     def render(self, source: Path, out_dir: Path) -> Path: ...
 
@@ -114,17 +160,11 @@ def verify_rendered_text(pdf: Path, scene: dict, layouts: dict | None = None) ->
             tx = slide_transform(scene, slide)
             with closing(document[index]) as page, closing(page.get_textpage()) as textpage:
                 pw, ph = page.get_size()
-                for element in slide["elements"]:
-                    if element["kind"] != "text":
-                        continue
-                    corners = rotate_points(box_points(element["box"]), element)
-                    x0, y0 = min(x for x, y in corners), min(y for x, y in corners)
-                    x1, y1 = max(x for x, y in corners), max(y for x, y in corners)
-                    ix, iy, iw, ih = tx.box([x0, y0, x1 - x0, y1 - y0])
-                    left = ix / tx.width_inches * pw
-                    top = ph - iy / tx.height_inches * ph
-                    right = left + iw / tx.width_inches * pw
-                    bottom = top - ih / tx.height_inches * ph
+                elements = [e for e in slide["elements"] if e["kind"] == "text"]
+                frames = {e["id"]: _pdf_text_frame(e, tx, pw, ph) for e in elements}
+                owners = _pdf_glyph_owners(textpage, elements, frames)
+                for element in elements:
+                    left, bottom, right, top = frames[element["id"]]
                     extracted = textpage.get_text_bounded(
                         left=left, bottom=bottom, right=right, top=top
                     )
@@ -163,6 +203,8 @@ def verify_rendered_text(pdf: Path, scene: dict, layouts: dict | None = None) ->
                     substituted_fonts = set()
                     rendered_ink = []
                     for char_index in range(textpage.count_chars()):
+                        if char_index in owners and owners[char_index] != element["id"]:
+                            continue
                         char = textpage.get_text_range(char_index, 1)
                         if not char.strip():
                             continue

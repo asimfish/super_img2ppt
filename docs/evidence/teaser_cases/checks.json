@@ -1,0 +1,53 @@
+[
+  {
+    "command": [
+      "uv",
+      "run",
+      "ruff",
+      "format",
+      "--check",
+      "."
+    ],
+    "exit_code": 1,
+    "seconds": 0.131,
+    "stdout": "unformatted: File would be reformatted\n  --> skills/super-img2ppt/src/super_img2ppt/render.py:50:16\n   |\n49 |         for eid, (left, bottom, right, top) in frames.items():\n   -             if text and text in expected[eid] and all(\n   -                 left <= (x0 + x1) / 2 <= right and bottom <= (y0 + y1) / 2 <= top\n   -                 for _, _, (x0, y0, x1, y1) in glyphs\n50 +             if (\n51 +                 text\n52 +                 and text in expected[eid]\n53 +                 and all(\n54 +                     left <= (x0 + x1) / 2 <= right and bottom <= (y0 + y1) / 2 <= top\n55 +                     for _, _, (x0, y0, x1, y1) in glyphs\n56 +                 )\n57 |             ):\n   |\n\n1 file would be reformatted, 69 files already formatted\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "uv",
+      "run",
+      "pytest",
+      "-q"
+    ],
+    "exit_code": 0,
+    "seconds": 45.078,
+    "stdout": "...................................................................      [100%]\n67 passed in 44.67s\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "uv",
+      "run",
+      "python",
+      "scripts/verify_skill.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.254,
+    "stdout": "{\n  \"status\": \"pass\",\n  \"activation_cases\": 8,\n  \"problems\": [],\n  \"scope\": \"Static package checks; semantic review and forward tests are separate evidence\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "uv",
+      "run",
+      "python",
+      "scripts/build_capability_registry.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "seconds": 0.072,
+    "stdout": "Capability registry is current\n",
+    "stderr": ""
+  }
+]

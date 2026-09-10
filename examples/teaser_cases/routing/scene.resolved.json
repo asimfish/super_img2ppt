@@ -1,0 +1,2173 @@
+{
+  "version": 1,
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 1586,
+      "height": 992,
+      "source": "assets/8640cc0b952d25de83f7.png",
+      "background": "#FFFFFF",
+      "reviewed": true,
+      "notes": "Reconstruction of super_teaser synthetic schematic; not a paper-original figure. All text and geometry native. Source face uncertain; Arial used.",
+      "elements": [
+        {
+          "id": "gate",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            311,
+            135,
+            218,
+            585
+          ],
+          "shape": "round_rect",
+          "stroke": "#007570",
+          "stroke_width": 2,
+          "fill": "#FFFFFF",
+          "dash": [
+            10,
+            5
+          ],
+          "radius": 5
+        },
+        {
+          "id": "input",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            36,
+            365,
+            104,
+            105
+          ],
+          "shape": "round_rect",
+          "stroke": "#101010",
+          "stroke_width": 2,
+          "fill": "#FFFFFF",
+          "radius": 5
+        },
+        {
+          "id": "e1gate",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            331,
+            221,
+            81,
+            49
+          ],
+          "shape": "round_rect",
+          "stroke": "#007570",
+          "stroke_width": 2,
+          "fill": "#FFFFFF",
+          "container": "gate",
+          "radius": 5
+        },
+        {
+          "id": "e2gate",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            331,
+            394,
+            81,
+            50
+          ],
+          "shape": "round_rect",
+          "stroke": "#B28B00",
+          "stroke_width": 2,
+          "fill": "#FFFFFF",
+          "container": "gate",
+          "radius": 5
+        },
+        {
+          "id": "e3gate",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            331,
+            567,
+            81,
+            50
+          ],
+          "shape": "round_rect",
+          "stroke": "#007570",
+          "stroke_width": 2,
+          "fill": "#FFFFFF",
+          "container": "gate",
+          "radius": 5
+        },
+        {
+          "id": "e1proc",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            715,
+            200,
+            178,
+            89
+          ],
+          "shape": "rect",
+          "stroke": "#007570",
+          "stroke_width": 2,
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "e2proc",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            715,
+            363,
+            178,
+            112
+          ],
+          "shape": "rect",
+          "stroke": "#B28B00",
+          "stroke_width": 2,
+          "fill": "#FFFFFF",
+          "dash": [
+            9,
+            5
+          ]
+        },
+        {
+          "id": "e3proc",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            715,
+            550,
+            178,
+            88
+          ],
+          "shape": "rect",
+          "stroke": "#007570",
+          "stroke_width": 2,
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "w06",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            1020,
+            204,
+            137,
+            80
+          ],
+          "shape": "rect",
+          "stroke": "#007570",
+          "stroke_width": 2,
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "w04",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            1020,
+            564,
+            137,
+            57
+          ],
+          "shape": "rect",
+          "stroke": "#007570",
+          "stroke_width": 2,
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "merge",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            1225,
+            403,
+            84,
+            87
+          ],
+          "shape": "ellipse",
+          "stroke": "#007570",
+          "stroke_width": 2,
+          "fill": "#FFFFFF"
+        },
+        {
+          "id": "output",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            1408,
+            411,
+            156,
+            84
+          ],
+          "shape": "round_rect",
+          "stroke": "#101010",
+          "stroke_width": 2,
+          "fill": "#FFFFFF",
+          "radius": 5
+        },
+        {
+          "id": "legend",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            36,
+            743,
+            359,
+            196
+          ],
+          "shape": "round_rect",
+          "stroke": "#101010",
+          "stroke_width": 2,
+          "fill": "#FFFFFF",
+          "radius": 5
+        },
+        {
+          "id": "title",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            606,
+            13,
+            390,
+            41
+          ],
+          "font_family": "Arial",
+          "font_size": 23,
+          "bold": false,
+          "color": "#101010",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "One token, two active branches",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 23,
+              "bold": false,
+              "italic": false,
+              "color": "#101010"
+            }
+          ]
+        },
+        {
+          "id": "gate_title",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            345,
+            94,
+            152,
+            37
+          ],
+          "font_family": "Arial",
+          "font_size": 21,
+          "bold": false,
+          "color": "#007570",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Branch Gate",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21,
+              "bold": false,
+              "italic": false,
+              "color": "#007570"
+            }
+          ]
+        },
+        {
+          "id": "instruction",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            346,
+            147,
+            150,
+            57
+          ],
+          "font_family": "Arial",
+          "font_size": 20,
+          "bold": false,
+          "color": "#101010",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "gate",
+          "runs": [
+            {
+              "text": "Select active\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#101010"
+            },
+            {
+              "text": "branches",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#101010"
+            }
+          ]
+        },
+        {
+          "id": "input_text",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            44,
+            373,
+            88,
+            87
+          ],
+          "font_family": "Arial",
+          "font_size": 22,
+          "bold": false,
+          "color": "#101010",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "input",
+          "runs": [
+            {
+              "text": "Input\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#101010"
+            },
+            {
+              "text": "token\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#101010"
+            },
+            {
+              "text": "x",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#101010"
+            }
+          ]
+        },
+        {
+          "id": "active1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            57,
+            175,
+            127,
+            44
+          ],
+          "font_family": "Arial",
+          "font_size": 26,
+          "bold": false,
+          "color": "#007570",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "E1 active",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#007570"
+            }
+          ]
+        },
+        {
+          "id": "active3",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            57,
+            563,
+            127,
+            43
+          ],
+          "font_family": "Arial",
+          "font_size": 26,
+          "bold": false,
+          "color": "#007570",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "E3 active",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#007570"
+            }
+          ]
+        },
+        {
+          "id": "inactive_e",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            154,
+            344,
+            41,
+            41
+          ],
+          "font_family": "Arial",
+          "font_size": 27,
+          "bold": false,
+          "color": "#B28B00",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "E2",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 27,
+              "bold": false,
+              "italic": false,
+              "color": "#B28B00"
+            }
+          ]
+        },
+        {
+          "id": "inactive_word",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            194,
+            350,
+            66,
+            32
+          ],
+          "font_family": "Arial",
+          "font_size": 17.5,
+          "bold": false,
+          "color": "#B28B00",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "inactive",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17.5,
+              "bold": false,
+              "italic": false,
+              "color": "#B28B00"
+            }
+          ]
+        },
+        {
+          "id": "gate_label1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            339,
+            224,
+            65,
+            40
+          ],
+          "font_family": "Arial",
+          "font_size": 29,
+          "bold": false,
+          "color": "#007570",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "e1gate",
+          "runs": [
+            {
+              "text": "E1",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 29,
+              "bold": false,
+              "italic": false,
+              "color": "#007570"
+            }
+          ]
+        },
+        {
+          "id": "gate_label2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            339,
+            397,
+            65,
+            40
+          ],
+          "font_family": "Arial",
+          "font_size": 29,
+          "bold": false,
+          "color": "#B28B00",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "e2gate",
+          "runs": [
+            {
+              "text": "E2",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 29,
+              "bold": false,
+              "italic": false,
+              "color": "#B28B00"
+            }
+          ]
+        },
+        {
+          "id": "gate_label3",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            339,
+            570,
+            65,
+            40
+          ],
+          "font_family": "Arial",
+          "font_size": 29,
+          "bold": false,
+          "color": "#007570",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "e3gate",
+          "runs": [
+            {
+              "text": "E3",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 29,
+              "bold": false,
+              "italic": false,
+              "color": "#007570"
+            }
+          ]
+        },
+        {
+          "id": "proc_label1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            752,
+            208,
+            104,
+            43
+          ],
+          "font_family": "Arial",
+          "font_size": 30,
+          "bold": false,
+          "color": "#007570",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "e1proc",
+          "runs": [
+            {
+              "text": "E1",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 30,
+              "bold": false,
+              "italic": false,
+              "color": "#007570"
+            }
+          ]
+        },
+        {
+          "id": "proc_label2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            752,
+            371,
+            104,
+            43
+          ],
+          "font_family": "Arial",
+          "font_size": 30,
+          "bold": false,
+          "color": "#B28B00",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "e2proc",
+          "runs": [
+            {
+              "text": "E2",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 30,
+              "bold": false,
+              "italic": false,
+              "color": "#B28B00"
+            }
+          ]
+        },
+        {
+          "id": "proc_label3",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            752,
+            558,
+            104,
+            43
+          ],
+          "font_family": "Arial",
+          "font_size": 30,
+          "bold": false,
+          "color": "#007570",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "e3proc",
+          "runs": [
+            {
+              "text": "E3",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 30,
+              "bold": false,
+              "italic": false,
+              "color": "#007570"
+            }
+          ]
+        },
+        {
+          "id": "process1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            730,
+            246,
+            148,
+            37
+          ],
+          "font_family": "Arial",
+          "font_size": 21,
+          "bold": false,
+          "color": "#101010",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "e1proc",
+          "runs": [
+            {
+              "text": "processes x",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21,
+              "bold": false,
+              "italic": false,
+              "color": "#101010"
+            }
+          ]
+        },
+        {
+          "id": "process3",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            730,
+            595,
+            148,
+            37
+          ],
+          "font_family": "Arial",
+          "font_size": 21,
+          "bold": false,
+          "color": "#101010",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "e3proc",
+          "runs": [
+            {
+              "text": "processes x",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21,
+              "bold": false,
+              "italic": false,
+              "color": "#101010"
+            }
+          ]
+        },
+        {
+          "id": "gatedoff",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            725,
+            409,
+            158,
+            56
+          ],
+          "font_family": "Arial",
+          "font_size": 21,
+          "bold": false,
+          "color": "#101010",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "e2proc",
+          "runs": [
+            {
+              "text": "gated off\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21,
+              "bold": false,
+              "italic": false,
+              "color": "#101010"
+            },
+            {
+              "text": "(no execution)",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21,
+              "bold": false,
+              "italic": false,
+              "color": "#101010"
+            }
+          ]
+        },
+        {
+          "id": "weighttitle",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            987,
+            126,
+            203,
+            64
+          ],
+          "font_family": "Arial",
+          "font_size": 21,
+          "bold": false,
+          "color": "#007570",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Gate weight\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21,
+              "bold": false,
+              "italic": false,
+              "color": "#007570"
+            },
+            {
+              "text": "(fixture constant)",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21,
+              "bold": false,
+              "italic": false,
+              "color": "#007570"
+            }
+          ]
+        },
+        {
+          "id": "weight06",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1033,
+            223,
+            111,
+            44
+          ],
+          "font_family": "Arial",
+          "font_size": 29,
+          "bold": false,
+          "color": "#007570",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "w06",
+          "runs": [
+            {
+              "text": "0.6",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 29,
+              "bold": false,
+              "italic": false,
+              "color": "#007570"
+            }
+          ]
+        },
+        {
+          "id": "weight04",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1033,
+            572,
+            111,
+            41
+          ],
+          "font_family": "Arial",
+          "font_size": 27,
+          "bold": false,
+          "color": "#007570",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "w04",
+          "runs": [
+            {
+              "text": "0.4",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 27,
+              "bold": false,
+              "italic": false,
+              "color": "#007570"
+            }
+          ]
+        },
+        {
+          "id": "mergelabel",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1287,
+            342,
+            106,
+            31
+          ],
+          "font_family": "Arial",
+          "font_size": 20,
+          "bold": false,
+          "color": "#007570",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Weighted",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#007570"
+            }
+          ]
+        },
+        {
+          "id": "plus",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1240,
+            420,
+            53,
+            53
+          ],
+          "font_family": "Arial",
+          "font_size": 32,
+          "bold": false,
+          "color": "#007570",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "merge",
+          "runs": [
+            {
+              "text": "+",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 32,
+              "bold": false,
+              "italic": false,
+              "color": "#007570"
+            }
+          ]
+        },
+        {
+          "id": "result",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1415,
+            422,
+            142,
+            31
+          ],
+          "font_family": "Arial",
+          "font_size": 21,
+          "bold": false,
+          "color": "#101010",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "output",
+          "runs": [
+            {
+              "text": "y = 0.6 E1(x)",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21,
+              "bold": false,
+              "italic": false,
+              "color": "#101010"
+            }
+          ]
+        },
+        {
+          "id": "footer",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            553,
+            938,
+            481,
+            42
+          ],
+          "font_family": "Arial",
+          "font_size": 21.2,
+          "bold": false,
+          "color": "#101010",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Synthetic fixture | schematic, not measured",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21.2,
+              "bold": false,
+              "italic": false,
+              "color": "#101010"
+            }
+          ]
+        },
+        {
+          "id": "sel1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            450,
+            222,
+            42,
+            42
+          ],
+          "shape": "ellipse",
+          "stroke": "#007570",
+          "stroke_width": 2,
+          "fill": "#007570",
+          "container": "gate"
+        },
+        {
+          "id": "sel1a",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              460.92,
+              243
+            ],
+            [
+              468.9,
+              250.14
+            ]
+          ],
+          "stroke": "#FFFFFF",
+          "stroke_width": 2.5,
+          "container": "sel1",
+          "allow_overlap_with": [
+            "sel1b"
+          ],
+          "overlap_reason": "Source checkmark strokes join at their shared vertex."
+        },
+        {
+          "id": "sel1b",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              468.9,
+              250.14
+            ],
+            [
+              481.5,
+              235.02
+            ]
+          ],
+          "stroke": "#FFFFFF",
+          "stroke_width": 2.5,
+          "container": "sel1"
+        },
+        {
+          "id": "sel2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            450,
+            396,
+            42,
+            42
+          ],
+          "shape": "ellipse",
+          "stroke": "#B28B00",
+          "stroke_width": 2,
+          "fill": "#B28B00",
+          "container": "gate"
+        },
+        {
+          "id": "sel2a",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              464.28,
+              410.28
+            ],
+            [
+              477.72,
+              423.72
+            ]
+          ],
+          "stroke": "#FFFFFF",
+          "stroke_width": 2.5,
+          "container": "sel2",
+          "allow_overlap_with": [
+            "sel2b"
+          ],
+          "overlap_reason": "Source inactive cross has two intersecting strokes."
+        },
+        {
+          "id": "sel2b",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              464.28,
+              423.72
+            ],
+            [
+              477.72,
+              410.28
+            ]
+          ],
+          "stroke": "#FFFFFF",
+          "stroke_width": 2.5,
+          "container": "sel2"
+        },
+        {
+          "id": "sel3",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            450,
+            569,
+            42,
+            42
+          ],
+          "shape": "ellipse",
+          "stroke": "#007570",
+          "stroke_width": 2,
+          "fill": "#007570",
+          "container": "gate"
+        },
+        {
+          "id": "sel3a",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              460.92,
+              590
+            ],
+            [
+              468.9,
+              597.14
+            ]
+          ],
+          "stroke": "#FFFFFF",
+          "stroke_width": 2.5,
+          "container": "sel3",
+          "allow_overlap_with": [
+            "sel3b"
+          ],
+          "overlap_reason": "Source checkmark strokes join at their shared vertex."
+        },
+        {
+          "id": "sel3b",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              468.9,
+              597.14
+            ],
+            [
+              481.5,
+              582.02
+            ]
+          ],
+          "stroke": "#FFFFFF",
+          "stroke_width": 2.5,
+          "container": "sel3"
+        },
+        {
+          "id": "key1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            332,
+            647,
+            22,
+            22
+          ],
+          "shape": "ellipse",
+          "stroke": "#007570",
+          "stroke_width": 2,
+          "fill": "#007570",
+          "container": "gate"
+        },
+        {
+          "id": "key1a",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              337.72,
+              658
+            ],
+            [
+              341.9,
+              661.74
+            ]
+          ],
+          "stroke": "#FFFFFF",
+          "stroke_width": 2.5,
+          "container": "key1",
+          "allow_overlap_with": [
+            "key1b"
+          ],
+          "overlap_reason": "Source checkmark strokes join at their shared vertex."
+        },
+        {
+          "id": "key1b",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              341.9,
+              661.74
+            ],
+            [
+              348.5,
+              653.82
+            ]
+          ],
+          "stroke": "#FFFFFF",
+          "stroke_width": 2.5,
+          "container": "key1"
+        },
+        {
+          "id": "key2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            332,
+            680,
+            22,
+            22
+          ],
+          "shape": "ellipse",
+          "stroke": "#B28B00",
+          "stroke_width": 2,
+          "fill": "#B28B00",
+          "container": "gate"
+        },
+        {
+          "id": "key2a",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              339.48,
+              687.48
+            ],
+            [
+              346.52,
+              694.52
+            ]
+          ],
+          "stroke": "#FFFFFF",
+          "stroke_width": 2.5,
+          "container": "key2",
+          "allow_overlap_with": [
+            "key2b"
+          ],
+          "overlap_reason": "Source inactive cross has two intersecting strokes."
+        },
+        {
+          "id": "key2b",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              339.48,
+              694.52
+            ],
+            [
+              346.52,
+              687.48
+            ]
+          ],
+          "stroke": "#FFFFFF",
+          "stroke_width": 2.5,
+          "container": "key2"
+        },
+        {
+          "id": "keytext1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            367,
+            642,
+            151,
+            31
+          ],
+          "font_family": "Arial",
+          "font_size": 15.5,
+          "bold": true,
+          "color": "#101010",
+          "align": "left",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "gate",
+          "runs": [
+            {
+              "text": "active (selected)",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 15.5,
+              "bold": true,
+              "italic": false,
+              "color": "#101010"
+            }
+          ]
+        },
+        {
+          "id": "keytext2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            367,
+            675,
+            155,
+            32
+          ],
+          "font_family": "Arial",
+          "font_size": 15.5,
+          "bold": true,
+          "color": "#101010",
+          "align": "left",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "gate",
+          "runs": [
+            {
+              "text": "inactive (gated off)",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 15.5,
+              "bold": true,
+              "italic": false,
+              "color": "#101010"
+            }
+          ]
+        },
+        {
+          "id": "inputshaft",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              140,
+              419
+            ],
+            [
+              331,
+              419
+            ]
+          ],
+          "stroke": "#101010",
+          "stroke_width": 3,
+          "allow_overlap_with": [
+            "trunk",
+            "gate"
+          ],
+          "overlap_reason": "Source token connector crosses dashed gate boundary and enters branch node."
+        },
+        {
+          "id": "trunk",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              261,
+              245
+            ],
+            [
+              261,
+              591
+            ]
+          ],
+          "stroke": "#101010",
+          "stroke_width": 3,
+          "allow_overlap_with": [
+            "topbranch",
+            "botbranch"
+          ],
+          "overlap_reason": "Source token route has a shared trunk junction."
+        },
+        {
+          "id": "topbranch",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              261,
+              245
+            ],
+            [
+              329,
+              245
+            ]
+          ],
+          "stroke": "#101010",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 15
+          },
+          "allow_overlap_with": [
+            "gate"
+          ],
+          "overlap_reason": "Source token connector crosses dashed gate boundary and enters branch node."
+        },
+        {
+          "id": "botbranch",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              261,
+              591
+            ],
+            [
+              329,
+              591
+            ]
+          ],
+          "stroke": "#101010",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 15
+          },
+          "allow_overlap_with": [
+            "gate"
+          ],
+          "overlap_reason": "Source token connector crosses dashed gate boundary and enters branch node."
+        },
+        {
+          "id": "go1",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              529,
+              244.5
+            ],
+            [
+              711,
+              244.5
+            ]
+          ],
+          "stroke": "#101010",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 17,
+            "width": 16
+          }
+        },
+        {
+          "id": "go3",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              529,
+              591
+            ],
+            [
+              711,
+              591
+            ]
+          ],
+          "stroke": "#101010",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 15
+          }
+        },
+        {
+          "id": "to06",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              893,
+              245
+            ],
+            [
+              1016,
+              245
+            ]
+          ],
+          "stroke": "#101010",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 15
+          }
+        },
+        {
+          "id": "to04",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              893,
+              593
+            ],
+            [
+              1016,
+              593
+            ]
+          ],
+          "stroke": "#101010",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 15
+          }
+        },
+        {
+          "id": "out",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              1309,
+              446
+            ],
+            [
+              1404,
+              446
+            ]
+          ],
+          "stroke": "#101010",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 15
+          }
+        },
+        {
+          "id": "upperhorizontal",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              1157,
+              245
+            ],
+            [
+              1267,
+              245
+            ]
+          ],
+          "stroke": "#101010",
+          "stroke_width": 3,
+          "allow_overlap_with": [
+            "uppervertical"
+          ],
+          "overlap_reason": "Source upper elbow joins the downward merge route."
+        },
+        {
+          "id": "uppervertical",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              1267,
+              245
+            ],
+            [
+              1267,
+              399
+            ]
+          ],
+          "stroke": "#101010",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 15
+          }
+        },
+        {
+          "id": "lowerhorizontal",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              1157,
+              593
+            ],
+            [
+              1267,
+              593
+            ]
+          ],
+          "stroke": "#101010",
+          "stroke_width": 3,
+          "allow_overlap_with": [
+            "lowervertical"
+          ],
+          "overlap_reason": "Source lower elbow joins the upward merge route."
+        },
+        {
+          "id": "lowervertical",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              1267,
+              593
+            ],
+            [
+              1267,
+              494
+            ]
+          ],
+          "stroke": "#101010",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 15
+          }
+        },
+        {
+          "id": "septopL",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              43,
+              313
+            ],
+            [
+              310,
+              313
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.8,
+          "dash": [
+            11,
+            6
+          ],
+          "allow_overlap_with": [
+            "trunk"
+          ],
+          "overlap_reason": "Source dashed lane divider crosses token trunk."
+        },
+        {
+          "id": "septopR",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              530,
+              313
+            ],
+            [
+              1548,
+              313
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.8,
+          "dash": [
+            11,
+            6
+          ],
+          "allow_overlap_with": [
+            "uppervertical"
+          ],
+          "overlap_reason": "Source dashed lane divider crosses merge route."
+        },
+        {
+          "id": "sepbottomL",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              43,
+              535
+            ],
+            [
+              310,
+              535
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.8,
+          "dash": [
+            11,
+            6
+          ],
+          "allow_overlap_with": [
+            "trunk"
+          ],
+          "overlap_reason": "Source dashed lane divider crosses token trunk."
+        },
+        {
+          "id": "sepbottomR",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              530,
+              535
+            ],
+            [
+              1548,
+              535
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.8,
+          "dash": [
+            11,
+            6
+          ],
+          "allow_overlap_with": [
+            "lowervertical"
+          ],
+          "overlap_reason": "Source dashed lane divider crosses merge route."
+        },
+        {
+          "id": "legendtitle",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            53,
+            744,
+            120,
+            31
+          ],
+          "font_family": "Arial",
+          "font_size": 18,
+          "bold": true,
+          "color": "#101010",
+          "align": "left",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "legend",
+          "runs": [
+            {
+              "text": "Legend",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18,
+              "bold": true,
+              "italic": false,
+              "color": "#101010"
+            }
+          ]
+        },
+        {
+          "id": "legend_arrow",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              58,
+              788
+            ],
+            [
+              119,
+              788
+            ]
+          ],
+          "stroke": "#101010",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 16,
+            "width": 15
+          },
+          "container": "legend"
+        },
+        {
+          "id": "legend_active",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            59,
+            806,
+            55,
+            21
+          ],
+          "shape": "rect",
+          "stroke": "#007570",
+          "stroke_width": 2,
+          "fill": "#FFFFFF",
+          "container": "legend"
+        },
+        {
+          "id": "legend_inactive",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            59,
+            835,
+            55,
+            21
+          ],
+          "shape": "rect",
+          "stroke": "#B28B00",
+          "stroke_width": 2,
+          "fill": "#FFFFFF",
+          "container": "legend",
+          "dash": [
+            8,
+            4
+          ]
+        },
+        {
+          "id": "legend_weight",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            59,
+            864,
+            55,
+            21
+          ],
+          "shape": "rect",
+          "stroke": "#007570",
+          "stroke_width": 2,
+          "fill": "#FFFFFF",
+          "container": "legend"
+        },
+        {
+          "id": "legend_merge",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            69,
+            894,
+            35,
+            35
+          ],
+          "shape": "ellipse",
+          "stroke": "#007570",
+          "stroke_width": 2,
+          "fill": "#FFFFFF",
+          "container": "legend"
+        },
+        {
+          "id": "legendw",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            67,
+            861,
+            39,
+            27
+          ],
+          "font_family": "Arial",
+          "font_size": 15,
+          "bold": true,
+          "color": "#007570",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "legend_weight",
+          "runs": [
+            {
+              "text": "w",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 15,
+              "bold": true,
+              "italic": false,
+              "color": "#007570"
+            }
+          ]
+        },
+        {
+          "id": "legendplus",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            75,
+            895,
+            23,
+            32
+          ],
+          "font_family": "Arial",
+          "font_size": 19,
+          "bold": true,
+          "color": "#007570",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "legend_merge",
+          "runs": [
+            {
+              "text": "+",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 19,
+              "bold": true,
+              "italic": false,
+              "color": "#007570"
+            }
+          ]
+        },
+        {
+          "id": "legendtext1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            146,
+            775,
+            242,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 15.5,
+          "bold": true,
+          "color": "#101010",
+          "align": "left",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "legend",
+          "runs": [
+            {
+              "text": "Data path (token x)",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 15.5,
+              "bold": true,
+              "italic": false,
+              "color": "#101010"
+            }
+          ]
+        },
+        {
+          "id": "legendtext2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            146,
+            803,
+            242,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 15.5,
+          "bold": true,
+          "color": "#101010",
+          "align": "left",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "legend",
+          "runs": [
+            {
+              "text": "Executed branch (active)",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 15.5,
+              "bold": true,
+              "italic": false,
+              "color": "#101010"
+            }
+          ]
+        },
+        {
+          "id": "legendtext3",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            146,
+            831,
+            242,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 15.5,
+          "bold": true,
+          "color": "#101010",
+          "align": "left",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "legend",
+          "runs": [
+            {
+              "text": "Gated-off branch (inactive)",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 15.5,
+              "bold": true,
+              "italic": false,
+              "color": "#101010"
+            }
+          ]
+        },
+        {
+          "id": "legendtext4",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            146,
+            861,
+            242,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 15.5,
+          "bold": true,
+          "color": "#101010",
+          "align": "left",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "legend",
+          "runs": [
+            {
+              "text": "Gate weight (fixture constant)",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 15.5,
+              "bold": true,
+              "italic": false,
+              "color": "#101010"
+            }
+          ]
+        },
+        {
+          "id": "legendtext5",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            146,
+            898,
+            242,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 15.5,
+          "bold": true,
+          "color": "#101010",
+          "align": "left",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "legend",
+          "runs": [
+            {
+              "text": "Additive merge",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 15.5,
+              "bold": true,
+              "italic": false,
+              "color": "#101010"
+            }
+          ]
+        },
+        {
+          "id": "merge_word",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1292,
+            368,
+            101,
+            31
+          ],
+          "font_family": "Arial",
+          "font_size": 20,
+          "bold": false,
+          "color": "#007570",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "merge",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#007570"
+            }
+          ]
+        },
+        {
+          "id": "additive_word",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1292,
+            394,
+            101,
+            31
+          ],
+          "font_family": "Arial",
+          "font_size": 20,
+          "bold": false,
+          "color": "#007570",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "(additive)",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#007570"
+            }
+          ]
+        },
+        {
+          "id": "result_second",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1417,
+            451,
+            142,
+            31
+          ],
+          "font_family": "Arial",
+          "font_size": 21,
+          "bold": false,
+          "color": "#101010",
+          "align": "center",
+          "valign": "middle",
+          "fit": "strict",
+          "wrap": false,
+          "container": "output",
+          "runs": [
+            {
+              "text": "+ 0.4 E3(x)",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21,
+              "bold": false,
+              "italic": false,
+              "color": "#101010"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

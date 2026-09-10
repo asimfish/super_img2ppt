@@ -1,0 +1,74 @@
+from pathlib import Path
+import json,hashlib
+from PIL import Image
+root=Path('/tmp/embodied-forward-TNEbMc');job=root/'job';im=Image.open(job/'pages/page_001/source.png')
+rois=[('title',18,12,395,28),('task',156,78,211,29),('observation',193,167,154,29),('images_header',562,148,115,48),('camera_label',561,210,118,28),('task_tokens_header',850,42,203,28),('token_put',857,83,34,25),('token_dishes',1024,83,59,25),('prediction',875,196,236,34),('predicted_label',1201,171,155,29),('predicted_text',1201,207,158,32),('modes',1430,261,133,67),('expert',976,375,207,35),('context',809,394,64,25),('flow_title',1044,423,105,25),('robot_label',566,639,104,29),('noise',1000,618,48,25),('step1',811,866,113,34),('step2',1066,866,169,34),('step3',1331,866,196,34),('execution',1060,930,190,32),('footer',16,943,500,28),('token_top',846,73,330,7),('vla_left',844,166,8,94),('green_bottom',792,655,586,8),('down_arrow',1307,551,19,132)]
+contract={'coordinate_system':'source pixels xywh','frozen_before_authoring':True,'thresholds':{'ink_bbox_max_edge_error_px':4,'ink_centroid_max_error_px':4,'min_ink_iou':0.45},'rois':[{'id':a,'box':[x,y,w,h]} for a,x,y,w,h in rois]};(root/'roi_contract.json').write_text(json.dumps(contract,indent=2));(root/'roi_contract.sha256').write_text(hashlib.sha256((root/'roi_contract.json').read_bytes()).hexdigest())
+E=[]; assets=job/'assets';assets.mkdir(exist_ok=True)
+def add(kind,id,**kw):
+ d={'id':id,'kind':kind,'z':len(E)+1,**kw};E.append(d);return id
+def crop(id,box):
+ x,y,w,h=box;im.crop((x,y,x+w,y+h)).save(assets/(id+'.png'));return add('image',id,box=box,path='assets/'+id+'.png',contains_text=False,provenance='Exact region crop from user-provided super_teaser schematic; internal artwork remains raster')
+def shape(id,box,stroke='#087420',fill=None,container=None,**kw):
+ return add('shape',id,box=box,shape=kw.pop('shape','rect'),stroke=stroke,stroke_width=1.5,fill=fill,**({'container':container} if container else {}),**kw)
+def text(id,s,box,size=18,bold=False,color='#111111',container=None,**kw):
+ return add('text',id,box=box,text=s,font_size=size,font_family='Arial',bold=bold,color=color,fit='strict',wrap=False,**({'container':container} if container else {}),**kw)
+def line(id,pts,color='#111111',arrow=False,container=None):
+ return add('line',id,points=pts,stroke=color,stroke_width=2,**({'arrow':True,'arrow_head':{'length':11,'width':10}} if arrow else {}),**({'container':container} if container else {}))
+red='#FF170D';green='#006B51'
+# Complex illustrated scenes are separate raster objects, never full-page background.
+for id,b in [('observation_photo',[26,202,471,587]),('camera1',[540,251,158,101]),('camera2',[540,365,158,103]),('camera3',[540,516,158,92]),('approach',[766,683,232,178]),('close',[1047,683,233,178]),('lift',[1320,683,238,178]),('left_brace',[515,184,23,578]),('right_brace',[705,184,25,578]),('mode_brace',[1404,150,29,275]),('bottom_brace',[756,900,808,34]),('robot_joints',[543,676,148,20]),('camera_rule',[538,616,162,22])]:crop(id,b)
+text('title','pi0.5 | From a task to continuous action',[21,11,440,33],21,True)
+text('task','Put away the dishes',[162,78,255,31],22,True)
+text('task_sub','(Task)',[234,106,75,30],20)
+text('observation','Observation',[198,166,127,32],22,False,green)
+text('obs_o','o',[322,166,17,32],22,True,green,italic=True);text('obs_t','t',[335,181,12,18],13,True,green,italic=True)
+text('images_header','Images +\nrobot state',[561,147,114,53],21,True,green,align='center')
+text('camera_label','Camera views',[565,211,127,28],18)
+text('camera_ellipsis','...',[608,474,34,30],23,True)
+text('robot_label','Robot state',[571,641,122,28],18)
+text('q','q',[610,696,18,31],21,True,italic=True);text('q_sub','t',[623,711,10,17],12,italic=True)
+text('joint_label','(joint positions)',[567,725,140,28],17)
+text('tokens_header','Task (language tokens)',[854,41,260,30],20,False,red)
+for n,(x,w,s) in enumerate([(848,50,'Put'),(898,68,'away'),(966,48,'the'),(1014,79,'dishes'),(1093,81,'<eos>')]):
+ id=shape('token'+str(n),[x,77,w,37],red,'#FFF6F3');text('token_text'+str(n),s,[x+4,82,w-8,29],16,container=id,align='center')
+text('tokens_ellipsis','...',[1183,77,35,28],23,True)
+shape('prediction_box',[848,159,289,107],red,'#FFF2ED',shape='round_rect',radius=7)
+text('prediction','VLA: subtask prediction',[864,194,260,36],24,True,container='prediction_box',align='center')
+line('task_down',[[993,120],[993,153]],arrow=True)
+line('camera_to_prediction1',[[723,298],[763,298]]);line('camera_to_prediction2',[[763,298],[763,220]]);line('camera_to_prediction3',[[763,220],[844,220]],arrow=True)
+line('prediction_out',[[1144,220],[1181,220]],arrow=True)
+text('predicted_label','Predicted subtask',[1206,171,169,29],18,True,red)
+shape('predicted_box',[1188,203,182,40],red,'#FFF6F3');text('predicted_text','Pick up the plate',[1205,209,157,30],20,container='predicted_box')
+text('modes','Same trained\nmodel, two\ninference modes',[1431,261,137,72],18,align='center')
+shape('expert_box',[786,367,599,292],'#087420',None,shape='round_rect',radius=9)
+text('expert','VLA + action expert',[970,374,256,36],24,True,container='expert_box')
+text('context','Context',[814,395,80,26],16,False,green,container='expert_box')
+for id,b,s,fs,c in [('images_box',[798,426,97,43],'Images (oₜ)',15,'#087420'),('state_box',[793,484,107,43],'Robot state (qₜ)',14,'#087420'),('subtask_box',[793,545,109,54],None,14,red)]:
+ shape(id,b,c,'#F5F8F1',container='expert_box')
+ if s:text(id+'_text',s,[b[0]+4,b[1]+10,b[2]-8,27],fs,container=id,align='center')
+text('subtask_line1','Predicted subtask',[798,550,102,22],13,False,red,container='subtask_box');text('subtask_line2','(Pick up the plate)',[798,568,102,23],13,container='subtask_box')
+shape('encoder',[934,435,24,139],'#087420','#D8E8C2',container='expert_box',shape='polygon',vertices=[[0,0],[1,0.12],[1,0.88],[0,1]])
+for i,y in enumerate([449,506,565]):line('context_arrow'+str(i),[[902,y],[921,y]],'#087420',True,'expert_box')
+shape('flow_box',[966,419,260,171],'#999999',None,container='expert_box')
+text('flow_title','Flow matching',[1048,424,120,25],15,True,container='flow_box')
+text('flow_noise','Noise',[982,454,60,25],14,container='flow_box')
+text('trajectories','Action\ntrajectories',[1146,440,79,40],14,container='flow_box',align='center')
+crop('flow_trajectories',[974,480,244,99]);E[-1]['container']='flow_box'
+line('encoder_flow',[[958,506],[971,506]],'#087420',True,'expert_box')
+shape('decoder',[1237,458,17,112],'#087420','#D8E8C2',container='expert_box',shape='polygon',vertices=[[0,0],[1,.11],[1,.89],[0,1]])
+line('flow_chunk',[[1228,505],[1252,505]],'#087420',True,'expert_box');E[-1]['allow_overlap_with']=['decoder'];E[-1]['overlap_reason']='Source arrow visibly enters slanted decoder'
+text('continuous','Continuous\naction chunk',[1275,425,96,46],15,True,container='expert_box',align='center')
+shape('chunk',[1264,491,113,56],'#087420','#F0F6EE',container='expert_box')
+text('a_start','a',[1274,503,20,31],22,True,container='chunk',italic=True);text('a_start_sub','t',[1288,518,10,18],12,True,container='chunk',italic=True)
+text('a_dots','⋯',[1303,504,24,30],21,container='chunk');text('a_end','a',[1333,503,20,31],22,True,container='chunk',italic=True);text('a_end_sub','t+H',[1346,518,29,18],12,True,container='chunk',italic=True)
+shape('noise_box',[992,614,65,33],'#999999',None,container='expert_box');text('noise','Noise',[1004,618,48,26],16,container='noise_box');line('noise_up',[[1024,613],[1024,592]],'#087420',True,'expert_box')
+line('observation_action',[[722,490],[773,490]],arrow=True)
+# Source's bent red link approximated by joined native straight segments, corner radius unsupported.
+line('subtask_route1',[[1277,247],[1277,328]],red);line('subtask_route2',[[1277,328],[789,328]],red);line('subtask_route3',[[789,328],[777,341]],red);line('subtask_route4',[[777,341],[777,558]],red);line('subtask_route5',[[777,558],[789,566]],red,True)
+line('chunk_down',[[1316,553],[1316,681]],'#087420',True);E[-1]['allow_overlap_with']=['expert_box'];E[-1]['overlap_reason']='Source output arrow exits through panel bottom border'
+for id,x,s,w in [('step1',817,'1. Approach',150),('step2',1074,'2. Close (grasp rim)',205),('step3',1339,'3. Lift (clear of surface)',237)]:text(id,s,[x,869,w,31],18)
+line('step_arrow1',[[1007,772],[1034,772]],'#087420',True);line('step_arrow2',[[1286,774],[1312,774]],'#087420',True)
+text('execution','Execution schematic',[1067,931,240,32],21,False,green)
+text('footer','Inference schematic; independently illustrated scenes; training omitted.',[20,945,580,28],16)
+scene={'version':1,'slides':[{'id':'page_001','width':1586,'height':992,'source':'pages/page_001/source.png','background':'#FFFFFF','reviewed':True,'notes':'Input is super_teaser-generated explanatory schematic, not an original paper figure. Exact photos, unsupported braces, joint glyph diagram and trajectory strokes remain raster. Text, primary boxes, arrows and convex encoder/decoder are editable. Source font identity unknown; Arial requested.','elements':E}]};(job/'scene.json').write_text(json.dumps(scene,indent=2))

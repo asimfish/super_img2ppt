@@ -1,0 +1,13 @@
+from PIL import Image,ImageDraw
+import json,pathlib,sys
+r=pathlib.Path('/tmp/lora-forward-LO8vEs');name=sys.argv[1];b=r/name
+src=Image.open(r/'job/pages/page_001/source.png').convert('RGB');out=Image.open(b/'render/page_001.png').convert('RGB').resize(src.size,Image.Resampling.LANCZOS);out.save(b/'render/source_size.png')
+rs=json.loads((r/'rois_frozen.json').read_text()); rows=[]; montage=Image.new('RGB',(1200,len(rs['regions'])*100),'#EEEEEE');d=ImageDraw.Draw(montage)
+for i,v in enumerate(rs['regions']):
+ x,y,w,h=v['box_xywh'];a=src.crop((x,y,x+w,y+h));c=out.crop((x,y,x+w,y+h));ma={ (k%w,k//w) for k,p in enumerate(a.getdata()) if max(p)<110 };mc={ (k%w,k//w) for k,p in enumerate(c.getdata()) if max(p)<110 }
+ def bb(m):
+  return [min(x for x,y in m),min(y for x,y in m),max(x for x,y in m)+1,max(y for x,y in m)+1] if m else None
+ ba,bc=bb(ma),bb(mc);delta=[z-q for z,q in zip(bc,ba)] if ba and bc else None;iou=float(len(ma&mc)/max(1,len(ma|mc)));err=max(abs(z) for z in delta) if delta else 999
+ rows.append({'id':v['id'],'source_ink_bbox_local':ba,'render_ink_bbox_local':bc,'edge_delta_ltrb_px':delta,'dark_mask_iou':iou,'pass':err<=3 and iou>=.7})
+ d.text((3,i*100+3),v['id'],fill='black');montage.paste(a,(100,i*100+10));montage.paste(c,(700,i*100+10))
+(b/'roi_metrics.json').write_text(json.dumps(rows,indent=2));montage.save(b/'roi_montage.png');print(json.dumps(rows,indent=2))

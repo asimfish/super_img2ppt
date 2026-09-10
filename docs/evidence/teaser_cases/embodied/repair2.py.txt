@@ -1,0 +1,19 @@
+from pathlib import Path
+from PIL import ImageFont
+import json
+r=Path('/tmp/embodied-forward-TNEbMc');p=r/'job/scene.json';s=json.loads(p.read_text());e={x['id']:x for x in s['slides'][0]['elements']};m=json.loads((r/'build_03/roi_measurements.json').read_text());mapping={'task_tokens_header':'tokens_header','token_put':'token_text0','token_dishes':'token_text3'};log=[]
+for q in m:
+ id=mapping.get(q['id'],q['id']);x=e.get(id)
+ if not x or x['kind']!='text':continue
+ if '\n' in x.get('text','') or id=='observation':
+  x['box'][1]+=3;continue
+ a=q['source_bbox'];w=a[2]-a[0];h=a[3]-a[1];best=None
+ for family,file in [('Liberation Sans','LiberationSans'),('Liberation Sans Narrow','LiberationSansNarrow')]:
+  for i in range(round(x['font_size']*4)-16,round(x['font_size']*4)+17):
+   size=i/4;f=ImageFont.truetype('/Applications/LibreOffice.app/Contents/Resources/fonts/truetype/'+file+('-Bold.ttf' if x.get('bold') else '-Regular.ttf'),round(size*4));b=f.getbbox(x['text']);fw=(b[2]-b[0])/4;fh=(b[3]-b[1])/4;score=abs(fw-w)/w+abs(fh-h)/h
+   if best is None or score<best[0]:best=(score,family,size,b)
+ _,fam,size,b=best;x['font_family']=fam;x['font_size']=size;x['align']='left';x['box'][0]=q['box'][0]+a[0]-b[0]/4;x['box'][1]=q['box'][1]+a[1]-b[1]/4;x['box'][2]=max(x['box'][2],w+8);x['box'][3]=max(x['box'][3],size*1.3)
+ log.append({'id':id,'family':fam,'size':size,'box':x['box'],'source_ink_wh':[w,h]})
+# Untested token siblings follow same baseline repair supported by put/dishes source ROI.
+for k in ['token_text1','token_text2','token_text4']:e[k]['box'][1]+=4
+p.write_text(json.dumps(s,indent=2));(r/'repair2_evidence.json').write_text(json.dumps(log,indent=2))

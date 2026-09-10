@@ -1,0 +1,172 @@
+{
+  "frozen_before_scene": true,
+  "thresholds": {
+    "dark_rgb_max": 110,
+    "edge_error_px_max": 3,
+    "dark_mask_iou_min": 0.7
+  },
+  "regions": [
+    {
+      "id": "title",
+      "box_xywh": [
+        465,
+        45,
+        190,
+        53
+      ]
+    },
+    {
+      "id": "x",
+      "box_xywh": [
+        125,
+        181,
+        37,
+        46
+      ]
+    },
+    {
+      "id": "h",
+      "box_xywh": [
+        1398,
+        179,
+        37,
+        48
+      ]
+    },
+    {
+      "id": "dimW",
+      "box_xywh": [
+        505,
+        287,
+        95,
+        45
+      ]
+    },
+    {
+      "id": "labelA",
+      "box_xywh": [
+        458,
+        475,
+        193,
+        47
+      ]
+    },
+    {
+      "id": "labelB",
+      "box_xywh": [
+        750,
+        376,
+        190,
+        45
+      ]
+    },
+    {
+      "id": "dimA",
+      "box_xywh": [
+        510,
+        630,
+        90,
+        47
+      ]
+    },
+    {
+      "id": "dimB",
+      "box_xywh": [
+        798,
+        745,
+        90,
+        44
+      ]
+    },
+    {
+      "id": "alpha",
+      "box_xywh": [
+        1017,
+        563,
+        123,
+        45
+      ]
+    },
+    {
+      "id": "legendFrozen",
+      "box_xywh": [
+        170,
+        703,
+        118,
+        46
+      ]
+    },
+    {
+      "id": "legendTrainable",
+      "box_xywh": [
+        172,
+        791,
+        145,
+        46
+      ]
+    },
+    {
+      "id": "formula",
+      "box_xywh": [
+        482,
+        866,
+        565,
+        62
+      ]
+    },
+    {
+      "id": "gridWtop",
+      "box_xywh": [
+        415,
+        99,
+        273,
+        17
+      ]
+    },
+    {
+      "id": "gridAbottom",
+      "box_xywh": [
+        415,
+        610,
+        273,
+        19
+      ]
+    },
+    {
+      "id": "gridBleft",
+      "box_xywh": [
+        793,
+        429,
+        17,
+        315
+      ]
+    },
+    {
+      "id": "upperArrow",
+      "box_xywh": [
+        704,
+        183,
+        526,
+        17
+      ]
+    },
+    {
+      "id": "outputArrow",
+      "box_xywh": [
+        1300,
+        367,
+        89,
+        31
+      ]
+    },
+    {
+      "id": "lowerArrow",
+      "box_xywh": [
+        888,
+        566,
+        104,
+        30
+      ]
+    }
+  ]
+}

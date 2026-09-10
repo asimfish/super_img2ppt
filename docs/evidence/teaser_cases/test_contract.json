@@ -1,0 +1,54 @@
+{
+  "evaluated": "2026-09-10",
+  "source_repository": "asimfish/super_teaser",
+  "source_commit": "6b1d41b0b81ed09ed5cd692182ae05fc5573ac12",
+  "runtime_baseline_commit": "106da417466c05d75bd04fa30b72327cd0d0d182",
+  "selection": "Three visually inspected generated illustrations spanning matrix/formula, gated routing, and embodied hierarchy with photographs/flow curves. Purposive coverage selection, not a random sample.",
+  "expected_behavior": [
+    "Transcribe visible source text faithfully, including numerical signs and subscripts",
+    "Rebuild text and simple geometry as native editable objects",
+    "Retain intended connections, ordering, spacing and aspect ratio",
+    "Use actual PPTX LibreOffice rendering for evidence",
+    "Preserve every failed trial and bounded local repairs",
+    "Record noneditable areas and source/render differences without equating pass to fidelity"
+  ],
+  "cases": [
+    {
+      "id": "teaser_lora",
+      "source": "examples/images/lora-clean.png",
+      "risks": [
+        "subscripts",
+        "grid alignment",
+        "rounded connectors",
+        "hatched legend"
+      ]
+    },
+    {
+      "id": "teaser_routing",
+      "source": "examples/images/fixtures/fixture-routed-branches.png",
+      "risks": [
+        "branch weights",
+        "inactive branch semantics",
+        "dashed containers",
+        "legend scale",
+        "intersecting lines"
+      ]
+    },
+    {
+      "id": "teaser_embodied",
+      "source": "examples/images/embodied/pi05-hierarchy-v3.png",
+      "risks": [
+        "nested labels",
+        "photo crops",
+        "curves",
+        "small equations",
+        "braces",
+        "red feedback path"
+      ]
+    }
+  ],
+  "evaluation_boundary": "Evaluators receive only the frozen skill instructions/references and their one raw image. No implementation contents, source prompts, other fixtures or expected scene. No source repository code executed.",
+  "license": "Generated examples shared under MIT-0 to the extent of maintainer rights, per pinned THIRD_PARTY_NOTICES.md; not a transfer of original paper rights.",
+  "frozen_runtime_manifest": "baseline.json",
+  "source_manifest": "sources.json"
+}

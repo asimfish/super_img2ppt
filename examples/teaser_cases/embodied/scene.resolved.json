@@ -1,0 +1,2360 @@
+{
+  "version": 1,
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 1586,
+      "height": 992,
+      "source": "assets/2528086b727f8c2fc940.png",
+      "background": "#FFFFFF",
+      "reviewed": true,
+      "notes": "Input is super_teaser-generated explanatory schematic, not an original paper figure. Exact photos, unsupported braces, joint glyph diagram and trajectory strokes remain raster. Text, primary boxes, arrows and convex encoder/decoder are editable. Source font identity unknown; Arial requested.",
+      "elements": [
+        {
+          "id": "observation_photo",
+          "kind": "image",
+          "z": 1,
+          "box": [
+            26,
+            202,
+            471,
+            587
+          ],
+          "path": "assets/bcb43e5e29cdcd06196d.png",
+          "contains_text": false,
+          "provenance": "Exact region crop from user-provided super_teaser schematic; internal artwork remains raster"
+        },
+        {
+          "id": "camera1",
+          "kind": "image",
+          "z": 2,
+          "box": [
+            540,
+            251,
+            158,
+            101
+          ],
+          "path": "assets/ba17e41e2476f4015216.png",
+          "contains_text": false,
+          "provenance": "Exact region crop from user-provided super_teaser schematic; internal artwork remains raster"
+        },
+        {
+          "id": "camera2",
+          "kind": "image",
+          "z": 3,
+          "box": [
+            540,
+            365,
+            158,
+            103
+          ],
+          "path": "assets/314e3f402287b6b96af4.png",
+          "contains_text": false,
+          "provenance": "Exact region crop from user-provided super_teaser schematic; internal artwork remains raster"
+        },
+        {
+          "id": "camera3",
+          "kind": "image",
+          "z": 4,
+          "box": [
+            540,
+            516,
+            158,
+            92
+          ],
+          "path": "assets/5ca5762196bf41e804a6.png",
+          "contains_text": false,
+          "provenance": "Exact region crop from user-provided super_teaser schematic; internal artwork remains raster"
+        },
+        {
+          "id": "approach",
+          "kind": "image",
+          "z": 5,
+          "box": [
+            766,
+            683,
+            232,
+            178
+          ],
+          "path": "assets/bea188e4cae5849bfb6a.png",
+          "contains_text": false,
+          "provenance": "Exact region crop from user-provided super_teaser schematic; internal artwork remains raster"
+        },
+        {
+          "id": "close",
+          "kind": "image",
+          "z": 6,
+          "box": [
+            1047,
+            683,
+            233,
+            178
+          ],
+          "path": "assets/47e0106cf57bf95c4045.png",
+          "contains_text": false,
+          "provenance": "Exact region crop from user-provided super_teaser schematic; internal artwork remains raster"
+        },
+        {
+          "id": "lift",
+          "kind": "image",
+          "z": 7,
+          "box": [
+            1320,
+            683,
+            238,
+            178
+          ],
+          "path": "assets/950a1ca2595f873016ce.png",
+          "contains_text": false,
+          "provenance": "Exact region crop from user-provided super_teaser schematic; internal artwork remains raster"
+        },
+        {
+          "id": "left_brace",
+          "kind": "image",
+          "z": 8,
+          "box": [
+            515,
+            184,
+            23,
+            578
+          ],
+          "path": "assets/223b8669e46bd490074d.png",
+          "contains_text": false,
+          "provenance": "Exact region crop from user-provided super_teaser schematic; internal artwork remains raster"
+        },
+        {
+          "id": "right_brace",
+          "kind": "image",
+          "z": 9,
+          "box": [
+            705,
+            184,
+            25,
+            578
+          ],
+          "path": "assets/9b12a41224ae968a9932.png",
+          "contains_text": false,
+          "provenance": "Exact region crop from user-provided super_teaser schematic; internal artwork remains raster"
+        },
+        {
+          "id": "mode_brace",
+          "kind": "image",
+          "z": 10,
+          "box": [
+            1404,
+            150,
+            29,
+            275
+          ],
+          "path": "assets/6dd341ceffe0f6aa5d2c.png",
+          "contains_text": false,
+          "provenance": "Exact region crop from user-provided super_teaser schematic; internal artwork remains raster"
+        },
+        {
+          "id": "bottom_brace",
+          "kind": "image",
+          "z": 11,
+          "box": [
+            756,
+            900,
+            808,
+            34
+          ],
+          "path": "assets/06c7176f28ceed9d56f7.png",
+          "contains_text": false,
+          "provenance": "Exact region crop from user-provided super_teaser schematic; internal artwork remains raster"
+        },
+        {
+          "id": "robot_joints",
+          "kind": "image",
+          "z": 12,
+          "box": [
+            543,
+            676,
+            148,
+            20
+          ],
+          "path": "assets/ea948bb30f0e55a09b40.png",
+          "contains_text": false,
+          "provenance": "Exact region crop from user-provided super_teaser schematic; internal artwork remains raster"
+        },
+        {
+          "id": "camera_rule",
+          "kind": "image",
+          "z": 13,
+          "box": [
+            538,
+            616,
+            162,
+            22
+          ],
+          "path": "assets/3181c6631d4afed20202.png",
+          "contains_text": false,
+          "provenance": "Exact region crop from user-provided super_teaser schematic; internal artwork remains raster"
+        },
+        {
+          "id": "title",
+          "kind": "text",
+          "z": 14,
+          "box": [
+            22.0,
+            16.75,
+            440,
+            33
+          ],
+          "font_size": 22.75,
+          "font_family": "Liberation Sans Narrow",
+          "bold": true,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "align": "left",
+          "runs": [
+            {
+              "text": "pi0.5 | From a task to continuous action",
+              "font_family": "Liberation Sans Narrow",
+              "cjk_font_family": "Liberation Sans Narrow",
+              "font_size": 22.75,
+              "bold": true,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "task",
+          "kind": "text",
+          "z": 15,
+          "box": [
+            165.0,
+            84.75,
+            255,
+            31
+          ],
+          "font_size": 23.75,
+          "font_family": "Liberation Sans Narrow",
+          "bold": true,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "align": "left",
+          "runs": [
+            {
+              "text": "Put away the dishes",
+              "font_family": "Liberation Sans Narrow",
+              "cjk_font_family": "Liberation Sans Narrow",
+              "font_size": 23.75,
+              "bold": true,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "task_sub",
+          "kind": "text",
+          "z": 16,
+          "box": [
+            234,
+            106,
+            75,
+            30
+          ],
+          "font_size": 20,
+          "font_family": "Liberation Sans",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "(Task)",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "observation",
+          "kind": "text",
+          "z": 17,
+          "box": [
+            198,
+            169,
+            127,
+            32
+          ],
+          "font_size": 22,
+          "font_family": "Liberation Sans",
+          "bold": false,
+          "color": "#006B51",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Observation",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#006B51"
+            }
+          ]
+        },
+        {
+          "id": "obs_o",
+          "kind": "text",
+          "z": 18,
+          "box": [
+            322,
+            166,
+            17,
+            32
+          ],
+          "font_size": 22,
+          "font_family": "Liberation Sans",
+          "bold": true,
+          "color": "#006B51",
+          "fit": "strict",
+          "wrap": false,
+          "italic": true,
+          "runs": [
+            {
+              "text": "o",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 22,
+              "bold": true,
+              "italic": true,
+              "color": "#006B51"
+            }
+          ]
+        },
+        {
+          "id": "obs_t",
+          "kind": "text",
+          "z": 19,
+          "box": [
+            335,
+            181,
+            12,
+            18
+          ],
+          "font_size": 13,
+          "font_family": "Liberation Sans",
+          "bold": true,
+          "color": "#006B51",
+          "fit": "strict",
+          "wrap": false,
+          "italic": true,
+          "runs": [
+            {
+              "text": "t",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 13,
+              "bold": true,
+              "italic": true,
+              "color": "#006B51"
+            }
+          ]
+        },
+        {
+          "id": "images_header",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            561,
+            150,
+            114,
+            53
+          ],
+          "font_size": 21,
+          "font_family": "Liberation Sans",
+          "bold": true,
+          "color": "#006B51",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "runs": [
+            {
+              "text": "Images +\n",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 21,
+              "bold": true,
+              "italic": false,
+              "color": "#006B51"
+            },
+            {
+              "text": "robot state",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 21,
+              "bold": true,
+              "italic": false,
+              "color": "#006B51"
+            }
+          ]
+        },
+        {
+          "id": "camera_label",
+          "kind": "text",
+          "z": 21,
+          "box": [
+            566.0,
+            216.75,
+            127,
+            28
+          ],
+          "font_size": 19.0,
+          "font_family": "Liberation Sans Narrow",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "align": "left",
+          "runs": [
+            {
+              "text": "Camera views",
+              "font_family": "Liberation Sans Narrow",
+              "cjk_font_family": "Liberation Sans Narrow",
+              "font_size": 19.0,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "camera_ellipsis",
+          "kind": "text",
+          "z": 22,
+          "box": [
+            608,
+            474,
+            34,
+            30
+          ],
+          "font_size": 23,
+          "font_family": "Liberation Sans",
+          "bold": true,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "...",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 23,
+              "bold": true,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "robot_label",
+          "kind": "text",
+          "z": 23,
+          "box": [
+            573.0,
+            644.75,
+            122,
+            28
+          ],
+          "font_size": 17.5,
+          "font_family": "Liberation Sans",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "align": "left",
+          "runs": [
+            {
+              "text": "Robot state",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 17.5,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "q",
+          "kind": "text",
+          "z": 24,
+          "box": [
+            610,
+            696,
+            18,
+            31
+          ],
+          "font_size": 21,
+          "font_family": "Liberation Sans",
+          "bold": true,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "italic": true,
+          "runs": [
+            {
+              "text": "q",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 21,
+              "bold": true,
+              "italic": true,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "q_sub",
+          "kind": "text",
+          "z": 25,
+          "box": [
+            623,
+            711,
+            10,
+            17
+          ],
+          "font_size": 12,
+          "font_family": "Liberation Sans",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "italic": true,
+          "runs": [
+            {
+              "text": "t",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 12,
+              "bold": false,
+              "italic": true,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "joint_label",
+          "kind": "text",
+          "z": 26,
+          "box": [
+            567,
+            725,
+            140,
+            28
+          ],
+          "font_size": 17,
+          "font_family": "Liberation Sans",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "(joint positions)",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 17,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "tokens_header",
+          "kind": "text",
+          "z": 27,
+          "box": [
+            855.0,
+            48.75,
+            260,
+            30
+          ],
+          "font_size": 20.75,
+          "font_family": "Liberation Sans Narrow",
+          "bold": false,
+          "color": "#FF170D",
+          "fit": "strict",
+          "wrap": false,
+          "align": "left",
+          "runs": [
+            {
+              "text": "Task (language tokens)",
+              "font_family": "Liberation Sans Narrow",
+              "cjk_font_family": "Liberation Sans Narrow",
+              "font_size": 20.75,
+              "bold": false,
+              "italic": false,
+              "color": "#FF170D"
+            }
+          ]
+        },
+        {
+          "id": "token0",
+          "kind": "shape",
+          "z": 28,
+          "box": [
+            848,
+            77,
+            50,
+            37
+          ],
+          "shape": "rect",
+          "stroke": "#FF170D",
+          "stroke_width": 1.5,
+          "fill": "#FFF6F3"
+        },
+        {
+          "id": "token_text0",
+          "kind": "text",
+          "z": 29,
+          "box": [
+            863.0,
+            88.25,
+            42,
+            29
+          ],
+          "font_size": 17.0,
+          "font_family": "Liberation Sans Narrow",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "token0",
+          "align": "left",
+          "runs": [
+            {
+              "text": "Put",
+              "font_family": "Liberation Sans Narrow",
+              "cjk_font_family": "Liberation Sans Narrow",
+              "font_size": 17.0,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "token1",
+          "kind": "shape",
+          "z": 30,
+          "box": [
+            898,
+            77,
+            68,
+            37
+          ],
+          "shape": "rect",
+          "stroke": "#FF170D",
+          "stroke_width": 1.5,
+          "fill": "#FFF6F3"
+        },
+        {
+          "id": "token_text1",
+          "kind": "text",
+          "z": 31,
+          "box": [
+            902,
+            86,
+            60,
+            29
+          ],
+          "font_size": 16,
+          "font_family": "Liberation Sans",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "token1",
+          "align": "center",
+          "runs": [
+            {
+              "text": "away",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 16,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "token2",
+          "kind": "shape",
+          "z": 32,
+          "box": [
+            966,
+            77,
+            48,
+            37
+          ],
+          "shape": "rect",
+          "stroke": "#FF170D",
+          "stroke_width": 1.5,
+          "fill": "#FFF6F3"
+        },
+        {
+          "id": "token_text2",
+          "kind": "text",
+          "z": 33,
+          "box": [
+            970,
+            86,
+            40,
+            29
+          ],
+          "font_size": 16,
+          "font_family": "Liberation Sans",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "token2",
+          "align": "center",
+          "runs": [
+            {
+              "text": "the",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 16,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "token3",
+          "kind": "shape",
+          "z": 34,
+          "box": [
+            1014,
+            77,
+            79,
+            37
+          ],
+          "shape": "rect",
+          "stroke": "#FF170D",
+          "stroke_width": 1.5,
+          "fill": "#FFF6F3"
+        },
+        {
+          "id": "token_text3",
+          "kind": "text",
+          "z": 35,
+          "box": [
+            1032.0,
+            88.75,
+            71,
+            29
+          ],
+          "font_size": 16.25,
+          "font_family": "Liberation Sans Narrow",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "token3",
+          "align": "left",
+          "runs": [
+            {
+              "text": "dishes",
+              "font_family": "Liberation Sans Narrow",
+              "cjk_font_family": "Liberation Sans Narrow",
+              "font_size": 16.25,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "token4",
+          "kind": "shape",
+          "z": 36,
+          "box": [
+            1093,
+            77,
+            81,
+            37
+          ],
+          "shape": "rect",
+          "stroke": "#FF170D",
+          "stroke_width": 1.5,
+          "fill": "#FFF6F3"
+        },
+        {
+          "id": "token_text4",
+          "kind": "text",
+          "z": 37,
+          "box": [
+            1097,
+            86,
+            73,
+            29
+          ],
+          "font_size": 16,
+          "font_family": "Liberation Sans",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "token4",
+          "align": "center",
+          "runs": [
+            {
+              "text": "<eos>",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 16,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "tokens_ellipsis",
+          "kind": "text",
+          "z": 38,
+          "box": [
+            1183,
+            77,
+            35,
+            28
+          ],
+          "font_size": 23,
+          "font_family": "Liberation Sans",
+          "bold": true,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "...",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 23,
+              "bold": true,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "prediction_box",
+          "kind": "shape",
+          "z": 39,
+          "box": [
+            848,
+            159,
+            289,
+            107
+          ],
+          "shape": "round_rect",
+          "stroke": "#FF170D",
+          "stroke_width": 1.5,
+          "fill": "#FFF2ED",
+          "radius": 7
+        },
+        {
+          "id": "prediction",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            881.0,
+            202.75,
+            258,
+            36
+          ],
+          "font_size": 23.75,
+          "font_family": "Liberation Sans Narrow",
+          "bold": true,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "prediction_box",
+          "align": "left",
+          "runs": [
+            {
+              "text": "VLA: subtask prediction",
+              "font_family": "Liberation Sans Narrow",
+              "cjk_font_family": "Liberation Sans Narrow",
+              "font_size": 23.75,
+              "bold": true,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "task_down",
+          "kind": "line",
+          "z": 41,
+          "points": [
+            [
+              993,
+              120
+            ],
+            [
+              993,
+              153
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 11,
+            "width": 10
+          }
+        },
+        {
+          "id": "camera_to_prediction1",
+          "kind": "line",
+          "z": 42,
+          "points": [
+            [
+              723,
+              298
+            ],
+            [
+              763,
+              298
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "right_brace"
+          ],
+          "overlap_reason": "Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted"
+        },
+        {
+          "id": "camera_to_prediction2",
+          "kind": "line",
+          "z": 43,
+          "points": [
+            [
+              763,
+              298
+            ],
+            [
+              763,
+              220
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "camera_to_prediction1"
+          ],
+          "overlap_reason": "Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted"
+        },
+        {
+          "id": "camera_to_prediction3",
+          "kind": "line",
+          "z": 44,
+          "points": [
+            [
+              763,
+              220
+            ],
+            [
+              844,
+              220
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 11,
+            "width": 10
+          },
+          "allow_overlap_with": [
+            "camera_to_prediction2"
+          ],
+          "overlap_reason": "Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted"
+        },
+        {
+          "id": "prediction_out",
+          "kind": "line",
+          "z": 45,
+          "points": [
+            [
+              1144,
+              220
+            ],
+            [
+              1181,
+              220
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 11,
+            "width": 10
+          }
+        },
+        {
+          "id": "predicted_label",
+          "kind": "text",
+          "z": 46,
+          "box": [
+            1208.0,
+            177.75,
+            169,
+            29
+          ],
+          "font_size": 19.75,
+          "font_family": "Liberation Sans Narrow",
+          "bold": true,
+          "color": "#FF170D",
+          "fit": "strict",
+          "wrap": false,
+          "align": "left",
+          "runs": [
+            {
+              "text": "Predicted subtask",
+              "font_family": "Liberation Sans Narrow",
+              "cjk_font_family": "Liberation Sans Narrow",
+              "font_size": 19.75,
+              "bold": true,
+              "italic": false,
+              "color": "#FF170D"
+            }
+          ]
+        },
+        {
+          "id": "predicted_box",
+          "kind": "shape",
+          "z": 47,
+          "box": [
+            1188,
+            203,
+            182,
+            40
+          ],
+          "shape": "rect",
+          "stroke": "#FF170D",
+          "stroke_width": 1.5,
+          "fill": "#FFF6F3"
+        },
+        {
+          "id": "predicted_text",
+          "kind": "text",
+          "z": 48,
+          "box": [
+            1208.0,
+            213.5,
+            157,
+            30
+          ],
+          "font_size": 19.25,
+          "font_family": "Liberation Sans",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "predicted_box",
+          "align": "left",
+          "runs": [
+            {
+              "text": "Pick up the plate",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 19.25,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "modes",
+          "kind": "text",
+          "z": 49,
+          "box": [
+            1431,
+            264,
+            137,
+            72
+          ],
+          "font_size": 18,
+          "font_family": "Liberation Sans",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "runs": [
+            {
+              "text": "Same trained\n",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 18,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            },
+            {
+              "text": "model, two\n",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 18,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            },
+            {
+              "text": "inference modes",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 18,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "expert_box",
+          "kind": "shape",
+          "z": 50,
+          "box": [
+            786,
+            367,
+            599,
+            292
+          ],
+          "shape": "round_rect",
+          "stroke": "#087420",
+          "stroke_width": 1.5,
+          "fill": null,
+          "radius": 9
+        },
+        {
+          "id": "expert",
+          "kind": "text",
+          "z": 51,
+          "box": [
+            983.0,
+            383.75,
+            256,
+            36
+          ],
+          "font_size": 24.75,
+          "font_family": "Liberation Sans Narrow",
+          "bold": true,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "expert_box",
+          "align": "left",
+          "runs": [
+            {
+              "text": "VLA + action expert",
+              "font_family": "Liberation Sans Narrow",
+              "cjk_font_family": "Liberation Sans Narrow",
+              "font_size": 24.75,
+              "bold": true,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "context",
+          "kind": "text",
+          "z": 52,
+          "box": [
+            815.0,
+            401.5,
+            80,
+            26
+          ],
+          "font_size": 16.75,
+          "font_family": "Liberation Sans Narrow",
+          "bold": false,
+          "color": "#006B51",
+          "fit": "strict",
+          "wrap": false,
+          "container": "expert_box",
+          "align": "left",
+          "runs": [
+            {
+              "text": "Context",
+              "font_family": "Liberation Sans Narrow",
+              "cjk_font_family": "Liberation Sans Narrow",
+              "font_size": 16.75,
+              "bold": false,
+              "italic": false,
+              "color": "#006B51"
+            }
+          ]
+        },
+        {
+          "id": "images_box",
+          "kind": "shape",
+          "z": 53,
+          "box": [
+            798,
+            426,
+            97,
+            43
+          ],
+          "shape": "rect",
+          "stroke": "#087420",
+          "stroke_width": 1.5,
+          "fill": "#F5F8F1",
+          "container": "expert_box"
+        },
+        {
+          "id": "images_box_text",
+          "kind": "text",
+          "z": 54,
+          "box": [
+            802,
+            436,
+            89,
+            27
+          ],
+          "font_size": 15,
+          "font_family": "Liberation Sans",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "images_box",
+          "align": "center",
+          "runs": [
+            {
+              "text": "Images (o",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 15,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            },
+            {
+              "text": "ₜ",
+              "font_family": "DejaVu Sans",
+              "cjk_font_family": "DejaVu Sans",
+              "font_size": 15,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            },
+            {
+              "text": ")",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 15,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "state_box",
+          "kind": "shape",
+          "z": 55,
+          "box": [
+            793,
+            484,
+            107,
+            43
+          ],
+          "shape": "rect",
+          "stroke": "#087420",
+          "stroke_width": 1.5,
+          "fill": "#F5F8F1",
+          "container": "expert_box"
+        },
+        {
+          "id": "state_box_text",
+          "kind": "text",
+          "z": 56,
+          "box": [
+            797,
+            494,
+            99,
+            27
+          ],
+          "font_size": 14,
+          "font_family": "Liberation Sans",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "state_box",
+          "align": "center",
+          "runs": [
+            {
+              "text": "Robot state (q",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 14,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            },
+            {
+              "text": "ₜ",
+              "font_family": "DejaVu Sans",
+              "cjk_font_family": "DejaVu Sans",
+              "font_size": 14,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            },
+            {
+              "text": ")",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 14,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "subtask_box",
+          "kind": "shape",
+          "z": 57,
+          "box": [
+            793,
+            545,
+            109,
+            54
+          ],
+          "shape": "rect",
+          "stroke": "#FF170D",
+          "stroke_width": 1.5,
+          "fill": "#F5F8F1",
+          "container": "expert_box"
+        },
+        {
+          "id": "subtask_line1",
+          "kind": "text",
+          "z": 58,
+          "box": [
+            798,
+            550,
+            102,
+            18
+          ],
+          "font_size": 12.5,
+          "font_family": "Liberation Sans",
+          "bold": false,
+          "color": "#FF170D",
+          "fit": "strict",
+          "wrap": false,
+          "container": "subtask_box",
+          "runs": [
+            {
+              "text": "Predicted subtask",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 12.5,
+              "bold": false,
+              "italic": false,
+              "color": "#FF170D"
+            }
+          ]
+        },
+        {
+          "id": "subtask_line2",
+          "kind": "text",
+          "z": 59,
+          "box": [
+            798,
+            568,
+            102,
+            18
+          ],
+          "font_size": 12.5,
+          "font_family": "Liberation Sans",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "subtask_box",
+          "runs": [
+            {
+              "text": "(Pick up the plate)",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 12.5,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "encoder",
+          "kind": "shape",
+          "z": 60,
+          "box": [
+            934,
+            435,
+            24,
+            139
+          ],
+          "shape": "polygon",
+          "stroke": "#087420",
+          "stroke_width": 1.5,
+          "fill": "#D8E8C2",
+          "container": "expert_box",
+          "vertices": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0.12
+            ],
+            [
+              1,
+              0.88
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": "context_arrow0",
+          "kind": "line",
+          "z": 61,
+          "points": [
+            [
+              902,
+              449
+            ],
+            [
+              921,
+              449
+            ]
+          ],
+          "stroke": "#087420",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 11,
+            "width": 10
+          },
+          "container": "expert_box"
+        },
+        {
+          "id": "context_arrow1",
+          "kind": "line",
+          "z": 62,
+          "points": [
+            [
+              902,
+              506
+            ],
+            [
+              921,
+              506
+            ]
+          ],
+          "stroke": "#087420",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 11,
+            "width": 10
+          },
+          "container": "expert_box"
+        },
+        {
+          "id": "context_arrow2",
+          "kind": "line",
+          "z": 63,
+          "points": [
+            [
+              902,
+              565
+            ],
+            [
+              921,
+              565
+            ]
+          ],
+          "stroke": "#087420",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 11,
+            "width": 10
+          },
+          "container": "expert_box"
+        },
+        {
+          "id": "flow_box",
+          "kind": "shape",
+          "z": 64,
+          "box": [
+            966,
+            419,
+            260,
+            171
+          ],
+          "shape": "rect",
+          "stroke": "#999999",
+          "stroke_width": 1.5,
+          "fill": null,
+          "container": "expert_box"
+        },
+        {
+          "id": "flow_title",
+          "kind": "text",
+          "z": 65,
+          "box": [
+            1051.0,
+            430.75,
+            120,
+            25
+          ],
+          "font_size": 16.0,
+          "font_family": "Liberation Sans Narrow",
+          "bold": true,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "flow_box",
+          "align": "left",
+          "runs": [
+            {
+              "text": "Flow matching",
+              "font_family": "Liberation Sans Narrow",
+              "cjk_font_family": "Liberation Sans Narrow",
+              "font_size": 16.0,
+              "bold": true,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "flow_noise",
+          "kind": "text",
+          "z": 66,
+          "box": [
+            982,
+            454,
+            60,
+            25
+          ],
+          "font_size": 14,
+          "font_family": "Liberation Sans",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "flow_box",
+          "runs": [
+            {
+              "text": "Noise",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 14,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "trajectories",
+          "kind": "text",
+          "z": 67,
+          "box": [
+            1146,
+            440,
+            79,
+            40
+          ],
+          "font_size": 14,
+          "font_family": "Liberation Sans",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "flow_box",
+          "align": "center",
+          "runs": [
+            {
+              "text": "Action\n",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 14,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            },
+            {
+              "text": "trajectories",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 14,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "flow_trajectories",
+          "kind": "image",
+          "z": 68,
+          "box": [
+            974,
+            480,
+            244,
+            99
+          ],
+          "path": "assets/03e47b719c4f11b7f284.png",
+          "contains_text": true,
+          "provenance": "Exact source crop of complex trajectories, green noise dots and three raster ellipsis marks; internal symbolic ellipses are not editable",
+          "container": "flow_box"
+        },
+        {
+          "id": "encoder_flow",
+          "kind": "line",
+          "z": 69,
+          "points": [
+            [
+              958,
+              506
+            ],
+            [
+              971,
+              506
+            ]
+          ],
+          "stroke": "#087420",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 11,
+            "width": 10
+          },
+          "container": "expert_box",
+          "allow_overlap_with": [
+            "flow_box"
+          ],
+          "overlap_reason": "Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted"
+        },
+        {
+          "id": "decoder",
+          "kind": "shape",
+          "z": 70,
+          "box": [
+            1237,
+            458,
+            17,
+            112
+          ],
+          "shape": "polygon",
+          "stroke": "#087420",
+          "stroke_width": 1.5,
+          "fill": "#D8E8C2",
+          "container": "expert_box",
+          "vertices": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0.11
+            ],
+            [
+              1,
+              0.89
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": "flow_chunk",
+          "kind": "line",
+          "z": 71,
+          "points": [
+            [
+              1228,
+              505
+            ],
+            [
+              1252,
+              505
+            ]
+          ],
+          "stroke": "#087420",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 11,
+            "width": 10
+          },
+          "container": "expert_box",
+          "allow_overlap_with": [
+            "decoder"
+          ],
+          "overlap_reason": "Source arrow visibly enters slanted decoder"
+        },
+        {
+          "id": "continuous",
+          "kind": "text",
+          "z": 72,
+          "box": [
+            1275,
+            425,
+            96,
+            46
+          ],
+          "font_size": 15,
+          "font_family": "Liberation Sans",
+          "bold": true,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "expert_box",
+          "align": "center",
+          "runs": [
+            {
+              "text": "Continuous\n",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 15,
+              "bold": true,
+              "italic": false,
+              "color": "#111111"
+            },
+            {
+              "text": "action chunk",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 15,
+              "bold": true,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "chunk",
+          "kind": "shape",
+          "z": 73,
+          "box": [
+            1264,
+            491,
+            113,
+            56
+          ],
+          "shape": "rect",
+          "stroke": "#087420",
+          "stroke_width": 1.5,
+          "fill": "#F0F6EE",
+          "container": "expert_box"
+        },
+        {
+          "id": "a_start",
+          "kind": "text",
+          "z": 74,
+          "box": [
+            1274,
+            503,
+            20,
+            31
+          ],
+          "font_size": 22,
+          "font_family": "Liberation Sans",
+          "bold": true,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "chunk",
+          "italic": true,
+          "runs": [
+            {
+              "text": "a",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 22,
+              "bold": true,
+              "italic": true,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "a_start_sub",
+          "kind": "text",
+          "z": 75,
+          "box": [
+            1288,
+            518,
+            10,
+            18
+          ],
+          "font_size": 12,
+          "font_family": "Liberation Sans",
+          "bold": true,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "chunk",
+          "italic": true,
+          "runs": [
+            {
+              "text": "t",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 12,
+              "bold": true,
+              "italic": true,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "a_dots",
+          "kind": "text",
+          "z": 76,
+          "box": [
+            1303,
+            504,
+            24,
+            30
+          ],
+          "font_size": 21,
+          "font_family": "Liberation Sans",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "chunk",
+          "runs": [
+            {
+              "text": "⋯",
+              "font_family": "DejaVu Sans",
+              "cjk_font_family": "DejaVu Sans",
+              "font_size": 21,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "a_end",
+          "kind": "text",
+          "z": 77,
+          "box": [
+            1333,
+            503,
+            20,
+            31
+          ],
+          "font_size": 22,
+          "font_family": "Liberation Sans",
+          "bold": true,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "chunk",
+          "italic": true,
+          "runs": [
+            {
+              "text": "a",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 22,
+              "bold": true,
+              "italic": true,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "a_end_sub",
+          "kind": "text",
+          "z": 78,
+          "box": [
+            1346,
+            518,
+            29,
+            18
+          ],
+          "font_size": 12,
+          "font_family": "Liberation Sans",
+          "bold": true,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "chunk",
+          "italic": true,
+          "runs": [
+            {
+              "text": "t+H",
+              "font_family": "Liberation Sans",
+              "cjk_font_family": "Liberation Sans",
+              "font_size": 12,
+              "bold": true,
+              "italic": true,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "noise_box",
+          "kind": "shape",
+          "z": 79,
+          "box": [
+            992,
+            614,
+            65,
+            33
+          ],
+          "shape": "rect",
+          "stroke": "#999999",
+          "stroke_width": 1.5,
+          "fill": null,
+          "container": "expert_box"
+        },
+        {
+          "id": "noise",
+          "kind": "text",
+          "z": 80,
+          "box": [
+            1006.0,
+            623.75,
+            48,
+            26
+          ],
+          "font_size": 16.25,
+          "font_family": "Liberation Sans Narrow",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "container": "noise_box",
+          "align": "left",
+          "runs": [
+            {
+              "text": "Noise",
+              "font_family": "Liberation Sans Narrow",
+              "cjk_font_family": "Liberation Sans Narrow",
+              "font_size": 16.25,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "noise_up",
+          "kind": "line",
+          "z": 81,
+          "points": [
+            [
+              1024,
+              613
+            ],
+            [
+              1024,
+              592
+            ]
+          ],
+          "stroke": "#087420",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 11,
+            "width": 10
+          },
+          "container": "expert_box"
+        },
+        {
+          "id": "observation_action",
+          "kind": "line",
+          "z": 82,
+          "points": [
+            [
+              722,
+              490
+            ],
+            [
+              773,
+              490
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 11,
+            "width": 10
+          },
+          "allow_overlap_with": [
+            "right_brace"
+          ],
+          "overlap_reason": "Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted"
+        },
+        {
+          "id": "subtask_route1",
+          "kind": "line",
+          "z": 83,
+          "points": [
+            [
+              1277,
+              247
+            ],
+            [
+              1277,
+              328
+            ]
+          ],
+          "stroke": "#FF170D",
+          "stroke_width": 2
+        },
+        {
+          "id": "subtask_route2",
+          "kind": "line",
+          "z": 84,
+          "points": [
+            [
+              1277,
+              328
+            ],
+            [
+              789,
+              328
+            ]
+          ],
+          "stroke": "#FF170D",
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "subtask_route1"
+          ],
+          "overlap_reason": "Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted"
+        },
+        {
+          "id": "subtask_route3",
+          "kind": "line",
+          "z": 85,
+          "points": [
+            [
+              789,
+              328
+            ],
+            [
+              777,
+              341
+            ]
+          ],
+          "stroke": "#FF170D",
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "subtask_route2"
+          ],
+          "overlap_reason": "Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted"
+        },
+        {
+          "id": "subtask_route4",
+          "kind": "line",
+          "z": 86,
+          "points": [
+            [
+              777,
+              341
+            ],
+            [
+              777,
+              558
+            ]
+          ],
+          "stroke": "#FF170D",
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "subtask_route3"
+          ],
+          "overlap_reason": "Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted"
+        },
+        {
+          "id": "subtask_route5",
+          "kind": "line",
+          "z": 87,
+          "points": [
+            [
+              777,
+              558
+            ],
+            [
+              789,
+              566
+            ]
+          ],
+          "stroke": "#FF170D",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 11,
+            "width": 10
+          },
+          "allow_overlap_with": [
+            "expert_box",
+            "subtask_route4"
+          ],
+          "overlap_reason": "Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted"
+        },
+        {
+          "id": "chunk_down",
+          "kind": "line",
+          "z": 88,
+          "points": [
+            [
+              1316,
+              553
+            ],
+            [
+              1316,
+              681
+            ]
+          ],
+          "stroke": "#087420",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 11,
+            "width": 10
+          },
+          "allow_overlap_with": [
+            "expert_box"
+          ],
+          "overlap_reason": "Source output arrow exits through panel bottom border"
+        },
+        {
+          "id": "step1",
+          "kind": "text",
+          "z": 89,
+          "box": [
+            820.0,
+            875.75,
+            150,
+            31
+          ],
+          "font_size": 19.75,
+          "font_family": "Liberation Sans Narrow",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "align": "left",
+          "runs": [
+            {
+              "text": "1. Approach",
+              "font_family": "Liberation Sans Narrow",
+              "cjk_font_family": "Liberation Sans Narrow",
+              "font_size": 19.75,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "step2",
+          "kind": "text",
+          "z": 90,
+          "box": [
+            1076.0,
+            875.0,
+            205,
+            31
+          ],
+          "font_size": 21.25,
+          "font_family": "Liberation Sans Narrow",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "align": "left",
+          "runs": [
+            {
+              "text": "2. Close (grasp rim)",
+              "font_family": "Liberation Sans Narrow",
+              "cjk_font_family": "Liberation Sans Narrow",
+              "font_size": 21.25,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "step3",
+          "kind": "text",
+          "z": 91,
+          "box": [
+            1341.0,
+            874.75,
+            237,
+            31
+          ],
+          "font_size": 20.75,
+          "font_family": "Liberation Sans Narrow",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "align": "left",
+          "runs": [
+            {
+              "text": "3. Lift (clear of surface)",
+              "font_family": "Liberation Sans Narrow",
+              "cjk_font_family": "Liberation Sans Narrow",
+              "font_size": 20.75,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "step_arrow1",
+          "kind": "line",
+          "z": 92,
+          "points": [
+            [
+              1007,
+              772
+            ],
+            [
+              1034,
+              772
+            ]
+          ],
+          "stroke": "#087420",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 11,
+            "width": 10
+          }
+        },
+        {
+          "id": "step_arrow2",
+          "kind": "line",
+          "z": 93,
+          "points": [
+            [
+              1286,
+              774
+            ],
+            [
+              1312,
+              774
+            ]
+          ],
+          "stroke": "#087420",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 11,
+            "width": 10
+          }
+        },
+        {
+          "id": "execution",
+          "kind": "text",
+          "z": 94,
+          "box": [
+            1069.0,
+            937.75,
+            240,
+            32
+          ],
+          "font_size": 23.25,
+          "font_family": "Liberation Sans Narrow",
+          "bold": false,
+          "color": "#006B51",
+          "fit": "strict",
+          "wrap": false,
+          "align": "left",
+          "runs": [
+            {
+              "text": "Execution schematic",
+              "font_family": "Liberation Sans Narrow",
+              "cjk_font_family": "Liberation Sans Narrow",
+              "font_size": 23.25,
+              "bold": false,
+              "italic": false,
+              "color": "#006B51"
+            }
+          ]
+        },
+        {
+          "id": "footer",
+          "kind": "text",
+          "z": 95,
+          "box": [
+            22.0,
+            952.0,
+            580,
+            28
+          ],
+          "font_size": 18.5,
+          "font_family": "Liberation Sans Narrow",
+          "bold": false,
+          "color": "#111111",
+          "fit": "strict",
+          "wrap": false,
+          "align": "left",
+          "runs": [
+            {
+              "text": "Inference schematic; independently illustrated scenes; training omitted.",
+              "font_family": "Liberation Sans Narrow",
+              "cjk_font_family": "Liberation Sans Narrow",
+              "font_size": 18.5,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

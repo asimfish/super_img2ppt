@@ -1,0 +1,89 @@
+[
+  {
+    "corpus": "teaser_cases",
+    "command": [
+      "uv",
+      "run",
+      "python",
+      "scripts/run_real_cases.py",
+      "--corpus",
+      "examples/teaser_cases",
+      "--out",
+      "/Users/liyufeng/code/super_img2ppt/output/teaser_cases_20260910/replay_teaser_cases",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+    ],
+    "exit_code": 0,
+    "seconds": 14.939,
+    "lora_render_pixels_identical": true,
+    "routing_render_pixels_identical": true,
+    "embodied_render_pixels_identical": true
+  },
+  {
+    "corpus": "real_cases",
+    "command": [
+      "uv",
+      "run",
+      "python",
+      "scripts/run_real_cases.py",
+      "--corpus",
+      "examples/real_cases",
+      "--out",
+      "/Users/liyufeng/code/super_img2ppt/output/teaser_cases_20260910/replay_real_cases",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+    ],
+    "exit_code": 2,
+    "seconds": 23.066
+  },
+  {
+    "corpus": "conference_cases",
+    "command": [
+      "uv",
+      "run",
+      "python",
+      "scripts/run_real_cases.py",
+      "--corpus",
+      "examples/conference_cases",
+      "--out",
+      "/Users/liyufeng/code/super_img2ppt/output/teaser_cases_20260910/replay_conference_cases",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+    ],
+    "exit_code": 0,
+    "seconds": 8.742
+  },
+  {
+    "corpus": "diverse_cases",
+    "command": [
+      "uv",
+      "run",
+      "python",
+      "scripts/run_real_cases.py",
+      "--corpus",
+      "examples/diverse_cases",
+      "--out",
+      "/Users/liyufeng/code/super_img2ppt/output/teaser_cases_20260910/replay_diverse_cases",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+    ],
+    "exit_code": 0,
+    "seconds": 12.56
+  },
+  {
+    "corpus": "ddpm_local",
+    "command": [
+      "uv",
+      "run",
+      "super-img2ppt",
+      "build",
+      "output/diverse_cases_20260906/ddpm/build_final/scene.resolved.json",
+      "--out",
+      "/Users/liyufeng/code/super_img2ppt/output/teaser_cases_20260910/replay_ddpm",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+    ],
+    "exit_code": 0,
+    "seconds": 5.477
+  }
+]

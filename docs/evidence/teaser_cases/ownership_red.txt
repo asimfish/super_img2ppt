@@ -1,0 +1,80 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+_________ test_neighbor_pdf_text_object_does_not_pollute_ink_checks[0] _________
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 300, 'height': 200, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x108193590>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-198/test_neighbor_pdf_text_object_0')
+rotation = 0
+
+    @pytest.mark.render
+    @pytest.mark.skipif(shutil.which("soffice") is None, reason="LibreOffice not installed")
+    @pytest.mark.parametrize("rotation", [0, 90])
+    def test_neighbor_pdf_text_object_does_not_pollute_ink_checks(scene, fonts, tmp_path, rotation):
+        spec = adjacent_labels(scene)
+        if rotation:
+            spec["slides"][0].update(width=300, height=300)
+            for element in spec["slides"][0]["elements"]:
+                x, y, w, h = element["box"]
+                cx, cy = 200 - y - h / 2, x + w / 2
+                element["box"] = [cx - w / 2, cy - h / 2, w, h]
+                element["rotation"] = rotation
+        layouts = layout_scene(spec, fonts)
+        pptx = tmp_path / "adjacent.pptx"
+        write_pptx(spec, layouts, tmp_path, pptx)
+        pdf = make_renderer().render(pptx, tmp_path / "render")
+        report = verify_rendered_text(pdf, spec, layouts)
+>       assert not [f for f in report["findings"] if f["element"] == "flow"], report
+E       AssertionError: {'status': 'fail', 'renderer': 'LibreOffice/PDFium', 'findings': [{'code': 'rendered_glyph_overflow', 'slide': 'page_0...page_001', 'element': 'action', 'expected': 'Action
+E         trajectories', 'rendered': 'g Action\r
+E         trajectories', ...}], ...}
+E       assert not [{'code': 'rendered_glyph_overflow', 'slide': 'page_001', 'element': 'flow', 'glyphs': 'A', ...}, {'code': 'rendered_ink_width_drift', 'severity': 'warning', 'slide': 'page_001', 'element': 'flow', ...}]
+
+tests/test_pdf_glyph_ownership.py:54: AssertionError
+________ test_neighbor_pdf_text_object_does_not_pollute_ink_checks[90] _________
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 300, 'height': 300, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x108193590>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-198/test_neighbor_pdf_text_object_1')
+rotation = 90
+
+    @pytest.mark.render
+    @pytest.mark.skipif(shutil.which("soffice") is None, reason="LibreOffice not installed")
+    @pytest.mark.parametrize("rotation", [0, 90])
+    def test_neighbor_pdf_text_object_does_not_pollute_ink_checks(scene, fonts, tmp_path, rotation):
+        spec = adjacent_labels(scene)
+        if rotation:
+            spec["slides"][0].update(width=300, height=300)
+            for element in spec["slides"][0]["elements"]:
+                x, y, w, h = element["box"]
+                cx, cy = 200 - y - h / 2, x + w / 2
+                element["box"] = [cx - w / 2, cy - h / 2, w, h]
+                element["rotation"] = rotation
+        layouts = layout_scene(spec, fonts)
+        pptx = tmp_path / "adjacent.pptx"
+        write_pptx(spec, layouts, tmp_path, pptx)
+        pdf = make_renderer().render(pptx, tmp_path / "render")
+        report = verify_rendered_text(pdf, spec, layouts)
+>       assert not [f for f in report["findings"] if f["element"] == "flow"], report
+E       AssertionError: {'status': 'fail', 'renderer': 'LibreOffice/PDFium', 'findings': [{'code': 'rendered_glyph_overflow', 'slide': 'page_0...tion
+E         trajectories', 'rendered': 'g\r
+E         A\r
+E         c\r
+E         tio\r
+E         n\r
+E         t\r
+E         r\r
+E         aj\r
+E         e\r
+E         c\r
+E         t\r
+E         o\r
+E         rie\r
+E         s', ...}], ...}
+E       assert not [{'code': 'rendered_glyph_overflow', 'slide': 'page_001', 'element': 'flow', 'glyphs': 'A', ...}, {'code': 'rendered_ink_width_drift', 'severity': 'warning', 'slide': 'page_001', 'element': 'flow', ...}]
+
+tests/test_pdf_glyph_ownership.py:54: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_pdf_glyph_ownership.py::test_neighbor_pdf_text_object_does_not_pollute_ink_checks[0]
+FAILED tests/test_pdf_glyph_ownership.py::test_neighbor_pdf_text_object_does_not_pollute_ink_checks[90]
+2 failed in 15.93s

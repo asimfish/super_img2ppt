@@ -1,0 +1,42 @@
+from pathlib import Path
+import json,hashlib,subprocess,time
+r=Path('/tmp/lora-forward-LO8vEs');m=json.loads((r/'build_05/roi_metrics.json').read_text()); cmds=[json.loads(p.read_text()) for p in sorted(r.glob('command_*.json'))]
+t=time.time();p=subprocess.run(['/opt/homebrew/bin/soffice','--version'],capture_output=True,text=True);(r/'libreoffice_version.json').write_text(json.dumps({'exit_code':p.returncode,'duration_seconds':time.time()-t,'stdout':p.stdout},indent=2))
+report='''# LoRA 独立前向测试原始报告
+
+输入是 super_teaser 生成示意图，不是论文原图。仅读冻结 skill 的 SKILL.md、三个 references、指定原图及本任务产物；未读实现、测试、其他案例或上游 prompt。未安装依赖/字体、未修改主仓库/冻结skill、未上传。
+
+## 结果
+
+选择 build_05，实际 LibreOffice PPTX→PDF→PNG，自动 pass，独立保真评估仍不通过：冻结18个ROI中 %d/18 同时满足边界误差≤3源像素、暗像素IoU≥0.70。首次可渲染 build_04 为3/18，原指标保留不覆盖。ROI在 scene 编写前写入 rois_frozen.json，始终同坐标、同阈值。渲染图归一化回1536×1024，Lanczos采样后以所有RGB通道<110提取暗像素。边界差按左、上、右、下；底边是可见墨迹底边，不冒充字形学基线。抗锯齿对IoU敏感，不能将低IoU全部解释为抗锯齿。
+
+76个可移动元素：15个原生文字、13个原生形状、45条原生线、3个独立图片。W0通过主文+单独原生0下标表示，未栅格化正文。锁图标、Frozen图例色块、Trainable图例色块保留精确独立源图裁切，内部不可编辑。无全页背景图片。灰/青/红矩阵保留格数与位置，源纹理被纯色近似，连接圆角被直角近似。
+
+实际打开 build_04/render/page_001.png、build_05/render/page_001.png 与 build_05/dense.png 逐字检查。内容为 x, h, Frozen W₀, d x k, Trainable A, r x k, Trainable B, d x r, alpha/r, Frozen, Trainable, h = W₀ x + (alpha/r) B A x。字符0均为数字且位于下标位置，不是字母o；无其他上下标。A为2×6格、B为7×2格、W为4×6格；输入输出各三点省略。仍有字体字重/字距差异，公式W₀间距偏大、后半段与源字距不一致；A/B标题、alpha与图例不是逐像素对齐。未见未声明真实文字交叠或裁切。
+
+## 字体与运行环境
+
+Python 3.12.12, super-img2ppt 0.3.0, python-pptx 1.0.2, Pillow 12.3.0, fonttools 4.64.0, pypdfium2 5.13.0, jsonschema 4.26.0。LibreOffice %s
+字体实际为 Arial.ttf (400) 与 Arial Bold.ttf (700)，fonts.json substitutions=[]，不是 DejaVu 替换。源字体身份未知。字体没有嵌入；未做 PowerPoint/WPS 本机检查。
+
+## 原始失败与修正上限
+
+build_01 exit2: 圆点z与容器同层，container must be a shape behind its content。仅升圆点z。
+build_02 exit2: plusH allow_overlap_with误含自身，invalid element reference plusH。仅移除自引用。
+build_03 exit2: title measured width162+0.5>160且与下标真实交叠。仅按源像素缩34字号，未豁免交叠。
+build_04 exit0/pass: 首次可渲染，18ROI仅3通过。build_05按此测量调整标题y、下标y、标签字号、公式宽度、若干箭头笔画与头宽，18ROI仅%d通过。
+标题至多2次局部修正；其他区域≤1次（结构错误各自1次）。未用反复降低阈值/最小字号取通过。
+自写审计脚本首次import numpy失败（当前环境无numpy），改成Pillow+Python集合运算后成功；这是审计脚本依赖假设错误，不是skill运行时缺陷。未发现可复现运行时缺陷。前三次场景报错均正确拒绝，不能归咎运行时。
+
+## 固定ROI终次测量
+
+|ROI|边界差 l/t/r/b (px)|暗像素IoU|合格|
+|---|---|---|---|
+'''%(sum(x['pass'] for x in m),p.stdout.strip(),sum(x['pass'] for x in m))
+for x in m:report+=f"|{x['id']}|{x['edge_delta_ltrb_px']}|{x['dark_mask_iou']:.4f}|{x['pass']}|\n"
+report+='\n## 可复现命令与时长\n\n所有CLI经run.py固定命令局部PATH与PYTHONPATH，详见command_*.json。\n\n'
+for c in cmds:report+=f"- `{' '.join(c['argv'])}` → exit {c['exit_code']}, {c['duration_seconds']:.3f}s\n"
+report+='\n最终交付：build_05/editable.pptx、svg/page_001.svg、scene.resolved.json、fonts.json、validation.json、render/page_001.png、dense.png、roi_metrics.json。重建可运行：\n\n`/Users/liyufeng/Code/super_img2ppt/.venv/bin/python /tmp/lora-forward-LO8vEs/run.py build /tmp/lora-forward-LO8vEs/build_05/scene.resolved.json --out /tmp/lora-forward-LO8vEs/rebuild_new --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype`\n'
+(r/'report_original.md').write_text(report)
+sk=Path('/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-teaser-v030-vjfeo8j1/super-img2ppt'); hs={str(p.relative_to(sk)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sk.rglob('*') if p.is_file()};(r/'frozen_skill_hashes.json').write_text(json.dumps(hs,indent=2))
+hs={str(p.relative_to(r)):hashlib.sha256(p.read_bytes()).hexdigest() for p in r.rglob('*') if p.is_file() and p.name!='artifact_hashes.json'};(r/'artifact_hashes.json').write_text(json.dumps(hs,indent=2));print('ROI passed',sum(x['pass'] for x in m),'of',len(m),'artifacts hashed',len(hs))

@@ -10,6 +10,24 @@ import pypdfium2 as pdfium
 from super_img2ppt.prepare import fresh_directory, json_write
 
 SOURCES = {
+    "teaser_lora": {
+        "url": "https://raw.githubusercontent.com/asimfish/super_teaser/6b1d41b0b81ed09ed5cd692182ae05fc5573ac12/examples/images/lora-clean.png",
+        "sha256": "19afb88cb69b32f27290eb30e9097091997a2fab8cbe8846becb6987cdc6079a",
+        "format": "png",
+        "source": "super_teaser AI-generated conceptual LoRA illustration, not an original paper figure",
+    },
+    "teaser_routing": {
+        "url": "https://raw.githubusercontent.com/asimfish/super_teaser/6b1d41b0b81ed09ed5cd692182ae05fc5573ac12/examples/images/fixtures/fixture-routed-branches.png",
+        "sha256": "dbb4273914d4fa86e82b63b7053ede38f5f40890f0e90891f4f009e7c283831b",
+        "format": "png",
+        "source": "super_teaser AI-generated synthetic routed-branches fixture, not measured research data",
+    },
+    "teaser_embodied": {
+        "url": "https://raw.githubusercontent.com/asimfish/super_teaser/6b1d41b0b81ed09ed5cd692182ae05fc5573ac12/examples/images/embodied/pi05-hierarchy-v3.png",
+        "sha256": "830083551c6d6bd3db1553f1fff0a3e33e7bbded09f931851ca74263c357ae06",
+        "format": "png",
+        "source": "super_teaser AI-generated pi0.5 conceptual illustration, not original experimental photographs or a paper figure",
+    },
     "heatmap": {
         "url": "https://matplotlib.org/3.11.1/_images/sphx_glr_image_annotated_heatmap_002.png",
         "sha256": "7d07f73d16e3dafb7f74fbbac2b8aa2739e29e39e5e430bf918d811606baacd8",

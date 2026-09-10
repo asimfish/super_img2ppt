@@ -1,0 +1,8 @@
+from pathlib import Path
+import json
+p=Path('/tmp/teaser-routing-Dg29E2/job');s=json.loads((p/'scene.json').read_text())
+for d in s['slides'][0]['elements']:
+ if d['kind']=='shape' and d['shape']=='round_rect':d['radius']=5
+ if d['kind']=='text' and not d['id'].startswith('legend') and not d['id'].startswith('keytext'):d['bold']=False
+ if d['kind']=='line' and d['stroke']=='#101010':d['stroke_width']=3
+(p/'scene.json').write_text(json.dumps(s,indent=2));(p/'scene_03.json').write_text(json.dumps(s,indent=2))

@@ -1,0 +1,10 @@
+import json
+from pathlib import Path
+p=Path('/tmp/embodied-forward-TNEbMc/job/scene.json');s=json.loads(p.read_text());e={x['id']:x for x in s['slides'][0]['elements']}
+for x in e.values():
+ if x['kind']=='text':x['font_family']='Liberation Sans'
+e['prediction']['font_size']=22;e['prediction']['box']=[876,197,250,36]
+for k in ['subtask_line1','subtask_line2']:e[k]['font_size']=12.5;e[k]['box'][3]=18
+pairs=[('right_brace','camera_to_prediction1'),('right_brace','observation_action'),('camera_to_prediction1','camera_to_prediction2'),('camera_to_prediction2','camera_to_prediction3'),('expert_box','subtask_route5'),('flow_box','encoder_flow'),('subtask_route1','subtask_route2'),('subtask_route2','subtask_route3'),('subtask_route3','subtask_route4'),('subtask_route4','subtask_route5')]
+for a,b in pairs:e[b].setdefault('allow_overlap_with',[]).append(a);e[b]['overlap_reason']='Source-visible joined connector endpoint or connector crossing its named panel/brace boundary; no text exempted'
+p.write_text(json.dumps(s,indent=2))

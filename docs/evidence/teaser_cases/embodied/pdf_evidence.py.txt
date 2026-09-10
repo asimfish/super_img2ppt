@@ -1,0 +1,7 @@
+import pypdfium2 as pdf,json
+from pathlib import Path
+r=Path('/tmp/embodied-forward-TNEbMc');b=r/'build_04';d=pdf.PdfDocument(str(b/'render/editable.pdf'));p=d[0];t=p.get_textpage();W,H=p.get_size();rows=[]
+for i in range(t.count_chars()):
+ ch=t.get_text_range(i,1);l,bot,rr,top=t.get_charbox(i);bb=[l/W*1586,(H-top)/H*992,(rr-l)/W*1586,(top-bot)/H*992]
+ if bb[0]>1030 and bb[0]<1240 and bb[1]>415 and bb[1]<480:rows.append({'index':i,'text':ch,'box_source_px':bb})
+s=json.loads((b/'scene.resolved.json').read_text());obj=[x for x in s['slides'][0]['elements'] if x['id'] in ['flow_title','trajectories']];(r/'pdf_flow_evidence.json').write_text(json.dumps({'objects':obj,'pdf_glyphs':rows},indent=2));print(json.dumps({'objects':obj,'pdf_glyphs':rows},indent=2))

@@ -1,0 +1,54 @@
+from PIL import Image
+from pathlib import Path
+import json
+r=Path('/tmp/lora-forward-LO8vEs');j=r/'job'; src=Image.open(j/'pages/page_001/source.png');(j/'assets').mkdir(exist_ok=True)
+rois=[('title',[465,45,190,53]),('x',[125,181,37,46]),('h',[1398,179,37,48]),('dimW',[505,287,95,45]),('labelA',[458,475,193,47]),('labelB',[750,376,190,45]),('dimA',[510,630,90,47]),('dimB',[798,745,90,44]),('alpha',[1017,563,123,45]),('legendFrozen',[170,703,118,46]),('legendTrainable',[172,791,145,46]),('formula',[482,866,565,62]),('gridWtop',[415,99,273,17]),('gridAbottom',[415,610,273,19]),('gridBleft',[793,429,17,315]),('upperArrow',[704,183,526,17]),('outputArrow',[1300,367,89,31]),('lowerArrow',[888,566,104,30])]
+(r/'rois_frozen.json').write_text(json.dumps({'frozen_before_scene':True,'thresholds':{'dark_rgb_max':110,'edge_error_px_max':3,'dark_mask_iou_min':0.70},'regions':[{'id':n,'box_xywh':b} for n,b in rois]},indent=2))
+e=[]
+def shape(id,box,fill=None,kind='rect',stroke='#111111',width=3):
+ e.append(dict(id=id,kind='shape',z=1,box=box,shape=kind,fill=fill,stroke=stroke,stroke_width=width));return id
+def line(id,p,arrow=False):
+ a=dict(id=id,kind='line',z=2,points=p,stroke='#111111',stroke_width=3)
+ if arrow:a.update(arrow=True,arrow_head={'length':18,'width':19})
+ e.append(a)
+def text(id,s,box,size=36,bold=False,container=None):
+ a=dict(id=id,kind='text',z=3,box=box,text=s,font_family='Arial',font_size=size,bold=bold,color='#090909',fit='strict',wrap=False)
+ if container:a['container']=container
+ e.append(a)
+def crop(id,b):
+ src.crop(b).save(j/'assets'/f'{id}.png');e.append(dict(id=id,kind='image',z=2,box=[b[0],b[1],b[2]-b[0],b[3]-b[1]],path=f'assets/{id}.png',contains_text=False,provenance='Exact isolated source crop; icon internal pixels not editable.'))
+def matrix(id,x,y,w,h,cols,rows,color):
+ shape(id,[x,y,w,h],color)
+ for a in range(1,cols):line(f'{id}v{a}',[[x+w*a/cols,y],[x+w*a/cols,y+h]])
+ for a in range(1,rows):line(f'{id}h{a}',[[x,y+h*a/rows],[x+w,y+h*a/rows]])
+ # all joins are source verified matrix border/grid intersections
+ els=[a for a in e if a['id']==id or a['id'].startswith(id+'v') or a['id'].startswith(id+'h')]
+ for a in els:a.update(allow_overlap_with=[b['id'] for b in els if b is not a],overlap_reason='Source matrix border and grid join intersections; no text in matrix.')
+matrix('W',423,106,256,170,6,4,'#D7D7D7');matrix('A',423,533,256,86,6,2,'#9DD8D3');matrix('B',801,436,80,299,2,7,'#F7A390')
+for id,x in [('input',118),('output',1399)]:
+ shape(id,[x,241,42,331],None)
+ for n,y in enumerate([282,323,365,489,532]):
+  line(id+str(n),[[x,y],[x+42,y]]);e[-1].update(allow_overlap_with=[id],overlap_reason='Source vector cell separator joins border.')
+ for n,y in enumerate([412,425,439]):
+  shape(id+'dot'+str(n),[x+17.5,y-2.5,5,5],'#111111','ellipse',None);e[-1]['container']=id
+text('x','x',[131,184,38,46],36,True);text('h','h',[1404,183,38,46],36,True)
+text('title','Frozen W',[474,45,160,50],36,True);text('titleSub','0',[628,68,20,30],24)
+text('dimW','d x k',[515,287,100,48],36)
+text('labelA','Trainable A',[468,474,200,51],36)
+text('labelB','Trainable B',[759,375,205,51],36)
+text('dimA','r x k',[520,631,100,48],36);text('dimB','d x r',[807,745,100,48],36)
+shape('alphaBox',[1006,555,143,60],None,stroke='#087A7B');text('alpha','alpha/r',[1027,565,121,48],34,container='alphaBox')
+text('legendFrozen','Frozen',[179,704,160,47],34);text('legendTrainable','Trainable',[180,792,170,47],34)
+text('formula1','h = W',[495,868,134,65],46);text('formulaSub','0',[625,897,23,34],29);text('formula2','x + (alpha/r) B A x',[654,868,420,65],46)
+shape('sum',[1206,339,88,88],None,'ellipse');line('plusH',[[1233,383],[1267,383]]);line('plusV',[[1250,366],[1250,400]])
+for a in e:
+ if a['id'] in ['plusH','plusV']:a.update(container='sum',allow_overlap_with=['plusH','plusV'],overlap_reason='Source plus sign cross intersection.')
+segments=[('split',[[177,379],[275,379]],False),('up',[[275,379],[275,193]],False),('upEnd',[[275,193],[408,193]],True),('down',[[275,379],[275,580]],False),('downEnd',[[275,580],[408,580]],True),('wRoute',[[708,192],[1250,192]],False),('wDown',[[1250,192],[1250,331]],True),('ab',[[691,580],[787,580]],True),('ba',[[893,580],[988,580]],True),('ar',[[1161,580],[1250,580]],False),('arUp',[[1250,580],[1250,436]],True),('toH',[[1294,383],[1384,383]],True)]
+for id,p,a in segments:line(id,p,a)
+# explicit source verified connector endpoints
+for pair in [('split','up'),('split','down'),('up','down'),('up','upEnd'),('down','downEnd'),('wRoute','wDown'),('ar','arUp'),('sum','toH')]:
+ for a,b in [pair,pair[::-1]]:
+  q=next(z for z in e if z['id']==a);q.setdefault('allow_overlap_with',[]).append(b);q['overlap_reason']='Source verified connector endpoint join.'
+crop('lock',(699,222,744,281));crop('frozenSwatch',(93,690,160,758));crop('trainableSwatch',(94,778,160,845))
+scene={'version':1,'slides':[{'id':'page_001','width':1536,'height':1024,'source':'pages/page_001/source.png','background':'#FFFFFF','reviewed':True,'notes':'Reconstruction of super_teaser generated illustration, not original paper figure. Native text and shapes; isolated lock and legend swatches raster. Curved elbows approximated by straight joins.','elements':e}]}
+(j/'scene.json').write_text(json.dumps(scene,indent=2))

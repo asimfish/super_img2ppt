@@ -1,0 +1,4 @@
+import os,sys,subprocess,time,json
+from pathlib import Path
+p=Path('/tmp/embodied-forward-TNEbMc'); env=os.environ.copy();env['PATH']='/opt/homebrew/bin:'+env['PATH'];env['PYTHONPATH']='/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-teaser-v030-vjfeo8j1/super-img2ppt/src'
+cmd=[sys.executable,'-m','super_img2ppt']+sys.argv[1:]; start=time.time();r=subprocess.run(cmd,env=env,capture_output=True,text=True);name=sys.argv[1]+'_'+str(time.time_ns());(p/(name+'.stdout')).write_text(r.stdout);(p/(name+'.stderr')).write_text(r.stderr);record={'command':cmd,'env_overrides':{k:env[k] for k in ['PATH','PYTHONPATH']},'exit_code':r.returncode,'elapsed_seconds':time.time()-start};open(p/'commands.jsonl','a').write(json.dumps(record)+'\n');print(json.dumps(record));print(r.stdout);print(r.stderr)

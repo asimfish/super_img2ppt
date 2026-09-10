@@ -1,0 +1,63 @@
+{
+  "embedded": false,
+  "fonts": [
+    {
+      "family": "Arial",
+      "east_asian_typeface": "Arial",
+      "file": "Arial Italic.ttf",
+      "face_index": 0,
+      "weight": 400,
+      "italic": true,
+      "sha256": "ce1d2f1ab89db45f9796100eee960f5702a40e84c225c2b48c3ec3e81d153f98",
+      "embedding_fs_type": 8
+    },
+    {
+      "family": "Arial",
+      "east_asian_typeface": "Arial",
+      "file": "Arial.ttf",
+      "face_index": 0,
+      "weight": 400,
+      "italic": false,
+      "sha256": "525979822591a3447cfc49d943d6f7683508e25543407871c0ed8fed05fd2bd9",
+      "embedding_fs_type": 8
+    },
+    {
+      "family": "Arial",
+      "east_asian_typeface": "Arial",
+      "file": "Arial Bold Italic.ttf",
+      "face_index": 0,
+      "weight": 700,
+      "italic": true,
+      "sha256": "374b0190a9844343110d8f8ed1818117a4591803d022bbb2bd189d63a681e731",
+      "embedding_fs_type": 8
+    },
+    {
+      "family": "Arial",
+      "east_asian_typeface": "Arial",
+      "file": "Arial Bold.ttf",
+      "face_index": 0,
+      "weight": 700,
+      "italic": false,
+      "sha256": "d72db21f9242aedd6b917d8549ad5921766b24d5f8d0becfda2ff4c620b3c2e0",
+      "embedding_fs_type": 8
+    },
+    {
+      "family": "DejaVu Sans",
+      "east_asian_typeface": "DejaVu Sans",
+      "file": "DejaVuSans.ttf",
+      "face_index": 0,
+      "weight": 400,
+      "italic": false,
+      "sha256": "7da195a74c55bef988d0d48f9508bd5d849425c1770dba5d7bfc6ce9ed848954",
+      "embedding_fs_type": 0
+    }
+  ],
+  "substitutions": [
+    {
+      "code": "font_substitution",
+      "requested": "Arial",
+      "resolved": "DejaVu Sans"
+    }
+  ],
+  "portability": "Install the listed font families on the editing computer. Font files are not copied or embedded."
+}

@@ -8,3 +8,9 @@ docs/evidence/diverse_cases/gradient_red.txt -whitespace
 docs/evidence/diverse_cases/text_pair_red.txt -whitespace
 # Retain the upstream license's original final blank line.
 examples/diverse_cases/licenses/CLIP_MIT.txt -whitespace
+
+# Preserve the original v0.3.1 PDF-ownership failure transcript.
+docs/evidence/teaser_cases/ownership_red.txt -whitespace
+# Preserve original command output and upstream CRLF license bytes.
+docs/evidence/teaser_cases/embodied/libreoffice_version.txt -whitespace
+examples/teaser_cases/licenses/SUPER_TEASER_MIT_0.txt -text -whitespace
