@@ -1,0 +1,7 @@
+import pathlib,json
+r=pathlib.Path(__file__).parent;p=r/'job/scene.json';s=json.loads(p.read_text());M={e['id']:e for e in s['slides'][0]['elements']}
+for a,b in [('ghost_matrix_0','matrix_strip_7'),('ghost_matrix_0','matrix_strip_7_face'),('output_photo2','outputs_to_photo')]:
+ M[a].setdefault('allow_overlap_with',[]).append(b);M[a]['overlap_reason']='Source-verified foreground strip over rear matrix, or output photo attached to output connector.'
+# PDF source vertical categories has narrower visible letter height than initial inferred family.
+M['vertical_categories_text']['font_size']=18
+p.write_text(json.dumps(s,indent=2))

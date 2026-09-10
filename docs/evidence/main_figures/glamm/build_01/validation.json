@@ -1,0 +1,2210 @@
+{
+  "status": "fail",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "fail",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "gcg_title",
+            "gcg_header"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "cap_response2"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 35.3271,
+            "width_px": 807.5,
+            "height_px": 161.0,
+            "available_width_px": 792.7412,
+            "available_height_px": 163.918,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 808.0,
+            "required_height_px": 161.5,
+            "fits": false,
+            "lines": [
+              "air, flying over a river. The balloon,",
+              "high up in the sky, is yellow and red",
+              "in color, with a bridge and trees",
+              "visible in the background."
+            ]
+          }
+        },
+        {
+          "slide": "page_001",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "reg_response1"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 35.3271,
+            "width_px": 361.25,
+            "height_px": 40.25,
+            "available_width_px": 356.0977,
+            "available_height_px": 49.458,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 361.75,
+            "required_height_px": 40.75,
+            "fits": false,
+            "lines": [
+              "A yellow, red and"
+            ]
+          }
+        },
+        {
+          "slide": "page_001",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "reg_response2"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 35.3271,
+            "width_px": 425.0,
+            "height_px": 40.25,
+            "available_width_px": 422.5127,
+            "available_height_px": 49.458,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 425.5,
+            "required_height_px": 40.75,
+            "fits": false,
+            "lines": [
+              "blue hot air balloon"
+            ]
+          }
+        },
+        {
+          "slide": "page_001",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "gcg_line1"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 35.3271,
+            "width_px": 1253.75,
+            "height_px": 40.626,
+            "available_width_px": 1225.1455,
+            "available_height_px": 49.458,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 1254.25,
+            "required_height_px": 41.126,
+            "fits": false,
+            "lines": [
+              "A large, colorful hot air balloon is flying over the river."
+            ]
+          }
+        },
+        {
+          "slide": "page_001",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "phrase_response1"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 35.3271,
+            "width_px": 403.75,
+            "height_px": 40.626,
+            "available_width_px": 397.0771,
+            "available_height_px": 49.458,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 404.25,
+            "required_height_px": 41.126,
+            "fits": false,
+            "lines": [
+              "A <hot air balloon>"
+            ]
+          }
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "global_shadow",
+            "global_region"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 29.952
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "global_shadow",
+            "global_join_h"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 23.962
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "global_shadow",
+            "global_t"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 44978.189
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "grounding_shadow",
+            "ground_decoder"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 23.962
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "grounding_shadow",
+            "grounding_t"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 45147.919
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "decoder_shadow",
+            "decoder_photo"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 23.962
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "decoder_shadow",
+            "output_decoder"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 8.986
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "decoder_shadow",
+            "decoder_t"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 25341.538
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "llm_shadow",
+            "llm_lp"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 23.962
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "llm_shadow",
+            "instruction_llm"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 3.994
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "llm_shadow",
+            "llm_response"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 17.971
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "llm_shadow",
+            "robot_llm"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 5271.58
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "llm_shadow",
+            "llm_t"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 12520.014
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "vl_shadow",
+            "vl_llm"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 23.962
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "vl_shadow",
+            "vl_t"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4073.494
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "lp_shadow",
+            "lp_tokens"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 23.962
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "lp_shadow",
+            "lp_t"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4153.368
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "regions",
+            "input_region_balloon"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 18690.149
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "regions",
+            "input_region_water"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 15766.815
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "llm",
+            "robot_llm"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 5271.58
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "answers",
+            "answer_balloon"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 8746.043
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "answers",
+            "answer_water"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 11940.945
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "answers",
+            "answer_balloon_t"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 38977.767
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "answers",
+            "answer_water_t"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 31629.507
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "output_tokens",
+            "output_up1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 65.895
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "output_tokens",
+            "output_up2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 65.895
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "output_tokens",
+            "output_prompt"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "seg",
+            "segmentation_photo"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 37572.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "seg",
+            "robot_seg"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 5772.784
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "seg",
+            "seg_question"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 56669.542
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "seg",
+            "seg_response"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 30235.737
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "cap",
+            "robot_caption"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 5890.597
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "cap",
+            "cap_question"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 32785.684
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "cap",
+            "cap_response1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 35235.726
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "cap",
+            "cap_response2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 129944.552
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "reg",
+            "region_photo"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 18869.864
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "reg",
+            "robot_region"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 5870.629
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "reg",
+            "reg_question"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 40920.651
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "reg",
+            "reg_response1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 17611.88
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "reg",
+            "reg_response2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 20896.633
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "phrase",
+            "phrase_photo"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 39496.946
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "phrase",
+            "robot_phrase"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 5870.629
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "phrase",
+            "phrase_question1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 39153.51
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "phrase",
+            "phrase_question2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 25932.618
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "phrase",
+            "phrase_response1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 19638.639
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "phrase",
+            "phrase_response2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 17052.772
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "gcg",
+            "gcg_line1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 60593.246
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "gcg",
+            "gcg_line2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 58985.812
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack0",
+            "stack_front0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 203.779
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack0",
+            "stack1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 19170.928
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack0",
+            "stack_front1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 3901.529
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack0",
+            "stack2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 7501.689
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack0",
+            "stack_front2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 2614.123
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack0",
+            "stack3"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 485.522
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack0",
+            "stack_front3"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 943.56
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack0",
+            "roi0_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 20449.35
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack0",
+            "roi0_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 19934.126
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack0",
+            "roi1_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 11239.212
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack0",
+            "roi1_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 9049.668
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack0",
+            "roi2_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 3743.698
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack0",
+            "roi2_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 1668.732
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack1",
+            "stack_front1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 950.577
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack1",
+            "stack2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 10827.639
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack1",
+            "stack_front2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 3052.772
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack1",
+            "stack3"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 1731.863
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack1",
+            "stack_front3"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 1494.766
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack1",
+            "roi0_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 12409.352
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack1",
+            "roi0_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 16628.234
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack1",
+            "roi1_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 11321.923
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack1",
+            "roi1_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 10865.795
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack1",
+            "roi2_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4990.973
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack1",
+            "roi2_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 3362.626
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack1",
+            "roi3_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 157.207
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack_front1",
+            "roi0_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 3428.955
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack_front1",
+            "roi0_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 3796.454
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack2",
+            "stack_front2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 1354.315
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack2",
+            "stack3"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 3822.595
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack2",
+            "stack_front3"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 1895.603
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack2",
+            "roi0_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 3324.185
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack2",
+            "roi0_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 6219.388
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack2",
+            "roi1_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 5734.972
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack2",
+            "roi1_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 8649.956
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack2",
+            "roi2_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 5026.38
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack2",
+            "roi2_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4682.691
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack2",
+            "roi3_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 802.744
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack2",
+            "roi3_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 138.578
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack_front2",
+            "roi0_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 2230.931
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack_front2",
+            "roi0_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 2723.03
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack_front2",
+            "roi1_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 2631.002
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack_front2",
+            "roi1_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 2943.697
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "global_join_h",
+            "global_join_v"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4.493
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "global_join_v",
+            "join_tokens"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4.493
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "region_join_h",
+            "region_join_v"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4.493
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "region_join_v",
+            "join_tokens"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4.493
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "photo_bypass_v",
+            "photo_bypass_h"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4.493
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "photo_bypass_h",
+            "photo_bypass_end"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4.493
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "llm_response",
+            "gcg_title"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "output_up1",
+            "output_join"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4.493
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "output_up2",
+            "output_join"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4.493
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "output_join",
+            "output_decoder"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 8.986
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack3",
+            "stack_front3"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 1389.344
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack3",
+            "roi1_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 859.891
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack3",
+            "roi2_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 890.443
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack3",
+            "roi2_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 2810.999
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack3",
+            "roi3_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 937.899
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack3",
+            "roi3_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 793.19
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack_front3",
+            "roi0_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 326.615
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack_front3",
+            "roi1_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 196.696
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack_front3",
+            "roi1_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 1536.232
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack_front3",
+            "roi2_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 1489.416
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stack_front3",
+            "roi2_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 2020.767
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "roi0_0",
+            "roi0_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 15256.795
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "roi0_0",
+            "roi1_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 8022.209
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "roi0_0",
+            "roi1_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4868.504
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "roi0_0",
+            "roi2_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 1111.444
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "roi0_0",
+            "roi2_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 60.922
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "roi0_1",
+            "roi1_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 11321.923
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "roi0_1",
+            "roi1_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 8022.215
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "roi0_1",
+            "roi2_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 2964.336
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "roi0_1",
+            "roi2_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 1111.435
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "roi1_0",
+            "roi1_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 7482.468
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "roi1_0",
+            "roi2_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 2617.665
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "roi1_0",
+            "roi2_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 900.025
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "roi1_1",
+            "roi2_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4864.237
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "roi1_1",
+            "roi2_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 2617.65
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "roi2_0",
+            "roi2_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 2514.899
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "roi2_1",
+            "roi3_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 568.217
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "roi3_0",
+            "roi3_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 32.074
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "segmentation_photo",
+            "seg_question"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "segmentation_photo",
+            "seg_response"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "robot_caption",
+            "cap_response2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 151.759
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "robot_region",
+            "reg_response1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 279.556
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "robot_region",
+            "reg_response2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 311.502
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "cap_question",
+            "cap_response1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "phrase_question1",
+            "phrase_question2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "cap_response1",
+            "cap_response2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "reg_response1",
+            "reg_response2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 3019.174
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "gcg_line1",
+            "gcg_line2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "phrase_response1",
+            "phrase_response2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "image": 14,
+            "shape": 87,
+            "line": 22,
+            "text": 31
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "global_shadow",
+                "global"
+              ],
+              "reason": "Source drop-shadow visible behind this block; flat native approximation.",
+              "area_px2": 67050.97
+            },
+            {
+              "elements": [
+                "grounding_shadow",
+                "grounding"
+              ],
+              "reason": "Source drop-shadow visible behind this block; flat native approximation.",
+              "area_px2": 68197.152
+            },
+            {
+              "elements": [
+                "decoder_shadow",
+                "decoder"
+              ],
+              "reason": "Source drop-shadow visible behind this block; flat native approximation.",
+              "area_px2": 66443.888
+            },
+            {
+              "elements": [
+                "llm_shadow",
+                "llm"
+              ],
+              "reason": "Source drop-shadow visible behind this block; flat native approximation.",
+              "area_px2": 54093.629
+            },
+            {
+              "elements": [
+                "vl_shadow",
+                "vl"
+              ],
+              "reason": "Source drop-shadow visible behind this block; flat native approximation.",
+              "area_px2": 13334.723
+            },
+            {
+              "elements": [
+                "lp_shadow",
+                "lp"
+              ],
+              "reason": "Source drop-shadow visible behind this block; flat native approximation.",
+              "area_px2": 13334.705
+            }
+          ],
+          "text_layouts": {
+            "global_t": {
+              "scale": 1,
+              "effective_font_size_px": 50.8711,
+              "width_px": 278.0,
+              "height_px": 117.004,
+              "available_width_px": 374.4678,
+              "available_height_px": 120.1123,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 278.5,
+              "required_height_px": 117.504,
+              "fits": true,
+              "lines": [
+                "Global Image",
+                "Encoder"
+              ]
+            },
+            "grounding_t": {
+              "scale": 1,
+              "effective_font_size_px": 50.8711,
+              "width_px": 309.5,
+              "height_px": 117.004,
+              "available_width_px": 375.8809,
+              "available_height_px": 120.1123,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 310.0,
+              "required_height_px": 117.504,
+              "fits": true,
+              "lines": [
+                "Grounding",
+                "Image Encoder"
+              ]
+            },
+            "decoder_t": {
+              "scale": 1,
+              "effective_font_size_px": 50.8711,
+              "width_px": 289.5,
+              "height_px": 58.502,
+              "available_width_px": 365.9893,
+              "available_height_px": 69.2412,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 290.0,
+              "required_height_px": 59.002,
+              "fits": true,
+              "lines": [
+                "Pixel Decoder"
+              ]
+            },
+            "region_t": {
+              "scale": 1,
+              "effective_font_size_px": 50.8711,
+              "width_px": 329.25,
+              "height_px": 58.502,
+              "available_width_px": 388.5986,
+              "available_height_px": 65.002,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 329.75,
+              "required_height_px": 59.002,
+              "fits": true,
+              "lines": [
+                "Region Encoder"
+              ]
+            },
+            "llm_t": {
+              "scale": 1,
+              "effective_font_size_px": 62.1758,
+              "width_px": 131.25,
+              "height_px": 71.502,
+              "available_width_px": 155.4395,
+              "available_height_px": 80.5459,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 131.75,
+              "required_height_px": 72.002,
+              "fits": true,
+              "lines": [
+                "LLM"
+              ]
+            },
+            "vl_t": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 66.0,
+              "height_px": 45.501,
+              "available_width_px": 72.0674,
+              "available_height_px": 56.5234,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 66.5,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "V-L"
+              ]
+            },
+            "lp_t": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 59.5,
+              "height_px": 45.501,
+              "available_width_px": 73.4805,
+              "available_height_px": 56.5234,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 60.0,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "L-P"
+              ]
+            },
+            "input_prompt": {
+              "scale": 1,
+              "effective_font_size_px": 36.7402,
+              "width_px": 328.25,
+              "height_px": 42.251,
+              "available_width_px": 363.1631,
+              "available_height_px": 50.8711,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 328.75,
+              "required_height_px": 42.751,
+              "fits": true,
+              "lines": [
+                "Image-region prompts"
+              ]
+            },
+            "output_prompt": {
+              "scale": 1,
+              "effective_font_size_px": 36.7402,
+              "width_px": 232.5,
+              "height_px": 42.251,
+              "available_width_px": 276.9648,
+              "available_height_px": 50.8711,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 233.0,
+              "required_height_px": 42.751,
+              "fits": true,
+              "lines": [
+                "Output prompts"
+              ]
+            },
+            "instruction_t": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 413.5,
+              "height_px": 91.003,
+              "available_width_px": 483.2754,
+              "available_height_px": 94.6768,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 414.0,
+              "required_height_px": 91.503,
+              "fits": true,
+              "lines": [
+                "Can  you  give  a  detailed",
+                "description of this image?"
+              ]
+            },
+            "seg_title": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 564.25,
+              "height_px": 45.501,
+              "available_width_px": 630.2363,
+              "available_height_px": 53.6973,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 564.75,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "Referring Expression Segmentation"
+              ]
+            },
+            "cap_title": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 384.25,
+              "height_px": 45.501,
+              "available_width_px": 821.0029,
+              "available_height_px": 53.6973,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 384.75,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "Image Level Captioning"
+              ]
+            },
+            "reg_title": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 399.5,
+              "height_px": 45.501,
+              "available_width_px": 556.7559,
+              "available_height_px": 53.6973,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 400.0,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "Region Level Captioning"
+              ]
+            },
+            "phrase_title": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 286.5,
+              "height_px": 45.501,
+              "available_width_px": 733.3916,
+              "available_height_px": 53.6973,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 287.0,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "Phrase Grounding"
+              ]
+            },
+            "gcg_title": {
+              "scale": 1,
+              "effective_font_size_px": 42.3926,
+              "width_px": 606.25,
+              "height_px": 48.751,
+              "available_width_px": 1235.0371,
+              "available_height_px": 53.6973,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 606.75,
+              "required_height_px": 49.251,
+              "fits": true,
+              "lines": [
+                "Grounded Conversation Generation"
+              ]
+            },
+            "seg_question": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 501.75,
+              "height_px": 91.003,
+              "available_width_px": 607.627,
+              "available_height_px": 93.2637,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 502.25,
+              "required_height_px": 91.503,
+              "fits": true,
+              "lines": [
+                "Can you segment the balloon in",
+                "this given picture?"
+              ]
+            },
+            "cap_question": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 514.75,
+              "height_px": 45.501,
+              "available_width_px": 594.9092,
+              "available_height_px": 55.1104,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 515.25,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "Please describe the given image."
+              ]
+            },
+            "reg_question": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 375.75,
+              "height_px": 91.003,
+              "available_width_px": 419.6865,
+              "available_height_px": 97.5029,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 376.25,
+              "required_height_px": 91.503,
+              "fits": true,
+              "lines": [
+                "Could you tell me more",
+                "about this region?"
+              ]
+            },
+            "phrase_question1": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 644.0,
+              "height_px": 45.501,
+              "available_width_px": 729.1523,
+              "available_height_px": 53.6973,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 644.5,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "Can you segment phrases in, “A <hot air"
+              ]
+            },
+            "phrase_question2": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 426.25,
+              "height_px": 45.501,
+              "available_width_px": 470.5576,
+              "available_height_px": 55.1104,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 426.75,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "balloon> over the <river>”"
+              ]
+            },
+            "answer_balloon_t": {
+              "scale": 1,
+              "effective_font_size_px": 35.3271,
+              "width_px": 318.75,
+              "height_px": 80.5,
+              "available_width_px": 430.9912,
+              "available_height_px": 90.4375,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 319.25,
+              "required_height_px": 81.0,
+              "fits": true,
+              "lines": [
+                "A large hot air",
+                "balloon"
+              ]
+            },
+            "answer_water_t": {
+              "scale": 1,
+              "effective_font_size_px": 35.3271,
+              "width_px": 318.75,
+              "height_px": 80.5,
+              "available_width_px": 339.1406,
+              "available_height_px": 93.2637,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 319.25,
+              "required_height_px": 81.0,
+              "fits": true,
+              "lines": [
+                "A large body of",
+                "water"
+              ]
+            },
+            "seg_response": {
+              "scale": 1,
+              "effective_font_size_px": 35.3271,
+              "width_px": 318.75,
+              "height_px": 80.5,
+              "available_width_px": 319.3574,
+              "available_height_px": 94.6768,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 319.25,
+              "required_height_px": 81.0,
+              "fits": true,
+              "lines": [
+                "Sure, the",
+                "segmentation is"
+              ]
+            },
+            "cap_response1": {
+              "scale": 1,
+              "effective_font_size_px": 35.3271,
+              "width_px": 680.0,
+              "height_px": 40.25,
+              "available_width_px": 733.3916,
+              "available_height_px": 48.0449,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 680.5,
+              "required_height_px": 40.75,
+              "fits": true,
+              "lines": [
+                "A hot air balloon is seen in the"
+              ]
+            },
+            "cap_response2": {
+              "scale": 1,
+              "effective_font_size_px": 35.3271,
+              "width_px": 807.5,
+              "height_px": 161.0,
+              "available_width_px": 792.7412,
+              "available_height_px": 163.918,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 808.0,
+              "required_height_px": 161.5,
+              "fits": false,
+              "lines": [
+                "air, flying over a river. The balloon,",
+                "high up in the sky, is yellow and red",
+                "in color, with a bridge and trees",
+                "visible in the background."
+              ]
+            },
+            "reg_response1": {
+              "scale": 1,
+              "effective_font_size_px": 35.3271,
+              "width_px": 361.25,
+              "height_px": 40.25,
+              "available_width_px": 356.0977,
+              "available_height_px": 49.458,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 361.75,
+              "required_height_px": 40.75,
+              "fits": false,
+              "lines": [
+                "A yellow, red and"
+              ]
+            },
+            "reg_response2": {
+              "scale": 1,
+              "effective_font_size_px": 35.3271,
+              "width_px": 425.0,
+              "height_px": 40.25,
+              "available_width_px": 422.5127,
+              "available_height_px": 49.458,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 425.5,
+              "required_height_px": 40.75,
+              "fits": false,
+              "lines": [
+                "blue hot air balloon"
+              ]
+            },
+            "gcg_line1": {
+              "scale": 1,
+              "effective_font_size_px": 35.3271,
+              "width_px": 1253.75,
+              "height_px": 40.626,
+              "available_width_px": 1225.1455,
+              "available_height_px": 49.458,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 1254.25,
+              "required_height_px": 41.126,
+              "fits": false,
+              "lines": [
+                "A large, colorful hot air balloon is flying over the river."
+              ]
+            },
+            "gcg_line2": {
+              "scale": 1,
+              "effective_font_size_px": 35.3271,
+              "width_px": 1169.25,
+              "height_px": 40.626,
+              "available_width_px": 1192.6445,
+              "available_height_px": 49.458,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 1169.75,
+              "required_height_px": 41.126,
+              "fits": true,
+              "lines": [
+                "The sky is overarching the river, trees, and buildings."
+              ]
+            },
+            "phrase_response1": {
+              "scale": 1,
+              "effective_font_size_px": 35.3271,
+              "width_px": 403.75,
+              "height_px": 40.626,
+              "available_width_px": 397.0771,
+              "available_height_px": 49.458,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 404.25,
+              "required_height_px": 41.126,
+              "fits": false,
+              "lines": [
+                "A <hot air balloon>"
+              ]
+            },
+            "phrase_response2": {
+              "scale": 1,
+              "effective_font_size_px": 35.3271,
+              "width_px": 340.0,
+              "height_px": 40.626,
+              "available_width_px": 344.793,
+              "available_height_px": 49.458,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 340.5,
+              "required_height_px": 41.126,
+              "fits": true,
+              "lines": [
+                "over the <river>"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "66002f91a37d1b99158ffc71beadc9a55cab69bc9caec8cf514c585283a1ccac",
+  "font_substitutions": []
+}

@@ -1,5 +1,36 @@
 # Bounded reconstruction evidence
 
+## v0.3.2 complete published main figures
+
+On 2026-09-11, independent image-only evaluations reconstructed the full Grounding DINO
+ECCV2024 Figure 3, GLaMM CVPR2024 Figure 2 and UniAD CVPR2023 Figure 2. All major panels
+were retained, including attention internals, token grids, grounded conversations and the
+perception/prediction/planning branches. Repository image variants of the first two differed
+from the publications, so evaluation used raster crops of the actual published PDFs.
+No PDF text/vector coordinates or original drawing code provided the reconstruction answers.
+
+Grounding DINO has 59 native text objects, 274 shapes, 392 lines and four local images.
+Its fixed 35-region strict score improves 0 -> 3 -> 11; 21 isolated primary text labels reach
+ink-edge error <=1 px after font-size/origin calibration, but glyph IoU and dense regions fail.
+GLaMM has 32 text objects, 87 shapes, 22 lines and 14 local images. Only 3/39 fixed regions
+pass, all connectors; a separately identified source-width PDF diagnostic gives 4/39. UniAD
+has 28 texts, 27 shapes, 39 lines and eight images; 8/36 fixed regions pass, seven geometry.
+Two important module labels stay fused to raster artwork. One red Planner ROI has an invalid
+dark-only mask and is counted as failed, not silently excluded or recast as successful.
+
+All three remain source-fidelity FAIL despite nonblocking automated review status. Per-case
+thresholds and render resolutions differ and must not be pooled as conversion accuracy.
+Font shape, weight, baseline/word spacing, soft shadows, perspective stacks and thin colored
+lines remain unresolved. First builds and candidate repairs are preserved; parent feedback
+after first actual renders is explicitly distinguished from the initial independent attempt.
+The owning repository's docs/main_figures.md and docs/evidence/main_figures record raw results.
+
+This release improves reconstruction instructions and source reproduction, not runtime layout
+algorithms. No new runtime defect was causally established; implementation is unchanged from
+v0.3.1 except the version constant. UniAD artwork is distributed under its explicit assets
+license; the two paper-derived corpora remain local. No fonts or new dependencies installed.
+Actual LibreOffice/PDFium was checked; native PowerPoint/WPS remain unverified.
+
 ## v0.3.1 super_teaser extension
 
 On 2026-09-10, three independent image-only reconstructions used commit-pinned super_teaser

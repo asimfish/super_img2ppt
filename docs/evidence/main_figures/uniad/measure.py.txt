@@ -1,0 +1,10 @@
+import pathlib,json,sys
+from PIL import Image
+import pypdfium2 as p
+r=pathlib.Path(__file__).parent;b=r/('build_'+sys.argv[1]);pdf=list((b/'render').glob('*.pdf'))[0];d=p.PdfDocument(pdf);im=d[0].render(scale=1880/d[0].get_width()).to_pil().convert('RGB');im.save(b/'render/source_width.png');src=Image.open(r/'pipeline.png').convert('RGB');con=json.loads((r/'roi_contract.json').read_text());res=[]
+def mask(image,box):
+ x,y,w,h=box;z=image.crop((x,y,x+w,y+h));return {(i%w,i//w) for i,c in enumerate(z.getdata()) if max(c[:3])<150}
+def bbox(m):return [min(x for x,y in m),min(y for x,y in m),max(x for x,y in m),max(y for x,y in m)] if m else None
+for roi in con['regions']:
+ a=mask(src,roi['box']);z=mask(im,roi['box']);aa,zz=bbox(a),bbox(z);edge=max(abs(x-y) for x,y in zip(aa,zz)) if aa and zz else 999;iou=len(a&z)/len(a|z) if a|z else 0;res.append(dict(**roi,edge_delta=edge,IoU=iou,passed=edge<=3 and iou>=.70,source_ink_bbox=aa,rendered_ink_bbox=zz))
+out={'source_size':src.size,'actual_pdf_raster_size':im.size,'method':'actual PPTX PDF rendered at source width; dark maxRGB<150; fixed ROIs; no registration','passed':sum(v['passed'] for v in res),'total':len(res),'regions':res};(r/f'metrics_{sys.argv[1]}.json').write_text(json.dumps(out,indent=2));print(out['passed'],out['total']);print('\n'.join(f"{v['id']}: edge {v['edge_delta']} IoU {v['IoU']:.3f}" for v in res))

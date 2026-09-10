@@ -1,0 +1,16 @@
+[
+  {
+    "operation": "measure.py 05",
+    "exit_code": 1,
+    "reason": "Attempted measurement after build05 preflight fail; PDF absent, FileNotFoundError; no metrics fabricated."
+  },
+  {
+    "operation": "measure.py 04/06/08/09/10 and align_final.py",
+    "status": "completed",
+    "warning": "Pillow Image.getdata deprecation warning; mask results still produced."
+  },
+  {
+    "operation": "fc-match Carlito via normal host fontconfig",
+    "outcome": "Returned DejaVu Sans; existing LibreOffice font directory was subsequently used and correctly resolved Carlito-Regular. No font installation."
+  }
+]

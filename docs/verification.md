@@ -1,5 +1,17 @@
 # 验收记录
 
+## v0.3.2：正式完整主架构图压力测试
+
+2026-09-11：Grounding DINO（ECCV2024）、GLaMM（CVPR2024）、UniAD（CVPR2023）
+三张完整主图完成独立重建、真实渲染、预设区域测量和父任务复跑。
+**严格源图保真三例均 FAIL**；自动检查均 review，不把这解释成字体或布局正确。
+范围、原始失败与源图版本核验见 [正式主图报告](main_figures.md)。
+运行时实现与v0.3.1相同，仅版本常量变化；本轮改进说明、测试场景与固定源图下载配方。
+本地全套 **67 passed in 35.67s**，无跳过；lint、格式、skill结构和治理检查通过。
+最终质量检查、安装包smoke与哈希见 [verification_v032.json](evidence/main_figures/verification_v032.json)。
+交付结论 **CONDITIONAL**：转换文件和失败可复查，但复杂主图高保真能力未通过验收，
+PowerPoint/WPS原生外观仍未验证。
+
 ## v0.3.1：super_teaser 三类图与 PDF 归属修复
 
 2026-09-10：全套 **67 passed in 41.08s**，无跳过。新增两项真实渲染回归覆盖

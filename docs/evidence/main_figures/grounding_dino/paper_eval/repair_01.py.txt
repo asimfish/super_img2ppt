@@ -1,0 +1,28 @@
+import pathlib,json,copy
+from PIL import Image
+R=pathlib.Path(__file__).parent;p=R/'job/scene.json';s=json.loads(p.read_text());E=s['slides'][0]['elements'];M={e['id']:e for e in E};im=Image.open(R/'source.png');z=max(e['z']for e in E)+1
+for e in E:
+ if e['id'].startswith('matrix_'):e['box'][0]+=40;e['box'][1]-=19
+ if e['id'].startswith('ghost_matrix'):e['box'][0]+=40;e['box'][1]-=19
+ if e['id']=='ghost_one':e['box'][0]+=40;e['box'][1]-=19
+for n,b in [('output_photo1',[658,332,66,42]),('output_photo2',[731,321,38,54]),('output_photo3',[781,338,34,35])]:
+ M[n]['box']=b;x,y,w,h=b;im.crop((x,y,x+w,y+h)).save(R/'job'/M[n]['path'])
+M['outputs']['box']=[518,370,216,42]
+M['loss_contrast']['points']=[[752,94],[752,73]]
+M['loss_local_1']['points']=[[798,355],[965,355]];M['loss_local_2']['points']=[[965,355],[965,80]]
+for n,b in [('vertical_sentence',[577,89,34,237]),('vertical_categories',[603,69,34,237])]:
+ M[n]['box']=b;x,y,w,h=b;M[n+'_text']['box']=[x+w/2-h/2,y+h/2-w/2,h,w]
+# Source border and sentence overlap; move editable categories ink to true nonoverlapping source x622 center.
+# Angled feature strips at matrix left; front 8 and faded rear 8, all native polygons.
+for faded in [True,False]:
+ for i in range(8):
+  x=637 if faded else 660;y=(107 if faded else 82)+26.4*i
+  n=('ghost_strip_'if faded else 'matrix_strip_')+str(i)
+  E.append({'id':n,'kind':'shape','z':7 if faded else z,'shape':'polygon','box':[x,y,34,36],'vertices':[[0,0],[.14,0],[1,.86],[.86,.86]],'fill':'#EAEDE0' if faded else '#DFE4BA','stroke':'#ACACAC' if faded else '#272727','stroke_width':1.0});z+=1
+  E.append({'id':n+'_face','kind':'shape','z':7 if faded else z,'shape':'polygon','box':[x+29,y+31,5,5],'vertices':[[0,0],[1,0],[1,1],[0,1]],'fill':'#EAEDE0' if faded else '#DFE4BA','stroke':'#ACACAC' if faded else '#272727','stroke_width':1.0});z+=1
+# Specific visible occlusion: native rear strips under foreground prompt/strip/matrix, no text obscured.
+for e in E:
+ if e['id'].startswith('ghost_strip_'):
+  e['allow_overlap_with']=['vertical_categories']+[q['id']for q in E if q['id'].startswith('matrix_strip_')]
+  e['overlap_reason']='Published pale rear token projections are partially occluded by foreground token projections.'
+p.write_text(json.dumps(s,indent=2))

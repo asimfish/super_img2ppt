@@ -1,0 +1,45 @@
+import pathlib,json,hashlib
+from PIL import Image
+r=pathlib.Path(__file__).parent;j=r/'job';a=j/'assets';a.mkdir(exist_ok=True);src=Image.open(r/'pipeline.png');els=[];rois=[]
+def text(i,t,x,y,w,h,size=26,color='#444444',bold=False,italic=False,container=None):
+ rois.append({'id':i,'kind':'text','box':[x,y,w,h]});e=dict(id=i,kind='text',z=20,box=[x,y,w,h],text=t,font_family='Times New Roman',font_size=size,color=color,bold=bold,italic=italic,fit='strict',wrap=False)
+ if container:e['container']=container
+ els.append(e)
+def shape(i,b,fill,stroke=None,typ='rect',sw=2,z=2):
+ els.append(dict(id=i,kind='shape',z=z,box=b,shape=typ,fill=fill,stroke=stroke,stroke_width=sw))
+def line(i,x,y,xx,yy,color='#444444',arrow=False,sw=1):
+ e=dict(id=i,kind='line',z=5,points=[[x,y],[xx,yy]],stroke=color,stroke_width=sw)
+ if arrow:e.update(arrow=True,arrow_head={'length':8,'width':7})
+ els.append(e)
+def crop(i,b):
+ src.crop(b).save(a/(i+'.png'));els.append(dict(id=i,kind='image',z=1,box=[b[0],b[1],b[2]-b[0],b[3]-b[1]],path='assets/'+i+'.png',contains_text=False,provenance='Exact crop of pinned official UniAD pipeline.png; complex artwork.'))
+# Pre-authoring fixed regions cover all readable labels and connector topology.
+labels=[('legend_ego','Ego-vehicle Query',162,16,210,33,25),('legend_bev','BEV Feature',161,66,160,32,25),('legend_b','B',102,64,22,30,24),('input','Multi-view\nVision-only Input',23,257,190,63,25),('bev','Bird’s eye view\nFeature',281,257,174,63,25),('b_query','B',355,139,30,35,30),('trackq','Track Q',480,122,130,37,29),('mapq','Map Q',480,235,115,37,29),('track','TrackFormer',608,50,210,46,35),('map','MapFormer',614,311,198,45,35),('motion','Motion\nFormer',1028,154,135,83,35),('occ','OccFormer',1359,179,197,47,35),('planner','Planner',1699,177,145,47,35),('agent','Agent-level\nFeature',1193,78,129,55,25),('motionq','Motion Q',1143,363,134,40,29),('occq','Occ Q',1401,310,89,38,29),('scene','Scene-level\nFeature',1486,302,145,59,25),('kv1','K, V',675,161,45,24,17),('kv2','K, V',901,104,47,24,17),('kv3','K, V',900,273,47,24,17),('kv4','K, V',1270,209,45,24,17),('b1','B',642,181,29,39,29),('b2','B',1426,375,27,37,29),('b3','B',1759,375,27,37,29),('stage1','Backbone',159,437,137,41,31),('stage2','Perception',637,437,168,41,31),('stage3','Prediction',1221,437,160,41,31),('stage4','Planning',1704,437,134,41,31)]
+contract={'frozen_before_scene':True,'threshold':{'dark_rgb_max':150,'max_ink_edge_delta_px':3,'min_IoU':0.70},'regions':[{'id':v[0],'kind':'text','box':list(v[2:6])} for v in labels]+[{'id':i,'kind':'geometry','box':b} for i,b in [('bev_arrow',[442,190,495,18]),('track_input',[640,115,25,59]),('map_input',[640,229,25,65]),('motion_input',[1068,265,23,96]),('occ_input',[1426,244,23,67]),('planner_input',[1758,244,23,124]),('agent_to_planner',[1240,271,503,22]),('occ_to_planner',[1580,188,48,22])]],'topology':['BEV→TrackFormer','BEV→MapFormer','BEV→MotionFormer','TrackFormer→MotionFormer','MapFormer→MotionFormer','Motion queries→MotionFormer','MotionFormer→agent features→OccFormer','agent features→Planner','BEV→Occ queries→OccFormer','OccFormer→Planner','BEV→Planner']}
+(r/'roi_contract.json').write_text(json.dumps(contract,indent=2));(r/'roi_contract.sha256').write_text(hashlib.sha256((r/'roi_contract.json').read_bytes()).hexdigest())
+for i,b in [('cameras',[63,153,158,244]),('backbone',[216,126,280,248]),('bev_art',[329,186,403,220]),('track_road_top',[578,0,756,34]),('map_top',[697,285,743,295]),('map_bottom',[582,365,810,432]),('motion_art',[994,0,1162,124]),('occ_art',[1347,5,1536,156]),('planner_art',[1670,30,1846,151])]:crop(i,b)
+for i,b,fill,col in [('track_box',[572,35,251,67],'#C0DDEE','#07516E'),('map_box',[572,296,251,67],'#E3D8EA','#571A8F'),('motion_box',[996,131,168,126],'#DFEFD6','#285625'),('occ_box',[1312,165,251,67],'#FFF3CE','#875706'),('planner_box',[1659,163,185,68],'#F3939A','#ED0014')]:shape(i,b,fill,col,'round_rect')
+for i,x,y in [('b1',632,179),('b2',1416,372),('b3',1750,372),('legend',96,60)]:shape(i+'_circle',[x,y,40 if i!='legend' else 33,40 if i!='legend' else 34],'#CDCDCD','#666666','ellipse',1.6)
+shape('legend_tri',[78,18,23,24],'#C8D9EC','#123957','triangle',3);shape('legend_ellipse',[120,19,25,25],'#E0EED8','#285625','ellipse',3)
+for stem,x,ys,colors,col in [('track_in',511,[20,57,92],['#D3DFEF','#D3DFEF','#94B6E1'],None),('track_out',857,[18,58,93],['#D3DFEF','#D3DFEF','#94B6E1'],'#173D62'),('map_in',512,[282,317,353],['#F0EAF5','#CFBDE0','#AC8CC7'],None),('map_out',857,[281,317,353],['#F0EAF5','#CFBDE0','#AC8CC7'],'#6D309E'),('agent',1228,[138,184,230],['#34792B','#94C882','#E0EED8'],'#285625')]:
+ for n,(y,c) in enumerate(zip(ys,colors)):shape(stem+str(n),[x,y,23,23],c,col,'triangle' if stem.startswith('track') and n==0 else ('ellipse' if stem=='agent' and n==2 else 'rect'),3)
+for n,(x,c) in enumerate([(1026,'#DEEDD6'),(1068,'#8FCD7C'),(1109,'#317B2A')]):shape('motion_token'+str(n),[x,367,23,23],c)
+for v in labels:
+ i,t,x,y,w,h,s=v;col='#444444';container=None
+ for key,c in [('track','#07516E'),('map','#571A8F'),('motion','#285625'),('agent','#285625'),('occ','#875706'),('scene','#875706'),('planner','#ED0014')]:
+  if i.startswith(key):col=c
+ if i in ['track','map','motion','occ','planner']:container=i+'_box'
+ if i in ['b1','b2','b3']:container=i+'_circle'
+ text(i,t,x,y,w,h,s,col,i.startswith('stage') or i in ['b1','b2','b3'],i in ['kv1','kv2','kv3','kv4','b_query'],container)
+for args in [('camera_link',168,200,209,200),('backbone_link',285,200,313,200),('bev_left',444,198,619,198),('bev_right',682,198,934,198),('track_up',652,174,652,117),('map_down',652,232,652,289),('track_in_link',547,68,566,68),('track_out_link',839,69,848,69),('map_in_link',547,330,566,330),('map_out_link',839,330,848,330),('track_motion',889,70,934,102),('map_motion',889,331,934,297),('motion_up',1079,361,1079,269),('agent_in',1197,196,1216,196),('agent_occ',1266,196,1294,196),('agent_plan1',1240,269,1240,282),('agent_plan2',1240,282,1428,282),('agent_plan3',1446,282,1740,282),('agent_plan4',1740,282,1740,248),('occ_up',1437,310,1437,248),('occ_b',1437,372,1437,350),('planner_b',1769,369,1769,248),('occ_planner',1583,199,1624,199)]:
+ i,x,y,xx,yy=args;line(i,x,y,xx,yy,'#285625' if i.startswith(('agent','motion_up')) else '#444444',i in ['backbone_link','bev_right','track_up','map_down','track_motion','map_motion','motion_up','agent_occ','agent_plan4','occ_up','planner_b','occ_planner'])
+for n,x1,x2,g1,g2 in [(1,38,388,146,294),(2,473,912,619,817),(3,997,1553,1200,1370),(4,1649,1862,1684,1832)]:
+ for suf,xy in [('l',[x1,434,x1,456]),('r',[x2,434,x2,456]),('a',[x1,456,g1,456]),('b',[g2,456,x2,456])]:line('bracket'+str(n)+suf,*xy,sw=1.7)
+# Explicit source-visible line endpoints only; no text collision exemptions.
+for e in els:
+ if e['kind']=='line':
+  pairs=[]
+  for f in els:
+   if f['kind']=='line' and f['id']!=e['id'] and any(p==q for p in e['points'] for q in f['points']):pairs.append(f['id'])
+  if pairs:e.update(allow_overlap_with=pairs,overlap_reason='Source-visible connector or bracket endpoint junction.')
+scene={'version':1,'slides':[{'id':'page_001','width':1880,'height':484,'source':'pages/page_001/source.png','background':'#FFFFFF','reviewed':True,'elements':els}]};(j/'scene.json').write_text(json.dumps(scene,indent=2));print(len(els))

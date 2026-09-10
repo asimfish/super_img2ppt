@@ -1,0 +1,16 @@
+from pathlib import Path
+from PIL import Image
+import json,hashlib,collections,platform,importlib.metadata
+p=Path(__file__).parent;b=p/'build_08';s=json.loads((b/'scene.resolved.json').read_text());counts=collections.Counter(x['kind'] for x in s['slides'][0]['elements']);print(counts)
+# Source-width diagnostic is supplemental, never replaces the pre-frozen default-preview metric.
+plan=json.loads((p/'roi_contract.json').read_text());src=Image.open(p/'published.png').convert('RGB');out=Image.open(b/'render/sourcewidth_supplemental.png').convert('RGB');out=out.resize(src.size,Image.Resampling.LANCZOS)
+def ink(i):return {(n%i.width,n//i.width) for n,c in enumerate(i.getdata()) if max(c)<170}
+def bb(a):return [min(x for x,y in a),min(y for x,y in a),max(x for x,y in a),max(y for x,y in a)] if a else None
+res=[]
+for r in plan['rois']:
+ x,y,w,h=r['box'];a=ink(src.crop((x,y,x+w,y+h)));c=ink(out.crop((x,y,x+w,y+h)));aa,cc=bb(a),bb(c);edge=[cc[i]-aa[i] for i in range(4)] if aa and cc else None;iou=len(a&c)/len(a|c) if a|c else 1;res.append({'id':r['id'],'edge_delta':edge,'iou':iou,'passed':bool(edge and max(map(abs,edge))<=4 and iou>=.7)})
+(p/'supplemental_sourcewidth_metrics.json').write_text(json.dumps({'supplemental_not_acceptance_metric':True,'actual_pdf_raster_size':Image.open(b/'render/sourcewidth_supplemental.png').size,'source_size':src.size,'pass':sum(x['passed'] for x in res),'total':len(res),'results':res},indent=2))
+for name,box in [('dense_lower',(0,680,2894,1054)),('region_stack',(440,300,900,640))]:
+ src.crop(box).save(p/f'{name}_source.png');out.crop(box).save(p/f'{name}_actual.png')
+fonts=json.loads((b/'fonts.json').read_text());env={'python':platform.python_version(),'packages':{n:importlib.metadata.version(n) for n in ['python-pptx','Pillow','pypdfium2','fonttools']},'count':dict(counts),'source_size':src.size,'preview_size':Image.open(b/'render/page_001.png').size,'no_dependencies_or_fonts_installed':True,'frozen_implementation_not_read':True};(p/'environment.json').write_text(json.dumps(env,indent=2));print('supplemental',sum(x['passed'] for x in res));print(str(fonts)[:600])
+m=json.loads((p/'source_manifest.json').read_text());m.update({'pdf_url':'https://openaccess.thecvf.com/content/CVPR2024/papers/Rasheed_GLaMM_Pixel_Grounding_Large_Multimodal_Model_CVPR_2024_paper.pdf','page_1_indexed':4,'source_size':[2894,1054],'published_sha256':hashlib.sha256((p/'published.png').read_bytes()).hexdigest(),'source_normalization':'PDF raster RGB on white; no alpha ambiguity. GitHub PNG is comparison only.'});(p/'source_manifest.json').write_text(json.dumps(m,indent=2))

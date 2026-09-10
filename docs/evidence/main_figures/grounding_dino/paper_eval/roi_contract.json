@@ -1,0 +1,371 @@
+{
+  "coordinate_space": "source pixels",
+  "frozen_before_scene": true,
+  "source_sha256": "3fab384f08b75176206c45cf9bbd07647a2e16a768d49b89b7f6d6a8f787da7f",
+  "acceptance": {
+    "ink_edge_max_px": 4,
+    "ink_iou_min": 0.7,
+    "mask": "dark=max(R,G,B)<150; light=min(R,G,B)>220; exact fixed ROI, actual PPTX PNG resized to source size Lanczos",
+    "render": "actual PPTX PDF rasterized to source width 2140; default 1600px preview retained separately"
+  },
+  "regions": [
+    {
+      "id": "overall_title",
+      "box": [
+        28,
+        40,
+        225,
+        38
+      ],
+      "mask": "light"
+    },
+    {
+      "id": "decoder_title",
+      "box": [
+        1139,
+        40,
+        255,
+        38
+      ],
+      "mask": "light"
+    },
+    {
+      "id": "enhancer_title",
+      "box": [
+        1153,
+        691,
+        392,
+        38
+      ],
+      "mask": "light"
+    },
+    {
+      "id": "contrastive",
+      "box": [
+        635,
+        28,
+        207,
+        40
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "localization",
+      "box": [
+        859,
+        28,
+        216,
+        40
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "decoder_name",
+      "box": [
+        589,
+        467,
+        309,
+        37
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "query_selection",
+      "box": [
+        625,
+        636,
+        214,
+        66
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "feature_enhancer",
+      "box": [
+        382,
+        884,
+        238,
+        41
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "text_backbone",
+      "box": [
+        204,
+        1103,
+        129,
+        71
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "image_backbone",
+      "box": [
+        675,
+        1106,
+        137,
+        76
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "input_text",
+      "box": [
+        156,
+        1415,
+        144,
+        40
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "input_image",
+      "box": [
+        591,
+        1418,
+        179,
+        40
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "self_dec",
+      "box": [
+        1534,
+        472,
+        203,
+        37
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "image_cross_dec",
+      "box": [
+        1494,
+        377,
+        288,
+        41
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "text_cross_dec",
+      "box": [
+        1503,
+        283,
+        268,
+        41
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "ffn_dec",
+      "box": [
+        1599,
+        211,
+        77,
+        40
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "ffn_left",
+      "box": [
+        1365,
+        921,
+        71,
+        41
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "ffn_right",
+      "box": [
+        1792,
+        921,
+        76,
+        41
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "cross_text_image",
+      "box": [
+        1421,
+        1009,
+        385,
+        40
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "cross_image_text",
+      "box": [
+        1420,
+        1131,
+        388,
+        40
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "self_enhancer",
+      "box": [
+        1297,
+        1246,
+        207,
+        38
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "deformable",
+      "box": [
+        1736,
+        1233,
+        196,
+        65
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "matrix",
+      "box": [
+        664,
+        113,
+        158,
+        189
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "vanilla_tokens",
+      "box": [
+        177,
+        991,
+        169,
+        38
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "updated_tokens",
+      "box": [
+        1317,
+        794,
+        171,
+        38
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "vanilla_cube",
+      "box": [
+        691,
+        965,
+        101,
+        86
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "updated_cube",
+      "box": [
+        1779,
+        766,
+        102,
+        86
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "backbone_arrow",
+      "box": [
+        730,
+        1046,
+        24,
+        38
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "query_arrow",
+      "box": [
+        730,
+        712,
+        24,
+        44
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "decoder_arrow",
+      "box": [
+        730,
+        513,
+        24,
+        38
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "self_to_image_arrow",
+      "box": [
+        1624,
+        425,
+        23,
+        41
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "ffn_up_arrow",
+      "box": [
+        1624,
+        165,
+        23,
+        40
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "enhancer_cross_arrow",
+      "box": [
+        1387,
+        1055,
+        23,
+        66
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "rotated_prompt",
+      "box": [
+        597,
+        70,
+        45,
+        244
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "input_categories",
+      "box": [
+        145,
+        1234,
+        374,
+        46
+      ],
+      "mask": "dark"
+    }
+  ],
+  "topology": [
+    "text backbone -> vanilla text -> feature enhancer -> text features -> decoder and query selection",
+    "image backbone -> vanilla image -> enhancer -> image features -> query selection and decoder",
+    "language-guide query selection -> cross-modality queries -> decoder -> model outputs -> both losses",
+    "decoder query -> self-attention -> image cross-attention -> text cross-attention -> FFN -> updated query",
+    "feature enhancer image/text self-attention -> image-to-text -> text-to-image -> two FFNs"
+  ],
+  "prior_variant_rejected": true
+}

@@ -1,0 +1,446 @@
+{
+  "frozen_before_authoring": true,
+  "source": "published.png",
+  "coordinate_system": "source pixels",
+  "ink": "RGB max < 170 for text and connector isolated ROIs; source and actual PPTX render resized to source with Lanczos",
+  "thresholds": {
+    "max_ink_edge_delta_px": 4,
+    "ink_iou_min": 0.7
+  },
+  "rois": [
+    {
+      "id": "text_00",
+      "kind": "text",
+      "box": [
+        513,
+        93,
+        307,
+        63
+      ],
+      "ocr": "Global Image"
+    },
+    {
+      "id": "text_01",
+      "kind": "text",
+      "box": [
+        572,
+        149,
+        194,
+        58
+      ],
+      "ocr": "Encoder"
+    },
+    {
+      "id": "text_02",
+      "kind": "text",
+      "box": [
+        1477,
+        88,
+        256,
+        63
+      ],
+      "ocr": "Grounding"
+    },
+    {
+      "id": "text_03",
+      "kind": "text",
+      "box": [
+        1435,
+        147,
+        340,
+        64
+      ],
+      "ocr": "Image Encoder"
+    },
+    {
+      "id": "text_04",
+      "kind": "text",
+      "box": [
+        1931,
+        109,
+        319,
+        50
+      ],
+      "ocr": "Pixel Decoder"
+    },
+    {
+      "id": "text_05",
+      "kind": "text",
+      "box": [
+        488,
+        328,
+        357,
+        63
+      ],
+      "ocr": "Region Encoder"
+    },
+    {
+      "id": "text_07",
+      "kind": "text",
+      "box": [
+        968,
+        408,
+        353,
+        42
+      ],
+      "ocr": "Image-region prompts"
+    },
+    {
+      "id": "text_08",
+      "kind": "text",
+      "box": [
+        1106,
+        542,
+        483,
+        46
+      ],
+      "ocr": "Can you give a detailed"
+    },
+    {
+      "id": "text_09",
+      "kind": "text",
+      "box": [
+        1102,
+        584,
+        475,
+        50
+      ],
+      "ocr": "description of this image\uff1f"
+    },
+    {
+      "id": "text_10",
+      "kind": "text",
+      "box": [
+        30,
+        706,
+        631,
+        54
+      ],
+      "ocr": "Referring Expression Segmentation"
+    },
+    {
+      "id": "text_11",
+      "kind": "text",
+      "box": [
+        34,
+        764,
+        605,
+        46
+      ],
+      "ocr": "Can you segment the balloon in"
+    },
+    {
+      "id": "text_12",
+      "kind": "text",
+      "box": [
+        30,
+        806,
+        345,
+        50
+      ],
+      "ocr": "this given picture\uff1f"
+    },
+    {
+      "id": "text_13",
+      "kind": "text",
+      "box": [
+        105,
+        898,
+        193,
+        47
+      ],
+      "ocr": "Sure,the"
+    },
+    {
+      "id": "text_15",
+      "kind": "text",
+      "box": [
+        884,
+        706,
+        437,
+        54
+      ],
+      "ocr": "Image Level Captioning"
+    },
+    {
+      "id": "text_16",
+      "kind": "text",
+      "box": [
+        934,
+        753,
+        589,
+        58
+      ],
+      "ocr": "Please describe the given image."
+    },
+    {
+      "id": "text_25",
+      "kind": "text",
+      "box": [
+        711,
+        966,
+        525,
+        42
+      ],
+      "ocr": "visible in the background."
+    },
+    {
+      "id": "text_26",
+      "kind": "text",
+      "box": [
+        2427,
+        298,
+        315,
+        42
+      ],
+      "ocr": "A Large hot air"
+    },
+    {
+      "id": "text_27",
+      "kind": "text",
+      "box": [
+        1784,
+        336,
+        84,
+        46
+      ],
+      "ocr": "L-P"
+    },
+    {
+      "id": "text_28",
+      "kind": "text",
+      "box": [
+        2423,
+        340,
+        155,
+        38
+      ],
+      "ocr": "balloon"
+    },
+    {
+      "id": "text_29",
+      "kind": "text",
+      "box": [
+        1960,
+        403,
+        256,
+        42
+      ],
+      "ocr": "Output prompts"
+    },
+    {
+      "id": "text_30",
+      "kind": "text",
+      "box": [
+        2528,
+        399,
+        315,
+        42
+      ],
+      "ocr": "A Large body of"
+    },
+    {
+      "id": "text_31",
+      "kind": "text",
+      "box": [
+        2524,
+        445,
+        113,
+        34
+      ],
+      "ocr": "Water"
+    },
+    {
+      "id": "text_32",
+      "kind": "text",
+      "box": [
+        1897,
+        500,
+        719,
+        50
+      ],
+      "ocr": "Grounded Conversation Generation"
+    },
+    {
+      "id": "text_35",
+      "kind": "text",
+      "box": [
+        1599,
+        710,
+        445,
+        50
+      ],
+      "ocr": "Region Level Captioning"
+    },
+    {
+      "id": "text_36",
+      "kind": "text",
+      "box": [
+        1683,
+        777,
+        424,
+        46
+      ],
+      "ocr": "Could you tell me more"
+    },
+    {
+      "id": "text_37",
+      "kind": "text",
+      "box": [
+        1674,
+        823,
+        340,
+        50
+      ],
+      "ocr": "about this region\uff1f"
+    },
+    {
+      "id": "text_38",
+      "kind": "text",
+      "box": [
+        2322,
+        710,
+        336,
+        50
+      ],
+      "ocr": "Phrase Grounding"
+    },
+    {
+      "id": "text_41",
+      "kind": "text",
+      "box": [
+        2389,
+        815,
+        471,
+        46
+      ],
+      "ocr": "balloon> over the <river>\u201d"
+    },
+    {
+      "id": "text_42",
+      "kind": "text",
+      "box": [
+        1679,
+        911,
+        357,
+        46
+      ],
+      "ocr": "A yellow, red and"
+    },
+    {
+      "id": "text_44",
+      "kind": "text",
+      "box": [
+        2385,
+        916,
+        399,
+        37
+      ],
+      "ocr": "A <hot air balloon>"
+    },
+    {
+      "id": "text_45",
+      "kind": "text",
+      "box": [
+        2385,
+        958,
+        340,
+        37
+      ],
+      "ocr": "over the <river>"
+    },
+    {
+      "id": "connector_0",
+      "kind": "geometry",
+      "box": [
+        397,
+        133,
+        66,
+        24
+      ]
+    },
+    {
+      "id": "connector_1",
+      "kind": "geometry",
+      "box": [
+        661,
+        236,
+        20,
+        69
+      ]
+    },
+    {
+      "id": "connector_2",
+      "kind": "geometry",
+      "box": [
+        1809,
+        127,
+        83,
+        23
+      ]
+    },
+    {
+      "id": "connector_3",
+      "kind": "geometry",
+      "box": [
+        2289,
+        127,
+        98,
+        23
+      ]
+    },
+    {
+      "id": "connector_4",
+      "kind": "geometry",
+      "box": [
+        1540,
+        449,
+        23,
+        49
+      ]
+    },
+    {
+      "id": "connector_5",
+      "kind": "geometry",
+      "box": [
+        1670,
+        449,
+        21,
+        49
+      ]
+    },
+    {
+      "id": "connector_6",
+      "kind": "geometry",
+      "box": [
+        398,
+        4,
+        1190,
+        13
+      ]
+    },
+    {
+      "id": "connector_7",
+      "kind": "geometry",
+      "box": [
+        930,
+        160,
+        11,
+        305
+      ]
+    }
+  ],
+  "topology": [
+    "Image to global encoder",
+    "Image bypass to grounding encoder",
+    "Global encoder to region encoder",
+    "Global and region encoders join image-region prompts",
+    "Image-region prompts to V-L to LLM to L-P to output prompts",
+    "Selected output prompts to pixel decoder",
+    "Grounding encoder to pixel decoder to mask image",
+    "Instruction to LLM; LLM to grounded conversation",
+    "All four lower downstream panels preserved"
+  ],
+  "required_text": "All readable text editable including prompt captions, all downstream responses and phrase highlights",
+  "raster_boundary": "Photos and robot artwork only; simple geometric token stacks native"
+}

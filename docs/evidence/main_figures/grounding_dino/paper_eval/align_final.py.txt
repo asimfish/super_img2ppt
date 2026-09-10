@@ -1,0 +1,14 @@
+import pathlib,json
+from PIL import Image
+r=pathlib.Path(__file__).parent;s=json.loads((r/'job/scene.json').read_text());M={e['id']:e for e in s['slides'][0]['elements']};src=Image.open(r/'source.png').convert('RGB');dst=Image.open(r/'build_08/render/source_width.png').convert('RGB');plan=json.loads((r/'roi_contract.json').read_text());names={'overall_title':'overall_title','decoder_title':'decoder_title','enhancer_title':'enhancer_title','contrastive':'loss1','localization':'loss2','decoder_name':'decoder_label','query_selection':'selection_label','feature_enhancer':'enhancer_label','text_backbone':'text_backbone_label','image_backbone':'image_backbone_label','input_text':'input_text','input_image':'input_image','self_dec':'dec_self_label','image_cross_dec':'dec_image_label','text_cross_dec':'dec_text_label','ffn_dec':'dec_ffn_label','ffn_left':'enh_ffn_t_label','ffn_right':'enh_ffn_i_label','cross_text_image':'enh_ti_label','cross_image_text':'enh_it_label','self_enhancer':'enh_self_label'};records=[]
+def mask(im,mode):return {(i%im.width,i//im.width)for i,p in enumerate(im.getdata())if (max(p)<150 if mode=='dark'else min(p)>220)}
+for q in plan['regions']:
+ if q['id']not in names:continue
+ x,y,w,h=q['box'];a=mask(src.crop((x,y,x+w,y+h)),q['mask']);b=mask(dst.crop((x-5,y-5,x+w+5,y+h+5)),q['mask']);best=(-1,0,0)
+ for dy in range(-4,5):
+  for dx in range(-4,5):
+   c={(xx-5+dx,yy-5+dy)for xx,yy in b if 0<=xx-5+dx<w and 0<=yy-5+dy<h};iou=len(a&c)/len(a|c)
+   if iou>best[0]:best=(iou,dx,dy)
+ iou,dx,dy=best;e=M[names[q['id']]];e['box'][0]+=dx;e['box'][1]+=dy;records.append({'roi':q['id'],'element':e['id'],'dx_source_px':dx,'dy_source_px':dy,'predicted_shifted_ink_iou':iou,'must_recheck_actual_render':True})
+s['slides'][0]['notes']='Full published ECCV 2024 Grounding DINO Figure 3 architecture, image-only reconstruction from page 5 raster crop. Four exact photo composites remain raster; all 59 text objects and simple geometry native. Carlito and Liberation Mono are inferred font substitutes, not known source identities, not embedded. Dense cube mesh and wire-bridge chords approximate source geometry. Fixed ROI metrics and failure evidence accompany delivery. Native PowerPoint/WPS unverified.'
+(r/'final_alignment.json').write_text(json.dumps({'bounded_translation_search_px':4,'type':'third and final measured text correction; no threshold changes','records':records},indent=2));(r/'job/scene.json').write_text(json.dumps(s,indent=2));print(records)

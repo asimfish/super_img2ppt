@@ -1,5 +1,26 @@
 # Reconstruct from evidence
 
+## Complete academic figures
+
+When asked for a paper's main figure, verify the figure number and all panels against the
+published paper. An author repository's architecture image may be an earlier variant with
+missing labels or different prompts. Record which version is actually reconstructed; if the
+source changes, preserve the earlier evaluation and freeze a separate measurement contract.
+For image-only evaluation, rasterize the paper and crop the complete figure without using
+PDF text/vector coordinates or the author's drawing code as reconstruction answers.
+
+Inventory panel coverage, readable labels, mathematical styles, query/token symbols, branch
+directions and merge points before authoring. Native object counts alone do not establish
+completeness: two rasterized module names may matter more than hundreds of editable grid cells.
+If a label is fused to complex artwork, retain a declared text-containing local crop or report
+the unsupported region. Do not erase the artwork or overlay duplicate editable text to pass QA.
+
+Freeze representative text, geometry and connector regions before measuring a candidate.
+Record the source and actual-PPTX raster resolutions; a small preview can lose thin glyphs in
+dense panoramic diagrams. Source-width rendering of the actual exported PDF can distinguish
+preview resampling from document layout errors. Keep it separate from any already frozen
+measurement method, and do not register the images to conceal displacement.
+
 ## Typography
 
 An OCR rectangle surrounds visible ink. It is not a paragraph box, a baseline, or the font's
@@ -13,6 +34,14 @@ These numbers are illustrative, not a universal multiplier. Lowercase English in
 square glyphs require different measurements. Group OCR lines by alignment, spacing and style;
 do not turn every character into a separate textbox. Keep original line breaks when the source
 clearly fixes them. Measure bold and italic faces separately.
+
+Calibrate a few isolated source labels against the installed font candidates before applying
+a family to a dense figure. Inspect serif versus sans-serif, monospaced glyphs and mathematical
+weight/italics, not just total width. After the family and size are fixed, compare the source
+ink's left/top/right/bottom with actual PDF-rendered ink and correct the native text origin.
+Recheck the fixed regions after moving it; good edge agreement can still have poor glyph IoU.
+Keep candidate measurements and stop at the declared repair budget rather than changing the
+measurement threshold or shrinking every label until the structural checker passes.
 
 For partial emphasis, use `runs` and keep their font-size ratio when shrinking. For a small
 superscript, a separate positioned native text element is currently more faithful than an
@@ -60,3 +89,9 @@ When shapes overlap, inspect the source: add a real container relationship, corr
 box/z-order, or document a specific intentional pair. Do not “repair” a diagram by moving nodes
 or deleting decoration without source evidence. After changing geometry, repeat both preflight
 and actual PPTX rendering because either can invalidate the earlier check.
+
+For stacked prompt pills or occluded modules, visible text on the foreground panel may overlap
+the rear panel's footprint intentionally. Check the actual ink and layer order before changing
+its font. `unintended_overlap.area_px2` describes the intersecting object footprints, not the
+refined glyph area; an unchanged value after reducing font size is not proof of a checker bug.
+Declare only the specific source-supported pair and retain any true text/text collision checks.

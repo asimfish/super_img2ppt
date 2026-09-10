@@ -10,6 +10,33 @@ import pypdfium2 as pdfium
 from super_img2ppt.prepare import fresh_directory, json_write
 
 SOURCES = {
+    "grounding_dino_main": {
+        "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06319.pdf",
+        "sha256": "7de5928a4e894a40065a1e5848716d02a4cdb49729e0d5d9459d053cc9334a5a",
+        "format": "pdf",
+        "page": 5,
+        "render_scale": 6,
+        "crop": [800, 680, 2940, 2140],
+        "venue": "ECCV 2024",
+        "source": "Published Figure 3, complete three-panel architecture, not the earlier repository variant",
+    },
+    "glamm_main": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2024/papers/Rasheed_GLaMM_Pixel_Grounding_Large_Multimodal_Model_CVPR_2024_paper.pdf",
+        "sha256": "899b301cc2170de505d257ee250424177b10ecb0a177a0b52577264d1d4fbc00",
+        "format": "pdf",
+        "page": 4,
+        "render_scale": 6,
+        "crop": [326, 426, 3220, 1480],
+        "venue": "CVPR 2024",
+        "source": "Published Figure 2, complete architecture and task panels including prompt labels",
+    },
+    "uniad_main": {
+        "url": "https://raw.githubusercontent.com/OpenDriveLab/UniAD/532fc330151758c5e345aef74d2a1bf1042e50ab/sources/pipeline.png",
+        "sha256": "a00580c3f7eaaa2603d91e2dfaa86b23ed7a44eeb3fc3079fded860e620d3c89",
+        "format": "png",
+        "venue": "CVPR 2023",
+        "source": "Author repository full pipeline, visually verified against published Figure 2",
+    },
     "teaser_lora": {
         "url": "https://raw.githubusercontent.com/asimfish/super_teaser/6b1d41b0b81ed09ed5cd692182ae05fc5573ac12/examples/images/lora-clean.png",
         "sha256": "19afb88cb69b32f27290eb30e9097091997a2fab8cbe8846becb6987cdc6079a",
@@ -105,9 +132,10 @@ def main():
                     pdfium.PdfDocument(path) as document,
                     closing(document[spec["page"] - 1]) as page,
                 ):
-                    bitmap = page.render(scale=4)
+                    bitmap = page.render(scale=spec.get("render_scale", 4))
                     try:
-                        bitmap.to_pil().crop(spec["crop_at_scale_4"]).save(args.out / f"{name}.png")
+                        crop = spec["crop"] if "crop" in spec else spec["crop_at_scale_4"]
+                        bitmap.to_pil().crop(crop).save(args.out / f"{name}.png")
                     finally:
                         bitmap.close()
             record = {

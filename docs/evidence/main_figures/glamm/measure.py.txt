@@ -1,0 +1,11 @@
+from pathlib import Path
+from PIL import Image
+import json,sys,pypdfium2 as pdf
+p=Path(__file__).parent;n=sys.argv[1];source=Image.open(p/'published.png').convert('RGB');actual=Image.open(p/f'build_{n}/render/page_001.png').convert('RGB');originalsize=actual.size;actual=actual.resize(source.size,Image.Resampling.LANCZOS);plan=json.loads((p/'roi_contract.json').read_text())
+def ink(im):return {(i%im.width,i//im.width) for i,c in enumerate(im.getdata()) if max(c)<170}
+def bbox(s):return [min(x for x,y in s),min(y for x,y in s),max(x for x,y in s),max(y for x,y in s)] if s else None
+results=[]
+for r in plan['rois']:
+ x,y,w,h=r['box'];b=(x,y,x+w,y+h);a=ink(source.crop(b));c=ink(actual.crop(b));aa=bbox(a);cc=bbox(c);edges=[cc[i]-aa[i] for i in range(4)] if aa and cc else None;iou=len(a&c)/len(a|c) if a|c else 1;results.append(dict(id=r['id'],edge_delta=edges,iou=iou,passed=bool(edges and max(map(abs,edges))<=4 and iou>=.7)))
+(p/f'metrics_{n}.json').write_text(json.dumps({'original_preview_size':originalsize,'source_size':source.size,'method':plan['ink'],'passed':sum(x['passed'] for x in results),'total':len(results),'results':results},indent=2));print('PASS',sum(x['passed'] for x in results),'/',len(results));print(json.dumps(results[:12],indent=2))
+d=pdf.PdfDocument(p/f'build_{n}/render/editable.pdf');d[0].render(scale=source.width/d[0].get_width()).to_pil().save(p/f'build_{n}/render/sourcewidth_supplemental.png')

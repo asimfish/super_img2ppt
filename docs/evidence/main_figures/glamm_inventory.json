@@ -1,0 +1,176 @@
+{
+  "scene_sha256": "ad9235edb0f130952c32b49c537d12f5fef3875c275a7257b1125123eaa22fac",
+  "pages": [
+    {
+      "id": "page_001",
+      "size": [
+        2894,
+        1054
+      ],
+      "objects": {
+        "image": 14,
+        "shape": 87,
+        "line": 22,
+        "text": 32
+      },
+      "rasters": [
+        {
+          "id": "input_photo",
+          "box": [
+            4.2393,
+            55.1104,
+            392.8379,
+            284.0303
+          ],
+          "contains_text": true,
+          "role": "content"
+        },
+        {
+          "id": "output_photo",
+          "box": [
+            2390.9414,
+            8.4785,
+            395.6641,
+            257.1816
+          ],
+          "contains_text": true,
+          "role": "content"
+        },
+        {
+          "id": "input_region_balloon",
+          "box": [
+            33.9141,
+            463.4922,
+            127.1777,
+            146.9609
+          ],
+          "contains_text": true,
+          "role": "content"
+        },
+        {
+          "id": "input_region_water",
+          "box": [
+            180.875,
+            507.2979,
+            237.3984,
+            66.415
+          ],
+          "contains_text": false,
+          "role": "content"
+        },
+        {
+          "id": "answer_balloon",
+          "box": [
+            2328.7656,
+            288.2695,
+            84.7852,
+            103.1553
+          ],
+          "contains_text": true,
+          "role": "content"
+        },
+        {
+          "id": "answer_water",
+          "box": [
+            2327.3525,
+            408.3818,
+            183.7012,
+            65.002
+          ],
+          "contains_text": false,
+          "role": "content"
+        },
+        {
+          "id": "segmentation_photo",
+          "box": [
+            425.3389,
+            828.0684,
+            237.3984,
+            158.2656
+          ],
+          "contains_text": true,
+          "role": "content"
+        },
+        {
+          "id": "region_photo",
+          "box": [
+            1552.9814,
+            774.3711,
+            127.1777,
+            148.374
+          ],
+          "contains_text": true,
+          "role": "content"
+        },
+        {
+          "id": "phrase_photo",
+          "box": [
+            2137.999,
+            833.7207,
+            243.0508,
+            162.5049
+          ],
+          "contains_text": true,
+          "role": "content"
+        },
+        {
+          "id": "robot_llm",
+          "box": [
+            1657.5498,
+            308.0527,
+            67.8281,
+            77.7197
+          ],
+          "contains_text": false,
+          "role": "content"
+        },
+        {
+          "id": "robot_seg",
+          "box": [
+            29.6748,
+            894.4834,
+            69.2412,
+            83.3721
+          ],
+          "contains_text": false,
+          "role": "content"
+        },
+        {
+          "id": "robot_caption",
+          "box": [
+            696.6514,
+            763.0664,
+            70.6543,
+            83.3721
+          ],
+          "contains_text": false,
+          "role": "content"
+        },
+        {
+          "id": "robot_region",
+          "box": [
+            2032.0176,
+            901.5488,
+            69.2412,
+            84.7852
+          ],
+          "contains_text": false,
+          "role": "content"
+        },
+        {
+          "id": "robot_phrase",
+          "box": [
+            2788.0186,
+            910.0273,
+            69.2412,
+            84.7852
+          ],
+          "contains_text": false,
+          "role": "content"
+        }
+      ],
+      "raster_frame_union_fraction": 0.12901304945054945,
+      "coverage_note": "Diagnostic axis-aligned frame union, not visible-alpha area or editability accuracy. Does not weight readable content by importance."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "package_sha256": "4885368b7c3fc4cb4c5bfe37b6014bffcfcc7b8bb185fdd58a829ab5bda43a06",
+  "method": "Self-contained unpacked skill in external working directory; PYTHONPATH only unpacked source; existing installed dependencies reused. Not a fresh-install claim; no fonts/dependencies installed.",
+  "steps": [
+    {
+      "command": [
+        "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+        "-c",
+        "import super_img2ppt; print(super_img2ppt.__file__); print(super_img2ppt.__version__)"
+      ],
+      "exit_code": 0,
+      "seconds": 0.021,
+      "stdout": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v032-package-4__w9log/super-img2ppt/src/super_img2ppt/__init__.py\n0.3.2\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+        "-m",
+        "super_img2ppt",
+        "build",
+        "/Users/liyufeng/code/super_img2ppt/examples/main_figures/uniad/scene.resolved.json",
+        "--out",
+        "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v032-package-4__w9log/uniad",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+      ],
+      "exit_code": 0,
+      "seconds": 4.684,
+      "stdout": "{\"status\": \"review\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v032-package-4__w9log/uniad\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+        "-m",
+        "super_img2ppt",
+        "build",
+        "/Users/liyufeng/code/super_img2ppt/output/main_figures_20260911/deliverables/grounding_dino/scene.resolved.json",
+        "--out",
+        "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v032-package-4__w9log/grounding_dino",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+      ],
+      "exit_code": 0,
+      "seconds": 5.059,
+      "stdout": "{\"status\": \"review\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v032-package-4__w9log/grounding_dino\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+        "-m",
+        "super_img2ppt",
+        "build",
+        "/Users/liyufeng/code/super_img2ppt/output/main_figures_20260911/deliverables/glamm/scene.resolved.json",
+        "--out",
+        "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v032-package-4__w9log/glamm",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+      ],
+      "exit_code": 0,
+      "seconds": 4.023,
+      "stdout": "{\"status\": \"review\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v032-package-4__w9log/glamm\"}\n",
+      "stderr": ""
+    }
+  ],
+  "statuses": {
+    "uniad": "review",
+    "grounding_dino": "review",
+    "glamm": "review"
+  },
+  "root": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v032-package-4__w9log"
+}

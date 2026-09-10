@@ -1,0 +1,17 @@
+{
+  "python": "3.12.12",
+  "platform": "macOS-26.2-arm64-arm-64bit",
+  "runtime": "opaque copied skill; existing repository .venv; no installation",
+  "font_dir": "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+  "font_files": "See actual build04/fonts.json; Times New Roman regular/bold/italic/bolditalic; zero substitutions; not embedded",
+  "source_size": [
+    1880,
+    484
+  ],
+  "measurement_render": "actual PPTX -> LibreOffice PDF -> PDFium raster at1880 width (actual1880x485); no registration/rescale; extra outputrow outside frozenROIs",
+  "measurement_metric_limits": [
+    "Planner red text produces empty source mask under prefrozen dark threshold; counted failed/invalid, not success",
+    "Motion ROI includes dark container border; B ROIs include circle edges; stage ROIs can include bracket; these are composite region scores not pure glyph accuracy",
+    "Changing arrow color to source brown can decrease dark-threshold IoU while improving appearance; raw result retained"
+  ]
+}

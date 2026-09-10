@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "evaluated": "2026-09-11",
+  "visual_review": "required",
+  "cases": [
+    {
+      "id": "uniad",
+      "scene": "uniad/scene.resolved.json",
+      "scene_sha256": "a7d0cd4e29a0dc3a8e4e159d475314783fcbb10cb92f16ae347e342c83d9623e",
+      "source": "assets/05b9a73ec5a3ba65d359.png",
+      "source_sha256": "05b9a73ec5a3ba65d35999caef93c256f9a731ebc89779987886a2ebd21418b4",
+      "pptx": "uniad/editable.pptx",
+      "pptx_sha256": "a5cbda1a24d070704ff5094592d2348f4f8a56ebbed7915e056a310f01b3d1f1",
+      "preview": "uniad/render/page_001.png",
+      "scene_counts": {
+        "image": 8,
+        "shape": 27,
+        "text": 28,
+        "line": 39
+      },
+      "observed_status": "review",
+      "strict_roi_pass": 8,
+      "strict_roi_total": 36,
+      "invalid_roi": [
+        "planner"
+      ],
+      "source_url": "https://github.com/OpenDriveLab/UniAD/blob/532fc330151758c5e345aef74d2a1bf1042e50ab/sources/pipeline.png",
+      "reuse": "Apache-2.0; see NOTICE.md"
+    }
+  ],
+  "local_only_cases": [
+    "grounding_dino",
+    "glamm"
+  ]
+}

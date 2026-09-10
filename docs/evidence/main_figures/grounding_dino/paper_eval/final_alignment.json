@@ -1,0 +1,174 @@
+{
+  "bounded_translation_search_px": 4,
+  "type": "third and final measured text correction; no threshold changes",
+  "records": [
+    {
+      "roi": "overall_title",
+      "element": "overall_title",
+      "dx_source_px": 1,
+      "dy_source_px": 1,
+      "predicted_shifted_ink_iou": 0.5985477178423236,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "decoder_title",
+      "element": "decoder_title",
+      "dx_source_px": 0,
+      "dy_source_px": 1,
+      "predicted_shifted_ink_iou": 0.5888125613346418,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "enhancer_title",
+      "element": "enhancer_title",
+      "dx_source_px": 0,
+      "dy_source_px": -1,
+      "predicted_shifted_ink_iou": 0.6747330960854092,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "contrastive",
+      "element": "loss1",
+      "dx_source_px": 1,
+      "dy_source_px": -1,
+      "predicted_shifted_ink_iou": 0.7984420642648491,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "localization",
+      "element": "loss2",
+      "dx_source_px": 0,
+      "dy_source_px": -1,
+      "predicted_shifted_ink_iou": 0.8205128205128205,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "decoder_name",
+      "element": "decoder_label",
+      "dx_source_px": 0,
+      "dy_source_px": 0,
+      "predicted_shifted_ink_iou": 0.7559831065227592,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "query_selection",
+      "element": "selection_label",
+      "dx_source_px": 1,
+      "dy_source_px": -1,
+      "predicted_shifted_ink_iou": 0.6902077151335312,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "feature_enhancer",
+      "element": "enhancer_label",
+      "dx_source_px": -3,
+      "dy_source_px": -1,
+      "predicted_shifted_ink_iou": 0.788334335538184,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "text_backbone",
+      "element": "text_backbone_label",
+      "dx_source_px": 3,
+      "dy_source_px": -3,
+      "predicted_shifted_ink_iou": 0.8092443140132062,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "image_backbone",
+      "element": "image_backbone_label",
+      "dx_source_px": 1,
+      "dy_source_px": -3,
+      "predicted_shifted_ink_iou": 0.4954499494438827,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "input_text",
+      "element": "input_text",
+      "dx_source_px": -2,
+      "dy_source_px": -4,
+      "predicted_shifted_ink_iou": 0.8162544169611308,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "input_image",
+      "element": "input_image",
+      "dx_source_px": -2,
+      "dy_source_px": -2,
+      "predicted_shifted_ink_iou": 0.6707000864304236,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "self_dec",
+      "element": "dec_self_label",
+      "dx_source_px": -1,
+      "dy_source_px": 0,
+      "predicted_shifted_ink_iou": 0.7592738752959748,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "image_cross_dec",
+      "element": "dec_image_label",
+      "dx_source_px": -1,
+      "dy_source_px": -1,
+      "predicted_shifted_ink_iou": 0.7732009925558313,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "text_cross_dec",
+      "element": "dec_text_label",
+      "dx_source_px": -1,
+      "dy_source_px": -1,
+      "predicted_shifted_ink_iou": 0.7704728950403691,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "ffn_dec",
+      "element": "dec_ffn_label",
+      "dx_source_px": -1,
+      "dy_source_px": 0,
+      "predicted_shifted_ink_iou": 0.6674528301886793,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "ffn_left",
+      "element": "enh_ffn_t_label",
+      "dx_source_px": 1,
+      "dy_source_px": -1,
+      "predicted_shifted_ink_iou": 0.7246376811594203,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "ffn_right",
+      "element": "enh_ffn_i_label",
+      "dx_source_px": 0,
+      "dy_source_px": -1,
+      "predicted_shifted_ink_iou": 0.785,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "cross_text_image",
+      "element": "enh_ti_label",
+      "dx_source_px": -1,
+      "dy_source_px": -1,
+      "predicted_shifted_ink_iou": 0.6861441567529741,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "cross_image_text",
+      "element": "enh_it_label",
+      "dx_source_px": -1,
+      "dy_source_px": -2,
+      "predicted_shifted_ink_iou": 0.7017419125488802,
+      "must_recheck_actual_render": true
+    },
+    {
+      "roi": "self_enhancer",
+      "element": "enh_self_label",
+      "dx_source_px": 0,
+      "dy_source_px": -1,
+      "predicted_shifted_ink_iou": 0.7147286821705426,
+      "must_recheck_actual_render": true
+    }
+  ]
+}

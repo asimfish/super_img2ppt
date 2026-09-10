@@ -1,0 +1,83 @@
+{
+  "method": "Visual source/PPTX inspection plus native line endpoint inventory; not a formal graph-isomorphism proof",
+  "final_build": "build_10",
+  "flows": [
+    {
+      "name": "text backbone to feature enhancer",
+      "elements": [
+        "sentence_to_backbone",
+        "backbone_to_text",
+        "text_to_enhancer"
+      ],
+      "status": "visually_preserved"
+    },
+    {
+      "name": "image backbone to feature enhancer",
+      "elements": [
+        "image_to_backbone",
+        "backbone_to_cube",
+        "cube_to_enhancer"
+      ],
+      "status": "visually_preserved"
+    },
+    {
+      "name": "joint feature selection to decoder",
+      "elements": [
+        "text_to_selection",
+        "cube_to_selection",
+        "selection_to_queries",
+        "queries_to_decoder"
+      ],
+      "status": "visually_preserved"
+    },
+    {
+      "name": "feature keys and values to decoder",
+      "elements": [
+        "text_to_decoder",
+        "image_branch",
+        "image_branch_up",
+        "image_branch_decoder"
+      ],
+      "status": "visually_preserved"
+    },
+    {
+      "name": "decoder to outputs and losses",
+      "elements": [
+        "decoder_to_outputs",
+        "outputs_to_photo",
+        "loss_contrast",
+        "loss_local_1",
+        "loss_local_2"
+      ],
+      "status": "visually_preserved"
+    },
+    {
+      "name": "decoder self/image/text/FFN sequence",
+      "elements": [
+        "dec_in",
+        "dec_self_image",
+        "dec_image_text",
+        "dec_text_ffn",
+        "dec_out"
+      ],
+      "status": "visually_preserved"
+    },
+    {
+      "name": "enhancer two modality sequences",
+      "elements": [
+        "enh_t_in_arrow",
+        "enh_i_in_arrow",
+        "enh_t_it",
+        "enh_i_it",
+        "enh_t_ti",
+        "enh_i_ti",
+        "enh_t_ffn",
+        "enh_i_ffn",
+        "enh_t_out_arrow",
+        "enh_i_out_arrow"
+      ],
+      "status": "visually_preserved"
+    }
+  ],
+  "known_approximation": "Source wire bridge reconstructed with eight connected native chords; mesh pitch/count approximated from pixels."
+}

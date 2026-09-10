@@ -1,0 +1,20 @@
+import pathlib,json,sys
+from PIL import Image
+import pypdfium2 as pdfium
+r=pathlib.Path(__file__).parent;n=sys.argv[1];b=r/('build_'+n);pdf=pdfium.PdfDocument(b/'render/editable.pdf');page=pdf[0];im=page.render(scale=2140/page.get_width()).to_pil().convert('RGB');rawsize=im.size;im=im.resize((2140,1460),Image.Resampling.LANCZOS);im.save(b/'render/source_width.png');src=Image.open(r/'source.png').convert('RGB');plan=json.loads((r/'roi_contract.json').read_text());out=[]
+def mask(im,mode):return {i for i,p in enumerate(im.getdata())if (max(p)<150 if mode=='dark'else min(p)>220)}
+def bbox(a,w):
+ if not a:return None
+ return [min(i%w for i in a),min(i//w for i in a),max(i%w for i in a)+1,max(i//w for i in a)+1]
+for q in plan['regions']:
+ x,y,w,h=q['box'];a=mask(src.crop((x,y,x+w,y+h)),q['mask']);c=mask(im.crop((x,y,x+w,y+h)),q['mask']);ab=bbox(a,w);cb=bbox(c,w);iou=len(a&c)/len(a|c) if a|c else None;edge=max(abs(i-j)for i,j in zip(ab,cb))if ab and cb else None;out.append(dict(q,source_ink_bbox=ab,rendered_ink_bbox=cb,source_ink_count=len(a),rendered_ink_count=len(c),iou=iou,edge_delta_px=edge,passed=edge is not None and edge<=4 and iou>=.70))
+result={'build':n,'source_size':src.size,'default_preview_size':Image.open(b/'render/page_001.png').size,'pdf_raster_raw_size':rawsize,'comparison_size':im.size,'passed':sum(q['passed']for q in out),'total':len(out),'regions':out};(r/('metrics_'+n+'.json')).write_text(json.dumps(result,indent=2));print(result['passed'],result['total']);print('\n'.join(f"{q['id']}: IoU {q['iou']:.3f}, edge {q['edge_delta_px']}, pass {q['passed']}"for q in out))
+# PDF glyph geometric evidence only. Read native glyph data from output, never from source PDF.
+tp=page.get_textpage(); chars=[]
+for i in range(tp.count_chars()):
+ s=tp.get_text_range(i,1)
+ if not s.strip():continue
+ l,bo,ri,top=tp.get_charbox(i);x=l/page.get_width()*2140;y=(page.get_height()-top)/page.get_height()*1460;xx=ri/page.get_width()*2140;yy=(page.get_height()-bo)/page.get_height()*1460
+ if 598<=x<=640 and 60<=y<=310:chars.append({'index':i,'text':s,'box':[x,y,xx,yy]})
+(r/('rotated_glyphs_'+n+'.json')).write_text(json.dumps({'rear_pill_box':[577,89,34,237],'foreground_frame':[603,69,34,237],'foreground_glyphs':chars,'min_glyph_x':min(c['box'][0]for c in chars)},indent=2))
+src.crop((560,50,700,330)).save(b/'render/rotated_source.png');im.crop((560,50,700,330)).save(b/'render/rotated_actual.png')

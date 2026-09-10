@@ -1,0 +1,8 @@
+import pathlib,json
+r=pathlib.Path(__file__).parent;p=r/'job/scene.json';s=json.loads(p.read_text());changed=[]
+for e in s['slides'][0]['elements']:
+ n=e['id']
+ if e.get('font_family')=='Carlito' and not n.startswith(('vertical_','matrix_','ghost_')):
+  e['font_size']*=1.15;e['box'][0]-=2;e['box'][1]-=17 if n in ['loss1','loss2'] else 3;changed.append(n)
+ if n.startswith(('queries_tokens','output_tokens','query_input_','query_output_')) and e['kind']=='shape':e['fill']='#FFE079' if not n.endswith('side') else '#DDC26C'
+p.write_text(json.dumps(s,indent=2));(r/'font_size_revision.json').write_text(json.dumps({'reason':'Source ink widths across fixed body label ROIs are approximately 1.15 times Carlito26.5px candidate; source glyph height also larger. Apply consistent measured group size, x-2/y-3 source px. Loss headings source y is independently17px above authored candidate.','changed':changed,'font_size_scale':1.15,'source_font_identity':'unknown; Carlito visual hypothesis'},indent=2))

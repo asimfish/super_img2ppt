@@ -1,0 +1,117 @@
+[
+  {
+    "command": [
+      "uv",
+      "run",
+      "ruff",
+      "check",
+      "."
+    ],
+    "exit_code": 0,
+    "seconds": 0.098,
+    "stdout": "All checks passed!\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "uv",
+      "run",
+      "ruff",
+      "format",
+      "--check",
+      "."
+    ],
+    "exit_code": 0,
+    "seconds": 0.047,
+    "stdout": "80 files already formatted\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "uv",
+      "run",
+      "pytest",
+      "-q"
+    ],
+    "exit_code": 0,
+    "seconds": 36.02,
+    "stdout": "...................................................................      [100%]\n67 passed in 35.67s\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "uv",
+      "run",
+      "python",
+      "scripts/verify_skill.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.188,
+    "stdout": "{\n  \"status\": \"pass\",\n  \"activation_cases\": 8,\n  \"problems\": [],\n  \"scope\": \"Static package checks; semantic review and forward tests are separate evidence\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "uv",
+      "run",
+      "python",
+      "scripts/build_capability_registry.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "seconds": 0.065,
+    "stdout": "Capability registry is current\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "uv",
+      "run",
+      "python",
+      "/Users/liyufeng/.whalent-agent/profiles/acct-63aacf96110c0e9595f3/agents/rjguoiuibvgcfiv8w56gq7bu5/codex/skills/.system/skill-creator/scripts/quick_validate.py",
+      "skills/super-img2ppt"
+    ],
+    "exit_code": 0,
+    "seconds": 0.052,
+    "stdout": "Skill is valid!\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "uv",
+      "run",
+      "python",
+      "/Users/liyufeng/.agents/skills/skill-quality-gate/scripts/audit_skill_governance.py",
+      "--repo",
+      "/Users/liyufeng/code/super_img2ppt",
+      "--json"
+    ],
+    "exit_code": 0,
+    "seconds": 0.052,
+    "stdout": "{\n  \"verdict\": \"PASS\",\n  \"skills_checked\": [\n    \"super-img2ppt\"\n  ],\n  \"findings\": [],\n  \"semantic_review\": \"REQUIRED \u2014 deterministic checks do not prove behavior-description alignment\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "seconds": 0.034,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "uv",
+      "run",
+      "python",
+      "scripts/build_package.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.054,
+    "stdout": "/Users/liyufeng/code/super_img2ppt/dist/super-img2ppt.skill\nSHA256 4885368b7c3fc4cb4c5bfe37b6014bffcfcc7b8bb185fdd58a829ab5bda43a06\n",
+    "stderr": ""
+  }
+]

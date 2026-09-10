@@ -1,0 +1,905 @@
+{
+  "source_size": [
+    1880,
+    484
+  ],
+  "actual_pdf_raster_size": [
+    1880,
+    485
+  ],
+  "method": "actual PPTX PDF rendered at source width; dark maxRGB<150; fixed ROIs; no registration",
+  "passed": 4,
+  "total": 36,
+  "regions": [
+    {
+      "id": "legend_ego",
+      "kind": "text",
+      "box": [
+        162,
+        16,
+        210,
+        33
+      ],
+      "edge_delta": 10,
+      "IoU": 0.12250922509225093,
+      "passed": false,
+      "source_ink_bbox": [
+        2,
+        5,
+        177,
+        25
+      ],
+      "rendered_ink_bbox": [
+        1,
+        7,
+        187,
+        28
+      ]
+    },
+    {
+      "id": "legend_bev",
+      "kind": "text",
+      "box": [
+        161,
+        66,
+        160,
+        32
+      ],
+      "edge_delta": 6,
+      "IoU": 0.14455231930960086,
+      "passed": false,
+      "source_ink_bbox": [
+        2,
+        5,
+        122,
+        20
+      ],
+      "rendered_ink_bbox": [
+        1,
+        7,
+        128,
+        23
+      ]
+    },
+    {
+      "id": "legend_b",
+      "kind": "text",
+      "box": [
+        102,
+        64,
+        22,
+        30
+      ],
+      "edge_delta": 0,
+      "IoU": 0.2,
+      "passed": false,
+      "source_ink_bbox": [
+        0,
+        0,
+        21,
+        29
+      ],
+      "rendered_ink_bbox": [
+        0,
+        0,
+        21,
+        29
+      ]
+    },
+    {
+      "id": "input",
+      "kind": "text",
+      "box": [
+        23,
+        257,
+        190,
+        63
+      ],
+      "edge_delta": 16,
+      "IoU": 0.09480705097665555,
+      "passed": false,
+      "source_ink_bbox": [
+        1,
+        6,
+        165,
+        53
+      ],
+      "rendered_ink_bbox": [
+        8,
+        6,
+        181,
+        57
+      ]
+    },
+    {
+      "id": "bev",
+      "kind": "text",
+      "box": [
+        281,
+        257,
+        174,
+        63
+      ],
+      "edge_delta": 16,
+      "IoU": 0.13592852584556478,
+      "passed": false,
+      "source_ink_bbox": [
+        2,
+        7,
+        147,
+        48
+      ],
+      "rendered_ink_bbox": [
+        10,
+        6,
+        163,
+        52
+      ]
+    },
+    {
+      "id": "b_query",
+      "kind": "text",
+      "box": [
+        355,
+        139,
+        30,
+        35
+      ],
+      "edge_delta": 3,
+      "IoU": 0.3103448275862069,
+      "passed": false,
+      "source_ink_bbox": [
+        1,
+        6,
+        18,
+        25
+      ],
+      "rendered_ink_bbox": [
+        0,
+        9,
+        16,
+        28
+      ]
+    },
+    {
+      "id": "trackq",
+      "kind": "text",
+      "box": [
+        480,
+        122,
+        130,
+        37
+      ],
+      "edge_delta": 6,
+      "IoU": 0.104,
+      "passed": false,
+      "source_ink_bbox": [
+        0,
+        6,
+        86,
+        29
+      ],
+      "rendered_ink_bbox": [
+        1,
+        8,
+        92,
+        32
+      ]
+    },
+    {
+      "id": "mapq",
+      "kind": "text",
+      "box": [
+        480,
+        235,
+        115,
+        37
+      ],
+      "edge_delta": 4,
+      "IoU": 0.09205776173285199,
+      "passed": false,
+      "source_ink_bbox": [
+        1,
+        6,
+        75,
+        29
+      ],
+      "rendered_ink_bbox": [
+        3,
+        9,
+        78,
+        33
+      ]
+    },
+    {
+      "id": "track",
+      "kind": "text",
+      "box": [
+        608,
+        50,
+        210,
+        46
+      ],
+      "edge_delta": 1,
+      "IoU": 0.6931216931216931,
+      "passed": false,
+      "source_ink_bbox": [
+        2,
+        7,
+        175,
+        35
+      ],
+      "rendered_ink_bbox": [
+        1,
+        7,
+        175,
+        35
+      ]
+    },
+    {
+      "id": "map",
+      "kind": "text",
+      "box": [
+        614,
+        311,
+        198,
+        45
+      ],
+      "edge_delta": 5,
+      "IoU": 0.6625615763546798,
+      "passed": false,
+      "source_ink_bbox": [
+        3,
+        0,
+        161,
+        44
+      ],
+      "rendered_ink_bbox": [
+        2,
+        3,
+        161,
+        39
+      ]
+    },
+    {
+      "id": "motion",
+      "kind": "text",
+      "box": [
+        1028,
+        154,
+        135,
+        83
+      ],
+      "edge_delta": 16,
+      "IoU": 0.13557929334428923,
+      "passed": false,
+      "source_ink_bbox": [
+        2,
+        0,
+        134,
+        82
+      ],
+      "rendered_ink_bbox": [
+        17,
+        9,
+        118,
+        73
+      ]
+    },
+    {
+      "id": "occ",
+      "kind": "text",
+      "box": [
+        1359,
+        179,
+        197,
+        47
+      ],
+      "edge_delta": 5,
+      "IoU": 0.19162995594713655,
+      "passed": false,
+      "source_ink_bbox": [
+        2,
+        9,
+        153,
+        31
+      ],
+      "rendered_ink_bbox": [
+        1,
+        10,
+        158,
+        33
+      ]
+    },
+    {
+      "id": "planner",
+      "kind": "text",
+      "box": [
+        1699,
+        177,
+        145,
+        47
+      ],
+      "edge_delta": 999,
+      "IoU": 0,
+      "passed": false,
+      "source_ink_bbox": null,
+      "rendered_ink_bbox": null
+    },
+    {
+      "id": "agent",
+      "kind": "text",
+      "box": [
+        1193,
+        78,
+        129,
+        55
+      ],
+      "edge_delta": 12,
+      "IoU": 0.08211551844119694,
+      "passed": false,
+      "source_ink_bbox": [
+        0,
+        6,
+        109,
+        45
+      ],
+      "rendered_ink_bbox": [
+        6,
+        7,
+        121,
+        52
+      ]
+    },
+    {
+      "id": "motionq",
+      "kind": "text",
+      "box": [
+        1143,
+        363,
+        134,
+        40
+      ],
+      "edge_delta": 5,
+      "IoU": 0.16310679611650486,
+      "passed": false,
+      "source_ink_bbox": [
+        2,
+        7,
+        106,
+        30
+      ],
+      "rendered_ink_bbox": [
+        2,
+        8,
+        111,
+        32
+      ]
+    },
+    {
+      "id": "occq",
+      "kind": "text",
+      "box": [
+        1401,
+        310,
+        89,
+        38
+      ],
+      "edge_delta": 16,
+      "IoU": 0.23138832997987926,
+      "passed": false,
+      "source_ink_bbox": [
+        2,
+        1,
+        88,
+        32
+      ],
+      "rendered_ink_bbox": [
+        1,
+        8,
+        72,
+        31
+      ]
+    },
+    {
+      "id": "scene",
+      "kind": "text",
+      "box": [
+        1486,
+        302,
+        145,
+        59
+      ],
+      "edge_delta": 18,
+      "IoU": 0.04081632653061224,
+      "passed": false,
+      "source_ink_bbox": [
+        3,
+        7,
+        109,
+        45
+      ],
+      "rendered_ink_bbox": [
+        16,
+        7,
+        127,
+        52
+      ]
+    },
+    {
+      "id": "kv1",
+      "kind": "text",
+      "box": [
+        675,
+        161,
+        45,
+        24
+      ],
+      "edge_delta": 2,
+      "IoU": 0.11711711711711711,
+      "passed": false,
+      "source_ink_bbox": [
+        1,
+        4,
+        31,
+        15
+      ],
+      "rendered_ink_bbox": [
+        1,
+        5,
+        29,
+        16
+      ]
+    },
+    {
+      "id": "kv2",
+      "kind": "text",
+      "box": [
+        901,
+        104,
+        47,
+        24
+      ],
+      "edge_delta": 1,
+      "IoU": 0.6774193548387096,
+      "passed": false,
+      "source_ink_bbox": [
+        1,
+        5,
+        30,
+        16
+      ],
+      "rendered_ink_bbox": [
+        1,
+        5,
+        29,
+        16
+      ]
+    },
+    {
+      "id": "kv3",
+      "kind": "text",
+      "box": [
+        900,
+        273,
+        47,
+        24
+      ],
+      "edge_delta": 2,
+      "IoU": 0.45,
+      "passed": false,
+      "source_ink_bbox": [
+        2,
+        5,
+        30,
+        15
+      ],
+      "rendered_ink_bbox": [
+        1,
+        6,
+        29,
+        17
+      ]
+    },
+    {
+      "id": "kv4",
+      "kind": "text",
+      "box": [
+        1270,
+        209,
+        45,
+        24
+      ],
+      "edge_delta": 1,
+      "IoU": 0.3987341772151899,
+      "passed": false,
+      "source_ink_bbox": [
+        0,
+        0,
+        44,
+        22
+      ],
+      "rendered_ink_bbox": [
+        0,
+        0,
+        44,
+        21
+      ]
+    },
+    {
+      "id": "b1",
+      "kind": "text",
+      "box": [
+        642,
+        181,
+        29,
+        39
+      ],
+      "edge_delta": 0,
+      "IoU": 0.6363636363636364,
+      "passed": false,
+      "source_ink_bbox": [
+        0,
+        0,
+        28,
+        38
+      ],
+      "rendered_ink_bbox": [
+        0,
+        0,
+        28,
+        38
+      ]
+    },
+    {
+      "id": "b2",
+      "kind": "text",
+      "box": [
+        1426,
+        375,
+        27,
+        37
+      ],
+      "edge_delta": 0,
+      "IoU": 0.5794117647058824,
+      "passed": false,
+      "source_ink_bbox": [
+        0,
+        0,
+        26,
+        36
+      ],
+      "rendered_ink_bbox": [
+        0,
+        0,
+        26,
+        36
+      ]
+    },
+    {
+      "id": "b3",
+      "kind": "text",
+      "box": [
+        1759,
+        375,
+        27,
+        37
+      ],
+      "edge_delta": 0,
+      "IoU": 0.2805755395683453,
+      "passed": false,
+      "source_ink_bbox": [
+        0,
+        0,
+        26,
+        36
+      ],
+      "rendered_ink_bbox": [
+        0,
+        0,
+        26,
+        36
+      ]
+    },
+    {
+      "id": "stage1",
+      "kind": "text",
+      "box": [
+        159,
+        437,
+        137,
+        41
+      ],
+      "edge_delta": 1,
+      "IoU": 0.34890510948905107,
+      "passed": false,
+      "source_ink_bbox": [
+        1,
+        8,
+        136,
+        28
+      ],
+      "rendered_ink_bbox": [
+        1,
+        9,
+        136,
+        29
+      ]
+    },
+    {
+      "id": "stage2",
+      "kind": "text",
+      "box": [
+        637,
+        437,
+        168,
+        41
+      ],
+      "edge_delta": 28,
+      "IoU": 0.3075328265376641,
+      "passed": false,
+      "source_ink_bbox": [
+        2,
+        8,
+        167,
+        35
+      ],
+      "rendered_ink_bbox": [
+        1,
+        9,
+        139,
+        36
+      ]
+    },
+    {
+      "id": "stage3",
+      "kind": "text",
+      "box": [
+        1221,
+        437,
+        160,
+        41
+      ],
+      "edge_delta": 1,
+      "IoU": 0.29183673469387755,
+      "passed": false,
+      "source_ink_bbox": [
+        1,
+        8,
+        159,
+        28
+      ],
+      "rendered_ink_bbox": [
+        1,
+        9,
+        159,
+        29
+      ]
+    },
+    {
+      "id": "stage4",
+      "kind": "text",
+      "box": [
+        1704,
+        437,
+        134,
+        41
+      ],
+      "edge_delta": 1,
+      "IoU": 0.3420445810914681,
+      "passed": false,
+      "source_ink_bbox": [
+        1,
+        8,
+        133,
+        35
+      ],
+      "rendered_ink_bbox": [
+        1,
+        9,
+        133,
+        36
+      ]
+    },
+    {
+      "id": "bev_arrow",
+      "kind": "geometry",
+      "box": [
+        442,
+        190,
+        495,
+        18
+      ],
+      "edge_delta": 1,
+      "IoU": 0.8776595744680851,
+      "passed": true,
+      "source_ink_bbox": [
+        3,
+        0,
+        491,
+        17
+      ],
+      "rendered_ink_bbox": [
+        2,
+        0,
+        490,
+        17
+      ]
+    },
+    {
+      "id": "track_input",
+      "kind": "geometry",
+      "box": [
+        640,
+        115,
+        25,
+        59
+      ],
+      "edge_delta": 2,
+      "IoU": 0.17037037037037037,
+      "passed": false,
+      "source_ink_bbox": [
+        8,
+        2,
+        16,
+        58
+      ],
+      "rendered_ink_bbox": [
+        9,
+        3,
+        14,
+        58
+      ]
+    },
+    {
+      "id": "map_input",
+      "kind": "geometry",
+      "box": [
+        640,
+        229,
+        25,
+        65
+      ],
+      "edge_delta": 2,
+      "IoU": 0.16058394160583941,
+      "passed": false,
+      "source_ink_bbox": [
+        8,
+        3,
+        16,
+        59
+      ],
+      "rendered_ink_bbox": [
+        9,
+        4,
+        14,
+        59
+      ]
+    },
+    {
+      "id": "motion_input",
+      "kind": "geometry",
+      "box": [
+        1068,
+        265,
+        23,
+        96
+      ],
+      "edge_delta": 2,
+      "IoU": 0.08333333333333333,
+      "passed": false,
+      "source_ink_bbox": [
+        7,
+        4,
+        15,
+        95
+      ],
+      "rendered_ink_bbox": [
+        8,
+        6,
+        13,
+        95
+      ]
+    },
+    {
+      "id": "occ_input",
+      "kind": "geometry",
+      "box": [
+        1426,
+        244,
+        23,
+        67
+      ],
+      "edge_delta": 1,
+      "IoU": 0.826530612244898,
+      "passed": true,
+      "source_ink_bbox": [
+        0,
+        4,
+        22,
+        65
+      ],
+      "rendered_ink_bbox": [
+        0,
+        5,
+        22,
+        65
+      ]
+    },
+    {
+      "id": "planner_input",
+      "kind": "geometry",
+      "box": [
+        1758,
+        244,
+        23,
+        124
+      ],
+      "edge_delta": 1,
+      "IoU": 0.08984375,
+      "passed": false,
+      "source_ink_bbox": [
+        7,
+        4,
+        14,
+        123
+      ],
+      "rendered_ink_bbox": [
+        8,
+        5,
+        13,
+        123
+      ]
+    },
+    {
+      "id": "agent_to_planner",
+      "kind": "geometry",
+      "box": [
+        1240,
+        271,
+        503,
+        22
+      ],
+      "edge_delta": 1,
+      "IoU": 0.9545454545454546,
+      "passed": true,
+      "source_ink_bbox": [
+        0,
+        0,
+        500,
+        21
+      ],
+      "rendered_ink_bbox": [
+        0,
+        0,
+        499,
+        21
+      ]
+    },
+    {
+      "id": "occ_to_planner",
+      "kind": "geometry",
+      "box": [
+        1580,
+        188,
+        48,
+        22
+      ],
+      "edge_delta": 1,
+      "IoU": 0.890625,
+      "passed": true,
+      "source_ink_bbox": [
+        3,
+        7,
+        42,
+        14
+      ],
+      "rendered_ink_bbox": [
+        3,
+        8,
+        42,
+        13
+      ]
+    }
+  ]
+}

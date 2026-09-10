@@ -1,0 +1,51 @@
+{
+  "date": "2026-09-11",
+  "reviewer": "parent",
+  "observations": [
+    {
+      "case": "glamm",
+      "inspected": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/main-glamm-jz6hdu23/published.png",
+      "full_figure": true,
+      "observations": [
+        "Main architecture plus all lower taskpanels present.",
+        "Published version includes Image-region prompts and Output prompts absent in repository illustration; evaluate published version.",
+        "Many long mixed-weight monospaced responses, nested multiscale tensors, photos and connectors make this materially denser than earlier generated teaser tests."
+      ]
+    },
+    {
+      "case": "uniad",
+      "inspected": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/uniad-forward-cmhs2rst/pipeline.png",
+      "full_figure": true,
+      "observations": [
+        "Backbone, perception, prediction and planning flow spans full panoramic diagram.",
+        "TrackFormer and MapFormer lettering is fused with graphical outputs; cropping complete modules preservesappearance but fails full native editability.",
+        "Token colors/shapes and query symbols encode branch semantics and must not be omitted."
+      ]
+    }
+  ],
+  "measurement_caution": "Default runtime preview width1600 may resample source labels; record measurement raster resolution and keep any added source-width measurement separate from already frozen metrics.",
+  "first_actual_render_review": [
+    {
+      "case": "uniad",
+      "artifact": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/uniad-forward-cmhs2rst/build_02/render/page_001.png",
+      "observed": [
+        "Overall panel coverage and topological branches retained.",
+        "Q math glyphs lack source bold italic appearance.",
+        "MotionFormer/OccFormer/Planner text appears lighter than source.",
+        "TrackFormer/MapFormer remain fused raster modules, correctly disclosed."
+      ],
+      "feedback_sent": true
+    },
+    {
+      "case": "glamm",
+      "artifact": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/main-glamm-jz6hdu23/build_03/render/page_001.png",
+      "observed": [
+        "All published taskpanels and mainlabels present.",
+        "Courier text visibly thinner and serifed compared to source mono text.",
+        "Regionstack dashedoutline anddepth differ; largefontfamilydifferences persist."
+      ],
+      "feedback_sent": true
+    }
+  ],
+  "grounding_diagnostic": "Constant1736 reported overlap area is objectframe area. Exactscene03 measured rotatedfront textink x610.1..625.6 overlaps rearshape ending611; foregroundpill intentionallycovers rearshape. Namedpair warranted by source layers, no causal runtimebug established."
+}

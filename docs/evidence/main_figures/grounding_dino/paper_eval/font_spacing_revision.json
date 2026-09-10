@@ -1,0 +1,19 @@
+{
+  "source_smaller_qkv_labels_keep_candidate06_size": [
+    "dec_qkv",
+    "dec_q1",
+    "dec_q2",
+    "dec_kv1",
+    "dec_kv2",
+    "enh_t_qkv",
+    "enh_i_qkv",
+    "enh_t_kv",
+    "enh_i_q",
+    "enh_t_q",
+    "enh_i_kv"
+  ],
+  "outputs_y_px": 4,
+  "deformable_frame_y_px": 4,
+  "deformable_frame_height_px": 1,
+  "reason": "Source Q/K/V has smaller type and sits in short gaps; common body size is not applicable. Preserve source positions and real glyph containment, no new overlap exemptions."
+}

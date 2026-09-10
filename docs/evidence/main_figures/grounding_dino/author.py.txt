@@ -1,0 +1,115 @@
+import json,pathlib,math
+from PIL import Image
+ROOT=pathlib.Path(__file__).parent; J=ROOT/'job'; S=2470/2048
+# Freeze independent acceptance regions before any scene is authored.
+regions=[('overall_title',[241,21,170,29],'light'),('decoder_title',[1080,21,192,29],'light'),('enhancer_title',[1090,512,296,29],'light'),('contrastive',[700,12,156,30],'dark'),('localization',[869,12,163,30],'dark'),('decoder_name',[665,343,233,28],'dark'),('query_selection',[692,471,162,50],'dark'),('feature_enhancer',[509,658,180,31],'dark'),('text_backbone',[375,823,97,54],'dark'),('image_backbone',[730,826,104,57],'dark'),('input_text',[338,1059,109,30],'dark'),('input_image',[667,1061,135,30],'dark'),('self_dec',[1378,347,153,28],'dark'),('image_cross_dec',[1348,275,217,31],'dark'),('text_cross_dec',[1355,205,202,31],'dark'),('ffn_dec',[1427,150,58,30],'dark'),('ffn_left',[1250,686,54,31],'dark'),('ffn_right',[1573,686,57,31],'dark'),('cross_text_image',[1293,752,290,30],'dark'),('cross_image_text',[1292,844,293,30],'dark'),('self_enhancer',[1199,931,156,29],'dark'),('deformable',[1531,921,148,49],'dark'),('matrix',[721,76,119,143],'dark'),('vanilla_tokens',[354,739,128,29],'dark'),('updated_tokens',[1215,590,129,29],'dark'),('vanilla_cube',[742,719,76,65],'dark'),('updated_cube',[1563,569,77,65],'dark'),('backbone_arrow',[771,780,18,29],'dark'),('query_arrow',[771,528,18,33],'dark'),('decoder_arrow',[771,378,18,29],'dark'),('self_to_image_arrow',[1446,312,17,31],'dark'),('ffn_up_arrow',[1446,115,17,30],'dark'),('enhancer_cross_arrow',[1267,787,17,50],'dark'),('caption_line1',[116,1112,1812,39],'dark'),('caption_line2',[116,1153,447,39],'dark')]
+contract={'coordinate_space':'source pixels','frozen_before_scene':True,'source_sha256':json.loads((ROOT/'source_manifest.json').read_text())['sha256'],'acceptance':{'ink_edge_max_px':4,'ink_iou_min':0.70,'mask':'dark=max(R,G,B)<150; light=min(R,G,B)>220; exact fixed ROI, actual PPTX PNG resized to source size Lanczos'},'regions':[{'id':n,'box':[round(v*S) for v in b],'mask':m} for n,b,m in regions],'topology':['text backbone -> vanilla text -> feature enhancer -> text features -> decoder and query selection','image backbone -> vanilla image -> enhancer -> image features -> query selection and decoder','language-guide query selection -> cross-modality queries -> decoder -> model outputs -> both losses','decoder query -> self-attention -> image cross-attention -> text cross-attention -> FFN -> updated query','feature enhancer image/text self-attention -> image-to-text -> text-to-image -> two FFNs']}
+if not (ROOT/'roi_contract.json').exists():(ROOT/'roi_contract.json').write_text(json.dumps(contract,indent=2))
+E=[]; groups={}
+def add(e):
+ e['z']=len(E)+10; E.append(e);return e['id']
+def rect(n,b,fill=None,stroke='#202020',width=1.8,shape='rect',**kw):return add(dict(id=n,kind='shape',box=b,shape=shape,fill=fill,stroke=stroke,stroke_width=width,**kw))
+def text(n,t,b,sz=20,align='center',container=None,font='Liberation Sans',color='#161616',**kw):
+ d=dict(id=n,kind='text',box=b,text=t,font_size=sz,font_family=font,color=color,align=align,valign='middle',fit='strict',wrap=False,**kw)
+ if container:d['container']=container
+ return add(d)
+def line(n,p,q,width=1.7,arrow=False,color='#151515',**kw):
+ return add(dict(id=n,kind='line',points=[p,q],stroke=color,stroke_width=width,arrow=arrow,**({'arrow_head':{'length':6,'width':5}} if arrow else {}),**kw))
+def pairs(ids,reason):
+ for i in ids:
+  e=next(e for e in E if e['id']==i);e.setdefault('allow_overlap_with',[]).extend(j for j in ids if j!=i);e['overlap_reason']=reason
+
+def polygon(n,pts,fill,stroke='#333333',width=1):
+ x=min(p[0] for p in pts);y=min(p[1] for p in pts);w=max(p[0] for p in pts)-x;h=max(p[1] for p in pts)-y
+ return rect(n,[x,y,w,h],fill,stroke,width,'polygon',vertices=[[(a-x)/w,(b-y)/h] for a,b in pts])
+def tokens(n,x,y,count=10,w=123,h=25):
+ ids=[];step=(w-26)/(count-1) if count>1 else 0
+ for i in range(count):
+  xx=x+i*step;ids.append(polygon(f'{n}_{i}_top',[(xx,y+h-5),(xx+22,y),(xx+27,y),(xx+5,y+h-5)],'#DEE5B3',width=.8));ids.append(rect(f'{n}_{i}_front',[xx,y+h-5,5,5],'#DEE5B3',width=.8));ids.append(polygon(f'{n}_{i}_side',[(xx+5,y+h-5),(xx+27,y),(xx+27,y+5),(xx+5,y+h)],'#B8BF95',width=.8))
+ pairs(ids,'Source parallel feature token slats have shared projected face edges and visible partial occlusion.');groups[n]=ids
+
+def cube(n,x,y,w=72,h=60):
+ d=16;fw=w-d;fh=h-d;ids=[]
+ ids.append(rect(n+'_front',[x,y+d,fw,fh],'#76AED9',width=1));ids.append(polygon(n+'_top',[(x,y+d),(x+d,y),(x+w,y),(x+fw,y+d)],'#77A7CD'));ids.append(polygon(n+'_side',[(x+fw,y+d),(x+w,y),(x+w,y+fh),(x+fw,y+h)],'#5989AD'))
+ for k in range(1,18):
+  xx=fw*k/18;ids.append(line(f'{n}_front_v{k}',[x+xx,y+d],[x+xx,y+h],.7));ids.append(line(f'{n}_top_v{k}',[x+xx,y+d],[x+d+xx,y],.7))
+ for k in range(1,12):
+  yy=fh*k/12;ids.append(line(f'{n}_front_h{k}',[x,y+d+yy],[x+fw,y+d+yy],.7));ids.append(line(f'{n}_side_h{k}',[x+fw,y+d+yy],[x+w,y+yy],.7))
+ for k in range(1,7):
+  dd=d*k/7;ids.append(line(f'{n}_top_h{k}',[x+dd,y+d-dd],[x+fw+dd,y+d-dd],.7));ids.append(line(f'{n}_side_v{k}',[x+fw+dd,y+d-dd],[x+fw+dd,y+h-dd],.7))
+ pairs(ids,'Source tensor cube mesh: grid intersections and shared isometric face boundaries.');groups[n]=ids
+
+def photo(n,b):
+ x,y,w,h=[round(v*S) for v in b];p=J/'assets';p.mkdir(exist_ok=True);Image.open(ROOT/'source.png').crop((x,y,x+w,y+h)).save(p/(n+'.png'))
+ return add(dict(id=n,kind='image',box=[x/S,y/S,w/S,h/S],path='assets/'+n+'.png',contains_text=False,provenance='Exact crop of official architecture bitmap; animal photographs and their original composite borders remain raster.'))
+grad={'direction':'horizontal','stops':[{'offset':0,'color':'#E1E5BD'},{'offset':1,'color':'#79ADD8'}]}
+# Source pale enlargement wedges are native polygon backgrounds.
+polygon('decoder_zoom',[(912,361),(1299,137),(1299,418)],'#FFF9E7',stroke=None);E[-1]['role']='background'
+polygon('enhancer_zoom',[(861,686),(1143,670),(1143,1001),(862,705)],'#F5F6E8',stroke=None);E[-1]['role']='background'
+line('divider',[1037,4],[1037,1081],5.5,color='#73349F');line('right_divider',[1064,479],[1715,479],5.5,color='#73349F')
+for n,b,t in [('overall',[228,15,194,37],'1. Model Overall'),('decoder',[1064,15,222,37],'3. A Decoder Layer'),('enhancer',[1059,508,338,36],'2. A Feature Enhancer Layer')]:
+ rect(n+'_banner',b,'#73349F',None,0,'round_rect',radius=6);text(n+'_title',t,[b[0]+6,b[1],b[2]-12,b[3]],20,container=n+'_banner',color='#FFFFFF')
+# Main model panels and labels.
+rect('enhancer_panel',[327,636,535,70],None,gradient=grad);text('enhancer_label','Feature Enhancer',[500,650,200,46],20,container='enhancer_panel')
+rect('text_backbone',[306,806,234,86],'#E3EABC');text('text_backbone_label','Text\nBackbone',[370,817,107,67],20,container='text_backbone')
+polygon('image_backbone',[(683,806),(884,806),(906,892),(660,892)],'#79ADD8',width=1.8);text('image_backbone_label','Image\nBackbone',[719,821,124,67],20,container='image_backbone')
+rect('selection',[663,467,216,61],None,gradient=grad);text('selection_label','Language-guide\nQuery Selection',[684,469,175,58],20,container='selection')
+rect('decoder_panel',[650,338,263,41],'#FFDF79');text('decoder_label','Cross-Modality Decoder',[664,340,236,36],20,container='decoder_panel')
+rect('sentence',[241,952,338,50],'#E3EABC',shape='round_rect',radius=25);text('sentence_label','A cat sets on a table .',[252,955,314,42],20,font='Liberation Mono',container='sentence')
+rect('categories',[305,918,337,49],'#E3EABC',shape='round_rect',radius=25);text('categories_label','cat . person . mouse .',[319,921,310,41],20,font='Liberation Mono',container='categories');pairs(['sentence','categories'],'Two rounded input text prompts visibly overlap by 15 px vertically in source.')
+photo('input_photo',[682,920,152,134]);photo('output_photo1',[718,226,52,33]);photo('output_photo2',[773,218,30,43]);photo('output_photo3',[811,232,25,26])
+for n,t,b in [('input_text','Input Text',[330,1058,130,34]),('input_image','Input Image',[660,1058,145,34]),('vanilla_text','Vanilla Text\nFeatures',[229,723,127,59]),('vanilla_image','Vanilla Image\nFeatures',[835,723,145,59]),('text_features','Text\nFeatures',[241,545,104,61]),('image_features','Image\nFeatures',[835,548,105,60]),('queries','Cross-Modality\nQueries',[819,398,162,60]),('keys','Keys&\nValues',[560,328,73,61]),('outputs','Model Outputs',[603,252,166,32]),('upper_text','Text\nFeatures',[509,76,102,61]),('loss1','Contrastive loss',[699,10,161,33]),('loss2','Localization loss',[868,10,165,33])]:text(n,t,b,20)
+tokens('vanilla_text_tokens',355,741);tokens('text_tokens',355,567);cube('vanilla_image_cube',744,721);cube('image_cube',744,556)
+tokens('queries_tokens',745,402,count=3,w=65,h=30);tokens('output_tokens',751,288,count=3,w=64,h=30)
+# Main arrows, source junctions, bridge around crossing.
+paths=[('sentence_to_backbone',[422,918],[422,892]),('backbone_to_text',[422,792],[422,768]),('text_to_enhancer',[422,735],[422,706]),('enhancer_to_text',[422,633],[422,594]),('image_to_backbone',[780,918],[780,892]),('backbone_to_cube',[780,807],[780,783]),('cube_to_enhancer',[780,721],[780,706]),('enhancer_to_cube',[780,634],[780,616]),('cube_to_selection',[780,564],[780,531]),('selection_to_queries',[780,462],[780,437]),('queries_to_decoder',[780,402],[780,379]),('decoder_to_outputs',[780,338],[780,319]),('outputs_to_photo',[778,289],[778,268]),('text_branch_up',[422,567],[422,499]),('text_branch_decoder',[422,499],[422,365]),('text_branch_top',[422,358],[422,106]),('text_to_decoder',[422,358],[650,358]),('text_to_selection',[422,498],[663,498]),('text_top_right',[422,106],[504,106]),('image_branch',[744,593],[556,593]),('image_branch_up',[556,593],[556,512]),('image_branch_decoder',[556,484],[556,359])]
+for n,p,q in paths:line(n,p,q,arrow=not n in ['text_branch_top','image_branch_up'])
+# Semicircle jump is explicit short chord approximation.
+ids=[]
+for i in range(8):
+ a=math.pi/2+i*math.pi/8;b=math.pi/2+(i+1)*math.pi/8;ids.append(line('bridge_'+str(i),[556+14*math.cos(a),498+14*math.sin(a)],[556+14*math.cos(b),498+14*math.sin(b)]))
+pairs(ids+['image_branch_up','image_branch_decoder'],'Native connected chord approximation of source wire bridge around crossing.')
+line('loss_contrast',[780,76],[780,45],2.6,True,'#FF0000');line('loss_local_1',[825,244],[950,244],2.6,color='#FF0000');line('loss_local_2',[950,244],[950,45],2.6,True,'#FF0000');pairs(['loss_local_1','loss_local_2'],'Source loss connector right-angle join.')
+# Contrastive similarity matrix, all cells and labels editable.
+m=[]
+for r in range(8):
+ for c in range(3):
+  n=f'matrix_{r}_{c}';m.append(rect(n,[723+c*38.2,77+r*17.45,38.2,17.45],'#E1E7BD' if (r,c) in [(0,1),(5,2),(6,0)] else '#D8D8D8',width=.9))
+  if (r,c) in [(0,1),(5,2),(6,0)]:text(n+'_one','1',[724+c*38.2,77+r*17.45,36,17.45],15,container=n)
+for i,t in enumerate(['cat','dog','desk','person','dog','mouse','table','sets']):
+ text('word_'+str(i),t,[625,61+i*19.6,52,24],14,'left',font='Liberation Mono')
+ # each angled strip slants downward, native polygon.
+ polygon('word_strip_'+str(i),[(675,71+i*17.6),(680,71+i*17.6),(699,91+i*17.6),(694,91+i*17.6)],'#D9E0B1',width=.8)
+# Decoder expanded layer.
+rect('decoder_detail',[1299,138,306,280],'#FFDF79');text('decoder_caption','A Cross-Modality\nDecoder Layer',[1154,71,170,59],20)
+for n,b,t,fill in [('dec_self',[1339,342,231,43],'Self-Attention','#FFFFFF'),('dec_image',[1339,271,231,42],'Image Cross-Attention',None),('dec_text',[1339,199,231,43],'Text Cross-Attention',None),('dec_ffn',[1339,144,231,42],'FFN','#FFFFFF')]:
+ rect(n,b,fill,shape='round_rect',radius=8,**({'gradient':{'direction':'horizontal','stops':[{'offset':0,'color':'#79ADD8' if n=='dec_image' else '#E1E7B8'},{'offset':1,'color':'#FFFFFF'}]}} if fill is None else {}));E[-1]['container']='decoder_detail';text(n+'_label',t,[b[0]+6,b[1]+3,b[2]-12,b[3]-6],20,container=n)
+tokens('dec_text_tokens',1127,206);cube('dec_image_cube',1151,268);tokens('query_input',1431,432,count=1,w=34,h=34);tokens('query_output',1429,80,count=1,w=34,h=34)
+for n,t,b in [('dec_text_features','Text Features',[1120,168,143,32]),('dec_image_features','Image Features',[1107,334,160,34]),('query_input_label','Cross-Modality Query',[1485,434,221,33]),('query_output_label','Updated\nCross-Modality\nQuery',[1489,32,159,86])]:text(n,t,b,20)
+for n,p,q in [('dec_in',[1454,429],[1454,385]),('dec_self_image',[1454,342],[1454,313]),('dec_image_text',[1454,271],[1454,242]),('dec_text_ffn',[1454,199],[1454,187]),('dec_out',[1454,144],[1454,116]),('dec_text_kv',[1275,220],[1338,220]),('dec_image_kv',[1275,292],[1338,292])]:line(n,p,q,arrow=True)
+for n,t,b in [('dec_qkv','Q,K,V',[1458,384,69,30]),('dec_q1','Q',[1458,310,25,30]),('dec_q2','Q',[1458,238,25,30]),('dec_kv1','K,V',[1297,220,42,29]),('dec_kv2','K,V',[1297,292,42,29])]:text(n,t,b,20)
+# Feature enhancer expanded layer.
+rect('enhancer_detail',[1143,670,581,332],None,gradient=grad)
+for n,b,t,fill in [('enh_self',[1182,924,188,43],'Self-Attention','#FFFFFF'),('enh_deform',[1508,918,188,55],'Deformable\nSelf-Attention','#FFFFFF'),('enh_it',[1182,837,512,43],'Image-to-text Cross-Attention',None),('enh_ti',[1182,745,514,43],'Text-to-image Cross-Attention',None),('enh_ffn_t',[1182,679,188,43],'FFN','#FFFFFF'),('enh_ffn_i',[1508,679,188,43],'FFN','#FFFFFF')]:
+ rect(n,b,fill,shape='round_rect',radius=8,**({'gradient':{'direction':'horizontal','stops':[{'offset':0,'color':'#79ADD8' if n=='enh_it' else '#E5EDBF'},{'offset':1,'color':'#E5EDBF' if n=='enh_it' else '#79ADD8'}]}} if fill is None else {}));E[-1]['container']='enhancer_detail';text(n+'_label',t,[b[0]+5,b[1]+1,b[2]-10,b[3]-2],20,container=n)
+tokens('enh_text_input',1207,1040);tokens('enh_text_output',1217,592);cube('enh_image_input',1566,1021);cube('enh_image_output',1566,572)
+for n,t,b in [('enh_t_in','Text\nFeatures',[1099,1020,103,59]),('enh_i_in','Image\nFeatures',[1660,1020,105,59]),('enh_t_out','Updated Text\nFeatures',[1085,571,140,59]),('enh_i_out','Updated Image\nFeatures',[1644,571,157,59])]:text(n,t,b,20)
+for n,p,q in [('enh_t_in_arrow',[1276,1014],[1276,967]),('enh_i_in_arrow',[1602,1015],[1602,974]),('enh_t_it',[1276,924],[1276,881]),('enh_i_it',[1602,918],[1602,881]),('enh_t_ti',[1275,836],[1275,791]),('enh_i_ti',[1601,836],[1601,791]),('enh_t_ffn',[1276,745],[1276,723]),('enh_i_ffn',[1602,745],[1602,723]),('enh_t_out_arrow',[1276,679],[1276,648]),('enh_i_out_arrow',[1601,679],[1601,648])]:line(n,p,q,arrow=True)
+for n,t,b in [('enh_t_qkv','Q,K,V',[1278,965,64,30]),('enh_i_qkv','Q,K,V',[1606,966,64,30]),('enh_t_kv','K,V',[1279,877,40,29]),('enh_i_q','Q',[1607,877,30,29]),('enh_t_q','Q',[1278,789,29,29]),('enh_i_kv','K,V',[1606,789,41,29])]:text(n,t,b,20)
+text('caption1','Figure 3. The framework of Grounding DINO. We present the overall framework, a feature enhancer layer, and a decoder layer in block 1,',[119,1106,1815,47],30,'left',font='Liberation Serif')
+text('caption2','block 2, and block 3, respectively.',[119,1146,465,47],30,'left',font='Liberation Serif')
+# Explicit panel containment for the native inset content; source arrow strokes overlay panel backgrounds.
+for e in E:
+ if e['id'].startswith(('dec_','query_input','query_output')) and e['kind']=='line':
+  e.setdefault('allow_overlap_with',[]).append('decoder_detail');e['overlap_reason']='Source inset arrows are drawn inside and across the decoder panel boundary.'
+ if e['id'].startswith('enh_') and e['kind']=='line':
+  e.setdefault('allow_overlap_with',[]).append('enhancer_detail');e['overlap_reason']='Source inset arrows are drawn inside and across the feature enhancer panel boundary.'
+# Scale author view coordinates to untouched source bitmap coordinates.
+for e in E:
+ if 'box' in e:e['box']=[round(v*S,4) for v in e['box']]
+ if 'points' in e:e['points']=[[round(v*S,4) for v in p] for p in e['points']]
+ for k in ['font_size','stroke_width','radius']:
+  if k in e:e[k]*=S
+ if 'arrow_head' in e:e['arrow_head']={k:v*S for k,v in e['arrow_head'].items()}
+scene={'version':1,'slides':[{'id':'page_001','width':2470,'height':1447,'source':'pages/page_001/source.png','background':'#FFFFFF','reviewed':True,'notes':'Image-only reconstruction of Grounding DINO ECCV 2024 full official Figure 3 architecture. Exact photo crops retained; all labels and simple geometry editable. Calibri-like source font substituted by Liberation Sans. Tensor mesh count approximates visible dense raster grid. Wire bridge uses native chords. Not native PowerPoint/WPS verified.','elements':E}]}
+(J/'scene.json').write_text(json.dumps(scene,indent=2));print(len(E),'objects')

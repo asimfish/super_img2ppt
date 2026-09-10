@@ -1,0 +1,66 @@
+{
+  "scene_sha256": "19f7986ec16c3c9a43236cd73ac202f14069737ec316e08fea6ea3a223ae76c2",
+  "pages": [
+    {
+      "id": "page_001",
+      "size": [
+        2140,
+        1460
+      ],
+      "objects": {
+        "shape": 274,
+        "line": 392,
+        "text": 59,
+        "image": 4
+      },
+      "rasters": [
+        {
+          "id": "input_photo",
+          "box": [
+            612,
+            1232,
+            201,
+            178
+          ],
+          "contains_text": false,
+          "role": "content"
+        },
+        {
+          "id": "output_photo1",
+          "box": [
+            658,
+            332,
+            66,
+            42
+          ],
+          "contains_text": false,
+          "role": "content"
+        },
+        {
+          "id": "output_photo2",
+          "box": [
+            731,
+            321,
+            38,
+            54
+          ],
+          "contains_text": false,
+          "role": "content"
+        },
+        {
+          "id": "output_photo3",
+          "box": [
+            781,
+            338,
+            34,
+            35
+          ],
+          "contains_text": false,
+          "role": "content"
+        }
+      ],
+      "raster_frame_union_fraction": 0.013464809384164222,
+      "coverage_note": "Diagnostic axis-aligned frame union, not visible-alpha area or editability accuracy. Does not weight readable content by importance."
+    }
+  ]
+}

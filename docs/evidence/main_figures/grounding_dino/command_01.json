@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/Users/liyufeng/Code/super_img2ppt/.venv/bin/python",
+    "-m",
+    "super_img2ppt.cli",
+    "build",
+    "/tmp/grounding-main-4lw0lf/job/scene.json",
+    "--out",
+    "/tmp/grounding-main-4lw0lf/build_01",
+    "--font-dir",
+    "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+  ],
+  "env_overrides": {
+    "PATH": "/opt/homebrew/bin:$PATH",
+    "PYTHONPATH": "/tmp/grounding-main-4lw0lf/frozen_skill/src"
+  },
+  "seconds": 0.8705348968505859,
+  "exit_code": 2,
+  "stdout": "{\"status\": \"fail\", \"output\": \"/private/tmp/grounding-main-4lw0lf/build_01\"}\n",
+  "stderr": ""
+}

@@ -1,0 +1,110 @@
+{
+  "scene_sha256": "a7d0cd4e29a0dc3a8e4e159d475314783fcbb10cb92f16ae347e342c83d9623e",
+  "pages": [
+    {
+      "id": "page_001",
+      "size": [
+        1880,
+        484
+      ],
+      "objects": {
+        "image": 8,
+        "shape": 27,
+        "text": 28,
+        "line": 39
+      },
+      "rasters": [
+        {
+          "id": "cameras",
+          "box": [
+            63,
+            153,
+            95,
+            91
+          ],
+          "contains_text": false,
+          "role": "content"
+        },
+        {
+          "id": "backbone",
+          "box": [
+            216,
+            126,
+            64,
+            122
+          ],
+          "contains_text": false,
+          "role": "content"
+        },
+        {
+          "id": "bev_art",
+          "box": [
+            329,
+            186,
+            74,
+            34
+          ],
+          "contains_text": false,
+          "role": "content"
+        },
+        {
+          "id": "motion_art",
+          "box": [
+            994,
+            0,
+            168,
+            124
+          ],
+          "contains_text": false,
+          "role": "content"
+        },
+        {
+          "id": "occ_art",
+          "box": [
+            1347,
+            5,
+            189,
+            151
+          ],
+          "contains_text": false,
+          "role": "content"
+        },
+        {
+          "id": "planner_art",
+          "box": [
+            1670,
+            30,
+            176,
+            121
+          ],
+          "contains_text": false,
+          "role": "content"
+        },
+        {
+          "id": "track_fused",
+          "box": [
+            571,
+            0,
+            254,
+            104
+          ],
+          "contains_text": true,
+          "role": "content"
+        },
+        {
+          "id": "map_fused",
+          "box": [
+            571,
+            285,
+            254,
+            147
+          ],
+          "contains_text": true,
+          "role": "content"
+        }
+      ],
+      "raster_frame_union_fraction": 0.16857525936346052,
+      "coverage_note": "Diagnostic axis-aligned frame union, not visible-alpha area or editability accuracy. Does not weight readable content by importance."
+    }
+  ]
+}

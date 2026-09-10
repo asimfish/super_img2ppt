@@ -1,0 +1,13 @@
+from pathlib import Path
+import json
+p=Path(__file__).parent;f=p/'published_job/scene.json';s=json.loads(f.read_text());S=2894/2048
+for x in s['slides'][0]['elements']:
+ if x.get('font_family')=='Times New Roman':x['font_family']='Georgia'
+ if x.get('font_family')=='Courier New':x['font_family']='Andale Mono'
+ # VL source has linear lavender-peach gradient
+ if x['id']=='vl':
+  del x['fill'];x['gradient']={'direction':'vertical','stops':[{'offset':0,'color':'#D2D7FE'},{'offset':1,'color':'#F8CEAF'}]}
+ if x['id']=='lp':
+  del x['fill'];x['gradient']={'direction':'vertical','stops':[{'offset':0,'color':'#BED8EE'},{'offset':1,'color':'#F8CEAF'}]}
+ if x['id']=='llm':x['stroke']='#EAB587';x['stroke_width']=3*S
+f.write_text(json.dumps(s,indent=2))

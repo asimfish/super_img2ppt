@@ -1,0 +1,38 @@
+/tmp/grounding-main-4lw0lf/paper_eval/measure.py:5: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  def mask(im,mode):return {i for i,p in enumerate(im.getdata())if (max(p)<150 if mode=='dark'else min(p)>220)}
+11 35
+overall_title: IoU 0.599, edge 1, pass False
+decoder_title: IoU 0.589, edge 1, pass False
+enhancer_title: IoU 0.675, edge 1, pass False
+contrastive: IoU 0.798, edge 1, pass True
+localization: IoU 0.821, edge 1, pass True
+decoder_name: IoU 0.756, edge 1, pass True
+query_selection: IoU 0.689, edge 1, pass False
+feature_enhancer: IoU 0.779, edge 1, pass True
+text_backbone: IoU 0.809, edge 1, pass True
+image_backbone: IoU 0.495, edge 1, pass False
+input_text: IoU 0.814, edge 1, pass True
+input_image: IoU 0.677, edge 1, pass False
+self_dec: IoU 0.759, edge 1, pass True
+image_cross_dec: IoU 0.773, edge 1, pass True
+text_cross_dec: IoU 0.770, edge 1, pass True
+ffn_dec: IoU 0.667, edge 1, pass False
+ffn_left: IoU 0.630, edge 1, pass False
+ffn_right: IoU 0.785, edge 1, pass True
+cross_text_image: IoU 0.676, edge 1, pass False
+cross_image_text: IoU 0.698, edge 1, pass False
+self_enhancer: IoU 0.715, edge 1, pass True
+deformable: IoU 0.194, edge 21, pass False
+matrix: IoU 0.422, edge 21, pass False
+vanilla_tokens: IoU 0.180, edge 2, pass False
+updated_tokens: IoU 0.158, edge 3, pass False
+vanilla_cube: IoU 0.373, edge 1, pass False
+updated_cube: IoU 0.366, edge 3, pass False
+backbone_arrow: IoU 0.182, edge 2, pass False
+query_arrow: IoU 0.404, edge 1, pass False
+decoder_arrow: IoU 0.232, edge 0, pass False
+self_to_image_arrow: IoU 0.212, edge 1, pass False
+ffn_up_arrow: IoU 0.181, edge 2, pass False
+enhancer_cross_arrow: IoU 0.154, edge 1, pass False
+rotated_prompt: IoU 0.262, edge 0, pass False
+input_categories: IoU 0.161, edge 11, pass False

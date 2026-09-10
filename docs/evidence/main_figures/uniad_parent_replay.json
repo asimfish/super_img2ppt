@@ -1,0 +1,17 @@
+{
+  "status": "review",
+  "render_pixels_identical": true,
+  "command": [
+    "uv",
+    "run",
+    "python",
+    "scripts/run_real_cases.py",
+    "--corpus",
+    "examples/main_figures",
+    "--out",
+    "output/main_figures_20260911/parent_uniad",
+    "--font-dir",
+    "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+  ],
+  "exit_code": 0
+}

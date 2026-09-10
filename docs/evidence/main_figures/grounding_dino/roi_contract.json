@@ -1,0 +1,369 @@
+{
+  "coordinate_space": "source pixels",
+  "frozen_before_scene": true,
+  "source_sha256": "909a01c89273d8f956fcb010c869d3b48672a6c1a1d3552fd5619cadbe130bfd",
+  "acceptance": {
+    "ink_edge_max_px": 4,
+    "ink_iou_min": 0.7,
+    "mask": "dark=max(R,G,B)<150; light=min(R,G,B)>220; exact fixed ROI, actual PPTX PNG resized to source size Lanczos"
+  },
+  "regions": [
+    {
+      "id": "overall_title",
+      "box": [
+        291,
+        25,
+        205,
+        35
+      ],
+      "mask": "light"
+    },
+    {
+      "id": "decoder_title",
+      "box": [
+        1303,
+        25,
+        232,
+        35
+      ],
+      "mask": "light"
+    },
+    {
+      "id": "enhancer_title",
+      "box": [
+        1315,
+        618,
+        357,
+        35
+      ],
+      "mask": "light"
+    },
+    {
+      "id": "contrastive",
+      "box": [
+        844,
+        14,
+        188,
+        36
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "localization",
+      "box": [
+        1048,
+        14,
+        197,
+        36
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "decoder_name",
+      "box": [
+        802,
+        414,
+        281,
+        34
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "query_selection",
+      "box": [
+        835,
+        568,
+        195,
+        60
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "feature_enhancer",
+      "box": [
+        614,
+        794,
+        217,
+        37
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "text_backbone",
+      "box": [
+        452,
+        993,
+        117,
+        65
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "image_backbone",
+      "box": [
+        880,
+        996,
+        125,
+        69
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "input_text",
+      "box": [
+        408,
+        1277,
+        131,
+        36
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "input_image",
+      "box": [
+        804,
+        1280,
+        163,
+        36
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "self_dec",
+      "box": [
+        1662,
+        419,
+        185,
+        34
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "image_cross_dec",
+      "box": [
+        1626,
+        332,
+        262,
+        37
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "text_cross_dec",
+      "box": [
+        1634,
+        247,
+        244,
+        37
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "ffn_dec",
+      "box": [
+        1721,
+        181,
+        70,
+        36
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "ffn_left",
+      "box": [
+        1508,
+        827,
+        65,
+        37
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "ffn_right",
+      "box": [
+        1897,
+        827,
+        69,
+        37
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "cross_text_image",
+      "box": [
+        1559,
+        907,
+        350,
+        36
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "cross_image_text",
+      "box": [
+        1558,
+        1018,
+        353,
+        36
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "self_enhancer",
+      "box": [
+        1446,
+        1123,
+        188,
+        35
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "deformable",
+      "box": [
+        1846,
+        1111,
+        178,
+        59
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "matrix",
+      "box": [
+        870,
+        92,
+        144,
+        172
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "vanilla_tokens",
+      "box": [
+        427,
+        891,
+        154,
+        35
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "updated_tokens",
+      "box": [
+        1465,
+        712,
+        156,
+        35
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "vanilla_cube",
+      "box": [
+        895,
+        867,
+        92,
+        78
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "updated_cube",
+      "box": [
+        1885,
+        686,
+        93,
+        78
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "backbone_arrow",
+      "box": [
+        930,
+        941,
+        22,
+        35
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "query_arrow",
+      "box": [
+        930,
+        637,
+        22,
+        40
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "decoder_arrow",
+      "box": [
+        930,
+        456,
+        22,
+        35
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "self_to_image_arrow",
+      "box": [
+        1744,
+        376,
+        21,
+        37
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "ffn_up_arrow",
+      "box": [
+        1744,
+        139,
+        21,
+        36
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "enhancer_cross_arrow",
+      "box": [
+        1528,
+        949,
+        21,
+        60
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "caption_line1",
+      "box": [
+        140,
+        1341,
+        2185,
+        47
+      ],
+      "mask": "dark"
+    },
+    {
+      "id": "caption_line2",
+      "box": [
+        140,
+        1391,
+        539,
+        47
+      ],
+      "mask": "dark"
+    }
+  ],
+  "topology": [
+    "text backbone -> vanilla text -> feature enhancer -> text features -> decoder and query selection",
+    "image backbone -> vanilla image -> enhancer -> image features -> query selection and decoder",
+    "language-guide query selection -> cross-modality queries -> decoder -> model outputs -> both losses",
+    "decoder query -> self-attention -> image cross-attention -> text cross-attention -> FFN -> updated query",
+    "feature enhancer image/text self-attention -> image-to-text -> text-to-image -> two FFNs"
+  ]
+}

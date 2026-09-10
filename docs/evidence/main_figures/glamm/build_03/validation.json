@@ -1,0 +1,1711 @@
+{
+  "status": "review",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "pass",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "gcg_title",
+            "gcg_header"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "output_tokens",
+            "output_prompt"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "llm_response",
+            "gcg_title"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "segmentation_photo",
+            "seg_question"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "segmentation_photo",
+            "seg_response"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "robot_caption",
+            "cap_response2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "robot_region",
+            "reg_response1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "robot_region",
+            "reg_response2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "cap_question",
+            "cap_response1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "phrase_question1",
+            "phrase_question2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "cap_response1",
+            "cap_response2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "reg_response1",
+            "reg_response2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "gcg_line1",
+            "gcg_line2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "phrase_response1",
+            "phrase_response2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "image": 14,
+            "shape": 87,
+            "line": 22,
+            "text": 31
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "output_tokens",
+                "output_up1"
+              ],
+              "reason": "Source selected blue output token routes emerge through enclosing token tray border.",
+              "area_px2": 65.895
+            },
+            {
+              "elements": [
+                "output_tokens",
+                "output_up2"
+              ],
+              "reason": "Source selected blue output token routes emerge through enclosing token tray border.",
+              "area_px2": 65.895
+            },
+            {
+              "elements": [
+                "stack0",
+                "stack_front0"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 203.779
+            },
+            {
+              "elements": [
+                "stack0",
+                "roi0_0"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 20449.35
+            },
+            {
+              "elements": [
+                "stack0",
+                "roi0_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 19934.126
+            },
+            {
+              "elements": [
+                "stack0",
+                "stack1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 19170.928
+            },
+            {
+              "elements": [
+                "stack0",
+                "stack_front1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 3901.529
+            },
+            {
+              "elements": [
+                "stack0",
+                "roi1_0"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 11239.212
+            },
+            {
+              "elements": [
+                "stack0",
+                "roi1_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 9049.668
+            },
+            {
+              "elements": [
+                "stack0",
+                "stack2"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 7501.689
+            },
+            {
+              "elements": [
+                "stack0",
+                "stack_front2"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 2614.123
+            },
+            {
+              "elements": [
+                "stack0",
+                "roi2_0"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 3743.698
+            },
+            {
+              "elements": [
+                "stack0",
+                "roi2_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 1668.732
+            },
+            {
+              "elements": [
+                "stack0",
+                "stack3"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 485.522
+            },
+            {
+              "elements": [
+                "stack0",
+                "stack_front3"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 943.56
+            },
+            {
+              "elements": [
+                "roi0_0",
+                "roi0_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 15256.795
+            },
+            {
+              "elements": [
+                "roi0_0",
+                "stack1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 12409.352
+            },
+            {
+              "elements": [
+                "roi0_0",
+                "stack_front1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 3428.955
+            },
+            {
+              "elements": [
+                "roi0_0",
+                "roi1_0"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 8022.209
+            },
+            {
+              "elements": [
+                "roi0_0",
+                "roi1_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 4868.504
+            },
+            {
+              "elements": [
+                "roi0_0",
+                "stack2"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 3324.185
+            },
+            {
+              "elements": [
+                "roi0_0",
+                "stack_front2"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 2230.931
+            },
+            {
+              "elements": [
+                "roi0_0",
+                "roi2_0"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 1111.444
+            },
+            {
+              "elements": [
+                "roi0_0",
+                "roi2_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 60.922
+            },
+            {
+              "elements": [
+                "roi0_1",
+                "stack1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 16628.234
+            },
+            {
+              "elements": [
+                "roi0_1",
+                "stack_front1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 3796.454
+            },
+            {
+              "elements": [
+                "roi0_1",
+                "roi1_0"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 11321.923
+            },
+            {
+              "elements": [
+                "roi0_1",
+                "roi1_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 8022.215
+            },
+            {
+              "elements": [
+                "roi0_1",
+                "stack2"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 6219.388
+            },
+            {
+              "elements": [
+                "roi0_1",
+                "stack_front2"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 2723.03
+            },
+            {
+              "elements": [
+                "roi0_1",
+                "roi2_0"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 2964.336
+            },
+            {
+              "elements": [
+                "roi0_1",
+                "roi2_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 1111.435
+            },
+            {
+              "elements": [
+                "roi0_1",
+                "stack_front3"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 326.615
+            },
+            {
+              "elements": [
+                "global_join_h",
+                "global_join_v"
+              ],
+              "reason": "Source-verified connector junction at this exact shared endpoint.",
+              "area_px2": 4.493
+            },
+            {
+              "elements": [
+                "global_join_v",
+                "join_tokens"
+              ],
+              "reason": "Source-verified connector junction at this exact shared endpoint.",
+              "area_px2": 4.493
+            },
+            {
+              "elements": [
+                "region_join_h",
+                "region_join_v"
+              ],
+              "reason": "Source-verified connector junction at this exact shared endpoint.",
+              "area_px2": 4.493
+            },
+            {
+              "elements": [
+                "region_join_v",
+                "join_tokens"
+              ],
+              "reason": "Source-verified connector junction at this exact shared endpoint.",
+              "area_px2": 4.493
+            },
+            {
+              "elements": [
+                "photo_bypass_v",
+                "photo_bypass_h"
+              ],
+              "reason": "Source-verified connector junction at this exact shared endpoint.",
+              "area_px2": 4.493
+            },
+            {
+              "elements": [
+                "photo_bypass_h",
+                "photo_bypass_end"
+              ],
+              "reason": "Source-verified connector junction at this exact shared endpoint.",
+              "area_px2": 4.493
+            },
+            {
+              "elements": [
+                "output_up1",
+                "output_join"
+              ],
+              "reason": "Source-verified connector junction at this exact shared endpoint.",
+              "area_px2": 4.493
+            },
+            {
+              "elements": [
+                "output_up2",
+                "output_join"
+              ],
+              "reason": "Source-verified connector junction at this exact shared endpoint.",
+              "area_px2": 4.493
+            },
+            {
+              "elements": [
+                "output_join",
+                "output_decoder"
+              ],
+              "reason": "Source blue output prompt branches form T-junction with upward pixel decoder route at x1480 y193.",
+              "area_px2": 8.986
+            },
+            {
+              "elements": [
+                "stack1",
+                "stack_front1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 950.577
+            },
+            {
+              "elements": [
+                "stack1",
+                "roi1_0"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 11321.923
+            },
+            {
+              "elements": [
+                "stack1",
+                "roi1_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 10865.795
+            },
+            {
+              "elements": [
+                "stack1",
+                "stack2"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 10827.639
+            },
+            {
+              "elements": [
+                "stack1",
+                "stack_front2"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 3052.772
+            },
+            {
+              "elements": [
+                "stack1",
+                "roi2_0"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 4990.973
+            },
+            {
+              "elements": [
+                "stack1",
+                "roi2_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 3362.626
+            },
+            {
+              "elements": [
+                "stack1",
+                "stack3"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 1731.863
+            },
+            {
+              "elements": [
+                "stack1",
+                "stack_front3"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 1494.766
+            },
+            {
+              "elements": [
+                "stack1",
+                "roi3_0"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 157.207
+            },
+            {
+              "elements": [
+                "roi1_0",
+                "roi1_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 7482.468
+            },
+            {
+              "elements": [
+                "roi1_0",
+                "stack2"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 5734.972
+            },
+            {
+              "elements": [
+                "roi1_0",
+                "stack_front2"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 2631.002
+            },
+            {
+              "elements": [
+                "roi1_0",
+                "roi2_0"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 2617.665
+            },
+            {
+              "elements": [
+                "roi1_0",
+                "roi2_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 900.025
+            },
+            {
+              "elements": [
+                "roi1_0",
+                "stack_front3"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 196.696
+            },
+            {
+              "elements": [
+                "roi1_1",
+                "stack2"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 8649.956
+            },
+            {
+              "elements": [
+                "roi1_1",
+                "stack_front2"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 2943.697
+            },
+            {
+              "elements": [
+                "roi1_1",
+                "roi2_0"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 4864.237
+            },
+            {
+              "elements": [
+                "roi1_1",
+                "roi2_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 2617.65
+            },
+            {
+              "elements": [
+                "roi1_1",
+                "stack3"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 859.891
+            },
+            {
+              "elements": [
+                "roi1_1",
+                "stack_front3"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 1536.232
+            },
+            {
+              "elements": [
+                "stack2",
+                "stack_front2"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 1354.315
+            },
+            {
+              "elements": [
+                "stack2",
+                "roi2_0"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 5026.38
+            },
+            {
+              "elements": [
+                "stack2",
+                "roi2_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 4682.691
+            },
+            {
+              "elements": [
+                "stack2",
+                "stack3"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 3822.595
+            },
+            {
+              "elements": [
+                "stack2",
+                "stack_front3"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 1895.603
+            },
+            {
+              "elements": [
+                "stack2",
+                "roi3_0"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 802.744
+            },
+            {
+              "elements": [
+                "stack2",
+                "roi3_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 138.578
+            },
+            {
+              "elements": [
+                "roi2_0",
+                "roi2_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 2514.899
+            },
+            {
+              "elements": [
+                "roi2_0",
+                "stack3"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 890.443
+            },
+            {
+              "elements": [
+                "roi2_0",
+                "stack_front3"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 1489.416
+            },
+            {
+              "elements": [
+                "roi2_1",
+                "stack3"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 2810.999
+            },
+            {
+              "elements": [
+                "roi2_1",
+                "stack_front3"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 2020.767
+            },
+            {
+              "elements": [
+                "roi2_1",
+                "roi3_0"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 568.217
+            },
+            {
+              "elements": [
+                "stack3",
+                "stack_front3"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 1389.344
+            },
+            {
+              "elements": [
+                "stack3",
+                "roi3_0"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 937.899
+            },
+            {
+              "elements": [
+                "stack3",
+                "roi3_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 793.19
+            },
+            {
+              "elements": [
+                "roi3_0",
+                "roi3_1"
+              ],
+              "reason": "Visible multiscale feature pyramid: these exact native surfaces and dashed ROI outlines intentionally occlude one another in source.",
+              "area_px2": 32.074
+            }
+          ],
+          "text_layouts": {
+            "global_t": {
+              "scale": 1,
+              "effective_font_size_px": 50.8711,
+              "width_px": 278.0,
+              "height_px": 117.004,
+              "available_width_px": 374.4678,
+              "available_height_px": 120.1123,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 278.5,
+              "required_height_px": 117.504,
+              "fits": true,
+              "lines": [
+                "Global Image",
+                "Encoder"
+              ]
+            },
+            "grounding_t": {
+              "scale": 1,
+              "effective_font_size_px": 50.8711,
+              "width_px": 309.5,
+              "height_px": 117.004,
+              "available_width_px": 375.8809,
+              "available_height_px": 120.1123,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 310.0,
+              "required_height_px": 117.504,
+              "fits": true,
+              "lines": [
+                "Grounding",
+                "Image Encoder"
+              ]
+            },
+            "decoder_t": {
+              "scale": 1,
+              "effective_font_size_px": 50.8711,
+              "width_px": 289.5,
+              "height_px": 58.502,
+              "available_width_px": 365.9893,
+              "available_height_px": 69.2412,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 290.0,
+              "required_height_px": 59.002,
+              "fits": true,
+              "lines": [
+                "Pixel Decoder"
+              ]
+            },
+            "region_t": {
+              "scale": 1,
+              "effective_font_size_px": 50.8711,
+              "width_px": 329.25,
+              "height_px": 58.502,
+              "available_width_px": 388.5986,
+              "available_height_px": 65.002,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 329.75,
+              "required_height_px": 59.002,
+              "fits": true,
+              "lines": [
+                "Region Encoder"
+              ]
+            },
+            "llm_t": {
+              "scale": 1,
+              "effective_font_size_px": 62.1758,
+              "width_px": 131.25,
+              "height_px": 71.502,
+              "available_width_px": 155.4395,
+              "available_height_px": 80.5459,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 131.75,
+              "required_height_px": 72.002,
+              "fits": true,
+              "lines": [
+                "LLM"
+              ]
+            },
+            "vl_t": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 66.0,
+              "height_px": 45.501,
+              "available_width_px": 72.0674,
+              "available_height_px": 56.5234,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 66.5,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "V-L"
+              ]
+            },
+            "lp_t": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 59.5,
+              "height_px": 45.501,
+              "available_width_px": 73.4805,
+              "available_height_px": 56.5234,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 60.0,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "L-P"
+              ]
+            },
+            "input_prompt": {
+              "scale": 1,
+              "effective_font_size_px": 36.7402,
+              "width_px": 328.25,
+              "height_px": 42.251,
+              "available_width_px": 363.1631,
+              "available_height_px": 50.8711,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 328.75,
+              "required_height_px": 42.751,
+              "fits": true,
+              "lines": [
+                "Image-region prompts"
+              ]
+            },
+            "output_prompt": {
+              "scale": 1,
+              "effective_font_size_px": 36.7402,
+              "width_px": 232.5,
+              "height_px": 42.251,
+              "available_width_px": 276.9648,
+              "available_height_px": 50.8711,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 233.0,
+              "required_height_px": 42.751,
+              "fits": true,
+              "lines": [
+                "Output prompts"
+              ]
+            },
+            "instruction_t": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 413.5,
+              "height_px": 91.003,
+              "available_width_px": 483.2754,
+              "available_height_px": 94.6768,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 414.0,
+              "required_height_px": 91.503,
+              "fits": true,
+              "lines": [
+                "Can  you  give  a  detailed",
+                "description of this image?"
+              ]
+            },
+            "seg_title": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 564.25,
+              "height_px": 45.501,
+              "available_width_px": 630.2363,
+              "available_height_px": 53.6973,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 564.75,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "Referring Expression Segmentation"
+              ]
+            },
+            "cap_title": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 384.25,
+              "height_px": 45.501,
+              "available_width_px": 821.0029,
+              "available_height_px": 53.6973,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 384.75,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "Image Level Captioning"
+              ]
+            },
+            "reg_title": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 399.5,
+              "height_px": 45.501,
+              "available_width_px": 556.7559,
+              "available_height_px": 53.6973,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 400.0,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "Region Level Captioning"
+              ]
+            },
+            "phrase_title": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 286.5,
+              "height_px": 45.501,
+              "available_width_px": 733.3916,
+              "available_height_px": 53.6973,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 287.0,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "Phrase Grounding"
+              ]
+            },
+            "gcg_title": {
+              "scale": 1,
+              "effective_font_size_px": 42.3926,
+              "width_px": 606.25,
+              "height_px": 48.751,
+              "available_width_px": 1235.0371,
+              "available_height_px": 53.6973,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 606.75,
+              "required_height_px": 49.251,
+              "fits": true,
+              "lines": [
+                "Grounded Conversation Generation"
+              ]
+            },
+            "seg_question": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 501.75,
+              "height_px": 91.003,
+              "available_width_px": 607.627,
+              "available_height_px": 93.2637,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 502.25,
+              "required_height_px": 91.503,
+              "fits": true,
+              "lines": [
+                "Can you segment the balloon in",
+                "this given picture?"
+              ]
+            },
+            "cap_question": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 514.75,
+              "height_px": 45.501,
+              "available_width_px": 594.9092,
+              "available_height_px": 55.1104,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 515.25,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "Please describe the given image."
+              ]
+            },
+            "reg_question": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 375.75,
+              "height_px": 91.003,
+              "available_width_px": 419.6865,
+              "available_height_px": 97.5029,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 376.25,
+              "required_height_px": 91.503,
+              "fits": true,
+              "lines": [
+                "Could you tell me more",
+                "about this region?"
+              ]
+            },
+            "phrase_question1": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 644.0,
+              "height_px": 45.501,
+              "available_width_px": 729.1523,
+              "available_height_px": 53.6973,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 644.5,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "Can you segment phrases in, “A <hot air"
+              ]
+            },
+            "phrase_question2": {
+              "scale": 1,
+              "effective_font_size_px": 39.5664,
+              "width_px": 426.25,
+              "height_px": 45.501,
+              "available_width_px": 470.5576,
+              "available_height_px": 55.1104,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 426.75,
+              "required_height_px": 46.001,
+              "fits": true,
+              "lines": [
+                "balloon> over the <river>”"
+              ]
+            },
+            "answer_balloon_t": {
+              "scale": 1,
+              "effective_font_size_px": 34.1967,
+              "width_px": 307.5,
+              "height_px": 78.0,
+              "available_width_px": 430.9912,
+              "available_height_px": 90.4375,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 308.0,
+              "required_height_px": 78.5,
+              "fits": true,
+              "lines": [
+                "A large hot air",
+                "balloon"
+              ]
+            },
+            "answer_water_t": {
+              "scale": 1,
+              "effective_font_size_px": 34.1967,
+              "width_px": 307.5,
+              "height_px": 78.0,
+              "available_width_px": 339.1406,
+              "available_height_px": 93.2637,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 308.0,
+              "required_height_px": 78.5,
+              "fits": true,
+              "lines": [
+                "A large body of",
+                "water"
+              ]
+            },
+            "seg_response": {
+              "scale": 1,
+              "effective_font_size_px": 34.1967,
+              "width_px": 307.5,
+              "height_px": 78.0,
+              "available_width_px": 319.3574,
+              "available_height_px": 94.6768,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 308.0,
+              "required_height_px": 78.5,
+              "fits": true,
+              "lines": [
+                "Sure, the",
+                "segmentation is"
+              ]
+            },
+            "cap_response1": {
+              "scale": 1,
+              "effective_font_size_px": 34.1967,
+              "width_px": 656.0,
+              "height_px": 39.0,
+              "available_width_px": 733.3916,
+              "available_height_px": 48.0449,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 656.5,
+              "required_height_px": 39.5,
+              "fits": true,
+              "lines": [
+                "A hot air balloon is seen in the"
+              ]
+            },
+            "cap_response2": {
+              "scale": 1,
+              "effective_font_size_px": 34.1967,
+              "width_px": 779.0,
+              "height_px": 156.0,
+              "available_width_px": 792.7412,
+              "available_height_px": 163.918,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 779.5,
+              "required_height_px": 156.5,
+              "fits": true,
+              "lines": [
+                "air, flying over a river. The balloon,",
+                "high up in the sky, is yellow and red",
+                "in color, with a bridge and trees",
+                "visible in the background."
+              ]
+            },
+            "reg_response1": {
+              "scale": 1,
+              "effective_font_size_px": 34.1967,
+              "width_px": 348.5,
+              "height_px": 39.0,
+              "available_width_px": 356.0977,
+              "available_height_px": 49.458,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 349.0,
+              "required_height_px": 39.5,
+              "fits": true,
+              "lines": [
+                "A yellow, red and"
+              ]
+            },
+            "reg_response2": {
+              "scale": 1,
+              "effective_font_size_px": 34.1967,
+              "width_px": 410.0,
+              "height_px": 39.0,
+              "available_width_px": 422.5127,
+              "available_height_px": 49.458,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 410.5,
+              "required_height_px": 39.5,
+              "fits": true,
+              "lines": [
+                "blue hot air balloon"
+              ]
+            },
+            "gcg_line1": {
+              "scale": 1,
+              "effective_font_size_px": 34.1967,
+              "width_px": 1209.5,
+              "height_px": 39.326,
+              "available_width_px": 1225.1455,
+              "available_height_px": 49.458,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 1210.0,
+              "required_height_px": 39.826,
+              "fits": true,
+              "lines": [
+                "A large, colorful hot air balloon is flying over the river."
+              ]
+            },
+            "gcg_line2": {
+              "scale": 1,
+              "effective_font_size_px": 34.1967,
+              "width_px": 1128.0,
+              "height_px": 39.326,
+              "available_width_px": 1192.6445,
+              "available_height_px": 49.458,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 1128.5,
+              "required_height_px": 39.826,
+              "fits": true,
+              "lines": [
+                "The sky is overarching the river, trees, and buildings."
+              ]
+            },
+            "phrase_response1": {
+              "scale": 1,
+              "effective_font_size_px": 34.1967,
+              "width_px": 389.5,
+              "height_px": 39.326,
+              "available_width_px": 397.0771,
+              "available_height_px": 49.458,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 390.0,
+              "required_height_px": 39.826,
+              "fits": true,
+              "lines": [
+                "A <hot air balloon>"
+              ]
+            },
+            "phrase_response2": {
+              "scale": 1,
+              "effective_font_size_px": 34.1967,
+              "width_px": 328.0,
+              "height_px": 39.326,
+              "available_width_px": 344.793,
+              "available_height_px": 49.458,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 328.5,
+              "required_height_px": 39.826,
+              "fits": true,
+              "lines": [
+                "over the <river>"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "review",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [
+        {
+          "code": "rendered_ink_width_drift",
+          "severity": "warning",
+          "slide": "page_001",
+          "element": "vl_t",
+          "measured_ink_width_px": 65.0,
+          "rendered_ink_width_px": 60.837,
+          "message": "Visible text width differs from the measured font by over 3% and 2 px; inspect mixed-script spacing and compare the source"
+        }
+      ],
+      "text_boxes": [
+        {
+          "slide": "page_001",
+          "element": "global_t",
+          "expected": "Global Image\nEncoder",
+          "rendered": "Global Image\r\nEncoder",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 275.0,
+          "rendered_ink_width_px": 273.63
+        },
+        {
+          "slide": "page_001",
+          "element": "grounding_t",
+          "expected": "Grounding\nImage Encoder",
+          "rendered": "Grounding\r\nImage Encoder",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 308.25,
+          "rendered_ink_width_px": 306.718
+        },
+        {
+          "slide": "page_001",
+          "element": "decoder_t",
+          "expected": "Pixel Decoder",
+          "rendered": "Pixel Decoder",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 288.75,
+          "rendered_ink_width_px": 287.463
+        },
+        {
+          "slide": "page_001",
+          "element": "region_t",
+          "expected": "Region Encoder",
+          "rendered": "Region Encoder ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 328.5,
+          "rendered_ink_width_px": 326.835
+        },
+        {
+          "slide": "page_001",
+          "element": "llm_t",
+          "expected": "LLM",
+          "rendered": "LLM ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 129.25,
+          "rendered_ink_width_px": 128.536
+        },
+        {
+          "slide": "page_001",
+          "element": "vl_t",
+          "expected": "V-L",
+          "rendered": "V-L ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 65.0,
+          "rendered_ink_width_px": 60.837
+        },
+        {
+          "slide": "page_001",
+          "element": "lp_t",
+          "expected": "L-P",
+          "rendered": "L-P",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 57.5,
+          "rendered_ink_width_px": 56.929
+        },
+        {
+          "slide": "page_001",
+          "element": "input_prompt",
+          "expected": "Image-region prompts",
+          "rendered": "Image-region prompts ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 326.5,
+          "rendered_ink_width_px": 325.816
+        },
+        {
+          "slide": "page_001",
+          "element": "output_prompt",
+          "expected": "Output prompts",
+          "rendered": "Output prompts",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 230.25,
+          "rendered_ink_width_px": 229.361
+        },
+        {
+          "slide": "page_001",
+          "element": "instruction_t",
+          "expected": "Can  you  give  a  detailed\ndescription of this image?",
+          "rendered": "Can you give a detailed\r\ndescription of this image?",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 412.25,
+          "rendered_ink_width_px": 410.187
+        },
+        {
+          "slide": "page_001",
+          "element": "seg_title",
+          "expected": "Referring Expression Segmentation",
+          "rendered": "Referring Expression Segmentation ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 563.75,
+          "rendered_ink_width_px": 561.549
+        },
+        {
+          "slide": "page_001",
+          "element": "cap_title",
+          "expected": "Image Level Captioning",
+          "rendered": "Image Level Captioning ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 383.0,
+          "rendered_ink_width_px": 381.288
+        },
+        {
+          "slide": "page_001",
+          "element": "reg_title",
+          "expected": "Region Level Captioning",
+          "rendered": "Region Level Captioning ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 398.5,
+          "rendered_ink_width_px": 397.001
+        },
+        {
+          "slide": "page_001",
+          "element": "phrase_title",
+          "expected": "Phrase Grounding",
+          "rendered": "Phrase Grounding",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 285.5,
+          "rendered_ink_width_px": 284.367
+        },
+        {
+          "slide": "page_001",
+          "element": "gcg_title",
+          "expected": "Grounded Conversation Generation",
+          "rendered": "Grounded Conversation Generation",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 605.0,
+          "rendered_ink_width_px": 602.132
+        },
+        {
+          "slide": "page_001",
+          "element": "seg_question",
+          "expected": "Can you segment the balloon in\nthis given picture?",
+          "rendered": "Can you segment the balloon in\r\nthis given picture?",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 501.5,
+          "rendered_ink_width_px": 499.528
+        },
+        {
+          "slide": "page_001",
+          "element": "cap_question",
+          "expected": "Please describe the given image.",
+          "rendered": "Please describe the given image. \r\niblliih",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 511.5,
+          "rendered_ink_width_px": 509.555
+        },
+        {
+          "slide": "page_001",
+          "element": "reg_question",
+          "expected": "Could you tell me more\nabout this region?",
+          "rendered": "Could you tell me more\r\nabout this region?",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 373.5,
+          "rendered_ink_width_px": 371.853
+        },
+        {
+          "slide": "page_001",
+          "element": "phrase_question1",
+          "expected": "Can you segment phrases in, “A <hot air",
+          "rendered": "Can you segment phrases in, “A <hot air",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 642.75,
+          "rendered_ink_width_px": 638.217
+        },
+        {
+          "slide": "page_001",
+          "element": "phrase_question2",
+          "expected": "balloon> over the <river>”",
+          "rendered": "p, \r\nballoon> over the <river>”",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 425.25,
+          "rendered_ink_width_px": 423.412
+        },
+        {
+          "slide": "page_001",
+          "element": "answer_balloon_t",
+          "expected": "A large hot air\nballoon",
+          "rendered": "A large hot air\r\nballoon",
+          "matches": true,
+          "actual_fonts": [
+            "CourierNewPSMT"
+          ],
+          "measured_ink_width_px": 305.5,
+          "rendered_ink_width_px": 304.366
+        },
+        {
+          "slide": "page_001",
+          "element": "answer_water_t",
+          "expected": "A large body of\nwater",
+          "rendered": "A large body of\r\nwater",
+          "matches": true,
+          "actual_fonts": [
+            "CourierNewPSMT"
+          ],
+          "measured_ink_width_px": 305.5,
+          "rendered_ink_width_px": 304.366
+        },
+        {
+          "slide": "page_001",
+          "element": "seg_response",
+          "expected": "Sure, the\nsegmentation is",
+          "rendered": "Sure, the\r\nsegmentation is",
+          "matches": true,
+          "actual_fonts": [
+            "CourierNewPSMT"
+          ],
+          "measured_ink_width_px": 301.25,
+          "rendered_ink_width_px": 300.035
+        },
+        {
+          "slide": "page_001",
+          "element": "cap_response1",
+          "expected": "A hot air balloon is seen in the",
+          "rendered": "gg\r\nA hot air balloon is seen in the",
+          "matches": true,
+          "actual_fonts": [
+            "CourierNewPSMT"
+          ],
+          "measured_ink_width_px": 653.25,
+          "rendered_ink_width_px": 651.009
+        },
+        {
+          "slide": "page_001",
+          "element": "cap_response2",
+          "expected": "air, flying over a river. The balloon,\nhigh up in the sky, is yellow and red\nin color, with a bridge and trees\nvisible in the background.",
+          "rendered": "air, flying over a river. The balloon,\r\nhigh up in the sky, is yellow and red\r\nin color, with a bridge and trees\r\nvisible in the background.",
+          "matches": true,
+          "actual_fonts": [
+            "CourierNewPSMT"
+          ],
+          "measured_ink_width_px": 770.0,
+          "rendered_ink_width_px": 767.102
+        },
+        {
+          "slide": "page_001",
+          "element": "reg_response1",
+          "expected": "A yellow, red and",
+          "rendered": "A yellow, red and",
+          "matches": true,
+          "actual_fonts": [
+            "CourierNewPSMT"
+          ],
+          "measured_ink_width_px": 347.75,
+          "rendered_ink_width_px": 346.507
+        },
+        {
+          "slide": "page_001",
+          "element": "reg_response2",
+          "expected": "blue hot air balloon",
+          "rendered": "blue hot air balloon",
+          "matches": true,
+          "actual_fonts": [
+            "CourierNewPSMT"
+          ],
+          "measured_ink_width_px": 407.5,
+          "rendered_ink_width_px": 406.003
+        },
+        {
+          "slide": "page_001",
+          "element": "gcg_line1",
+          "expected": "A large, colorful hot air balloon is flying over the river.",
+          "rendered": "A large, colorful hot air balloon is flying over the river.",
+          "matches": true,
+          "actual_fonts": [
+            "CourierNewPS-BoldMT",
+            "CourierNewPSMT"
+          ],
+          "measured_ink_width_px": 1201.75,
+          "rendered_ink_width_px": 1196.118
+        },
+        {
+          "slide": "page_001",
+          "element": "gcg_line2",
+          "expected": "The sky is overarching the river, trees, and buildings.",
+          "rendered": "The sky is overarching the river, trees, and buildings.",
+          "matches": true,
+          "actual_fonts": [
+            "CourierNewPS-BoldMT",
+            "CourierNewPSMT"
+          ],
+          "measured_ink_width_px": 1117.75,
+          "rendered_ink_width_px": 1112.616
+        },
+        {
+          "slide": "page_001",
+          "element": "phrase_response1",
+          "expected": "A <hot air balloon>",
+          "rendered": "A <hot air balloon>",
+          "matches": true,
+          "actual_fonts": [
+            "CourierNewPS-BoldMT",
+            "CourierNewPSMT"
+          ],
+          "measured_ink_width_px": 387.75,
+          "rendered_ink_width_px": 385.823
+        },
+        {
+          "slide": "page_001",
+          "element": "phrase_response2",
+          "expected": "over the <river>",
+          "rendered": "over the <river>",
+          "matches": true,
+          "actual_fonts": [
+            "CourierNewPS-BoldMT",
+            "CourierNewPSMT"
+          ],
+          "measured_ink_width_px": 324.25,
+          "rendered_ink_width_px": 322.491
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "9887476d4b781bddf99e0d168028095c6488477ec742bf318b5353b20ec58f2e",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "page_001",
+      "mean_absolute_pixel_error": 0.054459,
+      "comparison": "page_001_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

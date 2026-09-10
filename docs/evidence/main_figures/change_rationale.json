@@ -1,0 +1,9 @@
+{
+  "change": "Academic figure reconstruction guidance",
+  "evidence": [
+    "GLaMM repository image omits two published Figure2 labels.",
+    "GroundingDINO repository image differs from published Figure3 prompts/spacing.",
+    "UniAD TrackFormer/MapFormer lettering is fused with complex imagery and must not be counted as native despite large totalobjectcount."
+  ],
+  "scope": "Instruction-level quality improvement, no claimed runtime layout bug fix yet."
+}

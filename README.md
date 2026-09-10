@@ -14,12 +14,13 @@
 可直接下载仓库中的 [可编辑样例](examples/editable_demo.pptx)，对照
 [原图](examples/source_02.png) 和 [重建场景](examples/flow_reconstruction.json)。
 
-**v0.3.1 新测 super_teaser 的 LoRA、专家路由、具身分层推理三类图。**
-修复 PDF 检查把邻近文字误算进空白文本框的问题，全套 **67 项测试通过**。
-路由图 25 个固定区域达标；LoRA 和具身图仍有字体、公式等保真差异，未宣称整图通过。
-可编辑文件、实际渲染和失败证据见 [三类复杂图报告](docs/teaser_cases.md)。
-此前的 [四种新案例](docs/diverse_cases.md)、[ICLR 论文图](docs/conference_cases.md) 和
-[六个通用案例](docs/real_cases.md) 保留记录，旧密集表格仍有字体/网格冲突。
+**v0.3.2 新测正式顶会的三张完整主架构图：Grounding DINO、GLaMM、UniAD。**
+保留完整面板与复杂连线；Grounding DINO 包含725个原生对象，另有4处局部图片。
+三例均完成实际PPTX渲染，但严格区域保真仅11/35、3/39、8/36达标，**当前仍不能可靠实现复杂主图高保真转换**。
+本轮改进源图版本核验、字体校准与重建指南，未宣称新的运行时算法修复。
+完整来源、转换文件和失败明细见 [正式主图压力测试](docs/main_figures.md)。
+此前的 [super_teaser](docs/teaser_cases.md)、[CLIP/Swin等案例](docs/diverse_cases.md)、
+[ICLR论文图](docs/conference_cases.md) 和 [通用案例](docs/real_cases.md) 保留独立记录。
 
 ## 有哪些实际改进
 

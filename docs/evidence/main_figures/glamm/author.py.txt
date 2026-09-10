@@ -1,0 +1,64 @@
+from pathlib import Path
+from PIL import Image
+import json
+p=Path(__file__).parent;j=p/'published_job';a=j/'assets';a.mkdir(exist_ok=True);S=2894/2048;e=[];im=Image.open(p/'published.png')
+def shape(id,b,fill='#F2F2F2',stroke=None,z=1,typ='rect',**kw):
+ x={'id':id,'kind':'shape','z':z,'box':b,'shape':typ,'fill':fill};x.update(kw)
+ if stroke:x.update(stroke=stroke,stroke_width=1.5)
+ e.append(x);return x
+def text(id,b,t,size=28,family='Times New Roman',color='#000000',**kw):
+ x={'id':id,'kind':'text','z':20,'box':b,'text':t,'font_size':size,'font_family':family,'color':color,'wrap':False,'fit':'strict'};x.update(kw);e.append(x);return x
+def line(id,pts,arrow=False,color='#444444',width=3,**kw):
+ x={'id':id,'kind':'line','z':5,'points':pts,'stroke':color,'stroke_width':width};x.update(kw)
+ if arrow:x.update(arrow=True,arrow_head={'length':9,'width':9})
+ e.append(x);return x
+def crop(id,b):
+ x,y,w,h=b;box=tuple(round(v*S) for v in (x,y,x+w,y+h));im.crop(box).save(a/f'{id}.png');e.append({'id':id,'kind':'image','z':15,'box':b,'path':f'assets/{id}.png','provenance':f'Exact local pixel crop of official CVPR2024 Figure2, source bbox {box}; research evaluation, author copyright retained','contains_text':False})
+# exact independent photographic and artwork crops
+for id,b in [('input_photo',[3,39,278,201]),('output_photo',[1692,6,280,182]),('input_region_balloon',[24,328,90,104]),('input_region_water',[128,359,168,47]),('answer_balloon',[1648,204,60,73]),('answer_water',[1647,289,130,46]),('segmentation_photo',[301,586,168,112]),('region_photo',[1099,548,90,105]),('phrase_photo',[1513,590,172,115]),('robot_llm',[1173,218,48,55]),('robot_seg',[21,633,49,59]),('robot_caption',[493,540,50,59]),('robot_region',[1438,638,49,60]),('robot_phrase',[1973,644,49,60])]:crop(id,b)
+# panels and blocks
+for id,b,col in [('regions',[4,314,303,136],'#F2F2F2'),('region_encoder',[320,217,307,233],'#F2F2F2'),('global',[329,42,291,122],'#D2D7FE'),('grounding',[989,36,291,124],'#BED8EE'),('decoder',[1340,34,279,126],'#BDD6EB'),('llm',[1025,183,219,131],'#F8CEAF'),('vl',[954,184,57,131],'#D2D7FE'),('lp',[1263,184,57,131],'#BED8EE'),('instruction',[771,353,366,119],'#F2F2F2'),('answers',[1632,193,409,154],'#F2F2F2')]:shape(id,b,col,typ='round_rect',radius=7)
+# approximate panel shadows native rectangles; mark background and behind original blocks
+for id in ['global','grounding','decoder','llm','vl','lp']:
+ obj=next(x for x in e if x['id']==id);x,y,w,h=obj['box'];shadow=shape(id+'_shadow',[x+4,y+5,w,h],'#D0D0D0',z=0,typ='round_rect',radius=6);shadow['allow_overlap_with']=[id];shadow['overlap_reason']='Source drop-shadow visible behind this block; flat native approximation.'
+shape('vl','x') if False else None
+# prompt trays and tokens
+for id,b in [('input_tokens',[690,213,243,72]),('output_tokens',[1358,214,242,71])]:shape(id,b,'#FFFFFF','#B6B2E7' if id=='input_tokens' else '#BD8D63',typ='round_rect',radius=2)
+for prefix,start,y,colors in [('in',702,228,['#D2D7FE','#D2D7FE','#8153A4','#D2D7FE','#D2D7FE','#D67400','#D2D7FE']),('out',1370,232,['#F6CEAF','#F6CEAF','#BBD7ED','#F6CEAF','#F6CEAF','#F6CEAF','#BBD7ED'])]:
+ for n,col in enumerate(colors):
+  x=start+n*32.6;container='input_tokens' if prefix=='in' else 'output_tokens';front=shape(f'{prefix}_token{n}',[x,y,18,48],col,'#ACA9D9' if prefix=='in' else '#D1A179',z=3,container=container)
+  shape(f'{prefix}_side{n}',[x+18,y-7,7,55], '#A9A8D9' if prefix=='in' else '#D7AC8A',z=3,typ='polygon',vertices=[[0,0.13],[1,0],[1,0.87],[0,1]],container=container)
+  shape(f'{prefix}_top{n}',[x,y-7,25,7],'#E6E6FF' if prefix=='in' else '#FFE3C6',z=3,typ='polygon',vertices=[[0,1],[0.28,0],[1,0],[0.72,1]],container=container)
+# multiscale region stack: four native parallelograms, border ROI boxes, individual sides
+for k,(x,y,w,h) in enumerate([(327,315,289,104),(336,306,242,84),(348,295,196,65),(361,281,141,45)]):
+ shape(f'stack{k}',[x,y,w,h],'#CDD3EF',z=3+k,typ='polygon',vertices=[[0,0.88],[0.32,0],[1,0],[0.68,0.88]],container='region_encoder')
+ # front thickness and box overlays normalized parallelograms
+ shape(f'stack_front{k}',[x,y+h-13,w*.68,13],'#BAC4E6',z=3+k,container='region_encoder')
+ for c,(col,off) in enumerate([('#F58200',0),('#703FA0',-10)]):
+  shape(f'roi{k}_{c}',[x+24+off,y+18+off,w-80,h-34],None,col,z=8+k,typ='polygon',vertices=[[0,1],[.30,0],[1,0],[.70,1]],dash=[9,5],container='region_encoder')
+# architecture connectors
+for id,pts,arr in [('photo_global',[[281,103],[328,103]],1),('global_region',[[474,164],[474,216]],1),('global_join_h',[[620,103],[659,103]],0),('global_join_v',[[659,103],[659,249]],0),('region_join_h',[[627,334],[659,334]],0),('region_join_v',[[659,334],[659,249]],0),('join_tokens',[[659,249],[689,249]],1),('tokens_vl',[[933,249],[954,249]],0),('vl_llm',[[1011,249],[1025,249]],0),('llm_lp',[[1244,249],[1263,249]],0),('lp_tokens',[[1320,249],[1357,249]],0),('ground_decoder',[[1280,98],[1339,98]],1),('decoder_photo',[[1619,98],[1691,98]],1),('photo_bypass_v',[[142,39],[142,7]],0),('photo_bypass_h',[[142,7],[1135,7]],0),('photo_bypass_end',[[1135,7],[1135,35]],1),('instruction_llm',[[1097,353],[1097,317]],1),('llm_response',[[1190,316],[1190,353]],1),('output_up1',[[1450,225],[1450,193]],0),('output_up2',[[1580,225],[1580,193]],0),('output_join',[[1450,193],[1580,193]],0),('output_decoder',[[1480,193],[1480,162]],1)]:line(id,pts,arr)
+# panel boundaries
+shape('bottom_bg',[4,486,2037,249],'#EBE8F0',z=0,role='background')
+for id,b in [('seg',[15,495,462,225]),('cap',[483,495,596,225]),('reg',[1087,496,406,224]),('phrase',[1500,496,528,224]),('gcg',[1155,354,886,118])]:
+ shape(id,b,'#FAFAFA','#C58B1F',z=1,typ='round_rect',radius=12 if id!='gcg' else 0)
+ x,y,w,h=b;shape(id+'_header',[x,y,w,40 if id!='gcg' else 32],'#F2F2F2','#C58B1F',z=2,container=id)
+# text preserving every actual manual line break
+for id,b,t,size,container in [('global_t',[342,60,265,85],'Global Image\nEncoder',36,'global'),('grounding_t',[1002,60,266,85],'Grounding\nImage Encoder',36,'grounding'),('decoder_t',[1350, seventy:= seventy if False else 71,259,49],'Pixel Decoder',36,'decoder'),('region_t',[336,229,275,46],'Region Encoder',36,'region_encoder'),('llm_t',[1060,219,110,57],'LLM',44,'llm'),('vl_t',[958,231,51,40],'V-L',28,'vl'),('lp_t',[1267,235,52,40],'L-P',28,'lp'),('input_prompt',[684,285,257,36],'Image-region prompts',26,None),('output_prompt',[1382,281,196,36],'Output prompts',26,None),('instruction_t',[785,381,342,67],'Can  you  give  a  detailed\ndescription of this image?',28,'instruction')]:text(id,b,t,size,align='center' if id not in ['instruction_t'] else 'left',**({'container':container} if container else {}))
+for id,b,t in [('seg_title',[25,497,446,38],'Referring Expression Segmentation'),('cap_title',[490,497,581,38],'Image Level Captioning'),('reg_title',[1093,498,394,38],'Region Level Captioning'),('phrase_title',[1505,498,519,38],'Phrase Grounding'),('gcg_title',[1160,350,874,38],'Grounded Conversation Generation')]:text(id,b,t,30 if id=='gcg_title' else 28,color='#866800',align='center',container=id.split('_')[0]+'_header')
+for id,b,t in [('seg_question',[27,538,430,66],'Can you segment the balloon in\nthis given picture?'),('cap_question',[655,538,421,39],'Please describe the given image.'),('reg_question',[1193,548,297,69],'Could you tell me more\nabout this region?'),('phrase_question1',[1507,547,516,38],'Can you segment phrases in, “A <hot air'),('phrase_question2',[1692,578,333,39],'balloon> over the <river>”')]:text(id,b,t,28)
+blue='#092C72'
+for id,b,t in [('answer_balloon_t',[1719,207,305,64],'A large hot air\nballoon'),('answer_water_t',[1790,279,240,66],'A large body of\nwater'),('seg_response',[76,635,226,67],'Sure, the\nsegmentation is'),('cap_response1',[549,569,519,34],'A hot air balloon is seen in the'),('cap_response2',[505,597,561,116],'air, flying over a river. The balloon,\nhigh up in the sky, is yellow and red\nin color, with a bridge and trees\nvisible in the background.'),('reg_response1',[1190,643,252,35],'A yellow, red and'),('reg_response2',[1145,672,299,35],'blue hot air balloon')]:text(id,b,t,25,family='Courier New',color=blue,line_height=1.1)
+for id,b,runs in [('gcg_line1',[1167,398,867,35],[('A large, ',None),('colorful hot air balloon','#FA6455'),(' is flying over the ',None),('river.','#3231A2')]),('gcg_line2',[1167,428,844,35],[('The ',None),('sky','#8CD5DF'),(' is overarching the river, ',None),('trees','#4D9D4C'),(', and ',None),('buildings.','#C5A240')]),('phrase_response1',[1692,647,281,35],[('A <',blue),('hot air balloon','#978300'),('>',blue)]),('phrase_response2',[1692,677,244,35],[('over the <',blue),('river','#3231A2'),('>',blue)])]:
+ ob=text(id,b,'',25,family='Courier New');del ob['text'];ob['runs']=[dict(text=t,**({'color':c,'bold':True} if c and c!=blue else {'color':c or '#000000'})) for t,c in runs]
+# scale all authored coordinates consistently from image-view coordinates to actual source pixels
+for x in e:
+ for field in ['box','padding','dash']:
+  if field in x:x[field]=[round(v*S,4) for v in x[field]]
+ if 'points'in x:x['points']=[[round(v*S,4) for v in pt] for pt in x['points']]
+ for field in ['font_size','stroke_width','radius']:
+  if field in x:x[field]*=S
+ if 'arrow_head'in x:x['arrow_head']={k:v*S for k,v in x['arrow_head'].items()}
+# source verified line endpoint intersections and token face joins, exact named pairs only
+# generic collision exemptions are NOT added here; inspect checker evidence first.
+scene=json.loads((j/'scene.json').read_text());scene['slides'][0].update(reviewed=True,elements=e,notes='Full official CVPR2024 GLaMM Figure2 raster reconstruction; all task panels retained; flat shadows and native token stacks approximate source. Paper author rights retained.');(j/'scene.json').write_text(json.dumps(scene,indent=2));print(len(e))

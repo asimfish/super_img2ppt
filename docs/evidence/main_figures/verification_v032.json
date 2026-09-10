@@ -1,0 +1,226 @@
+{
+  "version": "0.3.2",
+  "evaluated": "2026-09-11",
+  "result": "CONDITIONAL",
+  "source_fidelity": "FAIL for all three complete main figures; thresholds differ and are not population accuracy.",
+  "checks": [
+    {
+      "command": [
+        "uv",
+        "run",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "seconds": 0.098,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "exit_code": 0,
+      "seconds": 0.047,
+      "stdout": "80 files already formatted\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "seconds": 36.02,
+      "stdout": "...................................................................      [100%]\n67 passed in 35.67s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/verify_skill.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.188,
+      "stdout": "{\n  \"status\": \"pass\",\n  \"activation_cases\": 8,\n  \"problems\": [],\n  \"scope\": \"Static package checks; semantic review and forward tests are separate evidence\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/build_capability_registry.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.065,
+      "stdout": "Capability registry is current\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "/Users/liyufeng/.whalent-agent/profiles/acct-63aacf96110c0e9595f3/agents/rjguoiuibvgcfiv8w56gq7bu5/codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/super-img2ppt"
+      ],
+      "exit_code": 0,
+      "seconds": 0.052,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "/Users/liyufeng/.agents/skills/skill-quality-gate/scripts/audit_skill_governance.py",
+        "--repo",
+        "/Users/liyufeng/code/super_img2ppt",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.052,
+      "stdout": "{\n  \"verdict\": \"PASS\",\n  \"skills_checked\": [\n    \"super-img2ppt\"\n  ],\n  \"findings\": [],\n  \"semantic_review\": \"REQUIRED — deterministic checks do not prove behavior-description alignment\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.034,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/build_package.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.054,
+      "stdout": "/Users/liyufeng/code/super_img2ppt/dist/super-img2ppt.skill\nSHA256 4885368b7c3fc4cb4c5bfe37b6014bffcfcc7b8bb185fdd58a829ab5bda43a06\n",
+      "stderr": ""
+    }
+  ],
+  "replays": {
+    "uniad": {
+      "status": "review",
+      "render_pixels_identical": true,
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/run_real_cases.py",
+        "--corpus",
+        "examples/main_figures",
+        "--out",
+        "output/main_figures_20260911/parent_uniad",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+      ],
+      "exit_code": 0
+    },
+    "glamm": {
+      "status": "review",
+      "render_pixels_identical": true,
+      "command": [
+        "uv",
+        "run",
+        "super-img2ppt",
+        "build",
+        "output/main_figures_20260911/deliverables/glamm/scene.resolved.json",
+        "--out",
+        "output/main_figures_20260911/parent_glamm",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+      ],
+      "exit_code": 0
+    },
+    "grounding": {
+      "status": "review",
+      "render_pixels_identical": true,
+      "command": [
+        "uv",
+        "run",
+        "super-img2ppt",
+        "build",
+        "output/main_figures_20260911/deliverables/grounding_dino/scene.resolved.json",
+        "--out",
+        "output/main_figures_20260911/parent_grounding",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+      ],
+      "exit_code": 0
+    }
+  },
+  "strict_regions": {
+    "grounding_dino": [
+      11,
+      35
+    ],
+    "glamm": [
+      3,
+      39
+    ],
+    "uniad": [
+      8,
+      36
+    ]
+  },
+  "runtime_delta": {
+    "changed_runtime_files": [
+      "__init__.py"
+    ],
+    "reason": "Version constant only. No new rendering/layout behavior claimed.",
+    "unchanged_from": "14ac634fdcf81243192679e3cf5a587dde634865"
+  },
+  "source_reproduction": [
+    {
+      "id": "grounding_dino_main",
+      "sha256": "3fab384f08b75176206c45cf9bbd07647a2e16a768d49b89b7f6d6a8f787da7f",
+      "reference_sha256": "3fab384f08b75176206c45cf9bbd07647a2e16a768d49b89b7f6d6a8f787da7f",
+      "pixels_identical": true
+    },
+    {
+      "id": "glamm_main",
+      "sha256": "c8e68bcf8848ed059d24e6a78d915aaf8a2d10dacb11516f875fb17f53be7226",
+      "reference_sha256": "c8e68bcf8848ed059d24e6a78d915aaf8a2d10dacb11516f875fb17f53be7226",
+      "pixels_identical": true
+    },
+    {
+      "id": "uniad_main",
+      "sha256": "a00580c3f7eaaa2603d91e2dfaa86b23ed7a44eeb3fc3079fded860e620d3c89",
+      "reference_sha256": "a00580c3f7eaaa2603d91e2dfaa86b23ed7a44eeb3fc3079fded860e620d3c89",
+      "pixels_identical": true
+    }
+  ],
+  "raw_evidence_index_sha256": "6f3ee17cc2acb34315ceb9e81c8eed821dacb56cd57aa561f7b4bd8ca6938195",
+  "artifact_manifest_sha256": "449d92cc9837e435a3f1bc52d3ff5ed0d0e255576082351d9eb0ddc9aab5c002",
+  "package_sha256": "4885368b7c3fc4cb4c5bfe37b6014bffcfcc7b8bb185fdd58a829ab5bda43a06",
+  "semantic_review": "Instructions now require full published figure identity, content inventory, installed-font calibration and explicit raster boundaries. No added runtime capability or algorithm fixes are claimed. Actual main-figure tasks and original failures support the documented limited capability.",
+  "remaining": [
+    "Most strict text/geometry ROI still fail source fidelity.",
+    "One UniAD red-text ROI invalid for dark-only mask; retained as fail.",
+    "No held-out generalization evaluation; fixed regions guide measured local repairs.",
+    "Native PowerPoint/WPS appearance unverified.",
+    "Package smoke reuses existing dependencies; no fresh installation claimed."
+  ]
+}

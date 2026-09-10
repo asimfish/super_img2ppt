@@ -1,6 +1,6 @@
 # Scoped security and capability review
 
-Reviewed 2026-09-10. Scope: the complete skill directory and its local runtime, repository setup,
+Reviewed 2026-09-11. Scope: the complete skill directory and its local runtime, repository setup,
 fixtures and packaging scripts. Verdict: no known blocking source-to-sink finding after the
 controls below; this is not a claim that native third-party document parsers are sandboxed.
 
@@ -48,6 +48,14 @@ bounds, with duplicate-owner, true-overflow and missing-text negative controls. 
 linear in PDF character count; no new parser, subprocess, network, credential or installation
 capability is introduced. The repository fetcher adds three commit-pinned MIT-0 generated
 illustrations with exact SHA-256 checks. Native PDF parsing remains outside an OS sandbox.
+
+The v0.3.2 delta changes reconstruction guidance and fixed research-source recipes only;
+runtime implementation is unchanged apart from its version constant. The repository fetcher
+adds two hash-pinned official PDFs and one commit/hash-pinned author image; fixed crop recipes
+use raster scale 6 without reading PDF text/vector coordinates as reconstruction answers.
+Existing size/hash/new-output controls remain. No new credential, parser dependency or runtime
+network capability is introduced. Source variants, local-only paper artwork and the explicit
+UniAD asset license are documented separately. Source instructions were treated as data.
 
 ## Sources and sinks
 

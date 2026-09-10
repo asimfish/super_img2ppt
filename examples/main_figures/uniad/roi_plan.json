@@ -1,0 +1,383 @@
+{
+  "frozen_before_scene": true,
+  "threshold": {
+    "dark_rgb_max": 150,
+    "max_ink_edge_delta_px": 3,
+    "min_IoU": 0.7
+  },
+  "regions": [
+    {
+      "id": "legend_ego",
+      "kind": "text",
+      "box": [
+        162,
+        16,
+        210,
+        33
+      ]
+    },
+    {
+      "id": "legend_bev",
+      "kind": "text",
+      "box": [
+        161,
+        66,
+        160,
+        32
+      ]
+    },
+    {
+      "id": "legend_b",
+      "kind": "text",
+      "box": [
+        102,
+        64,
+        22,
+        30
+      ]
+    },
+    {
+      "id": "input",
+      "kind": "text",
+      "box": [
+        23,
+        257,
+        190,
+        63
+      ]
+    },
+    {
+      "id": "bev",
+      "kind": "text",
+      "box": [
+        281,
+        257,
+        174,
+        63
+      ]
+    },
+    {
+      "id": "b_query",
+      "kind": "text",
+      "box": [
+        355,
+        139,
+        30,
+        35
+      ]
+    },
+    {
+      "id": "trackq",
+      "kind": "text",
+      "box": [
+        480,
+        122,
+        130,
+        37
+      ]
+    },
+    {
+      "id": "mapq",
+      "kind": "text",
+      "box": [
+        480,
+        235,
+        115,
+        37
+      ]
+    },
+    {
+      "id": "track",
+      "kind": "text",
+      "box": [
+        608,
+        50,
+        210,
+        46
+      ]
+    },
+    {
+      "id": "map",
+      "kind": "text",
+      "box": [
+        614,
+        311,
+        198,
+        45
+      ]
+    },
+    {
+      "id": "motion",
+      "kind": "text",
+      "box": [
+        1028,
+        154,
+        135,
+        83
+      ]
+    },
+    {
+      "id": "occ",
+      "kind": "text",
+      "box": [
+        1359,
+        179,
+        197,
+        47
+      ]
+    },
+    {
+      "id": "planner",
+      "kind": "text",
+      "box": [
+        1699,
+        177,
+        145,
+        47
+      ]
+    },
+    {
+      "id": "agent",
+      "kind": "text",
+      "box": [
+        1193,
+        78,
+        129,
+        55
+      ]
+    },
+    {
+      "id": "motionq",
+      "kind": "text",
+      "box": [
+        1143,
+        363,
+        134,
+        40
+      ]
+    },
+    {
+      "id": "occq",
+      "kind": "text",
+      "box": [
+        1401,
+        310,
+        89,
+        38
+      ]
+    },
+    {
+      "id": "scene",
+      "kind": "text",
+      "box": [
+        1486,
+        302,
+        145,
+        59
+      ]
+    },
+    {
+      "id": "kv1",
+      "kind": "text",
+      "box": [
+        675,
+        161,
+        45,
+        24
+      ]
+    },
+    {
+      "id": "kv2",
+      "kind": "text",
+      "box": [
+        901,
+        104,
+        47,
+        24
+      ]
+    },
+    {
+      "id": "kv3",
+      "kind": "text",
+      "box": [
+        900,
+        273,
+        47,
+        24
+      ]
+    },
+    {
+      "id": "kv4",
+      "kind": "text",
+      "box": [
+        1270,
+        209,
+        45,
+        24
+      ]
+    },
+    {
+      "id": "b1",
+      "kind": "text",
+      "box": [
+        642,
+        181,
+        29,
+        39
+      ]
+    },
+    {
+      "id": "b2",
+      "kind": "text",
+      "box": [
+        1426,
+        375,
+        27,
+        37
+      ]
+    },
+    {
+      "id": "b3",
+      "kind": "text",
+      "box": [
+        1759,
+        375,
+        27,
+        37
+      ]
+    },
+    {
+      "id": "stage1",
+      "kind": "text",
+      "box": [
+        159,
+        437,
+        137,
+        41
+      ]
+    },
+    {
+      "id": "stage2",
+      "kind": "text",
+      "box": [
+        637,
+        437,
+        168,
+        41
+      ]
+    },
+    {
+      "id": "stage3",
+      "kind": "text",
+      "box": [
+        1221,
+        437,
+        160,
+        41
+      ]
+    },
+    {
+      "id": "stage4",
+      "kind": "text",
+      "box": [
+        1704,
+        437,
+        134,
+        41
+      ]
+    },
+    {
+      "id": "bev_arrow",
+      "kind": "geometry",
+      "box": [
+        442,
+        190,
+        495,
+        18
+      ]
+    },
+    {
+      "id": "track_input",
+      "kind": "geometry",
+      "box": [
+        640,
+        115,
+        25,
+        59
+      ]
+    },
+    {
+      "id": "map_input",
+      "kind": "geometry",
+      "box": [
+        640,
+        229,
+        25,
+        65
+      ]
+    },
+    {
+      "id": "motion_input",
+      "kind": "geometry",
+      "box": [
+        1068,
+        265,
+        23,
+        96
+      ]
+    },
+    {
+      "id": "occ_input",
+      "kind": "geometry",
+      "box": [
+        1426,
+        244,
+        23,
+        67
+      ]
+    },
+    {
+      "id": "planner_input",
+      "kind": "geometry",
+      "box": [
+        1758,
+        244,
+        23,
+        124
+      ]
+    },
+    {
+      "id": "agent_to_planner",
+      "kind": "geometry",
+      "box": [
+        1240,
+        271,
+        503,
+        22
+      ]
+    },
+    {
+      "id": "occ_to_planner",
+      "kind": "geometry",
+      "box": [
+        1580,
+        188,
+        48,
+        22
+      ]
+    }
+  ],
+  "topology": [
+    "BEV\u2192TrackFormer",
+    "BEV\u2192MapFormer",
+    "BEV\u2192MotionFormer",
+    "TrackFormer\u2192MotionFormer",
+    "MapFormer\u2192MotionFormer",
+    "Motion queries\u2192MotionFormer",
+    "MotionFormer\u2192agent features\u2192OccFormer",
+    "agent features\u2192Planner",
+    "BEV\u2192Occ queries\u2192OccFormer",
+    "OccFormer\u2192Planner",
+    "BEV\u2192Planner"
+  ]
+}

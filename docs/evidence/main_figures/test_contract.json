@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-11",
+  "baseline_commit": "14ac634fdcf81243192679e3cf5a587dde634865",
+  "selected_cases": [
+    "Grounding DINO ECCV2024 full architecture",
+    "GLaMM CVPR2024 full architecture",
+    "UniAD CVPR2023 full architecture"
+  ],
+  "scope": "Complete author-published main architecture figures, not simplified redrawn samples or generated teasers.",
+  "criteria": [
+    "Preserve complete figure panel coverage, readable text, module hierarchy, branch/merge topology, arrow direction and formula symbols.",
+    "All readable ordinary labels and simple shapes/connectors remain native editable objects. Explicitly disclose native inability and raster coverage.",
+    "Freeze source hashes and per-case text/shape/topology ROI definitions before authoring. Use actual LibreOffice PPTX render normalized to source pixels without registration.",
+    "Keep all first-build and revised failures; at most 3 meaningful region revisions. Do not relax thresholds or claim passing validation means source fidelity.",
+    "Fix only reproducible implementation defects supported by these cases; retain a red regression before any fix.",
+    "Package source/derived artwork only with verified compatible source rights; otherwise deliver local test outputs and publish engineering evidence."
+  ],
+  "runtime_hashes": {
+    "BENCHMARK.md": "8f35232b9e30ba1ca30d818cc61a46c197052740434fbee10e7f2da773070ff1",
+    "LICENSE": "ec0a8ab9524deea7406a3e56336a3229eee789c126e752e1ed489ec804ab3c38",
+    "SKILL.md": "f524d1b7c99fa0502e289d31f0348c061af3251e3d145c7eada013d6177634c6",
+    "UPSTREAM.md": "5a33574f7c1ca3ebefa83e331f1955b3f294bbb7ec243311b724f4c5fdd2e214",
+    "agents/openai.yaml": "9abaa0671a0dba7838928ccc2034564bfed1288f5504b67d8dad770f2194eaed",
+    "evals/activation.json": "3c124124748457a5b86beae0c1a6819e34434037aea630c048bd39745e8215b8",
+    "pyproject.toml": "0470ca7d4ab6210f89be98354a246937f30a6a19d1a66cbe0193c15c97027283",
+    "references/qa.md": "1bd6a5a61f27e4b5ba1c27cfc7ff5e366e0c5a268fa9f022827f054088b5c3d4",
+    "references/reconstruction.md": "5066e43d040455bbae2bad8d07636e256fda371d147d9847e742dc1741df67f3",
+    "references/scene.md": "a58aa11aae367507989dd01461181d2dba9ee6e3f9ead33c2679eea5d62b7358",
+    "references/scene.schema.json": "ec57541b81882cd4a11851682325baafd66fe57810051fe2603cf9e6b92443a1",
+    "requirements.lock": "d6403a08f23783a956e451b24e4e04741ecf573530d6c3c4ac0a718d01b6208b",
+    "skill-card.md": "224285211bfc659727c0346eb9f2da5fee7657d54d534a5efc6172361d6b7378",
+    "src/super_img2ppt/__init__.py": "1dc374304057dd8649ed3b4d3624826bbfe3e9467b90701a5bfdde59273f284b",
+    "src/super_img2ppt/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/super_img2ppt/cli.py": "b024e045a496ef3b85e7294ffbc3fd3f155f7d689c72ae0122c7138edd56dc16",
+    "src/super_img2ppt/export.py": "a950605202a19cee13d0d00e9ccb1b935b37c2e491249a0c9163ca7ea7a903f8",
+    "src/super_img2ppt/fonts.py": "9d241e02e3f7929ff8fae9570e2143e6120630c6d8d828dca16428d4c5debde9",
+    "src/super_img2ppt/geometry.py": "df740783a63fb24ee5b657f5909a92f43b16a22bd6bdd2afcb6b1fc04c764a9f",
+    "src/super_img2ppt/layout.py": "5be7a48c98d7954cd70b9cb70dd4949a90c653ee8d1e56dcc86bd8a4987558e9",
+    "src/super_img2ppt/ocr.py": "e92fd445ebfbdefa0350f750d10d7128f5a35bfa06606704c12e63646849a1c3",
+    "src/super_img2ppt/prepare.py": "7d0d2c50dd5acdc7982f47b0e8082a922755acabafc51ef2cd8d20d1058d31be",
+    "src/super_img2ppt/qa.py": "44872030847cccf42cd55c87fadbd5e5118f49d82ba659c238ef9e354113ef97",
+    "src/super_img2ppt/render.py": "34f2acc557b2a938ddc3b805bea46a2420f1f01b6fd69d96a66920c640ffa7ec",
+    "src/super_img2ppt/scene.py": "53a564c40fcc85cebee3670b11ff07a6b8ec2a133e18013e7dc02343bf2761cc",
+    "src/super_img2ppt/vision_ocr.swift": "eee819866a7dc43bea90cebede2ae197f096298580b6e9147ea9ff92dcdb3485"
+  },
+  "known_limits": [
+    "Native PowerPoint/WPS appearance unverified",
+    "Existing renderer/fonts only; no dependency or font installation"
+  ]
+}

@@ -1,0 +1,2231 @@
+{
+  "version": 1,
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 1880,
+      "height": 484,
+      "source": "assets/05b9a73ec5a3ba65d359.png",
+      "background": "#FFFFFF",
+      "reviewed": true,
+      "elements": [
+        {
+          "id": "cameras",
+          "kind": "image",
+          "z": 1,
+          "box": [
+            63,
+            153,
+            95,
+            91
+          ],
+          "path": "assets/4e3d9e6dcd03571388e2.png",
+          "contains_text": false,
+          "provenance": "Exact crop of pinned official UniAD pipeline.png; complex artwork."
+        },
+        {
+          "id": "backbone",
+          "kind": "image",
+          "z": 1,
+          "box": [
+            216,
+            126,
+            64,
+            122
+          ],
+          "path": "assets/1fe4e128499054d6393c.png",
+          "contains_text": false,
+          "provenance": "Exact crop of pinned official UniAD pipeline.png; complex artwork."
+        },
+        {
+          "id": "bev_art",
+          "kind": "image",
+          "z": 1,
+          "box": [
+            329,
+            186,
+            74,
+            34
+          ],
+          "path": "assets/9ca3451609de0fcd6ea0.png",
+          "contains_text": false,
+          "provenance": "Exact crop of pinned official UniAD pipeline.png; complex artwork."
+        },
+        {
+          "id": "motion_art",
+          "kind": "image",
+          "z": 1,
+          "box": [
+            994,
+            0,
+            168,
+            124
+          ],
+          "path": "assets/2888ab71a73d1061b6bb.png",
+          "contains_text": false,
+          "provenance": "Exact crop of pinned official UniAD pipeline.png; complex artwork."
+        },
+        {
+          "id": "occ_art",
+          "kind": "image",
+          "z": 1,
+          "box": [
+            1347,
+            5,
+            189,
+            151
+          ],
+          "path": "assets/fde2dc08dedad86b2a26.png",
+          "contains_text": false,
+          "provenance": "Exact crop of pinned official UniAD pipeline.png; complex artwork."
+        },
+        {
+          "id": "planner_art",
+          "kind": "image",
+          "z": 1,
+          "box": [
+            1670,
+            30,
+            176,
+            121
+          ],
+          "path": "assets/72779ee9ce7745050137.png",
+          "contains_text": false,
+          "provenance": "Exact crop of pinned official UniAD pipeline.png; complex artwork."
+        },
+        {
+          "id": "motion_box",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            996,
+            131,
+            168,
+            126
+          ],
+          "shape": "round_rect",
+          "fill": "#DFEFD6",
+          "stroke": "#285625",
+          "stroke_width": 2,
+          "radius": 6
+        },
+        {
+          "id": "occ_box",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1312,
+            165,
+            251,
+            67
+          ],
+          "shape": "round_rect",
+          "fill": "#FFF3CE",
+          "stroke": "#875706",
+          "stroke_width": 2,
+          "radius": 6
+        },
+        {
+          "id": "planner_box",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1659,
+            163,
+            185,
+            68
+          ],
+          "shape": "round_rect",
+          "fill": "#F3939A",
+          "stroke": "#ED0014",
+          "stroke_width": 2,
+          "radius": 6
+        },
+        {
+          "id": "b1_circle",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            632,
+            179,
+            40,
+            40
+          ],
+          "shape": "ellipse",
+          "fill": "#CDCDCD",
+          "stroke": "#666666",
+          "stroke_width": 1.6
+        },
+        {
+          "id": "b2_circle",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1416,
+            372,
+            40,
+            40
+          ],
+          "shape": "ellipse",
+          "fill": "#CDCDCD",
+          "stroke": "#666666",
+          "stroke_width": 1.6
+        },
+        {
+          "id": "b3_circle",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1750,
+            372,
+            40,
+            40
+          ],
+          "shape": "ellipse",
+          "fill": "#CDCDCD",
+          "stroke": "#666666",
+          "stroke_width": 1.6
+        },
+        {
+          "id": "legend_circle",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            96,
+            60,
+            33,
+            34
+          ],
+          "shape": "ellipse",
+          "fill": "#CDCDCD",
+          "stroke": "#666666",
+          "stroke_width": 1.6
+        },
+        {
+          "id": "legend_tri",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            78,
+            18,
+            23,
+            24
+          ],
+          "shape": "triangle",
+          "fill": "#C8D9EC",
+          "stroke": "#123957",
+          "stroke_width": 3
+        },
+        {
+          "id": "legend_ellipse",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            120,
+            19,
+            25,
+            25
+          ],
+          "shape": "ellipse",
+          "fill": "#E0EED8",
+          "stroke": "#285625",
+          "stroke_width": 3
+        },
+        {
+          "id": "track_in0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            511,
+            20,
+            23,
+            23
+          ],
+          "shape": "triangle",
+          "fill": "#D3DFEF",
+          "stroke": null,
+          "stroke_width": 3
+        },
+        {
+          "id": "track_in1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            511,
+            57,
+            23,
+            23
+          ],
+          "shape": "rect",
+          "fill": "#D3DFEF",
+          "stroke": null,
+          "stroke_width": 3
+        },
+        {
+          "id": "track_in2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            511,
+            92,
+            23,
+            23
+          ],
+          "shape": "rect",
+          "fill": "#94B6E1",
+          "stroke": null,
+          "stroke_width": 3
+        },
+        {
+          "id": "track_out0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            857,
+            18,
+            23,
+            23
+          ],
+          "shape": "triangle",
+          "fill": "#D3DFEF",
+          "stroke": "#173D62",
+          "stroke_width": 3
+        },
+        {
+          "id": "track_out1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            857,
+            58,
+            23,
+            23
+          ],
+          "shape": "rect",
+          "fill": "#D3DFEF",
+          "stroke": "#173D62",
+          "stroke_width": 3
+        },
+        {
+          "id": "track_out2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            857,
+            93,
+            23,
+            23
+          ],
+          "shape": "rect",
+          "fill": "#94B6E1",
+          "stroke": "#173D62",
+          "stroke_width": 3
+        },
+        {
+          "id": "map_in0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            512,
+            282,
+            23,
+            23
+          ],
+          "shape": "rect",
+          "fill": "#F0EAF5",
+          "stroke": null,
+          "stroke_width": 3
+        },
+        {
+          "id": "map_in1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            512,
+            317,
+            23,
+            23
+          ],
+          "shape": "rect",
+          "fill": "#CFBDE0",
+          "stroke": null,
+          "stroke_width": 3
+        },
+        {
+          "id": "map_in2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            512,
+            353,
+            23,
+            23
+          ],
+          "shape": "rect",
+          "fill": "#AC8CC7",
+          "stroke": null,
+          "stroke_width": 3
+        },
+        {
+          "id": "map_out0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            857,
+            281,
+            23,
+            23
+          ],
+          "shape": "rect",
+          "fill": "#F0EAF5",
+          "stroke": "#6D309E",
+          "stroke_width": 3
+        },
+        {
+          "id": "map_out1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            857,
+            317,
+            23,
+            23
+          ],
+          "shape": "rect",
+          "fill": "#CFBDE0",
+          "stroke": "#6D309E",
+          "stroke_width": 3
+        },
+        {
+          "id": "map_out2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            857,
+            353,
+            23,
+            23
+          ],
+          "shape": "rect",
+          "fill": "#AC8CC7",
+          "stroke": "#6D309E",
+          "stroke_width": 3
+        },
+        {
+          "id": "agent0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1228,
+            138,
+            23,
+            23
+          ],
+          "shape": "rect",
+          "fill": "#34792B",
+          "stroke": "#285625",
+          "stroke_width": 3
+        },
+        {
+          "id": "agent1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1228,
+            184,
+            23,
+            23
+          ],
+          "shape": "rect",
+          "fill": "#94C882",
+          "stroke": "#285625",
+          "stroke_width": 3
+        },
+        {
+          "id": "agent2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1228,
+            230,
+            23,
+            23
+          ],
+          "shape": "ellipse",
+          "fill": "#E0EED8",
+          "stroke": "#285625",
+          "stroke_width": 3
+        },
+        {
+          "id": "motion_token0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1026,
+            367,
+            23,
+            23
+          ],
+          "shape": "rect",
+          "fill": "#DEEDD6",
+          "stroke": null,
+          "stroke_width": 2
+        },
+        {
+          "id": "motion_token1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1068,
+            367,
+            23,
+            23
+          ],
+          "shape": "rect",
+          "fill": "#8FCD7C",
+          "stroke": null,
+          "stroke_width": 2
+        },
+        {
+          "id": "motion_token2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1109,
+            367,
+            23,
+            23
+          ],
+          "shape": "rect",
+          "fill": "#317B2A",
+          "stroke": null,
+          "stroke_width": 2
+        },
+        {
+          "id": "legend_ego",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            163,
+            14,
+            210,
+            33
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 24,
+          "color": "#444444",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Ego-vehicle Query",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#444444"
+            }
+          ]
+        },
+        {
+          "id": "legend_bev",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            162,
+            64,
+            160,
+            32
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 24,
+          "color": "#444444",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "BEV Feature",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#444444"
+            }
+          ]
+        },
+        {
+          "id": "legend_b",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            102,
+            64,
+            22,
+            30
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 24,
+          "color": "#444444",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "legend_circle",
+          "runs": [
+            {
+              "text": "B",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#444444"
+            }
+          ]
+        },
+        {
+          "id": "input",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            12,
+            257,
+            190,
+            63
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 24,
+          "color": "#444444",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "runs": [
+            {
+              "text": "Multi-view\n",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#444444"
+            },
+            {
+              "text": "Vision-only Input",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#444444"
+            }
+          ]
+        },
+        {
+          "id": "bev",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            270,
+            257,
+            174,
+            63
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 24,
+          "color": "#444444",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "runs": [
+            {
+              "text": "Bird’s eye view\n",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#444444"
+            },
+            {
+              "text": "Feature",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#444444"
+            }
+          ]
+        },
+        {
+          "id": "b_query",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            356,
+            136,
+            30,
+            35
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 30,
+          "color": "#444444",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "B",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 30,
+              "bold": false,
+              "italic": true,
+              "color": "#444444"
+            }
+          ]
+        },
+        {
+          "id": "trackq",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            480,
+            120,
+            130,
+            37
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 27,
+          "color": "#07516E",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Track ",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 27,
+              "bold": false,
+              "italic": false,
+              "color": "#07516E"
+            },
+            {
+              "text": "Q",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 27,
+              "bold": true,
+              "italic": true,
+              "color": "#07516E"
+            }
+          ]
+        },
+        {
+          "id": "mapq",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            480,
+            233,
+            115,
+            37
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 27,
+          "color": "#571A8F",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Map ",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 27,
+              "bold": false,
+              "italic": false,
+              "color": "#571A8F"
+            },
+            {
+              "text": "Q",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 27,
+              "bold": true,
+              "italic": true,
+              "color": "#571A8F"
+            }
+          ]
+        },
+        {
+          "id": "motion",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            1028,
+            153,
+            135,
+            83
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 32,
+          "color": "#285625",
+          "bold": true,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "motion_box",
+          "align": "left",
+          "runs": [
+            {
+              "text": "Motion\n",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 32,
+              "bold": true,
+              "italic": false,
+              "color": "#285625"
+            },
+            {
+              "text": "Former",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 32,
+              "bold": true,
+              "italic": false,
+              "color": "#285625"
+            }
+          ]
+        },
+        {
+          "id": "occ",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            1359,
+            178,
+            197,
+            47
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 32,
+          "color": "#875706",
+          "bold": true,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "occ_box",
+          "runs": [
+            {
+              "text": "OccFormer",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 32,
+              "bold": true,
+              "italic": false,
+              "color": "#875706"
+            }
+          ]
+        },
+        {
+          "id": "planner",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            1699,
+            176,
+            145,
+            47
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 32,
+          "color": "#ED0014",
+          "bold": true,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "planner_box",
+          "runs": [
+            {
+              "text": "Planner",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 32,
+              "bold": true,
+              "italic": false,
+              "color": "#ED0014"
+            }
+          ]
+        },
+        {
+          "id": "agent",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            1193,
+            78,
+            129,
+            29
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 24,
+          "color": "#285625",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "left",
+          "runs": [
+            {
+              "text": "Agent-level",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#285625"
+            }
+          ]
+        },
+        {
+          "id": "motionq",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            1143,
+            361,
+            134,
+            40
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 27,
+          "color": "#285625",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Motion ",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 27,
+              "bold": false,
+              "italic": false,
+              "color": "#285625"
+            },
+            {
+              "text": "Q",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 27,
+              "bold": true,
+              "italic": true,
+              "color": "#285625"
+            }
+          ]
+        },
+        {
+          "id": "occq",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            1401,
+            308,
+            89,
+            38
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 27,
+          "color": "#875706",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Occ ",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 27,
+              "bold": false,
+              "italic": false,
+              "color": "#875706"
+            },
+            {
+              "text": "Q",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 27,
+              "bold": true,
+              "italic": true,
+              "color": "#875706"
+            }
+          ]
+        },
+        {
+          "id": "scene",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            1486,
+            302,
+            145,
+            29
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 24,
+          "color": "#875706",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "left",
+          "runs": [
+            {
+              "text": "Scene-level",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#875706"
+            }
+          ]
+        },
+        {
+          "id": "kv1",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            675,
+            160,
+            45,
+            24
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 17,
+          "color": "#444444",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "K, V",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 17,
+              "bold": false,
+              "italic": true,
+              "color": "#444444"
+            }
+          ]
+        },
+        {
+          "id": "kv2",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            901,
+            104,
+            47,
+            24
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 17,
+          "color": "#07516E",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "K, V",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 17,
+              "bold": false,
+              "italic": true,
+              "color": "#07516E"
+            }
+          ]
+        },
+        {
+          "id": "kv3",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            901,
+            272,
+            47,
+            24
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 17,
+          "color": "#571A8F",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "K, V",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 17,
+              "bold": false,
+              "italic": true,
+              "color": "#571A8F"
+            }
+          ]
+        },
+        {
+          "id": "kv4",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            1270,
+            209,
+            45,
+            24
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 17,
+          "color": "#285625",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "K, V",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 17,
+              "bold": false,
+              "italic": true,
+              "color": "#285625"
+            }
+          ]
+        },
+        {
+          "id": "b1",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            642,
+            181,
+            29,
+            39
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 29,
+          "color": "#444444",
+          "bold": true,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "b1_circle",
+          "runs": [
+            {
+              "text": "B",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 29,
+              "bold": true,
+              "italic": false,
+              "color": "#444444"
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            1426,
+            375,
+            27,
+            37
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 29,
+          "color": "#444444",
+          "bold": true,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "b2_circle",
+          "runs": [
+            {
+              "text": "B",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 29,
+              "bold": true,
+              "italic": false,
+              "color": "#444444"
+            }
+          ]
+        },
+        {
+          "id": "b3",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            1759,
+            375,
+            27,
+            37
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 29,
+          "color": "#444444",
+          "bold": true,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "b3_circle",
+          "runs": [
+            {
+              "text": "B",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 29,
+              "bold": true,
+              "italic": false,
+              "color": "#444444"
+            }
+          ]
+        },
+        {
+          "id": "stage1",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            159,
+            437,
+            137,
+            41
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 30,
+          "color": "#444444",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Backbone",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 30,
+              "bold": false,
+              "italic": false,
+              "color": "#444444"
+            }
+          ]
+        },
+        {
+          "id": "stage2",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            637,
+            437,
+            168,
+            41
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 30,
+          "color": "#444444",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Perception",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 30,
+              "bold": false,
+              "italic": false,
+              "color": "#444444"
+            }
+          ]
+        },
+        {
+          "id": "stage3",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            1221,
+            437,
+            160,
+            41
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 30,
+          "color": "#444444",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Prediction",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 30,
+              "bold": false,
+              "italic": false,
+              "color": "#444444"
+            }
+          ]
+        },
+        {
+          "id": "stage4",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            1704,
+            437,
+            134,
+            41
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 30,
+          "color": "#444444",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Planning",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 30,
+              "bold": false,
+              "italic": false,
+              "color": "#444444"
+            }
+          ]
+        },
+        {
+          "id": "camera_link",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              168,
+              200
+            ],
+            [
+              209,
+              200
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1
+        },
+        {
+          "id": "backbone_link",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              285,
+              200
+            ],
+            [
+              313,
+              200
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          }
+        },
+        {
+          "id": "bev_left",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              444,
+              198
+            ],
+            [
+              619,
+              198
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1
+        },
+        {
+          "id": "bev_right",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              682,
+              198
+            ],
+            [
+              934,
+              198
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          }
+        },
+        {
+          "id": "track_up",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              652.5,
+              174
+            ],
+            [
+              652.5,
+              117
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          }
+        },
+        {
+          "id": "map_down",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              652.5,
+              232
+            ],
+            [
+              652.5,
+              289
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "allow_overlap_with": [
+            "map_fused"
+          ],
+          "overlap_reason": "Source arrowtip enters blank top margin of independently cropped MapFormer artwork, above the module border."
+        },
+        {
+          "id": "track_in_link",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              547,
+              68
+            ],
+            [
+              566,
+              68
+            ]
+          ],
+          "stroke": "#07516E",
+          "stroke_width": 1
+        },
+        {
+          "id": "track_out_link",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              839,
+              69
+            ],
+            [
+              848,
+              69
+            ]
+          ],
+          "stroke": "#07516E",
+          "stroke_width": 1
+        },
+        {
+          "id": "map_in_link",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              547,
+              330
+            ],
+            [
+              566,
+              330
+            ]
+          ],
+          "stroke": "#571A8F",
+          "stroke_width": 1
+        },
+        {
+          "id": "map_out_link",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              839,
+              330
+            ],
+            [
+              848,
+              330
+            ]
+          ],
+          "stroke": "#571A8F",
+          "stroke_width": 1
+        },
+        {
+          "id": "track_motion",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              889,
+              70
+            ],
+            [
+              934,
+              102
+            ]
+          ],
+          "stroke": "#07516E",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          }
+        },
+        {
+          "id": "map_motion",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              889,
+              331
+            ],
+            [
+              934,
+              297
+            ]
+          ],
+          "stroke": "#571A8F",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          }
+        },
+        {
+          "id": "motion_up",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1079.5,
+              361
+            ],
+            [
+              1079.5,
+              269
+            ]
+          ],
+          "stroke": "#285625",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          }
+        },
+        {
+          "id": "agent_in",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1197,
+              196
+            ],
+            [
+              1216,
+              196
+            ]
+          ],
+          "stroke": "#285625",
+          "stroke_width": 1
+        },
+        {
+          "id": "agent_occ",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1266,
+              196
+            ],
+            [
+              1294,
+              196
+            ]
+          ],
+          "stroke": "#285625",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          }
+        },
+        {
+          "id": "agent_plan1",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1240,
+              269
+            ],
+            [
+              1240,
+              282
+            ]
+          ],
+          "stroke": "#285625",
+          "stroke_width": 1,
+          "allow_overlap_with": [
+            "agent_plan2"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "agent_plan2",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1240,
+              282
+            ],
+            [
+              1428,
+              282
+            ]
+          ],
+          "stroke": "#285625",
+          "stroke_width": 1,
+          "allow_overlap_with": [
+            "agent_plan1"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "agent_plan3",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1446,
+              282
+            ],
+            [
+              1740,
+              282
+            ]
+          ],
+          "stroke": "#285625",
+          "stroke_width": 1,
+          "allow_overlap_with": [
+            "agent_plan4"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "agent_plan4",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1740,
+              282
+            ],
+            [
+              1740,
+              248
+            ]
+          ],
+          "stroke": "#285625",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "allow_overlap_with": [
+            "agent_plan3"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "occ_up",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1437,
+              310
+            ],
+            [
+              1437,
+              248
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          }
+        },
+        {
+          "id": "occ_b",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1437,
+              372
+            ],
+            [
+              1437,
+              350
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1
+        },
+        {
+          "id": "planner_b",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1769.5,
+              369
+            ],
+            [
+              1769.5,
+              248
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          }
+        },
+        {
+          "id": "occ_planner",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1583,
+              199
+            ],
+            [
+              1624,
+              199
+            ]
+          ],
+          "stroke": "#875706",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          }
+        },
+        {
+          "id": "bracket1l",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              38,
+              434
+            ],
+            [
+              38,
+              456
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1.7,
+          "allow_overlap_with": [
+            "bracket1a"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "bracket1r",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              388,
+              434
+            ],
+            [
+              388,
+              456
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1.7,
+          "allow_overlap_with": [
+            "bracket1b"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "bracket1a",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              38,
+              456
+            ],
+            [
+              146,
+              456
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1.7,
+          "allow_overlap_with": [
+            "bracket1l"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "bracket1b",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              294,
+              456
+            ],
+            [
+              388,
+              456
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1.7,
+          "allow_overlap_with": [
+            "bracket1r"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "bracket2l",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              473,
+              434
+            ],
+            [
+              473,
+              456
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1.7,
+          "allow_overlap_with": [
+            "bracket2a"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "bracket2r",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              912,
+              434
+            ],
+            [
+              912,
+              456
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1.7,
+          "allow_overlap_with": [
+            "bracket2b"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "bracket2a",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              473,
+              456
+            ],
+            [
+              619,
+              456
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1.7,
+          "allow_overlap_with": [
+            "bracket2l"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "bracket2b",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              784,
+              456
+            ],
+            [
+              912,
+              456
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1.7,
+          "allow_overlap_with": [
+            "bracket2r"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "bracket3l",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              997,
+              434
+            ],
+            [
+              997,
+              456
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1.7,
+          "allow_overlap_with": [
+            "bracket3a"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "bracket3r",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1553,
+              434
+            ],
+            [
+              1553,
+              456
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1.7,
+          "allow_overlap_with": [
+            "bracket3b"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "bracket3a",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              997,
+              456
+            ],
+            [
+              1200,
+              456
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1.7,
+          "allow_overlap_with": [
+            "bracket3l"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "bracket3b",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1370,
+              456
+            ],
+            [
+              1553,
+              456
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1.7,
+          "allow_overlap_with": [
+            "bracket3r"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "bracket4l",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1649,
+              434
+            ],
+            [
+              1649,
+              456
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1.7,
+          "allow_overlap_with": [
+            "bracket4a"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "bracket4r",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1862,
+              434
+            ],
+            [
+              1862,
+              456
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1.7,
+          "allow_overlap_with": [
+            "bracket4b"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "bracket4a",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1649,
+              456
+            ],
+            [
+              1684,
+              456
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1.7,
+          "allow_overlap_with": [
+            "bracket4l"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "bracket4b",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1832,
+              456
+            ],
+            [
+              1862,
+              456
+            ]
+          ],
+          "stroke": "#444444",
+          "stroke_width": 1.7,
+          "allow_overlap_with": [
+            "bracket4r"
+          ],
+          "overlap_reason": "Source-visible connector or bracket endpoint junction."
+        },
+        {
+          "id": "track_fused",
+          "kind": "image",
+          "z": 1,
+          "box": [
+            571,
+            0,
+            254,
+            104
+          ],
+          "path": "assets/eed3ef6ba51ecd400b98.png",
+          "contains_text": true,
+          "provenance": "Exact source crop: fused illustration and module label inseparable without image editing; whole module retained as raster; label NOT duplicated."
+        },
+        {
+          "id": "map_fused",
+          "kind": "image",
+          "z": 1,
+          "box": [
+            571,
+            285,
+            254,
+            147
+          ],
+          "path": "assets/7fde7bb65de686d673f3.png",
+          "contains_text": true,
+          "provenance": "Exact source crop: fused illustration and module label inseparable without image editing; whole module retained as raster; label NOT duplicated."
+        },
+        {
+          "id": "agent_second",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            1212,
+            102,
+            129,
+            29
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 24,
+          "color": "#285625",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "left",
+          "runs": [
+            {
+              "text": "Feature",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#285625"
+            }
+          ]
+        },
+        {
+          "id": "scene_second",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            1505,
+            326,
+            145,
+            29
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 24,
+          "color": "#875706",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "left",
+          "runs": [
+            {
+              "text": "Feature",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#875706"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

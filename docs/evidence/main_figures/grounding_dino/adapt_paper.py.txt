@@ -1,0 +1,54 @@
+import pathlib,json,copy
+from PIL import Image
+R=pathlib.Path(__file__).parent;D=R/'paper_eval';J=D/'job';(J/'pages/page_001').mkdir(parents=True,exist_ok=True);(J/'assets').mkdir(exist_ok=True);(J/'pages/page_001/source.png').write_bytes((D/'source.png').read_bytes())
+S=2470/2048;T=1.325;dx=10-228*T;dy=32-15*T
+contract=json.loads((R/'roi_contract.json').read_text());contract['source_sha256']=json.loads((D/'source_manifest.json').read_text())['source_sha256'];contract['prior_variant_rejected']=True;contract['acceptance']['render']='actual PPTX PDF rasterized to source width 2140; default 1600px preview retained separately';contract['regions']=[x for x in contract['regions'] if not x['id'].startswith('caption')]
+for e in contract['regions']:
+ x,y,w,h=e['box'];e['box']=[round(x/S*T+dx),round(y/S*T+dy),round(w/S*T),round(h/S*T)]
+contract['regions'].extend([{'id':'rotated_prompt','box':[597,70,45,244],'mask':'dark'},{'id':'input_categories','box':[145,1234,374,46],'mask':'dark'}])
+if not (D/'roi_contract.json').exists():(D/'roi_contract.json').write_text(json.dumps(contract,indent=2))
+s=json.loads((R/'scene_01.json').read_text());sl=s['slides'][0];sl['width']=2140;sl['height']=1460;sl['notes']='Full published ECCV 2024 Grounding DINO Figure 3 architecture, raster crop of paper page 5, image-only reconstruction. Photo composites are exact local raster crops. All readable labels are native, including rotated prompts. Source fonts inferred; Liberation Sans and Mono substitutes. Cube grid count approximates source raster. Eight native chord wire bridge approximation. Native PowerPoint/WPS unverified.'
+E=[e for e in sl['elements'] if not e['id'].startswith(('word_','caption'))];sl['elements']=E
+# Return to image-inspection view coordinates before source-specific edits.
+for e in E:
+ if 'box'in e:e['box']=[v/S for v in e['box']]
+ if 'points'in e:e['points']=[[v/S for v in p]for p in e['points']]
+ for k in ['font_size','stroke_width','radius']:
+  if k in e:e[k]/=S
+ if 'arrow_head'in e:e['arrow_head']={k:v/S for k,v in e['arrow_head'].items()}
+M={e['id']:e for e in E}
+def pair(a,b,reason):
+ M[a].setdefault('allow_overlap_with',[]).append(b);M[a]['overlap_reason']=reason
+# Initial known scene-authoring corrections, derived from retained variant preflight, before first actual-paper run.
+for e in E:
+ if e['id'].endswith('_one'):e['box'][1]-=.5;e['box'][3]+=1
+M['backbone_to_cube']['points'][0][1]=806
+M['sentence_label']['box'][1]+=5;M['sentence_label']['box'][3]-=5;M['sentence_label']['color']='#ACACAC';M['sentence']['fill']='#F6F7EB';M['sentence']['stroke']='#ACACAC'
+M['keys']['text']='Keys&';M['keys']['box']=[560,327,73,30]
+e=copy.deepcopy(M['keys']);e['id']='values';e['text']='Values';e['box']=[560,359,73,29];e['z']=max(x['z']for x in E)+1;E.append(e);M[e['id']]=e
+for a,b in [('output_photo3','loss_local_1'),('image_cube_top','cube_to_selection'),('image_cube_top_v7','cube_to_selection'),('image_cube_top_v8','cube_to_selection'),('image_cube_top_v9','cube_to_selection'),('image_cube_top_h4','cube_to_selection'),('image_cube_top_h5','cube_to_selection'),('image_cube_top_h6','cube_to_selection'),('output_tokens_0_top','outputs_to_photo'),('output_tokens_0_side','outputs_to_photo'),('text_branch_decoder','text_to_selection'),('text_branch_top','text_to_decoder'),('text_branch_top','text_top_right'),('text_to_selection','bridge_3'),('text_to_selection','bridge_4')]:pair(a,b,'Source-verified connector junction, projected cube-face attachment, or crossing at native wire bridge; no label exemption.')
+for e in E:
+ if e['id'] in ['dec_qkv','dec_q1','dec_q2','dec_kv1','dec_kv2']:e['container']='decoder_detail'
+ if e['id'] in ['enh_t_qkv','enh_i_qkv','enh_t_kv','enh_i_q','enh_t_q','enh_i_kv']:e['container']='enhancer_detail'
+# Published figure uses native quarter-turn rounded prompts in matrix margin, rather than repository word list.
+z=max(e['z']for e in E)+1
+for n,b,t,col,fill in [('vertical_sentence',[626,73,25,179],'A cat sets on a table .','#AAAAAA','#F5F6E9'),('vertical_categories',[646,58,24,179],'cat. person. mouse.','#111111','#E3EABC')]:
+ shape={'id':n,'kind':'shape','z':z,'shape':'round_rect','box':b,'radius':12,'fill':fill,'stroke':col,'stroke_width':1.5};z+=1;E.append(shape);M[n]=shape
+ x,y,w,h=b;e={'id':n+'_text','kind':'text','z':z,'box':[x+w/2-h/2,y+h/2-w/2,h,w],'rotation':90,'text':t,'font_family':'Liberation Sans','font_size':15,'align':'center','valign':'middle','container':n,'fit':'strict','wrap':False,'color':col};z+=1;E.append(e);M[e['id']]=e
+pair('vertical_sentence','vertical_categories','Published input prompt pill overlap visible in source.')
+# Native faded matrix behind the main matrix; exposed last row and lower-left corner.
+for c in range(3):
+ e={'id':f'ghost_matrix_{c}','kind':'shape','z':8,'box':[703+c*38.2,216.6,38.2,17.45],'shape':'rect','fill':'#F1F1F1' if c else '#F6F7E9','stroke':'#A9A9A9','stroke_width':.9};E.append(e)
+e={'id':'ghost_one','kind':'text','z':9,'box':[704,216,36,19],'text':'1','font_family':'Liberation Sans','font_size':15,'align':'center','valign':'middle','color':'#AAAAAA','container':'ghost_matrix_0'};E.append(e)
+# Paper photos include pale rear composite; all exact-cropped from the new source, not repo image.
+im=Image.open(D/'source.png')
+for e in E:
+ if 'box'in e:
+  x,y,w,h=e['box'];e['box']=[round(x*T+dx,4),round(y*T+dy,4),round(w*T,4),round(h*T,4)]
+ if 'points'in e:e['points']=[[round(x*T+dx,4),round(y*T+dy,4)]for x,y in e['points']]
+ for k in ['font_size','stroke_width','radius']:
+  if k in e:e[k]*=T
+ if 'arrow_head'in e:e['arrow_head']={k:v*T for k,v in e['arrow_head'].items()}
+ if e['kind']=='image':
+  x,y,w,h=[round(v)for v in e['box']];im.crop((x,y,x+w,y+h)).save(J/e['path']);e['box']=[x,y,w,h];e['provenance']='Exact local photograph composite crop of ECCV 2024 paper Figure 3 rendered bitmap; original photo and border internals remain raster.'
+(J/'scene.json').write_text(json.dumps(s,indent=2));print('paper scene',len(E))
