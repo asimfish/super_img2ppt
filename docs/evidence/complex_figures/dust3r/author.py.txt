@@ -1,0 +1,71 @@
+import pathlib,json,hashlib,shutil,math
+from PIL import Image
+r=pathlib.Path(__file__).parent;j=r/'job';j.mkdir(exist_ok=True);(j/'assets').mkdir(exist_ok=True)
+for n in (2,3):shutil.copy2(r/f'figure{n}.png',j/f'figure{n}.png')
+rois=[('vit1',[280,54,369,106]),('dec1',[447,55,568,111]),('head1',[590,59,660,95]),('patch1',[141,101,215,126]),('vit2',[280,237,369,291]),('dec2',[447,237,569,291]),('head2',[590,245,660,280]),('patch2',[141,278,215,304]),('point1',[735,24,825,47]),('point2',[735,206,825,231]),('conf1',[720,78,829,102]),('conf2',[719,265,829,290]),('cross',[514,156,628,182]),('shared',[288,148,354,192]),('camera1',[879,126,966,175]),('camera2',[1003,229,1169,278]),('common',[980,56,1207,108]),('formula1',[715,45,851, seventy:= seventy if False else  seventy] )] if False else []
+# Freeze 24 pixel-only regions before scene authoring; every third region held out.
+data=[('vit1',[280,54,369,106]),('dec1',[447,55,568,111]),('head1',[590,59,660,95]),('patch1',[141,101,215,126]),('vit2',[280,237,369,291]),('dec2',[447,237,569,291]),('head2',[590,245,660,280]),('patch2',[141,278,215,304]),('point1',[735,24,825,47]),('point2',[735,206,825,231]),('conf1',[720,78,829,102]),('conf2',[719,265,829,290]),('cross',[514,156,628,182]),('shared',[288,148,354,192]),('camera1',[879,126,966,175]),('camera2',[1003,229,1169,278]),('common',[980,56,1207,108]),('formula1',[715,46,851,75]),('formula2',[715,230,851,258]),('encoder_outline',[260,14,377,146]),('decoder_outline',[437,197,579,329]),('patch_arrow',[149,76,210,98]),('camera_red',[968,125,1044,176]),('camera_blue',[1085,192,1165,257])]
+contract={'threshold':'nonwhite: min(R,G,B)<180; isolated colored regions chroma>60; max ink bbox edge displacement <=4px AND mask IoU>=0.70','render':'actual PPTX exported PDF rasterized to exact source width without registration','rois':[{'id':n,'box':b,'split':'heldout' if i%3==2 else 'development','mask':'color' if n in ['point1','point2','formula1','formula2','camera_red','camera_blue'] else 'ink'} for i,(n,b) in enumerate(data)]}
+(r/'roi_contract.json').write_text(json.dumps(contract,indent=2))
+E=[]
+def sh(id,b,fill='#D9D9D9',shape='round_rect',**kw): E.append(dict(id=id,kind='shape',z=1,box=b,shape=shape,fill=fill,stroke='#858585',stroke_width=1.5,**kw))
+def tx(id,text,b,size=18,**kw):E.append(dict(id=id,kind='text',z=5,box=b,text=text,font_size=size,font_family='Arial',color='#111111',**kw))
+def ln(id,a,b,color='#808080',width=3,arrow=False,**kw):E.append(dict(id=id,kind='line',z=3,points=[a,b],stroke=color,stroke_width=width,arrow=arrow,**({'arrow_head':{'length':13,'width':13}} if arrow else {}),**kw))
+def asset(id,b,fig=2):
+ im=Image.open(j/f'figure{fig}.png');im.crop(b).save(j/'assets'/f'{id}.png');E.append(dict(id=id,kind='image',z=2,box=[b[0],b[1],b[2]-b[0],b[3]-b[1]],path=f'assets/{id}.png',contains_text=False,provenance=f'Exact local crop DUSt3R CVPR2024 Figure {fig}; complex artwork remains raster'))
+asset('input1',(25,30,136,141));asset('input2',(28,213,137,324));asset('pointcloud',(1167,48,1495,265))
+for row,y in enumerate([17,200],1):
+ sh(f'enc{row}',[264,y,111,126],radius=19);sh(f'dec{row}',[440,y,136,126],radius=20);sh(f'head{row}',[583,y+19,82,79],radius=13)
+ tx(f'vit{row}','ViT\nencoder',[279,y+39,82,60],18,align='center',container=f'enc{row}')
+ tx(f'decoder{row}',f'Transformer\nDecoder{["₁","₂"][row-1]}',[450,y+39,116,60],18,align='center',container=f'dec{row}')
+ tx(f'headlabel{row}',f'Head{["₁","₂"][row-1]}',[593,y+45,63,29],18,container=f'head{row}')
+ ln(f'patcharrow{row}',[153,y+69],[207,y+69],arrow=True)
+ tx(f'patch{row}','Patchify',[146,y+83,74,28],18)
+ ln(f'featarr{row}',[387,y+63],[426,y+63],arrow=True)
+ tx(f'feature{row}',f'F{["¹","²"][row-1]}',[394,y+73,36,29],22,font_family='Times New Roman',italic=True) if False else None
+ tx(f'feature{row}',f'F{["¹","²"][row-1]}',[394,y+73,36,29],21,italic=True)
+ for k in range(7):
+  yy=(7 if row==1 else 185)+k*23.5
+  colors=['#777777','#AAAAAA','#E54A4A','#5DE340','#685CEE','#6659F0','#EEEEEE']
+  sh(f'token{row}_{k}',[226,yy,20,19],fill=colors[k],shape='rect',stroke_width=0.5) if False else E.append(dict(id=f'token{row}_{k}',kind='shape',z=1,box=[226,yy,20,19],shape='rect',fill=colors[k],stroke='#888888',stroke_width=.5))
+ tx(f'image_label{row}',f'Image I{["¹","²"][row-1]} ∈ ℝᵂˣᴴˣ³',[5,(144 if row==1 else 327),205,25],18)
+ yy=y+42
+ ln(f'pointarr{row}',[667,yy+19],[711,yy-3],arrow=True)
+ ln(f'confarr{row}',[667,yy+19],[711,yy+42],arrow=True)
+ tx(f'pointlabel{row}','Pointmap',[742,y+7,98,26],18);E[-1]['color']='#FF0000' if row==1 else '#1600FF'
+ tx(f'formula{row}',f'X{["¹˒¹","²˒¹"][row-1]} ∈ ℝᵂˣᴴˣ³',[720,y+28,147,28],19,italic=True);E[-1]['color']='#FF0000' if row==1 else '#1600FF'
+ tx(f'confidence{row}','Confidence',[727,y+62,110,27],18)
+ tx(f'conf_formula{row}',f'C{["¹","²"][row-1]} ∈ ℝᵂˣᴴ',[728,y+84,134,30],19,italic=True)
+ln('crossup',[508,174],[508,149],width=2.5,arrow=True);ln('crossdown',[508,172],[508,194],width=2.5,arrow=True)
+tx('crosslabel','Cross-attention',[519,159,130,27],16,italic=True)
+ln('sharedline1',[319,144],[319,150],width=1);ln('sharedline2',[319,191],[319,198],width=1)
+tx('shared','Shared\nweights',[288,150,66,47],16,italic=True,align='center');E[-1]['color']='#888888'
+# Source curves: native short chords, fixed source positions.
+for name,start,ctrl,end,color in [('redcurve',(829,34),(947,-24),(1334,69),'#FF0000'),('bluecurve',(829,218),(1033,174),(1165,190),'#1600FF')]:
+ pts=[]
+ for k in range(25):
+  t=k/24;pts.append([(1-t)**2*start[d]+2*(1-t)*t*ctrl[d]+t*t*end[d] for d in range(2)])
+ for k in range(24):ln(f'{name}{k}',pts[k],pts[k+1],color,1.5,arrow=k==23)
+# Coordinate axes and native camera faces.
+for id,a,b in [('axisup',[970,143],[973,66]),('axisright',[970,143],[1080,151]),('axisdown',[970,143],[958,182])]:ln(id,a,b,'#000000',1.5,True)
+def poly(id,pts,color):
+ xs,ys=zip(*pts);x,y=min(xs),min(ys);w,h=max(xs)-x,max(ys)-y
+ E.append(dict(id=id,kind='shape',z=2,box=[x,y,w,h],shape='polygon',vertices=[[(a-x)/w,(b-y)/h] for a,b in pts],fill=color))
+poly('redcamtop',[(974,143),(1034,127),(1040,148)],'#BD0000');poly('redcambottom',[(974,143),(1040,148),(1030,173)],'#AD0000')
+poly('bluecamtop',[(1088,244),(1126,195),(1160,216)],'#1600DB');poly('bluecambottom',[(1088,244),(1160,216),(1145,252)],'#1600DB')
+tx('camera1','Camera1\n(at origin)',[886,125,93,53],18)
+tx('camera2','Camera2\n(unknown position)',[1009,232,165,54],18)
+tx('common','Common coordinate frame\nof camera 1 (image  I₁)',[988,58,228,54],18)
+# Specific visible source joins, not text exemptions.
+pairs=[('crossup','crossdown'),('axisup','axisright'),('axisup','axisdown'),('axisright','axisdown'),('axisright','redcamtop'),('axisright','redcambottom'),('axisup','redcamtop'),('axisdown','redcambottom'),('pointarr1','confarr1'),('pointarr2','confarr2')]
+for prefix in ['redcurve','bluecurve']:
+ pairs += [(f'{prefix}{i}',f'{prefix}{i+1}') for i in range(23)]
+for a,b in pairs:
+ e=next(x for x in E if x['id']==a);e.setdefault('allow_overlap_with',[]).append(b);e['overlap_reason']='Source-visible shared endpoints, curve chord joins, or camera axis crossing.'
+slides=[dict(id='figure2',width=1496,height=352,source='figure2.png',background='#FFFFFF',reviewed=True,elements=E)]
+E=[]
+# Fig3 individual photographic/depth/confidence panels and independently movable 3D views.
+for id,b in [('rgb1',(4,12,154,123)),('depth1',(156,12,307,123)),('conf1',(309,12,460,123)),('rgb2',(4,125,154,241)),('depth2',(156,125,307,241)),('conf2',(309,125,460,241)),('scene3d',(464,12,773,241)),('toy_rgb1',(887,5,987,82)),('toy_depth1',(990,5,1091,82)),('toy_conf1',(1094,5,1196,82)),('toy_rgb2',(887,85,987,162)),('toy_depth2',(990,85,1091,162)),('toy_conf2',(1094,85,1196,162)),('toy_rgb3',(887,165,987,243)),('toy_depth3',(990,165,1091,243)),('toy_conf3',(1094,165,1196,243)),('aligned3d',(1198,21,1492,236))]:asset(id,b,3)
+slides.append(dict(id='figure3',width=1492,height=244,source='figure3.png',background='#FFFFFF',reviewed=True,elements=E))
+(j/'scene.json').write_text(json.dumps(dict(version=1,slides=slides),indent=2))
+(r/'crop_manifest.json').write_text(json.dumps({'pdf_scale':3,'crops_in_scale1_5_pixels':{'figure2':[73,111,821,287],'figure3':[74,103,820,225]},'pages_one_based':[4,5],'figures':{f'figure{n}':hashlib.sha256((j/f'figure{n}.png').read_bytes()).hexdigest() for n in [2,3]}},indent=2))

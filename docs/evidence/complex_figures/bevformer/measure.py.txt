@@ -1,0 +1,11 @@
+import json,pathlib,sys,pypdfium2 as pdf
+from PIL import Image
+p=pathlib.Path(__file__).parent;b=p/sys.argv[1];stage=sys.argv[2];d=pdf.PdfDocument(b/'render/editable.pdf');im=d[0].render(scale=1400/d[0].get_width()).to_pil().convert('RGB');im.save(b/'source_width.png');source=Image.open(p/'source.png').convert('RGB');contract=json.loads((p/'roi_contract.json').read_text());rows=[]
+def mask(im,box):
+ a=im.crop(box);return {(x,y) for y in range(a.height) for x in range(a.width) if (max(a.getpixel((x,y)))<170 or (max(a.getpixel((x,y)))-min(a.getpixel((x,y)))>45 and min(a.getpixel((x,y)))<170))}
+def bbox(a):return [min(x for x,y in a),min(y for x,y in a),max(x for x,y in a)+1,max(y for x,y in a)+1] if a else None
+for r in contract['rois']:
+ if stage=='development' and r['split']=='heldout':continue
+ a=mask(source,r['box']); c=mask(im,r['box']);ab=bbox(a);cb=bbox(c);edge=max(abs(x-y) for x,y in zip(ab,cb)) if ab and cb else None;iou=len(a&c)/len(a|c) if a|c else 1
+ rows.append({**r,'source_bbox':ab,'render_bbox':cb,'edge_max_px':edge,'iou':iou,'pass':edge is not None and edge<=4 and iou>=.7})
+(b/f'metrics_{stage}.json').write_text(json.dumps({'stage':stage,'passed':sum(r['pass'] for r in rows),'total':len(rows),'rows':rows},indent=2));print([(r['id'],round(r['iou'],3),r['edge_max_px'],r['pass']) for r in rows])

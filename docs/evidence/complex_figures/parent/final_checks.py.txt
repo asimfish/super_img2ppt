@@ -1,0 +1,8 @@
+import json,subprocess,time,os
+from pathlib import Path
+root=Path.cwd();env=dict(os.environ);env['PATH']='/opt/homebrew/bin:'+env['PATH'];checks=[]
+commands=[['uv','run','ruff','check','.'],['uv','run','ruff','format','--check','.'],['uv','run','pytest','-q'],['uv','run','python','scripts/verify_skill.py'],['uv','run','python','scripts/build_capability_registry.py','--check'],['uv','run','python','/Users/liyufeng/.whalent-agent/profiles/acct-63aacf96110c0e9595f3/agents/rjguoiuibvgcfiv8w56gq7bu5/codex/skills/.system/skill-creator/scripts/quick_validate.py','skills/super-img2ppt'],['uv','run','python','/Users/liyufeng/.agents/skills/skill-quality-gate/scripts/audit_skill_governance.py','--repo',str(root),'--json'],['git','diff','--check'],['uv','run','python','scripts/build_package.py']]
+for cmd in commands:
+ t=time.monotonic();p=subprocess.run(cmd,env=env,text=True,capture_output=True);record=dict(command=cmd,exit_code=p.returncode,seconds=round(time.monotonic()-t,3),stdout=p.stdout,stderr=p.stderr);checks.append(record);print(p.returncode,' '.join(cmd),p.stdout[-350:],p.stderr[-150:],flush=True)
+ if 'pytest' in cmd:(root/'output/complex_figures_20260911/full_tests.txt').write_text(p.stdout+p.stderr)
+(root/'output/complex_figures_20260911/final_checks.json').write_text(json.dumps(checks,indent=2)+'\n');assert all(r['exit_code']==0 for r in checks)

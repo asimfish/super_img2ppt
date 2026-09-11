@@ -1,0 +1,101 @@
+[
+  {
+    "case": "internimage",
+    "command": [
+      "uv",
+      "run",
+      "super-img2ppt",
+      "build",
+      "/Users/liyufeng/code/super_img2ppt/output/complex_figures_20260911/deliverables/internimage/scene.resolved.json",
+      "--out",
+      "/Users/liyufeng/code/super_img2ppt/output/complex_figures_20260911/parent_internimage",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+    ],
+    "exit_code": 0,
+    "seconds": 4.431,
+    "stdout": "{\"status\": \"pass\", \"output\": \"/Users/liyufeng/code/super_img2ppt/output/complex_figures_20260911/parent_internimage\"}\n",
+    "stderr": "",
+    "render_comparisons": [
+      {
+        "page": "page_001.png",
+        "identical_pixels": true,
+        "original_sha256": "4c20f5619071d8dae1577520b7cdba62b7cca804244498286eb4139ca90b9b5e",
+        "replay_sha256": "4c20f5619071d8dae1577520b7cdba62b7cca804244498286eb4139ca90b9b5e"
+      }
+    ],
+    "validation_status": "pass"
+  },
+  {
+    "case": "dust3r",
+    "command": [
+      "uv",
+      "run",
+      "super-img2ppt",
+      "build",
+      "/Users/liyufeng/code/super_img2ppt/output/complex_figures_20260911/deliverables/dust3r/scene.resolved.json",
+      "--out",
+      "/Users/liyufeng/code/super_img2ppt/output/complex_figures_20260911/parent_dust3r",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+    ],
+    "exit_code": 0,
+    "seconds": 3.47,
+    "stdout": "{\"status\": \"pass\", \"output\": \"/Users/liyufeng/code/super_img2ppt/output/complex_figures_20260911/parent_dust3r\"}\n",
+    "stderr": "",
+    "render_comparisons": [
+      {
+        "page": "page_001.png",
+        "identical_pixels": true,
+        "original_sha256": "6948a8e4b0e0811f6ef7e8b2e7c73759c7c2930454fcabb5b6d2b475ffe42cd3",
+        "replay_sha256": "6948a8e4b0e0811f6ef7e8b2e7c73759c7c2930454fcabb5b6d2b475ffe42cd3"
+      },
+      {
+        "page": "page_002.png",
+        "identical_pixels": true,
+        "original_sha256": "b903dbf8e30bc0cbdbfd23f8e652cc6d83e9272dcdb1770f6289197eb7277325",
+        "replay_sha256": "b903dbf8e30bc0cbdbfd23f8e652cc6d83e9272dcdb1770f6289197eb7277325"
+      }
+    ],
+    "validation_status": "pass"
+  },
+  {
+    "case": "bevformer",
+    "command": [
+      "uv",
+      "run",
+      "super-img2ppt",
+      "build",
+      "/Users/liyufeng/code/super_img2ppt/output/complex_figures_20260911/deliverables/bevformer/scene.resolved.json",
+      "--out",
+      "/Users/liyufeng/code/super_img2ppt/output/complex_figures_20260911/parent_bevformer",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+    ],
+    "exit_code": 0,
+    "seconds": 3.521,
+    "stdout": "{\"status\": \"pass\", \"output\": \"/Users/liyufeng/code/super_img2ppt/output/complex_figures_20260911/parent_bevformer\"}\n",
+    "stderr": "",
+    "render_comparisons": [
+      {
+        "page": "page_001.png",
+        "identical_pixels": true,
+        "original_sha256": "630f48b46e1993dd285641434e3e4b888643b89dc5f342e886dd3d009184a2ff",
+        "replay_sha256": "630f48b46e1993dd285641434e3e4b888643b89dc5f342e886dd3d009184a2ff"
+      },
+      {
+        "page": "page_001_comparison.png",
+        "identical_pixels": true,
+        "original_sha256": "1568e20d7d797dc0d559dcedfd993b3c6931e24b73d3f47bbf7b2028450bf623",
+        "replay_sha256": "1568e20d7d797dc0d559dcedfd993b3c6931e24b73d3f47bbf7b2028450bf623"
+      },
+      {
+        "page": "page_001_content.png",
+        "identical_pixels": true,
+        "original_sha256": "630f48b46e1993dd285641434e3e4b888643b89dc5f342e886dd3d009184a2ff",
+        "replay_sha256": "630f48b46e1993dd285641434e3e4b888643b89dc5f342e886dd3d009184a2ff"
+      }
+    ],
+    "validation_status": "pass"
+  }
+]

@@ -1,0 +1,13 @@
+import pathlib,json,sys,pypdfium2 as pdf
+from PIL import Image,ImageChops
+r=pathlib.Path(__file__).parent;b=r/sys.argv[1];split=sys.argv[2]
+d=pdf.PdfDocument(b/'render/editable.pdf');page=d[0];im=page.render(scale=1496/page.get_width()).to_pil().convert('RGB');im.save(b/'source_width.png');src=Image.open(r/'figure2.png').convert('RGB')
+res=[]
+for q in json.loads((r/'roi_contract.json').read_text())['rois']:
+ if q['split']!=split:continue
+ masks=[]
+ for pic in [src,im]:
+  c=pic.crop(q['box']);m=Image.new('1',c.size);m.putdata([max(p)-min(p)>60 and min(p)<180 if q['mask']=='color' else min(p)<180 for p in c.getdata()]);masks.append(m)
+ a,z=masks;aa,zz=a.getbbox(),z.getbbox();union=sum(ImageChops.logical_or(a,z).getdata())/255;inter=sum(ImageChops.logical_and(a,z).getdata())/255;iou=inter/union if union else 1;edge=max(abs(x-y) for x,y in zip(aa,zz)) if aa and zz else 999
+ res.append(dict(**q,source_bbox=aa,render_bbox=zz,edge_px=edge,iou=iou,passed=edge<=4 and iou>=.7))
+(b/f'{split}_metrics.json').write_text(json.dumps({'passed':sum(x['passed'] for x in res),'total':len(res),'regions':res},indent=2));print(json.dumps([(x['id'],x['edge_px'],round(x['iou'],3),x['passed']) for x in res]))

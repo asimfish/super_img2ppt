@@ -1,0 +1,422 @@
+{
+  "passed": 2,
+  "total": 16,
+  "regions": [
+    {
+      "id": "vit1",
+      "box": [
+        280,
+        54,
+        369,
+        106
+      ],
+      "split": "development",
+      "mask": "ink",
+      "source_bbox": [
+        7,
+        8,
+        72,
+        46
+      ],
+      "render_bbox": [
+        8,
+        11,
+        73,
+        48
+      ],
+      "edge_px": 3,
+      "iou": 0.29469790382244143,
+      "passed": false
+    },
+    {
+      "id": "dec1",
+      "box": [
+        447,
+        55,
+        568,
+        111
+      ],
+      "split": "development",
+      "mask": "ink",
+      "source_bbox": [
+        11,
+        6,
+        111,
+        48
+      ],
+      "render_bbox": [
+        12,
+        9,
+        110,
+        48
+      ],
+      "edge_px": 3,
+      "iou": 0.27549081697276756,
+      "passed": false
+    },
+    {
+      "id": "patch1",
+      "box": [
+        141,
+        101,
+        215,
+        126
+      ],
+      "split": "development",
+      "mask": "ink",
+      "source_bbox": [
+        7,
+        4,
+        70,
+        22
+      ],
+      "render_bbox": [
+        7,
+        4,
+        69,
+        21
+      ],
+      "edge_px": 1,
+      "iou": 0.2682926829268293,
+      "passed": false
+    },
+    {
+      "id": "vit2",
+      "box": [
+        280,
+        237,
+        369,
+        291
+      ],
+      "split": "development",
+      "mask": "ink",
+      "source_bbox": [
+        7,
+        8,
+        72,
+        46
+      ],
+      "render_bbox": [
+        8,
+        12,
+        73,
+        49
+      ],
+      "edge_px": 4,
+      "iou": 0.23384253819036427,
+      "passed": false
+    },
+    {
+      "id": "head2",
+      "box": [
+        590,
+        245,
+        660,
+        280
+      ],
+      "split": "development",
+      "mask": "ink",
+      "source_bbox": [
+        11,
+        7,
+        58,
+        25
+      ],
+      "render_bbox": [
+        11,
+        8,
+        59,
+        23
+      ],
+      "edge_px": 2,
+      "iou": 0.44362745098039214,
+      "passed": false
+    },
+    {
+      "id": "patch2",
+      "box": [
+        141,
+        278,
+        215,
+        304
+      ],
+      "split": "development",
+      "mask": "ink",
+      "source_bbox": [
+        7,
+        3,
+        70,
+        21
+      ],
+      "render_bbox": [
+        7,
+        3,
+        69,
+        20
+      ],
+      "edge_px": 1,
+      "iou": 0.2682926829268293,
+      "passed": false
+    },
+    {
+      "id": "point2",
+      "box": [
+        735,
+        206,
+        825,
+        231
+      ],
+      "split": "development",
+      "mask": "color",
+      "source_bbox": [
+        9,
+        6,
+        84,
+        23
+      ],
+      "render_bbox": [
+        8,
+        6,
+        82,
+        23
+      ],
+      "edge_px": 2,
+      "iou": 0.36283185840707965,
+      "passed": false
+    },
+    {
+      "id": "conf1",
+      "box": [
+        720,
+        78,
+        829,
+        102
+      ],
+      "split": "development",
+      "mask": "ink",
+      "source_bbox": [
+        12,
+        5,
+        101,
+        20
+      ],
+      "render_bbox": [
+        12,
+        6,
+        102,
+        19
+      ],
+      "edge_px": 1,
+      "iou": 0.4624,
+      "passed": false
+    },
+    {
+      "id": "cross",
+      "box": [
+        514,
+        156,
+        628,
+        182
+      ],
+      "split": "development",
+      "mask": "ink",
+      "source_bbox": [
+        0,
+        4,
+        112,
+        26
+      ],
+      "render_bbox": [
+        6,
+        7,
+        113,
+        19
+      ],
+      "edge_px": 7,
+      "iou": 0.20625,
+      "passed": false
+    },
+    {
+      "id": "shared",
+      "box": [
+        288,
+        148,
+        354,
+        192
+      ],
+      "split": "development",
+      "mask": "ink",
+      "source_bbox": [
+        7,
+        0,
+        56,
+        44
+      ],
+      "render_bbox": [
+        9,
+        7,
+        58,
+        42
+      ],
+      "edge_px": 7,
+      "iou": 0.12885662431941924,
+      "passed": false
+    },
+    {
+      "id": "camera2",
+      "box": [
+        1003,
+        229,
+        1169,
+        278
+      ],
+      "split": "development",
+      "mask": "ink",
+      "source_bbox": [
+        7,
+        0,
+        160,
+        48
+      ],
+      "render_bbox": [
+        6,
+        0,
+        156,
+        45
+      ],
+      "edge_px": 4,
+      "iou": 0.5136484687083888,
+      "passed": false
+    },
+    {
+      "id": "common",
+      "box": [
+        980,
+        56,
+        1207,
+        108
+      ],
+      "split": "development",
+      "mask": "ink",
+      "source_bbox": [
+        9,
+        7,
+        222,
+        48
+      ],
+      "render_bbox": [
+        8,
+        10,
+        220,
+        51
+      ],
+      "edge_px": 3,
+      "iou": 0.24887504326756663,
+      "passed": false
+    },
+    {
+      "id": "formula2",
+      "box": [
+        715,
+        230,
+        851,
+        258
+      ],
+      "split": "development",
+      "mask": "color",
+      "source_bbox": [
+        5,
+        2,
+        130,
+        18
+      ],
+      "render_bbox": [
+        4,
+        3,
+        121,
+        17
+      ],
+      "edge_px": 9,
+      "iou": 0.20838627700127066,
+      "passed": false
+    },
+    {
+      "id": "encoder_outline",
+      "box": [
+        260,
+        14,
+        377,
+        146
+      ],
+      "split": "development",
+      "mask": "ink",
+      "source_bbox": [
+        3,
+        3,
+        116,
+        132
+      ],
+      "render_bbox": [
+        3,
+        2,
+        116,
+        130
+      ],
+      "edge_px": 2,
+      "iou": 0.5032914422501497,
+      "passed": false
+    },
+    {
+      "id": "patch_arrow",
+      "box": [
+        149,
+        76,
+        210,
+        98
+      ],
+      "split": "development",
+      "mask": "ink",
+      "source_bbox": [
+        4,
+        2,
+        59,
+        19
+      ],
+      "render_bbox": [
+        4,
+        4,
+        57,
+        16
+      ],
+      "edge_px": 3,
+      "iou": 0.8185654008438819,
+      "passed": true
+    },
+    {
+      "id": "camera_red",
+      "box": [
+        968,
+        125,
+        1044,
+        176
+      ],
+      "split": "development",
+      "mask": "color",
+      "source_bbox": [
+        2,
+        2,
+        73,
+        48
+      ],
+      "render_bbox": [
+        4,
+        2,
+        72,
+        48
+      ],
+      "edge_px": 2,
+      "iou": 0.8915094339622641,
+      "passed": true
+    }
+  ]
+}

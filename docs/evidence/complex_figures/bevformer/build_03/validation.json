@@ -1,0 +1,1608 @@
+{
+  "status": "review",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "pass",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "current",
+            "currentgrid_top0_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "current",
+            "currentgrid_front0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "camera_title",
+            "feature1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "camera_title",
+            "brace_right0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "camera_title",
+            "brace_right1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "backbone",
+            "backbone2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "spgrid_top0_2",
+            "xy"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "spgrid_top0_3",
+            "xy"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "xy",
+            "pillar"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "xyz",
+            "pillar"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "tempquery_top0_2",
+            "tempxy"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "tempquery_top0_3",
+            "tempxy"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "tempxy",
+            "curvelow3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "tempxy",
+            "curvehigh4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "shape": 145,
+            "text": 23,
+            "line": 45,
+            "image": 7
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "vert2",
+                "skip1a"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 1.125
+            },
+            {
+              "elements": [
+                "vert4",
+                "skip2a"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 1.125
+            },
+            {
+              "elements": [
+                "skip1a",
+                "skip1b"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "skip1a",
+                "zoom0"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 3.219
+            },
+            {
+              "elements": [
+                "skip1b",
+                "skip1c"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "skip1b",
+                "zoom0"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 8.272
+            },
+            {
+              "elements": [
+                "skip2a",
+                "skip2b"
+              ],
+              "reason": "Visible corner join of residual branch.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "skip2b",
+                "skip2c"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "skip2b",
+                "zoom1"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 3.17
+            },
+            {
+              "elements": [
+                "skip3a",
+                "skip3b"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "skip3a",
+                "query_up"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 1.125
+            },
+            {
+              "elements": [
+                "skip3a",
+                "zoom3"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 4.096
+            },
+            {
+              "elements": [
+                "skip3b",
+                "skip3c"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 0.562
+            },
+            {
+              "elements": [
+                "skip3b",
+                "zoom2"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 3.054
+            },
+            {
+              "elements": [
+                "camera_up",
+                "camera2"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 1.5
+            },
+            {
+              "elements": [
+                "brace_right1",
+                "feature_route1"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 1.045
+            },
+            {
+              "elements": [
+                "spfeature2",
+                "hit_circle"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 2407.965
+            },
+            {
+              "elements": [
+                "spfeature2",
+                "hit0"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 18.0
+            },
+            {
+              "elements": [
+                "spfeature2",
+                "hit1"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 18.0
+            },
+            {
+              "elements": [
+                "spfeature2",
+                "hit2"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 18.0
+            },
+            {
+              "elements": [
+                "spfeature2",
+                "ray0"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 24.913
+            },
+            {
+              "elements": [
+                "spfeature5",
+                "hit_circle"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 2435.273
+            },
+            {
+              "elements": [
+                "spfeature5",
+                "hit3"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 18.0
+            },
+            {
+              "elements": [
+                "spfeature5",
+                "hit4"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 18.0
+            },
+            {
+              "elements": [
+                "spfeature5",
+                "hit5"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 18.0
+            },
+            {
+              "elements": [
+                "spfeature5",
+                "ray1"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 11.155
+            },
+            {
+              "elements": [
+                "spgrid_right",
+                "xy"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 517.0
+            },
+            {
+              "elements": [
+                "spgrid_right",
+                "pillar"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 40.5
+            },
+            {
+              "elements": [
+                "spgrid_right",
+                "ray1"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 20.331
+            },
+            {
+              "elements": [
+                "spgrid_top0_2",
+                "pillar"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 104.0
+            },
+            {
+              "elements": [
+                "spgrid_top0_3",
+                "pillar"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 401.5
+            },
+            {
+              "elements": [
+                "spgrid_top0_3",
+                "sample3"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 25.118
+            },
+            {
+              "elements": [
+                "spgrid_top1_2",
+                "pillar"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 330.0
+            },
+            {
+              "elements": [
+                "spgrid_top1_2",
+                "sample2"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 28.194
+            },
+            {
+              "elements": [
+                "spgrid_top1_3",
+                "pillar"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 300.0
+            },
+            {
+              "elements": [
+                "spgrid_top1_3",
+                "sample3"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 3.076
+            },
+            {
+              "elements": [
+                "spgrid_top1_3",
+                "ray1"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 12.709
+            },
+            {
+              "elements": [
+                "spgrid_top2_1",
+                "pillar"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 84.5
+            },
+            {
+              "elements": [
+                "spgrid_top2_2",
+                "pillar"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 467.375
+            },
+            {
+              "elements": [
+                "spgrid_top2_2",
+                "sample1"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 28.194
+            },
+            {
+              "elements": [
+                "spgrid_top2_2",
+                "ray1"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 11.261
+            },
+            {
+              "elements": [
+                "spgrid_top2_3",
+                "pillar"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 78.125
+            },
+            {
+              "elements": [
+                "spgrid_top2_3",
+                "ray1"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 8.788
+            },
+            {
+              "elements": [
+                "spgrid_front2",
+                "xy"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 187.5
+            },
+            {
+              "elements": [
+                "spgrid_front3",
+                "spquery"
+              ],
+              "reason": "Source selected query cell overlays the front BEV grid tile.",
+              "area_px2": 930.0
+            },
+            {
+              "elements": [
+                "spgrid_front3",
+                "xy"
+              ],
+              "reason": "Source coordinate label crosses selected cell edge.",
+              "area_px2": 787.5
+            },
+            {
+              "elements": [
+                "spquery",
+                "xy"
+              ],
+              "reason": "Source selected query cell overlays the front BEV grid tile.",
+              "area_px2": 775.0
+            },
+            {
+              "elements": [
+                "pillar",
+                "sample0"
+              ],
+              "reason": "Sampling pillar projects through the grid volume in source.",
+              "area_px2": 28.194
+            },
+            {
+              "elements": [
+                "pillar",
+                "sample1"
+              ],
+              "reason": "Sampling pillar projects through the grid volume in source.",
+              "area_px2": 28.194
+            },
+            {
+              "elements": [
+                "pillar",
+                "sample2"
+              ],
+              "reason": "Sampling pillar projects through the grid volume in source.",
+              "area_px2": 28.194
+            },
+            {
+              "elements": [
+                "pillar",
+                "sample3"
+              ],
+              "reason": "Sampling pillar projects through the grid volume in source.",
+              "area_px2": 28.194
+            },
+            {
+              "elements": [
+                "pillar",
+                "ray0"
+              ],
+              "reason": "Sampling pillar projects through the grid volume in source.",
+              "area_px2": 18.163
+            },
+            {
+              "elements": [
+                "pillar",
+                "ray1"
+              ],
+              "reason": "Sampling pillar projects through the grid volume in source.",
+              "area_px2": 19.677
+            },
+            {
+              "elements": [
+                "sample0",
+                "ray0"
+              ],
+              "reason": "Sample point lies on native query pillar.",
+              "area_px2": 0.891
+            },
+            {
+              "elements": [
+                "sample1",
+                "ray1"
+              ],
+              "reason": "Sample point lies on native query pillar.",
+              "area_px2": 0.939
+            },
+            {
+              "elements": [
+                "hit2",
+                "ray0"
+              ],
+              "reason": "Source sample marker over feature plane.",
+              "area_px2": 2.563
+            },
+            {
+              "elements": [
+                "temphistory_right",
+                "curvelow1"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 25.16
+            },
+            {
+              "elements": [
+                "temphistory_top0_2",
+                "curvelow0"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 12.885
+            },
+            {
+              "elements": [
+                "temphistory_top0_2",
+                "temporalpoint0"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 24.5
+            },
+            {
+              "elements": [
+                "temphistory_top0_3",
+                "curvelow0"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 24.951
+            },
+            {
+              "elements": [
+                "temphistory_top1_2",
+                "curvehigh0"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 17.683
+            },
+            {
+              "elements": [
+                "temphistory_top1_2",
+                "temporalpoint1"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 24.5
+            },
+            {
+              "elements": [
+                "temphistory_top1_3",
+                "curvelow0"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 7.567
+            },
+            {
+              "elements": [
+                "temphistory_top1_3",
+                "curvelow1"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 4.541
+            },
+            {
+              "elements": [
+                "temphistory_top2_2",
+                "curvehigh0"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 4.086
+            },
+            {
+              "elements": [
+                "temphistory_top2_3",
+                "curvehigh0"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 18.42
+            },
+            {
+              "elements": [
+                "temphistory_top2_3",
+                "curvehigh1"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 8.746
+            },
+            {
+              "elements": [
+                "tempquery_right",
+                "tempxy"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 546.5
+            },
+            {
+              "elements": [
+                "tempquery_top0_1",
+                "curvelow3"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 15.546
+            },
+            {
+              "elements": [
+                "tempquery_top0_2",
+                "curvelow3"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 23.528
+            },
+            {
+              "elements": [
+                "tempquery_top0_2",
+                "curvehigh4"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 3.971
+            },
+            {
+              "elements": [
+                "tempquery_top0_3",
+                "curvelow3"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 29.098
+            },
+            {
+              "elements": [
+                "tempquery_top0_3",
+                "curvehigh4"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 30.952
+            },
+            {
+              "elements": [
+                "tempquery_top0_3",
+                "temporalpoint3"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 1.0
+            },
+            {
+              "elements": [
+                "tempquery_top1_0",
+                "curvelow2"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 27.567
+            },
+            {
+              "elements": [
+                "tempquery_top1_1",
+                "curvelow2"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 4.813
+            },
+            {
+              "elements": [
+                "tempquery_top1_1",
+                "curvelow3"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 3.875
+            },
+            {
+              "elements": [
+                "tempquery_top1_1",
+                "curvehigh3"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 7.725
+            },
+            {
+              "elements": [
+                "tempquery_top1_1",
+                "temporalpoint2"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 1.75
+            },
+            {
+              "elements": [
+                "tempquery_top1_2",
+                "curvehigh3"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 1.37
+            },
+            {
+              "elements": [
+                "tempquery_top1_2",
+                "curvehigh4"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 14.83
+            },
+            {
+              "elements": [
+                "tempquery_top1_2",
+                "temporalpoint2"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 22.75
+            },
+            {
+              "elements": [
+                "tempquery_top1_3",
+                "temporalpoint3"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 23.5
+            },
+            {
+              "elements": [
+                "tempquery_top2_0",
+                "curvehigh3"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 20.258
+            },
+            {
+              "elements": [
+                "tempquery_top2_1",
+                "curvehigh3"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 13.848
+            },
+            {
+              "elements": [
+                "tempquery_front2",
+                "tempxy"
+              ],
+              "reason": "Adjacent editable faces share the visible source isometric grid edges.",
+              "area_px2": 121.5
+            },
+            {
+              "elements": [
+                "tempquery_front3",
+                "tempselected"
+              ],
+              "reason": "Source coordinate lies over selected front query tile.",
+              "area_px2": 961.0
+            },
+            {
+              "elements": [
+                "tempquery_front3",
+                "tempxy"
+              ],
+              "reason": "Source coordinate lies over selected front query tile.",
+              "area_px2": 850.5
+            },
+            {
+              "elements": [
+                "tempquery_front3",
+                "curvelow3"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 4.649
+            },
+            {
+              "elements": [
+                "tempselected",
+                "tempxy"
+              ],
+              "reason": "Source coordinate lies over selected front query tile.",
+              "area_px2": 837.0
+            },
+            {
+              "elements": [
+                "tempselected",
+                "curvelow3"
+              ],
+              "reason": "Source coordinate lies over selected front query tile.",
+              "area_px2": 4.649
+            },
+            {
+              "elements": [
+                "curvelow0",
+                "temporalpoint0"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 1.861
+            },
+            {
+              "elements": [
+                "curvelow3",
+                "curvehigh4"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 7.919
+            },
+            {
+              "elements": [
+                "curvehigh0",
+                "temporalpoint1"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 1.621
+            },
+            {
+              "elements": [
+                "curvehigh3",
+                "temporalpoint2"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 1.712
+            },
+            {
+              "elements": [
+                "curvehigh4",
+                "temporalpoint2"
+              ],
+              "reason": "Source-verified named line junction, zoom crossing, or point placed on the grid/feature plane; does not exempt text collisions.",
+              "area_px2": 2.868
+            }
+          ],
+          "text_layouts": {
+            "moduletext1": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 111.75,
+              "height_px": 25.3,
+              "available_width_px": 344,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 112.25,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "Add & Norm"
+              ]
+            },
+            "moduletext2": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 123.25,
+              "height_px": 25.3,
+              "available_width_px": 344,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 123.75,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "Feed Forward"
+              ]
+            },
+            "moduletext3": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 111.75,
+              "height_px": 25.3,
+              "available_width_px": 344,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 112.25,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "Add & Norm"
+              ]
+            },
+            "moduletext4": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 204.5,
+              "height_px": 25.3,
+              "available_width_px": 344,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 205.0,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "Spatial Cross-Attention"
+              ]
+            },
+            "moduletext5": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 111.75,
+              "height_px": 25.3,
+              "available_width_px": 344,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 112.25,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "Add & Norm"
+              ]
+            },
+            "moduletext6": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 215.0,
+              "height_px": 25.3,
+              "available_width_px": 344,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 215.5,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "Temporal Self-Attention"
+              ]
+            },
+            "repeat": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 23.5,
+              "height_px": 21.85,
+              "available_width_px": 40,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 24.0,
+              "required_height_px": 22.35,
+              "fits": true,
+              "lines": [
+                "× 6"
+              ]
+            },
+            "heads_text": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 84.5,
+              "height_px": 48.3,
+              "available_width_px": 117,
+              "available_height_px": 52,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 85.0,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "Det & Seg",
+                "Heads"
+              ]
+            },
+            "current": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 120.5,
+              "height_px": 23.75,
+              "available_width_px": 148,
+              "available_height_px": 32,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 121.0,
+              "required_height_px": 24.25,
+              "fits": true,
+              "lines": [
+                "Current BEV Bₜ"
+              ]
+            },
+            "history": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 128.25,
+              "height_px": 23.75,
+              "available_width_px": 185,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 128.75,
+              "required_height_px": 24.25,
+              "fits": true,
+              "lines": [
+                "History BEV Bₜ₋₁"
+              ]
+            },
+            "queries": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 118.25,
+              "height_px": 23.0,
+              "available_width_px": 150,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 118.75,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "BEV Queries Q"
+              ]
+            },
+            "overall": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 199.25,
+              "height_px": 24.15,
+              "available_width_px": 260,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 199.75,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "(a) Overall Architecture"
+              ]
+            },
+            "spatial_panel": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 224.25,
+              "height_px": 24.15,
+              "available_width_px": 310,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 224.75,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "(b) Spatial Cross-Attention"
+              ]
+            },
+            "temporal_panel": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 232.0,
+              "height_px": 24.15,
+              "available_width_px": 320,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 232.5,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "(c) Temporal Self-Attention"
+              ]
+            },
+            "camera_title": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 207.25,
+              "height_px": 23.75,
+              "available_width_px": 283,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 207.75,
+              "required_height_px": 24.25,
+              "fits": true,
+              "lines": [
+                "Multi-Camera Features Fₜ"
+              ]
+            },
+            "input": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 222.25,
+              "height_px": 24.15,
+              "available_width_px": 290,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 222.75,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "Multi-view Input at Time t"
+              ]
+            },
+            "backbone": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 83.5,
+              "height_px": 24.15,
+              "available_width_px": 129,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 84.0,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "Backbone"
+              ]
+            },
+            "xy": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 50.5,
+              "height_px": 23.0,
+              "available_width_px": 64,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 51.0,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "(x′, y′)"
+              ]
+            },
+            "xyz": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 78.0,
+              "height_px": 23.5,
+              "available_width_px": 122,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 78.5,
+              "required_height_px": 24.0,
+              "fits": true,
+              "lines": [
+                "(x′, y′, zⱼ′)"
+              ]
+            },
+            "hitviews": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 109.5,
+              "height_px": 23.75,
+              "available_width_px": 153,
+              "available_height_px": 32,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 110.0,
+              "required_height_px": 24.25,
+              "fits": true,
+              "lines": [
+                "Hit Views Vₕᵢₜ"
+              ]
+            },
+            "tempxy": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 41.5,
+              "height_px": 23.0,
+              "available_width_px": 61,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 42.0,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "(x, y)"
+              ]
+            },
+            "temphistorylabel": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 128.25,
+              "height_px": 23.75,
+              "available_width_px": 200,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 128.75,
+              "required_height_px": 24.25,
+              "fits": true,
+              "lines": [
+                "History BEV Bₜ₋₁"
+              ]
+            },
+            "tempquerylabel": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 118.25,
+              "height_px": 23.0,
+              "available_width_px": 170,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 118.75,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "BEV Queries Q"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "pass",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [],
+      "text_boxes": [
+        {
+          "slide": "page_001",
+          "element": "moduletext1",
+          "expected": "Add & Norm",
+          "rendered": "Add & Norm",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito"
+          ],
+          "measured_ink_width_px": 110.5,
+          "rendered_ink_width_px": 110.478
+        },
+        {
+          "slide": "page_001",
+          "element": "moduletext2",
+          "expected": "Feed Forward",
+          "rendered": "Feed Forward",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito"
+          ],
+          "measured_ink_width_px": 120.75,
+          "rendered_ink_width_px": 119.578
+        },
+        {
+          "slide": "page_001",
+          "element": "moduletext3",
+          "expected": "Add & Norm",
+          "rendered": "Add & Norm",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito"
+          ],
+          "measured_ink_width_px": 110.5,
+          "rendered_ink_width_px": 110.478
+        },
+        {
+          "slide": "page_001",
+          "element": "moduletext4",
+          "expected": "Spatial Cross-Attention",
+          "rendered": "Spatial Cross-Attention",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito"
+          ],
+          "measured_ink_width_px": 202.75,
+          "rendered_ink_width_px": 201.368
+        },
+        {
+          "slide": "page_001",
+          "element": "moduletext5",
+          "expected": "Add & Norm",
+          "rendered": "Add & Norm",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito"
+          ],
+          "measured_ink_width_px": 110.5,
+          "rendered_ink_width_px": 110.478
+        },
+        {
+          "slide": "page_001",
+          "element": "moduletext6",
+          "expected": "Temporal Self-Attention",
+          "rendered": "Temporal Self-Attention",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito"
+          ],
+          "measured_ink_width_px": 213.5,
+          "rendered_ink_width_px": 209.609
+        },
+        {
+          "slide": "page_001",
+          "element": "repeat",
+          "expected": "× 6",
+          "rendered": "× 6",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito"
+          ],
+          "measured_ink_width_px": 22.25,
+          "rendered_ink_width_px": 21.972
+        },
+        {
+          "slide": "page_001",
+          "element": "heads_text",
+          "expected": "Det & Seg\nHeads",
+          "rendered": "Det & Seg\r\nHeads ",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito"
+          ],
+          "measured_ink_width_px": 83.0,
+          "rendered_ink_width_px": 82.194
+        },
+        {
+          "slide": "page_001",
+          "element": "current",
+          "expected": "Current BEV Bₜ",
+          "rendered": "Current BEV Bₜ",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito",
+            "DejaVuSans"
+          ],
+          "measured_ink_width_px": 118.75,
+          "rendered_ink_width_px": 117.448
+        },
+        {
+          "slide": "page_001",
+          "element": "history",
+          "expected": "History BEV Bₜ₋₁",
+          "rendered": "History BEV Bₜ₋₁ ",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito",
+            "DejaVuSans"
+          ],
+          "measured_ink_width_px": 127.0,
+          "rendered_ink_width_px": 126.017
+        },
+        {
+          "slide": "page_001",
+          "element": "queries",
+          "expected": "BEV Queries Q",
+          "rendered": "BEV Queries Q",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito"
+          ],
+          "measured_ink_width_px": 117.0,
+          "rendered_ink_width_px": 116.282
+        },
+        {
+          "slide": "page_001",
+          "element": "overall",
+          "expected": "(a) Overall Architecture",
+          "rendered": "(a) Overall Architecture",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito"
+          ],
+          "measured_ink_width_px": 197.0,
+          "rendered_ink_width_px": 195.573
+        },
+        {
+          "slide": "page_001",
+          "element": "spatial_panel",
+          "expected": "(b) Spatial Cross-Attention",
+          "rendered": "(b) Spatial Cross-Attention",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito"
+          ],
+          "measured_ink_width_px": 221.5,
+          "rendered_ink_width_px": 219.303
+        },
+        {
+          "slide": "page_001",
+          "element": "temporal_panel",
+          "expected": "(c) Temporal Self-Attention",
+          "rendered": "(c) Temporal Self-Attention",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito"
+          ],
+          "measured_ink_width_px": 229.25,
+          "rendered_ink_width_px": 224.574
+        },
+        {
+          "slide": "page_001",
+          "element": "camera_title",
+          "expected": "Multi-Camera Features Fₜ",
+          "rendered": "Multi-Camera Features Fₜ",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito",
+            "DejaVuSans"
+          ],
+          "measured_ink_width_px": 204.5,
+          "rendered_ink_width_px": 202.454
+        },
+        {
+          "slide": "page_001",
+          "element": "input",
+          "expected": "Multi-view Input at Time t",
+          "rendered": "Multi-view Input at Time t",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito"
+          ],
+          "measured_ink_width_px": 220.5,
+          "rendered_ink_width_px": 219.681
+        },
+        {
+          "slide": "page_001",
+          "element": "backbone",
+          "expected": "Backbone",
+          "rendered": "B\r\na\r\nc\r\nk\r\nb\r\no\r\nn\r\ne",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito"
+          ],
+          "measured_ink_width_px": 81.5,
+          "rendered_ink_width_px": 81.256
+        },
+        {
+          "slide": "page_001",
+          "element": "xy",
+          "expected": "(x′, y′)",
+          "rendered": "(x′, y′)",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 48.0,
+          "rendered_ink_width_px": 46.88
+        },
+        {
+          "slide": "page_001",
+          "element": "xyz",
+          "expected": "(x′, y′, zⱼ′)",
+          "rendered": "(x′, y′, zⱼ′)",
+          "matches": true,
+          "actual_fonts": [
+            "DejaVuSans-Oblique",
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 73.75,
+          "rendered_ink_width_px": 72.546
+        },
+        {
+          "slide": "page_001",
+          "element": "hitviews",
+          "expected": "Hit Views Vₕᵢₜ",
+          "rendered": "Hit Views Vₕᵢₜ",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito",
+            "DejaVuSans"
+          ],
+          "measured_ink_width_px": 106.75,
+          "rendered_ink_width_px": 106.456
+        },
+        {
+          "slide": "page_001",
+          "element": "tempxy",
+          "expected": "(x, y)",
+          "rendered": "(x, y)",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 39.0,
+          "rendered_ink_width_px": 38.215
+        },
+        {
+          "slide": "page_001",
+          "element": "temphistorylabel",
+          "expected": "History BEV Bₜ₋₁",
+          "rendered": "History BEV Bₜ₋₁ ",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito",
+            "DejaVuSans"
+          ],
+          "measured_ink_width_px": 127.0,
+          "rendered_ink_width_px": 126.016
+        },
+        {
+          "slide": "page_001",
+          "element": "tempquerylabel",
+          "expected": "BEV Queries Q",
+          "rendered": "BEV Queries Q",
+          "matches": true,
+          "actual_fonts": [
+            "Carlito"
+          ],
+          "measured_ink_width_px": 117.0,
+          "rendered_ink_width_px": 116.282
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "bd39d13234c52d2e1a587897ceb89107e40f36417659e5ba6c04b03870233f9f",
+  "font_substitutions": [
+    {
+      "code": "font_substitution",
+      "requested": "Carlito",
+      "resolved": "DejaVu Sans"
+    },
+    {
+      "code": "font_substitution",
+      "requested": "Times New Roman",
+      "resolved": "DejaVu Sans"
+    }
+  ],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "page_001",
+      "mean_absolute_pixel_error": 0.036918,
+      "comparison": "page_001_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

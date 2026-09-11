@@ -1,0 +1,607 @@
+{
+  "stage": "development",
+  "passed": 2,
+  "total": 24,
+  "rows": [
+    {
+      "id": "camera_title",
+      "box": [
+        62,
+        13,
+        310,
+        40
+      ],
+      "split": "development",
+      "source_bbox": [
+        5,
+        5,
+        239,
+        27
+      ],
+      "render_bbox": [
+        4,
+        6,
+        207,
+        27
+      ],
+      "edge_max_px": 32,
+      "iou": 0.21018062397372742,
+      "pass": false
+    },
+    {
+      "id": "current_label",
+      "box": [
+        416,
+        34,
+        559,
+        65
+      ],
+      "split": "development",
+      "source_bbox": [
+        5,
+        7,
+        140,
+        26
+      ],
+      "render_bbox": [
+        4,
+        8,
+        122,
+        21
+      ],
+      "edge_max_px": 18,
+      "iou": 0.22758620689655173,
+      "pass": false
+    },
+    {
+      "id": "add1",
+      "box": [
+        551,
+        106,
+        720,
+        134
+      ],
+      "split": "development",
+      "source_bbox": [
+        6,
+        4,
+        126,
+        20
+      ],
+      "render_bbox": [
+        2,
+        4,
+        112,
+        19
+      ],
+      "edge_max_px": 14,
+      "iou": 0.22028688524590165,
+      "pass": false
+    },
+    {
+      "id": "ffn",
+      "box": [
+        540,
+        152,
+        674,
+        180
+      ],
+      "split": "development",
+      "source_bbox": [
+        6,
+        4,
+        131,
+        20
+      ],
+      "render_bbox": [
+        9,
+        4,
+        129,
+        19
+      ],
+      "edge_max_px": 3,
+      "iou": 0.30085653104925053,
+      "pass": false
+    },
+    {
+      "id": "spatial",
+      "box": [
+        495,
+        255,
+        724,
+        282
+      ],
+      "split": "development",
+      "source_bbox": [
+        6,
+        5,
+        220,
+        26
+      ],
+      "render_bbox": [
+        13,
+        5,
+        214,
+        24
+      ],
+      "edge_max_px": 7,
+      "iou": 0.20928865373309818,
+      "pass": false
+    },
+    {
+      "id": "add3",
+      "box": [
+        551,
+        314,
+        720,
+        341
+      ],
+      "split": "development",
+      "source_bbox": [
+        6,
+        3,
+        126,
+        19
+      ],
+      "render_bbox": [
+        2,
+        4,
+        112,
+        19
+      ],
+      "edge_max_px": 14,
+      "iou": 0.2166324435318275,
+      "pass": false
+    },
+    {
+      "id": "history_label",
+      "box": [
+        400,
+        468,
+        569,
+        497
+      ],
+      "split": "development",
+      "source_bbox": [
+        7,
+        5,
+        156,
+        26
+      ],
+      "render_bbox": [
+        6,
+        6,
+        132,
+        23
+      ],
+      "edge_max_px": 24,
+      "iou": 0.2022792022792023,
+      "pass": false
+    },
+    {
+      "id": "query_label",
+      "box": [
+        649,
+        468,
+        791,
+        497
+      ],
+      "split": "development",
+      "source_bbox": [
+        7,
+        5,
+        137,
+        25
+      ],
+      "render_bbox": [
+        6,
+        5,
+        122,
+        22
+      ],
+      "edge_max_px": 15,
+      "iou": 0.1707089552238806,
+      "pass": false
+    },
+    {
+      "id": "input",
+      "box": [
+        65,
+        501,
+        324,
+        532
+      ],
+      "split": "development",
+      "source_bbox": [
+        5,
+        6,
+        247,
+        27
+      ],
+      "render_bbox": [
+        5,
+        6,
+        224,
+        24
+      ],
+      "edge_max_px": 23,
+      "iou": 0.1765036537380551,
+      "pass": false
+    },
+    {
+      "id": "spatial_panel",
+      "box": [
+        995,
+        281,
+        1260,
+        311
+      ],
+      "split": "development",
+      "source_bbox": [
+        8,
+        5,
+        253,
+        26
+      ],
+      "render_bbox": [
+        7,
+        5,
+        227,
+        23
+      ],
+      "edge_max_px": 26,
+      "iou": 0.24907063197026022,
+      "pass": false
+    },
+    {
+      "id": "hit_views",
+      "box": [
+        1232,
+        209,
+        1372,
+        241
+      ],
+      "split": "development",
+      "source_bbox": [
+        6,
+        6,
+        128,
+        26
+      ],
+      "render_bbox": [
+        6,
+        7,
+        113,
+        23
+      ],
+      "edge_max_px": 15,
+      "iou": 0.16475095785440613,
+      "pass": false
+    },
+    {
+      "id": "coord3",
+      "box": [
+        1022,
+        78,
+        1120,
+        111
+      ],
+      "split": "development",
+      "source_bbox": [
+        6,
+        7,
+        98,
+        29
+      ],
+      "render_bbox": [
+        5,
+        6,
+        78,
+        24
+      ],
+      "edge_max_px": 20,
+      "iou": 0.08496732026143791,
+      "pass": false
+    },
+    {
+      "id": "bottom_history",
+      "box": [
+        888,
+        434,
+        1055,
+        464
+      ],
+      "split": "development",
+      "source_bbox": [
+        7,
+        5,
+        157,
+        26
+      ],
+      "render_bbox": [
+        6,
+        6,
+        132,
+        23
+      ],
+      "edge_max_px": 25,
+      "iou": 0.2116650987770461,
+      "pass": false
+    },
+    {
+      "id": "bottom_query",
+      "box": [
+        1192,
+        434,
+        1343,
+        464
+      ],
+      "split": "development",
+      "source_bbox": [
+        7,
+        5,
+        137,
+        25
+      ],
+      "render_bbox": [
+        6,
+        5,
+        122,
+        22
+      ],
+      "edge_max_px": 15,
+      "iou": 0.17525773195876287,
+      "pass": false
+    },
+    {
+      "id": "repeat",
+      "box": [
+        827,
+        278,
+        870,
+        305
+      ],
+      "split": "development",
+      "source_bbox": [
+        9,
+        5,
+        36,
+        19
+      ],
+      "render_bbox": [
+        6,
+        4,
+        28,
+        17
+      ],
+      "edge_max_px": 8,
+      "iou": 0.08125,
+      "pass": false
+    },
+    {
+      "id": "feature_blue",
+      "box": [
+        16,
+        46,
+        133,
+        85
+      ],
+      "split": "development",
+      "source_bbox": [
+        3,
+        5,
+        117,
+        37
+      ],
+      "render_bbox": [
+        4,
+        5,
+        117,
+        37
+      ],
+      "edge_max_px": 1,
+      "iou": 0.3979591836734694,
+      "pass": false
+    },
+    {
+      "id": "feature_green",
+      "box": [
+        226,
+        46,
+        343,
+        85
+      ],
+      "split": "development",
+      "source_bbox": [
+        0,
+        0,
+        114,
+        37
+      ],
+      "render_bbox": [
+        0,
+        0,
+        114,
+        37
+      ],
+      "edge_max_px": 0,
+      "iou": 0.41605839416058393,
+      "pass": false
+    },
+    {
+      "id": "feature_gray",
+      "box": [
+        109,
+        106,
+        226,
+        144
+      ],
+      "split": "development",
+      "source_bbox": [
+        0,
+        0,
+        114,
+        38
+      ],
+      "render_bbox": [
+        0,
+        0,
+        114,
+        38
+      ],
+      "edge_max_px": 0,
+      "iou": 0.2890792291220557,
+      "pass": false
+    },
+    {
+      "id": "feature_lavender",
+      "box": [
+        226,
+        89,
+        343,
+        127
+      ],
+      "split": "development",
+      "source_bbox": [
+        4,
+        4,
+        114,
+        35
+      ],
+      "render_bbox": [
+        5,
+        5,
+        114,
+        37
+      ],
+      "edge_max_px": 2,
+      "iou": 0.16411378555798686,
+      "pass": false
+    },
+    {
+      "id": "spatial_outline",
+      "box": [
+        872,
+        12,
+        1394,
+        271
+      ],
+      "split": "development",
+      "source_bbox": [
+        0,
+        4,
+        518,
+        255
+      ],
+      "render_bbox": [
+        1,
+        4,
+        518,
+        256
+      ],
+      "edge_max_px": 1,
+      "iou": 0.3079044117647059,
+      "pass": false
+    },
+    {
+      "id": "backbone_top",
+      "box": [
+        124,
+        160,
+        239,
+        198
+      ],
+      "split": "development",
+      "source_bbox": [
+        4,
+        0,
+        112,
+        35
+      ],
+      "render_bbox": [
+        3,
+        0,
+        112,
+        36
+      ],
+      "edge_max_px": 1,
+      "iou": 0.7089552238805971,
+      "pass": true
+    },
+    {
+      "id": "backbone_mid",
+      "box": [
+        97,
+        201,
+        266,
+        241
+      ],
+      "split": "development",
+      "source_bbox": [
+        4,
+        4,
+        166,
+        36
+      ],
+      "render_bbox": [
+        3,
+        4,
+        166,
+        37
+      ],
+      "edge_max_px": 1,
+      "iou": 0.4487034949267193,
+      "pass": false
+    },
+    {
+      "id": "head_box",
+      "box": [
+        688,
+        11,
+        838,
+        79
+      ],
+      "split": "development",
+      "source_bbox": [
+        0,
+        3,
+        149,
+        65
+      ],
+      "render_bbox": [
+        0,
+        3,
+        147,
+        65
+      ],
+      "edge_max_px": 2,
+      "iou": 0.5235626767200754,
+      "pass": false
+    },
+    {
+      "id": "arrow_current",
+      "box": [
+        655,
+        35,
+        694,
+        51
+      ],
+      "split": "development",
+      "source_bbox": [
+        0,
+        0,
+        38,
+        16
+      ],
+      "render_bbox": [
+        0,
+        0,
+        38,
+        16
+      ],
+      "edge_max_px": 0,
+      "iou": 0.740506329113924,
+      "pass": true
+    }
+  ]
+}

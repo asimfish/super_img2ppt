@@ -1,0 +1,50 @@
+import json,hashlib,sys,platform,datetime
+from pathlib import Path
+from PIL import Image
+import pypdfium2
+R=Path(__file__).parent
+# Preserve factual command summaries; no invented timings.
+commands=[]
+for i,code in [(1,2),(2,2),(3,0),(4,0),(5,0)]:
+ commands.append({'build':f'build_{i:02}','command':f'PATH="/opt/homebrew/bin:$PATH" PYTHONPATH={R}/frozen_skill/src /Users/liyufeng/Code/super_img2ppt/.venv/bin/python -m super_img2ppt.cli build {R}/job/scene.json --out {R}/build_{i:02} --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype','exit_code':code,'stdout_stderr':f'build_{i:02}.log','scene_snapshot':f'scene_{i:02}.json' if i<5 else 'job/scene.json','record_type':'retrospective command summary; exit code observed from terminal tool','note':'No timings captured'})
+(R/'commands.json').write_text(json.dumps(commands,indent=2))
+# Final chosen sourcewidth comparison is already a PDF render, not another renderer.
+a=Image.open(R/'source.png').convert('RGB');b=Image.open(R/'build_05/sourcewidth.png').convert('RGB');out=Image.new('RGB',(1640,1110),'white');out.paste(a,(0,0));out.paste(b,(820,0));out.save(R/'final_comparison.png')
+freeze=json.load(open(R/'candidate_freeze.json'));unchanged={p:hashlib.sha256((R/p).read_bytes()).hexdigest()==h for p,h in freeze['files'].items()};(R/'freeze_verification.json').write_text(json.dumps({'after_heldout':True,'files_unchanged':unchanged},indent=2))
+(R/'environment.json').write_text(json.dumps({'python':sys.version,'platform':platform.platform(),'dependency_install':False,'frozen_skill':'frozen_skill','runtime_source_read':False,'source_pdf_text_or_vectors_read':False,'reconstruction_answer_inputs':['source.png visual inspection'],'fonts_embedded':False},indent=2))
+report='''# InternImage CVPR 2023 complete Figure 3 independent evaluation
+
+Final artifact: `build_05/editable.pptx`, `build_05/svg/`, `build_05/scene.resolved.json`, `build_05/assets/`, `build_05/fonts.json`, `build_05/validation.json`, actual PDF `build_05/render/editable.pdf`, source-width actual-PDF raster `build_05/sourcewidth.png`.
+
+## Source and scope
+Official CVPR 2023 paper, Wang et al., InternImage: Exploring Large-Scale Vision Foundation Models with Deformable Convolutions. Figure 3, PDF page 3, published overall architecture. `source_identity.json` records official URL, PDF/source SHA256, 4 pixels per PDF point, crop [1290,280,2110,1390], 820×1110 pixels. Complete Figure 3 including left hierarchy, right stem/downsampling definitions, basic block with two residual paths, and all four stacking rules. Figure caption is outside the crop. The paper depicts DCNv3 as a module in this figure; sampling internals are explained elsewhere as equations, so no extra panel was invented. Only rasterized pages/source were read for reconstruction. No PDF text, vector coordinates, author generation code, or runtime implementation read as drawing answers.
+
+Paper-derived visual with no redistribution license established. Keep source and derived PPTX/SVG/assets local unless permission is obtained. Frozen opaque v0.3.2 skill at `frozen_skill/`, hashes `frozen_hashes.json`; no repo edits, dependency installation or pushes by this evaluator.
+
+## Frozen measurement contract
+42 manually selected source regions frozen in `roi_contract.json` before scene construction: 28 development and 14 heldout, deterministic every-third split. Pass requires BOTH dark/color-mask intersection-over-union >=0.70 AND maximum bounding-box edge difference <=4 source pixels. Native PPTX was rendered by actual LibreOffice, then its PDF rasterized to exactly source width 820, no image registration. Masks and all individual results retained. Threshold is deliberately stricter than merely readable/structured output.
+
+Development counts: build02 4/28; build03 4/28; build04 7/28; build05 10/28. Three meaningful typography revisions after the first actual render, then stop. `candidate_freeze.json` froze final scene/PPTX/PDF/raster/contract hashes BEFORE first heldout measurement. Final heldout 2/14. `freeze_verification.json` confirms no artifact/contract changes after heldout. These are numerical-feedback heldout regions within a visually inspected figure, not an independent generalization set. Overall 12/42, with 30 failing regions, is evidence of remaining source-fidelity limitations despite automated PASS.
+
+Some fixed ROIs include nearby geometry. Rule4 bottom edge intersects source rules-box border but candidate's slightly lower border falls outside; its 40 px maximum edge error is mixed-border extent, not a 40 px displacement of text. DCN region includes red node-outline ink. These were not silently changed after freezing; they limit interpretation as pure glyph metrics.
+
+## Attempts and observed failures
+- build01 exit2: small subscript text frames lacked line-height reserve; last rule subscript ink crossed source container; five explicit plus/branch intersections were not yet declared. No actual render generated.
+- build02 exit2: preflight/native objects passed; actual render detected 14 italic leading-glyph overhangs at frame left (L, H, delta, slash). These were scene-authored frame errors, not established runtime bugs. Initial plus strokes also appeared behind circles due to scene z order; actual preview exposed missing visible plus symbols.
+- build03 exit0/PASS: added 3px empty left padding with matching frame expansion preserving intended glyph origin, raised plus strokes above circles, corrected source word/line origins and shared body sizes, made math variables italic and digits/operators upright. 4/28 development; source glyph shapes still differ.
+- build04 exit0/PASS: corrected math operator spacing, residual-arrow dimensions, labels and measured module coordinates; 7/28 development.
+- build05 exit0/PASS: fixed two downsampling node heights from source, small shared label-size changes and first dimension's narrower math spacing; 10/28 development, then candidate frozen and heldout tested once. No further scene changes.
+
+`commands.json` retrospectively records exact build commands and observed exit codes; no invented durations. Original stdout/stderr and validation files remain in every build folder, including all failures. Authoring and three revision scripts are retained. Pillow measurement emitted only a getdata deprecation warning; no package changes were made.
+
+## Editability, font, and topology audit
+176 total objects: 77 native text objects, 18 native shapes, 80 native lines, 1 separately movable photo crop. Sole raster is the red-panda photo [334,13,503,170], contains_text=false; no readable labels baked into crops. Shape-count includes two additive circles. Braces and red predictor bend are short connected native line segments, therefore approximate the source curves. All readable architectural labels and mathematical subscripts/superscript are editable; separate native text pieces preserve lowered/raised positions. No raster background masquerades as editability.
+
+All four stages and three downsampling transitions are present in order; image→stem→stage1→downsample→stage2→downsample→stage3→downsample→stage4→cls/det/seg. Stage definitions, spatial/channel labels, stack indices, detailed stem's two convolutions/LN/GELU and downsampling's conv/LN are present. Basic block preserves bottom→DCNv3→LN→first addition→FFN→LN→second addition→output, both right residual returns point left into additions, and red input/predictor path stays red. Four stacking rules preserve C_i=2^(i−1)C_1, G_i=C_i/C′, L_1=L_2=L_4, L_1≤L_3. Source-supported connector joins have named overlaps. Final whole figure visually compared to source; no panel omitted.
+
+Installed Times New Roman regular/bold/italic resolved without substitutions; files are not embedded or distributed. Pixel evidence does not identify the source font uniquely. Original mathematical glyph spacing, some weight/serif details, stage-title glyphs and formula spacing remain visibly different. `stage i` uses upright bold i whereas source i is italic; this heldout region remains a disclosed failure after final freeze. Source curves use smooth joins while editable braces/predictor use piecewise lines. Tiny stroke/radius differences remain. This is a reviewable editable reconstruction, not high-fidelity acceptance.
+
+LibreOffice actual PPTX export/render checked. Microsoft PowerPoint and WPS were not tested. Runtime automated PASS does not overrule the strict ROI failures or manual fidelity limits.
+'''
+(R/'report_original.md').write_text(report)
+files={str(p.relative_to(R)):hashlib.sha256(p.read_bytes()).hexdigest() for p in R.rglob('*') if p.is_file() and 'frozen_skill' not in p.parts and p.name!='artifact_hashes.json'};(R/'artifact_hashes.json').write_text(json.dumps(files,indent=2));print(len(files))

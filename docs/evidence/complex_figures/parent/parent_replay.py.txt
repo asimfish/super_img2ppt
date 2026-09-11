@@ -1,0 +1,21 @@
+import hashlib,json,os,shutil,subprocess,time
+from pathlib import Path
+from PIL import Image,ImageChops
+root=Path.cwd();out=root/'output/complex_figures_20260911';env=dict(os.environ);env['PATH']='/opt/homebrew/bin:'+env['PATH']
+cases={'internimage':('/tmp/internimage-forward-GRM4hn','build_05'),'dust3r':('/tmp/dust3r-complex-qQO3Ml','build_07'),'bevformer':('/tmp/bevformer-forward-EnS49e','build_07')}
+records=[]
+for case,(temp,build) in cases.items():
+ src=Path(temp)/build;dst=out/'deliverables'/case
+ shutil.copytree(src,dst,dirs_exist_ok=True)
+ cmd=['uv','run','super-img2ppt','build',str(dst/'scene.resolved.json'),'--out',str(out/f'parent_{case}'),'--font-dir','/Applications/LibreOffice.app/Contents/Resources/fonts/truetype']
+ t=time.monotonic();p=subprocess.run(cmd,env=env,capture_output=True,text=True)
+ record={'case':case,'command':cmd,'exit_code':p.returncode,'seconds':round(time.monotonic()-t,3),'stdout':p.stdout,'stderr':p.stderr,'render_comparisons':[]}
+ for png in sorted((dst/'render').glob('page_*.png')):
+  replay=out/f'parent_{case}'/'render'/png.name
+  a=Image.open(png).convert('RGB');b=Image.open(replay).convert('RGB')
+  same=a.size==b.size and ImageChops.difference(a,b).getbbox() is None
+  record['render_comparisons'].append({'page':png.name,'identical_pixels':same,'original_sha256':hashlib.sha256(png.read_bytes()).hexdigest(),'replay_sha256':hashlib.sha256(replay.read_bytes()).hexdigest()})
+ record['validation_status']=json.loads((out/f'parent_{case}'/'validation.json').read_text())['status'];records.append(record)
+ print(case,p.returncode,record['validation_status'],record['render_comparisons'],flush=True)
+(out/'parent_replay.json').write_text(json.dumps(records,indent=2)+'\n')
+assert all(r['exit_code']==0 and r['render_comparisons'] and all(p['identical_pixels'] for p in r['render_comparisons']) for r in records)

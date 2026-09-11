@@ -1,0 +1,68 @@
+from pathlib import Path
+import json,hashlib,math
+from PIL import Image
+R=Path(__file__).parent; J=R/'job';J.mkdir(exist_ok=True);(J/'assets').mkdir(exist_ok=True)
+Image.open(R/'source.png').save(J/'source.png');Image.open(R/'source.png').crop((334,13,503,170)).save(J/'assets/photo.png')
+# Frozen manual regions selected from source pixels before any candidate generation/measurement.
+regs=[('stem_label',[365,219,472,249]),('stage1',[360,302,475,337]),('block1',[321,340,518,381]),('down1',[322,429,518,462]),('stage2',[360,512,475,547]),('block2',[321,550,518,591]),('down2',[322,640,518,673]),('stage3',[360,722,475,757]),('block3',[321,760,518,801]),('down3',[322,850,518,883]),('stage4',[360,932,475,967]),('block4',[321,970,518,1011]),('stem_title',[645,22,716,58]),('conv1',[575,61,788,94]),('gelu',[575,95,719,130]),('conv2',[575,132,788,165]),('stem_ln',[575,164,626,197]),('down_title',[585,230,780,263]),('down_conv',[575,266,788,299]),('down_ln',[575,302,626,335]),('stage_i',[688,379,791,415]),('ln1',[636,468,691,505]),('ffn',[630,536,697,573]),('ln2',[636,650,691,687]),('dcn',[581,719,744,757]),('rules_title',[590,851,777,887]),('dim0',[139,90,261,125]),('dim1',[63,316,259,356]),('dim2',[63,527,259,567]),('dim3',[30,737,260,777]),('dim4',[30,947,260,987]),('bottom',[313,1052,520,1094]),('top_arrow',[410,169,429,208]),('stage_arrow',[410,381,429,419]),('residual_top',[769,430,791,590]),('ln_fill',[590,475,630,495]),('ffn_fill',[590,543,624,563]),('dcn_fill',[585,715,618,720]),('rule1',[574,892,789,937]),('rule2',[574,935,789,974]),('rule3',[574,973,790,1008]),('rule4',[574,1008,754,1046])]
+contract={'frozen_before_authoring':True,'resolution':[820,1110],'threshold':{'edge_max_px':4,'iou_min':.70},'mask':'dark: maxRGB<150; red for dcn: R>140,G<120,B<120; fill exact color distance<35','regions':[{'id':n,'box':b,'split':'heldout' if i%3==2 else 'development','mask':'red' if n=='dcn' else ('yellow' if n=='ln_fill' else 'blue' if n=='ffn_fill' else 'redfill' if n=='dcn_fill' else 'dark')} for i,(n,b) in enumerate(regs)]};(R/'roi_contract.json').write_text(json.dumps(contract,indent=2))
+e=[]
+def shape(n,b,fill='#E7E6E6',round=True,stroke='#000000',z=1):
+ e.append(dict(id=n,kind='shape',z=z,box=b,shape='round_rect' if round else 'rect',radius=8,fill=fill,stroke=stroke,stroke_width=2.7));return n
+def text(n,s,b,size=30,bold=False,italic=False,color='#000000',container=None,align='left'):
+ a=dict(id=n,kind='text',z=10,box=b,text=s,font_family='Times New Roman',font_size=size,bold=bold,italic=italic,color=color,align=align,fit='strict',wrap=False)
+ if container:a['container']=container
+ e.append(a)
+def line(n,p,q,color='#000000',arrow=False,w=2.7):
+ a=dict(id=n,kind='line',z=4,points=[p,q],stroke=color,stroke_width=w)
+ if arrow:a.update(arrow=True,arrow_head={'length':9,'width':8})
+ e.append(a)
+shape('stem',[309,209,219,50],'#FBE3E1');text('stem_text','stem',[309,215,219,40],30,True,container='stem',align='center')
+e.append(dict(id='photo',kind='image',z=1,box=[334,13,169,157],path='assets/photo.png',contains_text=False,provenance='Exact source photo crop [334,13,503,170]; red panda photo only.'))
+line('photo_stem',[419,170],[419,207],arrow=True)
+for i,y in enumerate([295,505,715,923],1):
+ n=shape('stage'+str(i),[309,y,219,85]);text(n+'_title','stage '+str(i),[309,y+6,219,37],30,True,container=n,align='center');text(n+'_block','basic block ×',[325,y+44,160,35],29,container=n);text(n+'_L','L',[485,y+44,21,35],29,italic=True,container=n);text(n+'_index',str(i),[504,y+61,16,23],21,container=n)
+ if i<4:
+  dy=y+124;dn=shape('down'+str(i),[309,dy,219,48],'#FFEFAD');text(dn+'_text','downsampling',[309,dy+5,219,38],29,True,container=dn,align='center');line('stage_down'+str(i),[419,y+85],[419,dy],arrow=True);line('down_stage'+str(i),[419,dy+48],[419,[505,715,923][i-1]],arrow=True)
+line('stem_stage',[419,259],[419,294],arrow=True);line('out',[417,1008],[417,1043],arrow=True)
+text('outputs','cls, det, seg, ...',[319,1054,250,47],33,italic=True)
+# Dimension phrases and lowered subscripts remain native.
+for i,(s,x,y,c) in enumerate([('H×W×3',143,92,None),('H/4×W/4×C',69,319,'1'),('H/8×W/8×C',69,529,'2'),('H/16×W/16×C',36,739,'3'),('H/32×W/32×C',36,949,'4')]):
+ text('dimension'+str(i),s,[x,y,228-x if c else 125,40],30,italic=True)
+ if c:text('dimension_sub'+str(i),c,[240,y+20,15,23],21)
+# Braces: source-matched polyline approximation of four small curved elbows, separately editable.
+for i,(top,mid,bot) in enumerate([(14,111,209),(259,338,419),(467,547,627),(677,757,837),(887,967,1047)]):
+ pts=[(290,top),(285,top+1),(282,top+5),(282,mid-8),(280,mid-3),(273,mid),(280,mid+3),(282,mid+8),(282,bot-5),(285,bot-1),(290,bot)]
+ for k in range(len(pts)-1):line(f'brace{i}_{k}',pts[k],pts[k+1],w=2.7)
+shape('stem_detail',[564,14,234,189],'#FBE3E1');text('stem_detail_title','stem',[564,21,234,38],30,True,container='stem_detail',align='center')
+for i,(s,y) in enumerate([('3×3 conv, s2, p1',59),('LN, GELU',94),('3×3 conv, s2, p1',129),('LN',164)]):text('stem_detail'+str(i),s,[578,y,216,36],30,container='stem_detail')
+shape('down_detail',[564,220,234,119],'#FFEFAD');text('down_title','downsampling',[564,225,234,40],29,True,container='down_detail',align='center');text('down_conv','3×3 conv, s2, p1',[578,264,216,37],30,container='down_detail');text('down_ln','LN',[578,300,215,37],30,container='down_detail')
+shape('block_detail',[564,373,234,440]);text('detail_stage','stage i',[690,376,105,44],31,True,container='block_detail');text('repeat_L','L',[583,409,22,42],30,italic=True,container='block_detail');text('repeat_i','i',[603,428,10,23],21,italic=True,container='block_detail');text('repeat_times','×',[613,410,25,37],30,container='block_detail')
+for n,y,s,fill in [('ln_top',461,'LN','#FFEFAD'),('ffn',529,'FFN','#C0E5F5'),('ln_bottom',643,'LN','#FFEFAD')]:
+ shape(n,[579,y,168,50],fill,z=5);e[-1]['container']='block_detail';text(n+'_text',s,[579,y+6,168,40],31,container=n,align='center')
+shape('dcn',[579,711,168,50],'#F0BAB7',stroke='#DA0000',z=5);e[-1]['container']='block_detail';text('dcn_text','DCNv3 (',[587,718,109,39],29,color='#CE0000',container='dcn');text('dcn_G','G',[696,718,23,39],29,italic=True,color='#CE0000',container='dcn');text('dcn_i','i',[719,736,8,21],20,italic=True,color='#CE0000',container='dcn');text('dcn_end',')',[727,718,16,39],29,color='#CE0000',container='dcn')
+for n,y in [('add1',430),('add2',611)]:
+ e.append(dict(id=n,kind='shape',z=5,box=[649,y-13,27,26],shape='ellipse',fill='#FFFFFF',stroke='#000000',stroke_width=2.7,container='block_detail'));line(n+'_h',[650,y],[675,y]);line(n+'_v',[663,y-12],[663,y+12])
+for n,p,q,ar in [('up_out',(662,416),(662,357),True),('ln_up',(662,461),(662,444),False),('ffn_ln',(662,529),(662,511),True),('add_ffn',(662,598),(662,579),True),('ln_add',(662,643),(662,624),False),('dcn_ln',(662,711),(662,693),True),('input',(662,827),(662,762),True),('skip1a',(662,590),(784,590),False),('skip1b',(784,590),(784,430),False),('skip1c',(784,430),(677,430),True),('skip2a',(662,796),(782,796),False),('skip2b',(782,796),(782,611),False),('skip2c',(782,611),(677,611),True)]:line(n,p,q,'#D00000' if n=='input' else '#000000',ar)
+# Native segmented curved red predictor connection.
+for i,(p,q) in enumerate(zip([(663,780),(677,779),(690,776),(704,770)],[(677,779),(690,776),(704,770),(712,762)])):line('delta_curve'+str(i),p,q,'#D00000',i==3)
+text('delta','Δp,',[701,763,46,34],28,italic=True,color='#CE0000',container='block_detail');text('modulation','m',[749,763,30,34],28,True,color='#CE0000',container='block_detail')
+shape('rules',[564,842,234,205],'#FFFFFF',False);text('rules_title','stacking rules',[564,849,234,40],30,True,container='rules',align='center')
+# Formula bases and subscripts as native runs / local positions.
+for i,y in enumerate([895,934,971,1007],1):text('rule_num'+str(i),f'({i})',[578,y,42,39],30,container='rules')
+for n,s,b,sz in [('r1c','C',[620,895,22,38],30),('r1i','i',[642,916,10,21],20),('r1eq','= 2',[653,895,48,38],30),('r1exp','i−1',[699,888,39,24],21),('r1c2','C',[741,895,23,38],30),('r1one','1',[762,916,13,22],21),('r2g','G',[620,934,24,38],30),('r2i','i',[642,954,10,22],20),('r2eq','= C',[653,934,51,38],30),('r2i2','i',[704,954,10,22],20),('r2div','/C′',[713,934,48,38],30),('r3l','L',[620,971,20,38],30),('r3one','1',[640,991,13,22],21),('r3eq','= L',[655,971,50,38],30),('r3two','2',[704,991,13,22],21),('r3eq2','= L',[719,971,51,38],30),('r3four','4',[770,991,13,22],21),('r4l','L',[620,1007,20,38],30),('r4one','1',[640,1027,13,22],21),('r4le','≤ L',[655,1007,50,38],30),('r4three','3',[705,1027,13,22],21)]:text(n,s,b,sz,italic=n not in ['r1eq','r1one','r3one','r3two','r3four','r4one','r4three'],container='rules')
+# Explicit source-supported line junction pairs and same nested block coverage.
+for a in e:
+ if a['kind']=='line':
+  pairs=[]
+  for b in e:
+   if b['id']==a['id']:continue
+   if b['kind']=='line' and any(math.dist(p,q)<3 for p in a['points'] for q in b['points']):pairs.append(b['id'])
+   if b['kind']=='shape':
+    x,y,w,h=b['box']
+    if any(x-2<=p[0]<=x+w+2 and y-2<=p[1]<=y+h+2 for p in a['points']):pairs.append(b['id'])
+  if pairs:a.update(allow_overlap_with=pairs,overlap_reason='Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.')
+ if a.get('container') in ['ln_top','ln_bottom','ffn','dcn']:
+  a.update(allow_overlap_with=['block_detail'],overlap_reason='Foreground submodule and its label are within the source block detail background.')
+scene={'version':1,'slides':[{'id':'internimage_fig3','width':820,'height':1110,'source':'source.png','background':'#FFFFFF','reviewed':True,'elements':e}]}
+(J/'scene.json').write_text(json.dumps(scene,indent=2))

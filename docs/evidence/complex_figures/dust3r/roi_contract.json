@@ -1,0 +1,270 @@
+{
+  "threshold": "nonwhite: min(R,G,B)<180; isolated colored regions chroma>60; max ink bbox edge displacement <=4px AND mask IoU>=0.70",
+  "render": "actual PPTX exported PDF rasterized to exact source width without registration",
+  "rois": [
+    {
+      "id": "vit1",
+      "box": [
+        280,
+        54,
+        369,
+        106
+      ],
+      "split": "development",
+      "mask": "ink"
+    },
+    {
+      "id": "dec1",
+      "box": [
+        447,
+        55,
+        568,
+        111
+      ],
+      "split": "development",
+      "mask": "ink"
+    },
+    {
+      "id": "head1",
+      "box": [
+        590,
+        59,
+        660,
+        95
+      ],
+      "split": "heldout",
+      "mask": "ink"
+    },
+    {
+      "id": "patch1",
+      "box": [
+        141,
+        101,
+        215,
+        126
+      ],
+      "split": "development",
+      "mask": "ink"
+    },
+    {
+      "id": "vit2",
+      "box": [
+        280,
+        237,
+        369,
+        291
+      ],
+      "split": "development",
+      "mask": "ink"
+    },
+    {
+      "id": "dec2",
+      "box": [
+        447,
+        237,
+        569,
+        291
+      ],
+      "split": "heldout",
+      "mask": "ink"
+    },
+    {
+      "id": "head2",
+      "box": [
+        590,
+        245,
+        660,
+        280
+      ],
+      "split": "development",
+      "mask": "ink"
+    },
+    {
+      "id": "patch2",
+      "box": [
+        141,
+        278,
+        215,
+        304
+      ],
+      "split": "development",
+      "mask": "ink"
+    },
+    {
+      "id": "point1",
+      "box": [
+        735,
+        24,
+        825,
+        47
+      ],
+      "split": "heldout",
+      "mask": "color"
+    },
+    {
+      "id": "point2",
+      "box": [
+        735,
+        206,
+        825,
+        231
+      ],
+      "split": "development",
+      "mask": "color"
+    },
+    {
+      "id": "conf1",
+      "box": [
+        720,
+        78,
+        829,
+        102
+      ],
+      "split": "development",
+      "mask": "ink"
+    },
+    {
+      "id": "conf2",
+      "box": [
+        719,
+        265,
+        829,
+        290
+      ],
+      "split": "heldout",
+      "mask": "ink"
+    },
+    {
+      "id": "cross",
+      "box": [
+        514,
+        156,
+        628,
+        182
+      ],
+      "split": "development",
+      "mask": "ink"
+    },
+    {
+      "id": "shared",
+      "box": [
+        288,
+        148,
+        354,
+        192
+      ],
+      "split": "development",
+      "mask": "ink"
+    },
+    {
+      "id": "camera1",
+      "box": [
+        879,
+        126,
+        966,
+        175
+      ],
+      "split": "heldout",
+      "mask": "ink"
+    },
+    {
+      "id": "camera2",
+      "box": [
+        1003,
+        229,
+        1169,
+        278
+      ],
+      "split": "development",
+      "mask": "ink"
+    },
+    {
+      "id": "common",
+      "box": [
+        980,
+        56,
+        1207,
+        108
+      ],
+      "split": "development",
+      "mask": "ink"
+    },
+    {
+      "id": "formula1",
+      "box": [
+        715,
+        46,
+        851,
+        75
+      ],
+      "split": "heldout",
+      "mask": "color"
+    },
+    {
+      "id": "formula2",
+      "box": [
+        715,
+        230,
+        851,
+        258
+      ],
+      "split": "development",
+      "mask": "color"
+    },
+    {
+      "id": "encoder_outline",
+      "box": [
+        260,
+        14,
+        377,
+        146
+      ],
+      "split": "development",
+      "mask": "ink"
+    },
+    {
+      "id": "decoder_outline",
+      "box": [
+        437,
+        197,
+        579,
+        329
+      ],
+      "split": "heldout",
+      "mask": "ink"
+    },
+    {
+      "id": "patch_arrow",
+      "box": [
+        149,
+        76,
+        210,
+        98
+      ],
+      "split": "development",
+      "mask": "ink"
+    },
+    {
+      "id": "camera_red",
+      "box": [
+        968,
+        125,
+        1044,
+        176
+      ],
+      "split": "development",
+      "mask": "color"
+    },
+    {
+      "id": "camera_blue",
+      "box": [
+        1085,
+        192,
+        1165,
+        257
+      ],
+      "split": "heldout",
+      "mask": "color"
+    }
+  ]
+}

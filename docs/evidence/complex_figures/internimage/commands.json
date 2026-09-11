@@ -1,0 +1,47 @@
+[
+  {
+    "build": "build_01",
+    "command": "PATH=\"/opt/homebrew/bin:$PATH\" PYTHONPATH=/tmp/internimage-forward-GRM4hn/frozen_skill/src /Users/liyufeng/Code/super_img2ppt/.venv/bin/python -m super_img2ppt.cli build /tmp/internimage-forward-GRM4hn/job/scene.json --out /tmp/internimage-forward-GRM4hn/build_01 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+    "exit_code": 2,
+    "stdout_stderr": "build_01.log",
+    "scene_snapshot": "scene_01.json",
+    "record_type": "retrospective command summary; exit code observed from terminal tool",
+    "note": "No timings captured"
+  },
+  {
+    "build": "build_02",
+    "command": "PATH=\"/opt/homebrew/bin:$PATH\" PYTHONPATH=/tmp/internimage-forward-GRM4hn/frozen_skill/src /Users/liyufeng/Code/super_img2ppt/.venv/bin/python -m super_img2ppt.cli build /tmp/internimage-forward-GRM4hn/job/scene.json --out /tmp/internimage-forward-GRM4hn/build_02 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+    "exit_code": 2,
+    "stdout_stderr": "build_02.log",
+    "scene_snapshot": "scene_02.json",
+    "record_type": "retrospective command summary; exit code observed from terminal tool",
+    "note": "No timings captured"
+  },
+  {
+    "build": "build_03",
+    "command": "PATH=\"/opt/homebrew/bin:$PATH\" PYTHONPATH=/tmp/internimage-forward-GRM4hn/frozen_skill/src /Users/liyufeng/Code/super_img2ppt/.venv/bin/python -m super_img2ppt.cli build /tmp/internimage-forward-GRM4hn/job/scene.json --out /tmp/internimage-forward-GRM4hn/build_03 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+    "exit_code": 0,
+    "stdout_stderr": "build_03.log",
+    "scene_snapshot": "scene_03.json",
+    "record_type": "retrospective command summary; exit code observed from terminal tool",
+    "note": "No timings captured"
+  },
+  {
+    "build": "build_04",
+    "command": "PATH=\"/opt/homebrew/bin:$PATH\" PYTHONPATH=/tmp/internimage-forward-GRM4hn/frozen_skill/src /Users/liyufeng/Code/super_img2ppt/.venv/bin/python -m super_img2ppt.cli build /tmp/internimage-forward-GRM4hn/job/scene.json --out /tmp/internimage-forward-GRM4hn/build_04 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+    "exit_code": 0,
+    "stdout_stderr": "build_04.log",
+    "scene_snapshot": "scene_04.json",
+    "record_type": "retrospective command summary; exit code observed from terminal tool",
+    "note": "No timings captured"
+  },
+  {
+    "build": "build_05",
+    "command": "PATH=\"/opt/homebrew/bin:$PATH\" PYTHONPATH=/tmp/internimage-forward-GRM4hn/frozen_skill/src /Users/liyufeng/Code/super_img2ppt/.venv/bin/python -m super_img2ppt.cli build /tmp/internimage-forward-GRM4hn/job/scene.json --out /tmp/internimage-forward-GRM4hn/build_05 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+    "exit_code": 0,
+    "stdout_stderr": "build_05.log",
+    "scene_snapshot": "job/scene.json",
+    "record_type": "retrospective command summary; exit code observed from terminal tool",
+    "note": "No timings captured"
+  }
+]

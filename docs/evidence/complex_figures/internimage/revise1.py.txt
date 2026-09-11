@@ -1,0 +1,25 @@
+import json
+from pathlib import Path
+R=Path(__file__).parent;p=R/'job/scene.json';d=json.loads(p.read_text());(R/'scene_02.json').write_text(p.read_text());es={x['id']:x for x in d['slides'][0]['elements']}
+# Italic overhang: grow empty left padding while preserving native text origin.
+for e in es.values():
+ if e['kind']=='text' and e.get('italic'):
+  e['box'][0]-=3;e['box'][2]+=3;e['padding']=[0,0,0,3]
+for n in ['add1_h','add1_v','add2_h','add2_v']:es[n]['z']=6
+# First measured typography repair; development labels guide shared style adjustments.
+for n in ['stem_detail0','stem_detail2','down_conv']:
+ es[n]['font_size']=31.2;es[n]['box'][0]+=2;es[n]['box'][1]-=2;es[n]['box'][3]=38
+for n in ['stem_detail1','stem_detail3','down_ln']:es[n]['box'][1]-=3
+for n in ['ln_top_text','ln_bottom_text','ffn_text']:es[n]['font_size']=30;es[n]['box'][1]+=1
+for i in range(1,5):es[f'stage{i}_title']['font_size']=31
+es['stage1_title']['box'][1]+=1;es['stage4_title']['box'][1]+=1
+for i in [2,3]:es[f'down{i}_text']['box'][1]-=1
+es['stem_text']['box'][1]+=1
+es['rules_title']['font_size']=29.5;es['rules_title']['box'][1]+=1
+es['outputs']['box'][1]-=2
+for n in ['rule_num2','r2g','r2i','r2eq','r2i2','r2div','rule_num3','r3l','r3one','r3eq','r3two','r3eq2','r3four']:es[n]['box'][1]-=2
+# Source dimension digits/operators upright, variables italic; replace uniform italic with semantic runs.
+for i in range(5):
+ e=es['dimension'+str(i)];s=e.pop('text');e['italic']=False;e['runs']=[{'text':c,'italic':c in 'HWC'} for c in s];e['box'][2]+=16
+for i in range(1,5):es['dimension_sub'+str(i)]['box'][0]+=3
+p.write_text(json.dumps(d,indent=2))

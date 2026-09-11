@@ -1,0 +1,52 @@
+{
+  "capture_note": "Post-execution inventory of commands and observed outcomes, not a timestamped raw terminal log",
+  "python": "/Users/liyufeng/Code/super_img2ppt/.venv/bin/python",
+  "environment": {
+    "PATH_prefix": "/opt/homebrew/bin",
+    "PYTHONPATH": "/tmp/dust3r-complex-qQO3Ml/frozen_skill/src"
+  },
+  "builds": [
+    {
+      "command": "python -m super_img2ppt.cli build /tmp/dust3r-complex-qQO3Ml/job/scene.json --out /tmp/dust3r-complex-qQO3Ml/build_01 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "exit_code": 2,
+      "status": "error: custom arrow head too long"
+    },
+    {
+      "command": "python -m super_img2ppt.cli build /tmp/dust3r-complex-qQO3Ml/job/scene.json --out /tmp/dust3r-complex-qQO3Ml/build_02 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "exit_code": 2,
+      "status": "fail"
+    },
+    {
+      "command": "python -m super_img2ppt.cli build /tmp/dust3r-complex-qQO3Ml/job/scene.json --out /tmp/dust3r-complex-qQO3Ml/build_03 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "exit_code": 0,
+      "status": "review"
+    },
+    {
+      "command": "python -m super_img2ppt.cli build /tmp/dust3r-complex-qQO3Ml/job/scene.json --out /tmp/dust3r-complex-qQO3Ml/build_04 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "exit_code": 2,
+      "status": "fail"
+    },
+    {
+      "command": "python -m super_img2ppt.cli build /tmp/dust3r-complex-qQO3Ml/job/scene.json --out /tmp/dust3r-complex-qQO3Ml/build_05 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "exit_code": 0,
+      "status": "review"
+    },
+    {
+      "command": "python -m super_img2ppt.cli build /tmp/dust3r-complex-qQO3Ml/job/scene.json --out /tmp/dust3r-complex-qQO3Ml/build_06 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "exit_code": 0,
+      "status": "review"
+    },
+    {
+      "command": "python -m super_img2ppt.cli build /tmp/dust3r-complex-qQO3Ml/job/scene.json --out /tmp/dust3r-complex-qQO3Ml/build_07 --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "exit_code": 0,
+      "status": "review"
+    }
+  ],
+  "measurements": [
+    "measure.py build_03 development",
+    "measure.py build_05 development",
+    "freeze build_07 artifacts",
+    "measure.py build_07 development",
+    "measure.py build_07 heldout"
+  ]
+}

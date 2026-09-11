@@ -1,0 +1,214 @@
+{
+  "passed": 1,
+  "total": 8,
+  "regions": [
+    {
+      "id": "head1",
+      "box": [
+        590,
+        59,
+        660,
+        95
+      ],
+      "split": "heldout",
+      "mask": "ink",
+      "source_bbox": [
+        11,
+        10,
+        58,
+        28
+      ],
+      "render_bbox": [
+        11,
+        10,
+        58,
+        25
+      ],
+      "edge_px": 3,
+      "iou": 0.5130890052356021,
+      "passed": false
+    },
+    {
+      "id": "dec2",
+      "box": [
+        447,
+        237,
+        569,
+        291
+      ],
+      "split": "heldout",
+      "mask": "ink",
+      "source_bbox": [
+        11,
+        7,
+        111,
+        49
+      ],
+      "render_bbox": [
+        12,
+        11,
+        110,
+        50
+      ],
+      "edge_px": 4,
+      "iou": 0.2259439707673569,
+      "passed": false
+    },
+    {
+      "id": "point1",
+      "box": [
+        735,
+        24,
+        825,
+        47
+      ],
+      "split": "heldout",
+      "mask": "color",
+      "source_bbox": [
+        7,
+        5,
+        82,
+        22
+      ],
+      "render_bbox": [
+        8,
+        4,
+        82,
+        21
+      ],
+      "edge_px": 1,
+      "iou": 0.267741935483871,
+      "passed": false
+    },
+    {
+      "id": "conf2",
+      "box": [
+        719,
+        265,
+        829,
+        290
+      ],
+      "split": "heldout",
+      "mask": "ink",
+      "source_bbox": [
+        7,
+        5,
+        96,
+        20
+      ],
+      "render_bbox": [
+        13,
+        3,
+        103,
+        25
+      ],
+      "edge_px": 7,
+      "iou": 0.12922002328288706,
+      "passed": false
+    },
+    {
+      "id": "camera1",
+      "box": [
+        879,
+        126,
+        966,
+        175
+      ],
+      "split": "heldout",
+      "mask": "ink",
+      "source_bbox": [
+        7,
+        4,
+        87,
+        49
+      ],
+      "render_bbox": [
+        7,
+        3,
+        87,
+        49
+      ],
+      "edge_px": 1,
+      "iou": 0.24478764478764478,
+      "passed": false
+    },
+    {
+      "id": "formula1",
+      "box": [
+        715,
+        46,
+        851,
+        75
+      ],
+      "split": "heldout",
+      "mask": "color",
+      "source_bbox": [
+        3,
+        3,
+        127,
+        19
+      ],
+      "render_bbox": [
+        4,
+        2,
+        118,
+        18
+      ],
+      "edge_px": 9,
+      "iou": 0.16869095816464239,
+      "passed": false
+    },
+    {
+      "id": "decoder_outline",
+      "box": [
+        437,
+        197,
+        579,
+        329
+      ],
+      "split": "heldout",
+      "mask": "ink",
+      "source_bbox": [
+        2,
+        3,
+        140,
+        129
+      ],
+      "render_bbox": [
+        2,
+        3,
+        140,
+        131
+      ],
+      "edge_px": 2,
+      "iou": 0.35545385202135776,
+      "passed": false
+    },
+    {
+      "id": "camera_blue",
+      "box": [
+        1085,
+        192,
+        1165,
+        257
+      ],
+      "split": "heldout",
+      "mask": "color",
+      "source_bbox": [
+        3,
+        0,
+        78,
+        61
+      ],
+      "render_bbox": [
+        3,
+        0,
+        77,
+        61
+      ],
+      "edge_px": 1,
+      "iou": 0.9498178874949413,
+      "passed": true
+    }
+  ]
+}

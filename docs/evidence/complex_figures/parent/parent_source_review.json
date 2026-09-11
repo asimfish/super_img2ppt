@@ -1,0 +1,20 @@
+{
+  "inspected": [
+    {
+      "case": "bevformer",
+      "source": "/tmp/bevformer-forward-EnS49e/source.png",
+      "scope": "Complete overall architecture + spatialcrossattention + temporalselfattention, photo/multiview planes, 3D BEVgrids, curvedmotion arrows, mathematicallabels."
+    },
+    {
+      "case": "internimage",
+      "source": "/tmp/internimage-forward-GRM4hn/source.png",
+      "scope": "Complete portraitstagepipeline, stem/downsampling definitions, basic residualblock and mathematical stackingrules; do notinvent an additional samplingdiagram."
+    },
+    {
+      "case": "dust3r",
+      "source": "/tmp/dust3r-complex-qQO3Ml/figure2.png",
+      "scope": "Complete paired encoder/decoder/heads with mathematical pointmap/confidence outputs, 3D camera frames and pointcloud. Additional qualitativefigure is raster-heavy and not asecond architecture."
+    }
+  ],
+  "holdout_note": "Parent source visual inspection only before firstcandidate. Held-out numerical metrics not inspected before candidatefreeze."
+}

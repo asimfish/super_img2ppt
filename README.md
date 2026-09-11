@@ -19,6 +19,7 @@
 三例均完成实际PPTX渲染，但严格区域保真仅11/35、3/39、8/36达标，**当前仍不能可靠实现复杂主图高保真转换**。
 本轮改进源图版本核验、字体校准与重建指南，未宣称新的运行时算法修复。
 完整来源、转换文件和失败明细见 [正式主图压力测试](docs/main_figures.md)。
+另新增 [BEVFormer、InternImage、DUSt3R 复杂图测试](docs/complex_figures.md)：完整主图加三维示例，实际渲染并复跑；保留区域分别仅 1/11（另 1 项无效）、2/14、1/8 达标，失败证据一并保留。
 此前的 [super_teaser](docs/teaser_cases.md)、[CLIP/Swin等案例](docs/diverse_cases.md)、
 [ICLR论文图](docs/conference_cases.md) 和 [通用案例](docs/real_cases.md) 保留独立记录。
 

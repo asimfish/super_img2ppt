@@ -10,6 +10,46 @@ import pypdfium2 as pdfium
 from super_img2ppt.prepare import fresh_directory, json_write
 
 SOURCES = {
+    "dust3r_main": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_DUSt3R_Geometric_3D_Vision_Made_Easy_CVPR_2024_paper.pdf",
+        "sha256": "c02a82e83d20c649c9424ccec6a6cf760112da58d47965d02e8efebd916afbc8",
+        "format": "pdf",
+        "page": 4,
+        "render_scale": 3,
+        "crop": [146, 222, 1642, 574],
+        "venue": "CVPR 2024",
+        "source": "Published Figure 2, complete paired architecture and pointmap/camera geometry",
+    },
+    "dust3r_qualitative": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_DUSt3R_Geometric_3D_Vision_Made_Easy_CVPR_2024_paper.pdf",
+        "sha256": "c02a82e83d20c649c9424ccec6a6cf760112da58d47965d02e8efebd916afbc8",
+        "format": "pdf",
+        "page": 5,
+        "render_scale": 3,
+        "crop": [148, 206, 1640, 450],
+        "venue": "CVPR 2024",
+        "source": "Published Figure 3, raster-heavy qualitative examples, not another architecture diagram",
+    },
+    "bevformer_main": {
+        "url": "https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136690001.pdf",
+        "sha256": "59eadb553235771dfec8d59d27f5a0b9d7650dbcc692eff0c26be3426f96d7c5",
+        "format": "pdf",
+        "page": 5,
+        "render_scale": 4,
+        "crop": [530, 450, 1930, 985],
+        "venue": "ECCV 2022",
+        "source": "Published Figure 2, complete overall/spatial/temporal attention panels",
+    },
+    "internimage_main": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Wang_InternImage_Exploring_Large-Scale_Vision_Foundation_Models_With_Deformable_Convolutions_CVPR_2023_paper.pdf",
+        "sha256": "6635c6837341b038854855253a7127b6159e4c0bc22f3fd390b6c26eb3b5f074",
+        "format": "pdf",
+        "page": 3,
+        "render_scale": 4,
+        "crop": [1290, 280, 2110, 1390],
+        "venue": "CVPR 2023",
+        "source": "Published Figure 3, all stages, basic block and mathematical stacking rules",
+    },
     "grounding_dino_main": {
         "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06319.pdf",
         "sha256": "7de5928a4e894a40065a1e5848716d02a4cdb49729e0d5d9459d053cc9334a5a",

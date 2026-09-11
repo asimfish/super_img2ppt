@@ -1,0 +1,39 @@
+{
+  "candidate": "build_07",
+  "raw_fixed_contract": {
+    "passed": 4,
+    "total": 36,
+    "development": [
+      2,
+      24
+    ],
+    "heldout": [
+      2,
+      12
+    ]
+  },
+  "valid_metric_summary": {
+    "passed": 3,
+    "total": 35,
+    "development": [
+      2,
+      24
+    ],
+    "heldout": [
+      1,
+      11
+    ],
+    "invalid": [
+      {
+        "roi": "temporal",
+        "reason": "Gold background saturates fixed chromatic mask; rawIoU1.0 invalid for glyph fidelity; postfreeze darktextIoU0.1868439468159552"
+      }
+    ]
+  },
+  "native_objects": 217,
+  "raster_objects": 7,
+  "text_objects": 23,
+  "status": "review; visual fidelity not accepted",
+  "final_report": "report_original.md",
+  "source_rights": "local-only"
+}

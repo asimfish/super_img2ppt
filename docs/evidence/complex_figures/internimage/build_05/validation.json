@@ -1,0 +1,3367 @@
+{
+  "status": "pass",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "pass",
+      "findings": [
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "ln_top_text",
+            "ln_top"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "ln_bottom_text",
+            "ln_bottom"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "rules_title",
+            "rules"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "r4one",
+            "rules"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "r4three",
+            "rules"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "brace0_2",
+            "dimension0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "brace0_3",
+            "dimension0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "brace0_4",
+            "dimension0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "brace0_5",
+            "dimension0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "brace0_6",
+            "dimension0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "brace0_7",
+            "dimension0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "skip2a",
+            "delta"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "skip2a",
+            "modulation"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "delta_curve2",
+            "delta"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "delta_curve3",
+            "delta"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "stage1_block",
+            "stage1_L"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "stage1_L",
+            "stage1_index"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "stage2_block",
+            "stage2_L"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "stage2_L",
+            "stage2_index"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "stage3_block",
+            "stage3_L"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "stage3_L",
+            "stage3_index"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "stage4_block",
+            "stage4_L"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "stage4_L",
+            "stage4_index"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "dimension1",
+            "dimension_sub1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "dimension2",
+            "dimension_sub2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "dimension3",
+            "dimension_sub3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "dimension4",
+            "dimension_sub4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "stem_detail_title",
+            "stem_detail0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "stem_detail0",
+            "stem_detail1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "stem_detail2",
+            "stem_detail3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "down_title",
+            "down_conv"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "down_conv",
+            "down_ln"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "repeat_L",
+            "repeat_i"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "dcn_text",
+            "dcn_G"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "dcn_G",
+            "dcn_i"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "rules_title",
+            "r1exp"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "rule_num1",
+            "rule_num2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "rule_num1",
+            "r1c"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "rule_num1",
+            "r2g"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "rule_num2",
+            "rule_num3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "rule_num2",
+            "r1c"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "rule_num2",
+            "r2g"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "rule_num2",
+            "r3l"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "rule_num3",
+            "rule_num4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "rule_num3",
+            "r3l"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "rule_num3",
+            "r4l"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "rule_num4",
+            "r4l"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r1c",
+            "r1i"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r1c",
+            "r2g"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r1i",
+            "r2g"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r1i",
+            "r2eq"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r1eq",
+            "r1exp"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r1eq",
+            "r2eq"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r1c2",
+            "r1one"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r1c2",
+            "r2div"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r2g",
+            "r2i"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r2i",
+            "r2eq"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r2i",
+            "r3l"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r2eq",
+            "r2i2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r2i2",
+            "r2div"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r2i2",
+            "r3eq"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r3one",
+            "r3eq"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r3one",
+            "r4le"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r3eq",
+            "r3two"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r3two",
+            "r3eq2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r3two",
+            "r4le"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "internimage_fig3",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r4one",
+            "r4le"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "internimage_fig3",
+          "counts": {
+            "shape": 18,
+            "text": 77,
+            "image": 1,
+            "line": 80
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "block_detail",
+                "up_out"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 116.1
+            },
+            {
+              "elements": [
+                "block_detail",
+                "ln_up"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 45.9
+            },
+            {
+              "elements": [
+                "block_detail",
+                "ffn_ln"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 60.3
+            },
+            {
+              "elements": [
+                "block_detail",
+                "add_ffn"
+              ],
+              "reason": "Source-visible plus intersection or residual/input branch junction.",
+              "area_px2": 63.0
+            },
+            {
+              "elements": [
+                "block_detail",
+                "ln_add"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 51.3
+            },
+            {
+              "elements": [
+                "block_detail",
+                "dcn_ln"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 60.3
+            },
+            {
+              "elements": [
+                "block_detail",
+                "input"
+              ],
+              "reason": "Source-visible plus intersection or residual/input branch junction.",
+              "area_px2": 149.4
+            },
+            {
+              "elements": [
+                "block_detail",
+                "skip1a"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 329.4
+            },
+            {
+              "elements": [
+                "block_detail",
+                "skip1b"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 432.0
+            },
+            {
+              "elements": [
+                "block_detail",
+                "skip1c"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 300.6
+            },
+            {
+              "elements": [
+                "block_detail",
+                "skip2a"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "block_detail",
+                "skip2b"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 499.5
+            },
+            {
+              "elements": [
+                "block_detail",
+                "skip2c"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 295.2
+            },
+            {
+              "elements": [
+                "block_detail",
+                "delta_curve0"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 37.896
+            },
+            {
+              "elements": [
+                "block_detail",
+                "delta_curve1"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 36.022
+            },
+            {
+              "elements": [
+                "block_detail",
+                "delta_curve2"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 41.125
+            },
+            {
+              "elements": [
+                "block_detail",
+                "delta_curve3"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 42.247
+            },
+            {
+              "elements": [
+                "block_detail",
+                "add1_h"
+              ],
+              "reason": "Source-visible plus intersection or residual/input branch junction.",
+              "area_px2": 67.5
+            },
+            {
+              "elements": [
+                "block_detail",
+                "add1_v"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 64.8
+            },
+            {
+              "elements": [
+                "block_detail",
+                "add2_h"
+              ],
+              "reason": "Source-visible plus intersection or residual/input branch junction.",
+              "area_px2": 67.5
+            },
+            {
+              "elements": [
+                "block_detail",
+                "add2_v"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 64.8
+            },
+            {
+              "elements": [
+                "brace0_0",
+                "brace0_1"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.696
+            },
+            {
+              "elements": [
+                "brace0_1",
+                "brace0_2"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.607
+            },
+            {
+              "elements": [
+                "brace0_3",
+                "brace0_4"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.755
+            },
+            {
+              "elements": [
+                "brace0_4",
+                "brace0_5"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 4.253
+            },
+            {
+              "elements": [
+                "brace0_5",
+                "brace0_6"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.755
+            },
+            {
+              "elements": [
+                "brace0_7",
+                "brace0_8"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.607
+            },
+            {
+              "elements": [
+                "brace0_8",
+                "brace0_9"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.696
+            },
+            {
+              "elements": [
+                "brace1_0",
+                "brace1_1"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.696
+            },
+            {
+              "elements": [
+                "brace1_1",
+                "brace1_2"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.607
+            },
+            {
+              "elements": [
+                "brace1_3",
+                "brace1_4"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.755
+            },
+            {
+              "elements": [
+                "brace1_4",
+                "brace1_5"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 4.253
+            },
+            {
+              "elements": [
+                "brace1_5",
+                "brace1_6"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.755
+            },
+            {
+              "elements": [
+                "brace1_7",
+                "brace1_8"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.607
+            },
+            {
+              "elements": [
+                "brace1_8",
+                "brace1_9"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.696
+            },
+            {
+              "elements": [
+                "brace2_0",
+                "brace2_1"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.696
+            },
+            {
+              "elements": [
+                "brace2_1",
+                "brace2_2"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.607
+            },
+            {
+              "elements": [
+                "brace2_3",
+                "brace2_4"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.755
+            },
+            {
+              "elements": [
+                "brace2_4",
+                "brace2_5"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 4.252
+            },
+            {
+              "elements": [
+                "brace2_5",
+                "brace2_6"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.755
+            },
+            {
+              "elements": [
+                "brace2_7",
+                "brace2_8"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.607
+            },
+            {
+              "elements": [
+                "brace2_8",
+                "brace2_9"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.696
+            },
+            {
+              "elements": [
+                "brace3_0",
+                "brace3_1"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.696
+            },
+            {
+              "elements": [
+                "brace3_1",
+                "brace3_2"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.608
+            },
+            {
+              "elements": [
+                "brace3_3",
+                "brace3_4"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.755
+            },
+            {
+              "elements": [
+                "brace3_4",
+                "brace3_5"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 4.252
+            },
+            {
+              "elements": [
+                "brace3_5",
+                "brace3_6"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.755
+            },
+            {
+              "elements": [
+                "brace3_7",
+                "brace3_8"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.607
+            },
+            {
+              "elements": [
+                "brace3_8",
+                "brace3_9"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.696
+            },
+            {
+              "elements": [
+                "brace4_0",
+                "brace4_1"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.696
+            },
+            {
+              "elements": [
+                "brace4_1",
+                "brace4_2"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.608
+            },
+            {
+              "elements": [
+                "brace4_3",
+                "brace4_4"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.755
+            },
+            {
+              "elements": [
+                "brace4_4",
+                "brace4_5"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 4.253
+            },
+            {
+              "elements": [
+                "brace4_5",
+                "brace4_6"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.755
+            },
+            {
+              "elements": [
+                "brace4_7",
+                "brace4_8"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.608
+            },
+            {
+              "elements": [
+                "brace4_8",
+                "brace4_9"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 0.696
+            },
+            {
+              "elements": [
+                "add_ffn",
+                "skip1a"
+              ],
+              "reason": "Source-visible plus intersection or residual/input branch junction.",
+              "area_px2": 3.645
+            },
+            {
+              "elements": [
+                "input",
+                "skip2a"
+              ],
+              "reason": "Source-visible plus intersection or residual/input branch junction.",
+              "area_px2": 3.645
+            },
+            {
+              "elements": [
+                "input",
+                "delta_curve0"
+              ],
+              "reason": "Source-visible plus intersection or residual/input branch junction.",
+              "area_px2": 0.947
+            },
+            {
+              "elements": [
+                "skip1a",
+                "skip1b"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "skip1b",
+                "skip1c"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "skip2a",
+                "skip2b"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 1.823
+            },
+            {
+              "elements": [
+                "skip2b",
+                "skip2c"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 1.822
+            },
+            {
+              "elements": [
+                "add1",
+                "add1_h"
+              ],
+              "reason": "Source-visible plus intersection or residual/input branch junction.",
+              "area_px2": 67.5
+            },
+            {
+              "elements": [
+                "add1",
+                "add1_v"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 64.8
+            },
+            {
+              "elements": [
+                "add2",
+                "add2_h"
+              ],
+              "reason": "Source-visible plus intersection or residual/input branch junction.",
+              "area_px2": 67.5
+            },
+            {
+              "elements": [
+                "add2",
+                "add2_v"
+              ],
+              "reason": "Source-visible connector endpoints, additive plus strokes, and block-internal residual paths. Each named pair inspected against source.",
+              "area_px2": 64.8
+            },
+            {
+              "elements": [
+                "add1_h",
+                "add1_v"
+              ],
+              "reason": "Source-visible plus intersection or residual/input branch junction.",
+              "area_px2": 7.29
+            },
+            {
+              "elements": [
+                "add2_h",
+                "add2_v"
+              ],
+              "reason": "Source-visible plus intersection or residual/input branch junction.",
+              "area_px2": 7.29
+            }
+          ],
+          "text_layouts": {
+            "stem_text": {
+              "scale": 1,
+              "effective_font_size_px": 29.5,
+              "width_px": 58.75,
+              "height_px": 33.925,
+              "available_width_px": 219,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 59.25,
+              "required_height_px": 34.425,
+              "fits": true,
+              "lines": [
+                "stem"
+              ]
+            },
+            "stage1_title": {
+              "scale": 1,
+              "effective_font_size_px": 31,
+              "width_px": 90.25,
+              "height_px": 35.65,
+              "available_width_px": 219,
+              "available_height_px": 37,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 90.75,
+              "required_height_px": 36.15,
+              "fits": true,
+              "lines": [
+                "stage 1"
+              ]
+            },
+            "stage1_block": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 154.5,
+              "height_px": 33.35,
+              "available_width_px": 160,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 155.0,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "basic block ×"
+              ]
+            },
+            "stage1_L": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 17.25,
+              "height_px": 33.35,
+              "available_width_px": 21,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 17.75,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "L"
+              ]
+            },
+            "stage1_index": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 10.5,
+              "height_px": 24.15,
+              "available_width_px": 16,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.0,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "down1_text": {
+              "scale": 1,
+              "effective_font_size_px": 29.3,
+              "width_px": 182.75,
+              "height_px": 33.695,
+              "available_width_px": 219,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 183.25,
+              "required_height_px": 34.195,
+              "fits": true,
+              "lines": [
+                "downsampling"
+              ]
+            },
+            "stage2_title": {
+              "scale": 1,
+              "effective_font_size_px": 31,
+              "width_px": 90.25,
+              "height_px": 35.65,
+              "available_width_px": 219,
+              "available_height_px": 37,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 90.75,
+              "required_height_px": 36.15,
+              "fits": true,
+              "lines": [
+                "stage 2"
+              ]
+            },
+            "stage2_block": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 154.5,
+              "height_px": 33.35,
+              "available_width_px": 160,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 155.0,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "basic block ×"
+              ]
+            },
+            "stage2_L": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 17.25,
+              "height_px": 33.35,
+              "available_width_px": 21,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 17.75,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "L"
+              ]
+            },
+            "stage2_index": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 10.5,
+              "height_px": 24.15,
+              "available_width_px": 16,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.0,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "down2_text": {
+              "scale": 1,
+              "effective_font_size_px": 29.3,
+              "width_px": 182.75,
+              "height_px": 33.695,
+              "available_width_px": 219,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 183.25,
+              "required_height_px": 34.195,
+              "fits": true,
+              "lines": [
+                "downsampling"
+              ]
+            },
+            "stage3_title": {
+              "scale": 1,
+              "effective_font_size_px": 31,
+              "width_px": 90.25,
+              "height_px": 35.65,
+              "available_width_px": 219,
+              "available_height_px": 37,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 90.75,
+              "required_height_px": 36.15,
+              "fits": true,
+              "lines": [
+                "stage 3"
+              ]
+            },
+            "stage3_block": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 154.5,
+              "height_px": 33.35,
+              "available_width_px": 160,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 155.0,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "basic block ×"
+              ]
+            },
+            "stage3_L": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 17.25,
+              "height_px": 33.35,
+              "available_width_px": 21,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 17.75,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "L"
+              ]
+            },
+            "stage3_index": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 10.5,
+              "height_px": 24.15,
+              "available_width_px": 16,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.0,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "3"
+              ]
+            },
+            "down3_text": {
+              "scale": 1,
+              "effective_font_size_px": 29.3,
+              "width_px": 182.75,
+              "height_px": 33.695,
+              "available_width_px": 219,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 183.25,
+              "required_height_px": 34.195,
+              "fits": true,
+              "lines": [
+                "downsampling"
+              ]
+            },
+            "stage4_title": {
+              "scale": 1,
+              "effective_font_size_px": 31,
+              "width_px": 90.25,
+              "height_px": 35.65,
+              "available_width_px": 219,
+              "available_height_px": 37,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 90.75,
+              "required_height_px": 36.15,
+              "fits": true,
+              "lines": [
+                "stage 4"
+              ]
+            },
+            "stage4_block": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 154.5,
+              "height_px": 33.35,
+              "available_width_px": 160,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 155.0,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "basic block ×"
+              ]
+            },
+            "stage4_L": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 17.25,
+              "height_px": 33.35,
+              "available_width_px": 21,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 17.75,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "L"
+              ]
+            },
+            "stage4_index": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 10.5,
+              "height_px": 24.15,
+              "available_width_px": 16,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.0,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "4"
+              ]
+            },
+            "outputs": {
+              "scale": 1,
+              "effective_font_size_px": 33,
+              "width_px": 195.5,
+              "height_px": 37.95,
+              "available_width_px": 250,
+              "available_height_px": 47,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 196.0,
+              "required_height_px": 38.45,
+              "fits": true,
+              "lines": [
+                "cls, det, seg, ..."
+              ]
+            },
+            "dimension0": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 113.0,
+              "height_px": 34.5,
+              "available_width_px": 156,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 113.5,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "H × W × 3"
+              ]
+            },
+            "dimension1": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 179.75,
+              "height_px": 34.5,
+              "available_width_px": 190,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 180.25,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "H/4 × W/4 × C"
+              ]
+            },
+            "dimension_sub1": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 10.5,
+              "height_px": 24.15,
+              "available_width_px": 15,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.0,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "dimension2": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 179.75,
+              "height_px": 34.5,
+              "available_width_px": 190,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 180.25,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "H/8 × W/8 × C"
+              ]
+            },
+            "dimension_sub2": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 10.5,
+              "height_px": 24.15,
+              "available_width_px": 15,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.0,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "dimension3": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 209.75,
+              "height_px": 34.5,
+              "available_width_px": 223,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 210.25,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "H/16 × W/16 × C"
+              ]
+            },
+            "dimension_sub3": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 10.5,
+              "height_px": 24.15,
+              "available_width_px": 15,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.0,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "3"
+              ]
+            },
+            "dimension4": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 209.75,
+              "height_px": 34.5,
+              "available_width_px": 223,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 210.25,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "H/32 × W/32 × C"
+              ]
+            },
+            "dimension_sub4": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 10.5,
+              "height_px": 24.15,
+              "available_width_px": 15,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.0,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "4"
+              ]
+            },
+            "stem_detail_title": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 60.0,
+              "height_px": 34.5,
+              "available_width_px": 234,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 60.5,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "stem"
+              ]
+            },
+            "stem_detail0": {
+              "scale": 1,
+              "effective_font_size_px": 31.2,
+              "width_px": 208.5,
+              "height_px": 35.88,
+              "available_width_px": 216,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 209.0,
+              "required_height_px": 36.38,
+              "fits": true,
+              "lines": [
+                "3×3 conv, s2, p1"
+              ]
+            },
+            "stem_detail1": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 135.0,
+              "height_px": 34.5,
+              "available_width_px": 216,
+              "available_height_px": 36,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 135.5,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "LN, GELU"
+              ]
+            },
+            "stem_detail2": {
+              "scale": 1,
+              "effective_font_size_px": 31.2,
+              "width_px": 208.5,
+              "height_px": 35.88,
+              "available_width_px": 216,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 209.0,
+              "required_height_px": 36.38,
+              "fits": true,
+              "lines": [
+                "3×3 conv, s2, p1"
+              ]
+            },
+            "stem_detail3": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 40.0,
+              "height_px": 34.5,
+              "available_width_px": 216,
+              "available_height_px": 36,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 40.5,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "LN"
+              ]
+            },
+            "down_title": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 181.0,
+              "height_px": 33.35,
+              "available_width_px": 234,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 181.5,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "downsampling"
+              ]
+            },
+            "down_conv": {
+              "scale": 1,
+              "effective_font_size_px": 31.2,
+              "width_px": 208.5,
+              "height_px": 35.88,
+              "available_width_px": 216,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 209.0,
+              "required_height_px": 36.38,
+              "fits": true,
+              "lines": [
+                "3×3 conv, s2, p1"
+              ]
+            },
+            "down_ln": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 40.0,
+              "height_px": 34.5,
+              "available_width_px": 215,
+              "available_height_px": 37,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 40.5,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "LN"
+              ]
+            },
+            "detail_stage": {
+              "scale": 1,
+              "effective_font_size_px": 31,
+              "width_px": 83.25,
+              "height_px": 35.65,
+              "available_width_px": 105,
+              "available_height_px": 44,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 83.75,
+              "required_height_px": 36.15,
+              "fits": true,
+              "lines": [
+                "stage i"
+              ]
+            },
+            "repeat_L": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 17.75,
+              "height_px": 34.5,
+              "available_width_px": 22,
+              "available_height_px": 42,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.25,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "L"
+              ]
+            },
+            "repeat_i": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 5.75,
+              "height_px": 24.15,
+              "available_width_px": 10,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.25,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "i"
+              ]
+            },
+            "repeat_times": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 17.0,
+              "height_px": 34.5,
+              "available_width_px": 25,
+              "available_height_px": 37,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 17.5,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "×"
+              ]
+            },
+            "ln_top_text": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 40.0,
+              "height_px": 34.5,
+              "available_width_px": 168,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 40.5,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "LN"
+              ]
+            },
+            "ffn_text": {
+              "scale": 1,
+              "effective_font_size_px": 29.5,
+              "width_px": 54.25,
+              "height_px": 33.925,
+              "available_width_px": 168,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 54.75,
+              "required_height_px": 34.425,
+              "fits": true,
+              "lines": [
+                "FFN"
+              ]
+            },
+            "ln_bottom_text": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 40.0,
+              "height_px": 34.5,
+              "available_width_px": 168,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 40.5,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "LN"
+              ]
+            },
+            "dcn_text": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 107.25,
+              "height_px": 33.35,
+              "available_width_px": 109,
+              "available_height_px": 39,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 107.75,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "DCNv3 ("
+              ]
+            },
+            "dcn_G": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 21.25,
+              "height_px": 33.35,
+              "available_width_px": 23,
+              "available_height_px": 39,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 21.75,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "G"
+              ]
+            },
+            "dcn_i": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 5.5,
+              "height_px": 23.0,
+              "available_width_px": 8,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.0,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "i"
+              ]
+            },
+            "dcn_end": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 9.75,
+              "height_px": 33.35,
+              "available_width_px": 16,
+              "available_height_px": 39,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 10.25,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                ")"
+              ]
+            },
+            "delta": {
+              "scale": 1,
+              "effective_font_size_px": 28,
+              "width_px": 38.75,
+              "height_px": 32.2,
+              "available_width_px": 46,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 39.25,
+              "required_height_px": 32.7,
+              "fits": true,
+              "lines": [
+                "Δp,"
+              ]
+            },
+            "modulation": {
+              "scale": 1,
+              "effective_font_size_px": 28,
+              "width_px": 23.25,
+              "height_px": 32.2,
+              "available_width_px": 30,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 23.75,
+              "required_height_px": 32.7,
+              "fits": true,
+              "lines": [
+                "m"
+              ]
+            },
+            "rules_title": {
+              "scale": 1,
+              "effective_font_size_px": 29.5,
+              "width_px": 174.75,
+              "height_px": 33.925,
+              "available_width_px": 234,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 175.25,
+              "required_height_px": 34.425,
+              "fits": true,
+              "lines": [
+                "stacking rules"
+              ]
+            },
+            "rule_num1": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 35.0,
+              "height_px": 34.5,
+              "available_width_px": 42,
+              "available_height_px": 39,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 35.5,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "(1)"
+              ]
+            },
+            "rule_num2": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 35.0,
+              "height_px": 34.5,
+              "available_width_px": 42,
+              "available_height_px": 39,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 35.5,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "(2)"
+              ]
+            },
+            "rule_num3": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 35.0,
+              "height_px": 34.5,
+              "available_width_px": 42,
+              "available_height_px": 39,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 35.5,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "(3)"
+              ]
+            },
+            "rule_num4": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 35.0,
+              "height_px": 34.5,
+              "available_width_px": 42,
+              "available_height_px": 39,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 35.5,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "(4)"
+              ]
+            },
+            "r1c": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 21.25,
+              "height_px": 34.5,
+              "available_width_px": 22,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 21.75,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "C"
+              ]
+            },
+            "r1i": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 5.5,
+              "height_px": 23.0,
+              "available_width_px": 10,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.0,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "i"
+              ]
+            },
+            "r1eq": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 39.5,
+              "height_px": 34.5,
+              "available_width_px": 48,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 40.0,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "= 2"
+              ]
+            },
+            "r1exp": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 30.5,
+              "height_px": 24.15,
+              "available_width_px": 39,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 31.0,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "i−1"
+              ]
+            },
+            "r1c2": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 21.25,
+              "height_px": 34.5,
+              "available_width_px": 23,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 21.75,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "C"
+              ]
+            },
+            "r1one": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 10.5,
+              "height_px": 24.15,
+              "available_width_px": 13,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.0,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "r2g": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 21.75,
+              "height_px": 34.5,
+              "available_width_px": 24,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 22.25,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "G"
+              ]
+            },
+            "r2i": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 5.5,
+              "height_px": 23.0,
+              "available_width_px": 10,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.0,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "i"
+              ]
+            },
+            "r2eq": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 49.0,
+              "height_px": 34.5,
+              "available_width_px": 51,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 49.5,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "= C"
+              ]
+            },
+            "r2i2": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 5.5,
+              "height_px": 23.0,
+              "available_width_px": 10,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.0,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "i"
+              ]
+            },
+            "r2div": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 37.5,
+              "height_px": 34.5,
+              "available_width_px": 48,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 38.0,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "/C′"
+              ]
+            },
+            "r3l": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 17.75,
+              "height_px": 34.5,
+              "available_width_px": 20,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.25,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "L"
+              ]
+            },
+            "r3one": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 10.5,
+              "height_px": 24.15,
+              "available_width_px": 13,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.0,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "r3eq": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 44.5,
+              "height_px": 34.5,
+              "available_width_px": 50,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 45.0,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "= L"
+              ]
+            },
+            "r3two": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 10.5,
+              "height_px": 24.15,
+              "available_width_px": 13,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.0,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "r3eq2": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 44.5,
+              "height_px": 34.5,
+              "available_width_px": 51,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 45.0,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "= L"
+              ]
+            },
+            "r3four": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 10.5,
+              "height_px": 24.15,
+              "available_width_px": 13,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.0,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "4"
+              ]
+            },
+            "r4l": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 17.75,
+              "height_px": 34.5,
+              "available_width_px": 20,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.25,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "L"
+              ]
+            },
+            "r4one": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 10.5,
+              "height_px": 24.15,
+              "available_width_px": 13,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.0,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "r4le": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 40.75,
+              "height_px": 34.5,
+              "available_width_px": 50,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.25,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "≤ L"
+              ]
+            },
+            "r4three": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 10.5,
+              "height_px": 24.15,
+              "available_width_px": 13,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.0,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "3"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "pass",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [],
+      "text_boxes": [
+        {
+          "slide": "internimage_fig3",
+          "element": "stem_text",
+          "expected": "stem",
+          "rendered": "stem",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-BoldMT"
+          ],
+          "measured_ink_width_px": 57.25,
+          "rendered_ink_width_px": 57.087
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stage1_title",
+          "expected": "stage 1",
+          "rendered": "stage 1",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-BoldMT"
+          ],
+          "measured_ink_width_px": 87.0,
+          "rendered_ink_width_px": 86.784
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stage1_block",
+          "expected": "basic block ×",
+          "rendered": "basic block × L",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 152.25,
+          "rendered_ink_width_px": 152.41
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stage1_L",
+          "expected": "L",
+          "rendered": "L",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 16.25,
+          "rendered_ink_width_px": 16.083
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stage1_index",
+          "expected": "1",
+          "rendered": "1",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 5.75,
+          "rendered_ink_width_px": 5.485
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "down1_text",
+          "expected": "downsampling",
+          "rendered": "downsampling",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-BoldMT"
+          ],
+          "measured_ink_width_px": 181.25,
+          "rendered_ink_width_px": 180.646
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stage2_title",
+          "expected": "stage 2",
+          "rendered": "stage 2",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-BoldMT"
+          ],
+          "measured_ink_width_px": 87.75,
+          "rendered_ink_width_px": 87.653
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stage2_block",
+          "expected": "basic block ×",
+          "rendered": "basic block × L",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 152.25,
+          "rendered_ink_width_px": 152.41
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stage2_L",
+          "expected": "L",
+          "rendered": "L2",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 16.25,
+          "rendered_ink_width_px": 16.083
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stage2_index",
+          "expected": "2",
+          "rendered": "2",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 9.5,
+          "rendered_ink_width_px": 9.184
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "down2_text",
+          "expected": "downsampling",
+          "rendered": "downsampling",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-BoldMT"
+          ],
+          "measured_ink_width_px": 181.25,
+          "rendered_ink_width_px": 180.646
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stage3_title",
+          "expected": "stage 3",
+          "rendered": "stage 3",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-BoldMT"
+          ],
+          "measured_ink_width_px": 87.5,
+          "rendered_ink_width_px": 87.373
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stage3_block",
+          "expected": "basic block ×",
+          "rendered": "basic block × L",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 152.25,
+          "rendered_ink_width_px": 152.41
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stage3_L",
+          "expected": "L",
+          "rendered": "L3",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 16.25,
+          "rendered_ink_width_px": 16.083
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stage3_index",
+          "expected": "3",
+          "rendered": "3",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 8.25,
+          "rendered_ink_width_px": 7.902
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "down3_text",
+          "expected": "downsampling",
+          "rendered": "downsampling",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-BoldMT"
+          ],
+          "measured_ink_width_px": 181.25,
+          "rendered_ink_width_px": 180.646
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stage4_title",
+          "expected": "stage 4",
+          "rendered": "stage 4",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-BoldMT"
+          ],
+          "measured_ink_width_px": 88.0,
+          "rendered_ink_width_px": 87.901
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stage4_block",
+          "expected": "basic block ×",
+          "rendered": "basic block × L",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 152.25,
+          "rendered_ink_width_px": 152.41
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stage4_L",
+          "expected": "L",
+          "rendered": "L4",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 16.25,
+          "rendered_ink_width_px": 16.083
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stage4_index",
+          "expected": "4",
+          "rendered": "4",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 9.75,
+          "rendered_ink_width_px": 9.437
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "outputs",
+          "expected": "cls, det, seg, ...",
+          "rendered": "cls, det, seg, ...",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 191.0,
+          "rendered_ink_width_px": 190.182
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "dimension0",
+          "expected": "H × W × 3",
+          "rendered": "H × W × 3",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT",
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 104.5,
+          "rendered_ink_width_px": 103.55
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "dimension1",
+          "expected": "H/4 × W/4 × C",
+          "rendered": "H/4 × W/4 × C1",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT",
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 173.5,
+          "rendered_ink_width_px": 172.721
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "dimension_sub1",
+          "expected": "1",
+          "rendered": "1",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 5.75,
+          "rendered_ink_width_px": 5.485
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "dimension2",
+          "expected": "H/8 × W/8 × C",
+          "rendered": "H/8 × W/8 × C2",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT",
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 173.5,
+          "rendered_ink_width_px": 172.721
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "dimension_sub2",
+          "expected": "2",
+          "rendered": "2",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 9.5,
+          "rendered_ink_width_px": 9.184
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "dimension3",
+          "expected": "H/16 × W/16 × C",
+          "rendered": "H/16 × W/16 × C3",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT",
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 203.5,
+          "rendered_ink_width_px": 202.647
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "dimension_sub3",
+          "expected": "3",
+          "rendered": "3",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 8.25,
+          "rendered_ink_width_px": 7.902
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "dimension4",
+          "expected": "H/32 × W/32 × C",
+          "rendered": "H/32 × W/32 × C4",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT",
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 203.5,
+          "rendered_ink_width_px": 202.647
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "dimension_sub4",
+          "expected": "4",
+          "rendered": "4",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 9.75,
+          "rendered_ink_width_px": 9.437
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stem_detail_title",
+          "expected": "stem",
+          "rendered": "stem",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-BoldMT"
+          ],
+          "measured_ink_width_px": 58.25,
+          "rendered_ink_width_px": 57.852
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stem_detail0",
+          "expected": "3×3 conv, s2, p1",
+          "rendered": "3×3 conv, s2, p1",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 203.5,
+          "rendered_ink_width_px": 199.962
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stem_detail1",
+          "expected": "LN, GELU",
+          "rendered": ", , p\r\nLN, GELU",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 134.25,
+          "rendered_ink_width_px": 133.75
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stem_detail2",
+          "expected": "3×3 conv, s2, p1",
+          "rendered": "3×3 conv, s2, p1",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 203.5,
+          "rendered_ink_width_px": 199.962
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "stem_detail3",
+          "expected": "LN",
+          "rendered": ", , p\r\nLN",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 39.0,
+          "rendered_ink_width_px": 38.908
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "down_title",
+          "expected": "downsampling",
+          "rendered": "downsampling",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-BoldMT"
+          ],
+          "measured_ink_width_px": 179.5,
+          "rendered_ink_width_px": 178.77
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "down_conv",
+          "expected": "3×3 conv, s2, p1",
+          "rendered": "3×3 conv, s2, p1",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 203.5,
+          "rendered_ink_width_px": 199.962
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "down_ln",
+          "expected": "LN",
+          "rendered": "p\r\nLN",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 39.0,
+          "rendered_ink_width_px": 38.908
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "detail_stage",
+          "expected": "stage i",
+          "rendered": "stage i",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-BoldMT"
+          ],
+          "measured_ink_width_px": 82.25,
+          "rendered_ink_width_px": 81.946
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "repeat_L",
+          "expected": "L",
+          "rendered": "Li",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 16.75,
+          "rendered_ink_width_px": 16.606
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "repeat_i",
+          "expected": "i",
+          "rendered": "i",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 5.0,
+          "rendered_ink_width_px": 4.813
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "repeat_times",
+          "expected": "×",
+          "rendered": "×",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 12.25,
+          "rendered_ink_width_px": 11.99
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "ln_top_text",
+          "expected": "LN",
+          "rendered": "LN",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 39.0,
+          "rendered_ink_width_px": 38.908
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "ffn_text",
+          "expected": "FFN",
+          "rendered": "FFN",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 53.75,
+          "rendered_ink_width_px": 53.274
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "ln_bottom_text",
+          "expected": "LN",
+          "rendered": "LN",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 39.0,
+          "rendered_ink_width_px": 38.908
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "dcn_text",
+          "expected": "DCNv3 (",
+          "rendered": "DCNv3 (",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 106.5,
+          "rendered_ink_width_px": 105.933
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "dcn_G",
+          "expected": "G",
+          "rendered": "(G",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 19.25,
+          "rendered_ink_width_px": 19.044
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "dcn_i",
+          "expected": "i",
+          "rendered": "Gi",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 4.75,
+          "rendered_ink_width_px": 4.58
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "dcn_end",
+          "expected": ")",
+          "rendered": ")",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 8.0,
+          "rendered_ink_width_px": 7.838
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "delta",
+          "expected": "Δp,",
+          "rendered": "Δp, ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 35.5,
+          "rendered_ink_width_px": 35.326
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "modulation",
+          "expected": "m",
+          "rendered": "m",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-BoldMT"
+          ],
+          "measured_ink_width_px": 21.75,
+          "rendered_ink_width_px": 21.571
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "rules_title",
+          "expected": "stacking rules",
+          "rendered": "stacking rules",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-BoldMT"
+          ],
+          "measured_ink_width_px": 172.75,
+          "rendered_ink_width_px": 172.415
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "rule_num1",
+          "expected": "(1)",
+          "rendered": "(1)",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 33.0,
+          "rendered_ink_width_px": 32.433
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "rule_num2",
+          "expected": "(2)",
+          "rendered": "(2)",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 33.0,
+          "rendered_ink_width_px": 32.433
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "rule_num3",
+          "expected": "(3)",
+          "rendered": "(3)L",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 33.0,
+          "rendered_ink_width_px": 32.433
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "rule_num4",
+          "expected": "(4)",
+          "rendered": "(4)L",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 33.0,
+          "rendered_ink_width_px": 32.433
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r1c",
+          "expected": "C",
+          "rendered": "C",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 19.25,
+          "rendered_ink_width_px": 19.094
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r1i",
+          "expected": "i",
+          "rendered": "Ci ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 4.75,
+          "rendered_ink_width_px": 4.58
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r1eq",
+          "expected": "= 2",
+          "rendered": "= 2 i",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 37.75,
+          "rendered_ink_width_px": 37.559
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r1exp",
+          "expected": "i−1",
+          "rendered": "i−1 ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 28.25,
+          "rendered_ink_width_px": 27.847
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r1c2",
+          "expected": "C",
+          "rendered": "C",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 19.25,
+          "rendered_ink_width_px": 19.094
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r1one",
+          "expected": "1",
+          "rendered": "C1",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 5.75,
+          "rendered_ink_width_px": 5.485
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r2g",
+          "expected": "G",
+          "rendered": "i \r\nGi ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 19.75,
+          "rendered_ink_width_px": 19.664
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r2i",
+          "expected": "i",
+          "rendered": "Gi ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 4.75,
+          "rendered_ink_width_px": 4.58
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r2eq",
+          "expected": "= C",
+          "rendered": "= C",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 46.25,
+          "rendered_ink_width_px": 45.862
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r2i2",
+          "expected": "i",
+          "rendered": "Ci/",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 4.75,
+          "rendered_ink_width_px": 4.58
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r2div",
+          "expected": "/C′",
+          "rendered": "/C′",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 37.25,
+          "rendered_ink_width_px": 37.049
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r3l",
+          "expected": "L",
+          "rendered": "L",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 16.75,
+          "rendered_ink_width_px": 16.606
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r3one",
+          "expected": "1",
+          "rendered": "1",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 5.75,
+          "rendered_ink_width_px": 5.485
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r3eq",
+          "expected": "= L",
+          "rendered": "= L 2",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 40.75,
+          "rendered_ink_width_px": 40.437
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r3two",
+          "expected": "2",
+          "rendered": "2",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 9.5,
+          "rendered_ink_width_px": 9.184
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r3eq2",
+          "expected": "= L",
+          "rendered": "= L ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 40.75,
+          "rendered_ink_width_px": 40.437
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r3four",
+          "expected": "4",
+          "rendered": "4",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 9.75,
+          "rendered_ink_width_px": 9.437
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r4l",
+          "expected": "L",
+          "rendered": "L",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 16.75,
+          "rendered_ink_width_px": 16.606
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r4one",
+          "expected": "1",
+          "rendered": "1 ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 5.75,
+          "rendered_ink_width_px": 5.485
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r4le",
+          "expected": "≤ L",
+          "rendered": "≤ L ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 38.5,
+          "rendered_ink_width_px": 38.218
+        },
+        {
+          "slide": "internimage_fig3",
+          "element": "r4three",
+          "expected": "3",
+          "rendered": "3",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 8.25,
+          "rendered_ink_width_px": 7.902
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "9506575039bdbe11b68d4de304ccaaf1b52976d674925bcf95605438bb0a294e",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "internimage_fig3",
+      "mean_absolute_pixel_error": 0.038298,
+      "comparison": "internimage_fig3_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

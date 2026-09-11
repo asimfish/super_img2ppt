@@ -1,0 +1,139 @@
+{
+  "status": "Post-freeze diagnostic only, not original pass criteria, no tuning followed",
+  "reason": "Original chromatic mask saturates on gold module background and hides text mismatch",
+  "mask": "RGB max<120",
+  "rows": [
+    {
+      "id": "camera_title",
+      "iou": 0.25654801880456685,
+      "source_ink": 955,
+      "render_ink": 916
+    },
+    {
+      "id": "current_label",
+      "iou": 0.38881664499349805,
+      "source_ink": 553,
+      "render_ink": 515
+    },
+    {
+      "id": "heads",
+      "iou": 0.3181818181818182,
+      "source_ink": 708,
+      "render_ink": 684
+    },
+    {
+      "id": "add1",
+      "iou": 0.40279937791601866,
+      "source_ink": 453,
+      "render_ink": 449
+    },
+    {
+      "id": "ffn",
+      "iou": 0.3456614509246088,
+      "source_ink": 484,
+      "render_ink": 462
+    },
+    {
+      "id": "add2",
+      "iou": 0.39781591263650545,
+      "source_ink": 447,
+      "render_ink": 449
+    },
+    {
+      "id": "spatial",
+      "iou": 0.35790408525754885,
+      "source_ink": 798,
+      "render_ink": 731
+    },
+    {
+      "id": "add3",
+      "iou": 0.39035769828926903,
+      "source_ink": 445,
+      "render_ink": 449
+    },
+    {
+      "id": "temporal",
+      "iou": 0.1868439468159552,
+      "source_ink": 871,
+      "render_ink": 825
+    },
+    {
+      "id": "history_label",
+      "iou": 0.5642023346303502,
+      "source_ink": 589,
+      "render_ink": 617
+    },
+    {
+      "id": "query_label",
+      "iou": 0.37167070217917675,
+      "source_ink": 579,
+      "render_ink": 554
+    },
+    {
+      "id": "overall",
+      "iou": 0.2828070175438597,
+      "source_ink": 913,
+      "render_ink": 915
+    },
+    {
+      "id": "input",
+      "iou": 0.5518485121731289,
+      "source_ink": 737,
+      "render_ink": 984
+    },
+    {
+      "id": "spatial_panel",
+      "iou": 0.4964936886395512,
+      "source_ink": 1060,
+      "render_ink": 1074
+    },
+    {
+      "id": "temporal_panel",
+      "iou": 0.17596101786681104,
+      "source_ink": 1089,
+      "render_ink": 1083
+    },
+    {
+      "id": "hit_views",
+      "iou": 1,
+      "source_ink": 0,
+      "render_ink": 0
+    },
+    {
+      "id": "coord3",
+      "iou": 0.09946236559139784,
+      "source_ink": 196,
+      "render_ink": 213
+    },
+    {
+      "id": "coord2",
+      "iou": 0.183206106870229,
+      "source_ink": 158,
+      "render_ink": 152
+    },
+    {
+      "id": "bottom_history",
+      "iou": 0.6144578313253012,
+      "source_ink": 583,
+      "render_ink": 623
+    },
+    {
+      "id": "bottom_query",
+      "iou": 0.3765133171912833,
+      "source_ink": 576,
+      "render_ink": 561
+    },
+    {
+      "id": "backbone_label",
+      "iou": 0.1908831908831909,
+      "source_ink": 417,
+      "render_ink": 419
+    },
+    {
+      "id": "repeat",
+      "iou": 0.38738738738738737,
+      "source_ink": 75,
+      "render_ink": 79
+    }
+  ]
+}

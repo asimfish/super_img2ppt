@@ -1,0 +1,108 @@
+import json,pathlib,hashlib,itertools,math
+from PIL import Image
+p=pathlib.Path(__file__).parent; src=Image.open(p/'source.png'); (p/'assets').mkdir(exist_ok=True)
+# Frozen before scene authoring and any candidate measurement. Every third ROI held out.
+rois=[('camera_title',[62,13,310,40]),('current_label',[416,34,559,65]),('heads',[713,23,815,70]),('add1',[551,106,720,134]),('ffn',[540,152,674,180]),('add2',[551,210,720,239]),('spatial',[495,255,724,282]),('add3',[551,314,720,341]),('temporal',[491,359,728,389]),('history_label',[400,468,569,497]),('query_label',[649,468,791,497]),('overall',[482,502,729,532]),('input',[65,501,324,532]),('spatial_panel',[995,281,1260,311]),('temporal_panel',[995,502,1275,532]),('hit_views',[1232,209,1372,241]),('coord3',[1022,78,1120,111]),('coord2',[1126,156,1190,189]),('bottom_history',[888,434,1055,464]),('bottom_query',[1192,434,1343,464]),('backbone_label',[43,164,76,266]),('repeat',[827,278,870,305]),('feature_blue',[16,46,133,85]),('feature_yellow',[16,90,133,127]),('feature_green',[226,46,343,85]),('feature_gray',[109,106,226,144]),('feature_peach',[128,36,244,73]),('feature_lavender',[226,89,343,127]),('spatial_outline',[872,12,1394,271]),('temporal_outline',[872,326,1394,491]),('backbone_top',[124,160,239,198]),('backbone_mid',[97,201,266,241]),('backbone_low',[70,242,293,282]),('head_box',[688,11,838,79]),('arrow_current',[655,35,694,51]),('history_grid',[431,417,538,469])]
+contract={'source_sha256':hashlib.sha256((p/'source.png').read_bytes()).hexdigest(),'mask':'RGB max<170 OR (max-min>45 and min<170); fixed full ROI','pass':'bbox edge max <=4px AND mask IoU >=0.70','render':'actual PPTX PDF raster at source width, no registration','rois':[{'id':n,'box':b,'split':'heldout' if i%3==2 else 'development'} for i,(n,b) in enumerate(rois)]};(p/'roi_contract.json').write_text(json.dumps(contract,indent=2))
+e=[]; z=1
+def add(o):
+ global z
+ o['z']=z; z+=1;e.append(o);return o['id']
+def rect(i,b,fill=None,stroke='#9B9B9B',shape='rect',**kw):return add(dict(id=i,kind='shape',box=b,shape=shape,fill=fill,stroke=stroke,stroke_width=2,**kw))
+def text(i,s,b,size=21,**kw):return add(dict(id=i,kind='text',box=b,text=s,font_family='Arial',font_size=size,fit='strict',color='#111111',**kw))
+def line(i,a,b,color='#111111',width=1.5,arrow=False,**kw):return add(dict(id=i,kind='line',points=[a,b],stroke=color,stroke_width=width,arrow=arrow,**({'arrow_head':{'length':7,'width':6}} if arrow else {}),**kw))
+def poly(i,points,fill,stroke='#777777',sw=1):
+ x=min(a for a,b in points);y=min(b for a,b in points);w=max(a for a,b in points)-x;h=max(b for a,b in points)-y
+ return add(dict(id=i,kind='shape',box=[x,y,w,h],shape='polygon',vertices=[[(a-x)/w,(b-y)/h] for a,b in points],fill=fill,stroke=stroke,stroke_width=sw))
+def crop(i,b,contains=False):
+ src.crop(b).save(p/'assets'/f'{i}.png');return add(dict(id=i,kind='image',box=[b[0],b[1],b[2]-b[0],b[3]-b[1]],path=f'assets/{i}.png',contains_text=contains,provenance='Exact local crop of published Figure 2; not independently editable internally.'))
+def allow(a,b,why):
+ ob=next(o for o in e if o['id']==a);ob.setdefault('allow_overlap_with',[]).append(b);ob['overlap_reason']=why
+# True source backgrounds; no source bitmap backdrop.
+rect('encoder_bg',[389,86,447,323],'#E7E7E7',None,role='background')
+for i,b in [('spatial_frame',[874,17,516,250]),('temporal_frame',[874,330,516,157])]:rect(i,b,None,'#A5A5A5',shape='round_rect',radius=12,dash=[6,3],role='background')
+for k,y,c,label in [(1,102,'#C6E3EA','Add & Norm'),(2,148,'#DAE3F3','Feed Forward'),(3,207,'#C6E3EA','Add & Norm'),(4,252,'#F8E9D2','Spatial Cross-Attention'),(5,310,'#C6E3EA','Add & Norm'),(6,356,'#EAC051','Temporal Self-Attention')]:
+ rect(f'module{k}',[424,y,370,34],c,shape='round_rect',radius=9)
+ text(f'moduletext{k}',label,[437,y+3,344,30],21,align='center',container=f'module{k}')
+for k,y1,y2 in [(1,148,136),(2,207,182),(3,252,241),(4,310,286),(5,356,344)]:
+ line(f'vert{k}',[608,y1],[608,y2],arrow=k in[2,4]);allow(f'vert{k}',f'module{ {1:1,2:2,3:3,4:4,5:5}[k]}','Source module input/output connector terminates on border.')
+for k,ys,ye in [(1,194,118),(2,298,224),(3,403,327)]:
+ line(f'skip{k}a',[608 if k<3 else 721,ys],[811,ys]);line(f'skip{k}b',[811,ys],[811,ye]);line(f'skip{k}c',[811,ye],[795,ye],arrow=True)
+ for a,b in [(f'skip{k}a',f'skip{k}b'),(f'skip{k}b',f'skip{k}c')]:allow(a,b,'Visible corner join of residual branch.')
+text('repeat','× 6',[833,278,40,26],19)
+rect('heads',[692,15,142,60],'#FFFFFF','#888888');text('heads_text','Det & Seg\nHeads',[706,22,117,52],21,align='center',container='heads')
+line('output',[659,43],[692,43],arrow=True);allow('output','heads','Output arrow touches task-head box.')
+line('bev_up',[608,102],[608,72],arrow=True)
+text('current','Current BEV Bₜ',[420,36,148,32],20)
+text('history','History BEV Bₜ₋₁',[405,469,185,29],20)
+text('queries','BEV Queries Q',[654,469,150,29],20)
+text('overall','(a) Overall Architecture',[486,503,260,30],21)
+text('spatial_panel','(b) Spatial Cross-Attention',[1001,282,310,31],21)
+text('temporal_panel','(c) Temporal Self-Attention',[1000,503,320,31],21)
+text('camera_title','Multi-Camera Features Fₜ',[65,14,283,30],20)
+text('input','Multi-view Input at Time t',[68,503,290,30],21,color='#444444') if False else text('input','Multi-view Input at Time t',[68,503,290,30],21)
+text('backbone','Backbone',[-1,205,129,27],21,rotation=-90,align='center')
+for i,(x,y,w) in enumerate([(128,164,107),(101,206,161),(74,247,214)]):rect(f'backbone{i}',[x,y,w,31],'#DAE3F3','#2C55A3',shape='round_rect',radius=16)
+line('camera_up',[181,304],[181,279],arrow=True);line('feature_up',[181,164],[181,142],arrow=True)
+for i,(x,y,c) in enumerate([(20,52,'#DCF3FC'),(132,40,'#FCEAD2'),(231,52,'#E4FDD1'),(20,94,'#FFFFB5'),(114,111,'#FAFAFA'),(231,95,'#D3E5FF')]):poly(f'feature{i}',[(x,y+30),(x+25,y),(x+109,y),(x+84,y+30)],c,'#555555')
+for i,b in enumerate([(12,333,120,389),(12,397,120,453),(128,303,235,359),(128,437,235,491),(244,333,351,389),(244,397,351,453),(165,365,197,431)]):crop(f'camera{i}',b)
+# Braces are approximated by native polylines with straight short joins.
+for side,x,s in [('left',11,1),('right',348,-1)]:
+ pts=[(x+7*s,38),(x,41),(x,138),(x+7*s,142)]
+ for j in range(3):line(f'brace_{side}{j}',pts[j],pts[j+1],width=1.2)
+line('feature_route1',[348,89],[370,102]);line('feature_route2',[370,102],[389,149]);line('feature_route3',[389,149],[398,235]);line('feature_route4',[398,235],[424,269],arrow=True)
+for j in range(1,4):allow(f'feature_route{j}',f'feature_route{j+1}','Contiguous source backbone-to-spatial branch approximated by short straight segments.')
+# Editable isometric grid tiles, rear faces first; avoid rasterizing ordinary geometry.
+def grid(name,x,y,w,h,dx,dy,n=4,m=3,base='#F4CBAF'):
+ poly(name+'_right',[(x+w,y),(x+w+dx,y-dy),(x+w+dx,y-dy+h),(x+w,y+h)],'#BEA592')
+ for r in range(m):
+  for c in range(n):
+   xx=x+c*w/n+r*dx/m; yy=y-r*dy/m
+   poly(f'{name}_top{r}_{c}',[(xx,yy),(xx+w/n,yy),(xx+w/n+dx/m,yy-dy/m),(xx+dx/m,yy-dy/m)],base,'#999999',.65)
+ for c in range(n):rect(f'{name}_front{c}',[x+c*w/n,y,w/n,h],base,'#999999',stroke_width=.65) if False else add(dict(id=f'{name}_front{c}',kind='shape',shape='rect',box=[x+c*w/n,y,w/n,h],fill=base,stroke='#999999',stroke_width=.65))
+ # Tile stroke intersections are deliberate source grid joins, exclusively within this grid.
+ ids=[o['id'] for o in e if o['id'].startswith(name+'_')]
+ for a,b in itertools.combinations(ids,2):allow(a,b,'Adjacent editable faces share the visible source isometric grid edges.')
+grid('currentgrid',560,51,73,17,25,25);grid('historygrid',435,448,74,18,25,25);grid('querygrid',668,448,74,18,25,25,base='#B8C9E5')
+line('history_up',[487,423],[487,391],arrow=True);line('query_up',[721,423],[721,391],arrow=True)
+# Full spatial detail panel, including feature planes and projected BEV queries.
+for i,(x,y,c) in enumerate([(901,73,'#DCF3FC'),(1094,38,'#FCEAD2'),(1254,74,'#E4FDD1'),(901,160,'#FFFFB5'),(1060,218,'#FAFAFA'),(1254,160,'#D3E5FF')]):poly(f'spfeature{i}',[(x,y+29),(x+25,y),(x+109,y),(x+84,y+29)],c,'#555555')
+grid('spgrid',1043,163,126,30,45,45,base='#BCCCE3')
+# Native coordinate labels and highlighted cell.
+rect('spquery',[1138,163,31,30],'#FFEBA4',None)
+for o in list(e):
+ if o['id'].startswith('spgrid_'):allow('spquery',o['id'],'Source selected query cell overlays the front BEV grid tile.')
+text('xy',"(x′, y′)",[1130,160,64,29],20,font_family='Times New Roman') if False else text('xy',"(x′, y′)",[1130,160,64,29],20)
+allow('xy','spquery','Query coordinate intentionally labels highlighted query cell.')
+for o in list(e):
+ if o['id'].startswith('spgrid_'):allow('xy',o['id'],'Source coordinate label crosses selected cell edge.')
+text('xyz',"(x′, y′, zⱼ′)",[1026,80,122,29],19)
+rect('pillar',[1138,91,42,70],None,'#557CCE',dash=[3,2]);allow('pillar','spgrid_right','Source sampling pillar intersects BEV volume.')
+for o in list(e):
+ if o['id'].startswith('spgrid_'):allow('pillar',o['id'],'Sampling pillar projects through the grid volume in source.')
+for j in range(4):rect(f'sample{j}',[1155,108+j*13,6,6],'#FF7469',None,shape='ellipse');allow(f'sample{j}','pillar','Sample point lies on native query pillar.')
+rect('hit_circle',[1230,60,154,148],None,'#99C66A',shape='ellipse',dash=[4,3],role='background')
+text('hitviews','Hit Views Vₕᵢₜ',[1237,211,153,32],20)
+for i,(x,y,c) in enumerate([(1285,80,'#03BFF0'),(1293,91,'#03BFF0'),(1277,92,'#03BFF0'),(1283,169,'#568032'),(1274,180,'#568032'),(1291,179,'#568032')]):rect(f'hit{i}',[x,y,6,6],c,None,shape='triangle' if i<3 else 'diamond');allow(f'hit{i}',f'spfeature{2 if i<3 else 5}','Source sample marker over feature plane.')
+# Projection rays rendered as native lines; source curves approximated locally.
+for i,(a,b) in enumerate([((1160,111),(1286,94)),((1160,124),(1280,177))]):line(f'ray{i}',a,b,'#888888',.9)
+for i in range(2):
+ for o in list(e):
+  if o['id'].startswith(('spgrid_','spfeature','sample','hit','pillar')):allow(f'ray{i}',o['id'],'Projection ray visibly intersects source sampling pillar and hit-view plane.')
+# Temporal detail includes BEV volumes and correspondence curves.
+grid('temphistory',896,400,126,31,45,45);grid('tempquery',1197,401,126,31,45,45,base='#B8C9E5')
+rect('tempselected',[1292,401,31,31],'#FFEBA4',None)
+text('tempxy',"(x, y)",[1287,398,61,31],20)
+for a in ['tempselected','tempxy']:
+ for o in list(e):
+  if o['id'].startswith('tempquery_') or o['id']=='tempselected' and a!='tempselected':allow(a,o['id'],'Source coordinate lies over selected front query tile.')
+text('temphistorylabel','History BEV Bₜ₋₁',[893,435,200,30],20);text('tempquerylabel','BEV Queries Q',[1197,435,170,30],20)
+for k,pts,c in [('low',[(985,395),(1034,383),(1146,382),(1250,385),(1317,401)],'#999999'),('high',[(1003,381),(1040,356),(1156,344),(1230,350),(1288,375),(1317,401)],'#777777')]:
+ for j in range(len(pts)-1):line(f'curve{k}{j}',pts[j],pts[j+1],c,.9,arrow=j==len(pts)-2)
+ for a in [o['id'] for o in e if o['id'].startswith('curve'+k)]:
+  for b in [o['id'] for o in e if o['id'].startswith(('tempquery_','temphistory_','tempselected','tempxy'))]:allow(a,b,'Temporal correspondence curve runs from history BEV to selected current query in source.')
+for j,(x,y,c) in enumerate([(981,392,'#99551E'),(999,378,'#355482'),(1284,373,'#17BDE8'),(1326,380,'#588136')]):rect(f'temporalpoint{j}',[x,y,7,7],c,None,shape='diamond')
+# Dashed zoom links anchor both detail panels.
+for i,(a,b) in enumerate([((795,220),(874,17)),((795,283),(874,256)),((795,356),(874,341)),((795,390),(874,475))]):line(f'zoom{i}',a,b,'#AAAAAA',2,dash=[6,3])
+scene={'version':1,'slides':[{'id':'page_001','width':1400,'height':535,'source':'source.png','background':'#FFFFFF','reviewed':True,'notes':'BEVFormer ECCV2022 Figure 2, all three panels. Image-only reconstruction. Camera images raster; grid faces and text native; curved rays approximated by segments. Source font identity unknown.','elements':e}]}
+(p/'scene.json').write_text(json.dumps(scene,indent=2))

@@ -1,0 +1,20 @@
+import hashlib,json
+from pathlib import Path
+root=Path.cwd();out=root/'output/complex_figures_20260911'
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+inputs={'bevformer_main':Path('/tmp/bevformer-forward-EnS49e/source.png'),'internimage_main':Path('/tmp/internimage-forward-GRM4hn/source.png'),'dust3r_main':Path('/tmp/dust3r-complex-qQO3Ml/figure2.png'),'dust3r_qualitative':Path('/tmp/dust3r-complex-qQO3Ml/figure3.png')}
+rows=[{'case':c,'independent_sha256':sha(p),'recipe_sha256':sha(out/'fetch_reproduction'/f'{c}.png'),'equal':p.read_bytes()==(out/'fetch_reproduction'/f'{c}.png').read_bytes()} for c,p in inputs.items()]
+assert all(r['equal'] for r in rows)
+(out/'fetch_comparison.json').write_text(json.dumps(rows,indent=2)+'\n')
+checks=[]
+for case,temp,base,key in [('internimage','/tmp/internimage-forward-GRM4hn','','files'),('dust3r','/tmp/dust3r-complex-qQO3Ml','build_07','sha256'),('bevformer','/tmp/bevformer-forward-EnS49e','','hashes')]:
+ p=Path(temp);freeze=json.loads((p/'candidate_freeze.json').read_text())
+ for rel,expected in freeze[key].items():checks.append({'case':case,'path':str(p/base/rel),'expected':expected,'actual':sha(p/base/rel),'equal':sha(p/base/rel)==expected})
+assert all(r['equal'] for r in checks)
+contract=json.loads((out/'test_contract.json').read_text());runtime=[]
+for rel,expected in contract['runtime_hashes'].items():
+ p=root/'skills/super-img2ppt'/rel
+ runtime.append({'path':rel,'equal':sha(p)==expected})
+assert all(r['equal'] for r in runtime)
+(out/'parent_integrity.json').write_text(json.dumps({'final_freezes':checks,'unchanged_skill':runtime},indent=2)+'\n')
+print('Four source crops identical; final candidate freezes intact; skill unchanged')

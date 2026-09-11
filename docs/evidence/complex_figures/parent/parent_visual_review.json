@@ -1,0 +1,21 @@
+{
+  "actual_render_review": {
+    "internimage": [
+      "All four stages, stem/downsampling definitions and residual block/rules are present.",
+      "Stage-i upright instead of italic; lower formulas have excess space; left dimensions differ in math glyph spacing."
+    ],
+    "bevformer": [
+      "All three architecture/spatial/temporal panels retained.",
+      "Source has denser grids, curved connectors and arrow profile/shadow details absent in native approximation.",
+      "Carlito labels broadly readable; math indices differ."
+    ],
+    "dust3r": [
+      "Both image branches and camera/pointmap geometry retained.",
+      "Typography, camera shape, patch texture and curve-to-raster join visibly differ.",
+      "Second slide has all qualitative panels as 17 movable rasters; no internal semantic editability claimed."
+    ]
+  },
+  "resolved_scene_replay_caution": "All rendered pixels match. Resolved scenes already contain selected fallback fonts, so replay reports pass while original BEVFormer/DUSt3R review warnings remain authoritative. Replaying resolved fonts does not solve source font mismatch.",
+  "powerpoint_wps": "not verified",
+  "result": "Strict source fidelity fails in all three main figures."
+}

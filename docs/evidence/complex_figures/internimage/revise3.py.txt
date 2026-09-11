@@ -1,0 +1,12 @@
+import json
+from pathlib import Path
+R=Path(__file__).parent;p=R/'job/scene.json';d=json.loads(p.read_text());(R/'scene_04.json').write_text(p.read_text());es={x['id']:x for x in d['slides'][0]['elements']}
+# Third and final repair: source node heights and small shared typography size correction.
+for i in [2,3]:es[f'down{i}']['box'][3]=50;es[f'down_stage{i}']['points'][0][1]+=2
+es['stem_text']['font_size']=29.5
+for i in [1,2,3]:es[f'down{i}_text']['font_size']=29.3
+es['ffn_text']['font_size']=29.5
+# Initial HxWx3 has no fractions; it needs less operator space than long dimension labels.
+for run in es['dimension0']['runs']:
+ if '×' in run['text']:run['text']='\u200a×\u200a'
+p.write_text(json.dumps(d,indent=2))

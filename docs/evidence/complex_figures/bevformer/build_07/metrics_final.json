@@ -1,0 +1,907 @@
+{
+  "stage": "final",
+  "passed": 4,
+  "total": 36,
+  "rows": [
+    {
+      "id": "camera_title",
+      "box": [
+        62,
+        13,
+        310,
+        40
+      ],
+      "split": "development",
+      "source_bbox": [
+        5,
+        5,
+        239,
+        27
+      ],
+      "render_bbox": [
+        5,
+        5,
+        240,
+        27
+      ],
+      "edge_max_px": 1,
+      "iou": 0.31388438681793623,
+      "pass": false
+    },
+    {
+      "id": "current_label",
+      "box": [
+        416,
+        34,
+        559,
+        65
+      ],
+      "split": "development",
+      "source_bbox": [
+        5,
+        7,
+        140,
+        26
+      ],
+      "render_bbox": [
+        5,
+        7,
+        139,
+        22
+      ],
+      "edge_max_px": 4,
+      "iou": 0.512087912087912,
+      "pass": false
+    },
+    {
+      "id": "heads",
+      "box": [
+        713,
+        23,
+        815,
+        70
+      ],
+      "split": "heldout",
+      "source_bbox": [
+        5,
+        4,
+        99,
+        43
+      ],
+      "render_bbox": [
+        6,
+        3,
+        98,
+        46
+      ],
+      "edge_max_px": 3,
+      "iou": 0.40176423416198875,
+      "pass": false
+    },
+    {
+      "id": "add1",
+      "box": [
+        551,
+        106,
+        720,
+        134
+      ],
+      "split": "development",
+      "source_bbox": [
+        6,
+        4,
+        126,
+        20
+      ],
+      "render_bbox": [
+        6,
+        4,
+        126,
+        21
+      ],
+      "edge_max_px": 1,
+      "iou": 0.5601965601965602,
+      "pass": false
+    },
+    {
+      "id": "ffn",
+      "box": [
+        540,
+        152,
+        674,
+        180
+      ],
+      "split": "development",
+      "source_bbox": [
+        6,
+        4,
+        131,
+        20
+      ],
+      "render_bbox": [
+        6,
+        4,
+        133,
+        20
+      ],
+      "edge_max_px": 2,
+      "iou": 0.5029655990510083,
+      "pass": false
+    },
+    {
+      "id": "add2",
+      "box": [
+        551,
+        210,
+        720,
+        239
+      ],
+      "split": "heldout",
+      "source_bbox": [
+        5,
+        4,
+        125,
+        20
+      ],
+      "render_bbox": [
+        6,
+        4,
+        126,
+        21
+      ],
+      "edge_max_px": 1,
+      "iou": 0.5327669902912622,
+      "pass": false
+    },
+    {
+      "id": "spatial",
+      "box": [
+        495,
+        255,
+        724,
+        282
+      ],
+      "split": "development",
+      "source_bbox": [
+        6,
+        5,
+        220,
+        26
+      ],
+      "render_bbox": [
+        6,
+        5,
+        219,
+        25
+      ],
+      "edge_max_px": 1,
+      "iou": 0.47592067988668557,
+      "pass": false
+    },
+    {
+      "id": "add3",
+      "box": [
+        551,
+        314,
+        720,
+        341
+      ],
+      "split": "development",
+      "source_bbox": [
+        6,
+        3,
+        126,
+        19
+      ],
+      "render_bbox": [
+        6,
+        3,
+        126,
+        20
+      ],
+      "edge_max_px": 1,
+      "iou": 0.5137724550898204,
+      "pass": false
+    },
+    {
+      "id": "temporal",
+      "box": [
+        491,
+        359,
+        728,
+        389
+      ],
+      "split": "heldout",
+      "source_bbox": [
+        0,
+        0,
+        237,
+        30
+      ],
+      "render_bbox": [
+        0,
+        0,
+        237,
+        30
+      ],
+      "edge_max_px": 0,
+      "iou": 1.0,
+      "pass": true
+    },
+    {
+      "id": "history_label",
+      "box": [
+        400,
+        468,
+        569,
+        497
+      ],
+      "split": "development",
+      "source_bbox": [
+        7,
+        5,
+        156,
+        26
+      ],
+      "render_bbox": [
+        7,
+        5,
+        156,
+        25
+      ],
+      "edge_max_px": 1,
+      "iou": 0.5984682713347921,
+      "pass": false
+    },
+    {
+      "id": "query_label",
+      "box": [
+        649,
+        468,
+        791,
+        497
+      ],
+      "split": "development",
+      "source_bbox": [
+        7,
+        5,
+        137,
+        25
+      ],
+      "render_bbox": [
+        7,
+        5,
+        139,
+        26
+      ],
+      "edge_max_px": 2,
+      "iou": 0.5222929936305732,
+      "pass": false
+    },
+    {
+      "id": "overall",
+      "box": [
+        482,
+        502,
+        729,
+        532
+      ],
+      "split": "heldout",
+      "source_bbox": [
+        6,
+        5,
+        219,
+        25
+      ],
+      "render_bbox": [
+        5,
+        4,
+        224,
+        24
+      ],
+      "edge_max_px": 5,
+      "iou": 0.3479304139172166,
+      "pass": false
+    },
+    {
+      "id": "input",
+      "box": [
+        65,
+        501,
+        324,
+        532
+      ],
+      "split": "development",
+      "source_bbox": [
+        5,
+        6,
+        247,
+        27
+      ],
+      "render_bbox": [
+        5,
+        6,
+        248,
+        26
+      ],
+      "edge_max_px": 1,
+      "iou": 0.6394606103619588,
+      "pass": false
+    },
+    {
+      "id": "spatial_panel",
+      "box": [
+        995,
+        281,
+        1260,
+        311
+      ],
+      "split": "development",
+      "source_bbox": [
+        8,
+        5,
+        253,
+        26
+      ],
+      "render_bbox": [
+        8,
+        5,
+        253,
+        26
+      ],
+      "edge_max_px": 0,
+      "iou": 0.5836883749239197,
+      "pass": false
+    },
+    {
+      "id": "temporal_panel",
+      "box": [
+        995,
+        502,
+        1275,
+        532
+      ],
+      "split": "heldout",
+      "source_bbox": [
+        6,
+        5,
+        255,
+        26
+      ],
+      "render_bbox": [
+        6,
+        5,
+        258,
+        26
+      ],
+      "edge_max_px": 3,
+      "iou": 0.23298309730470534,
+      "pass": false
+    },
+    {
+      "id": "hit_views",
+      "box": [
+        1232,
+        209,
+        1372,
+        241
+      ],
+      "split": "development",
+      "source_bbox": [
+        6,
+        6,
+        128,
+        26
+      ],
+      "render_bbox": [
+        6,
+        6,
+        126,
+        23
+      ],
+      "edge_max_px": 3,
+      "iou": 0.23373493975903614,
+      "pass": false
+    },
+    {
+      "id": "coord3",
+      "box": [
+        1022,
+        78,
+        1120,
+        111
+      ],
+      "split": "development",
+      "source_bbox": [
+        6,
+        7,
+        98,
+        29
+      ],
+      "render_bbox": [
+        6,
+        7,
+        96,
+        29
+      ],
+      "edge_max_px": 2,
+      "iou": 0.1038961038961039,
+      "pass": false
+    },
+    {
+      "id": "coord2",
+      "box": [
+        1126,
+        156,
+        1190,
+        189
+      ],
+      "split": "heldout",
+      "source_bbox": [
+        6,
+        0,
+        60,
+        33
+      ],
+      "render_bbox": [
+        0,
+        0,
+        64,
+        33
+      ],
+      "edge_max_px": 6,
+      "iou": 0.6865357643758766,
+      "pass": false
+    },
+    {
+      "id": "bottom_history",
+      "box": [
+        888,
+        434,
+        1055,
+        464
+      ],
+      "split": "development",
+      "source_bbox": [
+        7,
+        5,
+        157,
+        26
+      ],
+      "render_bbox": [
+        7,
+        5,
+        156,
+        25
+      ],
+      "edge_max_px": 1,
+      "iou": 0.678409090909091,
+      "pass": false
+    },
+    {
+      "id": "bottom_query",
+      "box": [
+        1192,
+        434,
+        1343,
+        464
+      ],
+      "split": "development",
+      "source_bbox": [
+        7,
+        5,
+        137,
+        25
+      ],
+      "render_bbox": [
+        7,
+        5,
+        139,
+        26
+      ],
+      "edge_max_px": 2,
+      "iou": 0.5010526315789474,
+      "pass": false
+    },
+    {
+      "id": "backbone_label",
+      "box": [
+        43,
+        164,
+        76,
+        266
+      ],
+      "split": "heldout",
+      "source_bbox": [
+        8,
+        6,
+        33,
+        102
+      ],
+      "render_bbox": [
+        8,
+        3,
+        33,
+        102
+      ],
+      "edge_max_px": 3,
+      "iou": 0.3344594594594595,
+      "pass": false
+    },
+    {
+      "id": "repeat",
+      "box": [
+        827,
+        278,
+        870,
+        305
+      ],
+      "split": "development",
+      "source_bbox": [
+        9,
+        5,
+        36,
+        19
+      ],
+      "render_bbox": [
+        10,
+        5,
+        34,
+        20
+      ],
+      "edge_max_px": 2,
+      "iou": 0.45038167938931295,
+      "pass": false
+    },
+    {
+      "id": "feature_blue",
+      "box": [
+        16,
+        46,
+        133,
+        85
+      ],
+      "split": "development",
+      "source_bbox": [
+        3,
+        5,
+        117,
+        37
+      ],
+      "render_bbox": [
+        4,
+        5,
+        117,
+        37
+      ],
+      "edge_max_px": 1,
+      "iou": 0.3979591836734694,
+      "pass": false
+    },
+    {
+      "id": "feature_yellow",
+      "box": [
+        16,
+        90,
+        133,
+        127
+      ],
+      "split": "heldout",
+      "source_bbox": [
+        3,
+        3,
+        117,
+        37
+      ],
+      "render_bbox": [
+        4,
+        3,
+        117,
+        37
+      ],
+      "edge_max_px": 1,
+      "iou": 0.22423146473779385,
+      "pass": false
+    },
+    {
+      "id": "feature_green",
+      "box": [
+        226,
+        46,
+        343,
+        85
+      ],
+      "split": "development",
+      "source_bbox": [
+        0,
+        0,
+        114,
+        37
+      ],
+      "render_bbox": [
+        0,
+        0,
+        114,
+        37
+      ],
+      "edge_max_px": 0,
+      "iou": 0.41605839416058393,
+      "pass": false
+    },
+    {
+      "id": "feature_gray",
+      "box": [
+        109,
+        106,
+        226,
+        144
+      ],
+      "split": "development",
+      "source_bbox": [
+        0,
+        0,
+        114,
+        38
+      ],
+      "render_bbox": [
+        0,
+        0,
+        114,
+        38
+      ],
+      "edge_max_px": 0,
+      "iou": 0.2890792291220557,
+      "pass": false
+    },
+    {
+      "id": "feature_peach",
+      "box": [
+        128,
+        36,
+        244,
+        73
+      ],
+      "split": "heldout",
+      "source_bbox": [
+        0,
+        3,
+        116,
+        37
+      ],
+      "render_bbox": [
+        0,
+        3,
+        116,
+        37
+      ],
+      "edge_max_px": 0,
+      "iou": 0.2288135593220339,
+      "pass": false
+    },
+    {
+      "id": "feature_lavender",
+      "box": [
+        226,
+        89,
+        343,
+        127
+      ],
+      "split": "development",
+      "source_bbox": [
+        4,
+        4,
+        114,
+        35
+      ],
+      "render_bbox": [
+        5,
+        5,
+        114,
+        37
+      ],
+      "edge_max_px": 2,
+      "iou": 0.16411378555798686,
+      "pass": false
+    },
+    {
+      "id": "spatial_outline",
+      "box": [
+        872,
+        12,
+        1394,
+        271
+      ],
+      "split": "development",
+      "source_bbox": [
+        0,
+        4,
+        518,
+        255
+      ],
+      "render_bbox": [
+        1,
+        4,
+        518,
+        256
+      ],
+      "edge_max_px": 1,
+      "iou": 0.31324696193632623,
+      "pass": false
+    },
+    {
+      "id": "temporal_outline",
+      "box": [
+        872,
+        326,
+        1394,
+        491
+      ],
+      "split": "heldout",
+      "source_bbox": [
+        0,
+        4,
+        519,
+        162
+      ],
+      "render_bbox": [
+        1,
+        3,
+        518,
+        162
+      ],
+      "edge_max_px": 1,
+      "iou": 0.34719493560358,
+      "pass": false
+    },
+    {
+      "id": "backbone_top",
+      "box": [
+        124,
+        160,
+        239,
+        198
+      ],
+      "split": "development",
+      "source_bbox": [
+        4,
+        0,
+        112,
+        35
+      ],
+      "render_bbox": [
+        3,
+        0,
+        112,
+        36
+      ],
+      "edge_max_px": 1,
+      "iou": 0.7089552238805971,
+      "pass": true
+    },
+    {
+      "id": "backbone_mid",
+      "box": [
+        97,
+        201,
+        266,
+        241
+      ],
+      "split": "development",
+      "source_bbox": [
+        4,
+        4,
+        166,
+        36
+      ],
+      "render_bbox": [
+        3,
+        4,
+        166,
+        37
+      ],
+      "edge_max_px": 1,
+      "iou": 0.4487034949267193,
+      "pass": false
+    },
+    {
+      "id": "backbone_low",
+      "box": [
+        70,
+        242,
+        293,
+        282
+      ],
+      "split": "heldout",
+      "source_bbox": [
+        4,
+        4,
+        219,
+        40
+      ],
+      "render_bbox": [
+        3,
+        4,
+        219,
+        40
+      ],
+      "edge_max_px": 1,
+      "iou": 0.8998978549540347,
+      "pass": true
+    },
+    {
+      "id": "head_box",
+      "box": [
+        688,
+        11,
+        838,
+        79
+      ],
+      "split": "development",
+      "source_bbox": [
+        0,
+        3,
+        149,
+        65
+      ],
+      "render_bbox": [
+        0,
+        3,
+        147,
+        65
+      ],
+      "edge_max_px": 2,
+      "iou": 0.6033018867924528,
+      "pass": false
+    },
+    {
+      "id": "arrow_current",
+      "box": [
+        655,
+        35,
+        694,
+        51
+      ],
+      "split": "development",
+      "source_bbox": [
+        0,
+        0,
+        38,
+        16
+      ],
+      "render_bbox": [
+        0,
+        0,
+        38,
+        16
+      ],
+      "edge_max_px": 0,
+      "iou": 0.740506329113924,
+      "pass": true
+    },
+    {
+      "id": "history_grid",
+      "box": [
+        431,
+        417,
+        538,
+        469
+      ],
+      "split": "heldout",
+      "source_bbox": [
+        4,
+        0,
+        103,
+        49
+      ],
+      "render_bbox": [
+        4,
+        0,
+        104,
+        49
+      ],
+      "edge_max_px": 1,
+      "iou": 0.11066398390342053,
+      "pass": false
+    }
+  ]
+}

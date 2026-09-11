@@ -1,0 +1,7 @@
+import json
+from pathlib import Path
+r=Path(__file__).parent;p=r/'job/scene.json';d=json.loads(p.read_text());(r/'scene_01.json').write_text(p.read_text());es={x['id']:x for x in d['slides'][0]['elements']}
+for e in es.values():
+ if e['kind']=='text' and e['font_size']<=21:e['box'][3]=26;e['box'][1]-=4
+for a,b in [('add1_h','add1_v'),('add2_h','add2_v'),('add_ffn','skip1a'),('input','skip2a'),('input','delta_curve0')]:es[a].setdefault('allow_overlap_with',[]).append(b);es[a]['overlap_reason']='Source-visible plus intersection or residual/input branch junction.'
+p.write_text(json.dumps(d,indent=2))

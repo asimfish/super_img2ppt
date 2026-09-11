@@ -1,0 +1,19 @@
+from pathlib import Path
+import json,sys
+import pypdfium2 as pdf
+from PIL import Image
+R=Path(__file__).parent;B=R/sys.argv[1];split=sys.argv[2]
+p=list((B/'render').glob('*.pdf'))[0];d=pdf.PdfDocument(p);im=d[0].render(scale=820/d[0].get_width()).to_pil().convert('RGB');im.save(B/'sourcewidth.png');src=Image.open(R/'source.png').convert('RGB')
+def mask(im,b,kind):
+ out=set()
+ for j,(r,g,bl) in enumerate(im.crop(b).getdata()):
+  ok=max(r,g,bl)<150 if kind=='dark' else r>140 and g<120 and bl<120 if kind=='red' else max(abs(r-{'yellow':255,'blue':192,'redfill':240}[kind]),abs(g-{'yellow':239,'blue':229,'redfill':186}[kind]),abs(bl-{'yellow':173,'blue':245,'redfill':183}[kind]))<35
+  if ok:out.add((j%(b[2]-b[0]),j//(b[2]-b[0])))
+ return out
+def bbox(s):return [min(x for x,y in s),min(y for x,y in s),max(x for x,y in s),max(y for x,y in s)] if s else None
+rows=[]
+for r in json.load(open(R/'roi_contract.json'))['regions']:
+ if r['split']!=split:continue
+ a=mask(src,r['box'],r['mask']);b=mask(im,r['box'],r['mask']);aa=bbox(a);bb=bbox(b);err=max(abs(x-y) for x,y in zip(aa,bb)) if aa and bb else 999;iou=len(a&b)/len(a|b) if a|b else 0
+ rows.append(dict(**r,source_bbox=aa,render_bbox=bb,edge_max=err,iou=iou,passed=err<=4 and iou>=.70))
+res={'split':split,'passed':sum(r['passed'] for r in rows),'total':len(rows),'rows':rows};(B/f'{split}_metrics.json').write_text(json.dumps(res,indent=2));print(json.dumps(res,indent=2))

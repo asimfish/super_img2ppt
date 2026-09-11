@@ -1,0 +1,773 @@
+{
+  "status": "fail",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "fail",
+      "findings": [
+        {
+          "slide": "figure2",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "feature1"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 21,
+            "width_px": 17.5,
+            "height_px": 28.75,
+            "available_width_px": 36,
+            "available_height_px": 29,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 18.0,
+            "required_height_px": 29.25,
+            "fits": false,
+            "lines": [
+              "F¹"
+            ]
+          }
+        },
+        {
+          "slide": "figure2",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "image_label1"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 18,
+            "width_px": 147.5,
+            "height_px": 24.75,
+            "available_width_px": 205,
+            "available_height_px": 25,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 148.0,
+            "required_height_px": 25.25,
+            "fits": false,
+            "lines": [
+              "Image I¹ ∈ ℝᵂˣᴴˣ³"
+            ]
+          }
+        },
+        {
+          "slide": "figure2",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "feature2"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 21,
+            "width_px": 18.5,
+            "height_px": 28.75,
+            "available_width_px": 36,
+            "available_height_px": 29,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 19.0,
+            "required_height_px": 29.25,
+            "fits": false,
+            "lines": [
+              "F²"
+            ]
+          }
+        },
+        {
+          "slide": "figure2",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "image_label2"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 18,
+            "width_px": 147.5,
+            "height_px": 24.75,
+            "available_width_px": 205,
+            "available_height_px": 25,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 148.0,
+            "required_height_px": 25.25,
+            "fits": false,
+            "lines": [
+              "Image I² ∈ ℝᵂˣᴴˣ³"
+            ]
+          }
+        },
+        {
+          "slide": "figure2",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "common"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 18,
+            "width_px": 230.5,
+            "height_px": 49.5,
+            "available_width_px": 228,
+            "available_height_px": 54,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 231.0,
+            "required_height_px": 50.0,
+            "fits": false,
+            "lines": [
+              "Common coordinate frame",
+              "of camera 1 (image  I₁)"
+            ]
+          }
+        },
+        {
+          "slide": "figure2",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "redcamtop",
+            "camera1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "figure2",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "redcambottom",
+            "camera1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "figure2",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "bluecamtop",
+            "camera2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "figure2",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "bluecambottom",
+            "camera2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "figure2",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "cloudleft",
+            "camera2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 231.0
+        },
+        {
+          "slide": "figure2",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "cloudleft",
+            "common"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 98.0
+        },
+        {
+          "slide": "figure2",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "sharedline2",
+            "shared"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 6.0
+        },
+        {
+          "slide": "figure2",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "redcurve0",
+            "pointlabel1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "figure2",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "redcurve1",
+            "pointlabel1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "figure2",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "bluecurve0",
+            "pointlabel2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "figure2",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "axisup",
+            "camera1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "figure2",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "axisright",
+            "camera1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "figure2",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "axisdown",
+            "camera1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 117.237
+        },
+        {
+          "slide": "figure2",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "pointlabel1",
+            "formula1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "figure2",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "confidence1",
+            "conf_formula1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "figure2",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "pointlabel2",
+            "formula2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "figure2",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "confidence2",
+            "conf_formula2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "figure2",
+          "counts": {
+            "image": 4,
+            "shape": 24,
+            "text": 25,
+            "line": 60
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "redcamtop",
+                "axisright"
+              ],
+              "reason": "Source-visible shared endpoints, curve chord joins, or camera axis crossing.",
+              "area_px2": 48.517
+            },
+            {
+              "elements": [
+                "redcambottom",
+                "axisright"
+              ],
+              "reason": "Source-visible shared endpoints, curve chord joins, or camera axis crossing.",
+              "area_px2": 55.02
+            },
+            {
+              "elements": [
+                "pointarr1",
+                "confarr1"
+              ],
+              "reason": "Source-visible shared endpoints, curve chord joins, or camera axis crossing.",
+              "area_px2": 4.4
+            },
+            {
+              "elements": [
+                "pointarr2",
+                "confarr2"
+              ],
+              "reason": "Source-visible shared endpoints, curve chord joins, or camera axis crossing.",
+              "area_px2": 4.4
+            },
+            {
+              "elements": [
+                "crossup",
+                "crossdown"
+              ],
+              "reason": "Source-visible shared endpoints, curve chord joins, or camera axis crossing.",
+              "area_px2": 5.0
+            },
+            {
+              "elements": [
+                "axisup",
+                "axisright"
+              ],
+              "reason": "Source-visible shared endpoints, curve chord joins, or camera axis crossing.",
+              "area_px2": 0.544
+            }
+          ],
+          "text_layouts": {
+            "vit1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 70.0,
+              "height_px": 49.5,
+              "available_width_px": 82,
+              "available_height_px": 60,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 70.5,
+              "required_height_px": 50.0,
+              "fits": true,
+              "lines": [
+                "ViT",
+                "encoder"
+              ]
+            },
+            "decoder1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 106.5,
+              "height_px": 49.5,
+              "available_width_px": 116,
+              "available_height_px": 60,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 107.0,
+              "required_height_px": 50.0,
+              "fits": true,
+              "lines": [
+                "Transformer",
+                "Decoder₁"
+              ]
+            },
+            "headlabel1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 50.75,
+              "height_px": 24.75,
+              "available_width_px": 63,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 51.25,
+              "required_height_px": 25.25,
+              "fits": true,
+              "lines": [
+                "Head₁"
+              ]
+            },
+            "patch1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 67.75,
+              "height_px": 24.75,
+              "available_width_px": 74,
+              "available_height_px": 28,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.25,
+              "required_height_px": 25.25,
+              "fits": true,
+              "lines": [
+                "Patchify"
+              ]
+            },
+            "feature1": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 17.5,
+              "height_px": 28.75,
+              "available_width_px": 36,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.0,
+              "required_height_px": 29.25,
+              "fits": false,
+              "lines": [
+                "F¹"
+              ]
+            },
+            "image_label1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 147.5,
+              "height_px": 24.75,
+              "available_width_px": 205,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 148.0,
+              "required_height_px": 25.25,
+              "fits": false,
+              "lines": [
+                "Image I¹ ∈ ℝᵂˣᴴˣ³"
+              ]
+            },
+            "pointlabel1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 82.25,
+              "height_px": 24.75,
+              "available_width_px": 98,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 82.75,
+              "required_height_px": 25.25,
+              "fits": true,
+              "lines": [
+                "Pointmap"
+              ]
+            },
+            "formula1": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 106.75,
+              "height_px": 26.25,
+              "available_width_px": 147,
+              "available_height_px": 28,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 107.25,
+              "required_height_px": 26.75,
+              "fits": true,
+              "lines": [
+                "X¹˒¹ ∈ ℝᵂˣᴴˣ³"
+              ]
+            },
+            "confidence1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 96.25,
+              "height_px": 24.75,
+              "available_width_px": 110,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 96.75,
+              "required_height_px": 25.25,
+              "fits": true,
+              "lines": [
+                "Confidence"
+              ]
+            },
+            "conf_formula1": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 84.0,
+              "height_px": 26.25,
+              "available_width_px": 134,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 84.5,
+              "required_height_px": 26.75,
+              "fits": true,
+              "lines": [
+                "C¹ ∈ ℝᵂˣᴴ"
+              ]
+            },
+            "vit2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 70.0,
+              "height_px": 49.5,
+              "available_width_px": 82,
+              "available_height_px": 60,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 70.5,
+              "required_height_px": 50.0,
+              "fits": true,
+              "lines": [
+                "ViT",
+                "encoder"
+              ]
+            },
+            "decoder2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 106.5,
+              "height_px": 49.5,
+              "available_width_px": 116,
+              "available_height_px": 60,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 107.0,
+              "required_height_px": 50.0,
+              "fits": true,
+              "lines": [
+                "Transformer",
+                "Decoder₂"
+              ]
+            },
+            "headlabel2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 50.75,
+              "height_px": 24.75,
+              "available_width_px": 63,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 51.25,
+              "required_height_px": 25.25,
+              "fits": true,
+              "lines": [
+                "Head₂"
+              ]
+            },
+            "patch2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 67.75,
+              "height_px": 24.75,
+              "available_width_px": 74,
+              "available_height_px": 28,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.25,
+              "required_height_px": 25.25,
+              "fits": true,
+              "lines": [
+                "Patchify"
+              ]
+            },
+            "feature2": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 18.5,
+              "height_px": 28.75,
+              "available_width_px": 36,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 19.0,
+              "required_height_px": 29.25,
+              "fits": false,
+              "lines": [
+                "F²"
+              ]
+            },
+            "image_label2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 147.5,
+              "height_px": 24.75,
+              "available_width_px": 205,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 148.0,
+              "required_height_px": 25.25,
+              "fits": false,
+              "lines": [
+                "Image I² ∈ ℝᵂˣᴴˣ³"
+              ]
+            },
+            "pointlabel2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 82.25,
+              "height_px": 24.75,
+              "available_width_px": 98,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 82.75,
+              "required_height_px": 25.25,
+              "fits": true,
+              "lines": [
+                "Pointmap"
+              ]
+            },
+            "formula2": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 106.75,
+              "height_px": 26.25,
+              "available_width_px": 147,
+              "available_height_px": 28,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 107.25,
+              "required_height_px": 26.75,
+              "fits": true,
+              "lines": [
+                "X²˒¹ ∈ ℝᵂˣᴴˣ³"
+              ]
+            },
+            "confidence2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 96.25,
+              "height_px": 24.75,
+              "available_width_px": 110,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 96.75,
+              "required_height_px": 25.25,
+              "fits": true,
+              "lines": [
+                "Confidence"
+              ]
+            },
+            "conf_formula2": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 84.0,
+              "height_px": 26.25,
+              "available_width_px": 134,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 84.5,
+              "required_height_px": 26.75,
+              "fits": true,
+              "lines": [
+                "C² ∈ ℝᵂˣᴴ"
+              ]
+            },
+            "crosslabel": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 108.25,
+              "height_px": 22.0,
+              "available_width_px": 130,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 108.75,
+              "required_height_px": 22.5,
+              "fits": true,
+              "lines": [
+                "Cross-attention"
+              ]
+            },
+            "shared": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 54.5,
+              "height_px": 44.0,
+              "available_width_px": 66,
+              "available_height_px": 47,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 55.0,
+              "required_height_px": 44.5,
+              "fits": true,
+              "lines": [
+                "Shared",
+                "weights"
+              ]
+            },
+            "camera1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 82.5,
+              "height_px": 49.5,
+              "available_width_px": 93,
+              "available_height_px": 53,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 83.0,
+              "required_height_px": 50.0,
+              "fits": true,
+              "lines": [
+                "Camera1",
+                "(at origin)"
+              ]
+            },
+            "camera2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 164.25,
+              "height_px": 49.5,
+              "available_width_px": 165,
+              "available_height_px": 54,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 164.75,
+              "required_height_px": 50.0,
+              "fits": true,
+              "lines": [
+                "Camera2",
+                "(unknown position)"
+              ]
+            },
+            "common": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 230.5,
+              "height_px": 49.5,
+              "available_width_px": 228,
+              "available_height_px": 54,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 231.0,
+              "required_height_px": 50.0,
+              "fits": false,
+              "lines": [
+                "Common coordinate frame",
+                "of camera 1 (image  I₁)"
+              ]
+            }
+          }
+        },
+        {
+          "id": "figure3",
+          "counts": {
+            "image": 17
+          },
+          "intentional_overlaps": [],
+          "text_layouts": {}
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "ed21305a83f43951b855d76eaa19556fe6597f69f5c7dea04095c33875c9c8d8",
+  "font_substitutions": [
+    {
+      "code": "font_substitution",
+      "requested": "Noto Sans",
+      "resolved": "DejaVu Sans"
+    }
+  ]
+}

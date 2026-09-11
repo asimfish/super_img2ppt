@@ -1,0 +1,368 @@
+{
+  "source_sha256": "1437aa3263fb008622c27672771177d7a7fdb4c0e04ad57c21a30a9469616c14",
+  "mask": "RGB max<170 OR (max-min>45 and min<170); fixed full ROI",
+  "pass": "bbox edge max <=4px AND mask IoU >=0.70",
+  "render": "actual PPTX PDF raster at source width, no registration",
+  "rois": [
+    {
+      "id": "camera_title",
+      "box": [
+        62,
+        13,
+        310,
+        40
+      ],
+      "split": "development"
+    },
+    {
+      "id": "current_label",
+      "box": [
+        416,
+        34,
+        559,
+        65
+      ],
+      "split": "development"
+    },
+    {
+      "id": "heads",
+      "box": [
+        713,
+        23,
+        815,
+        70
+      ],
+      "split": "heldout"
+    },
+    {
+      "id": "add1",
+      "box": [
+        551,
+        106,
+        720,
+        134
+      ],
+      "split": "development"
+    },
+    {
+      "id": "ffn",
+      "box": [
+        540,
+        152,
+        674,
+        180
+      ],
+      "split": "development"
+    },
+    {
+      "id": "add2",
+      "box": [
+        551,
+        210,
+        720,
+        239
+      ],
+      "split": "heldout"
+    },
+    {
+      "id": "spatial",
+      "box": [
+        495,
+        255,
+        724,
+        282
+      ],
+      "split": "development"
+    },
+    {
+      "id": "add3",
+      "box": [
+        551,
+        314,
+        720,
+        341
+      ],
+      "split": "development"
+    },
+    {
+      "id": "temporal",
+      "box": [
+        491,
+        359,
+        728,
+        389
+      ],
+      "split": "heldout"
+    },
+    {
+      "id": "history_label",
+      "box": [
+        400,
+        468,
+        569,
+        497
+      ],
+      "split": "development"
+    },
+    {
+      "id": "query_label",
+      "box": [
+        649,
+        468,
+        791,
+        497
+      ],
+      "split": "development"
+    },
+    {
+      "id": "overall",
+      "box": [
+        482,
+        502,
+        729,
+        532
+      ],
+      "split": "heldout"
+    },
+    {
+      "id": "input",
+      "box": [
+        65,
+        501,
+        324,
+        532
+      ],
+      "split": "development"
+    },
+    {
+      "id": "spatial_panel",
+      "box": [
+        995,
+        281,
+        1260,
+        311
+      ],
+      "split": "development"
+    },
+    {
+      "id": "temporal_panel",
+      "box": [
+        995,
+        502,
+        1275,
+        532
+      ],
+      "split": "heldout"
+    },
+    {
+      "id": "hit_views",
+      "box": [
+        1232,
+        209,
+        1372,
+        241
+      ],
+      "split": "development"
+    },
+    {
+      "id": "coord3",
+      "box": [
+        1022,
+        78,
+        1120,
+        111
+      ],
+      "split": "development"
+    },
+    {
+      "id": "coord2",
+      "box": [
+        1126,
+        156,
+        1190,
+        189
+      ],
+      "split": "heldout"
+    },
+    {
+      "id": "bottom_history",
+      "box": [
+        888,
+        434,
+        1055,
+        464
+      ],
+      "split": "development"
+    },
+    {
+      "id": "bottom_query",
+      "box": [
+        1192,
+        434,
+        1343,
+        464
+      ],
+      "split": "development"
+    },
+    {
+      "id": "backbone_label",
+      "box": [
+        43,
+        164,
+        76,
+        266
+      ],
+      "split": "heldout"
+    },
+    {
+      "id": "repeat",
+      "box": [
+        827,
+        278,
+        870,
+        305
+      ],
+      "split": "development"
+    },
+    {
+      "id": "feature_blue",
+      "box": [
+        16,
+        46,
+        133,
+        85
+      ],
+      "split": "development"
+    },
+    {
+      "id": "feature_yellow",
+      "box": [
+        16,
+        90,
+        133,
+        127
+      ],
+      "split": "heldout"
+    },
+    {
+      "id": "feature_green",
+      "box": [
+        226,
+        46,
+        343,
+        85
+      ],
+      "split": "development"
+    },
+    {
+      "id": "feature_gray",
+      "box": [
+        109,
+        106,
+        226,
+        144
+      ],
+      "split": "development"
+    },
+    {
+      "id": "feature_peach",
+      "box": [
+        128,
+        36,
+        244,
+        73
+      ],
+      "split": "heldout"
+    },
+    {
+      "id": "feature_lavender",
+      "box": [
+        226,
+        89,
+        343,
+        127
+      ],
+      "split": "development"
+    },
+    {
+      "id": "spatial_outline",
+      "box": [
+        872,
+        12,
+        1394,
+        271
+      ],
+      "split": "development"
+    },
+    {
+      "id": "temporal_outline",
+      "box": [
+        872,
+        326,
+        1394,
+        491
+      ],
+      "split": "heldout"
+    },
+    {
+      "id": "backbone_top",
+      "box": [
+        124,
+        160,
+        239,
+        198
+      ],
+      "split": "development"
+    },
+    {
+      "id": "backbone_mid",
+      "box": [
+        97,
+        201,
+        266,
+        241
+      ],
+      "split": "development"
+    },
+    {
+      "id": "backbone_low",
+      "box": [
+        70,
+        242,
+        293,
+        282
+      ],
+      "split": "heldout"
+    },
+    {
+      "id": "head_box",
+      "box": [
+        688,
+        11,
+        838,
+        79
+      ],
+      "split": "development"
+    },
+    {
+      "id": "arrow_current",
+      "box": [
+        655,
+        35,
+        694,
+        51
+      ],
+      "split": "development"
+    },
+    {
+      "id": "history_grid",
+      "box": [
+        431,
+        417,
+        538,
+        469
+      ],
+      "split": "heldout"
+    }
+  ]
+}
