@@ -9,6 +9,8 @@ skill=base/'super-img2ppt';env=dict(os.environ,PATH='/opt/homebrew/bin:'+os.envi
 cmd=[str(root/'.venv/bin/python'),'-m','super_img2ppt'];rows=[]
 def run(args,code=0):
  p=subprocess.run(cmd+args,cwd=base,env=env,capture_output=True,text=True);rows.append({'command':cmd+args,'cwd':str(base),'exit_code':p.returncode,'stdout':p.stdout,'stderr':p.stderr});assert p.returncode==code,rows[-1]
+identity_code='import json,super_img2ppt; print(json.dumps({"version":super_img2ppt.__version__,"module":super_img2ppt.__file__}))'
+identity=json.loads(subprocess.check_output([str(root/'.venv/bin/python'),'-c',identity_code],cwd=base,env=env,text=True));assert identity['version']=='0.3.5' and Path(identity['module']).is_relative_to(base)
 run(['doctor'])
 text=(skill/'references/math.md').read_text();spec=json.loads(re.search(r'```json\n(.*?)\n```',text,re.S).group(1));p=base/'formula.json';p.write_text(json.dumps(spec))
 fonts=['--font-dir','/Applications/LibreOffice.app/Contents/Resources/fonts/truetype','--font-dir','/System/Library/Fonts/Supplemental']

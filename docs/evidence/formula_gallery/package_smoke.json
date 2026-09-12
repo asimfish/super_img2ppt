@@ -74,5 +74,16 @@
   "isolated_directory": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v035-smoke-17pebft7",
   "global_install": false,
   "new_dependencies": false,
-  "status": "pass"
+  "status": "pass",
+  "imported_package_identity": {
+    "version": "0.3.5",
+    "module": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v035-smoke-17pebft7/super-img2ppt/src/super_img2ppt/__init__.py",
+    "math_module": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v035-smoke-17pebft7/super-img2ppt/src/super_img2ppt/mathtext.py"
+  },
+  "identity_check_command": [
+    "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+    "-c",
+    "import json,super_img2ppt,super_img2ppt.mathtext; print(json.dumps({\"version\":super_img2ppt.__version__,\"module\":super_img2ppt.__file__,\"math_module\":super_img2ppt.mathtext.__file__}))"
+  ],
+  "doctor_distribution_metadata_note": "doctor uses importlib.metadata from the reused dependency environment (0.3.4); the imported unpacked source is separately verified as 0.3.5. No installation was performed."
 }

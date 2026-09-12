@@ -48,3 +48,9 @@ A second isolated harness attempt retained the unrelated flow example's source_0
 reference; asset containment correctly failed. The formula-only harness now omits that
 unrelated source field. The failed validation is preserved in package_smoke_template_failure.json.
 No renderer, asset boundary or font threshold was relaxed for either harness correction.
+
+The isolated package smoke reuses an existing dependency environment without installing.
+`doctor` reports its installed distribution metadata (0.3.4); a separate import-identity check
+confirms that both the runtime and new math module execute from the extracted 0.3.5 package.
+That path/version assertion and command are recorded in package_smoke.json. This smoke
+verifies unpacked-package execution, not a fresh dependency installation.
