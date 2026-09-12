@@ -325,6 +325,25 @@ GaLore 和 Mamba-2 的部分原保留区域曾在调整期间被查看，因此�
 
 </details>
 
+## 可选：学术风格美化
+
+想在转换时减少花哨渐变、统一字体和线条，可以说：**“转成可编辑 PPT，并额外给我一版更简洁的学术风格。”** 默认仍然忠实转换，美化是独立选项。
+
+Agent 看图后制定逐对象样式方案，`restyle` 同时导出原版与美化版，并记录修改理由。文字内容、公式富文本、曲线坐标和分组关系受到保护；图片内部的绘画瑕疵不会被这个命令自动修复。
+
+```bash
+super-img2ppt restyle scene.json --plan style-plan.json --out restyle_01
+```
+
+| 原版 | 学术风格版 |
+| :---: | :---: |
+| ![装饰风格原版](examples/restyle/baseline.png) | ![学术风格版](examples/restyle/refined.png) |
+| [下载原版 PPTX](examples/restyle/baseline.pptx) | [下载美化版 PPTX](examples/restyle/refined.pptx) |
+
+上图为自建样式测试示意图，展示去渐变和统一字体、边框；不是论文实验结果或 AI 来源判定。
+
+[使用方法与方案格式](skills/super-img2ppt/references/restyle.md) · [可复现方案](examples/restyle/plan.json) · [两例实际渲染检查](examples/restyle/evidence.json)。两版均经过原有导出检查，审美效果仍需看实际渲染确认。
+
 ## 把案例反馈变成系统能力
 
 | 看图重建时遇到的问题 | 已实现的处理 | 实测与用法 |

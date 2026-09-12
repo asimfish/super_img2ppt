@@ -1,13 +1,55 @@
 {
   "skill": "super-img2ppt",
   "activation_cases": [
-    {"id": "explicit", "prompt": "$super-img2ppt 把这张截图转成可编辑 PPT，并检查字体。", "should_activate": true},
-    {"id": "overlap", "prompt": "图片转 PPT 后文字重叠了，重新还原这三页，给我可以编辑的文字和形状。", "should_activate": true},
-    {"id": "pdf", "prompt": "把这个扫描 PDF 的页面转为可修改元素的幻灯片。", "should_activate": true},
-    {"id": "svg", "prompt": "把流程图截图重建成带可编辑文字和矢量形状的 SVG。", "should_activate": true},
-    {"id": "new_deck", "prompt": "读这篇论文，设计一套新的十页答辩 PPT。", "should_activate": false},
-    {"id": "image_edit", "prompt": "把照片背景改成蓝色，输出 PNG。", "should_activate": false},
-    {"id": "native", "prompt": "我已有原生可编辑 PPT，把第三页标题改成结果分析。", "should_activate": false},
-    {"id": "explicit_exclusion", "prompt": "不要把图片转可编辑对象，只把截图原样放进 PPT，作为不可编辑的图片。", "should_activate": false}
+    {
+      "id": "explicit",
+      "prompt": "$super-img2ppt 把这张截图转成可编辑 PPT，并检查字体。",
+      "should_activate": true
+    },
+    {
+      "id": "overlap",
+      "prompt": "图片转 PPT 后文字重叠了，重新还原这三页，给我可以编辑的文字和形状。",
+      "should_activate": true
+    },
+    {
+      "id": "pdf",
+      "prompt": "把这个扫描 PDF 的页面转为可修改元素的幻灯片。",
+      "should_activate": true
+    },
+    {
+      "id": "svg",
+      "prompt": "把流程图截图重建成带可编辑文字和矢量形状的 SVG。",
+      "should_activate": true
+    },
+    {
+      "id": "new_deck",
+      "prompt": "读这篇论文，设计一套新的十页答辩 PPT。",
+      "should_activate": false
+    },
+    {
+      "id": "image_edit",
+      "prompt": "把照片背景改成蓝色，输出 PNG。",
+      "should_activate": false
+    },
+    {
+      "id": "native",
+      "prompt": "我已有原生可编辑 PPT，把第三页标题改成结果分析。",
+      "should_activate": false
+    },
+    {
+      "id": "explicit_exclusion",
+      "prompt": "不要把图片转可编辑对象，只把截图原样放进 PPT，作为不可编辑的图片。",
+      "should_activate": false
+    },
+    {
+      "id": "restyle",
+      "prompt": "把这张 AI 风格的流程图转成可编辑 PPT，并额外给我一版简洁的学术风格。",
+      "should_activate": true
+    },
+    {
+      "id": "ai_detection",
+      "prompt": "判断这张照片是不是 AI 生成的，不需要转换文件。",
+      "should_activate": false
+    }
   ]
 }

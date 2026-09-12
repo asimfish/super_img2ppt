@@ -1,6 +1,6 @@
 # Super Img2PPT capability card
 
-Owner: super_img2ppt contributors. Version: 0.3.7. Risk: scoped_change.
+Owner: super_img2ppt contributors. Version: 0.3.8. Risk: scoped_change.
 Canonical owner: this repository's `skills/super-img2ppt`.
 
 Reads: user-selected image/PDF/PPTX files; scene JSON and relative local assets; installed font
@@ -79,3 +79,10 @@ lists child membership and remaining ungrouped objects. Grouping preserves child
 paint order; interleaving groups, repeated parents, cycles and depth above eight are rejected.
 No automatic semantic grouping, chart-data recovery, Office equation objects, external-arrow
 rerouting or native PowerPoint/WPS UI verification is claimed.
+
+## Optional restyling
+
+Reads an explicit bounded local style plan; writes portable baseline/refined scenes, copied
+assets, dual exports and per-field audit. Default build is unchanged. No AI classification,
+network or credential behavior. Rich text, content, geometry, image paths and groups cannot
+be patched. Semantic color selection still requires visual judgment.

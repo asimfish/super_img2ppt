@@ -22,7 +22,8 @@ from .prepare import fresh_directory, json_write, prepare
 from .qa import comparison, editability_manifest, inspect_pptx, preflight
 from .regions import compare_region_files
 from .render import make_renderer, rasterize_pdf, verify_rendered_text
-from .scene import SCHEMA, InputError, load_scene, safe_asset, slide_transform
+from .restyle import stage_variants
+from .scene import SCHEMA, InputError, _unique_pairs, load_scene, safe_asset, slide_transform
 
 
 def resolve_scene(scene: dict, layouts: dict, root: Path, out: Path) -> dict:
@@ -262,6 +263,14 @@ def main(argv: list[str] | None = None) -> int:
     region.add_argument("--color", required=True, help="Ink mask color as #RRGGBB")
     region.add_argument("--tolerance", type=int, default=64)
     region.add_argument("--out", type=Path, required=True)
+    style = commands.add_parser(
+        "restyle", help="Opt-in audited restyling with baseline and refined exports"
+    )
+    style.add_argument("scene", type=Path)
+    style.add_argument("--plan", type=Path, required=True)
+    style.add_argument("--out", type=Path, required=True)
+    style.add_argument("--font-dir", type=Path, action="append", default=[])
+    style.add_argument("--no-render", action="store_true")
     for name in ["build", "check"]:
         cmd = commands.add_parser(
             name,
@@ -282,6 +291,31 @@ def main(argv: list[str] | None = None) -> int:
             result = doctor()
         elif args.command == "schema":
             result = SCHEMA
+        elif args.command == "restyle":
+            if args.plan.stat().st_size > 2_000_000:
+                raise InputError("Style plan exceeds 2 MB")
+            result = stage_variants(
+                load_scene(args.scene),
+                args.scene.resolve().parent,
+                json.loads(args.plan.read_text(encoding="utf-8"), object_pairs_hook=_unique_pairs),
+                args.out,
+            )
+            result["status"] = "fail"
+            try:
+                result["variants"] = {}
+                for variant in ("baseline", "refined"):
+                    result["variants"][variant] = build(
+                        args.out / f"{variant}.json",
+                        args.out / variant,
+                        not args.no_render,
+                        tuple(args.font_dir),
+                    )
+                statuses = [v["status"] for v in result["variants"].values()]
+                result["status"] = (
+                    "fail" if "fail" in statuses else "unverified" if args.no_render else "review"
+                )
+            finally:
+                json_write(args.out / "restyle.json", result)
         elif args.command == "prepare":
             result = prepare(args.inputs, args.out, args.ocr, args.languages)
         elif args.command == "trace-curve":
@@ -314,6 +348,7 @@ def main(argv: list[str] | None = None) -> int:
         else:
             result = check(args.scene, args.out, tuple(args.font_dir))
         if args.command in {
+            "restyle",
             "build",
             "prepare",
             "check",

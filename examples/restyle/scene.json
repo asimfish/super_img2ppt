@@ -1,0 +1,240 @@
+{
+  "version": 1,
+  "title": "Academic restyle demonstration",
+  "fonts": {
+    "latin": [
+      "Arial"
+    ]
+  },
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 960,
+      "height": 400,
+      "reviewed": true,
+      "elements": [
+        {
+          "id": "title",
+          "kind": "text",
+          "box": [
+            40,
+            20,
+            880,
+            60
+          ],
+          "text": "Perception to action",
+          "font_family": "Georgia",
+          "font_size": 32,
+          "color": "#842EA8",
+          "z": 10
+        },
+        {
+          "id": "module0",
+          "kind": "shape",
+          "shape": "round_rect",
+          "box": [
+            40,
+            150,
+            240,
+            110
+          ],
+          "radius": 22,
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#FFAFE8"
+              },
+              {
+                "offset": 1,
+                "color": "#95DCFF"
+              }
+            ]
+          },
+          "stroke": "#643EAA",
+          "stroke_width": 4,
+          "z": 0
+        },
+        {
+          "id": "label0",
+          "kind": "text",
+          "box": [
+            50,
+            177,
+            220,
+            55
+          ],
+          "text": "Observation",
+          "font_family": "Arial",
+          "font_size": 26,
+          "align": "center",
+          "container": "module0",
+          "z": 1
+        },
+        {
+          "id": "arrow0",
+          "kind": "line",
+          "points": [
+            [
+              290,
+              205
+            ],
+            [
+              345,
+              205
+            ]
+          ],
+          "stroke": "#243247",
+          "stroke_width": 2,
+          "arrow": true,
+          "z": 2
+        },
+        {
+          "id": "module1",
+          "kind": "shape",
+          "shape": "round_rect",
+          "box": [
+            360,
+            150,
+            240,
+            110
+          ],
+          "radius": 22,
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#FFE475"
+              },
+              {
+                "offset": 1,
+                "color": "#EEA2FF"
+              }
+            ]
+          },
+          "stroke": "#643EAA",
+          "stroke_width": 4,
+          "z": 3
+        },
+        {
+          "id": "label1",
+          "kind": "text",
+          "box": [
+            370,
+            177,
+            220,
+            55
+          ],
+          "text": "World model",
+          "font_family": "Arial",
+          "font_size": 26,
+          "align": "center",
+          "container": "module1",
+          "z": 4
+        },
+        {
+          "id": "arrow1",
+          "kind": "line",
+          "points": [
+            [
+              610,
+              205
+            ],
+            [
+              665,
+              205
+            ]
+          ],
+          "stroke": "#243247",
+          "stroke_width": 2,
+          "arrow": true,
+          "z": 5
+        },
+        {
+          "id": "module2",
+          "kind": "shape",
+          "shape": "round_rect",
+          "box": [
+            680,
+            150,
+            240,
+            110
+          ],
+          "radius": 22,
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#80F1D8"
+              },
+              {
+                "offset": 1,
+                "color": "#9CACFF"
+              }
+            ]
+          },
+          "stroke": "#643EAA",
+          "stroke_width": 4,
+          "z": 6
+        },
+        {
+          "id": "label2",
+          "kind": "text",
+          "box": [
+            690,
+            177,
+            220,
+            55
+          ],
+          "text": "Action",
+          "font_family": "Arial",
+          "font_size": 26,
+          "align": "center",
+          "container": "module2",
+          "z": 7
+        },
+        {
+          "id": "caption",
+          "kind": "text",
+          "box": [
+            40,
+            320,
+            880,
+            45
+          ],
+          "text": "Synthetic style fixture; no measured results or AI-origin claim.",
+          "font_family": "Arial",
+          "font_size": 18,
+          "color": "#52657B",
+          "z": 11
+        }
+      ],
+      "groups": [
+        {
+          "id": "group0",
+          "members": [
+            "module0",
+            "label0"
+          ]
+        },
+        {
+          "id": "group1",
+          "members": [
+            "module1",
+            "label1"
+          ]
+        },
+        {
+          "id": "group2",
+          "members": [
+            "module2",
+            "label2"
+          ]
+        }
+      ]
+    }
+  ]
+}
