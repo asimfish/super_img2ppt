@@ -1,0 +1,13 @@
+from PIL import Image
+from collections import deque
+for f in ['examples/gallery/diffuser_actor/source.png','output/formula_gallery_20260912/diffuser/build_05/actual.png']:
+ im=Image.open(f).convert('RGB');roi=(245,634,319,663);pts={(x,y) for y in range(roi[1],roi[3]) for x in range(roi[0],roi[2]) if max(im.getpixel((x,y)))<150};rows=[]
+ while pts:
+  start=pts.pop();q=[start];c=[start]
+  while q:
+   x,y=q.pop()
+   for dx,dy in [(a,b) for a in (-1,0,1) for b in (-1,0,1) if a or b]:
+    t=(x+dx,y+dy)
+    if t in pts:pts.remove(t);q.append(t);c.append(t)
+  if len(c)>2:rows.append([min(x for x,y in c),min(y for x,y in c),max(x for x,y in c)+1,max(y for x,y in c)+1,len(c)])
+ print(f,sorted(rows))

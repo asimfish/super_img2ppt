@@ -1,0 +1,14 @@
+import json,copy
+from pathlib import Path
+p=Path(__file__).parent/'job/scene.json';s=json.loads(p.read_text());es=s['slides'][0]['elements'];d={e['id']:e for e in es}
+e=d['main_title'];e['text']='Architecture & Embodied Curriculum Learning';e['box']=[304,44,780,40];e['font_size']=28.5
+q=copy.deepcopy(e);q['id']='main_title_name';q['text']='Dex-VLA:';q['box']=[600,13,178,34];q['font_size']=25;es.append(q)
+d['right_title']['font_size']=28.7;d['right_title']['box'][0]-=7
+for pre in ['stage1','stage23']:
+ e=d[pre+'_expert_label'];x,y,w,h=e['box'];e['text']='Billion-Parameter';e['font_size']=17;e['box']=[x,y-2,w,27]
+ q=copy.deepcopy(e);q['id']=pre+'_expert_label_second';q['text']='Diffusion Expert';q['box'][1]+=18;es.append(q)
+ d[pre+'_vlm_label']['box'][1]-=1
+for j in range(4):d[f'action_head{j}_label']['box'][1]+=2
+for id,dx,dy in [('block_repeat',3,1),('stage23_film_label',-3,0)]:d[id]['box'][0]+=dx;d[id]['box'][1]+=dy
+for i,e in enumerate(es):e['z']=i+1
+p.write_text(json.dumps(s,indent=2))

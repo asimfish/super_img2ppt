@@ -1,0 +1,85 @@
+{
+  "runtime": "0.3.5",
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "exit_code": 0,
+      "stdout": "142 files already formatted\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/verify_skill.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"pass\",\n  \"activation_cases\": 8,\n  \"problems\": [],\n  \"scope\": \"Static package checks; semantic review and forward tests are separate evidence\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/build_capability_registry.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "Capability registry is current\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "/Users/liyufeng/Code/cursur/skills/agent_meta/skill-quality-gate/scripts/audit_skill_governance.py",
+        "--repo",
+        "/Users/liyufeng/code/super_img2ppt",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"verdict\": \"PASS\",\n  \"skills_checked\": [\n    \"super-img2ppt\"\n  ],\n  \"findings\": [],\n  \"semantic_review\": \"REQUIRED \u2014 deterministic checks do not prove behavior-description alignment\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "/Users/liyufeng/Code/cursur/skills/agent_meta/skill-creator/scripts/quick_validate.py",
+        "skills/super-img2ppt"
+      ],
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/build_package.py"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/liyufeng/code/super_img2ppt/dist/super-img2ppt.skill\nSHA256 293c6f780c9d6387778da5e28d3a3a39517e59bcf47d09ec83ad3c4caab62f16\n",
+      "stderr": ""
+    }
+  ],
+  "full_tests_log": "full_tests.log",
+  "tests": "........................................................................ [ 71%]\n.............................                                            [100%]\n101 passed in 43.25s\n",
+  "native_powerpoint_wps": "not verified",
+  "scope": "native typography and bounded input; source fidelity separately reported",
+  "full_suite": {
+    "passed": 101,
+    "skipped": 0,
+    "duration_seconds": 43.25
+  }
+}

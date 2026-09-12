@@ -7,7 +7,7 @@
 **Image → Editable PPTX · SVG · Scene JSON**
 
 [![Verify](https://github.com/asimfish/super_img2ppt/actions/workflows/verify.yml/badge.svg)](https://github.com/asimfish/super_img2ppt/actions/workflows/verify.yml)
-![Version](https://img.shields.io/badge/version-0.3.4-2563eb)
+![Version](https://img.shields.io/badge/version-0.3.5-2563eb)
 ![Python](https://img.shields.io/badge/python-3.11%2B-3776AB)
 [![License](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 
@@ -17,9 +17,9 @@
 
 一个 **Agent Skill + 本地 Python 运行时**：Agent 看图、纠正 OCR、理解结构；运行时测量真实字体、检查重叠、导出原生对象，再渲染 **实际 PPTX** 验收。适合论文架构图、流程图、训练曲线和图片版幻灯片。
 
-**新增具身智能案例：RT-2、3D Diffuser Actor、ViNT，完整论文图画廊扩展到九例。**
+**新增 OpenVLA、ECoT、DexVLA 三张完整方法图：具身案例共六例，完整论文图画廊共十二例。**
 从机器人 VLA、三维动作扩散、视觉导航，到密集表格与训练曲线，均提供原图与实际 PPTX 对照。
-运行时为 v0.3.4；自动检查与图像保真分别报告，复杂字体仍有差异。
+v0.3.5 新增公式部件排版：分别控制字重、斜体、上下标基线和标点；已回修 3D Diffuser Actor，剩余字形差异公开展示。
 
 ## 真实复杂图效果
 
@@ -29,6 +29,38 @@
 ### 具身智能与机器人
 
 这一批包含真实照片、点云、动作轨迹和方法结构。**文字与图间结构可编辑，照片及其内部不可分离的轨迹保留为图片**；每例给出具体边界。本轮是完整案例实测与复建核验，没有将人工复核包装成盲测准确率。
+
+#### OpenVLA · 双视觉编码器与动作解码
+
+[![OpenVLA 完整原图与实际 PPTX 对照](docs/previews/gallery/openvla.png)](docs/previews/gallery/openvla.png)
+
+**81 个原生对象，2 处照片资产，占图面约 8.24%。** DinoV2 / SigLIP、MLP Projector、Llama 2、语言 tokenizer 和动作反标记化完整保留；动作向量的 Δ、斜体 θ、方括号与文字可编辑。自动检查通过，De-Tokenizer 等标签的字形与源图仍有差异。
+
+[下载 PPTX](examples/gallery/openvla/editable.pptx) · [SVG](examples/gallery/openvla/svg/page_001.svg) · [动作公式细节](docs/previews/gallery/openvla_detail.png) · [原图](examples/gallery/openvla/source.png) · [场景与报告](examples/gallery/openvla)
+
+<sub>Kim et al., “OpenVLA: An Open-Source Vision-Language-Action Model”, CoRL 2024, Figure 2；PMLR 2025。[论文与作者](https://proceedings.mlr.press/v270/kim25c.html) · [CC BY 4.0 / 归属](examples/gallery/openvla/ATTRIBUTION.md)。</sub>
+
+#### ECoT · 五步具身推理数据生成流程
+
+[![ECoT 完整原图与实际 PPTX 对照](docs/previews/gallery/ecot.png)](docs/previews/gallery/ecot.png)
+
+**66 个原生对象，11 处图片实例。** 完整保留数据集列与场景描述、检测框、动作原语、抓手定位、计划生成五个模块。长段推理文字、彩色目标词、四个检测框和两处动作向量均可编辑；照片、五个小图标及一个弯箭头保留为栅格。自动检查通过，小字、圆角与部分图标边缘仍有近似。
+
+[下载 PPTX](examples/gallery/ecot/editable.pptx) · [SVG](examples/gallery/ecot/svg/page_001.svg) · [动作原语细节](docs/previews/gallery/ecot_detail.png) · [原图](examples/gallery/ecot/source.png) · [场景与报告](examples/gallery/ecot)
+
+<sub>Zawalski et al., “Robotic Control via Embodied Chain-of-Thought Reasoning”, CoRL 2024, Figure 4；PMLR 2025。[论文与作者](https://proceedings.mlr.press/v270/zawalski25a.html) · [CC BY 4.0 / 归属](examples/gallery/ecot/ATTRIBUTION.md)。</sub>
+
+#### DexVLA · 两阶段训练与多动作头扩散专家
+
+[![DexVLA 完整原图与实际 PPTX 对照](docs/previews/gallery/dexvla.png)](docs/previews/gallery/dexvla.png)
+
+**302 个原生对象，10 处照片/机器人插画资产，占图面约 6.39%。** 完整保留两阶段架构、FiLM 特征、斜线纹理、扩散专家堆叠模块、多动作头及不同机器人。文字、噪声符号、纹理和跨模块箭头可编辑。自动检查通过；八处开发诊断文字框边缘差不超过 1 px，不能据此称字形或整图完全一致。斜线遮挡与小图标轮廓仍有差异。
+
+[下载 PPTX](examples/gallery/dexvla/editable.pptx) · [SVG](examples/gallery/dexvla/svg/page_001.svg) · [扩散专家细节](docs/previews/gallery/dexvla_detail.png) · [原图](examples/gallery/dexvla/source.png) · [场景与报告](examples/gallery/dexvla)
+
+<sub>Wen et al., “DexVLA: Vision-Language Model with Plug-In Diffusion Expert for General Robot Control”, CoRL 2025, Figure 2。[论文与作者](https://proceedings.mlr.press/v305/wen25b.html) · [CC BY 4.0 / 归属](examples/gallery/dexvla/ATTRIBUTION.md)。</sub>
+
+[新增三例与公式实测](docs/formula_gallery.md) · [下载十二例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
 
 #### RT-2 · 视觉—语言—动作模型
 
@@ -46,11 +78,11 @@
 
 [![3D Diffuser Actor 完整原图与实际 PPTX 对照](docs/previews/gallery/diffuser_actor.png)](docs/previews/gallery/diffuser_actor.png)
 
-**274 个原生对象，19 处照片/点云资产，矩形并集约占源图面积 35.31%。** 完整保留 **模型架构、去噪过程、真实多任务操作** 三大面板，包括多视角聚合、三维 scene token、语言编码器、去噪 Transformer、公式以及机器人任务描述。点云内部不可分离的抓手轨迹、部分相机射线和彩色箭尾随图片保留。
+**302 个原生对象，19 处照片/点云资产，矩形并集约占源图面积 35.31%。** 完整保留 **模型架构、去噪过程、真实多任务操作** 三大面板，包括多视角聚合、三维 scene token、语言编码器、去噪 Transformer、公式以及机器人任务描述。点云内部不可分离的抓手轨迹、部分相机射线和彩色箭尾随图片保留。
 
 [下载 PPTX](examples/gallery/diffuser_actor/editable.pptx) · [SVG](examples/gallery/diffuser_actor/svg/page_001.svg) · [公式与模块细节](docs/previews/gallery/diffuser_actor_detail.png) · [原图](examples/gallery/diffuser_actor/source.png) · [实际渲染](examples/gallery/diffuser_actor/actual.png) · [场景与报告](examples/gallery/diffuser_actor)
 
-结构、原生对象与实际文字检查通过，部分数学字符字体替代保留 `review`。雪花图标、特征网格和公式间距已修正；公式字形、阴影和渐变仍有近似，不代表高保真全部达标。
+本次公式修订后，结构、原生对象与实际文字检查均为 `pass`。修复变量/标点样式、真正的上下标及三处重复去噪公式；初始化保留数学关系符 `∼`，显式使用独立字体。数字、希腊字形、阴影和渐变仍有差异。[公式前后对照](docs/previews/gallery/formula_typography.png) · [修订证据](docs/formula_gallery.md)。
 
 <sub>改编自 Ke, Gkanatsios & Fragkiadaki, “3D Diffuser Actor: Policy Diffusion with 3D Scene Representations”, CoRL 2024, Figure 1；PMLR 论文集于 2025 年出版。[论文与作者](https://proceedings.mlr.press/v270/ke25a.html) · [CC BY 4.0 / 归属](examples/gallery/diffuser_actor/ATTRIBUTION.md)。</sub>
 
@@ -66,7 +98,7 @@
 
 <sub>改编自 Shah et al., “ViNT: A Foundation Model for Visual Navigation”, CoRL 2023, Figure 2。[论文与作者](https://proceedings.mlr.press/v229/shah23a.html) · [CC BY 4.0 / 归属](examples/gallery/vint/ATTRIBUTION.md)。</sub>
 
-[具身案例测试与复建记录](docs/embodied_figures.md) · [下载九例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
+[具身案例测试与复建记录](docs/embodied_figures.md) · [下载十二例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
 
 ### Griffin · 数据库表格到图模型
 
@@ -104,7 +136,7 @@
 
 <sub>改编自 Poli et al., “Hyena Hierarchy: Towards Larger Convolutional Language Models”, ICML 2023, Figure 1。[论文与作者](https://proceedings.mlr.press/v202/poli23a.html) · [CC BY 4.0 / 归属](examples/gallery/hyena/ATTRIBUTION.md)。</sub>
 
-[本轮完整测量、失败与修复证据](docs/gallery_extension.md) · [下载当前九例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
+[本轮完整测量、失败与修复证据](docs/gallery_extension.md) · [下载当前十二例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
 
 ### GaLore · 四面板训练曲线
 
@@ -147,6 +179,21 @@
 GaLore 和 Mamba-2 的部分原保留区域曾在调整期间被查看，因此不能作为盲测；Mamba-2 还记录了一处超过三次修复预算的偏差。原始记录和失败结果均保留。不同案例的掩码与区域不同，不合并成“转换准确率”。
 
 ## 把案例反馈变成系统能力
+
+### 公式保持逐符号样式与上下标关系
+
+[![公式原图、修复前和修复后实际 PPTX 对照](docs/previews/gallery/formula_typography.png)](docs/previews/gallery/formula_typography.png)
+
+上图依次为 **原图、旧 PPTX、新 PPTX**，同坐标放大 4 倍。3D Diffuser Actor 的输出公式、三处小去噪公式和初始化分布共替换为 **60 个原生文字部件**，保留粗斜体变量、常规斜体标量、上下标和直立标点。没有把公式截图覆盖回去。
+
+新增 `compose-math` 将显式字体样式、字号和基线偏移转成 scene 部件，测量斜体墨迹余量；拒绝不可用字体和 Unicode 上下标捷径。它不自动识别公式或猜测排版，也不是 Office 公式编辑器对象。**当前仍未达到源图字形完全一致**：初始化的 `∼` 使用单独字体，部分数字、希腊符号与标点曲率仍有差异。
+
+```bash
+uv run super-img2ppt compose-math formula.json --out output/math_01
+# 将 elements.json 合入 scene，再 build 并查看实际 PPTX 的局部对照
+```
+
+[JSON 格式与完整用法](skills/super-img2ppt/references/math.md) · [公式修订与失败记录](docs/formula_gallery.md) · [旧实际文件](docs/evidence/formula_gallery/diffuser_actor/before_editable.pptx)
 
 ### 曲线按像素提取，实际 PPTX 消除分段白缝
 

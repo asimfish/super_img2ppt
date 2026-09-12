@@ -1,0 +1,8 @@
+import json
+from pathlib import Path
+p=Path('/tmp/ecot-forward-20260912/job/scene.json');s=json.loads(p.read_text())
+for e in s['slides'][0]['elements']:
+ if e['id'] in ['input_formula','output_formula']:
+  for r in e['runs']:
+   if r['text']=='θ':r['font_family']='Times New Roman';r['font_size']=22
+p.write_text(json.dumps(s,indent=2))

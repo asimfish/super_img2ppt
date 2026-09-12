@@ -45,7 +45,9 @@ measurement threshold or shrinking every label until the structural checker pass
 
 For partial emphasis, use `runs` and keep their font-size ratio when shrinking. For a small
 superscript, a separate positioned native text element is currently more faithful than an
-unsupported style field. Connected Arabic shaping, vertical text, variable-font axes and complex
+unsupported style field. For complete formulas, follow [math.md](math.md) and use explicit
+part baselines, ordinary script letters, and independently specified weights/italics.
+Connected Arabic shaping, vertical text, variable-font axes and complex
 effects need a source-specific review; ordinary glyph coverage does not prove correct shaping.
 
 Office and local image renderers can space mixed Chinese/Latin/digit sequences differently even

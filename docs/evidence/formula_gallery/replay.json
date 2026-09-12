@@ -1,0 +1,102 @@
+[
+  {
+    "case": "openvla",
+    "command": [
+      "/Users/liyufeng/code/super_img2ppt/.venv/bin/super-img2ppt",
+      "build",
+      "/Users/liyufeng/code/super_img2ppt/examples/gallery/openvla/scene.resolved.json",
+      "--out",
+      "/Users/liyufeng/code/super_img2ppt/output/formula_gallery_20260912/replay_openvla",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "--font-dir",
+      "/System/Library/Fonts/Supplemental"
+    ],
+    "status": "pass",
+    "actual_size": [
+      1276,
+      477
+    ],
+    "changed_pixels": 0,
+    "actual_sha256": "ec5726f7a0e89192ff0a750a5c5d282030cf4f7dd5c2f2ce076c58581cf891e8",
+    "rasterization": {
+      "engine": "pdfium",
+      "crop_to_source_size": true
+    }
+  },
+  {
+    "case": "ecot",
+    "command": [
+      "/Users/liyufeng/code/super_img2ppt/.venv/bin/super-img2ppt",
+      "build",
+      "/Users/liyufeng/code/super_img2ppt/examples/gallery/ecot/scene.resolved.json",
+      "--out",
+      "/Users/liyufeng/code/super_img2ppt/output/formula_gallery_20260912/replay_ecot",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "--font-dir",
+      "/System/Library/Fonts/Supplemental"
+    ],
+    "status": "pass",
+    "actual_size": [
+      1587,
+      593
+    ],
+    "changed_pixels": 0,
+    "actual_sha256": "efb6ebd10d9d6dfdad634cea589c596a0b3702529d337658818acad8fe13eeba",
+    "rasterization": {
+      "engine": "pdfium",
+      "crop_to_source_size": true
+    }
+  },
+  {
+    "case": "dexvla",
+    "command": [
+      "/Users/liyufeng/code/super_img2ppt/.venv/bin/super-img2ppt",
+      "build",
+      "/Users/liyufeng/code/super_img2ppt/examples/gallery/dexvla/scene.resolved.json",
+      "--out",
+      "/Users/liyufeng/code/super_img2ppt/output/formula_gallery_20260912/replay_dexvla",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "--font-dir",
+      "/System/Library/Fonts/Supplemental"
+    ],
+    "status": "pass",
+    "actual_size": [
+      1605,
+      500
+    ],
+    "changed_pixels": 0,
+    "actual_sha256": "508178647ea357d039f5660d09b5be321423ec11db4d41ccca3e974440cb98c2",
+    "rasterization": {
+      "engine": "pdfium",
+      "crop_to_source_size": false
+    }
+  },
+  {
+    "case": "diffuser_actor",
+    "command": [
+      "/Users/liyufeng/code/super_img2ppt/.venv/bin/super-img2ppt",
+      "build",
+      "/Users/liyufeng/code/super_img2ppt/examples/gallery/diffuser_actor/scene.resolved.json",
+      "--out",
+      "/Users/liyufeng/code/super_img2ppt/output/formula_gallery_20260912/replay_diffuser_actor",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "--font-dir",
+      "/System/Library/Fonts/Supplemental"
+    ],
+    "status": "pass",
+    "actual_size": [
+      1589,
+      1052
+    ],
+    "changed_pixels": 0,
+    "actual_sha256": "78afd2094185bb286e19865ccf6e4cdc21390dd36582267a15a3befbf063f033",
+    "rasterization": {
+      "engine": "pdfium",
+      "crop_to_source_size": false
+    }
+  }
+]

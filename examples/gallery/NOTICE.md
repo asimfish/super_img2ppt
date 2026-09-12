@@ -1,7 +1,7 @@
 # Third-party figure attribution
 
 These are complete figure crops and editable adaptations of ICML and CoRL papers
-published in Proceedings of Machine Learning Research, volumes 202, 229, 235, 267 and 270.
+published in Proceedings of Machine Learning Research, volumes 202, 229, 235, 267, 270 and 305.
 The authors retain copyright.
 The publisher [publication agreement](https://proceedings.mlr.press/pmlr-license-agreement.html),
 paragraphs 2–3, permits publication under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
@@ -45,6 +45,16 @@ agreement, not an individually signed author form.
   “3D Diffuser Actor: Policy Diffusion with 3D Scene Representations.”
   CoRL 2024; proceedings published 2025, PMLR 270:1949–1974.
   https://proceedings.mlr.press/v270/ke25a.html
+
+- **OpenVLA**, Figure 2: Moo Jin Kim et al. (full author list on the publication page).
+  “OpenVLA: An Open-Source Vision-Language-Action Model.” CoRL 2024, PMLR 270:2679–2713 (2025).
+  https://proceedings.mlr.press/v270/kim25c.html
+- **ECoT**, Figure 4: Michał Zawalski, William Chen, Karl Pertsch, Oier Mees, Chelsea Finn,
+  Sergey Levine. “Robotic Control via Embodied Chain-of-Thought Reasoning.” CoRL 2024,
+  PMLR 270:3157–3181 (2025). https://proceedings.mlr.press/v270/zawalski25a.html
+- **DexVLA**, Figure 2: Junjie Wen et al. (full author list on the publication page).
+  “DexVLA: Vision-Language Model with Plug-In Diffusion Expert for General Robot Control.”
+  CoRL 2025, PMLR 305. https://proceedings.mlr.press/v305/wen25b.html
 
 Changes: rasterized and cropped complete figures (paper captions excluded), reconstructed text
 and geometry into PPTX/SVG/JSON, retained explicitly disclosed image-only regions, and

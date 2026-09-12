@@ -58,6 +58,8 @@ installed working tool with a command-local PATH; do not alter global settings o
    For visible chart curves, use [curves.md](references/curves.md) and `trace-curve` on an
    inspected ROI/color instead of guessing a sine, trend or sparse vertices. Explicit guide
    exclusions and short interpolated gaps require visual review; ambiguous crossings fail.
+   For formulas, read [math.md](references/math.md): preserve per-symbol styles and script
+   baselines; `compose-math` emits measured native parts from explicit source offsets.
    Split independent assets out of the source using exact crops when appropriate.
    Store approved assets under the job directory. Do not regenerate logos, invent chart data,
    or put editable text over baked text. Never reuse the entire source as a fake reconstruction.

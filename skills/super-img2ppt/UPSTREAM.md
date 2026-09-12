@@ -36,3 +36,9 @@ v0.3.4 PDF text validation reference (reviewed 2026-09-12): PDFium's public
 U+0002/U+FFFE line-end markers. Independently implemented a narrowly confirmed conversion;
 no PDFium implementation or fixture content copied.
 https://pdfium.googlesource.com/pdfium/+/45a5ea16c998110d9aa2ce2dbf8d47ad1d2ae364/fpdfsdk/fpdf_text_embeddertest.cpp
+
+v0.3.5 formula composition is independently implemented from the existing font/layout APIs.
+Real 3D Diffuser Actor raster-only reconstruction exposed blanket bold-italic argument styling
+and a Unicode superscript that selected an unrelated fallback face. No paper vector/text
+coordinates, author drawing code, TeX engine or third-party math implementation was imported.
+The new helper compiles explicit observed baselines and styles to existing native text objects.

@@ -39,3 +39,15 @@ zsh /tmp/diffuser_fig2_zPTOQk/reproduce.sh /tmp/diffuser_figure1_rebuild_NEW
 
 
 交付路径说明：报告中的 build/job 与 /tmp 路径是独立测试的历史目录。当前目录的 scene.resolved.json 与 assets/ 可直接复建；完整失败和诊断证据位于 [GitHub 测试记录](https://github.com/asimfish/super_img2ppt/tree/main/docs/evidence/embodied_figures/diffuser_actor)。
+
+## v0.3.5 formula revision (2026-09-12)
+
+The current distributed files replace 32 old formula text objects with 60 explicitly styled
+native text parts: two output equations, three repeated denoising equations and initialization.
+Current counts: 102 text, 90 shapes, 110 lines (302 native), 19 raster assets. All automated
+checks PASS. Source fidelity remains incomplete, including numeral widths, Greek glyphs,
+parentheses and commas. U+223C remains an explicitly selected DejaVu Sans symbol beside
+Times New Roman body text; no ASCII tilde substitution is delivered. Text parts are not OMML.
+The previous report above describes the v0.3.4 original; its PPTX/render/scene/font/check records
+are archived in docs/evidence/formula_gallery/diffuser_actor/before_* at repository root.
+See docs/formula_gallery.md for changes, actual before/after crops and failed attempts.

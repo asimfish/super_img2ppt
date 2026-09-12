@@ -1,0 +1,19 @@
+# OpenVLA Figure 2 forward conversion
+
+Complete published architecture figure, including image/language input, DINOv2 and SigLIP fusion, projector, visual/language/action token rows, Llama 2 backbone, tokenizer, action de-tokenizer, three-row action vector and robot output. Source 1276 × 477, paper page 4, no caption.
+
+Final: job/build04/editable.pptx, job/build04/svg/page_001.svg, job/build04/scene.resolved.json, sibling assets/, fonts.json and validation.json. Source: source.png. Actual source-width preview: job/build04/actual.png. Raw PDFium preview (1276 × 478): actual_raw.png; its last row was asserted entirely white before cropping to source size.
+
+81 native objects: 23 text, 27 shapes, 31 lines. Two separately movable photo-only images occupy 8.24% of slide area. No rasterized diagram labels, no source image behind native content. Full source is archived in build/assets for comparison only; it is not a visible image element. Native counts do not themselves prove fidelity.
+
+Typography: Arial regular labels; Arial bold OpenVLA; Times New Roman regular Δ and Times New Roman italic θ, with regular Arial x and Grip. Six independent text objects form the three vector rows; they are editable text, not Office equation objects. No superscript/subscript occurs in this figure, so no fabricated script styling is introduced. Source family cannot be uniquely identified from pixels; these are measured substitutes, not verified original font identities. No runtime font substitution was reported. Fonts must exist on the target machine.
+
+Actual PPTX rendering was inspected at full size and enlarged label/formula ROIs. build01 stopped at preflight because continuous line joints lacked named overlap relationships. Added only the eleven source-verified adjacent line pairs. build02 was first actual render; build03 and build04 were two bounded typography repair rounds. All previous evidence remains. Final automated preflight, native-object, and rendered-text checks PASS; visual fidelity remains REVIEW, with no PowerPoint/WPS check.
+
+Source-width unregistered ROI measurements are in build02/03/04 roi_measurements.json; dark neutral ink threshold is max RGB <160 and RGB spread <20. Regions fixed before first typography repair, not a blind test. Final Llama ink edge deltas [0,0,-1,0] px; Δx [0,0,1,0]; Δθ [0,0,0,0]. These local edge agreements do not imply glyph identity: corresponding diagnostic glyph-mask IoUs are 0.778, 0.721, 0.736. Action De-Tokenizer has matching outer bounds but IoU 0.301, showing interior spacing/stroke drift. Prompt IoU 0.348 despite outer edges within 1 px. No aggregate fidelity score or acceptance threshold was invented.
+
+Measurement limits: Dino ROI includes part of the circled 1 and is INVALID as a pure label metric; ΔGrip ROI clips a small amount of descender at its bottom and is only a partial-ink diagnostic. Retained unchanged rather than redefined to improve the result. All claims about the complete diagram are visual/source inventory judgments. Math Delta bottom stroke, θ contour, sans-serif spacing, rounded corner shape, dash phase and arrowheads retain small visible differences; section-circle 1 is approximate. Raster assets are exact source crops, although exported Office rendering resamples them. Structural checks do not establish exact original glyph shape.
+
+Reproduce with ./reproduce.sh NEW_BUILD_DIR, using existing repository .venv and installed LibreOffice/font directories; no installation, remote writes, repo edits, source PDF extraction, or author drawing code was used. See provenance.json and ATTRIBUTION.md. Source creation is separately repeatable via raster_source.py. The output PDF may be inspected for verification; this restriction applies to the source PDF.
+
+Reproduction script executed into fresh replay01: automated PASS and actual PNG pixel-identical to frozen build04. See replay_evidence.json.

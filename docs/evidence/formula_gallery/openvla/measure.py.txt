@@ -1,0 +1,15 @@
+import json,sys
+from pathlib import Path
+from PIL import Image
+
+P=Path(__file__).parent; B=Path(sys.argv[1]);src=Image.open(P/'source.png').convert('RGB');out=Image.open(B/'actual.png').convert('RGB')
+regions={'openvla':[225,18,414,65],'llama':[565,160,795,207],'detokenizer':[776,29,1055,66],'dino':[317,356,432,394],'siglip':[464,356,571,395],'prompt':[560,433,937,461],'delta_x':[1166,85,1222,119],'delta_theta':[1166,124,1222,161],'delta_grip':[1148,166,1235,199]}
+rows=[]
+for name,(x,y,r,b) in regions.items():
+ a=src.crop((x,y,r,b));c=out.crop((x,y,r,b))
+ def mask(k):return {(i%k.width+x,i//k.width+y) for i,v in enumerate(k.getdata()) if max(v)<160 and max(v)-min(v)<20}
+ m,n=mask(a),mask(c)
+ def bb(z):return [min(v[0] for v in z),min(v[1] for v in z),max(v[0] for v in z)+1,max(v[1] for v in z)+1]
+ aa,cc=bb(m),bb(n);rows.append({'name':name,'roi':[x,y,r,b],'source_ink':aa,'actual_ink':cc,'edge_delta':[v-u for u,v in zip(aa,cc)],'glyph_mask_iou':len(m&n)/len(m|n)})
+ pair=Image.new('RGB',((r-x)*6,(b-y)*3),'white');pair.paste(a.resize(((r-x)*3,(b-y)*3)),(0,0));pair.paste(c.resize(((r-x)*3,(b-y)*3)),((r-x)*3,0));pair.save(B/(name+'_detail.png'))
+(B/'roi_measurements.json').write_text(json.dumps(rows,indent=2));print(json.dumps(rows,indent=2))

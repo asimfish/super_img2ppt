@@ -1,8 +1,10 @@
 # 具身智能完整论文图实测
 
+> 历史批次记录：下述计数和状态属于 v0.3.4。当前 Diffuser Actor 公式已修订，见[新增具身案例与公式修订](formula_gallery.md)。
+
 2026-09-12，运行时 v0.3.4。本轮新增 RT-2、3D Diffuser Actor 和 ViNT，覆盖机器人
 VLA、三维动作扩散和视觉导航。[完整对照与下载](../README.md#具身智能与机器人) ·
-[九例文件包](../examples/gallery/paper_gallery.zip) · [第三方归属](../examples/gallery/NOTICE.md)。
+[本轮冻结九例文件包](https://github.com/asimfish/super_img2ppt/blob/56712f5b70ddea937206043e127fe08612c0a9d0/examples/gallery/paper_gallery.zip) · [第三方归属](../examples/gallery/NOTICE.md)。
 
 三个独立任务只从官方 PDF 栅格图重建，没有读取原 PDF 的文字/向量坐标或作者绘图代码。
 父任务检查了每张完整原图、首个实际 PPTX 渲染、最终源宽渲染和关键局部，并从交付场景复建。

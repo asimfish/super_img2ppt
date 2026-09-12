@@ -1,0 +1,41 @@
+from pathlib import Path
+import json,hashlib,collections
+from PIL import Image
+P=Path(__file__).parent;B=P/'job/build04'
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+scene=json.loads((P/'job/scene.json').read_text()); es=scene['slides'][0]['elements']; counts=dict(collections.Counter(e['kind'] for e in es))
+prov={'paper_title':'OpenVLA: An Open-Source Vision-Language-Action Model','authors':'Moo Jin Kim et al.','venue':'The 8th Conference on Robot Learning; PMLR 270:2679–2713, 2025','article_url':'https://proceedings.mlr.press/v270/kim25c.html','pdf_url':'https://raw.githubusercontent.com/mlresearch/v270/main/assets/kim25c/kim25c.pdf','figure':2,'page_1_indexed':4,'input_method':'PDFium raster only; no source PDF text/vector coordinates or author drawing code','source_scale':4,'crop_pixels':[588,284,1864,761],'source_dimensions':[1276,477],'license':'CC BY 4.0, publisher publication agreement','license_evidence':'license.html','license_url':'https://proceedings.mlr.press/pmlr-license-agreement.html','retrieved_date':'2026-09-12','native_counts':counts,'native_total':sum(v for k,v in counts.items() if k!='image'),'raster_area_fraction':(153*152+160*168)/(1276*477),'final_build':'job/build04','actual':'job/build04/actual.png','sha256':{str(p.relative_to(P)):sha(p) for p in [P/'paper.pdf',P/'source.png',P/'article.html',P/'license.html',P/'job/scene.json',B/'editable.pptx',B/'render/editable.pdf',B/'actual.png']}}
+(P/'provenance.json').write_text(json.dumps(prov,indent=2))
+(P/'ATTRIBUTION.md').write_text('''# Attribution
+
+Adapted from Figure 2 of **OpenVLA: An Open-Source Vision-Language-Action Model**, Moo Jin Kim, Karl Pertsch, Siddharth Karamcheti, Ted Xiao, Ashwin Balakrishna, Suraj Nair, Rafael Rafailov, Ethan P Foster, Pannag R Sanketi, Quan Vuong, Thomas Kollar, Benjamin Burchfiel, Russ Tedrake, Dorsa Sadigh, Sergey Levine, Percy Liang, Chelsea Finn. Proceedings of The 8th Conference on Robot Learning, PMLR 270:2679–2713, 2025.
+
+Original publication: https://proceedings.mlr.press/v270/kim25c.html
+Original PDF: https://raw.githubusercontent.com/mlresearch/v270/main/assets/kim25c/kim25c.pdf
+License: Creative Commons Attribution 4.0 International: https://creativecommons.org/licenses/by/4.0/
+Publisher agreement: https://proceedings.mlr.press/pmlr-license-agreement.html
+
+The official PMLR agreement specifies CC BY 4.0 in paragraph 2 and requires original publication citation/hyperlink in paragraph 3. The publisher pages were archived locally as article.html and license.html on 2026-09-12, with hashes in provenance.json. This is publisher-policy evidence, not an independently obtained signed author agreement.
+
+Changes: page rasterized at scale 4; full architecture Figure 2 cropped without caption; readable diagram labels transcribed and typography approximated using installed Arial and Times New Roman; editable shapes/lines recreated by reading pixels; two exact photo-only crops retained (input scene and robot). No endorsement implied. Fonts are not embedded or redistributed.
+''')
+(P/'REPORT.md').write_text('''# OpenVLA Figure 2 forward conversion
+
+Complete published architecture figure, including image/language input, DINOv2 and SigLIP fusion, projector, visual/language/action token rows, Llama 2 backbone, tokenizer, action de-tokenizer, three-row action vector and robot output. Source 1276 × 477, paper page 4, no caption.
+
+Final: job/build04/editable.pptx, job/build04/svg/page_001.svg, job/build04/scene.resolved.json, sibling assets/, fonts.json and validation.json. Source: source.png. Actual source-width preview: job/build04/actual.png. Raw PDFium preview (1276 × 478): actual_raw.png; its last row was asserted entirely white before cropping to source size.
+
+81 native objects: 23 text, 27 shapes, 31 lines. Two separately movable photo-only images occupy 8.24% of slide area. No rasterized diagram labels, no source image behind native content. Full source is archived in build/assets for comparison only; it is not a visible image element. Native counts do not themselves prove fidelity.
+
+Typography: Arial regular labels; Arial bold OpenVLA; Times New Roman regular Δ and Times New Roman italic θ, with regular Arial x and Grip. Six independent text objects form the three vector rows; they are editable text, not Office equation objects. No superscript/subscript occurs in this figure, so no fabricated script styling is introduced. Source family cannot be uniquely identified from pixels; these are measured substitutes, not verified original font identities. No runtime font substitution was reported. Fonts must exist on the target machine.
+
+Actual PPTX rendering was inspected at full size and enlarged label/formula ROIs. build01 stopped at preflight because continuous line joints lacked named overlap relationships. Added only the eleven source-verified adjacent line pairs. build02 was first actual render; build03 and build04 were two bounded typography repair rounds. All previous evidence remains. Final automated preflight, native-object, and rendered-text checks PASS; visual fidelity remains REVIEW, with no PowerPoint/WPS check.
+
+Source-width unregistered ROI measurements are in build02/03/04 roi_measurements.json; dark neutral ink threshold is max RGB <160 and RGB spread <20. Regions fixed before first typography repair, not a blind test. Final Llama ink edge deltas [0,0,-1,0] px; Δx [0,0,1,0]; Δθ [0,0,0,0]. These local edge agreements do not imply glyph identity: corresponding diagnostic glyph-mask IoUs are 0.778, 0.721, 0.736. Action De-Tokenizer has matching outer bounds but IoU 0.301, showing interior spacing/stroke drift. Prompt IoU 0.348 despite outer edges within 1 px. No aggregate fidelity score or acceptance threshold was invented.
+
+Measurement limits: Dino ROI includes part of the circled 1 and is INVALID as a pure label metric; ΔGrip ROI clips a small amount of descender at its bottom and is only a partial-ink diagnostic. Retained unchanged rather than redefined to improve the result. All claims about the complete diagram are visual/source inventory judgments. Math Delta bottom stroke, θ contour, sans-serif spacing, rounded corner shape, dash phase and arrowheads retain small visible differences; section-circle 1 is approximate. Raster assets are exact source crops, although exported Office rendering resamples them. Structural checks do not establish exact original glyph shape.
+
+Reproduce with ./reproduce.sh NEW_BUILD_DIR, using existing repository .venv and installed LibreOffice/font directories; no installation, remote writes, repo edits, source PDF extraction, or author drawing code was used. See provenance.json and ATTRIBUTION.md. Source creation is separately repeatable via raster_source.py. The output PDF may be inspected for verification; this restriction applies to the source PDF.
+''')
+# Contact sheet is source over actual, same pixel dimensions, no registration.
+a=Image.open(P/'source.png').convert('RGB');b=Image.open(B/'actual.png').convert('RGB');c=Image.new('RGB',(1276,954),'white');c.paste(a,(0,0));c.paste(b,(0,477));c.save(P/'comparison.png')

@@ -1,0 +1,9 @@
+from PIL import Image
+import pypdfium2 as pdf
+from pathlib import Path
+import sys,json
+r=Path('/tmp/diffuser-init-math-20260912');b=r/f'build_{sys.argv[1]}';src=Image.open(r/'source_full.png');p=pdf.PdfDocument(b/'render/editable.pdf')[0];im=p.render(scale=src.width/p.get_width()).to_pil().convert('RGB');im.save(b/'actual_raw.png');record={'scale':src.width/p.get_width(),'raw_size':im.size,'source_size':src.size}
+if im.height==src.height+1:
+ record['extra_row_white']=all(x==(255,255,255) for x in im.crop((0,src.height,src.width,im.height)).getdata());assert record['extra_row_white'];im=im.crop((0,0,*src.size))
+assert im.size==src.size
+im.save(b/'actual.png');(b/'rasterization.json').write_text(json.dumps(record,indent=2));roi=(100,655,237,689);crop=im.crop(roi);crop.save(b/'actual_roi.png');a=src.crop(roi).resize((1096,272));bb=crop.resize((1096,272));comp=Image.new('RGB',(1096,554),'white');comp.paste(a);comp.paste(bb,(0,282));comp.save(b/'comparison_8x.png')

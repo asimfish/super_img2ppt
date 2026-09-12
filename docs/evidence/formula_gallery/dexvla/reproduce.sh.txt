@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+TASK_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+TASK_RUNTIME=${TASK_RUNTIME:-/Users/liyufeng/Code/super_img2ppt/.venv/bin}
+TASK_OUT=${1:?Provide a fresh output directory}
+PATH=/opt/homebrew/bin:$PATH "$TASK_RUNTIME/super-img2ppt" build "$TASK_ROOT/build07/scene.resolved.json" --out "$TASK_OUT" --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype --font-dir /System/Library/Fonts/Supplemental
+"$TASK_RUNTIME/python" "$TASK_ROOT/render_actual.py" "$TASK_OUT"

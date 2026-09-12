@@ -1,0 +1,7 @@
+from pathlib import Path
+import pypdfium2 as pdf
+R=Path(__file__).resolve().parent
+page=pdf.PdfDocument(R/'paper.pdf')[2]
+im=page.render(scale=4).to_pil()
+assert im.size==(2448,3168)
+im.crop((420,285,2025,785)).save(R/'source_reproduced.png')

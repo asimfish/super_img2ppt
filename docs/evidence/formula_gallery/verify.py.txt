@@ -1,0 +1,11 @@
+import hashlib,json,os,subprocess
+from pathlib import Path
+root=Path.cwd();w=root/'output/formula_gallery_20260912';e=root/'docs/evidence/formula_gallery';rows=[]
+env=dict(os.environ,PATH='/opt/homebrew/bin:'+os.environ['PATH'])
+commands=[['.venv/bin/ruff','check','.'],['.venv/bin/ruff','format','--check','.'],['.venv/bin/python','scripts/verify_skill.py'],['.venv/bin/python','scripts/build_capability_registry.py','--check'],['.venv/bin/python','/Users/liyufeng/Code/cursur/skills/agent_meta/skill-quality-gate/scripts/audit_skill_governance.py','--repo',str(root),'--json'],['.venv/bin/python','/Users/liyufeng/Code/cursur/skills/agent_meta/skill-creator/scripts/quick_validate.py','skills/super-img2ppt'],['.venv/bin/python','scripts/build_package.py']]
+for cmd in commands:
+ p=subprocess.run(cmd,env=env,capture_output=True,text=True);rows.append(dict(command=cmd,exit_code=p.returncode,stdout=p.stdout,stderr=p.stderr));print(' '.join(cmd),p.returncode,flush=True)
+ if p.returncode:print(p.stdout+p.stderr);break
+report={'runtime':'0.3.5','commands':rows,'full_tests_log':'full_tests.log','tests':(w/'full_tests.log').read_text(),'native_powerpoint_wps':'not verified','scope':'native typography and bounded input; source fidelity separately reported'}
+(e/'verification.json').write_text(json.dumps(report,indent=2)+'\n');assert len(rows)==len(commands) and all(x['exit_code']==0 for x in rows)
+print('package',hashlib.sha256((root/'dist/super-img2ppt.skill').read_bytes()).hexdigest())

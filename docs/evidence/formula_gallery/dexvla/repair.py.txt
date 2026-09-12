@@ -1,0 +1,42 @@
+import json
+from pathlib import Path
+r=Path(__file__).resolve().parent;p=r/'job/scene.json';s=json.loads(p.read_text());es=s['slides'][0]['elements'];d={e['id']:e for e in es}
+for e in es:
+ if e['kind']=='text' and 'color' not in e:e['color']='#000000'
+d['main_title']['box'][0]+=22;d['main_title']['box'][1]+=2
+def shift(id,dx,dy):
+ e=d[id]
+ if 'box'in e:e['box'][0]+=dx;e['box'][1]+=dy
+ else:e['points']=[[x+dx,y+dy] for x,y in e['points']]
+for e in es:
+ if e['id'].startswith('stage23_film_bar') or e['id'].startswith('stage23_film_dot'):shift(e['id'],20,5)
+shift('stage23_film_label',4,6)
+for pre in ['stage1','stage23']:
+ shift(pre+'_expert_label',0,2);shift(pre+'_reason_label',0,2);shift(pre+'_vlm_label',0,1);shift(pre+'_title',5,3)
+# Source stage1 discarded architecture hatch extends across model. Native strips sampled from source.
+new=[]
+for e in es:
+ if e['id'].startswith('stage1_discard_stripe'):
+  q=dict(e);q['id']=e['id'].replace('discard','interior');q['fill']='#CB9093'
+  # Clip polygon coordinates to model's rectangle via raster-coordinate polygon clipping.
+  x,y,w,h=e['box'];pp=[(x+u*w,y+v*h) for u,v in e['vertices']]
+  for axis,bound,sign in [(0,305,1),(0,567,-1),(1,103,1),(1,239,-1)]:
+   out=[]
+   if not pp:break
+   for a,b in zip(pp,pp[1:]+pp[:1]):
+    ia=(a[axis]-bound)*sign>=0;ib=(b[axis]-bound)*sign>=0
+    if ia:out.append(a)
+    if ia!=ib:
+     t=(bound-a[axis])/(b[axis]-a[axis]);out.append((a[0]+t*(b[0]-a[0]),a[1]+t*(b[1]-a[1])))
+   pp=list(dict.fromkeys(out))
+  if len(pp)<3:continue
+  x=min(a[0] for a in pp);y=min(a[1] for a in pp);w=max(a[0] for a in pp)-x;h=max(a[1] for a in pp)-y
+  if min(w,h)<.1:continue
+  q['box']=[x,y,w,h];q['vertices']=[[(a-x)/w,(b-y)/h] for a,b in pp];new.append(q)
+i=es.index(d['stage1_vlm'])+1;es[i:i]=new
+# Dashed connections retain editable source-sized solid arrow tip.
+for id in ['s1obs_vlm','s23obs_film']:
+ e=d[id];a,b=e['points'];dx=b[0]-a[0];dy=b[1]-a[1];L=(dx*dx+dy*dy)**.5;m=[b[0]-dx/L*6,b[1]-dy/L*6]
+ q={'id':id+'_dashed_shaft','kind':'line','points':[a,m],'stroke':'#000000','stroke_width':1.5,'dash':[7,5],'allow_overlap_with':[id],'overlap_reason':'Source dashed connector meets its own native arrow tip.'};e['points']=[m,b];es.append(q)
+for i,e in enumerate(es):e['z']=i+1
+p.write_text(json.dumps(s,indent=2))

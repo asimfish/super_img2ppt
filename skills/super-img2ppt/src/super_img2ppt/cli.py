@@ -17,6 +17,7 @@ from .curves import trace_file
 from .export import write_pptx, write_svg
 from .fonts import FontCatalog
 from .layout import layout_scene
+from .mathtext import compose_file
 from .prepare import fresh_directory, json_write, prepare
 from .qa import comparison, inspect_pptx, preflight
 from .render import make_renderer, rasterize_pdf, verify_rendered_text
@@ -243,6 +244,12 @@ def main(argv: list[str] | None = None) -> int:
     trace.add_argument("--stroke-width", type=float, default=1.5)
     trace.add_argument("--prefix", default="curve")
     trace.add_argument("--axis", choices=["x", "y"], default="x")
+    math_cmd = commands.add_parser(
+        "compose-math", help="Place styled formula parts on explicit source baselines"
+    )
+    math_cmd.add_argument("spec", type=Path)
+    math_cmd.add_argument("--out", type=Path, required=True)
+    math_cmd.add_argument("--font-dir", type=Path, action="append", default=[])
     for name in ["build", "check"]:
         cmd = commands.add_parser(
             name,
@@ -281,9 +288,11 @@ def main(argv: list[str] | None = None) -> int:
             )
         elif args.command == "build":
             result = build(args.scene, args.out, not args.no_render, tuple(args.font_dir))
+        elif args.command == "compose-math":
+            result = compose_file(args.spec, args.out, tuple(args.font_dir))
         else:
             result = check(args.scene, args.out, tuple(args.font_dir))
-        if args.command in {"build", "prepare", "check", "trace-curve"}:
+        if args.command in {"build", "prepare", "check", "trace-curve", "compose-math"}:
             print(
                 json.dumps(
                     {"status": result["status"], "output": str(args.out.resolve())},

@@ -262,3 +262,16 @@ This evidence is specific to these fonts, this renderer and this synthetic input
 transcription required an agent. PowerPoint automation did not complete, WPS was not checked,
 and real user failure images were unavailable. No universal fidelity, throughput or cross-editor
 compatibility claim is made.
+
+## v0.3.5 explicit formula typography and additional robotics figures
+
+Three complete additional raster-source reconstructions: OpenVLA Fig.2 (81 native objects),
+ECoT Fig.4 (66), DexVLA Fig.2 (302). All pass automated checks; they retain disclosed local
+raster assets and source glyph differences. No aggregate or blind fidelity claim.
+3D Diffuser Actor's two output equations, three repeated small equations and initialization
+were revised into 60 native text parts using explicit styles and baselines. The generic
+`compose-math` helper was independently forward-tested on its initialization distribution:
+STIXGeneral passed local composition but failed actual Office font checks, missing U+223C
+was rejected, and a DejaVu Serif candidate was blocked for overlap. Final source glyphs are
+not perfectly matched. See repository docs/formula_gallery.md, source/actual crops, and the
+independent report; automated PASS and source fidelity are deliberately separate claims.

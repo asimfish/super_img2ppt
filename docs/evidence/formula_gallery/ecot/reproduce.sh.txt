@@ -1,0 +1,15 @@
+#!/bin/zsh
+set -eu
+export PATH=/opt/homebrew/bin:$PATH
+ROOT=/tmp/ecot-forward-20260912
+PY=/Users/liyufeng/Code/super_img2ppt/.venv/bin/python
+CLI=/Users/liyufeng/Code/super_img2ppt/.venv/bin/super-img2ppt
+OUT=${1:?Provide a NEW absolute output directory}
+"$PY" "$ROOT/prepare_source.py"
+"$PY" "$ROOT/reconstruct.py"
+"$PY" "$ROOT/repair1.py"
+"$PY" "$ROOT/repair2.py"
+"$PY" "$ROOT/repair3.py"
+"$CLI" build "$ROOT/job/scene.json" --out "$OUT" --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype --font-dir /System/Library/Fonts/Supplemental
+"$PY" "$ROOT/render_actual.py" "$OUT"
+"$PY" "$ROOT/measure.py" "$OUT"

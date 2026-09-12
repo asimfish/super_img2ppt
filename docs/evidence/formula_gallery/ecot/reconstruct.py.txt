@@ -1,0 +1,81 @@
+import json
+from pathlib import Path
+from PIL import Image
+R=Path('/tmp/ecot-forward-20260912'); J=R/'job'; A=J/'assets'; A.mkdir(exist_ok=True)
+im=Image.open(R/'source.png'); E=[]
+def shape(i,b,fill=None,stroke=None,sw=0,rad=0,**kw):
+ e=dict(id=i,kind='shape',z=len(E),box=b,shape='round_rect' if rad else 'rect',fill=fill,stroke=stroke,stroke_width=sw,**kw)
+ if rad:e['radius']=rad
+ E.append(e);return i
+def text(i,s,b,size=22,bold=False,italic=False,container=None,runs=None,**kw):
+ e=dict(id=i,kind='text',z=len(E),box=b,font_family='Arial',font_size=size,color='#606060',bold=bold,italic=italic,fit='strict',wrap=False,**kw)
+ if container:e['container']=container
+ if runs:e['runs']=runs
+ else:e['text']=s
+ E.append(e)
+def asset(i,b,container=None,clear=None):
+ x,y,w,h=b;p=im.crop((x,y,x+w,y+h)).convert('RGBA')
+ if clear:
+  from PIL import ImageDraw
+  ImageDraw.Draw(p).rectangle(clear,fill=(255,255,255,0))
+ p.save(A/f'{i}.png');e=dict(id=i,kind='image',z=len(E),box=b,path=f'assets/{i}.png',contains_text=False,provenance='Exact local crop from official PMLR PDF raster; see provenance.json')
+ if container:e['container']=container
+ E.append(e)
+def pairs(ids,reason):
+ for n,a in enumerate(ids):
+  e=next(x for x in E if x['id']==a);e.setdefault('allow_overlap_with',[]).extend(ids[n+1:]);e['overlap_reason']=reason
+# Outer panels
+shape('dataset',[2,36,379,554],None,'#A0A0A0',3.4,28,dash=[27,11])
+for i,b in [('describe',[416,36,370,210]),('boxes',[416,297,370,293]),('motion',[814,34,370,212]),('gripper',[814,297,370,293]),('plans',[1212,34,370,556])]:shape(i,b,'#FFFFFF','#BFBFBF',3.4,23)
+text('dataset_title','Robot Trajectory from Dataset',[17,-1,363,36],25)
+for i,s,x,y in [('step1','1. Describe scene',422,-1),('step2','2. Extract bounding boxes',422,261),('step3','3. Compute motion primitives',819,-1),('step4','4. Compute gripper position',819,261),('step5','5. Generate plans + subtasks',1217,-3)]:text(i,s,[x,y,365,38],25)
+text('task_title','Task Instruction',[111,49,185,34],22,container='dataset')
+shape('instruction',[25,82,332,47],'#98DEFC',rad=11,container='dataset')
+text('instruction_text','Put the watermelon on the towel',[34,92,319,33],22,italic=True,container='instruction')
+text('state','State Info',[143,143,150,34],22,container='dataset')
+for prefix,x,y,cont in [('input',28,212,'dataset'),('output',877,104,'motion')]:
+ ids=[]
+ for k in [2,1,0]:
+  ids.append(shape(f'{prefix}_state{k}',[x+16*k,y-18*k,299 if prefix=='input' else 279,47],'#F2F2F2','#A0A0A0',2.2,7,container=cont))
+ pairs(ids,'Source shows successively offset state cards occluded by the foreground card.')
+ text(prefix+'_formula','',[x+26 if prefix=='input' else x+16,y+9,260,34],22,container=ids[-1],runs=[{'text':'Proprio 1: ','bold':True},{'text':'[Δ'},{'text':'x','italic':True},{'text':', Δ'},{'text':'θ','italic':True},{'text':', ΔGrip]'}])
+text('obs','Observations',[125,275,200,33],22,container='dataset')
+# Photo stack includes photo-only content, no labels
+for i,b in [('photo_back',[58,304,302,227]),('photo_mid',[43,322,302,227]),('photo_front',[27,340,302,227])]:asset(i,b,'dataset')
+pairs(['photo_back','photo_mid','photo_front'],'Original dataset observations are three overlapping photo cards.')
+# Description
+text('prismatic','Prismatic-VLM',[515,42,226,36],25,True,container='describe')
+asset('rainbow_logo',[745,41,30,29],'describe')
+shape('describe_prompt',[430,76,339,48],'#D8D8D8',rad=17,container='describe')
+text('describe_prompt_text','Please describe the scene.',[443,83,316,35],22,True,True,'describe_prompt')
+shape('description',[431,136,338,97],'#DFF6D5',rad=24,container='describe')
+text('description_line1','',[444,158,313,34],22,italic=True,container='description',runs=[{'text':'This scene has a '},{'text':'watermelon','color':'#FF0000'},{'text':','}])
+text('description_line2','',[444,184,320,34],22,italic=True,container='description',runs=[{'text':'spoon','color':'#00BE44'},{'text':', '},{'text':'towel','color':'#0097CE'},{'text':', and '},{'text':'mushroom.','color':'#FF6800'}])
+# Detector native module + photo with native boxes
+text('grounding','Grounding DINO',[504,303,235,36],25,True,container='boxes');asset('dino_logo',[743,304,36,30],'boxes')
+# exact source photo has colored rectangles: preserve as photo artwork, independent label-free asset
+asset('grounding_photo',[452,342,302,227],'boxes')
+# Motion
+text('proprio_title','Proprio → Primitives',[878,41,258,37],25,True,container='motion');asset('python_logo',[1147,41,29,29],'motion')
+asset('curved_arrow',[823,105,51,111],'motion')
+shape('motion_list',[877,179,278,42],'#FF9F96',rad=15,container='motion')
+text('motion_text','{right, down, down,  ...}',[901,186,244,34],22,italic=True,container='motion_list')
+# segmentation photo label removed with transparency; native rectangle and editable label replaces it
+text('owl_title','OWL + SAM',[927,303,190,37],25,True,container='gripper');asset('owl_logo',[1143,302,35,34],'gripper')
+asset('gripper_photo',[848,342,302,227],'gripper',clear=(77,76,258,111))
+shape('arm_label',[925,418,181,35],'#CA91FB',container='gripper')
+text('arm_text','black robotic arm',[943,421,158,30],18,container='arm_label')
+# Gemini
+text('gemini','Gemini LLM',[1325,42,195,35],25,True,container='plans');asset('gemini_logo',[1544,42,29,29],'plans')
+shape('gemini_prompt',[1228,77,338,108],'#D8D8D8',rad=16,container='plans')
+text('gemini_instruction','Explain the plan, subtask, and\nmovement for each step, given:',[1244,83,316,50],18.5,True,True,'gemini_prompt',line_height=1.08)
+for i,s,x,col in [('task','Task',1238,'#98DEFC'),('desc','Desc.',1350,'#DFF6D5'),('moves','Moves',1464,'#FF9F96')]:
+ shape(i+'_pill',[x,136,94,39],col,rad=7,container='gemini_prompt');text(i+'_pill_text',s,[x,142,94,28],17,True,container=i+'_pill',align='center')
+shape('reasoning',[1228,195,338,374],'#F2F2F2',rad=10,container='plans')
+lines=[('Plan: Go to watermelon, grasp, go',217),('to towel, release',238),('Subtasks:',263),('1. The robot needs to grasp the',288),('watermelon, so first must move to it',309),('2. The robot is at the watermelon, so',334),('it can now grasp it',355),('3. ...',379),('Moves:',401),('1.  The watermelon is right of the',426),('robot, so it must move <right>',447),('2.  The watermelon is below the',472),('robot, so it must move <down>',493),('3.  ...',517)]
+for n,(s,y) in enumerate(lines):
+ x=1272 if n in [10,12] else 1244
+ runs=[{'text':'Plan: ','bold':True},{'text':'Go to watermelon, grasp, go'}] if n==0 else None
+ text('reason_'+str(n),s,[x,y,1560-x,29],18.5,bold=n in [2,8],italic=True,container='reasoning',runs=runs)
+scene=dict(version=1,slides=[dict(id='page_001',width=1587,height=593,source='pages/page_001/source.png',background='#FFFFFF',reviewed=True,notes='Adapted from Zawalski et al. (2025), PMLR 270:3157–3181, Figure 4. https://proceedings.mlr.press/v270/zawalski25a.html CC BY 4.0. Raster-based native reconstruction; photos and logos retained as local raster assets.',elements=E)])
+(J/'scene.json').write_text(json.dumps(scene,indent=2))

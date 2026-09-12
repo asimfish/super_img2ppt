@@ -65,6 +65,44 @@ def main():
                 font=ImageFont.load_default(size=17),
             )
             im.save(out / "curve_caps.png")
+    formula_comparison(out / "formula_typography.png")
+
+
+def formula_comparison(out):
+    """Same-coordinate 4x crops: source, archived actual, revised actual."""
+    case = ROOT / "examples/gallery/diffuser_actor"
+    before = ROOT / "docs/evidence/formula_gallery/diffuser_actor/before_actual.png"
+    if not before.exists():
+        return
+    regions = [
+        ("Output equations", (1435, 105, 1563, 170)),
+        ("Repeated denoising equations", (241, 635, 326, 670)),
+        ("Initialization / residual glyph differences remain", (99, 652, 238, 689)),
+    ]
+    pad, scale, column, row_header = 24, 4, 556, 44
+    height = 84 + sum((b[3] - b[1]) * scale + row_header + pad for _, b in regions)
+    canvas = Image.new("RGB", (column * 3 + pad * 4, height), "#F1F5F9")
+    draw = ImageDraw.Draw(canvas)
+    font = ImageFont.load_default(size=18)
+    for i, label in enumerate(["SOURCE", "BEFORE / actual PPTX", "AFTER / actual PPTX"]):
+        draw.text((pad + i * (column + pad), 25), label, font=font, fill="#0F172A")
+    with (
+        Image.open(case / "source.png") as source,
+        Image.open(before) as old,
+        Image.open(case / "actual.png") as actual,
+    ):
+        y = 84
+        for title, box in regions:
+            draw.text((pad, y), title, font=font, fill="#475569")
+            y += row_header
+            for i, im in enumerate([source, old, actual]):
+                crop = im.crop(box)
+                crop = crop.resize(
+                    (crop.width * scale, crop.height * scale), Image.Resampling.NEAREST
+                )
+                canvas.paste(crop, (pad + i * (column + pad), y))
+            y += (box[3] - box[1]) * scale + pad
+    canvas.save(out)
 
 
 if __name__ == "__main__":

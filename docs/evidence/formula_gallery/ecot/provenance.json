@@ -1,0 +1,180 @@
+{
+  "title": "Robotic Control via Embodied Chain-of-Thought Reasoning",
+  "authors": [
+    "Michał Zawalski",
+    "William Chen",
+    "Karl Pertsch",
+    "Oier Mees",
+    "Chelsea Finn",
+    "Sergey Levine"
+  ],
+  "publication": "PMLR 270:3157–3181 (2025), CoRL 2024",
+  "article_url": "https://proceedings.mlr.press/v270/zawalski25a.html",
+  "pdf_url": "https://raw.githubusercontent.com/mlresearch/v270/main/assets/zawalski25a/zawalski25a.pdf",
+  "license": "CC BY 4.0",
+  "license_evidence_url": "https://proceedings.mlr.press/pmlr-license-agreement.html",
+  "figure": 4,
+  "pdf_page_one_based": 5,
+  "source_raster_scale": 4,
+  "crop_xyxy_pixels": [
+    432,
+    285,
+    2019,
+    878
+  ],
+  "source_size": [
+    1587,
+    593
+  ],
+  "method": "Raster-only visual geometry and source-local OCR; no PDF text/vector coordinates, no author drawing code.",
+  "native_counts": {
+    "shape": 26,
+    "text": 40,
+    "image": 11
+  },
+  "assets": [
+    {
+      "id": "photo_back",
+      "path": "assets/photo_back.png",
+      "source_box_xywh": [
+        58,
+        304,
+        302,
+        227
+      ],
+      "contains_text": false,
+      "note": "Exact local crop from official PMLR PDF raster; see provenance.json"
+    },
+    {
+      "id": "photo_mid",
+      "path": "assets/photo_mid.png",
+      "source_box_xywh": [
+        43,
+        322,
+        302,
+        227
+      ],
+      "contains_text": false,
+      "note": "Exact local crop from official PMLR PDF raster; see provenance.json"
+    },
+    {
+      "id": "photo_front",
+      "path": "assets/photo_front.png",
+      "source_box_xywh": [
+        27,
+        340,
+        302,
+        227
+      ],
+      "contains_text": false,
+      "note": "Exact local crop from official PMLR PDF raster; see provenance.json"
+    },
+    {
+      "id": "rainbow_logo",
+      "path": "assets/rainbow_logo.png",
+      "source_box_xywh": [
+        745,
+        41,
+        30,
+        29
+      ],
+      "contains_text": false,
+      "note": "Exact local crop from official PMLR PDF raster; see provenance.json"
+    },
+    {
+      "id": "dino_logo",
+      "path": "assets/dino_logo.png",
+      "source_box_xywh": [
+        743,
+        304,
+        36,
+        30
+      ],
+      "contains_text": false,
+      "note": "Exact local crop from official PMLR PDF raster; see provenance.json"
+    },
+    {
+      "id": "grounding_photo",
+      "path": "assets/photo_front.png",
+      "source_box_xywh": [
+        452,
+        342,
+        302,
+        227
+      ],
+      "contains_text": false,
+      "note": "Same source observation reused from clean dataset foreground crop; four original detector boxes rebuilt as native rectangles."
+    },
+    {
+      "id": "python_logo",
+      "path": "assets/python_logo.png",
+      "source_box_xywh": [
+        1147,
+        41,
+        29,
+        29
+      ],
+      "contains_text": false,
+      "note": "Exact local crop from official PMLR PDF raster; see provenance.json"
+    },
+    {
+      "id": "curved_arrow",
+      "path": "assets/curved_arrow.png",
+      "source_box_xywh": [
+        823,
+        105,
+        51,
+        111
+      ],
+      "contains_text": false,
+      "note": "Exact local crop from official PMLR PDF raster; see provenance.json"
+    },
+    {
+      "id": "owl_logo",
+      "path": "assets/owl_logo.png",
+      "source_box_xywh": [
+        1143,
+        302,
+        35,
+        34
+      ],
+      "contains_text": false,
+      "note": "Exact local crop from official PMLR PDF raster; see provenance.json"
+    },
+    {
+      "id": "gripper_photo",
+      "path": "assets/gripper_photo.png",
+      "source_box_xywh": [
+        848,
+        342,
+        302,
+        227
+      ],
+      "contains_text": false,
+      "note": "Exact local crop from official PMLR PDF raster; see provenance.json"
+    },
+    {
+      "id": "gemini_logo",
+      "path": "assets/gemini_logo.png",
+      "source_box_xywh": [
+        1544,
+        42,
+        29,
+        29
+      ],
+      "contains_text": false,
+      "note": "Exact local crop from official PMLR PDF raster; see provenance.json"
+    }
+  ],
+  "final_build": "build_04",
+  "retrieved_date": "2026-09-12",
+  "sha256": {
+    "paper.pdf": "79f82ea9ed37a16bfbf42a7cdf2ab766dc1174a3a092700bb1aa91dc8da4917e",
+    "source.png": "32a567ffd2c44f74dbebdfdd339fe076f5a782a42f316fbc9b7594c2b5497a59",
+    "article.html": "cbbb010af777fcbd32827a987eae21609ced4996a05bd361624272171cf1e547",
+    "pmlr-license-agreement.html": "1c3bcff83dd07df3faa8abca10cd84f8c2b140b6fee4aa4e30f994369a8e4ea1",
+    "job/scene.json": "3668a28fbcbd1efee4e4bd2580290b1fe7b8ff24ed653501bae5169fbed7544e",
+    "build_04/editable.pptx": "1b129bfc7f21315fd358dda2b22ec04995571925a83a62d4dee5ff328d7bb086",
+    "build_04/actual_source_width.png": "efb6ebd10d9d6dfdad634cea589c596a0b3702529d337658818acad8fe13eeba"
+  }
+}

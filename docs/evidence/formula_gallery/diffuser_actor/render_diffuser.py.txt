@@ -1,0 +1,9 @@
+import sys
+from pathlib import Path
+import pypdfium2 as pdfium
+from PIL import Image
+b=Path(sys.argv[1]);w=1589
+with pdfium.PdfDocument(b/'render/editable.pdf') as d:
+ p=d[0];bmp=p.render(scale=w/p.get_width());im=bmp.to_pil().convert('RGB');assert im.size==(1589,1052);im.save(b/'actual.png');bmp.close();p.close()
+for name,box in [('init',(99,652,238,689)),('formula',(1435,105,1563,170)),('steps',(241,635,326,670))]:
+ a=Image.open('examples/gallery/diffuser_actor/source.png').crop(box);bb=im.crop(box);c=Image.new('RGB',(a.width*8,a.height*16),'white');c.paste(a.resize((a.width*8,a.height*8)),(0,0));c.paste(bb.resize((bb.width*8,bb.height*8)),(0,a.height*8));c.save(b/f'{name}_compare.png')

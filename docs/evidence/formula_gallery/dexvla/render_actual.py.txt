@@ -1,0 +1,8 @@
+from pathlib import Path
+import json,sys
+import pypdfium2 as pdf
+R=Path(__file__).parent;B=R/sys.argv[1];p=pdf.PdfDocument(B/'render/editable.pdf')[0];scale=1605/p.get_width();im=p.render(scale=scale).to_pil().convert('RGB');im.save(B/'actual_source_width_raw.png');note={'command':f'{sys.executable} {__file__} {sys.argv[1]}','pdf':str(B/'render/editable.pdf'),'pdf_page_size_points':[p.get_width(),p.get_height()],'pdfium_scale':scale,'raw_size':list(im.size),'target_size':[1605,500],'registration':'none'}
+if im.size==(1605,501):
+ assert im.crop((0,500,1605,501)).getextrema()==((255,255),(255,255),(255,255)),'Extra row not white';im=im.crop((0,0,1605,500));note['crop']='Removed one asserted all-white bottom row; raw preserved.'
+assert im.size==(1605,500),im.size
+im.save(B/'actual_source_width.png');(B/'rasterization.json').write_text(json.dumps(note,indent=2))

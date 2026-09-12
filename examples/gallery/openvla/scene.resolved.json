@@ -1,0 +1,1886 @@
+{
+  "version": 1,
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 1276,
+      "height": 477,
+      "source": "assets/6a6e3d700133baa81688.png",
+      "background": "#FFFFFF",
+      "reviewed": true,
+      "notes": "Reconstruction of Figure 2, OpenVLA, PMLR270 (2025). Full architecture figure; two photo-only crops; all diagram labels editable. See ATTRIBUTION.md.",
+      "elements": [
+        {
+          "id": "outer",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            213,
+            9,
+            881,
+            460
+          ],
+          "shape": "round_rect",
+          "fill": null,
+          "stroke": "#D7D7D7",
+          "stroke_width": 3,
+          "radius": 16,
+          "dash": [
+            6,
+            6
+          ],
+          "role": "background"
+        },
+        {
+          "id": "openvla",
+          "kind": "text",
+          "z": 2,
+          "box": [
+            228,
+            18,
+            225,
+            55
+          ],
+          "font_size": 39,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "bold": true,
+          "runs": [
+            {
+              "text": "OpenVLA",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 39,
+              "bold": true,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "input_photo",
+          "kind": "image",
+          "z": 3,
+          "box": [
+            25,
+            82,
+            153,
+            152
+          ],
+          "path": "assets/b55ce801b129423458e1.png",
+          "contains_text": false,
+          "provenance": "Exact source-pixel crop of input camera photograph, no labels."
+        },
+        {
+          "id": "photo_border",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            25,
+            82,
+            153,
+            152
+          ],
+          "shape": "rect",
+          "fill": null,
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "input_photo"
+          ],
+          "overlap_reason": "Source photograph has thin rectangular border."
+        },
+        {
+          "id": "input_label",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            35,
+            240,
+            135,
+            30
+          ],
+          "font_size": 21,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "runs": [
+            {
+              "text": "Input Image",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "instruction",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            16,
+            324,
+            171,
+            84
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#999999",
+          "stroke_width": 1,
+          "radius": 9
+        },
+        {
+          "id": "instruction_1",
+          "kind": "text",
+          "z": 7,
+          "box": [
+            25,
+            334,
+            159,
+            38
+          ],
+          "font_size": 26,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "container": "instruction",
+          "runs": [
+            {
+              "text": "“Put eggplant",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "instruction_2",
+          "kind": "text",
+          "z": 8,
+          "box": [
+            54,
+            368,
+            109,
+            36
+          ],
+          "font_size": 26,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "container": "instruction",
+          "runs": [
+            {
+              "text": "in bowl”",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "instruction_label",
+          "kind": "text",
+          "z": 9,
+          "box": [
+            5,
+            416,
+            203,
+            31
+          ],
+          "font_size": 21,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Language Instruction",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "llama",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            301,
+            142,
+            764,
+            84
+          ],
+          "shape": "round_rect",
+          "fill": "#F4F4F4",
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "radius": 13
+        },
+        {
+          "id": "llama_label",
+          "kind": "text",
+          "z": 11,
+          "box": [
+            580,
+            160,
+            229,
+            56
+          ],
+          "font_size": 40.5,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "container": "llama",
+          "runs": [
+            {
+              "text": "Llama 2 7B",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 40.5,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "detok",
+          "kind": "shape",
+          "z": 12,
+          "box": [
+            762,
+            23,
+            302,
+            50
+          ],
+          "shape": "round_rect",
+          "fill": "#DDCCF4",
+          "stroke": "#806B98",
+          "stroke_width": 2,
+          "radius": 13
+        },
+        {
+          "id": "detok_label",
+          "kind": "text",
+          "z": 13,
+          "box": [
+            780,
+            30,
+            280,
+            42
+          ],
+          "font_size": 29.5,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "container": "detok",
+          "runs": [
+            {
+              "text": "Action De-Tokenizer",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 29.5,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "projector",
+          "kind": "shape",
+          "z": 14,
+          "box": [
+            303,
+            307,
+            274,
+            36
+          ],
+          "shape": "round_rect",
+          "fill": null,
+          "stroke": "#999999",
+          "stroke_width": 2,
+          "radius": 9,
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#FFF2CC"
+              },
+              {
+                "offset": 1,
+                "color": "#ABC7F0"
+              }
+            ]
+          }
+        },
+        {
+          "id": "projector_label",
+          "kind": "text",
+          "z": 15,
+          "box": [
+            374,
+            311,
+            171,
+            33
+          ],
+          "font_size": 21,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "container": "projector",
+          "runs": [
+            {
+              "text": "MLP Projector",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "visual_group",
+          "kind": "shape",
+          "z": 16,
+          "box": [
+            298,
+            347,
+            286,
+            57
+          ],
+          "shape": "round_rect",
+          "fill": null,
+          "stroke": "#D7D7D7",
+          "stroke_width": 2,
+          "radius": 8,
+          "dash": [
+            4,
+            4
+          ],
+          "role": "background"
+        },
+        {
+          "id": "dinov2",
+          "kind": "shape",
+          "z": 17,
+          "box": [
+            303,
+            350,
+            135,
+            49
+          ],
+          "shape": "round_rect",
+          "fill": "#FFF2CC",
+          "stroke": "#F1B900",
+          "stroke_width": 2,
+          "radius": 12
+        },
+        {
+          "id": "dinov2_label",
+          "kind": "text",
+          "z": 18,
+          "box": [
+            322,
+            357,
+            115,
+            39
+          ],
+          "font_size": 29,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "container": "dinov2",
+          "runs": [
+            {
+              "text": "DinoV2",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 29,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "siglip",
+          "kind": "shape",
+          "z": 19,
+          "box": [
+            444,
+            350,
+            136,
+            50
+          ],
+          "shape": "round_rect",
+          "fill": "#A9C5EF",
+          "stroke": "#397AED",
+          "stroke_width": 2,
+          "radius": 12
+        },
+        {
+          "id": "siglip_label",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            468,
+            357,
+            105,
+            39
+          ],
+          "font_size": 29.5,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "container": "siglip",
+          "runs": [
+            {
+              "text": "SigLIP",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 29.5,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "tokenizer",
+          "kind": "shape",
+          "z": 21,
+          "box": [
+            605,
+            308,
+            281,
+            50
+          ],
+          "shape": "round_rect",
+          "fill": "#D9EAD3",
+          "stroke": "#68A745",
+          "stroke_width": 2,
+          "radius": 12
+        },
+        {
+          "id": "tokenizer_label",
+          "kind": "text",
+          "z": 22,
+          "box": [
+            639,
+            315,
+            245,
+            43
+          ],
+          "font_size": 29.5,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "container": "tokenizer",
+          "runs": [
+            {
+              "text": "Llama Tokenizer",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 29.5,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "vision_token_0",
+          "kind": "shape",
+          "z": 23,
+          "box": [
+            303,
+            242,
+            41,
+            21
+          ],
+          "shape": "round_rect",
+          "fill": null,
+          "stroke": "#999999",
+          "stroke_width": 1,
+          "radius": 8,
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#FFF2CC"
+              },
+              {
+                "offset": 1,
+                "color": "#ABC7F0"
+              }
+            ]
+          }
+        },
+        {
+          "id": "vision_arrow_0",
+          "kind": "line",
+          "z": 24,
+          "points": [
+            [
+              323.5,
+              295
+            ],
+            [
+              323.5,
+              274
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "vision_token_1",
+          "kind": "shape",
+          "z": 25,
+          "box": [
+            361,
+            242,
+            41,
+            21
+          ],
+          "shape": "round_rect",
+          "fill": null,
+          "stroke": "#999999",
+          "stroke_width": 1,
+          "radius": 8,
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#FFF2CC"
+              },
+              {
+                "offset": 1,
+                "color": "#ABC7F0"
+              }
+            ]
+          }
+        },
+        {
+          "id": "vision_arrow_1",
+          "kind": "line",
+          "z": 26,
+          "points": [
+            [
+              381.5,
+              295
+            ],
+            [
+              381.5,
+              274
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "vision_token_2",
+          "kind": "shape",
+          "z": 27,
+          "box": [
+            419,
+            242,
+            41,
+            21
+          ],
+          "shape": "round_rect",
+          "fill": null,
+          "stroke": "#999999",
+          "stroke_width": 1,
+          "radius": 8,
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#FFF2CC"
+              },
+              {
+                "offset": 1,
+                "color": "#ABC7F0"
+              }
+            ]
+          }
+        },
+        {
+          "id": "vision_arrow_2",
+          "kind": "line",
+          "z": 28,
+          "points": [
+            [
+              439.5,
+              295
+            ],
+            [
+              439.5,
+              274
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "vision_token_3",
+          "kind": "shape",
+          "z": 29,
+          "box": [
+            477,
+            242,
+            41,
+            21
+          ],
+          "shape": "round_rect",
+          "fill": null,
+          "stroke": "#999999",
+          "stroke_width": 1,
+          "radius": 8,
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#FFF2CC"
+              },
+              {
+                "offset": 1,
+                "color": "#ABC7F0"
+              }
+            ]
+          }
+        },
+        {
+          "id": "vision_arrow_3",
+          "kind": "line",
+          "z": 30,
+          "points": [
+            [
+              497.5,
+              295
+            ],
+            [
+              497.5,
+              274
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "vision_token_4",
+          "kind": "shape",
+          "z": 31,
+          "box": [
+            536,
+            242,
+            41,
+            21
+          ],
+          "shape": "round_rect",
+          "fill": null,
+          "stroke": "#999999",
+          "stroke_width": 1,
+          "radius": 8,
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#FFF2CC"
+              },
+              {
+                "offset": 1,
+                "color": "#ABC7F0"
+              }
+            ]
+          }
+        },
+        {
+          "id": "vision_arrow_4",
+          "kind": "line",
+          "z": 32,
+          "points": [
+            [
+              556.5,
+              295
+            ],
+            [
+              556.5,
+              274
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "language_token_0",
+          "kind": "shape",
+          "z": 33,
+          "box": [
+            609,
+            242,
+            41,
+            21
+          ],
+          "shape": "round_rect",
+          "fill": "#D9EAD3",
+          "stroke": "#68A745",
+          "stroke_width": 1,
+          "radius": 8
+        },
+        {
+          "id": "language_arrow_0",
+          "kind": "line",
+          "z": 34,
+          "points": [
+            [
+              629.5,
+              295
+            ],
+            [
+              629.5,
+              274
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "language_token_1",
+          "kind": "shape",
+          "z": 35,
+          "box": [
+            667,
+            242,
+            41,
+            21
+          ],
+          "shape": "round_rect",
+          "fill": "#D9EAD3",
+          "stroke": "#68A745",
+          "stroke_width": 1,
+          "radius": 8
+        },
+        {
+          "id": "language_arrow_1",
+          "kind": "line",
+          "z": 36,
+          "points": [
+            [
+              687.5,
+              295
+            ],
+            [
+              687.5,
+              274
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "language_token_2",
+          "kind": "shape",
+          "z": 37,
+          "box": [
+            725,
+            242,
+            41,
+            21
+          ],
+          "shape": "round_rect",
+          "fill": "#D9EAD3",
+          "stroke": "#68A745",
+          "stroke_width": 1,
+          "radius": 8
+        },
+        {
+          "id": "language_arrow_2",
+          "kind": "line",
+          "z": 38,
+          "points": [
+            [
+              745.5,
+              295
+            ],
+            [
+              745.5,
+              274
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "language_token_3",
+          "kind": "shape",
+          "z": 39,
+          "box": [
+            783,
+            242,
+            41,
+            21
+          ],
+          "shape": "round_rect",
+          "fill": "#D9EAD3",
+          "stroke": "#68A745",
+          "stroke_width": 1,
+          "radius": 8
+        },
+        {
+          "id": "language_arrow_3",
+          "kind": "line",
+          "z": 40,
+          "points": [
+            [
+              803.5,
+              295
+            ],
+            [
+              803.5,
+              274
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "language_token_4",
+          "kind": "shape",
+          "z": 41,
+          "box": [
+            842,
+            242,
+            41,
+            21
+          ],
+          "shape": "round_rect",
+          "fill": "#D9EAD3",
+          "stroke": "#68A745",
+          "stroke_width": 1,
+          "radius": 8
+        },
+        {
+          "id": "language_arrow_4",
+          "kind": "line",
+          "z": 42,
+          "points": [
+            [
+              862.5,
+              295
+            ],
+            [
+              862.5,
+              274
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "action_token_0",
+          "kind": "shape",
+          "z": 43,
+          "box": [
+            898,
+            106,
+            41,
+            21
+          ],
+          "shape": "round_rect",
+          "fill": "#DDCCF4",
+          "stroke": "#806B98",
+          "stroke_width": 1,
+          "radius": 8
+        },
+        {
+          "id": "action_arrow_0",
+          "kind": "line",
+          "z": 44,
+          "points": [
+            [
+              918.5,
+              100
+            ],
+            [
+              918.5,
+              79
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "action_token_1",
+          "kind": "shape",
+          "z": 45,
+          "box": [
+            956,
+            106,
+            41,
+            21
+          ],
+          "shape": "round_rect",
+          "fill": "#DDCCF4",
+          "stroke": "#806B98",
+          "stroke_width": 1,
+          "radius": 8
+        },
+        {
+          "id": "action_arrow_1",
+          "kind": "line",
+          "z": 46,
+          "points": [
+            [
+              976.5,
+              100
+            ],
+            [
+              976.5,
+              79
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "action_token_2",
+          "kind": "shape",
+          "z": 47,
+          "box": [
+            1014,
+            106,
+            41,
+            21
+          ],
+          "shape": "round_rect",
+          "fill": "#DDCCF4",
+          "stroke": "#806B98",
+          "stroke_width": 1,
+          "radius": 8
+        },
+        {
+          "id": "action_arrow_2",
+          "kind": "line",
+          "z": 48,
+          "points": [
+            [
+              1034.5,
+              100
+            ],
+            [
+              1034.5,
+              79
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "input_path_a",
+          "kind": "line",
+          "z": 49,
+          "points": [
+            [
+              182,
+              158
+            ],
+            [
+              263,
+              158
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "input_path_b"
+          ],
+          "overlap_reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only."
+        },
+        {
+          "id": "input_path_b",
+          "kind": "line",
+          "z": 50,
+          "points": [
+            [
+              263,
+              158
+            ],
+            [
+              263,
+              428
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "input_path_c"
+          ],
+          "overlap_reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only."
+        },
+        {
+          "id": "input_path_c",
+          "kind": "line",
+          "z": 51,
+          "points": [
+            [
+              263,
+              428
+            ],
+            [
+              511,
+              428
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "vision_in_dino",
+            "vision_in_siglip"
+          ],
+          "overlap_reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only."
+        },
+        {
+          "id": "vision_in_dino",
+          "kind": "line",
+          "z": 52,
+          "points": [
+            [
+              370,
+              428
+            ],
+            [
+              370,
+              405
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "vision_in_siglip",
+          "kind": "line",
+          "z": 53,
+          "points": [
+            [
+              511,
+              428
+            ],
+            [
+              511,
+              405
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "junction",
+          "kind": "shape",
+          "z": 54,
+          "box": [
+            367,
+            424,
+            7,
+            7
+          ],
+          "shape": "ellipse",
+          "fill": "#606060",
+          "allow_overlap_with": [
+            "input_path_c",
+            "vision_in_dino"
+          ],
+          "overlap_reason": "Filled merge dot at source image branch junction."
+        },
+        {
+          "id": "instruction_path_a",
+          "kind": "line",
+          "z": 55,
+          "points": [
+            [
+              195,
+              366
+            ],
+            [
+              242,
+              366
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "instruction_path_b"
+          ],
+          "overlap_reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only."
+        },
+        {
+          "id": "instruction_path_b",
+          "kind": "line",
+          "z": 56,
+          "points": [
+            [
+              242,
+              366
+            ],
+            [
+              242,
+              447
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "instruction_path_c"
+          ],
+          "overlap_reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only."
+        },
+        {
+          "id": "instruction_path_c",
+          "kind": "line",
+          "z": 57,
+          "points": [
+            [
+              242,
+              447
+            ],
+            [
+              557,
+              447
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "prompt",
+          "kind": "text",
+          "z": 58,
+          "box": [
+            563,
+            434,
+            476,
+            35
+          ],
+          "font_size": 20.95,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "“What should the robot do to {task}? A:”",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 20.95,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "tokenizer_input",
+          "kind": "line",
+          "z": 59,
+          "points": [
+            [
+              745.5,
+              427
+            ],
+            [
+              745.5,
+              371
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "output_path_a",
+          "kind": "line",
+          "z": 60,
+          "points": [
+            [
+              1068,
+              47
+            ],
+            [
+              1192,
+              47
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "output_path_b"
+          ],
+          "overlap_reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only."
+        },
+        {
+          "id": "output_path_b",
+          "kind": "line",
+          "z": 61,
+          "points": [
+            [
+              1192,
+              47
+            ],
+            [
+              1192,
+              74
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "bracket_left",
+          "kind": "line",
+          "z": 62,
+          "points": [
+            [
+              1143,
+              81
+            ],
+            [
+              1143,
+              202
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "bracket_left_top",
+            "bracket_left_bottom"
+          ],
+          "overlap_reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only."
+        },
+        {
+          "id": "bracket_left_top",
+          "kind": "line",
+          "z": 63,
+          "points": [
+            [
+              1143,
+              81
+            ],
+            [
+              1154,
+              81
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2
+        },
+        {
+          "id": "bracket_left_bottom",
+          "kind": "line",
+          "z": 64,
+          "points": [
+            [
+              1143,
+              202
+            ],
+            [
+              1154,
+              202
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2
+        },
+        {
+          "id": "bracket_right",
+          "kind": "line",
+          "z": 65,
+          "points": [
+            [
+              1241,
+              81
+            ],
+            [
+              1241,
+              202
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "bracket_right_top",
+            "bracket_right_bottom"
+          ],
+          "overlap_reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only."
+        },
+        {
+          "id": "bracket_right_top",
+          "kind": "line",
+          "z": 66,
+          "points": [
+            [
+              1241,
+              81
+            ],
+            [
+              1229,
+              81
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2
+        },
+        {
+          "id": "bracket_right_bottom",
+          "kind": "line",
+          "z": 67,
+          "points": [
+            [
+              1241,
+              202
+            ],
+            [
+              1229,
+              202
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2
+        },
+        {
+          "id": "delta_x",
+          "kind": "text",
+          "z": 68,
+          "box": [
+            1172,
+            80,
+            30,
+            43
+          ],
+          "font_size": 36,
+          "font_family": "Times New Roman",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Δ",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 36,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "x",
+          "kind": "text",
+          "z": 69,
+          "box": [
+            1198,
+            86,
+            26,
+            36
+          ],
+          "font_size": 29,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "x",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 29,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "delta_theta",
+          "kind": "text",
+          "z": 70,
+          "box": [
+            1171,
+            120,
+            30,
+            43
+          ],
+          "font_size": 36,
+          "font_family": "Times New Roman",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Δ",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 36,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "theta",
+          "kind": "text",
+          "z": 71,
+          "box": [
+            1196,
+            122,
+            32,
+            48
+          ],
+          "font_size": 34,
+          "font_family": "Times New Roman",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "italic": true,
+          "runs": [
+            {
+              "text": "θ",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 34,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "delta_grip",
+          "kind": "text",
+          "z": 72,
+          "box": [
+            1151,
+            160,
+            30,
+            43
+          ],
+          "font_size": 36,
+          "font_family": "Times New Roman",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Δ",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 36,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "grip",
+          "kind": "text",
+          "z": 73,
+          "box": [
+            1175,
+            165,
+            64,
+            38
+          ],
+          "font_size": 30,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Grip",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 30,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "action_7d",
+          "kind": "text",
+          "z": 74,
+          "box": [
+            1140,
+            212,
+            109,
+            30
+          ],
+          "font_size": 21,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "runs": [
+            {
+              "text": "7D Robot",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "action_label",
+          "kind": "text",
+          "z": 75,
+          "box": [
+            1159,
+            236,
+            73,
+            30
+          ],
+          "font_size": 21,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "runs": [
+            {
+              "text": "Action",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "robot_arrow",
+          "kind": "line",
+          "z": 76,
+          "points": [
+            [
+              1192,
+              271
+            ],
+            [
+              1192,
+              296
+            ]
+          ],
+          "stroke": "#606060",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 9,
+            "width": 9
+          }
+        },
+        {
+          "id": "robot_photo",
+          "kind": "image",
+          "z": 77,
+          "box": [
+            1114,
+            306,
+            160,
+            168
+          ],
+          "path": "assets/297de8fc2b3a6d04a642.png",
+          "contains_text": false,
+          "provenance": "Exact source-pixel crop of robot photograph, no diagram labels."
+        },
+        {
+          "id": "circle_3",
+          "kind": "shape",
+          "z": 78,
+          "box": [
+            290,
+            131,
+            32,
+            32
+          ],
+          "shape": "ellipse",
+          "fill": "#FFFFFF",
+          "stroke": "#888888",
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "llama"
+          ],
+          "overlap_reason": "Number circle intentionally overlaps upper left module boundary as in source."
+        },
+        {
+          "id": "number_3",
+          "kind": "text",
+          "z": 79,
+          "box": [
+            298,
+            130,
+            20,
+            36
+          ],
+          "font_size": 25,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "container": "circle_3",
+          "allow_overlap_with": [
+            "llama"
+          ],
+          "overlap_reason": "Source section number sits over the named module boundary.",
+          "runs": [
+            {
+              "text": "3",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 25,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "circle_2",
+          "kind": "shape",
+          "z": 80,
+          "box": [
+            290,
+            294,
+            32,
+            32
+          ],
+          "shape": "ellipse",
+          "fill": "#FFFFFF",
+          "stroke": "#888888",
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "projector"
+          ],
+          "overlap_reason": "Number circle intentionally overlaps upper left module boundary as in source."
+        },
+        {
+          "id": "number_2",
+          "kind": "text",
+          "z": 81,
+          "box": [
+            298,
+            293,
+            20,
+            36
+          ],
+          "font_size": 25,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "container": "circle_2",
+          "allow_overlap_with": [
+            "projector"
+          ],
+          "overlap_reason": "Source section number sits over the named module boundary.",
+          "runs": [
+            {
+              "text": "2",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 25,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "circle_1",
+          "kind": "shape",
+          "z": 82,
+          "box": [
+            290,
+            384,
+            32,
+            32
+          ],
+          "shape": "ellipse",
+          "fill": "#FFFFFF",
+          "stroke": "#888888",
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "dinov2",
+            "visual_group"
+          ],
+          "overlap_reason": "Number circle intentionally overlaps upper left module boundary as in source."
+        },
+        {
+          "id": "number_1",
+          "kind": "text",
+          "z": 83,
+          "box": [
+            298,
+            383,
+            20,
+            36
+          ],
+          "font_size": 25,
+          "font_family": "Arial",
+          "color": "#606060",
+          "fit": "strict",
+          "wrap": false,
+          "container": "circle_1",
+          "allow_overlap_with": [
+            "dinov2",
+            "visual_group"
+          ],
+          "overlap_reason": "Source section number sits over the named module boundary.",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 25,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

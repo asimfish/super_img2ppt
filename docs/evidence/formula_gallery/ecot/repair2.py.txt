@@ -1,0 +1,19 @@
+import json
+from pathlib import Path
+p=Path('/tmp/ecot-forward-20260912/job/scene.json');s=json.loads(p.read_text());es=s['slides'][0]['elements'];d={e['id']:e for e in es}
+for k in ['dataset_title','step1','step2','step3','step4','step5']:
+ d[k]['font_size']=26
+ if k=='dataset_title':d[k]['box'][0]+=1
+for k in ['input_formula','output_formula']:
+ d[k]['font_size']=21.2;d[k]['box'][0]+=2;d[k]['box'][1]+=2
+# precise photo-label font calibration (source size near 19 px)
+d['arm_text']['font_size']=19;d['arm_text']['box'][1]+=2
+d['prismatic']['box'][0]+=1
+# The same observation is repeated in dataset and Grounding DINO; reuse the clean photo pixels and add native detection boxes.
+d['grounding_photo']['path']='assets/photo_front.png';d['grounding_photo']['provenance']='Same source observation reused from clean dataset foreground crop; four original detector boxes rebuilt as native rectangles.'
+for n,b,c in [('towel',[488,406,94,72],'#009CE0'),('spoon',[561,445,72,61],'#00CD54'),('watermelon',[586,500,149,46],'#ED0000'),('mushroom',[688,449,54,45],'#FF6300')]:
+ es.append(dict(id='bbox_'+n,kind='shape',z=100+len(es),box=b,shape='rect',fill=None,stroke=c,stroke_width=2,container='boxes',allow_overlap_with=['grounding_photo'],overlap_reason='Source detection rectangle intentionally overlays the observation photograph.'))
+# detector rectangles visibly overlap each other at their boundary intersections
+for a,b in [('towel','spoon'),('spoon','watermelon')]:
+ next(e for e in es if e['id']=='bbox_'+a)['allow_overlap_with'].append('bbox_'+b)
+p.write_text(json.dumps(s,indent=2))

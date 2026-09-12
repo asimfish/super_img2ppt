@@ -1,0 +1,10 @@
+from PIL import Image,ImageChops
+from pathlib import Path
+import json
+R=Path('/tmp/ecot-forward-20260912');b=Path(__import__('sys').argv[1]);regs={'title':[16,0,378,32],'formula_input':[48,220,315,252],'formula_output':[891,112,1148,146],'prismatic':[510,43,720,72],'arm_label':[940,421,1098,450],'reason_line5':[1240,334,1558,355]};out={}
+for n,box in regs.items():
+ imgs=[];bbs=[]
+ for file in [R/'source.png',b/'actual_source_width.png']:
+  im=Image.open(file).convert('RGB').crop(box);mask=im.convert('L').point(lambda x:255 if x<145 else 0); bb=mask.getbbox();bbs.append(bb);imgs.append(im.resize((im.width*3,im.height*3)))
+ both=Image.new('RGB',(imgs[0].width,imgs[0].height*2+10),'white');both.paste(imgs[0]);both.paste(imgs[1],(0,imgs[0].height+10));both.save(b/f'detail_{n}.png');out[n]={'region':box,'source_local_ink_bbox':bbs[0],'actual_local_ink_bbox':bbs[1],'actual_minus_source_edges':[b-a for a,b in zip(*bbs)]}
+(b/'ink_measurements.json').write_text(json.dumps(out,indent=2));print(json.dumps(out,indent=2))

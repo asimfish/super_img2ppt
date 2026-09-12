@@ -1,0 +1,11 @@
+import json
+from pathlib import Path
+p=Path('/tmp/ecot-forward-20260912/job/scene.json');s=json.loads(p.read_text());es=s['slides'][0]['elements'];d={e['id']:e for e in es}
+for k in ['dataset_title','step1','step3','step5']:d[k]['box'][1]=0
+# Source output cards offsets are 9x10, unlike dataset 16x18.
+for k in [2,1,0]:d[f'output_state{k}']['box']=[877+9*k,104-10*k,279,47]
+for pre in ['input','output']:
+ for k in [1,2]:
+  d[f'{pre}_state{k}'].setdefault('allow_overlap_with',[]).append(pre+'_formula');d[f'{pre}_state{k}']['overlap_reason']='Foreground state card and its formula cover the rear cards as in source.'
+d['arm_label']['allow_overlap_with']=['gripper_photo'];d['arm_label']['overlap_reason']='Native label fills the transparent hole cut around the original baked label; no duplicate baked text remains.'
+p.write_text(json.dumps(s,indent=2))

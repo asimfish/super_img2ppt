@@ -1,0 +1,1025 @@
+{
+  "status": "pass",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "pass",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "projector_label",
+            "projector"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "number_3",
+            "circle_3"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "number_2",
+            "circle_2"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "number_1",
+            "circle_1"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "instruction_1",
+            "instruction_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "bracket_left_bottom",
+            "delta_grip"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "bracket_right_bottom",
+            "grip"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "delta_x",
+            "x"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "delta_x",
+            "delta_theta"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "delta_x",
+            "theta"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "x",
+            "delta_theta"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "delta_theta",
+            "theta"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "delta_theta",
+            "delta_grip"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "theta",
+            "grip"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "delta_grip",
+            "grip"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "action_7d",
+            "action_label"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "shape": 27,
+            "text": 23,
+            "image": 2,
+            "line": 31
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "input_photo",
+                "photo_border"
+              ],
+              "reason": "Source photograph has thin rectangular border.",
+              "area_px2": 23256.0
+            },
+            {
+              "elements": [
+                "llama",
+                "circle_3"
+              ],
+              "reason": "Number circle intentionally overlaps upper left module boundary as in source.",
+              "area_px2": 382.615
+            },
+            {
+              "elements": [
+                "llama",
+                "number_3"
+              ],
+              "reason": "Source section number sits over the named module boundary.",
+              "area_px2": 408.0
+            },
+            {
+              "elements": [
+                "projector",
+                "circle_2"
+              ],
+              "reason": "Number circle intentionally overlaps upper left module boundary as in source.",
+              "area_px2": 304.788
+            },
+            {
+              "elements": [
+                "projector",
+                "number_2"
+              ],
+              "reason": "Source section number sits over the named module boundary.",
+              "area_px2": 330.0
+            },
+            {
+              "elements": [
+                "dinov2",
+                "circle_1"
+              ],
+              "reason": "Number circle intentionally overlaps upper left module boundary as in source.",
+              "area_px2": 229.171
+            },
+            {
+              "elements": [
+                "dinov2",
+                "number_1"
+              ],
+              "reason": "Source section number sits over the named module boundary.",
+              "area_px2": 240.0
+            },
+            {
+              "elements": [
+                "input_path_a",
+                "input_path_b"
+              ],
+              "reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only.",
+              "area_px2": 1.0
+            },
+            {
+              "elements": [
+                "input_path_b",
+                "input_path_c"
+              ],
+              "reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only.",
+              "area_px2": 1.0
+            },
+            {
+              "elements": [
+                "input_path_c",
+                "vision_in_dino"
+              ],
+              "reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only.",
+              "area_px2": 2.0
+            },
+            {
+              "elements": [
+                "input_path_c",
+                "vision_in_siglip"
+              ],
+              "reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only.",
+              "area_px2": 1.0
+            },
+            {
+              "elements": [
+                "input_path_c",
+                "junction"
+              ],
+              "reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only.",
+              "area_px2": 13.637
+            },
+            {
+              "elements": [
+                "vision_in_dino",
+                "junction"
+              ],
+              "reason": "Filled merge dot at source image branch junction.",
+              "area_px2": 7.819
+            },
+            {
+              "elements": [
+                "instruction_path_a",
+                "instruction_path_b"
+              ],
+              "reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only.",
+              "area_px2": 1.0
+            },
+            {
+              "elements": [
+                "instruction_path_b",
+                "instruction_path_c"
+              ],
+              "reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only.",
+              "area_px2": 1.0
+            },
+            {
+              "elements": [
+                "output_path_a",
+                "output_path_b"
+              ],
+              "reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only.",
+              "area_px2": 1.0
+            },
+            {
+              "elements": [
+                "bracket_left",
+                "bracket_left_top"
+              ],
+              "reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only.",
+              "area_px2": 1.0
+            },
+            {
+              "elements": [
+                "bracket_left",
+                "bracket_left_bottom"
+              ],
+              "reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only.",
+              "area_px2": 1.0
+            },
+            {
+              "elements": [
+                "bracket_right",
+                "bracket_right_top"
+              ],
+              "reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only.",
+              "area_px2": 1.0
+            },
+            {
+              "elements": [
+                "bracket_right",
+                "bracket_right_bottom"
+              ],
+              "reason": "Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only.",
+              "area_px2": 1.0
+            }
+          ],
+          "text_layouts": {
+            "openvla": {
+              "scale": 1,
+              "effective_font_size_px": 39,
+              "width_px": 177.5,
+              "height_px": 44.85,
+              "available_width_px": 225,
+              "available_height_px": 55,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 178.0,
+              "required_height_px": 45.35,
+              "fits": true,
+              "lines": [
+                "OpenVLA"
+              ]
+            },
+            "input_label": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 111.0,
+              "height_px": 24.15,
+              "available_width_px": 135,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 111.5,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "Input Image"
+              ]
+            },
+            "instruction_1": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 155.0,
+              "height_px": 29.9,
+              "available_width_px": 159,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 155.5,
+              "required_height_px": 30.4,
+              "fits": true,
+              "lines": [
+                "“Put eggplant"
+              ]
+            },
+            "instruction_2": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 89.75,
+              "height_px": 29.9,
+              "available_width_px": 109,
+              "available_height_px": 36,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 90.25,
+              "required_height_px": 30.4,
+              "fits": true,
+              "lines": [
+                "in bowl”"
+              ]
+            },
+            "instruction_label": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 196.75,
+              "height_px": 24.15,
+              "available_width_px": 203,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 197.25,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "Language Instruction"
+              ]
+            },
+            "llama_label": {
+              "scale": 1,
+              "effective_font_size_px": 40.5,
+              "width_px": 204.75,
+              "height_px": 46.575,
+              "available_width_px": 229,
+              "available_height_px": 56,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 205.25,
+              "required_height_px": 47.075,
+              "fits": true,
+              "lines": [
+                "Llama 2 7B"
+              ]
+            },
+            "detok_label": {
+              "scale": 1,
+              "effective_font_size_px": 29.5,
+              "width_px": 268.5,
+              "height_px": 33.925,
+              "available_width_px": 280,
+              "available_height_px": 42,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 269.0,
+              "required_height_px": 34.425,
+              "fits": true,
+              "lines": [
+                "Action De-Tokenizer"
+              ]
+            },
+            "projector_label": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 133.75,
+              "height_px": 24.15,
+              "available_width_px": 171,
+              "available_height_px": 33,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 134.25,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "MLP Projector"
+              ]
+            },
+            "dinov2_label": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 95.5,
+              "height_px": 33.35,
+              "available_width_px": 115,
+              "available_height_px": 39,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 96.0,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "DinoV2"
+              ]
+            },
+            "siglip_label": {
+              "scale": 1,
+              "effective_font_size_px": 29.5,
+              "width_px": 87.25,
+              "height_px": 33.925,
+              "available_width_px": 105,
+              "available_height_px": 39,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 87.75,
+              "required_height_px": 34.425,
+              "fits": true,
+              "lines": [
+                "SigLIP"
+              ]
+            },
+            "tokenizer_label": {
+              "scale": 1,
+              "effective_font_size_px": 29.5,
+              "width_px": 219.0,
+              "height_px": 33.925,
+              "available_width_px": 245,
+              "available_height_px": 43,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 219.5,
+              "required_height_px": 34.425,
+              "fits": true,
+              "lines": [
+                "Llama Tokenizer"
+              ]
+            },
+            "prompt": {
+              "scale": 1,
+              "effective_font_size_px": 20.95,
+              "width_px": 367.75,
+              "height_px": 24.092,
+              "available_width_px": 476,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 368.25,
+              "required_height_px": 24.592,
+              "fits": true,
+              "lines": [
+                "“What should the robot do to {task}? A:”"
+              ]
+            },
+            "delta_x": {
+              "scale": 1,
+              "effective_font_size_px": 36,
+              "width_px": 23.25,
+              "height_px": 41.4,
+              "available_width_px": 30,
+              "available_height_px": 43,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 23.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "Δ"
+              ]
+            },
+            "x": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 14.5,
+              "height_px": 33.35,
+              "available_width_px": 26,
+              "available_height_px": 36,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 15.0,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "x"
+              ]
+            },
+            "delta_theta": {
+              "scale": 1,
+              "effective_font_size_px": 36,
+              "width_px": 23.25,
+              "height_px": 41.4,
+              "available_width_px": 30,
+              "available_height_px": 43,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 23.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "Δ"
+              ]
+            },
+            "theta": {
+              "scale": 1,
+              "effective_font_size_px": 34,
+              "width_px": 17.25,
+              "height_px": 39.1,
+              "available_width_px": 32,
+              "available_height_px": 48,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 17.75,
+              "required_height_px": 39.6,
+              "fits": true,
+              "lines": [
+                "θ"
+              ]
+            },
+            "delta_grip": {
+              "scale": 1,
+              "effective_font_size_px": 36,
+              "width_px": 23.25,
+              "height_px": 41.4,
+              "available_width_px": 30,
+              "available_height_px": 43,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 23.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "Δ"
+              ]
+            },
+            "grip": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 56.75,
+              "height_px": 34.5,
+              "available_width_px": 64,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 57.25,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "Grip"
+              ]
+            },
+            "action_7d": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 89.0,
+              "height_px": 24.15,
+              "available_width_px": 109,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 89.5,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "7D Robot"
+              ]
+            },
+            "action_label": {
+              "scale": 1,
+              "effective_font_size_px": 21,
+              "width_px": 58.75,
+              "height_px": 24.15,
+              "available_width_px": 73,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 59.25,
+              "required_height_px": 24.65,
+              "fits": true,
+              "lines": [
+                "Action"
+              ]
+            },
+            "number_3": {
+              "scale": 1,
+              "effective_font_size_px": 25,
+              "width_px": 14.0,
+              "height_px": 28.75,
+              "available_width_px": 20,
+              "available_height_px": 36,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.5,
+              "required_height_px": 29.25,
+              "fits": true,
+              "lines": [
+                "3"
+              ]
+            },
+            "number_2": {
+              "scale": 1,
+              "effective_font_size_px": 25,
+              "width_px": 14.0,
+              "height_px": 28.75,
+              "available_width_px": 20,
+              "available_height_px": 36,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.5,
+              "required_height_px": 29.25,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "number_1": {
+              "scale": 1,
+              "effective_font_size_px": 25,
+              "width_px": 14.0,
+              "height_px": 28.75,
+              "available_width_px": 20,
+              "available_height_px": 36,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.5,
+              "required_height_px": 29.25,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "pass",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [],
+      "text_boxes": [
+        {
+          "slide": "page_001",
+          "element": "openvla",
+          "expected": "OpenVLA",
+          "rendered": "OpenVLA",
+          "rendered_normalized": "OpenVLA",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 175.75,
+          "rendered_ink_width_px": 175.427
+        },
+        {
+          "slide": "page_001",
+          "element": "input_label",
+          "expected": "Input Image",
+          "rendered": "Input Image",
+          "rendered_normalized": "Input Image",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 108.5,
+          "rendered_ink_width_px": 108.058
+        },
+        {
+          "slide": "page_001",
+          "element": "instruction_1",
+          "expected": "“Put eggplant",
+          "rendered": "“Put eggplant",
+          "rendered_normalized": "“Put eggplant",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 154.0,
+          "rendered_ink_width_px": 153.212
+        },
+        {
+          "slide": "page_001",
+          "element": "instruction_2",
+          "expected": "in bowl”",
+          "rendered": "in bowl”",
+          "rendered_normalized": "in bowl”",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 87.0,
+          "rendered_ink_width_px": 86.564
+        },
+        {
+          "slide": "page_001",
+          "element": "instruction_label",
+          "expected": "Language Instruction",
+          "rendered": "Language Instruction",
+          "rendered_normalized": "Language Instruction",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 193.75,
+          "rendered_ink_width_px": 193.157
+        },
+        {
+          "slide": "page_001",
+          "element": "llama_label",
+          "expected": "Llama 2 7B",
+          "rendered": "Llama 2 7B",
+          "rendered_normalized": "Llama 2 7B",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 200.0,
+          "rendered_ink_width_px": 199.443
+        },
+        {
+          "slide": "page_001",
+          "element": "detok_label",
+          "expected": "Action De-Tokenizer",
+          "rendered": "Action De-Tokenizer",
+          "rendered_normalized": "Action De-Tokenizer",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 268.5,
+          "rendered_ink_width_px": 264.092
+        },
+        {
+          "slide": "page_001",
+          "element": "projector_label",
+          "expected": "MLP Projector",
+          "rendered": "MLP Projector",
+          "rendered_normalized": "MLP Projector",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 132.25,
+          "rendered_ink_width_px": 131.395
+        },
+        {
+          "slide": "page_001",
+          "element": "dinov2_label",
+          "expected": "DinoV2",
+          "rendered": "DinoV2 ",
+          "rendered_normalized": "DinoV2 ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 92.0,
+          "rendered_ink_width_px": 91.265
+        },
+        {
+          "slide": "page_001",
+          "element": "siglip_label",
+          "expected": "SigLIP",
+          "rendered": "SigLIP",
+          "rendered_normalized": "SigLIP",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 84.75,
+          "rendered_ink_width_px": 84.225
+        },
+        {
+          "slide": "page_001",
+          "element": "tokenizer_label",
+          "expected": "Llama Tokenizer",
+          "rendered": "Llama Tokenizer",
+          "rendered_normalized": "Llama Tokenizer",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 217.0,
+          "rendered_ink_width_px": 212.377
+        },
+        {
+          "slide": "page_001",
+          "element": "prompt",
+          "expected": "“What should the robot do to {task}? A:”",
+          "rendered": "“What should the robot do to {task}? A:”",
+          "rendered_normalized": "“What should the robot do to {task}? A:”",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 366.25,
+          "rendered_ink_width_px": 362.642
+        },
+        {
+          "slide": "page_001",
+          "element": "delta_x",
+          "expected": "Δ",
+          "rendered": "Δx",
+          "rendered_normalized": "Δx",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 21.5,
+          "rendered_ink_width_px": 21.395
+        },
+        {
+          "slide": "page_001",
+          "element": "x",
+          "expected": "x",
+          "rendered": "x",
+          "rendered_normalized": "x",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 14.5,
+          "rendered_ink_width_px": 14.081
+        },
+        {
+          "slide": "page_001",
+          "element": "delta_theta",
+          "expected": "Δ",
+          "rendered": "Δθ",
+          "rendered_normalized": "Δθ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 21.5,
+          "rendered_ink_width_px": 21.395
+        },
+        {
+          "slide": "page_001",
+          "element": "theta",
+          "expected": "θ",
+          "rendered": "θ",
+          "rendered_normalized": "θ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 16.0,
+          "rendered_ink_width_px": 15.7
+        },
+        {
+          "slide": "page_001",
+          "element": "delta_grip",
+          "expected": "Δ",
+          "rendered": "ΔG",
+          "rendered_normalized": "ΔG",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 21.5,
+          "rendered_ink_width_px": 21.395
+        },
+        {
+          "slide": "page_001",
+          "element": "grip",
+          "expected": "Grip",
+          "rendered": "Grip",
+          "rendered_normalized": "Grip",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 54.0,
+          "rendered_ink_width_px": 53.811
+        },
+        {
+          "slide": "page_001",
+          "element": "action_7d",
+          "expected": "7D Robot",
+          "rendered": "7D Robot\r\nAti",
+          "rendered_normalized": "7D Robot\r\nAti",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 88.25,
+          "rendered_ink_width_px": 87.617
+        },
+        {
+          "slide": "page_001",
+          "element": "action_label",
+          "expected": "Action",
+          "rendered": "Action",
+          "rendered_normalized": "Action",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 57.25,
+          "rendered_ink_width_px": 56.873
+        },
+        {
+          "slide": "page_001",
+          "element": "number_3",
+          "expected": "3",
+          "rendered": "3",
+          "rendered_normalized": "3",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 12.0,
+          "rendered_ink_width_px": 11.716
+        },
+        {
+          "slide": "page_001",
+          "element": "number_2",
+          "expected": "2",
+          "rendered": "2",
+          "rendered_normalized": "2",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 12.0,
+          "rendered_ink_width_px": 11.841
+        },
+        {
+          "slide": "page_001",
+          "element": "number_1",
+          "expected": "1",
+          "rendered": "1",
+          "rendered_normalized": "1",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 7.0,
+          "rendered_ink_width_px": 6.595
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "da62eed41489b51dc403c6e57975229b11b72ad75010e5a9f2bad79e843062e0",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "page_001",
+      "mean_absolute_pixel_error": 0.01803,
+      "comparison": "page_001_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

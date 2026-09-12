@@ -1,0 +1,13 @@
+from pathlib import Path
+import sys,json
+import pypdfium2 as pdf
+from PIL import Image
+p=Path(sys.argv[1]); page=pdf.PdfDocument(p/'render/editable.pdf')[0]
+scale=1276/page.get_width(); im=page.render(scale=scale).to_pil().convert('RGB'); im.save(p/'actual_raw.png')
+raw=im.size
+if raw==(1276,478):
+ assert all(px==(255,255,255) for px in im.crop((0,477,1276,478)).getdata())
+ im=im.crop((0,0,1276,477))
+assert im.size==(1276,477),im.size
+im.save(p/'actual.png')
+(p/'actual_raster.json').write_text(json.dumps({'source_size':[1276,477],'raw_size':raw,'scale':scale,'method':'PPTX -> LibreOffice PDF -> PDFium page.render(scale=1276/page.get_width()); no registration; crop extra last row only after assert all white'},indent=2))

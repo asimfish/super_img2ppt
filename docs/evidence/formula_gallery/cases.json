@@ -1,0 +1,51 @@
+[
+  {
+    "id": "openvla",
+    "base": "/tmp/openvla-forward-SdUJP4",
+    "build": "/tmp/openvla-forward-SdUJP4/job/build04",
+    "source": "/tmp/openvla-forward-SdUJP4/source.png",
+    "actual": "/tmp/openvla-forward-SdUJP4/job/build04/actual.png",
+    "attribution": "/tmp/openvla-forward-SdUJP4/ATTRIBUTION.md",
+    "paper": "OpenVLA / CoRL 2024 (PMLR 2025)",
+    "figure": 2,
+    "rasterization": {
+      "engine": "pdfium",
+      "crop_to_source_size": true
+    }
+  },
+  {
+    "id": "ecot",
+    "base": "/tmp/ecot-forward-20260912",
+    "build": "/tmp/ecot-forward-20260912/build_04",
+    "source": "/tmp/ecot-forward-20260912/source.png",
+    "actual": "/tmp/ecot-forward-20260912/build_04/actual_source_width.png",
+    "attribution": "/tmp/ecot-forward-20260912/ATTRIBUTION.md",
+    "paper": "Embodied Chain-of-Thought / CoRL 2024 (PMLR 2025)",
+    "figure": 4,
+    "rasterization": {
+      "engine": "pdfium",
+      "crop_to_source_size": true
+    }
+  },
+  {
+    "id": "dexvla",
+    "base": "/tmp/dexvla_forward_20260912",
+    "build": "/tmp/dexvla_forward_20260912/build07",
+    "source": "/tmp/dexvla_forward_20260912/source.png",
+    "actual": "/tmp/dexvla_forward_20260912/build07/actual_source_width.png",
+    "attribution": "/tmp/dexvla_forward_20260912/ATTRIBUTION.md",
+    "paper": "DexVLA / CoRL 2025",
+    "figure": 2,
+    "rasterization": {
+      "engine": "pdfium",
+      "crop_to_source_size": false
+    }
+  },
+  {
+    "id": "diffuser_actor",
+    "rasterization": {
+      "engine": "pdfium",
+      "crop_to_source_size": false
+    }
+  }
+]

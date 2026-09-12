@@ -1,0 +1,4 @@
+import json,sys
+from pathlib import Path
+from PIL import Image
+r=Path('/tmp/diffuser-init-math-20260912');v=sys.argv[1];e=json.loads((r/f'math_{v}/elements.json').read_text());im=Image.open(r/'source_full.png');s={'version':1,'slides':[{'id':'page_001','width':im.width,'height':im.height,'source':'source_full.png','reviewed':True,'elements':e,'background':'#FFFFFF','notes':'Isolated native initialization distribution from complete 3D Diffuser Actor source raster, source coordinates preserved.'}]};(r/f'scene_{v}.json').write_text(json.dumps(s,indent=2))

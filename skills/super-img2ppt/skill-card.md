@@ -1,6 +1,6 @@
 # Super Img2PPT capability card
 
-Owner: super_img2ppt contributors. Version: 0.3.4. Risk: scoped_change.
+Owner: super_img2ppt contributors. Version: 0.3.5. Risk: scoped_change.
 Canonical owner: this repository's `skills/super-img2ppt`.
 
 Reads: user-selected image/PDF/PPTX files; scene JSON and relative local assets; installed font
@@ -53,3 +53,10 @@ PDF text diagnostics retain raw extraction and separately normalize only PDFium-
 line-end hyphen sentinels. No expected-text-driven replacement or arbitrary control stripping.
 The glyph still participates in font, ownership and overflow checks; missing API confirmation
 retains conservative failure. No new dependency, permission or external effect.
+
+Formula helper: reads a bounded local JSON specification and installed font metadata; writes
+measured native text parts and baseline/style diagnostics to a fresh directory. No TeX engine,
+code execution, network or automatic spacing inference. Rejects unavailable font families,
+glyphs or styles, Unicode script shortcuts, duplicate fields and oversized inputs. Ordinary
+letters plus explicit script offsets preserve editable typography; actual source comparison
+is still required.

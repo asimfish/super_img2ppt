@@ -1,0 +1,972 @@
+{
+  "status": "fail",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "fail",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage1_user0",
+            "stage1_user1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 0.548
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage1_user1",
+            "stage1_user3"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 0.943
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "stage1_reason_label",
+            "s1reason_exp"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "stage1_noise",
+            "stage1_noisebox"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage1_noisebox",
+            "stage1_noisecell0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 196.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage1_noisebox",
+            "stage1_noisestripe0_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 18.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage1_noisebox",
+            "stage1_noisestripe0_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 18.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage1_noisebox",
+            "stage1_noisecell1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 196.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage1_noisebox",
+            "stage1_noisestripe1_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 18.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage1_noisebox",
+            "stage1_noisestripe1_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 18.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage1_noisebox",
+            "stage1_noisecell2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 196.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage1_noisebox",
+            "stage1_noisestripe2_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 18.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage1_noisebox",
+            "stage1_noisestripe2_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 18.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage1_noisebox",
+            "stage1_noise_ellipsis"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 396.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage23_user0",
+            "stage23_user1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 0.548
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage23_user1",
+            "stage23_user3"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 0.943
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "stage23_reason_label",
+            "s23reason_exp"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "stage23_noise",
+            "stage23_noisebox"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage23_noisebox",
+            "stage23_noisecell0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 196.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage23_noisebox",
+            "stage23_noisestripe0_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 18.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage23_noisebox",
+            "stage23_noisestripe0_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 18.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage23_noisebox",
+            "stage23_noisecell1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 196.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage23_noisebox",
+            "stage23_noisestripe1_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 18.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage23_noisebox",
+            "stage23_noisestripe1_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 18.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage23_noisebox",
+            "stage23_noisecell2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 196.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage23_noisebox",
+            "stage23_noisestripe2_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 18.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage23_noisebox",
+            "stage23_noisestripe2_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 18.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "stage23_noisebox",
+            "stage23_noise_ellipsis"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 396.0
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "stage23_robot_result",
+            "stage23_label"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "block_mlp_text",
+            "mlp_trunk"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "text": 36,
+            "shape": 171,
+            "image": 8,
+            "line": 43
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "mlp_trunk",
+                "mlp_branch0"
+              ],
+              "reason": "Source-visible connected branch or brace segments meet at this named junction.",
+              "area_px2": 0.72
+            },
+            {
+              "elements": [
+                "mlp_trunk",
+                "mlp_branch1"
+              ],
+              "reason": "Source-visible connected branch or brace segments meet at this named junction.",
+              "area_px2": 0.72
+            },
+            {
+              "elements": [
+                "mlp_trunk",
+                "mlp_branch2"
+              ],
+              "reason": "Source-visible connected branch or brace segments meet at this named junction.",
+              "area_px2": 0.72
+            },
+            {
+              "elements": [
+                "block_brace2",
+                "block_brace3"
+              ],
+              "reason": "Source-visible connected branch or brace segments meet at this named junction.",
+              "area_px2": 1.172
+            },
+            {
+              "elements": [
+                "head_trunk",
+                "head_bus"
+              ],
+              "reason": "Source-visible connected branch or brace segments meet at this named junction.",
+              "area_px2": 1.275
+            },
+            {
+              "elements": [
+                "head_bus",
+                "head_branch1"
+              ],
+              "reason": "Source-visible connected branch or brace segments meet at this named junction.",
+              "area_px2": 0.975
+            },
+            {
+              "elements": [
+                "head_bus",
+                "head_branch2"
+              ],
+              "reason": "Source-visible connected branch or brace segments meet at this named junction.",
+              "area_px2": 0.975
+            },
+            {
+              "elements": [
+                "head_bus",
+                "head_branch3"
+              ],
+              "reason": "Source-visible connected branch or brace segments meet at this named junction.",
+              "area_px2": 0.975
+            }
+          ],
+          "text_layouts": {
+            "main_title": {
+              "scale": 1,
+              "effective_font_size_px": 28,
+              "width_px": 580.0,
+              "height_px": 64.4,
+              "available_width_px": 780,
+              "available_height_px": 70,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 580.5,
+              "required_height_px": 64.9,
+              "fits": true,
+              "lines": [
+                "Dex-VLA:",
+                "Architecture & Embodied Curriculum Learning"
+              ]
+            },
+            "right_title": {
+              "scale": 1,
+              "effective_font_size_px": 28,
+              "width_px": 199.75,
+              "height_px": 32.2,
+              "available_width_px": 252,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 200.25,
+              "required_height_px": 32.7,
+              "fits": true,
+              "lines": [
+                "Diffusion Expert"
+              ]
+            },
+            "stage1_title": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 148.0,
+              "height_px": 16.1,
+              "available_width_px": 170,
+              "available_height_px": 23,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 148.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Observation & Instruction"
+              ]
+            },
+            "stage1_instruction": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 59.0,
+              "height_px": 13.8,
+              "available_width_px": 99,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 59.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "“fold shirt”"
+              ]
+            },
+            "stage1_vlm_label": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 246.0,
+              "height_px": 27.6,
+              "available_width_px": 250,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 246.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Vision-Language Model"
+              ]
+            },
+            "stage1_reason_label": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 84.5,
+              "height_px": 42.5,
+              "available_width_px": 132,
+              "available_height_px": 58,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 85.0,
+              "required_height_px": 43.0,
+              "fits": true,
+              "lines": [
+                "Sub-step",
+                "Reasoning"
+              ]
+            },
+            "stage1_film_label": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 92.5,
+              "height_px": 18.4,
+              "available_width_px": 126,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 93.0,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "FiLM ResNet"
+              ]
+            },
+            "stage1_noise": {
+              "scale": 1,
+              "effective_font_size_px": 11,
+              "width_px": 26.0,
+              "height_px": 12.65,
+              "available_width_px": 51,
+              "available_height_px": 21,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 26.5,
+              "required_height_px": 13.15,
+              "fits": true,
+              "lines": [
+                "Noise"
+              ]
+            },
+            "stage1_noise_ellipsis": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 14.25,
+              "height_px": 16.1,
+              "available_width_px": 18,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.75,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "···"
+              ]
+            },
+            "stage1_expert_label": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 123.25,
+              "height_px": 36.0,
+              "available_width_px": 155,
+              "available_height_px": 49,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 123.75,
+              "required_height_px": 36.5,
+              "fits": true,
+              "lines": [
+                "Billion-Parameter",
+                "Diffusion Expert"
+              ]
+            },
+            "stage23_title": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 148.0,
+              "height_px": 16.1,
+              "available_width_px": 170,
+              "available_height_px": 23,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 148.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Observation & Instruction"
+              ]
+            },
+            "stage23_instruction": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 59.0,
+              "height_px": 13.8,
+              "available_width_px": 99,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 59.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "“fold shirt”"
+              ]
+            },
+            "stage23_vlm_label": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 246.0,
+              "height_px": 27.6,
+              "available_width_px": 250,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 246.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Vision-Language Model"
+              ]
+            },
+            "stage23_reason_label": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 84.5,
+              "height_px": 42.5,
+              "available_width_px": 132,
+              "available_height_px": 58,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 85.0,
+              "required_height_px": 43.0,
+              "fits": true,
+              "lines": [
+                "Sub-step",
+                "Reasoning"
+              ]
+            },
+            "stage23_film_label": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 92.5,
+              "height_px": 18.4,
+              "available_width_px": 126,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 93.0,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "FiLM ResNet"
+              ]
+            },
+            "stage23_noise": {
+              "scale": 1,
+              "effective_font_size_px": 11,
+              "width_px": 26.0,
+              "height_px": 12.65,
+              "available_width_px": 51,
+              "available_height_px": 21,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 26.5,
+              "required_height_px": 13.15,
+              "fits": true,
+              "lines": [
+                "Noise"
+              ]
+            },
+            "stage23_noise_ellipsis": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 14.25,
+              "height_px": 16.1,
+              "available_width_px": 18,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.75,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "···"
+              ]
+            },
+            "stage23_expert_label": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 123.25,
+              "height_px": 36.0,
+              "available_width_px": 155,
+              "available_height_px": 49,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 123.75,
+              "required_height_px": 36.5,
+              "fits": true,
+              "lines": [
+                "Billion-Parameter",
+                "Diffusion Expert"
+              ]
+            },
+            "stage1_label": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 71.5,
+              "height_px": 27.6,
+              "available_width_px": 110,
+              "available_height_px": 36,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 72.0,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Stage 1"
+              ]
+            },
+            "stage23_label": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 114.25,
+              "height_px": 27.6,
+              "available_width_px": 164,
+              "available_height_px": 36,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 114.75,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Stage 2 & 3"
+              ]
+            },
+            "legend_label": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 76.5,
+              "height_px": 31.5,
+              "available_width_px": 105,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 77.0,
+              "required_height_px": 32.0,
+              "fits": true,
+              "lines": [
+                "Discarded",
+                "Architecture"
+              ]
+            },
+            "block_mlp_text": {
+              "scale": 1,
+              "effective_font_size_px": 11,
+              "width_px": 22.5,
+              "height_px": 12.5,
+              "available_width_px": 41,
+              "available_height_px": 19,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 23.0,
+              "required_height_px": 13.0,
+              "fits": true,
+              "lines": [
+                "MLP"
+              ]
+            },
+            "block_ln1_text": {
+              "scale": 1,
+              "effective_font_size_px": 11,
+              "width_px": 57.25,
+              "height_px": 12.5,
+              "available_width_px": 81,
+              "available_height_px": 19,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 57.75,
+              "required_height_px": 13.0,
+              "fits": true,
+              "lines": [
+                "Layer Norm"
+              ]
+            },
+            "block_shift1_text": {
+              "scale": 1,
+              "effective_font_size_px": 11,
+              "width_px": 55.0,
+              "height_px": 12.5,
+              "available_width_px": 81,
+              "available_height_px": 18,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 55.5,
+              "required_height_px": 13.0,
+              "fits": true,
+              "lines": [
+                "Scale, Shift"
+              ]
+            },
+            "block_attention_text": {
+              "scale": 1,
+              "effective_font_size_px": 11,
+              "width_px": 53.0,
+              "height_px": 25.0,
+              "available_width_px": 81,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 53.5,
+              "required_height_px": 25.5,
+              "fits": true,
+              "lines": [
+                "Multi-Head",
+                "Attention"
+              ]
+            },
+            "block_scale1_text": {
+              "scale": 1,
+              "effective_font_size_px": 11,
+              "width_px": 27.25,
+              "height_px": 12.5,
+              "available_width_px": 81,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 27.75,
+              "required_height_px": 13.0,
+              "fits": true,
+              "lines": [
+                "Scale"
+              ]
+            },
+            "block_ln2_text": {
+              "scale": 1,
+              "effective_font_size_px": 11,
+              "width_px": 57.25,
+              "height_px": 12.5,
+              "available_width_px": 81,
+              "available_height_px": 19,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 57.75,
+              "required_height_px": 13.0,
+              "fits": true,
+              "lines": [
+                "Layer Norm"
+              ]
+            },
+            "block_shift2_text": {
+              "scale": 1,
+              "effective_font_size_px": 11,
+              "width_px": 55.0,
+              "height_px": 12.5,
+              "available_width_px": 81,
+              "available_height_px": 19,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 55.5,
+              "required_height_px": 13.0,
+              "fits": true,
+              "lines": [
+                "Scale, Shift"
+              ]
+            },
+            "block_ffn_text": {
+              "scale": 1,
+              "effective_font_size_px": 11,
+              "width_px": 21.5,
+              "height_px": 12.5,
+              "available_width_px": 81,
+              "available_height_px": 18,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 22.0,
+              "required_height_px": 13.0,
+              "fits": true,
+              "lines": [
+                "FFN"
+              ]
+            },
+            "block_scale2_text": {
+              "scale": 1,
+              "effective_font_size_px": 11,
+              "width_px": 27.25,
+              "height_px": 12.5,
+              "available_width_px": 81,
+              "available_height_px": 18,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 27.75,
+              "required_height_px": 13.0,
+              "fits": true,
+              "lines": [
+                "Scale"
+              ]
+            },
+            "block_repeat": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 74.0,
+              "height_px": 20.7,
+              "available_width_px": 85,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 74.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Block x N"
+              ]
+            },
+            "action_head0_label": {
+              "scale": 1,
+              "effective_font_size_px": 11,
+              "width_px": 30.5,
+              "height_px": 25.0,
+              "available_width_px": 55,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 31.0,
+              "required_height_px": 25.5,
+              "fits": true,
+              "lines": [
+                "Action",
+                "Head"
+              ]
+            },
+            "action_head1_label": {
+              "scale": 1,
+              "effective_font_size_px": 11,
+              "width_px": 30.5,
+              "height_px": 25.0,
+              "available_width_px": 55,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 31.0,
+              "required_height_px": 25.5,
+              "fits": true,
+              "lines": [
+                "Action",
+                "Head"
+              ]
+            },
+            "action_head2_label": {
+              "scale": 1,
+              "effective_font_size_px": 11,
+              "width_px": 30.5,
+              "height_px": 25.0,
+              "available_width_px": 55,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 31.0,
+              "required_height_px": 25.5,
+              "fits": true,
+              "lines": [
+                "Action",
+                "Head"
+              ]
+            },
+            "action_head3_label": {
+              "scale": 1,
+              "effective_font_size_px": 11,
+              "width_px": 30.5,
+              "height_px": 25.0,
+              "available_width_px": 55,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 31.0,
+              "required_height_px": 25.5,
+              "fits": true,
+              "lines": [
+                "Action",
+                "Head"
+              ]
+            },
+            "heads_ellipsis": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 24.0,
+              "height_px": 27.6,
+              "available_width_px": 28,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 24.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "···"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "bbd0cf24e30d810dd59824e3e9c856d43c61d017fa4c42e417baafaa0d94ecfd",
+  "font_substitutions": []
+}

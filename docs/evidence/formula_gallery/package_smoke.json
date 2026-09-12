@@ -1,0 +1,78 @@
+{
+  "package_sha256": "293c6f780c9d6387778da5e28d3a3a39517e59bcf47d09ec83ad3c4caab62f16",
+  "commands": [
+    {
+      "command": [
+        "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+        "-m",
+        "super_img2ppt",
+        "doctor"
+      ],
+      "cwd": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v035-smoke-17pebft7",
+      "exit_code": 0,
+      "stdout": "{\n  \"python\": \"3.12.12\",\n  \"packages\": {\n    \"super-img2ppt\": \"0.3.4\",\n    \"python-pptx\": \"1.0.2\",\n    \"Pillow\": \"12.3.0\",\n    \"fonttools\": \"4.64.0\",\n    \"pypdfium2\": \"5.13.0\",\n    \"jsonschema\": \"4.26.0\"\n  },\n  \"tools\": {\n    \"soffice\": \"/opt/homebrew/bin/soffice\",\n    \"tesseract\": \"/opt/homebrew/bin/tesseract\",\n    \"swift\": \"/usr/bin/swift\",\n    \"fc-list\": \"/opt/homebrew/bin/fc-list\"\n  },\n  \"network_required_for_conversion\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+        "-m",
+        "super_img2ppt",
+        "compose-math",
+        "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v035-smoke-17pebft7/formula.json",
+        "--out",
+        "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v035-smoke-17pebft7/math",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+        "--font-dir",
+        "/System/Library/Fonts/Supplemental"
+      ],
+      "cwd": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v035-smoke-17pebft7",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"unverified\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v035-smoke-17pebft7/math\"}\n",
+      "stderr": "'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n"
+    },
+    {
+      "command": [
+        "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+        "-m",
+        "super_img2ppt",
+        "build",
+        "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v035-smoke-17pebft7/scene.json",
+        "--out",
+        "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v035-smoke-17pebft7/build",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+        "--font-dir",
+        "/System/Library/Fonts/Supplemental"
+      ],
+      "cwd": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v035-smoke-17pebft7",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"pass\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v035-smoke-17pebft7/build\"}\n",
+      "stderr": "'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n"
+    },
+    {
+      "command": [
+        "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+        "-m",
+        "super_img2ppt",
+        "compose-math",
+        "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v035-smoke-17pebft7/formula.json",
+        "--out",
+        "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v035-smoke-17pebft7/invalid",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+        "--font-dir",
+        "/System/Library/Fonts/Supplemental"
+      ],
+      "cwd": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v035-smoke-17pebft7",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n{\"status\": \"error\", \"message\": \"Use ordinary characters with size_scale and baseline offsets for scripts\"}\n"
+    }
+  ],
+  "isolated_directory": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/super-img2ppt-v035-smoke-17pebft7",
+  "global_install": false,
+  "new_dependencies": false,
+  "status": "pass"
+}

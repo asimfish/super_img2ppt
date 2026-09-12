@@ -1,0 +1,30 @@
+import copy,json,shutil
+from pathlib import Path
+from super_img2ppt.fonts import FontCatalog
+from super_img2ppt.mathtext import compose_math
+root=Path.cwd();w=root/'output/formula_gallery_20260912';job=w/'diffuser';job.mkdir(exist_ok=True)
+if not (job/'assets').exists():shutil.copytree(root/'examples/gallery/diffuser_actor/assets',job/'assets')
+s=json.loads((root/'docs/evidence/formula_gallery/diffuser_actor/before_scene.resolved.json').read_text());els=s['slides'][0]['elements'];old=copy.deepcopy(els)
+remove=lambda e:e['id'].startswith(('output_loc_','output_rot_','step_loc_','step_rot_')) or e['id'].startswith('comma_') or e['id'] in {'tauN','tauN_sup','gaussian'}
+els[:]=[e for e in els if not remove(e)]
+catalog=FontCatalog(extra_dirs=(Path('/Applications/LibreOffice.app/Contents/Resources/fonts/truetype'),Path('/System/Library/Fonts/Supplemental')))
+specs=[]
+def p(text,x,y=0,scale=1,bold=False,italic=False):return {'text':text,'offset':[x,y],'size_scale':scale,'bold':bold,'italic':italic}
+# Source pixel baselines and per-symbol styles. Loc/rot and theta are scripts, not Unicode script glyphs.
+for k,dy in [('loc',0),('rot',29)]:
+ spec={'id':'math_output_'+k,'origin':[1444,127+dy],'font_family':'Times New Roman','font_size':20,'z':500+(0 if k=='loc' else 30),'container':'output_equations','parts':[p('ϵ',-.5,scale=.9),p(k,8.5,-7,.72,italic=True),p('θ',7.5,5,.65,bold=True,italic=True),p('(',28.5,scale=.9),p('o',35.75,scale=.95,bold=True,italic=True),p(',',45.5,scale=.9),p('l',52.5,scale=.9,italic=True),p(',',57.5,scale=.9),p('c',64.5,scale=.9,italic=True),p(',',72.5,scale=.9),p('τ',79.5,scale=.95,bold=True,italic=True),p('i',89.5,-6,.6,italic=True),p(',',93.5,scale=.9),p('i',101.5,scale=.9,italic=True),p(')',107,scale=.9)]}
+ specs.append(spec)
+for i,x in enumerate([249,932,1237]):
+ spec={'id':f'math_step_{i}','origin':[x,655],'font_family':'Times New Roman','font_size':18,'z':600+i*30,'container':f'noise_box_{i}','parts':[p('ϵ',2),p('loc',10,-6,.72,italic=True),p('θ',9,4,.65,bold=True,italic=True),p(',',27,-1),p('ϵ',34),p('rot',43,-6,.72,italic=True),p('θ',41,4,.65,bold=True,italic=True)]};specs.append(spec)
+# Keep the mathematical relation U+223C: do not substitute ASCII tilde.
+init=json.loads((root/'docs/evidence/formula_gallery/diffuser_actor/independent_initialization/spec_03.json').read_text())
+init['parts'][1]['bold']=False
+init['parts']=[part for part in init['parts'] if part['text']!='~']
+specs.append(init)
+specs.append({'id':'initial_relation','origin':[139,680.5],'font_family':'DejaVu Sans','font_size':22,'z':120,'parts':[p('∼',0)]})
+for spec in specs:
+ out=compose_math(spec,catalog);els.extend(out['elements'])
+# Preserve the declared denoising-arrow relationship to the replacement superscript.
+s=json.loads(json.dumps(s).replace('tauN_sup','initial_distribution_1'))
+(job/'math_specs.json').write_text(json.dumps(specs,indent=2)+'\n');(job/'scene.json').write_text(json.dumps(s,indent=2)+'\n');(job/'font_resolution.json').write_text(json.dumps(catalog.manifest(),indent=2)+'\n')
+print('formula parts',sum(len(s['parts']) for s in specs))

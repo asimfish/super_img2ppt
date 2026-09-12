@@ -1,0 +1,121 @@
+import json, math
+from pathlib import Path
+from PIL import Image
+R=Path(__file__).resolve().parent;J=R/'job';A=J/'assets';A.mkdir(exist_ok=True)
+src=Image.open(R/'source.png'); els=[]; crops=[]
+def add(kind,id,**k):
+ e=dict(id=id,kind=kind,z=len(els)+1,**k);els.append(e);return id
+def shape(id,b,fill=None,stroke=None,sw=1,sh='rect',**k):return add('shape',id,box=b,shape=sh,fill=fill,stroke=stroke,stroke_width=sw,**k)
+def text(id,s,b,size=16,bold=False,fam='Times New Roman',**k):return add('text',id,box=b,text=s,font_size=size,font_family=fam,bold=bold,fit='strict',wrap=False,**k)
+def line(id,p,sw=1,col='#000000',arrow=False,**k):return add('line',id,points=p,stroke=col,stroke_width=sw,**({'arrow':True,'arrow_head':{'length':5,'width':4}} if arrow else {}),**k)
+def img(id,b,desc):
+ x,y,w,h=b;p=f'assets/{id}.png';src.crop((x,y,x+w,y+h)).save(J/p);crops.append(dict(id=id,crop=b,description=desc));return add('image',id,box=b,path=p,contains_text=False,provenance=desc,image_fit='stretch')
+def bg(id,b,fill,stroke=None,sh='round_rect',**k):return shape(id,b,fill,stroke,sh=sh,role='background',**k)
+def hatch(id,b,color='#CCCCCC'):
+ x,y,w,h=b;bg(id,b,'#FFFFFF','#CCCCCC',sh='rect')
+ # Native narrow convex strips clipped to panel; hatching is a text-free background.
+ for j,q in enumerate(range(-int(h),int(w)+1,9)):
+  pts=[]
+  # clip thin diagonal quadrilateral to rectangle via Sutherland Hodgman
+  pp=[(q,0),(q+3,0),(q+h+3,h),(q+h,h)]
+  for axis,bound,sign in [(0,0,1),(0,w,-1),(1,0,1),(1,h,-1)]:
+   out=[]
+   for a,c in zip(pp,pp[1:]+pp[:1]):
+    ia=(a[axis]-bound)*sign>=0;ic=(c[axis]-bound)*sign>=0
+    if ia:out.append(a)
+    if ia!=ic:
+     t=(bound-a[axis])/(c[axis]-a[axis]);out.append((a[0]+t*(c[0]-a[0]),a[1]+t*(c[1]-a[1])))
+   pp=out
+  pp=list(dict.fromkeys(pp))
+  if len(pp)<3:continue
+  xx=min(p[0] for p in pp);yy=min(p[1] for p in pp);ww=max(p[0] for p in pp)-xx;hh=max(p[1] for p in pp)-yy
+  if ww<.1 or hh<.1:continue
+  shape(f'{id}_stripe{j}',[x+xx,y+yy,ww,hh],color,sh='polygon',vertices=[[(u-xx)/ww,(v-yy)/hh] for u,v in pp],role='background')
+def obs(prefix,x):
+ bg(prefix+'_card',[x,114,192,112],'#F0F7F4')
+ text(prefix+'_title','Observation & Instruction',[x+19,120,170,23],14)
+ img(prefix+'_photos',[x+10,149,172,40],'Exact source photo strip: three robot camera observations, no diagram labels.')
+ text(prefix+'_instruction','“fold shirt”',[x+85,196,99,22],12,True)
+ # Speech/user icon reconstructed as native circles and strokes.
+ shape(prefix+'_head',[x+60,198,8,8],None,'#515151',1.1,sh='ellipse')
+ line(prefix+'_shoulder',[[x+58,207],[x+54,212],[x+64,215],[x+71,211]],1.3,'#515151') if False else None
+ for j,p in enumerate([[[x+59,206],[x+55,211]],[[x+55,211],[x+64,215]],[[x+64,215],[x+73,211]],[[x+58,212],[x+67,211]]]):line(prefix+f'_user{j}',p,1.3,'#515151')
+ for j,p in enumerate([[[x+71,197],[x+73,201]],[[x+74,196],[x+77,202]]]):line(prefix+f'_voice{j}',p,1,'#515151')
+def film(prefix,x,y,discard=False):
+ prefix += '_film'
+ if discard:hatch(prefix+'_card',[x,y,176,167])
+ else:bg(prefix+'_card',[x,y,137,147],'#F7F9FC')
+ text(prefix+'_label','FiLM ResNet',[x+15 if not discard else x+34,y+8,126,25],16,True)
+ for i,(dx,dy,w,h) in enumerate([(19,37,15,99),(47,48,15,77),(76,65,16,47),(106,77,19,25)]):
+  bg(prefix+f'_bar{i}',[x+dx,y+dy,w,h],'#A7BED8' if discard else '#7D9EC6',sh='round_rect',radius=3)
+ for j,(xx,yy) in enumerate([(40,70),(40,88),(40,106),(69,80),(69,97),(98,79),(98,97)]):shape(prefix+f'_dot{j}',[x+xx-4,y+yy-4,8,8],'#838383',sh='ellipse')
+def vlm(prefix,x,y):
+ bg(prefix+'_vlm',[x,y,262,136],'#E89D9E','#FF777C',sh='round_rect',radius=22)
+ text(prefix+'_vlm_label','Vision-Language Model',[x+9,y+23,250,38],24,True)
+ bg(prefix+'_reason',[x+63,y+79,137,53],'#D96D37','#B56511',sh='round_rect',radius=10)
+ text(prefix+'_reason_label','Sub-step\nReasoning',[x+66,y+78,132,58],19,True,color='#FFFFFF',align='center',line_height=1.0)
+def noise(prefix,x,y):
+ text(prefix+'_noise','Noise',[x+26,y-18,51,21],11)
+ shape(prefix+'_noisebox',[x,y,85,28],None,'#929292',.9,sh='round_rect',radius=5,dash=[4,3])
+ for k,dx in enumerate([6,26,66]):
+  bg(prefix+f'_noisecell{k}',[x+dx,y+7,14,14],'#FFFDF5','#808080',sh='round_rect',radius=2)
+  for j in range(2):
+   shape(prefix+f'_noisestripe{k}_{j}',[x+dx+1+j*6,y+8,6,12],'#9F4917',sh='polygon',vertices=[[0,0.8],[1,.15],[1,.45],[0,1]],role='background')
+ text(prefix+'_noise_ellipsis','···',[x+48,y+3,18,22],14,True)
+def expert(prefix,x,y):
+ bg(prefix+'_expert',[x,y,165,62],'#C3E2E0','#76B64B',sh='round_rect',radius=5)
+ text(prefix+'_expert_label','Billion-Parameter\nDiffusion Expert',[x+5,y+8,155,49],16,True,align='center',line_height=1)
+text('main_title','Dex-VLA:\nArchitecture & Embodied Curriculum Learning',[282,10,780,70],28,True,align='center',line_height=1.15)
+text('right_title','Diffusion Expert',[1259,40,252,40],28,True,align='center')
+hatch('stage1_discard',[298,90,278,161]);obs('stage1',28);vlm('stage1',305,103)
+# Hatching is source-visible across the discarded VLM; clipped hatch overlays are pale native polygons behind labels retained as a disclosed approximation.
+film('stage1',55,257);noise('stage1',326,269);expert('stage1',351,312)
+obs('stage23',621);vlm('stage23',898,102);film('stage23',628,251,True);noise('stage23',921,268);expert('stage23',946,311)
+for id,p,dash in [('s1obs_vlm',[[220,170],[304,170]],True),('s1obs_film',[[124,226],[124,255]],False),('s1film_exp',[[179,343],[351,343]],False),('s1reason_exp',[[435,234],[435,311]],False),('s1noise_exp',[[368,297],[368,312]],False),('s1exp_robot',[[435,374],[435,389]],False),('s23obs_vlm',[[813,169],[897,169]],False),('s23obs_film',[[717,225],[717,251]],True),('s23film_exp',[[772,343],[946,343]],False),('s23reason_exp',[[1029,232],[1029,311]],False),('s23noise_exp',[[963,296],[963,311]],False),('s23exp_robot',[[1029,373],[1029,387]],False)]:
+ if dash:line(id,p,1.5,arrow=True) # Custom dashed shafts split below.
+ else:line(id,p,1.5,arrow=True)
+img('stage1_robot_result',[381,390,109,57],'Exact source robot kinematics artwork; no readable diagram text.')
+img('stage23_robot_result',[974,389,109,57],'Exact source robot kinematics artwork; no readable diagram text.')
+text('stage1_label','Stage 1',[221,448,110,36],24)
+text('stage23_label','Stage 2 & 3',[815,445,164,36],24)
+hatch('legend_hatch',[533,450,31,29]);text('legend_label','Discarded\nArchitecture',[574,447,105,40],14,True,align='center',line_height=1.0)
+line('panel_separator',[[1203,63],[1203,487]],3,dash=[24,10])
+# Diffusion transformer stacked blocks; rear panels are background shapes, actual foreground panel a content container.
+for i,(x,y) in enumerate([(1319,107),(1325,113),(1332,119),(1345,121)]):bg(f'transformer_panel{i}',[x,y,143,193],'#FFFFFF','#213A69',sh='round_rect',radius=6)
+# Visible header slivers and full MLP, norm/attention/FFN stack.
+for i,(x,y) in enumerate([(1326,113),(1333,120),(1338,122)]):bg(f'rear_header{i}',[x,y,45,16],'#DEEAF1','#747474',sh='round_rect',radius=3)
+modules=[('mlp','MLP',[1351,126,43,17],'#E0ECF4'),('ln1','Layer Norm',[1399,126,83,17],'#F3F3F3'),('shift1','Scale, Shift',[1399,147,83,16],'#DEEBF5'),('attention','Multi-Head\nAttention',[1399,167,83,28],'#FFF5EF'),('scale1','Scale',[1399,200,83,23],'#DEEBF5'),('ln2','Layer Norm',[1399,227,83,17],'#F3F3F3'),('shift2','Scale, Shift',[1399,249,83,17],'#DEEBF5'),('ffn','FFN',[1399,272,83,16],'#F3F3F3'),('scale2','Scale',[1399,293,83,16],'#DEEBF5')]
+for id,s,b,c in modules:
+ bg('block_'+id,b,c,'#777777',sh='round_rect',radius=3)
+ text('block_'+id+'_text',s,[b[0]+1,b[1]-1,b[2]-2,b[3]+2],11,False,'Arial',align='center',valign='middle',line_height=1)
+line('block_input',[[1381,83],[1381,106]],1.5,arrow=True)
+line('mlp_trunk',[[1372,143],[1372,301]],1.2)
+for j,yy in enumerate([155,211,258,301]):line(f'mlp_branch{j}',[[1372,yy],[1398,yy]],1.2,arrow=True)
+# Brace measured as native strokes; Block x N is regular serif, horizontal frame rotated -90.
+for j,p in enumerate([[[1309,100],[1302,101]],[[1302,101],[1302,199]],[[1302,199],[1295,201]],[[1295,201],[1302,202]],[[1302,202],[1302,300]],[[1302,300],[1309,301]]]):line(f'block_brace{j}',p,1)
+text('block_repeat','Block x N',[1230,185,85,27],18,rotation=-90,align='center')
+line('head_trunk',[[1417,314],[1417,338]],1.7)
+line('head_bus',[[1250,338],[1549,338]],1.5)
+for j,x in enumerate([1220,1317,1408,1518]):
+ line(f'head_branch{j}',[[x+30,338],[x+30,362]],1.3,arrow=True)
+ bg(f'action_head{j}',[x,363,61,29],'#C6C4D4','#1A1A1A',sh='round_rect',radius=5)
+ text(f'action_head{j}_label','Action\nHead',[x+3,363,55,31],11,False,'Arial',align='center',line_height=1)
+text('heads_ellipsis','···',[1484,360,28,29],24,True)
+for j,b in enumerate([[1213,401,82,86],[1315,403,81,85],[1410,402,69,86],[1501,403,82,80]]):img(f'robot_photo{j}',b,'Exact source robot embodiment photograph/artwork; no readable diagram labels.')
+# Source-supported joins: explicit named pair declarations, only on shared endpoint paths.
+joins=[('mlp_trunk',f'mlp_branch{j}') for j in range(4)]+[('head_trunk','head_bus')]+[('head_bus',f'head_branch{j}') for j in range(4)]+[(f'block_brace{j}',f'block_brace{j+1}') for j in range(5)]
+for a,b in joins:
+ e=next(e for e in els if e['id']==a);e.setdefault('allow_overlap_with',[]).append(b);e['overlap_reason']='Source-visible connected branch or brace segments meet at this named junction.'
+# Parentage is specific to source panels and cells.
+for pre in ['stage1','stage23']:
+ for e in els:
+  if e['id'].startswith(pre+'_noisecell') or e['id'].startswith(pre+'_noisestripe') or e['id']==pre+'_noise_ellipsis':e['container']=pre+'_noisebox'
+ for suffix,parent in [('title','card'),('instruction','card'),('photos','card'),('vlm_label','vlm'),('reason_label','reason'),('film_label','film_card'),('expert_label','expert')]:
+  next(e for e in els if e['id']==pre+'_'+suffix)['container']=pre+'_'+parent
+ for a,b in [('user0','user1'),('user1','user3')]:
+  e=next(e for e in els if e['id']==pre+'_'+a);e.setdefault('allow_overlap_with',[]).append(pre+'_'+b);e['overlap_reason']='Source-visible user icon consists of connected native outline segments.'
+for e in els:
+ if e['id'].startswith('block_') and e['id'].endswith('_text'):e['container']=e['id'][:-5]
+ if e['id'].startswith('action_head') and e['id'].endswith('_label'):e['container']=e['id'][:-6]
+scene={'version':1,'title':'DexVLA Figure 2 — complete architecture','slides':[{'id':'page_001','width':1605,'height':500,'source':'pages/page_001/source.png','background':'#FFFFFF','reviewed':True,'notes':'Reconstructed from pixels of official CoRL 2025 Figure 2; all panels retained. Robot/observation artwork crops remain movable raster assets. See REPORT.md for typography and geometry limitations.','elements':els}]}
+(J/'scene.json').write_text(json.dumps(scene,indent=2));(R/'asset_crops.json').write_text(json.dumps(crops,indent=2));print(len(els),'objects')

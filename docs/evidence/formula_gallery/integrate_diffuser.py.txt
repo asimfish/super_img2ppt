@@ -1,0 +1,37 @@
+import hashlib,json,shutil
+from collections import Counter
+from pathlib import Path
+r=Path.cwd();w=r/'output/formula_gallery_20260912';g=r/'examples/gallery/diffuser_actor';b=w/'diffuser/build_06';e=r/'docs/evidence/formula_gallery/diffuser_actor';e.mkdir(parents=True)
+# Preserve pre-repair deliverables and complete scene for source-independent before/after audit.
+for name in ['actual.png','actual.pdf','editable.pptx','scene.resolved.json','validation.json','fonts.json','manifest.json','REPORT.md']:
+ shutil.copy2(g/name,e/('before_'+name))
+old=json.loads((g/'scene.resolved.json').read_text());new=json.loads((b/'scene.resolved.json').read_text())
+a={x['id']:x for x in old['slides'][0]['elements']};z={x['id']:x for x in new['slides'][0]['elements']}
+common=a.keys()&z.keys();changed=[k for k in sorted(common) if a[k]!=z[k]]
+assert changed==['denoiseN'],changed
+for key in a['denoiseN']:
+ if key!='allow_overlap_with':assert a['denoiseN'][key]==z['denoiseN'][key]
+# Existing photo/shape/line geometry is identical; only the renamed declared reference changes.
+for name in ['editable.pptx','scene.resolved.json','fonts.json','validation.json']:
+ shutil.copy2(b/name,g/name)
+shutil.copytree(b/'svg',g/'svg',dirs_exist_ok=True)
+shutil.copy2(b/'render/editable.pdf',g/'actual.pdf');shutil.copy2(b/'actual.png',g/'actual.png')
+for name in ['math_specs.json','font_resolution.json']:
+ shutil.copy2(w/'diffuser'/name,e/name)
+for name in ['repair_diffuser.py','render_diffuser.py','components.py']:
+ shutil.copy2(w/name,e/(name+'.txt'))
+for stage in range(1,7):
+ p=w/f'diffuser/build_{stage:02}/validation.json'
+ if p.exists():shutil.copy2(p,e/f'build_{stage:02}_validation.json')
+for name in ['init_compare.png','formula_compare.png','steps_compare.png']:
+ shutil.copy2(b/name,e/name)
+agent=Path('/tmp/diffuser-init-math-20260912');ae=e/'independent_initialization';ae.mkdir()
+for p in agent.rglob('*'):
+ if p.is_file() and (p.name in {'REPORT.md','validation.json','math.json','elements.json','comparison_8x.png'} or p.parent==agent and p.suffix in {'.json','.py','.sh','.md'}):
+  q=ae/p.relative_to(agent);q.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,q.with_name(q.name+'.txt') if p.suffix in {'.py','.sh'} else q)
+manifest=json.loads((g/'manifest.json').read_text());manifest.update(runtime='0.3.5',native_counts=dict(Counter(x['kind'] for x in z.values())),original_build=str(b),pptx_sha256=hashlib.sha256((g/'editable.pptx').read_bytes()).hexdigest(),actual_sha256=hashlib.sha256((g/'actual.png').read_bytes()).hexdigest(),formula_revision='Native symbol styles and explicit script baselines; residual font/glyph differences remain. See docs/formula_gallery.md.')
+(g/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+report={'baseline_commit':'56712f5b70ddea937206043e127fe08612c0a9d0','removed_ids':sorted(a.keys()-z.keys()),'added_ids':sorted(z.keys()-a.keys()),'common_changed_ids':changed,'non_formula_change':'Only denoiseN allow_overlap_with reference renamed from tauN_sup to initial_distribution_1; geometry/assets unchanged.','native_counts':manifest['native_counts'],'status':json.loads((g/'validation.json').read_text())['status'],'unicode_relation_preserved':'U+223C, explicitly composed in DejaVu Sans; body Times New Roman','perfect_source_fidelity':False}
+(e/'scene_diff.json').write_text(json.dumps(report,indent=2)+'\n')
+cases=json.loads((w/'cases.json').read_text());cases.append({'id':'diffuser_actor','rasterization':{'engine':'pdfium','crop_to_source_size':False}});(w/'cases.json').write_text(json.dumps(cases,indent=2)+'\n')
+print(report)

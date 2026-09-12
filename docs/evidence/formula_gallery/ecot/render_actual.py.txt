@@ -1,0 +1,10 @@
+import sys,json
+from pathlib import Path
+import pypdfium2 as pdf
+
+from PIL import Image
+b=Path(sys.argv[1]);p=pdf.PdfDocument(b/'render/editable.pdf')[0];im=p.render(scale=1587/p.get_width()).to_pil().convert('RGB');im.save(b/'actual_source_width_raw.png');record={'pdf_width_pt':p.get_width(),'pdf_height_pt':p.get_height(),'scale':1587/p.get_width(),'raw_size':im.size,'target_size':[1587,593]}
+if im.size==(1587,594):
+ record['extra_row_all_white']=all(v==(255,255,255) for v in im.crop((0,593,1587,594)).getdata());assert record['extra_row_all_white'];im=im.crop((0,0,1587,593))
+assert im.size==(1587,593), im.size
+im.save(b/'actual_source_width.png');(b/'rasterization.json').write_text(json.dumps(record,indent=2))

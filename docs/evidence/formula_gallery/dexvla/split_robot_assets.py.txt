@@ -1,0 +1,13 @@
+import json
+from pathlib import Path
+from PIL import Image
+R=Path(__file__).parent;J=R/'job';p=J/'scene.json';s=json.loads(p.read_text());es=s['slides'][0]['elements'];src=Image.open(R/'source.png');crops=json.loads((R/'asset_crops.json').read_text())
+for pre,left,right,points in [('stage1',[381,390,48,57],[440,390,50,57],[[430.5,418.5],[441,418.5]]),('stage23',[974,389,48,57],[1034,389,49,57],[[1024,417.5],[1034,417.5]])]:
+ old=next(e for e in es if e['id']==pre+'_robot_result');es.remove(old);crops=[c for c in crops if c['id']!=old['id']]
+ for label,b in [('initial',left),('moved',right)]:
+  id=pre+'_robot_'+label;x,y,w,h=b;path='assets/'+id+'.png';src.crop((x,y,x+w,y+h)).save(J/path)
+  es.append(dict(id=id,kind='image',box=b,path=path,contains_text=False,provenance='Exact source complex robot kinematics/motion artwork crop; no readable labels. Arrow between states is native.',image_fit='stretch'))
+  crops.append(dict(id=id,crop=b,description='Complex robot kinematics/motion artwork, no readable labels.'))
+ es.append(dict(id=pre+'_robot_transition',kind='line',points=points,stroke='#252525',stroke_width=.75,arrow=True,arrow_head=dict(length=3,width=3)))
+for i,e in enumerate(es):e['z']=i+1
+p.write_text(json.dumps(s,indent=2));(R/'asset_crops_final.json').write_text(json.dumps(crops,indent=2))

@@ -1,0 +1,81 @@
+import json
+from pathlib import Path
+from PIL import Image
+P=Path(__file__).parent; J=P/'job'; A=J/'assets'; A.mkdir(exist_ok=True)
+im=Image.open(P/'source.png')
+for name,box in [('input_photo',(25,82,178,234)),('robot_photo',(1114,306,1274,474))]: im.crop(box).save(A/(name+'.png'))
+e=[]
+def add(id,kind,**kw):
+ d=dict(id=id,kind=kind,z=len(e)+1,**kw);e.append(d);return id
+def shape(id,b,fill=None,stroke=None,sw=1,r=0,**kw):return add(id,'shape',box=b,shape='round_rect' if r else 'rect',fill=fill,stroke=stroke,stroke_width=sw,**({'radius':r} if r else {}),**kw)
+def txt(id,t,b,fs=26,font='Arial',**kw):return add(id,'text',box=b,text=t,font_size=fs,font_family=font,color='#606060',fit='strict',wrap=False,**kw)
+def line(id,p1,p2,sw=2,arrow=False,**kw):return add(id,'line',points=[p1,p2],stroke='#606060',stroke_width=sw,**({'arrow':True,'arrow_head':{'length':9,'width':9}} if arrow else {}),**kw)
+shape('outer',[213,9,881,460],None,'#D7D7D7',3,16,dash=[6,6],role='background')
+txt('openvla','OpenVLA',[227,15,225,55],40,bold=True)
+add('input_photo','image',box=[25,82,153,152],path='assets/input_photo.png',contains_text=False,provenance='Exact source-pixel crop of input camera photograph, no labels.')
+shape('photo_border',[25,82,153,152],None,'#606060',2,allow_overlap_with=['input_photo'],overlap_reason='Source photograph has thin rectangular border.')
+txt('input_label','Input Image',[35,238,135,30],21,align='center')
+shape('instruction',[16,324,171,84],'#FFFFFF','#999999',1,9)
+txt('instruction_1','“Put eggplant',[24,332,159,38],26,container='instruction')
+txt('instruction_2','in bowl”',[53,366,109,36],26,container='instruction')
+txt('instruction_label','Language Instruction',[4,415,203,31],21)
+shape('llama',[301,142,764,84],'#F4F4F4','#999999',2,13)
+txt('llama_label','Llama 2 7B',[572,157,229,56],40,container='llama')
+shape('detok',[762,23,302,50],'#DDCCF4','#806B98',2,13)
+txt('detok_label','Action De-Tokenizer',[779,28,280,42],30,container='detok')
+shape('projector',[303,307,274,36],None,'#999999',2,9,gradient={'direction':'horizontal','stops':[{'offset':0,'color':'#FFF2CC'},{'offset':1,'color':'#ABC7F0'}]})
+txt('projector_label','MLP Projector',[373,309,171,33],21,container='projector')
+shape('visual_group',[298,347,286,57],None,'#D7D7D7',2,8,dash=[4,4],role='background')
+shape('dinov2',[303,350,135,49],'#FFF2CC','#F1B900',2,12)
+txt('dinov2_label','DinoV2',[322,356,115,39],30,container='dinov2')
+shape('siglip',[444,350,136,50],'#A9C5EF','#397AED',2,12)
+txt('siglip_label','SigLIP',[468,356,105,39],30,container='siglip')
+shape('tokenizer',[605,308,281,50],'#D9EAD3','#68A745',2,12)
+txt('tokenizer_label','Llama Tokenizer',[639,314,245,43],30,container='tokenizer')
+for i,x in enumerate([303,361,419,477,536]):
+ shape(f'vision_token_{i}',[x,242,41,21],None,'#999999',1,8,gradient={'direction':'horizontal','stops':[{'offset':0,'color':'#FFF2CC'},{'offset':1,'color':'#ABC7F0'}]})
+ line(f'vision_arrow_{i}',[x+20.5,295],[x+20.5,274],2,True)
+for i,x in enumerate([609,667,725,783,842]):
+ shape(f'language_token_{i}',[x,242,41,21],'#D9EAD3','#68A745',1,8)
+ line(f'language_arrow_{i}',[x+20.5,295],[x+20.5,274],2,True)
+for i,x in enumerate([898,956,1014]):
+ shape(f'action_token_{i}',[x,106,41,21],'#DDCCF4','#806B98',1,8)
+ line(f'action_arrow_{i}',[x+20.5,100],[x+20.5,79],2,True)
+line('input_path_a',[182,158],[263,158]);line('input_path_b',[263,158],[263,428]);line('input_path_c',[263,428],[511,428])
+line('vision_in_dino',[370,428],[370,405],2,True);line('vision_in_siglip',[511,428],[511,405],2,True)
+add('junction','shape',box=[367,424,7,7],shape='ellipse',fill='#606060',allow_overlap_with=['input_path_c','vision_in_dino'],overlap_reason='Filled merge dot at source image branch junction.')
+line('instruction_path_a',[195,366],[242,366]);line('instruction_path_b',[242,366],[242,447]);line('instruction_path_c',[242,447],[557,447],2,True)
+txt('prompt','“What should the robot do to {task}? A:”',[562,432,476,35],21)
+line('tokenizer_input',[745.5,427],[745.5,371],2,True)
+line('output_path_a',[1068,47],[1192,47]);line('output_path_b',[1192,47],[1192,74],2,True)
+for side,x,xx in [('left',1143,1154),('right',1241,1229)]:
+ line('bracket_'+side,[x,81],[x,202],2)
+ line('bracket_'+side+'_top',[x,81],[xx,81],2)
+ line('bracket_'+side+'_bottom',[x,202],[xx,202],2)
+txt('delta_x','Δ',[1172,82,30,43],36,font='Times New Roman')
+txt('x','x',[1198,88,26,36],29)
+txt('delta_theta','Δ',[1171,122,30,43],36,font='Times New Roman')
+txt('theta','θ',[1196,121,32,48],36,font='Times New Roman',italic=True)
+txt('delta_grip','Δ',[1152,162,30,43],36,font='Times New Roman')
+txt('grip','Grip',[1175,165,64,38],29)
+txt('action_7d','7D Robot',[1140,212,109,30],21,align='center')
+txt('action_label','Action',[1159,236,73,30],21,align='center')
+line('robot_arrow',[1192,271],[1192,296],2,True)
+add('robot_photo','image',box=[1114,306,160,168],path='assets/robot_photo.png',contains_text=False,provenance='Exact source-pixel crop of robot photograph, no diagram labels.')
+for n,y,targets in [(3,131,['llama']),(2,294,['projector']),(1,384,['dinov2','visual_group'])]:
+ id=f'circle_{n}';add(id,'shape',box=[290,y,32,32],shape='ellipse',fill='#FFFFFF',stroke='#888888',stroke_width=2,allow_overlap_with=targets,overlap_reason='Number circle intentionally overlaps upper left module boundary as in source.')
+ txt(f'number_{n}',str(n),[298,y-1,20,36],25,container=id,allow_overlap_with=targets,overlap_reason='Source section number sits over the named module boundary.')
+joins=[('input_path_a','input_path_b'),('input_path_b','input_path_c'),('input_path_c','vision_in_dino'),('input_path_c','vision_in_siglip'),('instruction_path_a','instruction_path_b'),('instruction_path_b','instruction_path_c'),('output_path_a','output_path_b'),('bracket_left','bracket_left_top'),('bracket_left','bracket_left_bottom'),('bracket_right','bracket_right_top'),('bracket_right','bracket_right_bottom')]
+byid={v['id']:v for v in e}
+for a,b in joins:
+ byid[a].setdefault('allow_overlap_with',[]).append(b)
+ byid[a]['overlap_reason']='Source-verified continuous connector corner or branch / bracket segment join; stroke-width intersection only.'
+# First measured typography repair; preserve source positions and symbolic styles.
+for id,dx,dy,fs in [('openvla',1,3,39),('llama_label',8,3,40.5),('detok_label',1,3,29.5),('projector_label',1,2,21),('dinov2_label',0,0,29),('siglip_label',1,1,29.5),('tokenizer_label',0,1,29.5),('input_label',0,2,21),('instruction_1',1,2,26),('instruction_2',1,2,26),('instruction_label',1,1,21),('prompt',1,2,20.8),('delta_x',0,-2,36),('delta_theta',0,-2,36),('delta_grip',-1,-2,36),('theta',0,0,34),('x',0,-2,29),('grip',0,0,30)]:
+ byid[id]['box'][0]+=dx;byid[id]['box'][1]+=dy;byid[id]['font_size']=fs
+# Second and final targeted visual repair.
+for id,dx,dy in [('detok_label',0,-1),('dinov2_label',0,1),('siglip_label',-1,0),('theta',0,1)]:
+ byid[id]['box'][0]+=dx;byid[id]['box'][1]+=dy
+byid['prompt']['font_size']=20.95
+scene={'version':1,'slides':[{'id':'page_001','width':1276,'height':477,'source':'pages/page_001/source.png','background':'#FFFFFF','reviewed':True,'notes':'Reconstruction of Figure 2, OpenVLA, PMLR270 (2025). Full architecture figure; two photo-only crops; all diagram labels editable. See ATTRIBUTION.md.','elements':e}]}
+(J/'scene.json').write_text(json.dumps(scene,indent=2))

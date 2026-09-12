@@ -1,0 +1,2035 @@
+{
+  "version": 1,
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 1587,
+      "height": 593,
+      "source": "assets/32a567ffd2c44f74dbeb.png",
+      "background": "#FFFFFF",
+      "reviewed": true,
+      "notes": "Adapted from Zawalski et al. (2025), PMLR 270:3157–3181, Figure 4. https://proceedings.mlr.press/v270/zawalski25a.html CC BY 4.0. Raster-based native reconstruction; photos and logos retained as local raster assets.",
+      "elements": [
+        {
+          "id": "dataset",
+          "kind": "shape",
+          "z": 0,
+          "box": [
+            2,
+            36,
+            379,
+            554
+          ],
+          "shape": "round_rect",
+          "fill": null,
+          "stroke": "#A0A0A0",
+          "stroke_width": 3.4,
+          "dash": [
+            27,
+            11
+          ],
+          "radius": 28
+        },
+        {
+          "id": "describe",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            416,
+            36,
+            370,
+            210
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#BFBFBF",
+          "stroke_width": 3.4,
+          "radius": 23
+        },
+        {
+          "id": "boxes",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            416,
+            297,
+            370,
+            293
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#BFBFBF",
+          "stroke_width": 3.4,
+          "radius": 23
+        },
+        {
+          "id": "motion",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            814,
+            34,
+            370,
+            212
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#BFBFBF",
+          "stroke_width": 3.4,
+          "radius": 23
+        },
+        {
+          "id": "gripper",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            814,
+            297,
+            370,
+            293
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#BFBFBF",
+          "stroke_width": 3.4,
+          "radius": 23
+        },
+        {
+          "id": "plans",
+          "kind": "shape",
+          "z": 5,
+          "box": [
+            1212,
+            34,
+            370,
+            556
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#BFBFBF",
+          "stroke_width": 3.4,
+          "radius": 23
+        },
+        {
+          "id": "dataset_title",
+          "kind": "text",
+          "z": 6,
+          "box": [
+            18,
+            0,
+            363,
+            36
+          ],
+          "font_family": "Arial",
+          "font_size": 26,
+          "color": "#606060",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Robot Trajectory from Dataset",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "step1",
+          "kind": "text",
+          "z": 7,
+          "box": [
+            422,
+            0,
+            365,
+            38
+          ],
+          "font_family": "Arial",
+          "font_size": 26,
+          "color": "#606060",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "1. Describe scene",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "step2",
+          "kind": "text",
+          "z": 8,
+          "box": [
+            422,
+            261,
+            365,
+            38
+          ],
+          "font_family": "Arial",
+          "font_size": 26,
+          "color": "#606060",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "2. Extract bounding boxes",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "step3",
+          "kind": "text",
+          "z": 9,
+          "box": [
+            819,
+            0,
+            365,
+            38
+          ],
+          "font_family": "Arial",
+          "font_size": 26,
+          "color": "#606060",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "3. Compute motion primitives",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "step4",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            819,
+            261,
+            365,
+            38
+          ],
+          "font_family": "Arial",
+          "font_size": 26,
+          "color": "#606060",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "4. Compute gripper position",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "step5",
+          "kind": "text",
+          "z": 11,
+          "box": [
+            1217,
+            0,
+            365,
+            38
+          ],
+          "font_family": "Arial",
+          "font_size": 26,
+          "color": "#606060",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "5. Generate plans + subtasks",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "task_title",
+          "kind": "text",
+          "z": 12,
+          "box": [
+            111,
+            49,
+            185,
+            34
+          ],
+          "font_family": "Arial",
+          "font_size": 22,
+          "color": "#606060",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "dataset",
+          "runs": [
+            {
+              "text": "Task Instruction",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "instruction",
+          "kind": "shape",
+          "z": 13,
+          "box": [
+            25,
+            82,
+            332,
+            47
+          ],
+          "shape": "round_rect",
+          "fill": "#98DEFC",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "dataset",
+          "radius": 11
+        },
+        {
+          "id": "instruction_text",
+          "kind": "text",
+          "z": 14,
+          "box": [
+            34,
+            92,
+            319,
+            33
+          ],
+          "font_family": "Arial",
+          "font_size": 22,
+          "color": "#606060",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "instruction",
+          "runs": [
+            {
+              "text": "Put the watermelon on the towel",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "state",
+          "kind": "text",
+          "z": 15,
+          "box": [
+            143,
+            143,
+            150,
+            34
+          ],
+          "font_family": "Arial",
+          "font_size": 22,
+          "color": "#606060",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "dataset",
+          "runs": [
+            {
+              "text": "State Info",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "input_state2",
+          "kind": "shape",
+          "z": 16,
+          "box": [
+            60,
+            176,
+            299,
+            47
+          ],
+          "shape": "round_rect",
+          "fill": "#F2F2F2",
+          "stroke": "#A0A0A0",
+          "stroke_width": 2.2,
+          "container": "dataset",
+          "radius": 7,
+          "allow_overlap_with": [
+            "input_state1",
+            "input_state0",
+            "input_formula"
+          ],
+          "overlap_reason": "Foreground state card and its formula cover the rear cards as in source."
+        },
+        {
+          "id": "input_state1",
+          "kind": "shape",
+          "z": 17,
+          "box": [
+            44,
+            194,
+            299,
+            47
+          ],
+          "shape": "round_rect",
+          "fill": "#F2F2F2",
+          "stroke": "#A0A0A0",
+          "stroke_width": 2.2,
+          "container": "dataset",
+          "radius": 7,
+          "allow_overlap_with": [
+            "input_state0",
+            "input_formula"
+          ],
+          "overlap_reason": "Foreground state card and its formula cover the rear cards as in source."
+        },
+        {
+          "id": "input_state0",
+          "kind": "shape",
+          "z": 18,
+          "box": [
+            28,
+            212,
+            299,
+            47
+          ],
+          "shape": "round_rect",
+          "fill": "#F2F2F2",
+          "stroke": "#A0A0A0",
+          "stroke_width": 2.2,
+          "container": "dataset",
+          "radius": 7,
+          "allow_overlap_with": [],
+          "overlap_reason": "Source shows successively offset state cards occluded by the foreground card."
+        },
+        {
+          "id": "input_formula",
+          "kind": "text",
+          "z": 19,
+          "box": [
+            56,
+            223,
+            260,
+            34
+          ],
+          "font_family": "Arial",
+          "font_size": 21.2,
+          "color": "#606060",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "input_state0",
+          "runs": [
+            {
+              "text": "Proprio 1: ",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21.2,
+              "bold": true,
+              "italic": false,
+              "color": "#606060"
+            },
+            {
+              "text": "[Δ",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21.2,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            },
+            {
+              "text": "x",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21.2,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            },
+            {
+              "text": ", Δ",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21.2,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            },
+            {
+              "text": "θ",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 22,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            },
+            {
+              "text": ", ΔGrip]",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21.2,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "output_state2",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            895,
+            84,
+            279,
+            47
+          ],
+          "shape": "round_rect",
+          "fill": "#F2F2F2",
+          "stroke": "#A0A0A0",
+          "stroke_width": 2.2,
+          "container": "motion",
+          "radius": 7,
+          "allow_overlap_with": [
+            "output_state1",
+            "output_state0",
+            "output_formula"
+          ],
+          "overlap_reason": "Foreground state card and its formula cover the rear cards as in source."
+        },
+        {
+          "id": "output_state1",
+          "kind": "shape",
+          "z": 21,
+          "box": [
+            886,
+            94,
+            279,
+            47
+          ],
+          "shape": "round_rect",
+          "fill": "#F2F2F2",
+          "stroke": "#A0A0A0",
+          "stroke_width": 2.2,
+          "container": "motion",
+          "radius": 7,
+          "allow_overlap_with": [
+            "output_state0",
+            "output_formula"
+          ],
+          "overlap_reason": "Foreground state card and its formula cover the rear cards as in source."
+        },
+        {
+          "id": "output_state0",
+          "kind": "shape",
+          "z": 22,
+          "box": [
+            877,
+            104,
+            279,
+            47
+          ],
+          "shape": "round_rect",
+          "fill": "#F2F2F2",
+          "stroke": "#A0A0A0",
+          "stroke_width": 2.2,
+          "container": "motion",
+          "radius": 7,
+          "allow_overlap_with": [],
+          "overlap_reason": "Source shows successively offset state cards occluded by the foreground card."
+        },
+        {
+          "id": "output_formula",
+          "kind": "text",
+          "z": 23,
+          "box": [
+            895,
+            115,
+            260,
+            34
+          ],
+          "font_family": "Arial",
+          "font_size": 21.2,
+          "color": "#606060",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "output_state0",
+          "runs": [
+            {
+              "text": "Proprio 1: ",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21.2,
+              "bold": true,
+              "italic": false,
+              "color": "#606060"
+            },
+            {
+              "text": "[Δ",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21.2,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            },
+            {
+              "text": "x",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21.2,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            },
+            {
+              "text": ", Δ",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21.2,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            },
+            {
+              "text": "θ",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 22,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            },
+            {
+              "text": ", ΔGrip]",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 21.2,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "obs",
+          "kind": "text",
+          "z": 24,
+          "box": [
+            125,
+            275,
+            200,
+            33
+          ],
+          "font_family": "Arial",
+          "font_size": 22,
+          "color": "#606060",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "dataset",
+          "runs": [
+            {
+              "text": "Observations",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "photo_back",
+          "kind": "image",
+          "z": 25,
+          "box": [
+            58,
+            304,
+            302,
+            227
+          ],
+          "path": "assets/919652b6d4cdc0629a80.png",
+          "contains_text": false,
+          "provenance": "Exact local crop from official PMLR PDF raster; see provenance.json",
+          "container": "dataset",
+          "allow_overlap_with": [
+            "photo_mid",
+            "photo_front"
+          ],
+          "overlap_reason": "Original dataset observations are three overlapping photo cards."
+        },
+        {
+          "id": "photo_mid",
+          "kind": "image",
+          "z": 26,
+          "box": [
+            43,
+            322,
+            302,
+            227
+          ],
+          "path": "assets/f9228766b3ec0d651d89.png",
+          "contains_text": false,
+          "provenance": "Exact local crop from official PMLR PDF raster; see provenance.json",
+          "container": "dataset",
+          "allow_overlap_with": [
+            "photo_front"
+          ],
+          "overlap_reason": "Original dataset observations are three overlapping photo cards."
+        },
+        {
+          "id": "photo_front",
+          "kind": "image",
+          "z": 27,
+          "box": [
+            27,
+            340,
+            302,
+            227
+          ],
+          "path": "assets/3f8177321462148c6228.png",
+          "contains_text": false,
+          "provenance": "Exact local crop from official PMLR PDF raster; see provenance.json",
+          "container": "dataset",
+          "allow_overlap_with": [],
+          "overlap_reason": "Original dataset observations are three overlapping photo cards."
+        },
+        {
+          "id": "prismatic",
+          "kind": "text",
+          "z": 28,
+          "box": [
+            516,
+            42,
+            226,
+            36
+          ],
+          "font_family": "Arial",
+          "font_size": 25,
+          "color": "#606060",
+          "bold": true,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "describe",
+          "runs": [
+            {
+              "text": "Prismatic-VLM",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 25,
+              "bold": true,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "rainbow_logo",
+          "kind": "image",
+          "z": 29,
+          "box": [
+            745,
+            41,
+            30,
+            29
+          ],
+          "path": "assets/9b40af65d47ce03a69db.png",
+          "contains_text": false,
+          "provenance": "Exact local crop from official PMLR PDF raster; see provenance.json",
+          "container": "describe"
+        },
+        {
+          "id": "describe_prompt",
+          "kind": "shape",
+          "z": 30,
+          "box": [
+            430,
+            76,
+            339,
+            48
+          ],
+          "shape": "round_rect",
+          "fill": "#D8D8D8",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "describe",
+          "radius": 17
+        },
+        {
+          "id": "describe_prompt_text",
+          "kind": "text",
+          "z": 31,
+          "box": [
+            443,
+            83,
+            316,
+            35
+          ],
+          "font_family": "Arial",
+          "font_size": 22,
+          "color": "#606060",
+          "bold": true,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "describe_prompt",
+          "runs": [
+            {
+              "text": "Please describe the scene.",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": true,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "description",
+          "kind": "shape",
+          "z": 32,
+          "box": [
+            431,
+            136,
+            338,
+            97
+          ],
+          "shape": "round_rect",
+          "fill": "#DFF6D5",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "describe",
+          "radius": 24
+        },
+        {
+          "id": "description_line1",
+          "kind": "text",
+          "z": 33,
+          "box": [
+            444,
+            158,
+            313,
+            34
+          ],
+          "font_family": "Arial",
+          "font_size": 22,
+          "color": "#606060",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "description",
+          "runs": [
+            {
+              "text": "This scene has a ",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            },
+            {
+              "text": "watermelon",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": true,
+              "color": "#FF0000"
+            },
+            {
+              "text": ",",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "description_line2",
+          "kind": "text",
+          "z": 34,
+          "box": [
+            444,
+            184,
+            320,
+            34
+          ],
+          "font_family": "Arial",
+          "font_size": 22,
+          "color": "#606060",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "description",
+          "runs": [
+            {
+              "text": "spoon",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": true,
+              "color": "#00BE44"
+            },
+            {
+              "text": ", ",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            },
+            {
+              "text": "towel",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": true,
+              "color": "#0097CE"
+            },
+            {
+              "text": ", and ",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            },
+            {
+              "text": "mushroom.",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": true,
+              "color": "#FF6800"
+            }
+          ]
+        },
+        {
+          "id": "grounding",
+          "kind": "text",
+          "z": 35,
+          "box": [
+            504,
+            303,
+            235,
+            36
+          ],
+          "font_family": "Arial",
+          "font_size": 25,
+          "color": "#606060",
+          "bold": true,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "boxes",
+          "runs": [
+            {
+              "text": "Grounding DINO",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 25,
+              "bold": true,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "dino_logo",
+          "kind": "image",
+          "z": 36,
+          "box": [
+            743,
+            304,
+            36,
+            30
+          ],
+          "path": "assets/8542519df1a624cda20a.png",
+          "contains_text": false,
+          "provenance": "Exact local crop from official PMLR PDF raster; see provenance.json",
+          "container": "boxes"
+        },
+        {
+          "id": "grounding_photo",
+          "kind": "image",
+          "z": 37,
+          "box": [
+            452,
+            342,
+            302,
+            227
+          ],
+          "path": "assets/3f8177321462148c6228.png",
+          "contains_text": false,
+          "provenance": "Same source observation reused from clean dataset foreground crop; four original detector boxes rebuilt as native rectangles.",
+          "container": "boxes"
+        },
+        {
+          "id": "proprio_title",
+          "kind": "text",
+          "z": 38,
+          "box": [
+            878,
+            41,
+            258,
+            37
+          ],
+          "font_family": "Arial",
+          "font_size": 25,
+          "color": "#606060",
+          "bold": true,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "motion",
+          "runs": [
+            {
+              "text": "Proprio → Primitives",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 25,
+              "bold": true,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "python_logo",
+          "kind": "image",
+          "z": 39,
+          "box": [
+            1147,
+            41,
+            29,
+            29
+          ],
+          "path": "assets/1d5c80db9887e2b270a0.png",
+          "contains_text": false,
+          "provenance": "Exact local crop from official PMLR PDF raster; see provenance.json",
+          "container": "motion"
+        },
+        {
+          "id": "curved_arrow",
+          "kind": "image",
+          "z": 40,
+          "box": [
+            823,
+            105,
+            51,
+            111
+          ],
+          "path": "assets/228c54343863f4b49250.png",
+          "contains_text": false,
+          "provenance": "Exact local crop from official PMLR PDF raster; see provenance.json",
+          "container": "motion"
+        },
+        {
+          "id": "motion_list",
+          "kind": "shape",
+          "z": 41,
+          "box": [
+            877,
+            179,
+            278,
+            42
+          ],
+          "shape": "round_rect",
+          "fill": "#FF9F96",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "motion",
+          "radius": 15
+        },
+        {
+          "id": "motion_text",
+          "kind": "text",
+          "z": 42,
+          "box": [
+            901,
+            186,
+            244,
+            34
+          ],
+          "font_family": "Arial",
+          "font_size": 22,
+          "color": "#606060",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "motion_list",
+          "runs": [
+            {
+              "text": "{right, down, down,  ...}",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "owl_title",
+          "kind": "text",
+          "z": 43,
+          "box": [
+            927,
+            303,
+            190,
+            37
+          ],
+          "font_family": "Arial",
+          "font_size": 25,
+          "color": "#606060",
+          "bold": true,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "gripper",
+          "runs": [
+            {
+              "text": "OWL + SAM",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 25,
+              "bold": true,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "owl_logo",
+          "kind": "image",
+          "z": 44,
+          "box": [
+            1143,
+            302,
+            35,
+            34
+          ],
+          "path": "assets/2901eb6f7a2b450a6cef.png",
+          "contains_text": false,
+          "provenance": "Exact local crop from official PMLR PDF raster; see provenance.json",
+          "container": "gripper"
+        },
+        {
+          "id": "gripper_photo",
+          "kind": "image",
+          "z": 45,
+          "box": [
+            848,
+            342,
+            302,
+            227
+          ],
+          "path": "assets/513bb557709a2251eeb3.png",
+          "contains_text": false,
+          "provenance": "Exact local crop from official PMLR PDF raster; see provenance.json",
+          "container": "gripper"
+        },
+        {
+          "id": "arm_label",
+          "kind": "shape",
+          "z": 46,
+          "box": [
+            925,
+            418,
+            181,
+            35
+          ],
+          "shape": "rect",
+          "fill": "#CA91FB",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "gripper",
+          "allow_overlap_with": [
+            "gripper_photo"
+          ],
+          "overlap_reason": "Native label fills the transparent hole cut around the original baked label; no duplicate baked text remains."
+        },
+        {
+          "id": "arm_text",
+          "kind": "text",
+          "z": 47,
+          "box": [
+            943,
+            423,
+            158,
+            30
+          ],
+          "font_family": "Arial",
+          "font_size": 19,
+          "color": "#606060",
+          "bold": false,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "arm_label",
+          "runs": [
+            {
+              "text": "black robotic arm",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 19,
+              "bold": false,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "gemini",
+          "kind": "text",
+          "z": 48,
+          "box": [
+            1325,
+            42,
+            195,
+            35
+          ],
+          "font_family": "Arial",
+          "font_size": 25,
+          "color": "#606060",
+          "bold": true,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "plans",
+          "runs": [
+            {
+              "text": "Gemini LLM",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 25,
+              "bold": true,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "gemini_logo",
+          "kind": "image",
+          "z": 49,
+          "box": [
+            1544,
+            42,
+            29,
+            29
+          ],
+          "path": "assets/f6c3f6f0eddcb69950a8.png",
+          "contains_text": false,
+          "provenance": "Exact local crop from official PMLR PDF raster; see provenance.json",
+          "container": "plans"
+        },
+        {
+          "id": "gemini_prompt",
+          "kind": "shape",
+          "z": 50,
+          "box": [
+            1228,
+            77,
+            338,
+            108
+          ],
+          "shape": "round_rect",
+          "fill": "#D8D8D8",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "plans",
+          "radius": 16
+        },
+        {
+          "id": "gemini_instruction",
+          "kind": "text",
+          "z": 51,
+          "box": [
+            1244,
+            83,
+            316,
+            50
+          ],
+          "font_family": "Arial",
+          "font_size": 18.5,
+          "color": "#606060",
+          "bold": true,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "line_height": 1.08,
+          "container": "gemini_prompt",
+          "runs": [
+            {
+              "text": "Explain the plan, subtask, and\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18.5,
+              "bold": true,
+              "italic": true,
+              "color": "#606060"
+            },
+            {
+              "text": "movement for each step, given:",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18.5,
+              "bold": true,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "task_pill",
+          "kind": "shape",
+          "z": 52,
+          "box": [
+            1238,
+            136,
+            94,
+            39
+          ],
+          "shape": "round_rect",
+          "fill": "#98DEFC",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "gemini_prompt",
+          "radius": 7
+        },
+        {
+          "id": "task_pill_text",
+          "kind": "text",
+          "z": 53,
+          "box": [
+            1238,
+            142,
+            94,
+            28
+          ],
+          "font_family": "Arial",
+          "font_size": 17,
+          "color": "#606060",
+          "bold": true,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "container": "task_pill",
+          "runs": [
+            {
+              "text": "Task",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": true,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "desc_pill",
+          "kind": "shape",
+          "z": 54,
+          "box": [
+            1350,
+            136,
+            94,
+            39
+          ],
+          "shape": "round_rect",
+          "fill": "#DFF6D5",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "gemini_prompt",
+          "radius": 7
+        },
+        {
+          "id": "desc_pill_text",
+          "kind": "text",
+          "z": 55,
+          "box": [
+            1350,
+            142,
+            94,
+            28
+          ],
+          "font_family": "Arial",
+          "font_size": 17,
+          "color": "#606060",
+          "bold": true,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "container": "desc_pill",
+          "runs": [
+            {
+              "text": "Desc.",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": true,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "moves_pill",
+          "kind": "shape",
+          "z": 56,
+          "box": [
+            1464,
+            136,
+            94,
+            39
+          ],
+          "shape": "round_rect",
+          "fill": "#FF9F96",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "gemini_prompt",
+          "radius": 7
+        },
+        {
+          "id": "moves_pill_text",
+          "kind": "text",
+          "z": 57,
+          "box": [
+            1464,
+            142,
+            94,
+            28
+          ],
+          "font_family": "Arial",
+          "font_size": 17,
+          "color": "#606060",
+          "bold": true,
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "container": "moves_pill",
+          "runs": [
+            {
+              "text": "Moves",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": true,
+              "italic": false,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "reasoning",
+          "kind": "shape",
+          "z": 58,
+          "box": [
+            1228,
+            195,
+            338,
+            374
+          ],
+          "shape": "round_rect",
+          "fill": "#F2F2F2",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "plans",
+          "radius": 10
+        },
+        {
+          "id": "reason_0",
+          "kind": "text",
+          "z": 59,
+          "box": [
+            1244,
+            217,
+            316,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 18.5,
+          "color": "#606060",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "reasoning",
+          "runs": [
+            {
+              "text": "Plan: ",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18.5,
+              "bold": true,
+              "italic": true,
+              "color": "#606060"
+            },
+            {
+              "text": "Go to watermelon, grasp, go",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18.5,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "reason_1",
+          "kind": "text",
+          "z": 60,
+          "box": [
+            1244,
+            238,
+            316,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 18.5,
+          "color": "#606060",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "reasoning",
+          "runs": [
+            {
+              "text": "to towel, release",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18.5,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "reason_2",
+          "kind": "text",
+          "z": 61,
+          "box": [
+            1244,
+            263,
+            316,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 18.5,
+          "color": "#606060",
+          "bold": true,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "reasoning",
+          "runs": [
+            {
+              "text": "Subtasks:",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18.5,
+              "bold": true,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "reason_3",
+          "kind": "text",
+          "z": 62,
+          "box": [
+            1244,
+            288,
+            316,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 18.5,
+          "color": "#606060",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "reasoning",
+          "runs": [
+            {
+              "text": "1. The robot needs to grasp the",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18.5,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "reason_4",
+          "kind": "text",
+          "z": 63,
+          "box": [
+            1244,
+            309,
+            316,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 18.5,
+          "color": "#606060",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "reasoning",
+          "runs": [
+            {
+              "text": "watermelon, so first must move to it",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18.5,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "reason_5",
+          "kind": "text",
+          "z": 64,
+          "box": [
+            1244,
+            334,
+            316,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 18.5,
+          "color": "#606060",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "reasoning",
+          "runs": [
+            {
+              "text": "2. The robot is at the watermelon, so",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18.5,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "reason_6",
+          "kind": "text",
+          "z": 65,
+          "box": [
+            1244,
+            355,
+            316,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 18.5,
+          "color": "#606060",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "reasoning",
+          "runs": [
+            {
+              "text": "it can now grasp it",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18.5,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "reason_7",
+          "kind": "text",
+          "z": 66,
+          "box": [
+            1244,
+            379,
+            316,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 18.5,
+          "color": "#606060",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "reasoning",
+          "runs": [
+            {
+              "text": "3. ...",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18.5,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "reason_8",
+          "kind": "text",
+          "z": 67,
+          "box": [
+            1244,
+            401,
+            316,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 18.5,
+          "color": "#606060",
+          "bold": true,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "reasoning",
+          "runs": [
+            {
+              "text": "Moves:",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18.5,
+              "bold": true,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "reason_9",
+          "kind": "text",
+          "z": 68,
+          "box": [
+            1244,
+            426,
+            316,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 18.5,
+          "color": "#606060",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "reasoning",
+          "runs": [
+            {
+              "text": "1.  The watermelon is right of the",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18.5,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "reason_10",
+          "kind": "text",
+          "z": 69,
+          "box": [
+            1272,
+            447,
+            288,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 18.5,
+          "color": "#606060",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "reasoning",
+          "runs": [
+            {
+              "text": "robot, so it must move <right>",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18.5,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "reason_11",
+          "kind": "text",
+          "z": 70,
+          "box": [
+            1244,
+            472,
+            316,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 18.5,
+          "color": "#606060",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "reasoning",
+          "runs": [
+            {
+              "text": "2.  The watermelon is below the",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18.5,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "reason_12",
+          "kind": "text",
+          "z": 71,
+          "box": [
+            1272,
+            493,
+            288,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 18.5,
+          "color": "#606060",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "reasoning",
+          "runs": [
+            {
+              "text": "robot, so it must move <down>",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18.5,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "reason_13",
+          "kind": "text",
+          "z": 72,
+          "box": [
+            1244,
+            517,
+            316,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 18.5,
+          "color": "#606060",
+          "bold": false,
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "reasoning",
+          "runs": [
+            {
+              "text": "3.  ...",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18.5,
+              "bold": false,
+              "italic": true,
+              "color": "#606060"
+            }
+          ]
+        },
+        {
+          "id": "bbox_towel",
+          "kind": "shape",
+          "z": 173,
+          "box": [
+            488,
+            406,
+            94,
+            72
+          ],
+          "shape": "rect",
+          "fill": null,
+          "stroke": "#009CE0",
+          "stroke_width": 2,
+          "container": "boxes",
+          "allow_overlap_with": [
+            "grounding_photo",
+            "bbox_spoon"
+          ],
+          "overlap_reason": "Source detection rectangle intentionally overlays the observation photograph."
+        },
+        {
+          "id": "bbox_spoon",
+          "kind": "shape",
+          "z": 174,
+          "box": [
+            561,
+            445,
+            72,
+            61
+          ],
+          "shape": "rect",
+          "fill": null,
+          "stroke": "#00CD54",
+          "stroke_width": 2,
+          "container": "boxes",
+          "allow_overlap_with": [
+            "grounding_photo",
+            "bbox_watermelon"
+          ],
+          "overlap_reason": "Source detection rectangle intentionally overlays the observation photograph."
+        },
+        {
+          "id": "bbox_watermelon",
+          "kind": "shape",
+          "z": 175,
+          "box": [
+            586,
+            500,
+            149,
+            46
+          ],
+          "shape": "rect",
+          "fill": null,
+          "stroke": "#ED0000",
+          "stroke_width": 2,
+          "container": "boxes",
+          "allow_overlap_with": [
+            "grounding_photo"
+          ],
+          "overlap_reason": "Source detection rectangle intentionally overlays the observation photograph."
+        },
+        {
+          "id": "bbox_mushroom",
+          "kind": "shape",
+          "z": 176,
+          "box": [
+            688,
+            449,
+            54,
+            45
+          ],
+          "shape": "rect",
+          "fill": null,
+          "stroke": "#FF6300",
+          "stroke_width": 2,
+          "container": "boxes",
+          "allow_overlap_with": [
+            "grounding_photo"
+          ],
+          "overlap_reason": "Source detection rectangle intentionally overlays the observation photograph."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "status": "fail",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "fail",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "initial_distribution_0",
+            "initial_distribution_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 84.312
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "initial_distribution_2",
+            "initial_distribution_3"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "initial_distribution_3",
+            "initial_distribution_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "initial_distribution_4",
+            "initial_distribution_5"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "initial_distribution_5",
+            "initial_distribution_6"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "initial_distribution_7",
+            "initial_distribution_8"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "text": 9
+          },
+          "intentional_overlaps": [],
+          "text_layouts": {
+            "initial_distribution_0": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 16.25,
+              "height_px": 28.5,
+              "available_width_px": 17.25,
+              "available_height_px": 29.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 16.75,
+              "required_height_px": 29.0,
+              "fits": true,
+              "lines": [
+                "τ"
+              ]
+            },
+            "initial_distribution_1": {
+              "scale": 1,
+              "effective_font_size_px": 16.0,
+              "width_px": 15.75,
+              "height_px": 19.25,
+              "available_width_px": 16.75,
+              "available_height_px": 20.25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 16.25,
+              "required_height_px": 19.75,
+              "fits": true,
+              "lines": [
+                "N"
+              ]
+            },
+            "initial_distribution_2": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 20.0,
+              "height_px": 28.25,
+              "available_width_px": 21.0,
+              "available_height_px": 29.25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 20.5,
+              "required_height_px": 28.75,
+              "fits": true,
+              "lines": [
+                "∼"
+              ]
+            },
+            "initial_distribution_3": {
+              "scale": 1,
+              "effective_font_size_px": 21.6,
+              "width_px": 20.0,
+              "height_px": 25.5,
+              "available_width_px": 21.0,
+              "available_height_px": 26.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 20.5,
+              "required_height_px": 26.0,
+              "fits": true,
+              "lines": [
+                "N"
+              ]
+            },
+            "initial_distribution_4": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 9.25,
+              "height_px": 28.25,
+              "available_width_px": 10.25,
+              "available_height_px": 29.25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.75,
+              "required_height_px": 28.75,
+              "fits": true,
+              "lines": [
+                "("
+              ]
+            },
+            "initial_distribution_5": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 16.75,
+              "height_px": 28.5,
+              "available_width_px": 17.75,
+              "available_height_px": 29.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 17.25,
+              "required_height_px": 29.0,
+              "fits": true,
+              "lines": [
+                "0"
+              ]
+            },
+            "initial_distribution_6": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 7.75,
+              "height_px": 28.25,
+              "available_width_px": 8.75,
+              "available_height_px": 29.25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.25,
+              "required_height_px": 28.75,
+              "fits": true,
+              "lines": [
+                ","
+              ]
+            },
+            "initial_distribution_7": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 16.75,
+              "height_px": 28.5,
+              "available_width_px": 17.75,
+              "available_height_px": 29.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 17.25,
+              "required_height_px": 29.0,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "initial_distribution_8": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 9.25,
+              "height_px": 28.25,
+              "available_width_px": 10.25,
+              "available_height_px": 29.25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.75,
+              "required_height_px": 28.75,
+              "fits": true,
+              "lines": [
+                ")"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "94a211182f70a2e7ca5cbf259a700618a74dcea7965821e7ce997a32e1f83d77",
+  "font_substitutions": []
+}

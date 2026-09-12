@@ -1,0 +1,21 @@
+import hashlib,json,os,re,subprocess,tempfile,zipfile
+from pathlib import Path
+root=Path.cwd();base=Path(tempfile.mkdtemp(prefix='super-img2ppt-v035-smoke-'));pkg=root/'dist/super-img2ppt.skill'
+with zipfile.ZipFile(pkg) as z:
+ assert z.testzip() is None
+ assert all(not p.startswith('/') and '..' not in Path(p).parts for p in z.namelist())
+ z.extractall(base)
+skill=base/'super-img2ppt';env=dict(os.environ,PATH='/opt/homebrew/bin:'+os.environ['PATH'],PYTHONPATH=str(skill/'src'))
+cmd=[str(root/'.venv/bin/python'),'-m','super_img2ppt'];rows=[]
+def run(args,code=0):
+ p=subprocess.run(cmd+args,cwd=base,env=env,capture_output=True,text=True);rows.append({'command':cmd+args,'cwd':str(base),'exit_code':p.returncode,'stdout':p.stdout,'stderr':p.stderr});assert p.returncode==code,rows[-1]
+run(['doctor'])
+text=(skill/'references/math.md').read_text();spec=json.loads(re.search(r'```json\n(.*?)\n```',text,re.S).group(1));p=base/'formula.json';p.write_text(json.dumps(spec))
+fonts=['--font-dir','/Applications/LibreOffice.app/Contents/Resources/fonts/truetype','--font-dir','/System/Library/Fonts/Supplemental']
+run(['compose-math',str(p),'--out',str(base/'math')]+fonts)
+scene=json.loads((root/'examples/flow_reconstruction.json').read_text());scene['slides']=scene['slides'][:1];scene['slides'][0].update(width=320,height=180,elements=json.loads((base/'math/elements.json').read_text()));scene['slides'][0].pop('source',None);sp=base/'scene.json';sp.write_text(json.dumps(scene))
+run(['build',str(sp),'--out',str(base/'build')]+fonts)
+spec['parts'][1]['text']='ⁱ';p.write_text(json.dumps(spec));run(['compose-math',str(p),'--out',str(base/'invalid')]+fonts,2)
+assert json.loads((base/'invalid/math.json').read_text())['status']=='fail';assert not (base/'invalid/elements.json').exists()
+report={'package_sha256':hashlib.sha256(pkg.read_bytes()).hexdigest(),'commands':rows,'isolated_directory':str(base),'global_install':False,'new_dependencies':False,'status':'pass'}
+(root/'docs/evidence/formula_gallery/package_smoke.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({'status':'pass','package_sha256':report['package_sha256'],'directory':str(base)}))

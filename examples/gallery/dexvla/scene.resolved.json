@@ -1,0 +1,8636 @@
+{
+  "version": 1,
+  "title": "DexVLA Figure 2 — complete architecture",
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 1605,
+      "height": 500,
+      "source": "assets/7b317bc731047f976add.png",
+      "background": "#FFFFFF",
+      "reviewed": true,
+      "notes": "Reconstructed from pixels of official CoRL 2025 Figure 2; all panels retained. Robot/observation artwork crops remain movable raster assets. See REPORT.md for typography and geometry limitations.",
+      "elements": [
+        {
+          "id": "main_title",
+          "kind": "text",
+          "z": 1,
+          "box": [
+            304,
+            44,
+            780,
+            40
+          ],
+          "font_size": 28.5,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1.15,
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Architecture & Embodied Curriculum Learning",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 28.5,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "right_title",
+          "kind": "text",
+          "z": 2,
+          "box": [
+            1252,
+            40,
+            252,
+            40
+          ],
+          "font_size": 28.7,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Diffusion Expert",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 28.7,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage1_discard",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            298,
+            90,
+            278,
+            161
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#CCCCCC",
+          "stroke_width": 1,
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe0",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            298.0,
+            248.0,
+            3.0,
+            3.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe1",
+          "kind": "shape",
+          "z": 5,
+          "box": [
+            298.0,
+            239.0,
+            12.0,
+            12.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.75,
+              1.0
+            ],
+            [
+              0.0,
+              0.25
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe2",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            298.0,
+            230.0,
+            21.0,
+            21.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.8571428571428571,
+              1.0
+            ],
+            [
+              0.0,
+              0.14285714285714285
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe3",
+          "kind": "shape",
+          "z": 7,
+          "box": [
+            298.0,
+            221.0,
+            30.000000000000004,
+            30.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              1.1842378929335e-16,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9,
+              1.0
+            ],
+            [
+              0.0,
+              0.1
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe4",
+          "kind": "shape",
+          "z": 8,
+          "box": [
+            298.0,
+            212.0,
+            39.0,
+            39.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9230769230769231,
+              1.0
+            ],
+            [
+              0.0,
+              0.07692307692307693
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe5",
+          "kind": "shape",
+          "z": 9,
+          "box": [
+            298.0,
+            203.0,
+            48.0,
+            48.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9375,
+              1.0
+            ],
+            [
+              1.4802973661668753e-16,
+              0.0625
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe6",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            298.0,
+            194.0,
+            57.00000000000001,
+            57.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              1.246566203087895e-16,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9473684210526316,
+              1.0
+            ],
+            [
+              0.0,
+              0.05263157894736842
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe7",
+          "kind": "shape",
+          "z": 11,
+          "box": [
+            298.0,
+            185.0,
+            66.0,
+            66.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9545454545454546,
+              1.0
+            ],
+            [
+              0.0,
+              0.045454545454545456
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe8",
+          "kind": "shape",
+          "z": 12,
+          "box": [
+            298.0,
+            176.0,
+            75.0,
+            75.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.96,
+              1.0
+            ],
+            [
+              0.0,
+              0.04
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe9",
+          "kind": "shape",
+          "z": 13,
+          "box": [
+            298.0,
+            167.0,
+            84.0,
+            84.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9642857142857143,
+              1.0
+            ],
+            [
+              1.691768418476429e-16,
+              0.035714285714285886
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe10",
+          "kind": "shape",
+          "z": 14,
+          "box": [
+            298.0,
+            158.0,
+            93.0,
+            93.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.967741935483871,
+              1.0
+            ],
+            [
+              1.5280488941077425e-16,
+              0.032258064516129184
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe11",
+          "kind": "shape",
+          "z": 15,
+          "box": [
+            298.0,
+            149.0,
+            102.00000000000001,
+            102.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              2.0898315757650003e-16,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9705882352941176,
+              1.0
+            ],
+            [
+              0.0,
+              0.029411764705882144
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe12",
+          "kind": "shape",
+          "z": 16,
+          "box": [
+            298.0,
+            140.0,
+            111.00000000000001,
+            111.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              6.401285907748649e-17,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.972972972972973,
+              1.0
+            ],
+            [
+              0.0,
+              0.027027027027026963
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe13",
+          "kind": "shape",
+          "z": 17,
+          "box": [
+            298.0,
+            131.0,
+            120.0,
+            120.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.975,
+              1.0
+            ],
+            [
+              0.0,
+              0.025
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe14",
+          "kind": "shape",
+          "z": 18,
+          "box": [
+            298.0,
+            122.0,
+            129.0,
+            129.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9767441860465116,
+              1.0
+            ],
+            [
+              2.7540416114732565e-17,
+              0.0232558139534884
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe15",
+          "kind": "shape",
+          "z": 19,
+          "box": [
+            298.0,
+            113.0,
+            138.0,
+            138.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9782608695652174,
+              1.0
+            ],
+            [
+              0.0,
+              0.021739130434782608
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe16",
+          "kind": "shape",
+          "z": 20,
+          "box": [
+            298.0,
+            104.0,
+            147.0,
+            147.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9795918367346939,
+              1.0
+            ],
+            [
+              0.0,
+              0.02040816326530612
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe17",
+          "kind": "shape",
+          "z": 21,
+          "box": [
+            298.0,
+            95.0,
+            156.0,
+            156.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9807692307692307,
+              1.0
+            ],
+            [
+              0.0,
+              0.019230769230769232
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe18",
+          "kind": "shape",
+          "z": 22,
+          "box": [
+            299,
+            90,
+            164,
+            161
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.018292682926829267,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9817073170731707,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe19",
+          "kind": "shape",
+          "z": 23,
+          "box": [
+            308,
+            90,
+            164,
+            161
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.018292682926829267,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9817073170731707,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe20",
+          "kind": "shape",
+          "z": 24,
+          "box": [
+            317,
+            90,
+            164,
+            161
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.018292682926829267,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9817073170731707,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe21",
+          "kind": "shape",
+          "z": 25,
+          "box": [
+            326,
+            90,
+            164,
+            161
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.018292682926829267,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9817073170731707,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe22",
+          "kind": "shape",
+          "z": 26,
+          "box": [
+            335,
+            90,
+            164,
+            161
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.018292682926829267,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9817073170731707,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe23",
+          "kind": "shape",
+          "z": 27,
+          "box": [
+            344,
+            90,
+            164,
+            161
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.018292682926829267,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9817073170731707,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe24",
+          "kind": "shape",
+          "z": 28,
+          "box": [
+            353,
+            90,
+            164,
+            161
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.018292682926829267,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9817073170731707,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe25",
+          "kind": "shape",
+          "z": 29,
+          "box": [
+            362,
+            90,
+            164,
+            161
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.018292682926829267,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9817073170731707,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe26",
+          "kind": "shape",
+          "z": 30,
+          "box": [
+            371,
+            90,
+            164,
+            161
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.018292682926829267,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9817073170731707,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe27",
+          "kind": "shape",
+          "z": 31,
+          "box": [
+            380,
+            90,
+            164,
+            161
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.018292682926829267,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9817073170731707,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe28",
+          "kind": "shape",
+          "z": 32,
+          "box": [
+            389,
+            90,
+            164,
+            161
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.018292682926829267,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9817073170731707,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe29",
+          "kind": "shape",
+          "z": 33,
+          "box": [
+            398,
+            90,
+            164,
+            161
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.018292682926829267,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9817073170731707,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe30",
+          "kind": "shape",
+          "z": 34,
+          "box": [
+            407,
+            90,
+            164,
+            161
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.018292682926829267,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9817073170731707,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe31",
+          "kind": "shape",
+          "z": 35,
+          "box": [
+            416,
+            90,
+            160.0,
+            160.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.01875,
+              0.0
+            ],
+            [
+              1.0,
+              0.98125
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe32",
+          "kind": "shape",
+          "z": 36,
+          "box": [
+            425,
+            90,
+            151.0,
+            151.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.019867549668874173,
+              0.0
+            ],
+            [
+              1.0,
+              0.9801324503311258
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe33",
+          "kind": "shape",
+          "z": 37,
+          "box": [
+            434,
+            90,
+            142.0,
+            142.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.02112676056338028,
+              0.0
+            ],
+            [
+              1.0,
+              0.9788732394366197
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe34",
+          "kind": "shape",
+          "z": 38,
+          "box": [
+            443,
+            90,
+            133.0,
+            133.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.022556390977443608,
+              0.0
+            ],
+            [
+              1.0,
+              0.9774436090225563
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe35",
+          "kind": "shape",
+          "z": 39,
+          "box": [
+            452,
+            90,
+            124.0,
+            124.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.024193548387096774,
+              0.0
+            ],
+            [
+              1.0,
+              0.9758064516129032
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe36",
+          "kind": "shape",
+          "z": 40,
+          "box": [
+            461,
+            90,
+            115.0,
+            115.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.02608695652173913,
+              0.0
+            ],
+            [
+              1.0,
+              0.9739130434782609
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe37",
+          "kind": "shape",
+          "z": 41,
+          "box": [
+            470,
+            90,
+            106.0,
+            106.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.02830188679245283,
+              0.0
+            ],
+            [
+              1.0,
+              0.9716981132075472
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe38",
+          "kind": "shape",
+          "z": 42,
+          "box": [
+            479,
+            90,
+            97.0,
+            97.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.030927835051546393,
+              0.0
+            ],
+            [
+              1.0,
+              0.9690721649484536
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe39",
+          "kind": "shape",
+          "z": 43,
+          "box": [
+            488,
+            90,
+            88.0,
+            88.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.03409090909090909,
+              0.0
+            ],
+            [
+              1.0,
+              0.9659090909090909
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe40",
+          "kind": "shape",
+          "z": 44,
+          "box": [
+            497,
+            90,
+            79.0,
+            79.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0379746835443038,
+              0.0
+            ],
+            [
+              1.0,
+              0.9620253164556962
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe41",
+          "kind": "shape",
+          "z": 45,
+          "box": [
+            506,
+            90,
+            70.0,
+            70.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.04285714285714286,
+              0.0
+            ],
+            [
+              1.0,
+              0.9571428571428572
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe42",
+          "kind": "shape",
+          "z": 46,
+          "box": [
+            515,
+            90,
+            61.0,
+            61.000000000000014
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.04918032786885246,
+              0.0
+            ],
+            [
+              1.0,
+              0.9508196721311473
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe43",
+          "kind": "shape",
+          "z": 47,
+          "box": [
+            524,
+            90,
+            52.0,
+            52.000000000000014
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.057692307692307696,
+              0.0
+            ],
+            [
+              1.0,
+              0.9423076923076921
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe44",
+          "kind": "shape",
+          "z": 48,
+          "box": [
+            533,
+            90,
+            43.0,
+            42.999999999999986
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.06976744186046512,
+              0.0
+            ],
+            [
+              1.0,
+              0.9302325581395352
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe45",
+          "kind": "shape",
+          "z": 49,
+          "box": [
+            542,
+            90,
+            34.0,
+            33.999999999999986
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.08823529411764706,
+              0.0
+            ],
+            [
+              1.0,
+              0.9117647058823534
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe46",
+          "kind": "shape",
+          "z": 50,
+          "box": [
+            551,
+            90,
+            25.0,
+            25.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.12,
+              0.0
+            ],
+            [
+              1.0,
+              0.88
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe47",
+          "kind": "shape",
+          "z": 51,
+          "box": [
+            560,
+            90,
+            16.0,
+            16.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.1875,
+              0.0
+            ],
+            [
+              1.0,
+              0.8125
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_discard_stripe48",
+          "kind": "shape",
+          "z": 52,
+          "box": [
+            569,
+            90,
+            7.0,
+            7.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.42857142857142855,
+              0.0
+            ],
+            [
+              1.0,
+              0.5714285714285714
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_card",
+          "kind": "shape",
+          "z": 53,
+          "box": [
+            28,
+            114,
+            192,
+            112
+          ],
+          "shape": "round_rect",
+          "fill": "#F0F7F4",
+          "stroke": null,
+          "stroke_width": 1,
+          "role": "background"
+        },
+        {
+          "id": "stage1_title",
+          "kind": "text",
+          "z": 54,
+          "box": [
+            52,
+            123,
+            170,
+            23
+          ],
+          "font_size": 14,
+          "font_family": "Times New Roman",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "stage1_card",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Observation & Instruction",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 14,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage1_photos",
+          "kind": "image",
+          "z": 55,
+          "box": [
+            38,
+            149,
+            172,
+            40
+          ],
+          "path": "assets/a59b95a05ef2fbe60c4b.png",
+          "contains_text": false,
+          "provenance": "Exact source photo strip: three robot camera observations, no diagram labels.",
+          "image_fit": "stretch",
+          "container": "stage1_card"
+        },
+        {
+          "id": "stage1_instruction",
+          "kind": "text",
+          "z": 56,
+          "box": [
+            113,
+            196,
+            99,
+            22
+          ],
+          "font_size": 12,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "stage1_card",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "“fold shirt”",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage1_head",
+          "kind": "shape",
+          "z": 57,
+          "box": [
+            88,
+            198,
+            8,
+            8
+          ],
+          "shape": "ellipse",
+          "fill": null,
+          "stroke": "#515151",
+          "stroke_width": 1.1
+        },
+        {
+          "id": "stage1_user0",
+          "kind": "line",
+          "z": 58,
+          "points": [
+            [
+              87,
+              206
+            ],
+            [
+              83,
+              211
+            ]
+          ],
+          "stroke": "#515151",
+          "stroke_width": 1.3,
+          "allow_overlap_with": [
+            "stage1_user1"
+          ],
+          "overlap_reason": "Source-visible user icon consists of connected native outline segments."
+        },
+        {
+          "id": "stage1_user1",
+          "kind": "line",
+          "z": 59,
+          "points": [
+            [
+              83,
+              211
+            ],
+            [
+              92,
+              215
+            ]
+          ],
+          "stroke": "#515151",
+          "stroke_width": 1.3,
+          "allow_overlap_with": [
+            "stage1_user3"
+          ],
+          "overlap_reason": "Source-visible user icon consists of connected native outline segments."
+        },
+        {
+          "id": "stage1_user2",
+          "kind": "line",
+          "z": 60,
+          "points": [
+            [
+              92,
+              215
+            ],
+            [
+              101,
+              211
+            ]
+          ],
+          "stroke": "#515151",
+          "stroke_width": 1.3
+        },
+        {
+          "id": "stage1_user3",
+          "kind": "line",
+          "z": 61,
+          "points": [
+            [
+              86,
+              212
+            ],
+            [
+              95,
+              211
+            ]
+          ],
+          "stroke": "#515151",
+          "stroke_width": 1.3
+        },
+        {
+          "id": "stage1_voice0",
+          "kind": "line",
+          "z": 62,
+          "points": [
+            [
+              99,
+              197
+            ],
+            [
+              101,
+              201
+            ]
+          ],
+          "stroke": "#515151",
+          "stroke_width": 1
+        },
+        {
+          "id": "stage1_voice1",
+          "kind": "line",
+          "z": 63,
+          "points": [
+            [
+              102,
+              196
+            ],
+            [
+              105,
+              202
+            ]
+          ],
+          "stroke": "#515151",
+          "stroke_width": 1
+        },
+        {
+          "id": "stage1_vlm",
+          "kind": "shape",
+          "z": 64,
+          "box": [
+            305,
+            103,
+            262,
+            136
+          ],
+          "shape": "round_rect",
+          "fill": "#E89D9E",
+          "stroke": "#FF777C",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 22
+        },
+        {
+          "id": "stage1_interior_stripe2",
+          "kind": "shape",
+          "z": 65,
+          "box": [
+            305.0,
+            237.0,
+            2.0,
+            2.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe3",
+          "kind": "shape",
+          "z": 66,
+          "box": [
+            305.0,
+            228.0,
+            11.0,
+            11.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.7272727272727273,
+              1.0
+            ],
+            [
+              0.0,
+              0.2727272727272727
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe4",
+          "kind": "shape",
+          "z": 67,
+          "box": [
+            305.0,
+            219.0,
+            20.0,
+            20.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.85,
+              1.0
+            ],
+            [
+              0.0,
+              0.15
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe5",
+          "kind": "shape",
+          "z": 68,
+          "box": [
+            305.0,
+            210.0,
+            29.0,
+            29.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.896551724137931,
+              1.0
+            ],
+            [
+              0.0,
+              0.10344827586206896
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe6",
+          "kind": "shape",
+          "z": 69,
+          "box": [
+            305.0,
+            201.0,
+            38.0,
+            38.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9210526315789473,
+              1.0
+            ],
+            [
+              0.0,
+              0.07894736842105263
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe7",
+          "kind": "shape",
+          "z": 70,
+          "box": [
+            305.0,
+            192.0,
+            47.0,
+            47.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9361702127659575,
+              1.0
+            ],
+            [
+              0.0,
+              0.06382978723404255
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe8",
+          "kind": "shape",
+          "z": 71,
+          "box": [
+            305.0,
+            183.0,
+            56.0,
+            56.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9464285714285714,
+              1.0
+            ],
+            [
+              0.0,
+              0.05357142857142857
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe9",
+          "kind": "shape",
+          "z": 72,
+          "box": [
+            305.0,
+            174.0,
+            65.0,
+            65.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9538461538461539,
+              1.0
+            ],
+            [
+              0.0,
+              0.046153846153846156
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe10",
+          "kind": "shape",
+          "z": 73,
+          "box": [
+            305.0,
+            165.0,
+            74.0,
+            74.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9594594594594594,
+              1.0
+            ],
+            [
+              0.0,
+              0.04054054054054054
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe11",
+          "kind": "shape",
+          "z": 74,
+          "box": [
+            305.0,
+            156.0,
+            83.0,
+            83.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.963855421686747,
+              1.0
+            ],
+            [
+              0.0,
+              0.03614457831325267
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe12",
+          "kind": "shape",
+          "z": 75,
+          "box": [
+            305.0,
+            147.0,
+            92.0,
+            92.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.967391304347826,
+              1.0
+            ],
+            [
+              0.0,
+              0.03260869565217391
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe13",
+          "kind": "shape",
+          "z": 76,
+          "box": [
+            305.0,
+            138.0,
+            101.0,
+            101.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9702970297029703,
+              1.0
+            ],
+            [
+              0.0,
+              0.0297029702970297
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe14",
+          "kind": "shape",
+          "z": 77,
+          "box": [
+            305.0,
+            129.0,
+            110.0,
+            110.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9727272727272728,
+              1.0
+            ],
+            [
+              0.0,
+              0.02727272727272727
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe15",
+          "kind": "shape",
+          "z": 78,
+          "box": [
+            305.0,
+            120.0,
+            119.0,
+            119.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9747899159663865,
+              1.0
+            ],
+            [
+              0.0,
+              0.025210084033613446
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe16",
+          "kind": "shape",
+          "z": 79,
+          "box": [
+            305.0,
+            111.0,
+            128.0,
+            128.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9765625,
+              1.0
+            ],
+            [
+              0.0,
+              0.0234375
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe17",
+          "kind": "shape",
+          "z": 80,
+          "box": [
+            305.0,
+            103.0,
+            137.0,
+            136.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0072992700729927005,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9781021897810219,
+              1.0
+            ],
+            [
+              0.0,
+              0.014705882352941176
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe18",
+          "kind": "shape",
+          "z": 81,
+          "box": [
+            312.0,
+            103.0,
+            139.0,
+            136.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.02158273381294964,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9784172661870504,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe19",
+          "kind": "shape",
+          "z": 82,
+          "box": [
+            321.0,
+            103.0,
+            139.0,
+            136.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.02158273381294964,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9784172661870504,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe20",
+          "kind": "shape",
+          "z": 83,
+          "box": [
+            330.0,
+            103.0,
+            139.0,
+            136.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.02158273381294964,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9784172661870504,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe21",
+          "kind": "shape",
+          "z": 84,
+          "box": [
+            339.0,
+            103.0,
+            139.0,
+            136.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.02158273381294964,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9784172661870504,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe22",
+          "kind": "shape",
+          "z": 85,
+          "box": [
+            348.0,
+            103.0,
+            139.0,
+            136.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.02158273381294964,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9784172661870504,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe23",
+          "kind": "shape",
+          "z": 86,
+          "box": [
+            357.0,
+            103.0,
+            139.0,
+            136.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.02158273381294964,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9784172661870504,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe24",
+          "kind": "shape",
+          "z": 87,
+          "box": [
+            366.0,
+            103.0,
+            139.0,
+            136.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.02158273381294964,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9784172661870504,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe25",
+          "kind": "shape",
+          "z": 88,
+          "box": [
+            375.0,
+            103.0,
+            139.0,
+            136.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.02158273381294964,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9784172661870504,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe26",
+          "kind": "shape",
+          "z": 89,
+          "box": [
+            384.0,
+            103.0,
+            139.0,
+            136.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.02158273381294964,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9784172661870504,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe27",
+          "kind": "shape",
+          "z": 90,
+          "box": [
+            393.0,
+            103.0,
+            139.0,
+            136.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.02158273381294964,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9784172661870504,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe28",
+          "kind": "shape",
+          "z": 91,
+          "box": [
+            402.0,
+            103.0,
+            139.0,
+            136.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.02158273381294964,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9784172661870504,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe29",
+          "kind": "shape",
+          "z": 92,
+          "box": [
+            411.0,
+            103.0,
+            139.0,
+            136.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.02158273381294964,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9784172661870504,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe30",
+          "kind": "shape",
+          "z": 93,
+          "box": [
+            420.0,
+            103.0,
+            139.0,
+            136.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.02158273381294964,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9784172661870504,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe31",
+          "kind": "shape",
+          "z": 94,
+          "box": [
+            429.0,
+            103.0,
+            138.0,
+            136.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.021739130434782608,
+              0.0
+            ],
+            [
+              1.0,
+              0.9926470588235294
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9855072463768116,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe32",
+          "kind": "shape",
+          "z": 95,
+          "box": [
+            438.0,
+            103.0,
+            129.0,
+            129.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.023255813953488372,
+              0.0
+            ],
+            [
+              1.0,
+              0.9767441860465116
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe33",
+          "kind": "shape",
+          "z": 96,
+          "box": [
+            447.0,
+            103.0,
+            120.0,
+            120.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.025,
+              0.0
+            ],
+            [
+              1.0,
+              0.975
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe34",
+          "kind": "shape",
+          "z": 97,
+          "box": [
+            456.0,
+            103.0,
+            111.0,
+            111.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.02702702702702703,
+              0.0
+            ],
+            [
+              1.0,
+              0.972972972972973
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe35",
+          "kind": "shape",
+          "z": 98,
+          "box": [
+            465.0,
+            103.0,
+            102.0,
+            102.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.029411764705882353,
+              0.0
+            ],
+            [
+              1.0,
+              0.9705882352941176
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe36",
+          "kind": "shape",
+          "z": 99,
+          "box": [
+            474.0,
+            103.0,
+            93.0,
+            93.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.03225806451612903,
+              0.0
+            ],
+            [
+              1.0,
+              0.967741935483871
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe37",
+          "kind": "shape",
+          "z": 100,
+          "box": [
+            483.0,
+            103.0,
+            84.0,
+            84.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.03571428571428571,
+              0.0
+            ],
+            [
+              1.0,
+              0.9642857142857143
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe38",
+          "kind": "shape",
+          "z": 101,
+          "box": [
+            492.0,
+            103.0,
+            75.0,
+            75.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.04,
+              0.0
+            ],
+            [
+              1.0,
+              0.96
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe39",
+          "kind": "shape",
+          "z": 102,
+          "box": [
+            501.0,
+            103.0,
+            66.0,
+            66.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.045454545454545456,
+              0.0
+            ],
+            [
+              1.0,
+              0.9545454545454546
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe40",
+          "kind": "shape",
+          "z": 103,
+          "box": [
+            510.0,
+            103.0,
+            57.0,
+            57.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.05263157894736842,
+              0.0
+            ],
+            [
+              1.0,
+              0.9473684210526315
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe41",
+          "kind": "shape",
+          "z": 104,
+          "box": [
+            519.0,
+            103.0,
+            48.0,
+            48.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0625,
+              0.0
+            ],
+            [
+              1.0,
+              0.9375
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe42",
+          "kind": "shape",
+          "z": 105,
+          "box": [
+            528.0,
+            103.0,
+            39.0,
+            39.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.07692307692307693,
+              0.0
+            ],
+            [
+              1.0,
+              0.9230769230769231
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe43",
+          "kind": "shape",
+          "z": 106,
+          "box": [
+            537.0,
+            103.0,
+            30.0,
+            30.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.1,
+              0.0
+            ],
+            [
+              1.0,
+              0.9
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe44",
+          "kind": "shape",
+          "z": 107,
+          "box": [
+            546.0,
+            103.0,
+            21.0,
+            21.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.14285714285714285,
+              0.0
+            ],
+            [
+              1.0,
+              0.8571428571428571
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe45",
+          "kind": "shape",
+          "z": 108,
+          "box": [
+            555.0,
+            103.0,
+            12.0,
+            11.999999999999986
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.25,
+              0.0
+            ],
+            [
+              1.0,
+              0.7500000000000009
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_interior_stripe46",
+          "kind": "shape",
+          "z": 109,
+          "box": [
+            564.0,
+            103.0,
+            3.0,
+            3.0
+          ],
+          "shape": "polygon",
+          "fill": "#CB9093",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage1_vlm_label",
+          "kind": "text",
+          "z": 110,
+          "box": [
+            314,
+            126,
+            250,
+            38
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "stage1_vlm",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Vision-Language Model",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage1_reason",
+          "kind": "shape",
+          "z": 111,
+          "box": [
+            368,
+            182,
+            137,
+            53
+          ],
+          "shape": "round_rect",
+          "fill": "#D96D37",
+          "stroke": "#B56511",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 10
+        },
+        {
+          "id": "stage1_reason_label",
+          "kind": "text",
+          "z": 112,
+          "box": [
+            371,
+            183,
+            132,
+            58
+          ],
+          "font_size": 19,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "color": "#FFFFFF",
+          "align": "center",
+          "line_height": 1.0,
+          "container": "stage1_reason",
+          "runs": [
+            {
+              "text": "Sub-step\n",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19,
+              "bold": true,
+              "italic": false,
+              "color": "#FFFFFF"
+            },
+            {
+              "text": "Reasoning",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19,
+              "bold": true,
+              "italic": false,
+              "color": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "id": "stage1_film_card",
+          "kind": "shape",
+          "z": 113,
+          "box": [
+            55,
+            257,
+            137,
+            147
+          ],
+          "shape": "round_rect",
+          "fill": "#F7F9FC",
+          "stroke": null,
+          "stroke_width": 1,
+          "role": "background"
+        },
+        {
+          "id": "stage1_film_label",
+          "kind": "text",
+          "z": 114,
+          "box": [
+            70,
+            265,
+            126,
+            25
+          ],
+          "font_size": 16,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "stage1_film_card",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "FiLM ResNet",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 16,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage1_film_bar0",
+          "kind": "shape",
+          "z": 115,
+          "box": [
+            74,
+            294,
+            15,
+            99
+          ],
+          "shape": "round_rect",
+          "fill": "#7D9EC6",
+          "stroke": null,
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "stage1_film_bar1",
+          "kind": "shape",
+          "z": 116,
+          "box": [
+            102,
+            305,
+            15,
+            77
+          ],
+          "shape": "round_rect",
+          "fill": "#7D9EC6",
+          "stroke": null,
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "stage1_film_bar2",
+          "kind": "shape",
+          "z": 117,
+          "box": [
+            131,
+            322,
+            16,
+            47
+          ],
+          "shape": "round_rect",
+          "fill": "#7D9EC6",
+          "stroke": null,
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "stage1_film_bar3",
+          "kind": "shape",
+          "z": 118,
+          "box": [
+            161,
+            334,
+            19,
+            25
+          ],
+          "shape": "round_rect",
+          "fill": "#7D9EC6",
+          "stroke": null,
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "stage1_film_dot0",
+          "kind": "shape",
+          "z": 119,
+          "box": [
+            91,
+            323,
+            8,
+            8
+          ],
+          "shape": "ellipse",
+          "fill": "#838383",
+          "stroke": null,
+          "stroke_width": 1
+        },
+        {
+          "id": "stage1_film_dot1",
+          "kind": "shape",
+          "z": 120,
+          "box": [
+            91,
+            341,
+            8,
+            8
+          ],
+          "shape": "ellipse",
+          "fill": "#838383",
+          "stroke": null,
+          "stroke_width": 1
+        },
+        {
+          "id": "stage1_film_dot2",
+          "kind": "shape",
+          "z": 121,
+          "box": [
+            91,
+            359,
+            8,
+            8
+          ],
+          "shape": "ellipse",
+          "fill": "#838383",
+          "stroke": null,
+          "stroke_width": 1
+        },
+        {
+          "id": "stage1_film_dot3",
+          "kind": "shape",
+          "z": 122,
+          "box": [
+            120,
+            333,
+            8,
+            8
+          ],
+          "shape": "ellipse",
+          "fill": "#838383",
+          "stroke": null,
+          "stroke_width": 1
+        },
+        {
+          "id": "stage1_film_dot4",
+          "kind": "shape",
+          "z": 123,
+          "box": [
+            120,
+            350,
+            8,
+            8
+          ],
+          "shape": "ellipse",
+          "fill": "#838383",
+          "stroke": null,
+          "stroke_width": 1
+        },
+        {
+          "id": "stage1_film_dot5",
+          "kind": "shape",
+          "z": 124,
+          "box": [
+            149,
+            332,
+            8,
+            8
+          ],
+          "shape": "ellipse",
+          "fill": "#838383",
+          "stroke": null,
+          "stroke_width": 1
+        },
+        {
+          "id": "stage1_film_dot6",
+          "kind": "shape",
+          "z": 125,
+          "box": [
+            149,
+            350,
+            8,
+            8
+          ],
+          "shape": "ellipse",
+          "fill": "#838383",
+          "stroke": null,
+          "stroke_width": 1
+        },
+        {
+          "id": "stage1_noise",
+          "kind": "text",
+          "z": 126,
+          "box": [
+            352,
+            251,
+            51,
+            21
+          ],
+          "font_size": 11,
+          "font_family": "Times New Roman",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Noise",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage1_noisebox",
+          "kind": "shape",
+          "z": 127,
+          "box": [
+            326,
+            269,
+            85,
+            28
+          ],
+          "shape": "round_rect",
+          "fill": null,
+          "stroke": "#929292",
+          "stroke_width": 0.9,
+          "radius": 5,
+          "dash": [
+            4,
+            3
+          ]
+        },
+        {
+          "id": "stage1_noisecell0",
+          "kind": "shape",
+          "z": 128,
+          "box": [
+            332,
+            276,
+            14,
+            14
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFDF5",
+          "stroke": "#808080",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 2,
+          "container": "stage1_noisebox"
+        },
+        {
+          "id": "stage1_noisestripe0_0",
+          "kind": "shape",
+          "z": 129,
+          "box": [
+            333,
+            277,
+            6,
+            12
+          ],
+          "shape": "polygon",
+          "fill": "#9F4917",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0,
+              0.8
+            ],
+            [
+              1,
+              0.15
+            ],
+            [
+              1,
+              0.45
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "role": "background",
+          "container": "stage1_noisebox"
+        },
+        {
+          "id": "stage1_noisestripe0_1",
+          "kind": "shape",
+          "z": 130,
+          "box": [
+            339,
+            277,
+            6,
+            12
+          ],
+          "shape": "polygon",
+          "fill": "#9F4917",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0,
+              0.8
+            ],
+            [
+              1,
+              0.15
+            ],
+            [
+              1,
+              0.45
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "role": "background",
+          "container": "stage1_noisebox"
+        },
+        {
+          "id": "stage1_noisecell1",
+          "kind": "shape",
+          "z": 131,
+          "box": [
+            352,
+            276,
+            14,
+            14
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFDF5",
+          "stroke": "#808080",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 2,
+          "container": "stage1_noisebox"
+        },
+        {
+          "id": "stage1_noisestripe1_0",
+          "kind": "shape",
+          "z": 132,
+          "box": [
+            353,
+            277,
+            6,
+            12
+          ],
+          "shape": "polygon",
+          "fill": "#9F4917",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0,
+              0.8
+            ],
+            [
+              1,
+              0.15
+            ],
+            [
+              1,
+              0.45
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "role": "background",
+          "container": "stage1_noisebox"
+        },
+        {
+          "id": "stage1_noisestripe1_1",
+          "kind": "shape",
+          "z": 133,
+          "box": [
+            359,
+            277,
+            6,
+            12
+          ],
+          "shape": "polygon",
+          "fill": "#9F4917",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0,
+              0.8
+            ],
+            [
+              1,
+              0.15
+            ],
+            [
+              1,
+              0.45
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "role": "background",
+          "container": "stage1_noisebox"
+        },
+        {
+          "id": "stage1_noisecell2",
+          "kind": "shape",
+          "z": 134,
+          "box": [
+            392,
+            276,
+            14,
+            14
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFDF5",
+          "stroke": "#808080",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 2,
+          "container": "stage1_noisebox"
+        },
+        {
+          "id": "stage1_noisestripe2_0",
+          "kind": "shape",
+          "z": 135,
+          "box": [
+            393,
+            277,
+            6,
+            12
+          ],
+          "shape": "polygon",
+          "fill": "#9F4917",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0,
+              0.8
+            ],
+            [
+              1,
+              0.15
+            ],
+            [
+              1,
+              0.45
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "role": "background",
+          "container": "stage1_noisebox"
+        },
+        {
+          "id": "stage1_noisestripe2_1",
+          "kind": "shape",
+          "z": 136,
+          "box": [
+            399,
+            277,
+            6,
+            12
+          ],
+          "shape": "polygon",
+          "fill": "#9F4917",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0,
+              0.8
+            ],
+            [
+              1,
+              0.15
+            ],
+            [
+              1,
+              0.45
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "role": "background",
+          "container": "stage1_noisebox"
+        },
+        {
+          "id": "stage1_noise_ellipsis",
+          "kind": "text",
+          "z": 137,
+          "box": [
+            374,
+            272,
+            18,
+            22
+          ],
+          "font_size": 14,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "stage1_noisebox",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "···",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 14,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage1_expert",
+          "kind": "shape",
+          "z": 138,
+          "box": [
+            351,
+            312,
+            165,
+            62
+          ],
+          "shape": "round_rect",
+          "fill": "#C3E2E0",
+          "stroke": "#76B64B",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 5
+        },
+        {
+          "id": "stage1_expert_label",
+          "kind": "text",
+          "z": 139,
+          "box": [
+            356,
+            320,
+            155,
+            27
+          ],
+          "font_size": 17,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1,
+          "container": "stage1_expert",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Billion-Parameter",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 17,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage23_card",
+          "kind": "shape",
+          "z": 140,
+          "box": [
+            621,
+            114,
+            192,
+            112
+          ],
+          "shape": "round_rect",
+          "fill": "#F0F7F4",
+          "stroke": null,
+          "stroke_width": 1,
+          "role": "background"
+        },
+        {
+          "id": "stage23_title",
+          "kind": "text",
+          "z": 141,
+          "box": [
+            645,
+            123,
+            170,
+            23
+          ],
+          "font_size": 14,
+          "font_family": "Times New Roman",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "stage23_card",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Observation & Instruction",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 14,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage23_photos",
+          "kind": "image",
+          "z": 142,
+          "box": [
+            631,
+            149,
+            172,
+            40
+          ],
+          "path": "assets/ef57b4008b0b967765a4.png",
+          "contains_text": false,
+          "provenance": "Exact source photo strip: three robot camera observations, no diagram labels.",
+          "image_fit": "stretch",
+          "container": "stage23_card"
+        },
+        {
+          "id": "stage23_instruction",
+          "kind": "text",
+          "z": 143,
+          "box": [
+            706,
+            196,
+            99,
+            22
+          ],
+          "font_size": 12,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "stage23_card",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "“fold shirt”",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage23_head",
+          "kind": "shape",
+          "z": 144,
+          "box": [
+            681,
+            198,
+            8,
+            8
+          ],
+          "shape": "ellipse",
+          "fill": null,
+          "stroke": "#515151",
+          "stroke_width": 1.1
+        },
+        {
+          "id": "stage23_user0",
+          "kind": "line",
+          "z": 145,
+          "points": [
+            [
+              680,
+              206
+            ],
+            [
+              676,
+              211
+            ]
+          ],
+          "stroke": "#515151",
+          "stroke_width": 1.3,
+          "allow_overlap_with": [
+            "stage23_user1"
+          ],
+          "overlap_reason": "Source-visible user icon consists of connected native outline segments."
+        },
+        {
+          "id": "stage23_user1",
+          "kind": "line",
+          "z": 146,
+          "points": [
+            [
+              676,
+              211
+            ],
+            [
+              685,
+              215
+            ]
+          ],
+          "stroke": "#515151",
+          "stroke_width": 1.3,
+          "allow_overlap_with": [
+            "stage23_user3"
+          ],
+          "overlap_reason": "Source-visible user icon consists of connected native outline segments."
+        },
+        {
+          "id": "stage23_user2",
+          "kind": "line",
+          "z": 147,
+          "points": [
+            [
+              685,
+              215
+            ],
+            [
+              694,
+              211
+            ]
+          ],
+          "stroke": "#515151",
+          "stroke_width": 1.3
+        },
+        {
+          "id": "stage23_user3",
+          "kind": "line",
+          "z": 148,
+          "points": [
+            [
+              679,
+              212
+            ],
+            [
+              688,
+              211
+            ]
+          ],
+          "stroke": "#515151",
+          "stroke_width": 1.3
+        },
+        {
+          "id": "stage23_voice0",
+          "kind": "line",
+          "z": 149,
+          "points": [
+            [
+              692,
+              197
+            ],
+            [
+              694,
+              201
+            ]
+          ],
+          "stroke": "#515151",
+          "stroke_width": 1
+        },
+        {
+          "id": "stage23_voice1",
+          "kind": "line",
+          "z": 150,
+          "points": [
+            [
+              695,
+              196
+            ],
+            [
+              698,
+              202
+            ]
+          ],
+          "stroke": "#515151",
+          "stroke_width": 1
+        },
+        {
+          "id": "stage23_vlm",
+          "kind": "shape",
+          "z": 151,
+          "box": [
+            898,
+            102,
+            262,
+            136
+          ],
+          "shape": "round_rect",
+          "fill": "#E89D9E",
+          "stroke": "#FF777C",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 22
+        },
+        {
+          "id": "stage23_vlm_label",
+          "kind": "text",
+          "z": 152,
+          "box": [
+            907,
+            125,
+            250,
+            38
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "stage23_vlm",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Vision-Language Model",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage23_reason",
+          "kind": "shape",
+          "z": 153,
+          "box": [
+            961,
+            181,
+            137,
+            53
+          ],
+          "shape": "round_rect",
+          "fill": "#D96D37",
+          "stroke": "#B56511",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 10
+        },
+        {
+          "id": "stage23_reason_label",
+          "kind": "text",
+          "z": 154,
+          "box": [
+            964,
+            182,
+            132,
+            58
+          ],
+          "font_size": 19,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "color": "#FFFFFF",
+          "align": "center",
+          "line_height": 1.0,
+          "container": "stage23_reason",
+          "runs": [
+            {
+              "text": "Sub-step\n",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19,
+              "bold": true,
+              "italic": false,
+              "color": "#FFFFFF"
+            },
+            {
+              "text": "Reasoning",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 19,
+              "bold": true,
+              "italic": false,
+              "color": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "id": "stage23_film_card",
+          "kind": "shape",
+          "z": 155,
+          "box": [
+            628,
+            251,
+            176,
+            167
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#CCCCCC",
+          "stroke_width": 1,
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe0",
+          "kind": "shape",
+          "z": 156,
+          "box": [
+            628.0,
+            415.0,
+            3.0,
+            3.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe1",
+          "kind": "shape",
+          "z": 157,
+          "box": [
+            628.0,
+            406.0,
+            12.0,
+            12.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.75,
+              1.0
+            ],
+            [
+              0.0,
+              0.25
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe2",
+          "kind": "shape",
+          "z": 158,
+          "box": [
+            628.0,
+            397.0,
+            21.0,
+            21.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.8571428571428571,
+              1.0
+            ],
+            [
+              0.0,
+              0.14285714285714285
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe3",
+          "kind": "shape",
+          "z": 159,
+          "box": [
+            628.0,
+            388.0,
+            30.0,
+            30.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9,
+              1.0
+            ],
+            [
+              0.0,
+              0.1
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe4",
+          "kind": "shape",
+          "z": 160,
+          "box": [
+            628.0,
+            379.0,
+            39.0,
+            39.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9230769230769231,
+              1.0
+            ],
+            [
+              0.0,
+              0.07692307692307693
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe5",
+          "kind": "shape",
+          "z": 161,
+          "box": [
+            628.0,
+            370.0,
+            48.000000000000014,
+            48.000000000000014
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9375,
+              1.0
+            ],
+            [
+              2.96059473233375e-16,
+              0.06250000000000028
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe6",
+          "kind": "shape",
+          "z": 162,
+          "box": [
+            628.0,
+            361.0,
+            57.0,
+            57.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9473684210526315,
+              1.0
+            ],
+            [
+              0.0,
+              0.05263157894736842
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe7",
+          "kind": "shape",
+          "z": 163,
+          "box": [
+            628.0,
+            352.0,
+            66.0,
+            66.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9545454545454546,
+              1.0
+            ],
+            [
+              1.0765799026668185e-16,
+              0.045454545454545456
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe8",
+          "kind": "shape",
+          "z": 164,
+          "box": [
+            628.0,
+            343.0,
+            75.0,
+            75.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.96,
+              1.0
+            ],
+            [
+              0.0,
+              0.04
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe9",
+          "kind": "shape",
+          "z": 165,
+          "box": [
+            628.0,
+            334.0,
+            84.0,
+            84.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9642857142857143,
+              1.0
+            ],
+            [
+              0.0,
+              0.03571428571428571
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe10",
+          "kind": "shape",
+          "z": 166,
+          "box": [
+            628.0,
+            325.0,
+            93.0,
+            93.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.967741935483871,
+              1.0
+            ],
+            [
+              0.0,
+              0.03225806451612903
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe11",
+          "kind": "shape",
+          "z": 167,
+          "box": [
+            628.0,
+            316.0,
+            102.0,
+            102.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9705882352941176,
+              1.0
+            ],
+            [
+              0.0,
+              0.029411764705882353
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe12",
+          "kind": "shape",
+          "z": 168,
+          "box": [
+            628.0,
+            307.0,
+            111.0,
+            111.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.972972972972973,
+              1.0
+            ],
+            [
+              0.0,
+              0.02702702702702703
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe13",
+          "kind": "shape",
+          "z": 169,
+          "box": [
+            628.0,
+            298.0,
+            120.0,
+            120.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.975,
+              1.0
+            ],
+            [
+              0.0,
+              0.025
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe14",
+          "kind": "shape",
+          "z": 170,
+          "box": [
+            628.0,
+            289.0,
+            129.0,
+            129.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9767441860465116,
+              1.0
+            ],
+            [
+              1.1016166445893026e-16,
+              0.023255813953488483
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe15",
+          "kind": "shape",
+          "z": 171,
+          "box": [
+            628.0,
+            280.0,
+            138.0,
+            138.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9782608695652174,
+              1.0
+            ],
+            [
+              0.0,
+              0.021739130434782608
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe16",
+          "kind": "shape",
+          "z": 172,
+          "box": [
+            628.0,
+            271.0,
+            147.0,
+            147.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9795918367346939,
+              1.0
+            ],
+            [
+              0.0,
+              0.02040816326530612
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe17",
+          "kind": "shape",
+          "z": 173,
+          "box": [
+            628.0,
+            262.0,
+            156.0,
+            156.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              1.1386902816668272e-17,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9807692307692307,
+              1.0
+            ],
+            [
+              0.0,
+              0.019230769230769218
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe18",
+          "kind": "shape",
+          "z": 174,
+          "box": [
+            628.0,
+            253.0,
+            165.0,
+            165.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9818181818181818,
+              1.0
+            ],
+            [
+              0.0,
+              0.01818181818181818
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe19",
+          "kind": "shape",
+          "z": 175,
+          "box": [
+            632,
+            251,
+            170,
+            167
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.01764705882352941,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9823529411764705,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe20",
+          "kind": "shape",
+          "z": 176,
+          "box": [
+            641,
+            251,
+            163.0,
+            163.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.018404907975460124,
+              0.0
+            ],
+            [
+              1.0,
+              0.9815950920245399
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe21",
+          "kind": "shape",
+          "z": 177,
+          "box": [
+            650,
+            251,
+            154.0,
+            154.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.01948051948051948,
+              0.0
+            ],
+            [
+              1.0,
+              0.9805194805194806
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe22",
+          "kind": "shape",
+          "z": 178,
+          "box": [
+            659,
+            251,
+            145.0,
+            145.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.020689655172413793,
+              0.0
+            ],
+            [
+              1.0,
+              0.9793103448275862
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe23",
+          "kind": "shape",
+          "z": 179,
+          "box": [
+            668,
+            251,
+            136.0,
+            136.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.022058823529411766,
+              0.0
+            ],
+            [
+              1.0,
+              0.9779411764705882
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe24",
+          "kind": "shape",
+          "z": 180,
+          "box": [
+            677,
+            251,
+            127.0,
+            127.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.023622047244094488,
+              0.0
+            ],
+            [
+              1.0,
+              0.9763779527559056
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe25",
+          "kind": "shape",
+          "z": 181,
+          "box": [
+            686,
+            251,
+            118.0,
+            118.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.025423728813559324,
+              0.0
+            ],
+            [
+              1.0,
+              0.9745762711864406
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe26",
+          "kind": "shape",
+          "z": 182,
+          "box": [
+            695,
+            251,
+            109.0,
+            109.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.027522935779816515,
+              0.0
+            ],
+            [
+              1.0,
+              0.9724770642201835
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe27",
+          "kind": "shape",
+          "z": 183,
+          "box": [
+            704,
+            251,
+            100.0,
+            100.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.03,
+              0.0
+            ],
+            [
+              1.0,
+              0.97
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe28",
+          "kind": "shape",
+          "z": 184,
+          "box": [
+            713,
+            251,
+            91.0,
+            91.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.03296703296703297,
+              0.0
+            ],
+            [
+              1.0,
+              0.9670329670329672
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe29",
+          "kind": "shape",
+          "z": 185,
+          "box": [
+            722,
+            251,
+            82.0,
+            82.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.036585365853658534,
+              0.0
+            ],
+            [
+              1.0,
+              0.9634146341463414
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe30",
+          "kind": "shape",
+          "z": 186,
+          "box": [
+            731,
+            251,
+            73.0,
+            73.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0410958904109589,
+              0.0
+            ],
+            [
+              1.0,
+              0.958904109589041
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe31",
+          "kind": "shape",
+          "z": 187,
+          "box": [
+            740,
+            251,
+            64.0,
+            64.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.046875,
+              0.0
+            ],
+            [
+              1.0,
+              0.953125
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe32",
+          "kind": "shape",
+          "z": 188,
+          "box": [
+            749,
+            251,
+            55.0,
+            55.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.05454545454545454,
+              0.0
+            ],
+            [
+              1.0,
+              0.9454545454545454
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe33",
+          "kind": "shape",
+          "z": 189,
+          "box": [
+            758,
+            251,
+            46.0,
+            45.999999999999986
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.06521739130434782,
+              0.0
+            ],
+            [
+              1.0,
+              0.9347826086956523
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe34",
+          "kind": "shape",
+          "z": 190,
+          "box": [
+            767,
+            251,
+            37.0,
+            37.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.08108108108108109,
+              0.0
+            ],
+            [
+              1.0,
+              0.918918918918919
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe35",
+          "kind": "shape",
+          "z": 191,
+          "box": [
+            776,
+            251,
+            28.0,
+            28.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.10714285714285714,
+              0.0
+            ],
+            [
+              1.0,
+              0.8928571428571427
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe36",
+          "kind": "shape",
+          "z": 192,
+          "box": [
+            785,
+            251,
+            19.0,
+            19.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.15789473684210525,
+              0.0
+            ],
+            [
+              1.0,
+              0.8421052631578947
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe37",
+          "kind": "shape",
+          "z": 193,
+          "box": [
+            794,
+            251,
+            10.0,
+            10.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.3,
+              0.0
+            ],
+            [
+              1.0,
+              0.7
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_card_stripe38",
+          "kind": "shape",
+          "z": 194,
+          "box": [
+            803,
+            251,
+            1.0,
+            1.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "stage23_film_label",
+          "kind": "text",
+          "z": 195,
+          "box": [
+            663,
+            265,
+            126,
+            25
+          ],
+          "font_size": 16,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "stage23_film_card",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "FiLM ResNet",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 16,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage23_film_bar0",
+          "kind": "shape",
+          "z": 196,
+          "box": [
+            667,
+            293,
+            15,
+            99
+          ],
+          "shape": "round_rect",
+          "fill": "#A7BED8",
+          "stroke": null,
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "stage23_film_bar1",
+          "kind": "shape",
+          "z": 197,
+          "box": [
+            695,
+            304,
+            15,
+            77
+          ],
+          "shape": "round_rect",
+          "fill": "#A7BED8",
+          "stroke": null,
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "stage23_film_bar2",
+          "kind": "shape",
+          "z": 198,
+          "box": [
+            724,
+            321,
+            16,
+            47
+          ],
+          "shape": "round_rect",
+          "fill": "#A7BED8",
+          "stroke": null,
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "stage23_film_bar3",
+          "kind": "shape",
+          "z": 199,
+          "box": [
+            754,
+            333,
+            19,
+            25
+          ],
+          "shape": "round_rect",
+          "fill": "#A7BED8",
+          "stroke": null,
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "stage23_film_dot0",
+          "kind": "shape",
+          "z": 200,
+          "box": [
+            684,
+            322,
+            8,
+            8
+          ],
+          "shape": "ellipse",
+          "fill": "#838383",
+          "stroke": null,
+          "stroke_width": 1
+        },
+        {
+          "id": "stage23_film_dot1",
+          "kind": "shape",
+          "z": 201,
+          "box": [
+            684,
+            340,
+            8,
+            8
+          ],
+          "shape": "ellipse",
+          "fill": "#838383",
+          "stroke": null,
+          "stroke_width": 1
+        },
+        {
+          "id": "stage23_film_dot2",
+          "kind": "shape",
+          "z": 202,
+          "box": [
+            684,
+            358,
+            8,
+            8
+          ],
+          "shape": "ellipse",
+          "fill": "#838383",
+          "stroke": null,
+          "stroke_width": 1
+        },
+        {
+          "id": "stage23_film_dot3",
+          "kind": "shape",
+          "z": 203,
+          "box": [
+            713,
+            332,
+            8,
+            8
+          ],
+          "shape": "ellipse",
+          "fill": "#838383",
+          "stroke": null,
+          "stroke_width": 1
+        },
+        {
+          "id": "stage23_film_dot4",
+          "kind": "shape",
+          "z": 204,
+          "box": [
+            713,
+            349,
+            8,
+            8
+          ],
+          "shape": "ellipse",
+          "fill": "#838383",
+          "stroke": null,
+          "stroke_width": 1
+        },
+        {
+          "id": "stage23_film_dot5",
+          "kind": "shape",
+          "z": 205,
+          "box": [
+            742,
+            331,
+            8,
+            8
+          ],
+          "shape": "ellipse",
+          "fill": "#838383",
+          "stroke": null,
+          "stroke_width": 1
+        },
+        {
+          "id": "stage23_film_dot6",
+          "kind": "shape",
+          "z": 206,
+          "box": [
+            742,
+            349,
+            8,
+            8
+          ],
+          "shape": "ellipse",
+          "fill": "#838383",
+          "stroke": null,
+          "stroke_width": 1
+        },
+        {
+          "id": "stage23_noise",
+          "kind": "text",
+          "z": 207,
+          "box": [
+            947,
+            250,
+            51,
+            21
+          ],
+          "font_size": 11,
+          "font_family": "Times New Roman",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Noise",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage23_noisebox",
+          "kind": "shape",
+          "z": 208,
+          "box": [
+            921,
+            268,
+            85,
+            28
+          ],
+          "shape": "round_rect",
+          "fill": null,
+          "stroke": "#929292",
+          "stroke_width": 0.9,
+          "radius": 5,
+          "dash": [
+            4,
+            3
+          ]
+        },
+        {
+          "id": "stage23_noisecell0",
+          "kind": "shape",
+          "z": 209,
+          "box": [
+            927,
+            275,
+            14,
+            14
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFDF5",
+          "stroke": "#808080",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 2,
+          "container": "stage23_noisebox"
+        },
+        {
+          "id": "stage23_noisestripe0_0",
+          "kind": "shape",
+          "z": 210,
+          "box": [
+            928,
+            276,
+            6,
+            12
+          ],
+          "shape": "polygon",
+          "fill": "#9F4917",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0,
+              0.8
+            ],
+            [
+              1,
+              0.15
+            ],
+            [
+              1,
+              0.45
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "role": "background",
+          "container": "stage23_noisebox"
+        },
+        {
+          "id": "stage23_noisestripe0_1",
+          "kind": "shape",
+          "z": 211,
+          "box": [
+            934,
+            276,
+            6,
+            12
+          ],
+          "shape": "polygon",
+          "fill": "#9F4917",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0,
+              0.8
+            ],
+            [
+              1,
+              0.15
+            ],
+            [
+              1,
+              0.45
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "role": "background",
+          "container": "stage23_noisebox"
+        },
+        {
+          "id": "stage23_noisecell1",
+          "kind": "shape",
+          "z": 212,
+          "box": [
+            947,
+            275,
+            14,
+            14
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFDF5",
+          "stroke": "#808080",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 2,
+          "container": "stage23_noisebox"
+        },
+        {
+          "id": "stage23_noisestripe1_0",
+          "kind": "shape",
+          "z": 213,
+          "box": [
+            948,
+            276,
+            6,
+            12
+          ],
+          "shape": "polygon",
+          "fill": "#9F4917",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0,
+              0.8
+            ],
+            [
+              1,
+              0.15
+            ],
+            [
+              1,
+              0.45
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "role": "background",
+          "container": "stage23_noisebox"
+        },
+        {
+          "id": "stage23_noisestripe1_1",
+          "kind": "shape",
+          "z": 214,
+          "box": [
+            954,
+            276,
+            6,
+            12
+          ],
+          "shape": "polygon",
+          "fill": "#9F4917",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0,
+              0.8
+            ],
+            [
+              1,
+              0.15
+            ],
+            [
+              1,
+              0.45
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "role": "background",
+          "container": "stage23_noisebox"
+        },
+        {
+          "id": "stage23_noisecell2",
+          "kind": "shape",
+          "z": 215,
+          "box": [
+            987,
+            275,
+            14,
+            14
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFDF5",
+          "stroke": "#808080",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 2,
+          "container": "stage23_noisebox"
+        },
+        {
+          "id": "stage23_noisestripe2_0",
+          "kind": "shape",
+          "z": 216,
+          "box": [
+            988,
+            276,
+            6,
+            12
+          ],
+          "shape": "polygon",
+          "fill": "#9F4917",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0,
+              0.8
+            ],
+            [
+              1,
+              0.15
+            ],
+            [
+              1,
+              0.45
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "role": "background",
+          "container": "stage23_noisebox"
+        },
+        {
+          "id": "stage23_noisestripe2_1",
+          "kind": "shape",
+          "z": 217,
+          "box": [
+            994,
+            276,
+            6,
+            12
+          ],
+          "shape": "polygon",
+          "fill": "#9F4917",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0,
+              0.8
+            ],
+            [
+              1,
+              0.15
+            ],
+            [
+              1,
+              0.45
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "role": "background",
+          "container": "stage23_noisebox"
+        },
+        {
+          "id": "stage23_noise_ellipsis",
+          "kind": "text",
+          "z": 218,
+          "box": [
+            969,
+            271,
+            18,
+            22
+          ],
+          "font_size": 14,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "stage23_noisebox",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "···",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 14,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage23_expert",
+          "kind": "shape",
+          "z": 219,
+          "box": [
+            946,
+            311,
+            165,
+            62
+          ],
+          "shape": "round_rect",
+          "fill": "#C3E2E0",
+          "stroke": "#76B64B",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 5
+        },
+        {
+          "id": "stage23_expert_label",
+          "kind": "text",
+          "z": 220,
+          "box": [
+            951,
+            319,
+            155,
+            27
+          ],
+          "font_size": 17,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1,
+          "container": "stage23_expert",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Billion-Parameter",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 17,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "s1obs_vlm",
+          "kind": "line",
+          "z": 221,
+          "points": [
+            [
+              298.0,
+              170.0
+            ],
+            [
+              304,
+              170
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.5,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "s1obs_film",
+          "kind": "line",
+          "z": 222,
+          "points": [
+            [
+              124,
+              226
+            ],
+            [
+              124,
+              255
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.5,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "s1film_exp",
+          "kind": "line",
+          "z": 223,
+          "points": [
+            [
+              179,
+              343
+            ],
+            [
+              351,
+              343
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.5,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "s1reason_exp",
+          "kind": "line",
+          "z": 224,
+          "points": [
+            [
+              435,
+              234
+            ],
+            [
+              435,
+              311
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.5,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "s1noise_exp",
+          "kind": "line",
+          "z": 225,
+          "points": [
+            [
+              368,
+              297
+            ],
+            [
+              368,
+              312
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.5,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "s1exp_robot",
+          "kind": "line",
+          "z": 226,
+          "points": [
+            [
+              435,
+              374
+            ],
+            [
+              435,
+              389
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.5,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "s23obs_vlm",
+          "kind": "line",
+          "z": 227,
+          "points": [
+            [
+              813,
+              169
+            ],
+            [
+              897,
+              169
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.5,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "s23obs_film",
+          "kind": "line",
+          "z": 228,
+          "points": [
+            [
+              717.0,
+              245.0
+            ],
+            [
+              717,
+              251
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.5,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "s23film_exp",
+          "kind": "line",
+          "z": 229,
+          "points": [
+            [
+              772,
+              343
+            ],
+            [
+              946,
+              343
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.5,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "s23reason_exp",
+          "kind": "line",
+          "z": 230,
+          "points": [
+            [
+              1029,
+              232
+            ],
+            [
+              1029,
+              311
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.5,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "s23noise_exp",
+          "kind": "line",
+          "z": 231,
+          "points": [
+            [
+              963,
+              296
+            ],
+            [
+              963,
+              311
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.5,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "s23exp_robot",
+          "kind": "line",
+          "z": 232,
+          "points": [
+            [
+              1029,
+              373
+            ],
+            [
+              1029,
+              387
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.5,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "stage1_label",
+          "kind": "text",
+          "z": 233,
+          "box": [
+            221,
+            448,
+            110,
+            36
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Stage 1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage23_label",
+          "kind": "text",
+          "z": 234,
+          "box": [
+            815,
+            445,
+            164,
+            36
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Stage 2 & 3",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "legend_hatch",
+          "kind": "shape",
+          "z": 235,
+          "box": [
+            533,
+            450,
+            31,
+            29
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#CCCCCC",
+          "stroke_width": 1,
+          "role": "background"
+        },
+        {
+          "id": "legend_hatch_stripe0",
+          "kind": "shape",
+          "z": 236,
+          "box": [
+            533.0,
+            476.0,
+            3.0,
+            3.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "legend_hatch_stripe1",
+          "kind": "shape",
+          "z": 237,
+          "box": [
+            533.0,
+            467.0,
+            12.0,
+            12.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.75,
+              1.0
+            ],
+            [
+              0.0,
+              0.25
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "legend_hatch_stripe2",
+          "kind": "shape",
+          "z": 238,
+          "box": [
+            533.0,
+            458.0,
+            21.0,
+            21.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.8571428571428571,
+              1.0
+            ],
+            [
+              0.0,
+              0.14285714285714285
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "legend_hatch_stripe3",
+          "kind": "shape",
+          "z": 239,
+          "box": [
+            533.0,
+            450.0,
+            30.0,
+            29.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.03333333333333333,
+              0.0
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9,
+              1.0
+            ],
+            [
+              0.0,
+              0.06896551724137931
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "legend_hatch_stripe4",
+          "kind": "shape",
+          "z": 240,
+          "box": [
+            540,
+            450,
+            24.0,
+            24.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.125,
+              0.0
+            ],
+            [
+              1.0,
+              0.875
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "legend_hatch_stripe5",
+          "kind": "shape",
+          "z": 241,
+          "box": [
+            549,
+            450,
+            15.0,
+            15.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.2,
+              0.0
+            ],
+            [
+              1.0,
+              0.8
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "legend_hatch_stripe6",
+          "kind": "shape",
+          "z": 242,
+          "box": [
+            558,
+            450,
+            6.0,
+            6.0
+          ],
+          "shape": "polygon",
+          "fill": "#CCCCCC",
+          "stroke": null,
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.5,
+              0.0
+            ],
+            [
+              1.0,
+              0.5
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "role": "background"
+        },
+        {
+          "id": "legend_label",
+          "kind": "text",
+          "z": 243,
+          "box": [
+            574,
+            447,
+            105,
+            40
+          ],
+          "font_size": 14,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1.0,
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Discarded\n",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 14,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            },
+            {
+              "text": "Architecture",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 14,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "panel_separator",
+          "kind": "line",
+          "z": 244,
+          "points": [
+            [
+              1203,
+              63
+            ],
+            [
+              1203,
+              487
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 3,
+          "dash": [
+            24,
+            10
+          ]
+        },
+        {
+          "id": "transformer_panel0",
+          "kind": "shape",
+          "z": 245,
+          "box": [
+            1319,
+            107,
+            143,
+            193
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#213A69",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 6
+        },
+        {
+          "id": "transformer_panel1",
+          "kind": "shape",
+          "z": 246,
+          "box": [
+            1325,
+            113,
+            143,
+            193
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#213A69",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 6
+        },
+        {
+          "id": "transformer_panel2",
+          "kind": "shape",
+          "z": 247,
+          "box": [
+            1332,
+            119,
+            143,
+            193
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#213A69",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 6
+        },
+        {
+          "id": "transformer_panel3",
+          "kind": "shape",
+          "z": 248,
+          "box": [
+            1345,
+            121,
+            143,
+            193
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#213A69",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 6
+        },
+        {
+          "id": "rear_header0",
+          "kind": "shape",
+          "z": 249,
+          "box": [
+            1326,
+            113,
+            45,
+            16
+          ],
+          "shape": "round_rect",
+          "fill": "#DEEAF1",
+          "stroke": "#747474",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "rear_header1",
+          "kind": "shape",
+          "z": 250,
+          "box": [
+            1333,
+            120,
+            45,
+            16
+          ],
+          "shape": "round_rect",
+          "fill": "#DEEAF1",
+          "stroke": "#747474",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "rear_header2",
+          "kind": "shape",
+          "z": 251,
+          "box": [
+            1338,
+            122,
+            45,
+            16
+          ],
+          "shape": "round_rect",
+          "fill": "#DEEAF1",
+          "stroke": "#747474",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "block_mlp",
+          "kind": "shape",
+          "z": 252,
+          "box": [
+            1351,
+            126,
+            43,
+            17
+          ],
+          "shape": "round_rect",
+          "fill": "#E0ECF4",
+          "stroke": "#777777",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "block_mlp_text",
+          "kind": "text",
+          "z": 253,
+          "box": [
+            1352,
+            125,
+            41,
+            19
+          ],
+          "font_size": 11,
+          "font_family": "Arial",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "valign": "middle",
+          "line_height": 1,
+          "container": "block_mlp",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "MLP",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "block_ln1",
+          "kind": "shape",
+          "z": 254,
+          "box": [
+            1399,
+            126,
+            83,
+            17
+          ],
+          "shape": "round_rect",
+          "fill": "#F3F3F3",
+          "stroke": "#777777",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "block_ln1_text",
+          "kind": "text",
+          "z": 255,
+          "box": [
+            1400,
+            125,
+            81,
+            19
+          ],
+          "font_size": 11,
+          "font_family": "Arial",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "valign": "middle",
+          "line_height": 1,
+          "container": "block_ln1",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Layer Norm",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "block_shift1",
+          "kind": "shape",
+          "z": 256,
+          "box": [
+            1399,
+            147,
+            83,
+            16
+          ],
+          "shape": "round_rect",
+          "fill": "#DEEBF5",
+          "stroke": "#777777",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "block_shift1_text",
+          "kind": "text",
+          "z": 257,
+          "box": [
+            1400,
+            146,
+            81,
+            18
+          ],
+          "font_size": 11,
+          "font_family": "Arial",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "valign": "middle",
+          "line_height": 1,
+          "container": "block_shift1",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Scale, Shift",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "block_attention",
+          "kind": "shape",
+          "z": 258,
+          "box": [
+            1399,
+            167,
+            83,
+            28
+          ],
+          "shape": "round_rect",
+          "fill": "#FFF5EF",
+          "stroke": "#777777",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "block_attention_text",
+          "kind": "text",
+          "z": 259,
+          "box": [
+            1400,
+            166,
+            81,
+            30
+          ],
+          "font_size": 11,
+          "font_family": "Arial",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "valign": "middle",
+          "line_height": 1,
+          "container": "block_attention",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Multi-Head\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            },
+            {
+              "text": "Attention",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "block_scale1",
+          "kind": "shape",
+          "z": 260,
+          "box": [
+            1399,
+            200,
+            83,
+            23
+          ],
+          "shape": "round_rect",
+          "fill": "#DEEBF5",
+          "stroke": "#777777",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "block_scale1_text",
+          "kind": "text",
+          "z": 261,
+          "box": [
+            1400,
+            199,
+            81,
+            25
+          ],
+          "font_size": 11,
+          "font_family": "Arial",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "valign": "middle",
+          "line_height": 1,
+          "container": "block_scale1",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Scale",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "block_ln2",
+          "kind": "shape",
+          "z": 262,
+          "box": [
+            1399,
+            227,
+            83,
+            17
+          ],
+          "shape": "round_rect",
+          "fill": "#F3F3F3",
+          "stroke": "#777777",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "block_ln2_text",
+          "kind": "text",
+          "z": 263,
+          "box": [
+            1400,
+            226,
+            81,
+            19
+          ],
+          "font_size": 11,
+          "font_family": "Arial",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "valign": "middle",
+          "line_height": 1,
+          "container": "block_ln2",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Layer Norm",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "block_shift2",
+          "kind": "shape",
+          "z": 264,
+          "box": [
+            1399,
+            249,
+            83,
+            17
+          ],
+          "shape": "round_rect",
+          "fill": "#DEEBF5",
+          "stroke": "#777777",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "block_shift2_text",
+          "kind": "text",
+          "z": 265,
+          "box": [
+            1400,
+            248,
+            81,
+            19
+          ],
+          "font_size": 11,
+          "font_family": "Arial",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "valign": "middle",
+          "line_height": 1,
+          "container": "block_shift2",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Scale, Shift",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "block_ffn",
+          "kind": "shape",
+          "z": 266,
+          "box": [
+            1399,
+            272,
+            83,
+            16
+          ],
+          "shape": "round_rect",
+          "fill": "#F3F3F3",
+          "stroke": "#777777",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "block_ffn_text",
+          "kind": "text",
+          "z": 267,
+          "box": [
+            1400,
+            271,
+            81,
+            18
+          ],
+          "font_size": 11,
+          "font_family": "Arial",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "valign": "middle",
+          "line_height": 1,
+          "container": "block_ffn",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "FFN",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "block_scale2",
+          "kind": "shape",
+          "z": 268,
+          "box": [
+            1399,
+            293,
+            83,
+            16
+          ],
+          "shape": "round_rect",
+          "fill": "#DEEBF5",
+          "stroke": "#777777",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 3
+        },
+        {
+          "id": "block_scale2_text",
+          "kind": "text",
+          "z": 269,
+          "box": [
+            1400,
+            292,
+            81,
+            18
+          ],
+          "font_size": 11,
+          "font_family": "Arial",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "valign": "middle",
+          "line_height": 1,
+          "container": "block_scale2",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Scale",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "block_input",
+          "kind": "line",
+          "z": 270,
+          "points": [
+            [
+              1381,
+              83
+            ],
+            [
+              1381,
+              106
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.5,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "mlp_trunk",
+          "kind": "line",
+          "z": 271,
+          "points": [
+            [
+              1372,
+              143
+            ],
+            [
+              1372,
+              301
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.2,
+          "allow_overlap_with": [
+            "mlp_branch0",
+            "mlp_branch1",
+            "mlp_branch2",
+            "mlp_branch3"
+          ],
+          "overlap_reason": "Source-visible connected branch or brace segments meet at this named junction."
+        },
+        {
+          "id": "mlp_branch0",
+          "kind": "line",
+          "z": 272,
+          "points": [
+            [
+              1372,
+              155
+            ],
+            [
+              1398,
+              155
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "mlp_branch1",
+          "kind": "line",
+          "z": 273,
+          "points": [
+            [
+              1372,
+              211
+            ],
+            [
+              1398,
+              211
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "mlp_branch2",
+          "kind": "line",
+          "z": 274,
+          "points": [
+            [
+              1372,
+              258
+            ],
+            [
+              1398,
+              258
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "mlp_branch3",
+          "kind": "line",
+          "z": 275,
+          "points": [
+            [
+              1372,
+              301
+            ],
+            [
+              1398,
+              301
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "block_brace0",
+          "kind": "line",
+          "z": 276,
+          "points": [
+            [
+              1309,
+              100
+            ],
+            [
+              1302,
+              101
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1,
+          "allow_overlap_with": [
+            "block_brace1"
+          ],
+          "overlap_reason": "Source-visible connected branch or brace segments meet at this named junction."
+        },
+        {
+          "id": "block_brace1",
+          "kind": "line",
+          "z": 277,
+          "points": [
+            [
+              1302,
+              101
+            ],
+            [
+              1302,
+              199
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1,
+          "allow_overlap_with": [
+            "block_brace2"
+          ],
+          "overlap_reason": "Source-visible connected branch or brace segments meet at this named junction."
+        },
+        {
+          "id": "block_brace2",
+          "kind": "line",
+          "z": 278,
+          "points": [
+            [
+              1302,
+              199
+            ],
+            [
+              1295,
+              201
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1,
+          "allow_overlap_with": [
+            "block_brace3"
+          ],
+          "overlap_reason": "Source-visible connected branch or brace segments meet at this named junction."
+        },
+        {
+          "id": "block_brace3",
+          "kind": "line",
+          "z": 279,
+          "points": [
+            [
+              1295,
+              201
+            ],
+            [
+              1302,
+              202
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1,
+          "allow_overlap_with": [
+            "block_brace4"
+          ],
+          "overlap_reason": "Source-visible connected branch or brace segments meet at this named junction."
+        },
+        {
+          "id": "block_brace4",
+          "kind": "line",
+          "z": 280,
+          "points": [
+            [
+              1302,
+              202
+            ],
+            [
+              1302,
+              300
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1,
+          "allow_overlap_with": [
+            "block_brace5"
+          ],
+          "overlap_reason": "Source-visible connected branch or brace segments meet at this named junction."
+        },
+        {
+          "id": "block_brace5",
+          "kind": "line",
+          "z": 281,
+          "points": [
+            [
+              1302,
+              300
+            ],
+            [
+              1309,
+              301
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1
+        },
+        {
+          "id": "block_repeat",
+          "kind": "text",
+          "z": 282,
+          "box": [
+            1233,
+            186,
+            85,
+            27
+          ],
+          "font_size": 18,
+          "font_family": "Times New Roman",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "rotation": -90,
+          "align": "center",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Block x N",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 18,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "head_trunk",
+          "kind": "line",
+          "z": 283,
+          "points": [
+            [
+              1417,
+              314
+            ],
+            [
+              1417,
+              338
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.7,
+          "allow_overlap_with": [
+            "head_bus"
+          ],
+          "overlap_reason": "Source-visible connected branch or brace segments meet at this named junction."
+        },
+        {
+          "id": "head_bus",
+          "kind": "line",
+          "z": 284,
+          "points": [
+            [
+              1250,
+              338
+            ],
+            [
+              1549,
+              338
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.5,
+          "allow_overlap_with": [
+            "head_branch0",
+            "head_branch1",
+            "head_branch2",
+            "head_branch3"
+          ],
+          "overlap_reason": "Source-visible connected branch or brace segments meet at this named junction."
+        },
+        {
+          "id": "head_branch0",
+          "kind": "line",
+          "z": 285,
+          "points": [
+            [
+              1250,
+              338
+            ],
+            [
+              1250,
+              362
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "action_head0",
+          "kind": "shape",
+          "z": 286,
+          "box": [
+            1220,
+            363,
+            61,
+            29
+          ],
+          "shape": "round_rect",
+          "fill": "#C6C4D4",
+          "stroke": "#1A1A1A",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 5
+        },
+        {
+          "id": "action_head0_label",
+          "kind": "text",
+          "z": 287,
+          "box": [
+            1223,
+            365,
+            55,
+            31
+          ],
+          "font_size": 11,
+          "font_family": "Arial",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1,
+          "container": "action_head0",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Action\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            },
+            {
+              "text": "Head",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "head_branch1",
+          "kind": "line",
+          "z": 288,
+          "points": [
+            [
+              1347,
+              338
+            ],
+            [
+              1347,
+              362
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "action_head1",
+          "kind": "shape",
+          "z": 289,
+          "box": [
+            1317,
+            363,
+            61,
+            29
+          ],
+          "shape": "round_rect",
+          "fill": "#C6C4D4",
+          "stroke": "#1A1A1A",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 5
+        },
+        {
+          "id": "action_head1_label",
+          "kind": "text",
+          "z": 290,
+          "box": [
+            1320,
+            365,
+            55,
+            31
+          ],
+          "font_size": 11,
+          "font_family": "Arial",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1,
+          "container": "action_head1",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Action\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            },
+            {
+              "text": "Head",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "head_branch2",
+          "kind": "line",
+          "z": 291,
+          "points": [
+            [
+              1438,
+              338
+            ],
+            [
+              1438,
+              362
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "action_head2",
+          "kind": "shape",
+          "z": 292,
+          "box": [
+            1408,
+            363,
+            61,
+            29
+          ],
+          "shape": "round_rect",
+          "fill": "#C6C4D4",
+          "stroke": "#1A1A1A",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 5
+        },
+        {
+          "id": "action_head2_label",
+          "kind": "text",
+          "z": 293,
+          "box": [
+            1411,
+            365,
+            55,
+            31
+          ],
+          "font_size": 11,
+          "font_family": "Arial",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1,
+          "container": "action_head2",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Action\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            },
+            {
+              "text": "Head",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "head_branch3",
+          "kind": "line",
+          "z": 294,
+          "points": [
+            [
+              1548,
+              338
+            ],
+            [
+              1548,
+              362
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 5,
+            "width": 4
+          }
+        },
+        {
+          "id": "action_head3",
+          "kind": "shape",
+          "z": 295,
+          "box": [
+            1518,
+            363,
+            61,
+            29
+          ],
+          "shape": "round_rect",
+          "fill": "#C6C4D4",
+          "stroke": "#1A1A1A",
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 5
+        },
+        {
+          "id": "action_head3_label",
+          "kind": "text",
+          "z": 296,
+          "box": [
+            1521,
+            365,
+            55,
+            31
+          ],
+          "font_size": 11,
+          "font_family": "Arial",
+          "bold": false,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1,
+          "container": "action_head3",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Action\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            },
+            {
+              "text": "Head",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "heads_ellipsis",
+          "kind": "text",
+          "z": 297,
+          "box": [
+            1484,
+            360,
+            28,
+            29
+          ],
+          "font_size": 24,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "···",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 24,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "robot_photo0",
+          "kind": "image",
+          "z": 298,
+          "box": [
+            1213,
+            401,
+            82,
+            86
+          ],
+          "path": "assets/f778ae9177631456ab83.png",
+          "contains_text": false,
+          "provenance": "Exact source robot embodiment photograph/artwork; no readable diagram labels.",
+          "image_fit": "stretch"
+        },
+        {
+          "id": "robot_photo1",
+          "kind": "image",
+          "z": 299,
+          "box": [
+            1315,
+            403,
+            81,
+            85
+          ],
+          "path": "assets/cf1aa9daedb4643dadbb.png",
+          "contains_text": false,
+          "provenance": "Exact source robot embodiment photograph/artwork; no readable diagram labels.",
+          "image_fit": "stretch"
+        },
+        {
+          "id": "robot_photo2",
+          "kind": "image",
+          "z": 300,
+          "box": [
+            1410,
+            402,
+            69,
+            86
+          ],
+          "path": "assets/858b4fc05f6af1d1dac0.png",
+          "contains_text": false,
+          "provenance": "Exact source robot embodiment photograph/artwork; no readable diagram labels.",
+          "image_fit": "stretch"
+        },
+        {
+          "id": "robot_photo3",
+          "kind": "image",
+          "z": 301,
+          "box": [
+            1501,
+            403,
+            82,
+            80
+          ],
+          "path": "assets/568dbdc268d19f5fe79a.png",
+          "contains_text": false,
+          "provenance": "Exact source robot embodiment photograph/artwork; no readable diagram labels.",
+          "image_fit": "stretch"
+        },
+        {
+          "id": "s1obs_vlm_dashed_shaft",
+          "kind": "line",
+          "points": [
+            [
+              220,
+              170
+            ],
+            [
+              298.0,
+              170.0
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.5,
+          "dash": [
+            7,
+            5
+          ],
+          "allow_overlap_with": [
+            "s1obs_vlm"
+          ],
+          "overlap_reason": "Source dashed connector meets its own native arrow tip.",
+          "z": 302
+        },
+        {
+          "id": "s23obs_film_dashed_shaft",
+          "kind": "line",
+          "points": [
+            [
+              717,
+              225
+            ],
+            [
+              717.0,
+              245.0
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 1.5,
+          "dash": [
+            7,
+            5
+          ],
+          "allow_overlap_with": [
+            "s23obs_film"
+          ],
+          "overlap_reason": "Source dashed connector meets its own native arrow tip.",
+          "z": 303
+        },
+        {
+          "id": "main_title_name",
+          "kind": "text",
+          "z": 304,
+          "box": [
+            600,
+            13,
+            178,
+            34
+          ],
+          "font_size": 25,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1.15,
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Dex-VLA:",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 25,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage1_expert_label_second",
+          "kind": "text",
+          "z": 305,
+          "box": [
+            356,
+            338,
+            155,
+            27
+          ],
+          "font_size": 17,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1,
+          "container": "stage1_expert",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Diffusion Expert",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 17,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage23_expert_label_second",
+          "kind": "text",
+          "z": 306,
+          "box": [
+            951,
+            337,
+            155,
+            27
+          ],
+          "font_size": 17,
+          "font_family": "Times New Roman",
+          "bold": true,
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1,
+          "container": "stage23_expert",
+          "color": "#000000",
+          "runs": [
+            {
+              "text": "Diffusion Expert",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 17,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "stage1_robot_initial",
+          "kind": "image",
+          "box": [
+            381,
+            390,
+            48,
+            57
+          ],
+          "path": "assets/bcb48be1fb34223227d1.png",
+          "contains_text": false,
+          "provenance": "Exact source complex robot kinematics/motion artwork crop; no readable labels. Arrow between states is native.",
+          "image_fit": "stretch",
+          "z": 307
+        },
+        {
+          "id": "stage1_robot_moved",
+          "kind": "image",
+          "box": [
+            440,
+            390,
+            50,
+            57
+          ],
+          "path": "assets/649e95bf6c2661afb7f1.png",
+          "contains_text": false,
+          "provenance": "Exact source complex robot kinematics/motion artwork crop; no readable labels. Arrow between states is native.",
+          "image_fit": "stretch",
+          "z": 308
+        },
+        {
+          "id": "stage1_robot_transition",
+          "kind": "line",
+          "points": [
+            [
+              430.5,
+              418.5
+            ],
+            [
+              441,
+              418.5
+            ]
+          ],
+          "stroke": "#252525",
+          "stroke_width": 0.75,
+          "arrow": true,
+          "arrow_head": {
+            "length": 3,
+            "width": 3
+          },
+          "z": 309
+        },
+        {
+          "id": "stage23_robot_initial",
+          "kind": "image",
+          "box": [
+            974,
+            389,
+            48,
+            57
+          ],
+          "path": "assets/5f22a2f0a6691310fcdc.png",
+          "contains_text": false,
+          "provenance": "Exact source complex robot kinematics/motion artwork crop; no readable labels. Arrow between states is native.",
+          "image_fit": "stretch",
+          "z": 310
+        },
+        {
+          "id": "stage23_robot_moved",
+          "kind": "image",
+          "box": [
+            1034,
+            389,
+            49,
+            57
+          ],
+          "path": "assets/f7061febf42f08fdf4fe.png",
+          "contains_text": false,
+          "provenance": "Exact source complex robot kinematics/motion artwork crop; no readable labels. Arrow between states is native.",
+          "image_fit": "stretch",
+          "z": 311
+        },
+        {
+          "id": "stage23_robot_transition",
+          "kind": "line",
+          "points": [
+            [
+              1024,
+              417.5
+            ],
+            [
+              1034,
+              417.5
+            ]
+          ],
+          "stroke": "#252525",
+          "stroke_width": 0.75,
+          "arrow": true,
+          "arrow_head": {
+            "length": 3,
+            "width": 3
+          },
+          "z": 312
+        }
+      ]
+    }
+  ]
+}

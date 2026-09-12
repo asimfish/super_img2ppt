@@ -1,0 +1,10 @@
+#!/bin/zsh
+set -eu
+export PATH=/opt/homebrew/bin:$PATH
+TASK_ROOT=${0:A:h}
+BUILD_DEST=${1:?Supply a new output directory}
+PYTHON=/Users/liyufeng/Code/super_img2ppt/.venv/bin/python
+CLI=/Users/liyufeng/Code/super_img2ppt/.venv/bin/super-img2ppt
+"$CLI" build "$TASK_ROOT/job/build04/scene.resolved.json" --out "$BUILD_DEST" --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype --font-dir /System/Library/Fonts/Supplemental
+"$PYTHON" "$TASK_ROOT/raster_actual.py" "$BUILD_DEST"
+"$PYTHON" "$TASK_ROOT/measure.py" "$BUILD_DEST"

@@ -1,0 +1,11 @@
+import json,sys
+from pathlib import Path
+from PIL import Image,ImageDraw,ImageChops
+R=Path(__file__).parent;B=R/sys.argv[1];src=Image.open(R/'source.png').convert('RGB');act=Image.open(B/'actual_source_width.png').convert('RGB');rs=json.load(open(R/'roi_contract.json'))['regions'];out=Image.new('RGB',(1800,120*len(rs)),'white');dr=ImageDraw.Draw(out);metrics=[]
+def ink(im):return im.convert('L').point(lambda x:255 if x<100 else 0)
+for i,r in enumerate(rs):
+ b=r['box'];a=src.crop(b);c=act.crop(b);ma=ink(a);mc=ink(c);ba=ma.getbbox();bc=mc.getbbox();metrics.append(dict(id=r['id'],box=b,source_ink_bbox=ba,actual_ink_bbox=bc,delta_ltrb=[v-u for u,v in zip(ba,bc)] if ba and bc else None,limitation='Black threshold includes any dark geometry inside this fixed ROI; not a character-shape score.'))
+ factor=min(3,800/a.width,105/a.height);a=a.resize((round(a.width*factor),round(a.height*factor)));c=c.resize(a.size)
+ out.paste(a,(130,i*120+5));out.paste(c,(1000,i*120+5));dr.text((0,i*120+12),r['id'],fill='black')
+out.save(B/'detail_comparison.png');(B/'ink_metrics.json').write_text(json.dumps(metrics,indent=2));print(json.dumps(metrics,indent=2))
+full=Image.new('RGB',(1605,1020),'white');full.paste(src,(0,0));full.paste(act,(0,520));full.save(B/'source_vs_actual.png')
