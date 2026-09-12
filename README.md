@@ -2,7 +2,7 @@
 
 # super_img2ppt
 
-### 把图里的文字、形状和曲线，变回可以修改的对象。
+### 图片里的文字、公式与曲线，都能继续编辑。
 
 **Image → Editable PPTX · SVG · Scene JSON**
 
@@ -11,24 +11,88 @@
 ![Python](https://img.shields.io/badge/python-3.11%2B-3776AB)
 [![License](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 
-[看具身智能案例](#具身智能与机器人) · [全部真实效果](#真实复杂图效果) · [开始使用](#开始使用) · [曲线修复](#把案例反馈变成系统能力) · [质量与边界](#质量与边界)
+[**查看效果**](#精选效果) · [**下载编辑案例**](examples/editing/editing_examples.zip) · [**开始使用**](#开始使用) · [完整画廊](#真实复杂图效果)
 
 </div>
 
-一个 **Agent Skill + 本地 Python 运行时**：Agent 看图、纠正 OCR、理解结构；运行时测量真实字体、检查重叠、导出原生对象，再渲染 **实际 PPTX** 验收。适合论文架构图、流程图、训练曲线和图片版幻灯片。
+把论文架构图、流程图、训练曲线和图片版幻灯片，重建为可编辑对象。Agent 看图理解结构，本地运行时测量字体、检查重叠、导出文件，再用**实际 PPTX 渲染**复核。
 
-**新增 GR00T N1、RoboDream 两张完整图，论文画廊共十七例。**
-v0.3.7 重点改善后续编辑：模块、公式、token 和每条曲线使用原生语义组合，内部文字与形状仍可单独编辑。另提供 Cosmos 3 的分组版本。
-所有预览来自实际 PPTX；完整图对照、组合前后验证和真实移动/改字操作分别记录。
+| 完整论文图 | 分组编辑案例 | 导出格式 |
+| :---: | :---: | :---: |
+| **17 例** · 具身 / 世界模型 / 通用架构 | **3 份** · 模块、公式、曲线成组编辑 | **PPTX · SVG · JSON** |
+
+> **v0.3.7 · 为后续编辑而组织对象**
+>
+> 完整标签放在一个文本框；模块、公式和每条曲线可整体移动，进入组合后仍能修改子对象。[查看真实移动与改字测试 →](docs/atomic_editing.md)
+
+## 精选效果
+
+**左：论文原图　｜　右：实际 PPTX 经 LibreOffice 渲染。** 点击图片可查看原尺寸；完整面板均保留。照片等局部图片与字体近似在每例报告中说明。
+
+### GR00T N1 · 整体移动模块，单独修改公式
+
+[![GR00T N1 完整原图与分组 PPTX 对照](docs/previews/gallery/gr00t_n1.png)](docs/previews/gallery/gr00t_n1.png)
+
+**159 个原生对象 · 34 个语义组 · 2 张局部图片。** 双系统架构、动作公式与反馈回路完整保留；八处多行标签合并为单文本框，合并前后实际画面一致。Tokenizer 字宽与部分数学字形仍有差异。
+
+[**下载分组 PPTX**](examples/gallery/gr00t_n1/editable.pptx) · [SVG](examples/gallery/gr00t_n1/svg/page_001.svg) · [分组清单](examples/gallery/gr00t_n1/editability.json) · [实测报告](examples/gallery/gr00t_n1/REPORT.md) · [论文 / 归属](examples/gallery/gr00t_n1/ATTRIBUTION.md)
+
+### Cosmos 3 · 密集架构与斜排公式
+
+[![Cosmos 3 完整原图与实际 PPTX 对照](docs/previews/gallery/cosmos3.png)](docs/previews/gallery/cosmos3.png)
+
+**414 个原生对象 · 81 个含嵌套的组 · 1 张无文字括号图片。** 完整双塔、144 格注意力矩阵与公式可编辑；分组版外观与原发布文件一致。斜排公式仍保留字形与字距的人工复核提示。
+
+[**下载分组 PPTX**](examples/editing/cosmos3/editable.pptx) · [SVG](examples/editing/cosmos3/svg/page_001.svg) · [斜排公式细节](docs/previews/gallery/cosmos3_detail.png) · [编辑报告](examples/editing/cosmos3/REPORT.md) · [论文 / 归属](examples/editing/cosmos3/ATTRIBUTION.md)
+
+### RoboDream · 多视角世界模型与原生曲线
+
+[![RoboDream 完整原图与分组 PPTX 对照](docs/previews/gallery/robodream.png)](docs/previews/gallery/robodream.png)
+
+**227 个原生对象 · 27 个语义组 · 5 张局部图片。** 四路视觉输入、多视角 token、DiT 与生成结果完整保留；18 个标签均为完整文本框，每条曲线单独成组。字体、圆角与渐变方向仍有近似。
+
+[**下载分组 PPTX**](examples/gallery/robodream/editable.pptx) · [SVG](examples/gallery/robodream/svg/page_001.svg) · [曲线细节](docs/previews/gallery/robodream_detail.png) · [实测报告](examples/gallery/robodream/REPORT.md) · [论文 / 归属](examples/gallery/robodream/ATTRIBUTION.md)
+
+## 下载与使用
+
+| 想先做什么 | 文件与说明 |
+| --- | --- |
+| **体验整体移动、组内改字** | [三份分组编辑包 · 约 3.6 MB](examples/editing/editing_examples.zip) · [编辑说明](docs/atomic_editing.md) · [SHA256](examples/editing/SHA256SUMS) |
+| **浏览全部复杂论文图** | [十七例完整包 · 约 24.4 MB](examples/gallery/paper_gallery.zip) · [文件索引](examples/gallery/index.json) · [SHA256](examples/gallery/SHA256SUMS) |
+| **转换自己的图片** | [安装与调用 Skill](skills/super-img2ppt/SKILL.md) · [本地入门样例](examples/editable_demo.pptx) |
+
+文件包包含 PPTX、SVG、原图、实际渲染、可复建场景与各例报告。三份分组版为 GR00T N1、RoboDream、Cosmos 3；历史案例保留各自版本的编辑结构。
+
+## 开始使用
+
+Python 3.11+，本地 LibreOffice，所需字体。开发环境使用 `uv`：
+
+```bash
+uv sync --frozen
+uv run super-img2ppt doctor
+uv run super-img2ppt build examples/flow_reconstruction.json --out output/demo
+```
+
+把 `skills/super-img2ppt` 接入 Agent 的技能目录，然后直接说：
+
+```text
+$super-img2ppt 把这张图片重建为可编辑 PPTX 和 SVG，保留布局，检查字体、曲线和重叠。
+```
+
+[自制入门样例 PPTX](examples/editable_demo.pptx) · [安装与调用说明](skills/super-img2ppt/SKILL.md)
+
+仓库名是 `super_img2ppt`，skill ID 和命令名是 `super-img2ppt`。独立 skill 包包含运行时；
+`uv run python scripts/build_package.py` 生成 `dist/super-img2ppt.skill` 与校验文件。
+
 
 ## 真实复杂图效果
 
-所有对照均为 **左：论文原图；右：实际 PPTX 经 LibreOffice 渲染**。点击图片查看原尺寸。
-保留完整图面板，没有只挑容易的局部。原生对象数量说明编辑边界；区域对比记录对齐和字形差异，两者分别报告。
+按方向展开查看完整原图对照、PPTX / SVG 下载与逐例限制。**自动检查通过不等于字体或整图完全一致**；原生对象数量也不代表保真率。
 
 ### 便于后续编辑的新案例
 
-下面两张新增图已带原生语义组合，另有 Cosmos 3 分组编辑版；历史案例按各自原始版本记录。
+<details>
+<summary><strong>分组编辑 · GR00T N1 / RoboDream</strong> · 展开完整对照</summary>
 
 #### GR00T N1 · 双系统架构、动作公式与嵌套模块
 
@@ -58,9 +122,12 @@ v0.3.7 重点改善后续编辑：模块、公式、token 和每条曲线使用�
 
 [Cosmos 3 分组 PPTX](examples/editing/cosmos3/editable.pptx) · [三份分组编辑案例完整包](examples/editing/editing_examples.zip) · [实际编辑操作与限制](docs/atomic_editing.md) · [全部十七例文件包](examples/gallery/paper_gallery.zip)
 
+</details>
+
 ### 2026 具身与世界模型
 
-以下是截至 2026-09-12 核实的三个近期公开项目案例，使用固定论文版本；不作热度排名。原图只通过栅格像素与本地 OCR 解读，没有使用 PDF 文字/矢量坐标或作者绘图源码。完整面板均保留。
+<details>
+<summary><strong>世界模型 · DreamZero / Cosmos Policy / Cosmos 3</strong> · 展开完整对照</summary>
 
 #### DreamZero · 世界动作模型的训练与推理
 
@@ -94,9 +161,12 @@ v0.3.7 重点改善后续编辑：模块、公式、token 和每条曲线使用�
 
 [本轮实测、改进与限制](docs/world_models.md) · [下载十七例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
 
+</details>
+
 ### 具身智能与机器人
 
-这一批包含真实照片、点云、动作轨迹和方法结构。**文字与图间结构可编辑，照片及其内部不可分离的轨迹保留为图片**；每例给出具体边界。本轮是完整案例实测与复建核验，没有将人工复核包装成盲测准确率。
+<details>
+<summary><strong>具身机器人 · OpenVLA / ECoT / DexVLA / RT-2 / 3D Diffuser Actor / ViNT</strong> · 展开完整对照</summary>
 
 #### OpenVLA · 双视觉编码器与动作解码
 
@@ -168,7 +238,14 @@ v0.3.7 重点改善后续编辑：模块、公式、token 和每条曲线使用�
 
 [具身案例测试与复建记录](docs/embodied_figures.md) · [下载十七例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
 
-### Griffin · 数据库表格到图模型
+</details>
+
+### 通用架构与训练曲线
+
+<details>
+<summary><strong>通用架构与曲线 · Griffin / BLIP-2 / Hyena / GaLore / Vision Mamba / Mamba-2</strong> · 展开完整对照</summary>
+
+#### Griffin · 数据库表格到图模型
 
 [![Griffin 完整原图与实际 PPTX 对照](docs/previews/gallery/griffin.png)](docs/previews/gallery/griffin.png)
 
@@ -180,7 +257,7 @@ v0.3.7 重点改善后续编辑：模块、公式、token 和每条曲线使用�
 
 <sub>改编自 Wang et al., “Griffin: Towards a Graph-Centric Relational Database Foundation Model”, ICML 2025, Figure 1。[论文与作者](https://proceedings.mlr.press/v267/wang25da.html) · [CC BY 4.0 / 来源](examples/gallery/griffin/provenance.json)。</sub>
 
-### BLIP-2 · Q-Former 与三种注意力掩码
+#### BLIP-2 · Q-Former 与三种注意力掩码
 
 [![BLIP-2 完整原图与实际 PPTX 对照](docs/previews/gallery/blip2.png)](docs/previews/gallery/blip2.png)
 
@@ -192,7 +269,7 @@ v0.3.7 重点改善后续编辑：模块、公式、token 和每条曲线使用�
 
 <sub>改编自 Li et al., “BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models”, ICML 2023, Figure 2。[论文与作者](https://proceedings.mlr.press/v202/li23q.html) · [CC BY 4.0 / 来源](examples/gallery/blip2/provenance.json)。</sub>
 
-### Hyena Hierarchy · 算子链与隐式滤波器
+#### Hyena Hierarchy · 算子链与隐式滤波器
 
 [![Hyena 完整原图与实际 PPTX 对照](docs/previews/gallery/hyena.png)](docs/previews/gallery/hyena.png)
 
@@ -206,7 +283,7 @@ v0.3.7 重点改善后续编辑：模块、公式、token 和每条曲线使用�
 
 [本轮完整测量、失败与修复证据](docs/gallery_extension.md) · [下载当前十七例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
 
-### GaLore · 四面板训练曲线
+#### GaLore · 四面板训练曲线
 
 [![GaLore 完整原图与实际 PPTX 对照](docs/previews/gallery/galore.png)](docs/previews/gallery/galore.png)
 
@@ -218,7 +295,7 @@ v0.3.7 重点改善后续编辑：模块、公式、token 和每条曲线使用�
 
 <sub>改编自 Zhao et al., “GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection”, ICML 2024, Figure 6。[论文与作者](https://proceedings.mlr.press/v235/zhao24s.html) · [CC BY 4.0 / 归属与修改说明](examples/gallery/galore/SOURCE_LICENSE.md)。</sub>
 
-### Vision Mamba · 双向编码器完整架构
+#### Vision Mamba · 双向编码器完整架构
 
 [![Vision Mamba 完整原图与实际 PPTX 对照](docs/previews/gallery/vision_mamba.png)](docs/previews/gallery/vision_mamba.png)
 
@@ -230,7 +307,7 @@ v0.3.7 重点改善后续编辑：模块、公式、token 和每条曲线使用�
 
 <sub>改编自 Zhu et al., “Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model”, ICML 2024, Figure 2。[论文与作者](https://proceedings.mlr.press/v235/zhu24f.html) · [CC BY 4.0 / 归属与修改说明](examples/gallery/vision_mamba/ATTRIBUTION.md)。</sub>
 
-### Mamba-2 · 矩阵分块与状态流
+#### Mamba-2 · 矩阵分块与状态流
 
 [![Mamba-2 完整原图与实际 PPTX 对照](docs/previews/gallery/mamba2.png)](docs/previews/gallery/mamba2.png)
 
@@ -246,94 +323,33 @@ v0.3.7 重点改善后续编辑：模块、公式、token 和每条曲线使用�
 
 GaLore 和 Mamba-2 的部分原保留区域曾在调整期间被查看，因此不能作为盲测；Mamba-2 还记录了一处超过三次修复预算的偏差。原始记录和失败结果均保留。不同案例的掩码与区域不同，不合并成“转换准确率”。
 
+</details>
+
 ## 把案例反馈变成系统能力
 
-### 按后续编辑任务组织对象
+| 看图重建时遇到的问题 | 已实现的处理 | 实测与用法 |
+| --- | --- | --- |
+| 对象太碎，模块难以整体修改 | 原生嵌套组合；完整标签、公式与每条曲线按编辑任务组织 | [编辑实测](docs/atomic_editing.md) · [组合用法](skills/super-img2ppt/references/editing.md) |
+| 上下标、字重和斜体不一致 | `compose-math` 显式测量与定位各部件；支持共同中心旋转 | [公式修订](docs/formula_gallery.md) · [斜排公式](skills/super-img2ppt/references/diagonal_text.md) |
+| 曲线峰谷偏移、分段出现白缝 | `trace-curve` 按可见像素追踪；原生圆端点与端部复核 | [曲线证据](docs/public_figures.md) · [追踪用法](skills/super-img2ppt/references/curves.md) |
+| 外框对齐了，字形仍不同 | `compare-roi` 同坐标比较墨迹，标记空白和截断区域 | [独立诊断](docs/world_models.md) · [局部对比用法](skills/super-img2ppt/references/regions.md) |
 
-`container` 负责布局检查；新增的 slide `groups` 才会导出 **PowerPoint 原生组合与 SVG 分组**。一个模块可以整体移动，进入组合后仍能修改标题、公式或底板；每条曲线的线段放在自己的组合里。普通标签尽量是完整文本框，混合样式用 runs，公式仅按必要的上下标/样式拆分。
+<details>
+<summary><strong>查看公式与曲线修复前后对照</strong></summary>
 
-- 分组保留子对象、坐标和前后层级；会改变遮挡顺序的交错分组明确失败。
-- `compose-math`、`trace-curve` 同时输出 `groups.json`，可与 `elements.json` 一起合入场景。
-- `editability.json` 列出分组、成员和未组合对象；对象数量不作为易用性评分。
-- 已实际测试“移动整组”和“修改组内标签”，同时核对相邻对象。外部箭头不会自动重连，复杂公式仍是文字部件组合。
+### 公式排版
 
-[分组规则与编辑用法](skills/super-img2ppt/references/editing.md) · [完整实测及编辑文件](docs/atomic_editing.md)
+[![公式原图、修复前与修复后实际 PPTX](docs/previews/gallery/formula_typography.png)](docs/previews/gallery/formula_typography.png)
 
+从左到右为**原图、旧 PPTX、新 PPTX**，同坐标放大 4 倍。3D Diffuser Actor 的六处公式修订为 60 个原生文字部件，保留字重、斜体、上下标和直立标点；部分数字、希腊字形与关系符仍不同。[完整证据](docs/formula_gallery.md)。
 
-### 斜排公式保持共同旋转中心；局部对比同时检查墨迹
+### 曲线端点
 
-`compose-math` 新增整体 `rotation`：先测量各部件，再围绕同一个 `origin` 旋转。Cosmos 3 的 12 个斜排表头由 32 个原生文字部件组成，替换了旧文字图片条；这是编辑能力的提升，字体近似仍然公开。自动诊断会排除只落在斜框外接矩形内的邻近文字，斜边精确包容性保留人工复核提示。
+[![曲线圆端点修复前后的实际 PPTX](docs/previews/gallery/curve_caps.png)](docs/previews/gallery/curve_caps.png)
 
-新增 `compare-roi` 在**相同分辨率、相同坐标**比较颜色墨迹，记录外缘偏差与掩码 IoU，保存裁片和掩码。它拒绝尺寸不一致的输入，对空掩码、触边截断明确标记，不会把相同外框判成字体一致，也不自动给出保真 PASS。
+两边均为**实际 PPTX**，同位置放大 4 倍；558 条线段仅增加圆端点，路径与字体保持一致。细小像素阶梯仍存在。[场景差异证据](docs/evidence/public_figures/galore/cap_scene_diff.json)。
 
-```bash
-uv run super-img2ppt compare-roi source.png actual.png \
-  --roi 1095 439 65 31 --color '#000000' --tolerance 149 \
-  --out output/value_roi_01
-```
-
-[斜排文字与公式](skills/super-img2ppt/references/diagonal_text.md) · [局部诊断用法](skills/super-img2ppt/references/regions.md) · [独立实测与失败记录](docs/world_models.md)
-
-### 公式保持逐符号样式与上下标关系
-
-[![公式原图、修复前和修复后实际 PPTX 对照](docs/previews/gallery/formula_typography.png)](docs/previews/gallery/formula_typography.png)
-
-上图依次为 **原图、旧 PPTX、新 PPTX**，同坐标放大 4 倍。3D Diffuser Actor 的输出公式、三处小去噪公式和初始化分布共替换为 **60 个原生文字部件**，保留粗斜体变量、常规斜体标量、上下标和直立标点。没有把公式截图覆盖回去。
-
-新增 `compose-math` 将显式字体样式、字号和基线偏移转成 scene 部件，测量斜体墨迹余量；拒绝不可用字体和 Unicode 上下标捷径。它不自动识别公式或猜测排版，也不是 Office 公式编辑器对象。**当前仍未达到源图字形完全一致**：初始化的 `∼` 使用单独字体，部分数字、希腊符号与标点曲率仍有差异。
-
-```bash
-uv run super-img2ppt compose-math formula.json --out output/math_01
-# 将 elements.json 合入 scene，再 build 并查看实际 PPTX 的局部对照
-```
-
-[JSON 格式与完整用法](skills/super-img2ppt/references/math.md) · [公式修订与失败记录](docs/formula_gallery.md) · [旧实际文件](docs/evidence/formula_gallery/diffuser_actor/before_editable.pptx)
-
-### 曲线按像素提取，实际 PPTX 消除分段白缝
-
-[![同一曲线在圆端点修复前后的实际 PPTX 放大对照](docs/previews/gallery/curve_caps.png)](docs/previews/gallery/curve_caps.png)
-
-上图两边都是 **实际 PPTX**，同一位置放大 4 倍；558 条线段仅增加 `line_cap: round`，路径和字体保持一致。[修复前文件](examples/gallery/galore/before_caps.pptx) · [场景差异证据](docs/evidence/public_figures/galore/cap_scene_diff.json)。细小像素阶梯仍然存在。
-
-| 实际遇到的问题 | 进入系统的处理 |
-| --- | --- |
-| 行末连字符可见，PDF 文字检查却报缺失 | 根据 PDFium 明确的连字符标记恢复诊断文本，保留原始提取值；缺字仍失败 |
-| 手绘趋势或猜正弦，峰谷偏离原图 | `trace-curve` 从指定颜色和区域提取可见笔画，输出可编辑线段 |
-| 同色预算虚线混入曲线 | 显式排除已确认的参考线带；不自动删除真实水平平台 |
-| 陡峭线段或遮挡无法可靠追踪 | 可切换 `--axis y`；歧义分支和长缺口明确失败，记录短插值 |
-| 原生分段在 Office 渲染中露出白缝 | PPTX/SVG 同时支持圆端点，端点范围参与越界与碰撞检查 |
-| TTC 中斜体被误当常规字体 | 同时读取 OS/2 和 `head.macStyle` 样式标志，回归覆盖缺失标志情况 |
-| 左侧斜体越界，只扩右边仍修不好 | 报告四方向越界距离和源像素值，指南说明保持字形原点的修框方法 |
-
-```bash
-uv run super-img2ppt trace-curve chart.png \
-  --roi 100 80 300 160 --color '#1F77B4' \
-  --stroke-width 1.5 --prefix loss_blue --out output/trace_01
-```
-
-检查 `overlay.png` 和 `trace.json` 后，将 `elements.json` 合入对应场景，再执行 `build`。
-这一步只输出待复核的曲线片段，不生成数据驱动图表。[完整用法与失败边界](skills/super-img2ppt/references/curves.md)。
-
-## 开始使用
-
-Python 3.11+，本地 LibreOffice，所需字体。开发环境使用 `uv`：
-
-```bash
-uv sync --frozen
-uv run super-img2ppt doctor
-uv run super-img2ppt build examples/flow_reconstruction.json --out output/demo
-```
-
-把 `skills/super-img2ppt` 接入 Agent 的技能目录，然后直接说：
-
-```text
-$super-img2ppt 把这张图片重建为可编辑 PPTX 和 SVG，保留布局，检查字体、曲线和重叠。
-```
-
-[自制入门样例 PPTX](examples/editable_demo.pptx) · [安装与调用说明](skills/super-img2ppt/SKILL.md) · [Releases](https://github.com/asimfish/super_img2ppt/releases)
-
-仓库名是 `super_img2ppt`，skill ID 和命令名是 `super-img2ppt`。独立 skill 包包含运行时；
-`uv run python scripts/build_package.py` 生成 `dist/super-img2ppt.skill` 与校验文件。
+</details>
 
 ## 工作流程
 
@@ -364,6 +380,7 @@ uv run super-img2ppt build output/job/scene.json --out output/job/build_01
 | --- | --- |
 | `editable.pptx`、`svg/` | 原生文字、形状、线条，以及明确保留的图片 |
 | `scene.resolved.json`、`assets/` | 可修改、复建的场景与相对路径资产 |
+| `editability.json` | 语义组、成员层级与未组合对象 |
 | `fonts.json` | 实际字体文件、字重、替代情况与哈希 |
 | `render/`、`validation.json` | 实际 PPTX 的 PDF/PNG，以及溢出、遮挡和字体检查 |
 
@@ -397,7 +414,7 @@ uv run python scripts/build_capability_registry.py --check
 uv run python scripts/build_package.py
 ```
 
-[新增三例与连字符修复](docs/gallery_extension.md) · [曲线与字体改进证据](docs/public_figures.md) · [场景协议](skills/super-img2ppt/references/scene.md) · [架构](docs/architecture.md) · [历史验证](docs/verification.md)
+[分组编辑验证](docs/atomic_editing.md) · [世界模型实测](docs/world_models.md) · [连字符修复](docs/gallery_extension.md) · [曲线与字体改进证据](docs/public_figures.md) · [场景协议](skills/super-img2ppt/references/scene.md) · [架构](docs/architecture.md) · [历史验证](docs/verification.md)
 
 工作流参考 [ningzimu/image-to-editable-ppt-skill](https://github.com/ningzimu/image-to-editable-ppt-skill)，运行时独立实现；[来源与差异](skills/super-img2ppt/UPSTREAM.md)。README 的实图展示、快捷入口与证据链接组织参考 [super_translate](https://github.com/asimfish/super_translate) 和 [ARIS](https://github.com/wanshuiyin/auto-claude-code-research-in-sleep)，[固定版本与参考边界](docs/evidence/public_figures/design_reference.json)。
 
