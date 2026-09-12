@@ -1,0 +1,732 @@
+{
+  "status": "fail",
+  "findings": [
+    {
+      "slide": "page_001",
+      "code": "text_frame_outside_container_only",
+      "severity": "info",
+      "elements": [
+        "model_title",
+        "model_title_bg"
+      ],
+      "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_outside_container_only",
+      "severity": "info",
+      "elements": [
+        "closed_title",
+        "closed_title_bg"
+      ],
+      "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_overflow",
+      "severity": "error",
+      "elements": [
+        "en_q"
+      ],
+      "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+      "layout": {
+        "scale": 1,
+        "effective_font_size_px": 22,
+        "width_px": 211.25,
+        "height_px": 50.6,
+        "available_width_px": 228,
+        "available_height_px": 51,
+        "safety_reserve_px": 0.5,
+        "required_width_px": 211.75,
+        "required_height_px": 51.1,
+        "fits": false,
+        "lines": [
+          "Q: What is happening",
+          "in the image?"
+        ]
+      }
+    },
+    {
+      "slide": "page_001",
+      "code": "text_overflow",
+      "severity": "error",
+      "elements": [
+        "fr_answer"
+      ],
+      "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+      "layout": {
+        "scale": 1,
+        "effective_font_size_px": 22,
+        "width_px": 213.75,
+        "height_px": 25.3,
+        "available_width_px": 214,
+        "available_height_px": 29,
+        "safety_reserve_px": 0.5,
+        "required_width_px": 214.25,
+        "required_height_px": 25.8,
+        "fits": false,
+        "lines": [
+          "Faire cuire un gâteau."
+        ]
+      }
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_outside_container_only",
+      "severity": "info",
+      "elements": [
+        "caption_0",
+        "caption_bg_0"
+      ],
+      "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_outside_container_only",
+      "severity": "info",
+      "elements": [
+        "caption_1",
+        "caption_bg_1"
+      ],
+      "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_outside_container_only",
+      "severity": "info",
+      "elements": [
+        "caption_2",
+        "caption_bg_2"
+      ],
+      "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+    },
+    {
+      "slide": "page_001",
+      "code": "unintended_overlap",
+      "severity": "error",
+      "elements": [
+        "data",
+        "data_title"
+      ],
+      "message": "Objects overlap without a verified container or named exemption",
+      "area_px2": 9260.0
+    },
+    {
+      "slide": "page_001",
+      "code": "unintended_overlap",
+      "severity": "error",
+      "elements": [
+        "model",
+        "model_title"
+      ],
+      "message": "Objects overlap without a verified container or named exemption",
+      "area_px2": 11080.0
+    },
+    {
+      "slide": "page_001",
+      "code": "unintended_overlap",
+      "severity": "error",
+      "elements": [
+        "closed",
+        "closed_title"
+      ],
+      "message": "Objects overlap without a verified container or named exemption",
+      "area_px2": 8084.0
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "closed_photo_0",
+        "caption_0"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "closed_photo_1",
+        "caption_1"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "closed_photo_2",
+        "caption_2"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "robot_curve_0",
+        "robot_tokens"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "deploy_horizontal",
+        "deploy_label"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "en_q",
+        "en_tokens"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "robot_q",
+        "robot_q2"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    },
+    {
+      "slide": "page_001",
+      "code": "text_frame_overlap_only",
+      "severity": "info",
+      "elements": [
+        "input_q",
+        "input_q2"
+      ],
+      "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+    }
+  ],
+  "slides": [
+    {
+      "id": "page_001",
+      "counts": {
+        "shape": 43,
+        "text": 27,
+        "image": 7,
+        "line": 58
+      },
+      "intentional_overlaps": [
+        {
+          "elements": [
+            "data",
+            "data_title_bg"
+          ],
+          "reason": "White title backing interrupts the source outer border at its top edge.",
+          "area_px2": 10374.0
+        },
+        {
+          "elements": [
+            "model",
+            "model_title_bg"
+          ],
+          "reason": "White title backing interrupts the source outer border at its top edge.",
+          "area_px2": 11280.0
+        },
+        {
+          "elements": [
+            "closed",
+            "closed_title_bg"
+          ],
+          "reason": "White title backing interrupts the source outer border at its top edge.",
+          "area_px2": 8004.0
+        },
+        {
+          "elements": [
+            "rt2",
+            "input_text_to_llm"
+          ],
+          "reason": "Input connector enters the left edge of the RT-2 panel in source.",
+          "area_px2": 312.0
+        },
+        {
+          "elements": [
+            "rt2",
+            "input_image_to_vit"
+          ],
+          "reason": "Input image connector enters the model panel at ViT height.",
+          "area_px2": 38.0
+        },
+        {
+          "elements": [
+            "rt2",
+            "action_down"
+          ],
+          "reason": "Source action wire leaves the bottom of the LLM and RT-2 panels.",
+          "area_px2": 80.0
+        },
+        {
+          "elements": [
+            "llm",
+            "action_down"
+          ],
+          "reason": "Source action wire leaves the bottom of the LLM and RT-2 panels.",
+          "area_px2": 32.0
+        },
+        {
+          "elements": [
+            "action_down",
+            "action_left"
+          ],
+          "reason": "Source action wire leaves the bottom of the LLM and RT-2 panels.",
+          "area_px2": 1.0
+        },
+        {
+          "elements": [
+            "action_left",
+            "action_to_tokens"
+          ],
+          "reason": "Action connector elbow visible at source (1197,329).",
+          "area_px2": 1.0
+        },
+        {
+          "elements": [
+            "cotrain_horizontal",
+            "cotrain_vertical"
+          ],
+          "reason": "Source co-fine-tune connector has a joined elbow.",
+          "area_px2": 2.25
+        },
+        {
+          "elements": [
+            "deploy_vertical",
+            "deploy_horizontal"
+          ],
+          "reason": "Source deployment connector has a joined elbow.",
+          "area_px2": 2.25
+        }
+      ],
+      "text_layouts": {
+        "data_title": {
+          "scale": 1,
+          "effective_font_size_px": 25,
+          "width_px": 448.5,
+          "height_px": 28.75,
+          "available_width_px": 463,
+          "available_height_px": 35,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 449.0,
+          "required_height_px": 29.25,
+          "fits": true,
+          "lines": [
+            "Internet-Scale VQA + Robot Action Data"
+          ]
+        },
+        "model_title": {
+          "scale": 1,
+          "effective_font_size_px": 25,
+          "width_px": 552.25,
+          "height_px": 28.75,
+          "available_width_px": 554,
+          "available_height_px": 35,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 552.75,
+          "required_height_px": 29.25,
+          "fits": true,
+          "lines": [
+            "Vision-Language-Action Models for Robot Control"
+          ]
+        },
+        "closed_title": {
+          "scale": 1,
+          "effective_font_size_px": 25,
+          "width_px": 154.75,
+          "height_px": 57.5,
+          "available_width_px": 172,
+          "available_height_px": 61,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 155.25,
+          "required_height_px": 58.0,
+          "fits": true,
+          "lines": [
+            "Closed-Loop",
+            "Robot Control"
+          ]
+        },
+        "en_q": {
+          "scale": 1,
+          "effective_font_size_px": 22,
+          "width_px": 211.25,
+          "height_px": 50.6,
+          "available_width_px": 228,
+          "available_height_px": 51,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 211.75,
+          "required_height_px": 51.1,
+          "fits": false,
+          "lines": [
+            "Q: What is happening",
+            "in the image?"
+          ]
+        },
+        "en_tokens": {
+          "scale": 1,
+          "effective_font_size_px": 22,
+          "width_px": 222.5,
+          "height_px": 25.3,
+          "available_width_px": 235,
+          "available_height_px": 29,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 223.0,
+          "required_height_px": 25.8,
+          "fits": true,
+          "lines": [
+            "A: 311 423 170 55 244"
+          ]
+        },
+        "en_answer": {
+          "scale": 1,
+          "effective_font_size_px": 22,
+          "width_px": 202.0,
+          "height_px": 50.6,
+          "available_width_px": 210,
+          "available_height_px": 55,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 202.5,
+          "required_height_px": 51.1,
+          "fits": true,
+          "lines": [
+            "A grey donkey walks",
+            "down the street."
+          ]
+        },
+        "fr_q": {
+          "scale": 1,
+          "effective_font_size_px": 22,
+          "width_px": 242.75,
+          "height_px": 50.6,
+          "available_width_px": 278,
+          "available_height_px": 55,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 243.25,
+          "required_height_px": 51.1,
+          "fits": true,
+          "lines": [
+            "Q: Que puis-je faire avec",
+            "ces objets?"
+          ]
+        },
+        "fr_tokens": {
+          "scale": 1,
+          "effective_font_size_px": 22,
+          "width_px": 241.0,
+          "height_px": 25.3,
+          "available_width_px": 251,
+          "available_height_px": 29,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 241.5,
+          "required_height_px": 25.8,
+          "fits": true,
+          "lines": [
+            "A: 3455 1144 189 25673"
+          ]
+        },
+        "fr_answer": {
+          "scale": 1,
+          "effective_font_size_px": 22,
+          "width_px": 213.75,
+          "height_px": 25.3,
+          "available_width_px": 214,
+          "available_height_px": 29,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 214.25,
+          "required_height_px": 25.8,
+          "fits": false,
+          "lines": [
+            "Faire cuire un gâteau."
+          ]
+        },
+        "robot_q": {
+          "scale": 1,
+          "effective_font_size_px": 22,
+          "width_px": 243.75,
+          "height_px": 25.3,
+          "available_width_px": 288,
+          "available_height_px": 29,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 244.25,
+          "required_height_px": 25.8,
+          "fits": true,
+          "lines": [
+            "Q: What should the robot"
+          ]
+        },
+        "robot_q2": {
+          "scale": 1,
+          "effective_font_size_px": 22,
+          "width_px": 136.5,
+          "height_px": 25.3,
+          "available_width_px": 240,
+          "available_height_px": 29,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 137.0,
+          "required_height_px": 25.8,
+          "fits": true,
+          "lines": [
+            "do to <task>?"
+          ]
+        },
+        "robot_tokens": {
+          "scale": 1,
+          "effective_font_size_px": 22,
+          "width_px": 240.75,
+          "height_px": 25.3,
+          "available_width_px": 252,
+          "available_height_px": 29,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 241.25,
+          "required_height_px": 25.8,
+          "fits": true,
+          "lines": [
+            "A: 132 114 128 5 25 156"
+          ]
+        },
+        "robot_answer": {
+          "scale": 1,
+          "effective_font_size_px": 22,
+          "width_px": 265.25,
+          "height_px": 50.6,
+          "available_width_px": 271,
+          "available_height_px": 65,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 265.75,
+          "required_height_px": 51.1,
+          "fits": true,
+          "lines": [
+            "ΔTranslation = [0.1, -0.2, 0]",
+            "ΔRotation = [10°, 25°, -7°]"
+          ]
+        },
+        "rt2_label": {
+          "scale": 1,
+          "effective_font_size_px": 38,
+          "width_px": 84.75,
+          "height_px": 43.7,
+          "available_width_px": 121,
+          "available_height_px": 53,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 85.25,
+          "required_height_px": 44.2,
+          "fits": true,
+          "lines": [
+            "RT-2"
+          ]
+        },
+        "vit_label": {
+          "scale": 1,
+          "effective_font_size_px": 28,
+          "width_px": 43.75,
+          "height_px": 32.2,
+          "available_width_px": 88,
+          "available_height_px": 42,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 44.25,
+          "required_height_px": 32.7,
+          "fits": true,
+          "lines": [
+            "ViT"
+          ]
+        },
+        "llm_label": {
+          "scale": 1,
+          "effective_font_size_px": 25,
+          "width_px": 272.75,
+          "height_px": 28.75,
+          "available_width_px": 307,
+          "available_height_px": 39,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 273.25,
+          "required_height_px": 29.25,
+          "fits": true,
+          "lines": [
+            "Large Language Model"
+          ]
+        },
+        "input_q": {
+          "scale": 1,
+          "effective_font_size_px": 15,
+          "width_px": 166.5,
+          "height_px": 17.25,
+          "available_width_px": 188,
+          "available_height_px": 22,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 167.0,
+          "required_height_px": 17.75,
+          "fits": true,
+          "lines": [
+            "Q: What should the robot"
+          ]
+        },
+        "input_q2": {
+          "scale": 1,
+          "effective_font_size_px": 15,
+          "width_px": 130.75,
+          "height_px": 17.25,
+          "available_width_px": 167,
+          "available_height_px": 22,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 131.25,
+          "required_height_px": 17.75,
+          "fits": true,
+          "lines": [
+            "do to <task>? A: …"
+          ]
+        },
+        "action_tokens": {
+          "scale": 1,
+          "effective_font_size_px": 17,
+          "width_px": 187.25,
+          "height_px": 19.55,
+          "available_width_px": 196,
+          "available_height_px": 24,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 187.75,
+          "required_height_px": 20.05,
+          "fits": true,
+          "lines": [
+            "A: 132 114 128 5 25 156"
+          ]
+        },
+        "detokenize": {
+          "scale": 1,
+          "effective_font_size_px": 20,
+          "width_px": 114.25,
+          "height_px": 23.0,
+          "available_width_px": 119,
+          "available_height_px": 31,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 114.75,
+          "required_height_px": 23.5,
+          "fits": true,
+          "lines": [
+            "De-Tokenize"
+          ]
+        },
+        "action": {
+          "scale": 1,
+          "effective_font_size_px": 17,
+          "width_px": 145.25,
+          "height_px": 39.1,
+          "available_width_px": 157,
+          "available_height_px": 55,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 145.75,
+          "required_height_px": 39.6,
+          "fits": true,
+          "lines": [
+            "ΔT = [0.1, -0.2, 0]",
+            "ΔR = [10°, 25°, -7°]"
+          ]
+        },
+        "action_label": {
+          "scale": 1,
+          "effective_font_size_px": 20,
+          "width_px": 115.0,
+          "height_px": 23.0,
+          "available_width_px": 139,
+          "available_height_px": 28,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 115.5,
+          "required_height_px": 23.5,
+          "fits": true,
+          "lines": [
+            "Robot Action"
+          ]
+        },
+        "cotrain_label": {
+          "scale": 1,
+          "effective_font_size_px": 25,
+          "width_px": 154.5,
+          "height_px": 28.75,
+          "available_width_px": 225,
+          "available_height_px": 39,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 155.0,
+          "required_height_px": 29.25,
+          "fits": true,
+          "lines": [
+            "Co-Fine-Tune"
+          ]
+        },
+        "deploy_label": {
+          "scale": 1,
+          "effective_font_size_px": 25,
+          "width_px": 78.0,
+          "height_px": 28.75,
+          "available_width_px": 102,
+          "available_height_px": 39,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 78.5,
+          "required_height_px": 29.25,
+          "fits": true,
+          "lines": [
+            "Deploy"
+          ]
+        },
+        "caption_0": {
+          "scale": 1,
+          "effective_font_size_px": 17,
+          "width_px": 152.75,
+          "height_px": 39.1,
+          "available_width_px": 210,
+          "available_height_px": 43,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 153.25,
+          "required_height_px": 39.6,
+          "fits": true,
+          "lines": [
+            "Put the strawberry",
+            "into the correct bowl"
+          ]
+        },
+        "caption_1": {
+          "scale": 1,
+          "effective_font_size_px": 17,
+          "width_px": 194.25,
+          "height_px": 19.55,
+          "available_width_px": 210,
+          "available_height_px": 27,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 194.75,
+          "required_height_px": 20.05,
+          "fits": true,
+          "lines": [
+            "Pick the nearly falling bag"
+          ]
+        },
+        "caption_2": {
+          "scale": 1,
+          "effective_font_size_px": 17,
+          "width_px": 199.0,
+          "height_px": 19.55,
+          "available_width_px": 210,
+          "available_height_px": 27,
+          "safety_reserve_px": 0.5,
+          "required_width_px": 199.5,
+          "required_height_px": 20.05,
+          "fits": true,
+          "lines": [
+            "Pick object that is different"
+          ]
+        }
+      }
+    }
+  ]
+}

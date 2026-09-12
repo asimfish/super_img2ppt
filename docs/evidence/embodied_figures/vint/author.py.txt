@@ -1,0 +1,77 @@
+import json,math
+from pathlib import Path
+from PIL import Image
+root=Path('/tmp/vint_full_20260912/job'); (root/'assets').mkdir(exist_ok=True)
+im=Image.open('/tmp/vint_full_20260912/source.png'); E=[]
+def add(i,k,**kw):
+ e=dict(id=i,kind=k,z=len(E)+1,**kw);E.append(e);return e
+def shape(i,b,fill=None,stroke='#626262',sw=1.5,typ='rect',**kw):return add(i,'shape',box=b,shape=typ,fill=fill,stroke=stroke,stroke_width=sw,**kw)
+def text(i,t,b,sz=22,col='#111111',ital=False,**kw):return add(i,'text',box=b,text=t,font_family='Arial',font_size=sz,color=col,italic=ital,fit='strict',wrap=False,**kw)
+def line(i,pts,arrow=False,**kw):return add(i,'line',points=pts,stroke='#999999',stroke_width=1.6,arrow=arrow,**({'arrow_head':{'length':8,'width':6}} if arrow else {}),**kw)
+def overlap(a,b,reason):
+ a.setdefault('allow_overlap_with',[]).append(b['id']);a['overlap_reason']=reason
+# exact text-free photographic montage crops
+for i,b in [('observations_photo',[16,86,184,130]),('goal_photo',[24,261,173,117]),('actions_photo',[1172,187,248,160])]:
+ x,y,w,h=b;im.crop((x,y,x+w,y+h)).save(root/'assets'/f'{i}.png');add(i,'image',box=b,path=f'assets/{i}.png',contains_text=False,provenance='Exact text-free photo/montage crop from published Figure 2 pixels; actions crop includes original white trajectory markers.')
+# six stacked observation encoders, source visible nested shells
+shells=[]
+for j in range(6):
+ s=shape(f'encoder_stack_{j}',[252+j*7.2,17+j*7.2,369,170], '#E8D2DC',typ='round_rect',radius=28)
+ for prior in shells:overlap(s,prior,'Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.')
+ shells.append(s)
+front=shells[-1]
+bottom=shape('goal_encoder',[288,236,369,170],'#D9EBD2',typ='round_rect',radius=28)
+# connector lines are drawn over rear cards but end on foreground encoder edge
+for j in range(6):
+ l=line(f'observation_arrow_{j}',[[198,126+j*6.5],[252+j*7.2,126+j*6.5]],True)
+ for s in shells[:j]:overlap(l,s,'Source observation arrows traverse exposed rear encoder cards before their own stacked card.')
+line('goal_arrow',[[197,321],[287,321]],True)
+for b,y,prefix,phi in [(front,79,'obs','ψ'),(bottom,262,'goal','ϕ')]:
+ s=shape(prefix+'_efficient',[319,y,169,117],'#3979D8',typ='polygon',vertices=[[0,0],[1,.25],[1,.75],[0,1]],container=b['id'])
+ text(prefix+'_efficient_label','EfficientNet-B0',[327,y+45,154,29],22,'#FFFFFF',container=s['id'])
+ text(prefix+'_parameters','5M Parameters',[419,y-20,122,24],17,'#555555',True,container=b['id'])
+ for k,(x,dy,w,h) in enumerate([(505,12,16,98),(531,28,16,62),(558,45,16,34)]):shape(prefix+f'_feature_{k}',[x,y+dy,w,h],'#C7DBF7',container=b['id'])
+ for k in range(8):shape(prefix+f'_encoding_{k}',[602,y+12+k*12.25,10,12.25],['#D989B0','#EAA4C5','#F2C499','#F9D937','#F0BE88','#EBA0C2','#D689B0','#D58CAD'][k] if prefix=='obs' else ['#A4C978','#D5E9BD','#C9E49A','#FBDD2E','#BBDC85','#94C675','#BBDC85','#A4C978'][k], '#A34F7D' if prefix=='obs' else '#397B25',2,container=b['id'])
+ text(prefix+'_512','512-D',[584,y+115,66,26],17,'#555555',True,container=b['id'])
+ text(prefix+'_symbol',phi,[465,y+98,38,37],32,'#111111',True,font_group='symbols',container=b['id'])
+line('obs_token_arrow',[[657,138],[689,138]],True);line('goal_token_arrow',[[657,321],[689,321]],True)
+text('repeat','x6',[662,109,30,25],18,'#555555',True)
+tokens=shape('input_token_frame',[691.5,25.5,56,344])
+for j,y in enumerate([41,75,110,145,180,214,324]):shape(f'input_token_{j}',[707,y,26,26],'#AD487B' if j<6 else '#34791C',None,0,container=tokens['id'])
+# addition / positional encoding source-native symbols
+line('token_to_attention',[[748,197.5],[880,197.5]],True)
+addcircle=shape('addition_circle',[786,169.5,55.5,55.5],'#EEEEEE',typ='ellipse')
+addline=line('addition_horizontal',[[787,197.5],[840,197.5]],container=addcircle['id']);overlap(addcircle,E[-2],'Source addition circle overlays the horizontal token connector.') if False else None
+# connector crosses addition intentional
+for e in [addcircle,addline]:overlap(e,next(x for x in E if x['id']=='token_to_attention'),'Source horizontal flow passes through the sum circle center.')
+vert=line('addition_vertical',[[814,171],[814,224]],container=addcircle['id']);overlap(vert,addline,'The native plus sign crosses at the sum center.');overlap(vert,next(x for x in E if x['id']=='token_to_attention'),'The plus vertical meets the horizontal input flow at its center.')
+line('position_down',[[814,116],[814,169]])
+pos=shape('position_circle',[792,72.5,44,44],None,typ='ellipse')
+# measured sigmoid-like internal positional symbol using source points, no functional guess
+pts=[(793,93),(795,87),(799,83),(804,83),(809,85),(812,90),(813,97),(816,103),(821,106),(827,106),(832,102),(835,97)]
+for j,(a,b) in enumerate(zip(pts,pts[1:])):
+ e=line(f'position_wave_{j}',[a,b],container=pos['id'])
+ if j:overlap(e,E[-2],'Adjacent segments form the one continuous source positional-encoding symbol.')
+for x,i in [(882,'attention_1'),(994,'attention_2')]:
+ s=shape(i,[x,66.5,60,263],'#FCE6CF',typ='round_rect',radius=10)
+ text(i+'_label','Self-Attention',[x-62,180,185,37],28,'#333333',rotation=-90,container=i,font_family='Arial' if False else 'Arial') if False else text(i+'_label','Self-Attention',[x-62,180,185,37],28,'#333333',rotation=-90,container=i)
+for j in range(3):shape('attention_dot_'+str(j),[952+j*13,195,5.5,5.5],'#999999',None,0,typ='ellipse')
+out=shape('action_token_frame',[1085,25.5,56,344])
+for j,y in enumerate([41,76,110,145,180,259,293,327]):shape('action_token_'+str(j),[1100,y,26,26],'#BB1E00' if j==0 else '#694CAB',None,0,container=out['id'])
+for j in range(3):shape('action_dot_'+str(j),[1110,216+j*14,5.5,5.5],'#999999',None,0,typ='ellipse',container=out['id'])
+# stopwatch native primitive construction
+watch=shape('stopwatch_ring',[1266,48,57,57],None,'#000000',5,typ='ellipse')
+shape('stopwatch_stem',[1289,34,11,14],'#000000',None,0)
+shape('stopwatch_button',[1287,26,16,12],'#000000',None,0,typ='round_rect',radius=3)
+shape('stopwatch_side_button',[1317,44,10,5],'#000000',None,0,typ='polygon',vertices=[[0,0],[.4,0],[1,1],[.6,1]])
+shape('stopwatch_hand',[1295,58,17,29],'#000000',None,0,typ='polygon',vertices=[[0,0],[.5,.14],[1,.65],[.75,1],[0,.6]],container=watch['id'])
+line('stopwatch_tick',[[1268,76],[1276,76]],stroke_width=3,container=watch['id']) if False else add('stopwatch_tick','line',points=[[1268,76],[1276,76]],stroke='#000000',stroke_width=3,container=watch['id'])
+# labels measured visually against full raster
+for args in [('observations','Observations',[43,8,190,30],24),('past','Past 5 timesteps',[51,38,172,24],17),('rgb','85x64x3 RGB',[67,58,137,22],16),('goal_label','Goal + Observation',[12,379,245,31],24),('fusion','Early Fusion',[70,408,140,25],17),('position_label','Positional Encoding',[757,33,171,27],17),('tokens_label','7 Tokens',[686,379,98,25],18),('token_dim','x512-D',[692,402,90,25],17),('transformer','Transformer',[905,342,170,33],24),('layers','4 Layers, 4 Heads',[907,370,160,24],17),('param','21M Parameters',[909,393,152,24],17),('actions','Actions',[1083,377,88,25],18),('temporal','Temporal Distance',[1200,114,225,33],24),('temporal_dim','1-D, Continuous',[1238,143,171,26],17),('normalized','Normalized Actions',[1195,357,238,32],24),('normalized_dim','3x5-D, Continuous',[1229,385,195,26],17)]:
+ i,t,b,sz=args;ital=i in ['rgb','fusion','position_label','token_dim','layers','param','temporal_dim','normalized_dim'];text(i,t,b,sz,'#C55F50' if i=='temporal_dim' else '#8870BC' if i=='normalized_dim' else '#555555' if ital or i=='past' else '#111111',ital)
+# only source-visible foreground card content vs occluded rear cards is exempt
+for e in E:
+ if e.get('container') in {front['id'],'obs_efficient'}:
+  for s in shells[:-1]:overlap(e,s,'Source foreground observation encoder content lies above intentionally occluded rear encoder cards.')
+scene={'version':1,'slides':[{'id':'page_001','width':1435,'height':436,'source':'pages/page_001/source.png','background':'#FFFFFF','reviewed':True,'notes':'Reconstructed from ViNT Figure 2, Shah et al., CoRL 2023, PMLR 229:711–733. Source pixels only. Three separate text-free photographic montage crops remain raster; all labels are editable. Positional-encoding internal curve is segmented native geometry. Stopwatch native primitives. Source font not uniquely identifiable; Arial substitute.','elements':E}]}
+(root/'scene.json').write_text(json.dumps(scene,indent=2));print(len(E))

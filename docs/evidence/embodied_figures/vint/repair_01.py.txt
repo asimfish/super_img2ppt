@@ -1,0 +1,7 @@
+import json
+p='/tmp/vint_full_20260912/job/scene.json';s=json.load(open(p));E={e['id']:e for e in s['slides'][0]['elements']}
+for i in ['obs_symbol','goal_symbol']: E[i]['box'][3]=39
+for j in range(6):E[f'observation_arrow_{j}']['points'][0][0]=200
+E['position_down']['points'][0][1]=116.5
+E['stopwatch_button']['allow_overlap_with']=['stopwatch_stem'];E['stopwatch_button']['overlap_reason']='The source stopwatch top button deliberately joins and covers the upper stem.'
+json.dump(s,open(p,'w'),indent=2)

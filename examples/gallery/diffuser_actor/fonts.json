@@ -1,0 +1,103 @@
+{
+  "embedded": false,
+  "fonts": [
+    {
+      "family": "Arial",
+      "east_asian_typeface": "Arial",
+      "file": "Arial.ttf",
+      "face_index": 0,
+      "weight": 400,
+      "italic": false,
+      "sha256": "525979822591a3447cfc49d943d6f7683508e25543407871c0ed8fed05fd2bd9",
+      "embedding_fs_type": 8
+    },
+    {
+      "family": "Arial",
+      "east_asian_typeface": "Arial",
+      "file": "Arial Bold.ttf",
+      "face_index": 0,
+      "weight": 700,
+      "italic": false,
+      "sha256": "d72db21f9242aedd6b917d8549ad5921766b24d5f8d0becfda2ff4c620b3c2e0",
+      "embedding_fs_type": 8
+    },
+    {
+      "family": "Courier New",
+      "east_asian_typeface": "Courier New",
+      "file": "Courier New Italic.ttf",
+      "face_index": 0,
+      "weight": 400,
+      "italic": true,
+      "sha256": "b5c6d453f16fb1693652671fa2e11d8c8ad1cd0046c3f38ae2608d165838ecf1",
+      "embedding_fs_type": 8
+    },
+    {
+      "family": "Courier New",
+      "east_asian_typeface": "Courier New",
+      "file": "Courier New.ttf",
+      "face_index": 0,
+      "weight": 400,
+      "italic": false,
+      "sha256": "c886ca3172d8ce9189976992d145ec090500a4ff516ecb9d4df56b1a78336247",
+      "embedding_fs_type": 8
+    },
+    {
+      "family": "DejaVu Sans",
+      "east_asian_typeface": "DejaVu Sans",
+      "file": "DejaVuSans.ttf",
+      "face_index": 0,
+      "weight": 400,
+      "italic": false,
+      "sha256": "7da195a74c55bef988d0d48f9508bd5d849425c1770dba5d7bfc6ce9ed848954",
+      "embedding_fs_type": 0
+    },
+    {
+      "family": "DejaVu Sans",
+      "east_asian_typeface": "DejaVu Sans",
+      "file": "DejaVuSans-BoldOblique.ttf",
+      "face_index": 0,
+      "weight": 700,
+      "italic": true,
+      "sha256": "eb436dca0c2594b73d8b603b892e374fdfd8d885d25ffb4f18df4c4c0b49e50f",
+      "embedding_fs_type": 0
+    },
+    {
+      "family": "Times New Roman",
+      "east_asian_typeface": "Times New Roman",
+      "file": "Times New Roman Italic.ttf",
+      "face_index": 0,
+      "weight": 400,
+      "italic": true,
+      "sha256": "7bb99c3a67697fbce15ab66d806d9a2151432ce1dab2eaba4156e1251da486c0",
+      "embedding_fs_type": 8
+    },
+    {
+      "family": "Times New Roman",
+      "east_asian_typeface": "Times New Roman",
+      "file": "Times New Roman.ttf",
+      "face_index": 0,
+      "weight": 400,
+      "italic": false,
+      "sha256": "f3b4ffff71c2a0c7227d37497683b2498fb2d0a4e8beae26f022e3ccfcaabfa3",
+      "embedding_fs_type": 8
+    },
+    {
+      "family": "Times New Roman",
+      "east_asian_typeface": "Times New Roman",
+      "file": "Times New Roman Bold Italic.ttf",
+      "face_index": 0,
+      "weight": 700,
+      "italic": true,
+      "sha256": "906157e8294fdf168d83002eaabde01c2d30fc3f44977be89e33fa22f262002a",
+      "embedding_fs_type": 8
+    }
+  ],
+  "substitutions": [
+    {
+      "code": "font_substitution",
+      "requested": "Times New Roman",
+      "resolved": "DejaVu Sans"
+    }
+  ],
+  "portability": "Install the listed font families on the editing computer. Font files are not copied or embedded."
+}

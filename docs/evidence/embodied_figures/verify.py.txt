@@ -1,0 +1,8 @@
+import hashlib,json,os,subprocess
+from pathlib import Path
+root=Path.cwd();work=root/'output/embodied_gallery_20260912';rows=[]
+commands=[['uv','run','--no-sync','ruff','check','.'],['uv','run','--no-sync','ruff','format','--check','.'],['uv','run','--no-sync','python','scripts/verify_skill.py'],['uv','run','--no-sync','python','scripts/build_capability_registry.py','--check'],['uv','run','--no-sync','python','scripts/build_package.py']]
+for command in commands:
+ p=subprocess.run(command,capture_output=True,text=True,env=dict(os.environ,PATH='/opt/homebrew/bin:'+os.environ['PATH']));row={'command':command,'exit_code':p.returncode,'stdout':p.stdout,'stderr':p.stderr};rows.append(row);print(' '.join(command),p.returncode,flush=True)
+ if p.returncode:print(p.stdout+p.stderr);break
+report={'runtime_changed':False,'commands':rows,'local_rebuilds':'3/3 completed and pixel-identical','unit_tests':'runtime unchanged; complete test suite will run on exact pushed commit in CI','package_sha256':hashlib.sha256((root/'dist/super-img2ppt.skill').read_bytes()).hexdigest()};(root/'docs/evidence/embodied_figures/verification.json').write_text(json.dumps(report,indent=2)+'\n');assert len(rows)==len(commands) and all(row['exit_code']==0 for row in rows);assert report['package_sha256']=='288a95420802ea39edc41ed396af336383bb5ec2e0ee62a324a84cd250c186c6'

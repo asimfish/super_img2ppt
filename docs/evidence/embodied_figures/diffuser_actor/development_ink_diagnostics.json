@@ -1,0 +1,142 @@
+{
+  "status": "post-inspection development diagnostics only; ROIs not blinded/held-out; no global fidelity percentage",
+  "threshold": "all RGB channels <130",
+  "registration": "none; both raster images 1589x1052",
+  "regions": [
+    {
+      "id": "depth_label",
+      "roi": [
+        50,
+        147,
+        157,
+        180
+      ],
+      "source_ink_bbox": [
+        61,
+        156,
+        144,
+        173
+      ],
+      "actual_ink_bbox": [
+        60,
+        155,
+        146,
+        172
+      ],
+      "edge_difference_actual_minus_source": [
+        -1,
+        -1,
+        2,
+        -1
+      ]
+    },
+    {
+      "id": "multiview_label",
+      "roi": [
+        582,
+        359,
+        837,
+        401
+      ],
+      "source_ink_bbox": [
+        595,
+        371,
+        802,
+        390
+      ],
+      "actual_ink_bbox": [
+        593,
+        372,
+        810,
+        393
+      ],
+      "edge_difference_actual_minus_source": [
+        -2,
+        1,
+        8,
+        3
+      ]
+    },
+    {
+      "id": "panel_a_label",
+      "roi": [
+        577,
+        418,
+        1045,
+        456
+      ],
+      "source_ink_bbox": [
+        584,
+        425,
+        1012,
+        448
+      ],
+      "actual_ink_bbox": [
+        583,
+        427,
+        1020,
+        450
+      ],
+      "edge_difference_actual_minus_source": [
+        -1,
+        2,
+        8,
+        2
+      ]
+    },
+    {
+      "id": "panel_b_label",
+      "roi": [
+        670,
+        718,
+        939,
+        758
+      ],
+      "source_ink_bbox": [
+        680,
+        727,
+        916,
+        750
+      ],
+      "actual_ink_bbox": [
+        680,
+        728,
+        921,
+        751
+      ],
+      "edge_difference_actual_minus_source": [
+        0,
+        1,
+        5,
+        1
+      ]
+    },
+    {
+      "id": "panel_c_label",
+      "roi": [
+        550,
+        1009,
+        1060,
+        1050
+      ],
+      "source_ink_bbox": [
+        562,
+        1017,
+        1034,
+        1040
+      ],
+      "actual_ink_bbox": [
+        561,
+        1018,
+        1043,
+        1041
+      ],
+      "edge_difference_actual_minus_source": [
+        -1,
+        1,
+        9,
+        1
+      ]
+    }
+  ]
+}

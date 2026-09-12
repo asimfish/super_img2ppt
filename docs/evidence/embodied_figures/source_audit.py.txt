@@ -1,0 +1,14 @@
+import hashlib,json,urllib.request
+from pathlib import Path
+from PIL import Image
+work=Path('output/embodied_gallery_20260912'); records=[]
+for name,base,source,figure,page,crop,article in [
+ ('rt2','/tmp/rt2_forward_20260912','source.png',1,2,[432,281,2015,861],'https://proceedings.mlr.press/v229/zitkovich23a.html'),
+ ('vint','/tmp/vint_full_20260912','source.png',2,3,[510,275,1945,711],'https://proceedings.mlr.press/v229/shah23a.html'),
+ ('diffuser_actor','/tmp/diffuser_fig2_zPTOQk','figure1.png',1,4,[427,248,2016,1300],'https://proceedings.mlr.press/v270/ke25a.html')]:
+ p=Path(base); record={'id':name,'figure':figure,'pdf_page_1based':page,'raster_scale':4,'crop_xyxy':crop,'article':article,'source_size':list(Image.open(p/source).size),'source_sha256':hashlib.sha256((p/source).read_bytes()).hexdigest(),'pdf_sha256':hashlib.sha256((p/'paper.pdf').read_bytes()).hexdigest(),'source_visual_review':'Full figure inspected, panel captions retained, paper caption excluded. Only raster used for reconstruction.'};records.append(record)
+ with urllib.request.urlopen(article,timeout=45) as r:(work/(name+'-article.html')).write_bytes(r.read())
+url='https://proceedings.mlr.press/pmlr-license-agreement.html'
+with urllib.request.urlopen(url,timeout=45) as r:(work/'publisher-license.html').write_bytes(r.read())
+(work/'source_audit.json').write_text(json.dumps(records,indent=2)+'\n')
+print(json.dumps(records,indent=2))

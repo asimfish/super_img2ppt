@@ -1,0 +1,34 @@
+import json,math
+from PIL import Image
+p='/tmp/diffuser_fig2_zPTOQk/job/scene.json';s=json.load(open(p));E=s['slides'][0]['elements'];d={e['id']:e for e in E}
+# Separate mixed-style source phrases so unrelated glyphs are not captured by transparent frames.
+d['proprio']['text']='Proprioception';d['proprio']['box']=[1060,8,125,24];d['proprio']['align']='left'
+E.append(dict(id='proprio_token_label',kind='text',z=551,text='token',box=[1095,29,51,25],font_family='Arial',font_size=18,color='#7836A8'))
+d['denoising_step']['box'][2]=122
+# Restore source gap between prediction caption and tau.
+d['trajectory']['font_size']=21;d['trajectory']['box'][2]=196
+# Source frozen-network icon has outward facing forked branches.
+E[:]=[e for e in E if not e['id'].startswith('ice_')]
+for pre,cx,cy,con in [('ice_image',165,217,'image_encoder'),('ice_language',1295,350,'language_encoder')]:
+ for k in range(6):
+  a=k*math.pi/3;ux=math.cos(a);uy=math.sin(a)
+  def ln(id,aa,bb,sw):E.append(dict(id=id,kind='line',z=600+len(E),points=[aa,bb],stroke='#000000',stroke_width=sw,container=con))
+  ln(f'{pre}_{k}',[cx,cy],[cx+8*ux,cy+8*uy],1.4)
+  for j,r in enumerate([3.6,5.8]):
+   for sign in [-1,1]:
+    a2=a+sign*math.pi/3
+    ln(f'{pre}_{k}_{j}_{sign}',[cx+r*ux,cy+r*uy],[cx+r*ux+2.3*math.cos(a2),cy+r*uy+2.3*math.sin(a2)],1.1)
+# 7x7 source cells, not 10 rows. Measured image ink anchors, colors sampled at actual cell interiors.
+E[:]=[e for e in E if not e['id'].startswith('feature_')]
+im=Image.open('/tmp/diffuser_fig2_zPTOQk/figure1.png')
+for r in range(7):
+ for c in range(7):
+  x=269+c*7.2;y=216+c*4.0+r*8.5
+  color='#%02x%02x%02x'%im.getpixel((round(x+2.5),round(y+4.2)))[:3]
+  E.append(dict(id=f'feature_{r}_{c}',kind='shape',z=60,box=[x,y,5.5,9.0],shape='polygon',vertices=[[0,0],[1,0.333333],[1,1],[0,0.666667]],fill=color))
+# Source formula bold-italic variables and no artificially inserted wide spaces.
+for pre in ['output_loc','output_rot']:
+ d[pre+'_args']['bold']=True;d[pre+'_args']['font_size']=19;d[pre+'_args']['box'][0]-=5
+# Source gaussian font is less heavy than initial fallback rendering.
+d['gaussian']['bold']=False;d['gaussian']['font_size']=26
+json.dump(s,open(p,'w'),indent=2)

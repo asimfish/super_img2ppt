@@ -1,0 +1,2648 @@
+{
+  "version": 1,
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 1435,
+      "height": 436,
+      "source": "assets/04d02254518be72aa932.png",
+      "background": "#FFFFFF",
+      "reviewed": true,
+      "notes": "Reconstructed from ViNT Figure 2, Shah et al., CoRL 2023, PMLR 229:711–733. Source pixels only. Three separate text-free photographic montage crops remain raster; all labels are editable. Positional-encoding internal curve is segmented native geometry. Stopwatch native primitives. Source font not uniquely identifiable; Arial substitute.",
+      "elements": [
+        {
+          "id": "observations_photo",
+          "kind": "image",
+          "z": 1,
+          "box": [
+            16,
+            86,
+            184,
+            130
+          ],
+          "path": "assets/8182ee831d3469d9b5f4.png",
+          "contains_text": false,
+          "provenance": "Exact text-free photo/montage crop from published Figure 2 pixels; actions crop includes original white trajectory markers."
+        },
+        {
+          "id": "goal_photo",
+          "kind": "image",
+          "z": 2,
+          "box": [
+            24,
+            261,
+            173,
+            117
+          ],
+          "path": "assets/3a14b55d0bd8aa993a54.png",
+          "contains_text": false,
+          "provenance": "Exact text-free photo/montage crop from published Figure 2 pixels; actions crop includes original white trajectory markers."
+        },
+        {
+          "id": "actions_photo",
+          "kind": "image",
+          "z": 3,
+          "box": [
+            1172,
+            187,
+            248,
+            160
+          ],
+          "path": "assets/4d9e9ac4a50b7ca819a6.png",
+          "contains_text": false,
+          "provenance": "Exact text-free photo/montage crop from published Figure 2 pixels; actions crop includes original white trajectory markers."
+        },
+        {
+          "id": "encoder_stack_0",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            252.0,
+            17.0,
+            369,
+            170
+          ],
+          "shape": "round_rect",
+          "fill": "#E8D2DC",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "radius": 28
+        },
+        {
+          "id": "encoder_stack_1",
+          "kind": "shape",
+          "z": 5,
+          "box": [
+            259.2,
+            24.2,
+            369,
+            170
+          ],
+          "shape": "round_rect",
+          "fill": "#E8D2DC",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "radius": 28,
+          "allow_overlap_with": [
+            "encoder_stack_0"
+          ],
+          "overlap_reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack."
+        },
+        {
+          "id": "encoder_stack_2",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            266.4,
+            31.4,
+            369,
+            170
+          ],
+          "shape": "round_rect",
+          "fill": "#E8D2DC",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "radius": 28,
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1"
+          ],
+          "overlap_reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack."
+        },
+        {
+          "id": "encoder_stack_3",
+          "kind": "shape",
+          "z": 7,
+          "box": [
+            273.6,
+            38.6,
+            369,
+            170
+          ],
+          "shape": "round_rect",
+          "fill": "#E8D2DC",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "radius": 28,
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2"
+          ],
+          "overlap_reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack."
+        },
+        {
+          "id": "encoder_stack_4",
+          "kind": "shape",
+          "z": 8,
+          "box": [
+            280.8,
+            45.8,
+            369,
+            170
+          ],
+          "shape": "round_rect",
+          "fill": "#E8D2DC",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "radius": 28,
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3"
+          ],
+          "overlap_reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack."
+        },
+        {
+          "id": "encoder_stack_5",
+          "kind": "shape",
+          "z": 9,
+          "box": [
+            288.0,
+            53.0,
+            369,
+            170
+          ],
+          "shape": "round_rect",
+          "fill": "#E8D2DC",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "radius": 28,
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack."
+        },
+        {
+          "id": "goal_encoder",
+          "kind": "shape",
+          "z": 10,
+          "box": [
+            288,
+            236,
+            369,
+            170
+          ],
+          "shape": "round_rect",
+          "fill": "#D9EBD2",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "radius": 28
+        },
+        {
+          "id": "observation_arrow_0",
+          "kind": "line",
+          "z": 11,
+          "points": [
+            [
+              200,
+              126.0
+            ],
+            [
+              252.0,
+              126.0
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          }
+        },
+        {
+          "id": "observation_arrow_1",
+          "kind": "line",
+          "z": 12,
+          "points": [
+            [
+              200,
+              132.5
+            ],
+            [
+              259.2,
+              132.5
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          },
+          "allow_overlap_with": [
+            "encoder_stack_0"
+          ],
+          "overlap_reason": "Source observation arrows traverse exposed rear encoder cards before their own stacked card."
+        },
+        {
+          "id": "observation_arrow_2",
+          "kind": "line",
+          "z": 13,
+          "points": [
+            [
+              200,
+              139.0
+            ],
+            [
+              266.4,
+              139.0
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          },
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1"
+          ],
+          "overlap_reason": "Source observation arrows traverse exposed rear encoder cards before their own stacked card."
+        },
+        {
+          "id": "observation_arrow_3",
+          "kind": "line",
+          "z": 14,
+          "points": [
+            [
+              200,
+              145.5
+            ],
+            [
+              273.6,
+              145.5
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          },
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2"
+          ],
+          "overlap_reason": "Source observation arrows traverse exposed rear encoder cards before their own stacked card."
+        },
+        {
+          "id": "observation_arrow_4",
+          "kind": "line",
+          "z": 15,
+          "points": [
+            [
+              200,
+              152.0
+            ],
+            [
+              280.8,
+              152.0
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          },
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3"
+          ],
+          "overlap_reason": "Source observation arrows traverse exposed rear encoder cards before their own stacked card."
+        },
+        {
+          "id": "observation_arrow_5",
+          "kind": "line",
+          "z": 16,
+          "points": [
+            [
+              200,
+              158.5
+            ],
+            [
+              288.0,
+              158.5
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          },
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source observation arrows traverse exposed rear encoder cards before their own stacked card."
+        },
+        {
+          "id": "goal_arrow",
+          "kind": "line",
+          "z": 17,
+          "points": [
+            [
+              197,
+              321
+            ],
+            [
+              287,
+              321
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          }
+        },
+        {
+          "id": "obs_efficient",
+          "kind": "shape",
+          "z": 18,
+          "box": [
+            319,
+            79,
+            169,
+            117
+          ],
+          "shape": "polygon",
+          "fill": "#3979D8",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "vertices": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0.25
+            ],
+            [
+              1,
+              0.75
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "container": "encoder_stack_5",
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards."
+        },
+        {
+          "id": "obs_efficient_label",
+          "kind": "text",
+          "z": 19,
+          "box": [
+            327,
+            124,
+            154,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 22,
+          "color": "#FFFFFF",
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "obs_efficient",
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+          "runs": [
+            {
+              "text": "EfficientNet-B0",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "id": "obs_parameters",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            419,
+            59,
+            122,
+            24
+          ],
+          "font_family": "Arial",
+          "font_size": 16,
+          "color": "#555555",
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "encoder_stack_5",
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+          "runs": [
+            {
+              "text": "5M Parameters",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 16,
+              "bold": false,
+              "italic": true,
+              "color": "#555555"
+            }
+          ]
+        },
+        {
+          "id": "obs_feature_0",
+          "kind": "shape",
+          "z": 21,
+          "box": [
+            505,
+            91,
+            16,
+            98
+          ],
+          "shape": "rect",
+          "fill": "#C7DBF7",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "container": "encoder_stack_5",
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards."
+        },
+        {
+          "id": "obs_feature_1",
+          "kind": "shape",
+          "z": 22,
+          "box": [
+            531,
+            107,
+            16,
+            62
+          ],
+          "shape": "rect",
+          "fill": "#C7DBF7",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "container": "encoder_stack_5",
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards."
+        },
+        {
+          "id": "obs_feature_2",
+          "kind": "shape",
+          "z": 23,
+          "box": [
+            558,
+            124,
+            16,
+            34
+          ],
+          "shape": "rect",
+          "fill": "#C7DBF7",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "container": "encoder_stack_5",
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards."
+        },
+        {
+          "id": "obs_encoding_0",
+          "kind": "shape",
+          "z": 24,
+          "box": [
+            602,
+            91.0,
+            10,
+            12.25
+          ],
+          "shape": "rect",
+          "fill": "#D989B0",
+          "stroke": "#A34F7D",
+          "stroke_width": 2,
+          "container": "encoder_stack_5",
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards."
+        },
+        {
+          "id": "obs_encoding_1",
+          "kind": "shape",
+          "z": 25,
+          "box": [
+            602,
+            103.25,
+            10,
+            12.25
+          ],
+          "shape": "rect",
+          "fill": "#EAA4C5",
+          "stroke": "#A34F7D",
+          "stroke_width": 2,
+          "container": "encoder_stack_5",
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards."
+        },
+        {
+          "id": "obs_encoding_2",
+          "kind": "shape",
+          "z": 26,
+          "box": [
+            602,
+            115.5,
+            10,
+            12.25
+          ],
+          "shape": "rect",
+          "fill": "#F2C499",
+          "stroke": "#A34F7D",
+          "stroke_width": 2,
+          "container": "encoder_stack_5",
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards."
+        },
+        {
+          "id": "obs_encoding_3",
+          "kind": "shape",
+          "z": 27,
+          "box": [
+            602,
+            127.75,
+            10,
+            12.25
+          ],
+          "shape": "rect",
+          "fill": "#F9D937",
+          "stroke": "#A34F7D",
+          "stroke_width": 2,
+          "container": "encoder_stack_5",
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards."
+        },
+        {
+          "id": "obs_encoding_4",
+          "kind": "shape",
+          "z": 28,
+          "box": [
+            602,
+            140.0,
+            10,
+            12.25
+          ],
+          "shape": "rect",
+          "fill": "#F0BE88",
+          "stroke": "#A34F7D",
+          "stroke_width": 2,
+          "container": "encoder_stack_5",
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards."
+        },
+        {
+          "id": "obs_encoding_5",
+          "kind": "shape",
+          "z": 29,
+          "box": [
+            602,
+            152.25,
+            10,
+            12.25
+          ],
+          "shape": "rect",
+          "fill": "#EBA0C2",
+          "stroke": "#A34F7D",
+          "stroke_width": 2,
+          "container": "encoder_stack_5",
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards."
+        },
+        {
+          "id": "obs_encoding_6",
+          "kind": "shape",
+          "z": 30,
+          "box": [
+            602,
+            164.5,
+            10,
+            12.25
+          ],
+          "shape": "rect",
+          "fill": "#D689B0",
+          "stroke": "#A34F7D",
+          "stroke_width": 2,
+          "container": "encoder_stack_5",
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards."
+        },
+        {
+          "id": "obs_encoding_7",
+          "kind": "shape",
+          "z": 31,
+          "box": [
+            602,
+            176.75,
+            10,
+            12.25
+          ],
+          "shape": "rect",
+          "fill": "#D58CAD",
+          "stroke": "#A34F7D",
+          "stroke_width": 2,
+          "container": "encoder_stack_5",
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards."
+        },
+        {
+          "id": "obs_512",
+          "kind": "text",
+          "z": 32,
+          "box": [
+            584,
+            194,
+            66,
+            26
+          ],
+          "font_family": "Arial",
+          "font_size": 16,
+          "color": "#555555",
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "encoder_stack_5",
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+          "runs": [
+            {
+              "text": "512-D",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 16,
+              "bold": false,
+              "italic": true,
+              "color": "#555555"
+            }
+          ]
+        },
+        {
+          "id": "obs_symbol",
+          "kind": "text",
+          "z": 33,
+          "box": [
+            467,
+            174,
+            38,
+            39
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 32,
+          "color": "#111111",
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "encoder_stack_5",
+          "allow_overlap_with": [
+            "encoder_stack_0",
+            "encoder_stack_1",
+            "encoder_stack_2",
+            "encoder_stack_3",
+            "encoder_stack_4"
+          ],
+          "overlap_reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+          "runs": [
+            {
+              "text": "ψ",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 32,
+              "bold": false,
+              "italic": true,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "goal_efficient",
+          "kind": "shape",
+          "z": 34,
+          "box": [
+            319,
+            262,
+            169,
+            117
+          ],
+          "shape": "polygon",
+          "fill": "#3979D8",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "vertices": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0.25
+            ],
+            [
+              1,
+              0.75
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "container": "goal_encoder"
+        },
+        {
+          "id": "goal_efficient_label",
+          "kind": "text",
+          "z": 35,
+          "box": [
+            327,
+            307,
+            154,
+            29
+          ],
+          "font_family": "Arial",
+          "font_size": 22,
+          "color": "#FFFFFF",
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "container": "goal_efficient",
+          "runs": [
+            {
+              "text": "EfficientNet-B0",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "id": "goal_parameters",
+          "kind": "text",
+          "z": 36,
+          "box": [
+            419,
+            242,
+            122,
+            24
+          ],
+          "font_family": "Arial",
+          "font_size": 16,
+          "color": "#555555",
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "goal_encoder",
+          "runs": [
+            {
+              "text": "5M Parameters",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 16,
+              "bold": false,
+              "italic": true,
+              "color": "#555555"
+            }
+          ]
+        },
+        {
+          "id": "goal_feature_0",
+          "kind": "shape",
+          "z": 37,
+          "box": [
+            505,
+            274,
+            16,
+            98
+          ],
+          "shape": "rect",
+          "fill": "#C7DBF7",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "container": "goal_encoder"
+        },
+        {
+          "id": "goal_feature_1",
+          "kind": "shape",
+          "z": 38,
+          "box": [
+            531,
+            290,
+            16,
+            62
+          ],
+          "shape": "rect",
+          "fill": "#C7DBF7",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "container": "goal_encoder"
+        },
+        {
+          "id": "goal_feature_2",
+          "kind": "shape",
+          "z": 39,
+          "box": [
+            558,
+            307,
+            16,
+            34
+          ],
+          "shape": "rect",
+          "fill": "#C7DBF7",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "container": "goal_encoder"
+        },
+        {
+          "id": "goal_encoding_0",
+          "kind": "shape",
+          "z": 40,
+          "box": [
+            602,
+            274.0,
+            10,
+            12.25
+          ],
+          "shape": "rect",
+          "fill": "#A4C978",
+          "stroke": "#397B25",
+          "stroke_width": 2,
+          "container": "goal_encoder"
+        },
+        {
+          "id": "goal_encoding_1",
+          "kind": "shape",
+          "z": 41,
+          "box": [
+            602,
+            286.25,
+            10,
+            12.25
+          ],
+          "shape": "rect",
+          "fill": "#D5E9BD",
+          "stroke": "#397B25",
+          "stroke_width": 2,
+          "container": "goal_encoder"
+        },
+        {
+          "id": "goal_encoding_2",
+          "kind": "shape",
+          "z": 42,
+          "box": [
+            602,
+            298.5,
+            10,
+            12.25
+          ],
+          "shape": "rect",
+          "fill": "#C9E49A",
+          "stroke": "#397B25",
+          "stroke_width": 2,
+          "container": "goal_encoder"
+        },
+        {
+          "id": "goal_encoding_3",
+          "kind": "shape",
+          "z": 43,
+          "box": [
+            602,
+            310.75,
+            10,
+            12.25
+          ],
+          "shape": "rect",
+          "fill": "#FBDD2E",
+          "stroke": "#397B25",
+          "stroke_width": 2,
+          "container": "goal_encoder"
+        },
+        {
+          "id": "goal_encoding_4",
+          "kind": "shape",
+          "z": 44,
+          "box": [
+            602,
+            323.0,
+            10,
+            12.25
+          ],
+          "shape": "rect",
+          "fill": "#BBDC85",
+          "stroke": "#397B25",
+          "stroke_width": 2,
+          "container": "goal_encoder"
+        },
+        {
+          "id": "goal_encoding_5",
+          "kind": "shape",
+          "z": 45,
+          "box": [
+            602,
+            335.25,
+            10,
+            12.25
+          ],
+          "shape": "rect",
+          "fill": "#94C675",
+          "stroke": "#397B25",
+          "stroke_width": 2,
+          "container": "goal_encoder"
+        },
+        {
+          "id": "goal_encoding_6",
+          "kind": "shape",
+          "z": 46,
+          "box": [
+            602,
+            347.5,
+            10,
+            12.25
+          ],
+          "shape": "rect",
+          "fill": "#BBDC85",
+          "stroke": "#397B25",
+          "stroke_width": 2,
+          "container": "goal_encoder"
+        },
+        {
+          "id": "goal_encoding_7",
+          "kind": "shape",
+          "z": 47,
+          "box": [
+            602,
+            359.75,
+            10,
+            12.25
+          ],
+          "shape": "rect",
+          "fill": "#A4C978",
+          "stroke": "#397B25",
+          "stroke_width": 2,
+          "container": "goal_encoder"
+        },
+        {
+          "id": "goal_512",
+          "kind": "text",
+          "z": 48,
+          "box": [
+            584,
+            377,
+            66,
+            26
+          ],
+          "font_family": "Arial",
+          "font_size": 16,
+          "color": "#555555",
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "goal_encoder",
+          "runs": [
+            {
+              "text": "512-D",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 16,
+              "bold": false,
+              "italic": true,
+              "color": "#555555"
+            }
+          ]
+        },
+        {
+          "id": "goal_symbol",
+          "kind": "text",
+          "z": 49,
+          "box": [
+            467,
+            357,
+            38,
+            39
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 32,
+          "color": "#111111",
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "container": "goal_encoder",
+          "runs": [
+            {
+              "text": "ϕ",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 32,
+              "bold": false,
+              "italic": true,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "obs_token_arrow",
+          "kind": "line",
+          "z": 50,
+          "points": [
+            [
+              657,
+              138
+            ],
+            [
+              689,
+              138
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          }
+        },
+        {
+          "id": "goal_token_arrow",
+          "kind": "line",
+          "z": 51,
+          "points": [
+            [
+              657,
+              321
+            ],
+            [
+              689,
+              321
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          }
+        },
+        {
+          "id": "repeat",
+          "kind": "text",
+          "z": 52,
+          "box": [
+            662,
+            109,
+            30,
+            25
+          ],
+          "font_family": "Arial",
+          "font_size": 16,
+          "color": "#555555",
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "x6",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 16,
+              "bold": false,
+              "italic": true,
+              "color": "#555555"
+            }
+          ]
+        },
+        {
+          "id": "input_token_frame",
+          "kind": "shape",
+          "z": 53,
+          "box": [
+            691.5,
+            25.5,
+            56,
+            344
+          ],
+          "shape": "rect",
+          "fill": null,
+          "stroke": "#626262",
+          "stroke_width": 1.5
+        },
+        {
+          "id": "input_token_0",
+          "kind": "shape",
+          "z": 54,
+          "box": [
+            707,
+            41,
+            26,
+            26
+          ],
+          "shape": "rect",
+          "fill": "#AD487B",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "input_token_frame"
+        },
+        {
+          "id": "input_token_1",
+          "kind": "shape",
+          "z": 55,
+          "box": [
+            707,
+            75,
+            26,
+            26
+          ],
+          "shape": "rect",
+          "fill": "#AD487B",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "input_token_frame"
+        },
+        {
+          "id": "input_token_2",
+          "kind": "shape",
+          "z": 56,
+          "box": [
+            707,
+            110,
+            26,
+            26
+          ],
+          "shape": "rect",
+          "fill": "#AD487B",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "input_token_frame"
+        },
+        {
+          "id": "input_token_3",
+          "kind": "shape",
+          "z": 57,
+          "box": [
+            707,
+            145,
+            26,
+            26
+          ],
+          "shape": "rect",
+          "fill": "#AD487B",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "input_token_frame"
+        },
+        {
+          "id": "input_token_4",
+          "kind": "shape",
+          "z": 58,
+          "box": [
+            707,
+            180,
+            26,
+            26
+          ],
+          "shape": "rect",
+          "fill": "#AD487B",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "input_token_frame"
+        },
+        {
+          "id": "input_token_5",
+          "kind": "shape",
+          "z": 59,
+          "box": [
+            707,
+            214,
+            26,
+            26
+          ],
+          "shape": "rect",
+          "fill": "#AD487B",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "input_token_frame"
+        },
+        {
+          "id": "input_token_6",
+          "kind": "shape",
+          "z": 60,
+          "box": [
+            707,
+            324,
+            26,
+            26
+          ],
+          "shape": "rect",
+          "fill": "#34791C",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "input_token_frame"
+        },
+        {
+          "id": "token_to_attention",
+          "kind": "line",
+          "z": 61,
+          "points": [
+            [
+              748,
+              197.5
+            ],
+            [
+              880,
+              197.5
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          }
+        },
+        {
+          "id": "addition_circle",
+          "kind": "shape",
+          "z": 62,
+          "box": [
+            786,
+            169.5,
+            55.5,
+            55.5
+          ],
+          "shape": "ellipse",
+          "fill": "#EEEEEE",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "allow_overlap_with": [
+            "token_to_attention"
+          ],
+          "overlap_reason": "Source horizontal flow passes through the sum circle center."
+        },
+        {
+          "id": "addition_horizontal",
+          "kind": "line",
+          "z": 63,
+          "points": [
+            [
+              787,
+              197.5
+            ],
+            [
+              840,
+              197.5
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "addition_circle",
+          "allow_overlap_with": [
+            "token_to_attention"
+          ],
+          "overlap_reason": "Source horizontal flow passes through the sum circle center."
+        },
+        {
+          "id": "addition_vertical",
+          "kind": "line",
+          "z": 64,
+          "points": [
+            [
+              814,
+              171
+            ],
+            [
+              814,
+              224
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "addition_circle",
+          "allow_overlap_with": [
+            "addition_horizontal",
+            "token_to_attention"
+          ],
+          "overlap_reason": "The plus vertical meets the horizontal input flow at its center."
+        },
+        {
+          "id": "position_down",
+          "kind": "line",
+          "z": 65,
+          "points": [
+            [
+              814,
+              116.5
+            ],
+            [
+              814,
+              169
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": false
+        },
+        {
+          "id": "position_circle",
+          "kind": "shape",
+          "z": 66,
+          "box": [
+            792,
+            72.5,
+            44,
+            44
+          ],
+          "shape": "ellipse",
+          "fill": null,
+          "stroke": "#626262",
+          "stroke_width": 1.5
+        },
+        {
+          "id": "position_wave_0",
+          "kind": "line",
+          "z": 67,
+          "points": [
+            [
+              793,
+              93
+            ],
+            [
+              795,
+              87
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "position_circle"
+        },
+        {
+          "id": "position_wave_1",
+          "kind": "line",
+          "z": 68,
+          "points": [
+            [
+              795,
+              87
+            ],
+            [
+              799,
+              83
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "position_circle",
+          "allow_overlap_with": [
+            "position_wave_0"
+          ],
+          "overlap_reason": "Adjacent segments form the one continuous source positional-encoding symbol."
+        },
+        {
+          "id": "position_wave_2",
+          "kind": "line",
+          "z": 69,
+          "points": [
+            [
+              799,
+              83
+            ],
+            [
+              804,
+              83
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "position_circle",
+          "allow_overlap_with": [
+            "position_wave_1"
+          ],
+          "overlap_reason": "Adjacent segments form the one continuous source positional-encoding symbol."
+        },
+        {
+          "id": "position_wave_3",
+          "kind": "line",
+          "z": 70,
+          "points": [
+            [
+              804,
+              83
+            ],
+            [
+              809,
+              85
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "position_circle",
+          "allow_overlap_with": [
+            "position_wave_2"
+          ],
+          "overlap_reason": "Adjacent segments form the one continuous source positional-encoding symbol."
+        },
+        {
+          "id": "position_wave_4",
+          "kind": "line",
+          "z": 71,
+          "points": [
+            [
+              809,
+              85
+            ],
+            [
+              812,
+              90
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "position_circle",
+          "allow_overlap_with": [
+            "position_wave_3"
+          ],
+          "overlap_reason": "Adjacent segments form the one continuous source positional-encoding symbol."
+        },
+        {
+          "id": "position_wave_5",
+          "kind": "line",
+          "z": 72,
+          "points": [
+            [
+              812,
+              90
+            ],
+            [
+              813,
+              97
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "position_circle",
+          "allow_overlap_with": [
+            "position_wave_4"
+          ],
+          "overlap_reason": "Adjacent segments form the one continuous source positional-encoding symbol."
+        },
+        {
+          "id": "position_wave_6",
+          "kind": "line",
+          "z": 73,
+          "points": [
+            [
+              813,
+              97
+            ],
+            [
+              816,
+              103
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "position_circle",
+          "allow_overlap_with": [
+            "position_wave_5"
+          ],
+          "overlap_reason": "Adjacent segments form the one continuous source positional-encoding symbol."
+        },
+        {
+          "id": "position_wave_7",
+          "kind": "line",
+          "z": 74,
+          "points": [
+            [
+              816,
+              103
+            ],
+            [
+              821,
+              106
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "position_circle",
+          "allow_overlap_with": [
+            "position_wave_6"
+          ],
+          "overlap_reason": "Adjacent segments form the one continuous source positional-encoding symbol."
+        },
+        {
+          "id": "position_wave_8",
+          "kind": "line",
+          "z": 75,
+          "points": [
+            [
+              821,
+              106
+            ],
+            [
+              827,
+              106
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "position_circle",
+          "allow_overlap_with": [
+            "position_wave_7"
+          ],
+          "overlap_reason": "Adjacent segments form the one continuous source positional-encoding symbol."
+        },
+        {
+          "id": "position_wave_9",
+          "kind": "line",
+          "z": 76,
+          "points": [
+            [
+              827,
+              106
+            ],
+            [
+              832,
+              102
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "position_circle",
+          "allow_overlap_with": [
+            "position_wave_8"
+          ],
+          "overlap_reason": "Adjacent segments form the one continuous source positional-encoding symbol."
+        },
+        {
+          "id": "position_wave_10",
+          "kind": "line",
+          "z": 77,
+          "points": [
+            [
+              832,
+              102
+            ],
+            [
+              835,
+              97
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 1.6,
+          "arrow": false,
+          "container": "position_circle",
+          "allow_overlap_with": [
+            "position_wave_9"
+          ],
+          "overlap_reason": "Adjacent segments form the one continuous source positional-encoding symbol."
+        },
+        {
+          "id": "attention_1",
+          "kind": "shape",
+          "z": 78,
+          "box": [
+            882,
+            66.5,
+            60,
+            263
+          ],
+          "shape": "round_rect",
+          "fill": "#FCE6CF",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "radius": 10
+        },
+        {
+          "id": "attention_1_label",
+          "kind": "text",
+          "z": 79,
+          "box": [
+            822.5,
+            169,
+            185,
+            37
+          ],
+          "font_family": "Helvetica Neue",
+          "font_size": 27,
+          "color": "#333333",
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "rotation": -90,
+          "container": "attention_1",
+          "runs": [
+            {
+              "text": "Self-Attention",
+              "font_family": "Helvetica Neue",
+              "cjk_font_family": "Helvetica Neue",
+              "font_size": 27,
+              "bold": false,
+              "italic": false,
+              "color": "#333333"
+            }
+          ]
+        },
+        {
+          "id": "attention_2",
+          "kind": "shape",
+          "z": 80,
+          "box": [
+            994,
+            66.5,
+            60,
+            263
+          ],
+          "shape": "round_rect",
+          "fill": "#FCE6CF",
+          "stroke": "#626262",
+          "stroke_width": 1.5,
+          "radius": 10
+        },
+        {
+          "id": "attention_2_label",
+          "kind": "text",
+          "z": 81,
+          "box": [
+            934.5,
+            169,
+            185,
+            37
+          ],
+          "font_family": "Helvetica Neue",
+          "font_size": 27,
+          "color": "#333333",
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "rotation": -90,
+          "container": "attention_2",
+          "runs": [
+            {
+              "text": "Self-Attention",
+              "font_family": "Helvetica Neue",
+              "cjk_font_family": "Helvetica Neue",
+              "font_size": 27,
+              "bold": false,
+              "italic": false,
+              "color": "#333333"
+            }
+          ]
+        },
+        {
+          "id": "attention_dot_0",
+          "kind": "shape",
+          "z": 82,
+          "box": [
+            952,
+            195,
+            5.5,
+            5.5
+          ],
+          "shape": "ellipse",
+          "fill": "#999999",
+          "stroke": null,
+          "stroke_width": 0
+        },
+        {
+          "id": "attention_dot_1",
+          "kind": "shape",
+          "z": 83,
+          "box": [
+            965,
+            195,
+            5.5,
+            5.5
+          ],
+          "shape": "ellipse",
+          "fill": "#999999",
+          "stroke": null,
+          "stroke_width": 0
+        },
+        {
+          "id": "attention_dot_2",
+          "kind": "shape",
+          "z": 84,
+          "box": [
+            978,
+            195,
+            5.5,
+            5.5
+          ],
+          "shape": "ellipse",
+          "fill": "#999999",
+          "stroke": null,
+          "stroke_width": 0
+        },
+        {
+          "id": "action_token_frame",
+          "kind": "shape",
+          "z": 85,
+          "box": [
+            1085,
+            25.5,
+            56,
+            344
+          ],
+          "shape": "rect",
+          "fill": null,
+          "stroke": "#626262",
+          "stroke_width": 1.5
+        },
+        {
+          "id": "action_token_0",
+          "kind": "shape",
+          "z": 86,
+          "box": [
+            1100,
+            41,
+            26,
+            26
+          ],
+          "shape": "rect",
+          "fill": "#BB1E00",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "action_token_frame"
+        },
+        {
+          "id": "action_token_1",
+          "kind": "shape",
+          "z": 87,
+          "box": [
+            1100,
+            76,
+            26,
+            26
+          ],
+          "shape": "rect",
+          "fill": "#694CAB",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "action_token_frame"
+        },
+        {
+          "id": "action_token_2",
+          "kind": "shape",
+          "z": 88,
+          "box": [
+            1100,
+            110,
+            26,
+            26
+          ],
+          "shape": "rect",
+          "fill": "#694CAB",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "action_token_frame"
+        },
+        {
+          "id": "action_token_3",
+          "kind": "shape",
+          "z": 89,
+          "box": [
+            1100,
+            145,
+            26,
+            26
+          ],
+          "shape": "rect",
+          "fill": "#694CAB",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "action_token_frame"
+        },
+        {
+          "id": "action_token_4",
+          "kind": "shape",
+          "z": 90,
+          "box": [
+            1100,
+            180,
+            26,
+            26
+          ],
+          "shape": "rect",
+          "fill": "#694CAB",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "action_token_frame"
+        },
+        {
+          "id": "action_token_5",
+          "kind": "shape",
+          "z": 91,
+          "box": [
+            1100,
+            259,
+            26,
+            26
+          ],
+          "shape": "rect",
+          "fill": "#694CAB",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "action_token_frame"
+        },
+        {
+          "id": "action_token_6",
+          "kind": "shape",
+          "z": 92,
+          "box": [
+            1100,
+            293,
+            26,
+            26
+          ],
+          "shape": "rect",
+          "fill": "#694CAB",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "action_token_frame"
+        },
+        {
+          "id": "action_token_7",
+          "kind": "shape",
+          "z": 93,
+          "box": [
+            1100,
+            327,
+            26,
+            26
+          ],
+          "shape": "rect",
+          "fill": "#694CAB",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "action_token_frame"
+        },
+        {
+          "id": "action_dot_0",
+          "kind": "shape",
+          "z": 94,
+          "box": [
+            1110,
+            216,
+            5.5,
+            5.5
+          ],
+          "shape": "ellipse",
+          "fill": "#999999",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "action_token_frame"
+        },
+        {
+          "id": "action_dot_1",
+          "kind": "shape",
+          "z": 95,
+          "box": [
+            1110,
+            230,
+            5.5,
+            5.5
+          ],
+          "shape": "ellipse",
+          "fill": "#999999",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "action_token_frame"
+        },
+        {
+          "id": "action_dot_2",
+          "kind": "shape",
+          "z": 96,
+          "box": [
+            1110,
+            244,
+            5.5,
+            5.5
+          ],
+          "shape": "ellipse",
+          "fill": "#999999",
+          "stroke": null,
+          "stroke_width": 0,
+          "container": "action_token_frame"
+        },
+        {
+          "id": "stopwatch_ring",
+          "kind": "shape",
+          "z": 97,
+          "box": [
+            1266,
+            48,
+            57,
+            57
+          ],
+          "shape": "ellipse",
+          "fill": null,
+          "stroke": "#000000",
+          "stroke_width": 5
+        },
+        {
+          "id": "stopwatch_stem",
+          "kind": "shape",
+          "z": 98,
+          "box": [
+            1289,
+            34,
+            11,
+            14
+          ],
+          "shape": "rect",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0
+        },
+        {
+          "id": "stopwatch_button",
+          "kind": "shape",
+          "z": 99,
+          "box": [
+            1287,
+            26,
+            16,
+            12
+          ],
+          "shape": "round_rect",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0,
+          "radius": 3,
+          "allow_overlap_with": [
+            "stopwatch_stem"
+          ],
+          "overlap_reason": "The source stopwatch top button deliberately joins and covers the upper stem."
+        },
+        {
+          "id": "stopwatch_side_button",
+          "kind": "shape",
+          "z": 100,
+          "box": [
+            1317,
+            44,
+            10,
+            5
+          ],
+          "shape": "polygon",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0,
+          "vertices": [
+            [
+              0,
+              0
+            ],
+            [
+              0.4,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0.6,
+              1
+            ]
+          ]
+        },
+        {
+          "id": "stopwatch_hand",
+          "kind": "shape",
+          "z": 101,
+          "box": [
+            1295,
+            58,
+            17,
+            29
+          ],
+          "shape": "polygon",
+          "fill": "#000000",
+          "stroke": null,
+          "stroke_width": 0,
+          "vertices": [
+            [
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.14
+            ],
+            [
+              1,
+              0.65
+            ],
+            [
+              0.75,
+              1
+            ],
+            [
+              0,
+              0.6
+            ]
+          ],
+          "container": "stopwatch_ring"
+        },
+        {
+          "id": "stopwatch_tick",
+          "kind": "line",
+          "z": 102,
+          "points": [
+            [
+              1268,
+              76
+            ],
+            [
+              1276,
+              76
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 3,
+          "container": "stopwatch_ring"
+        },
+        {
+          "id": "observations",
+          "kind": "text",
+          "z": 103,
+          "box": [
+            43,
+            8,
+            190,
+            30
+          ],
+          "font_family": "Arial",
+          "font_size": 24,
+          "color": "#111111",
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Observations",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "past",
+          "kind": "text",
+          "z": 104,
+          "box": [
+            51,
+            38,
+            172,
+            24
+          ],
+          "font_family": "Arial",
+          "font_size": 17,
+          "color": "#555555",
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Past 5 timesteps",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": false,
+              "italic": false,
+              "color": "#555555"
+            }
+          ]
+        },
+        {
+          "id": "rgb",
+          "kind": "text",
+          "z": 105,
+          "box": [
+            67,
+            58,
+            137,
+            22
+          ],
+          "font_family": "Arial",
+          "font_size": 16,
+          "color": "#555555",
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "85x64x3 RGB",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 16,
+              "bold": false,
+              "italic": true,
+              "color": "#555555"
+            }
+          ]
+        },
+        {
+          "id": "goal_label",
+          "kind": "text",
+          "z": 106,
+          "box": [
+            12,
+            379,
+            245,
+            31
+          ],
+          "font_family": "Arial",
+          "font_size": 23,
+          "color": "#111111",
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Goal + Observation",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 23,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "fusion",
+          "kind": "text",
+          "z": 107,
+          "box": [
+            70,
+            408,
+            140,
+            25
+          ],
+          "font_family": "Arial",
+          "font_size": 16,
+          "color": "#555555",
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Early Fusion",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 16,
+              "bold": false,
+              "italic": true,
+              "color": "#555555"
+            }
+          ]
+        },
+        {
+          "id": "position_label",
+          "kind": "text",
+          "z": 108,
+          "box": [
+            757,
+            33,
+            171,
+            27
+          ],
+          "font_family": "Arial",
+          "font_size": 16,
+          "color": "#555555",
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Positional Encoding",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 16,
+              "bold": false,
+              "italic": true,
+              "color": "#555555"
+            }
+          ]
+        },
+        {
+          "id": "tokens_label",
+          "kind": "text",
+          "z": 109,
+          "box": [
+            686,
+            379,
+            98,
+            25
+          ],
+          "font_family": "Arial",
+          "font_size": 18,
+          "color": "#111111",
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "7 Tokens",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "token_dim",
+          "kind": "text",
+          "z": 110,
+          "box": [
+            692,
+            402,
+            90,
+            25
+          ],
+          "font_family": "Arial",
+          "font_size": 16,
+          "color": "#555555",
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "x512-D",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 16,
+              "bold": false,
+              "italic": true,
+              "color": "#555555"
+            }
+          ]
+        },
+        {
+          "id": "transformer",
+          "kind": "text",
+          "z": 111,
+          "box": [
+            905,
+            342,
+            170,
+            33
+          ],
+          "font_family": "Arial",
+          "font_size": 24,
+          "color": "#111111",
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Transformer",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "layers",
+          "kind": "text",
+          "z": 112,
+          "box": [
+            907,
+            370,
+            160,
+            24
+          ],
+          "font_family": "Arial",
+          "font_size": 16,
+          "color": "#555555",
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "4 Layers, 4 Heads",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 16,
+              "bold": false,
+              "italic": true,
+              "color": "#555555"
+            }
+          ]
+        },
+        {
+          "id": "param",
+          "kind": "text",
+          "z": 113,
+          "box": [
+            909,
+            393,
+            152,
+            24
+          ],
+          "font_family": "Arial",
+          "font_size": 16,
+          "color": "#555555",
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "21M Parameters",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 16,
+              "bold": false,
+              "italic": true,
+              "color": "#555555"
+            }
+          ]
+        },
+        {
+          "id": "actions",
+          "kind": "text",
+          "z": 114,
+          "box": [
+            1083,
+            377,
+            88,
+            25
+          ],
+          "font_family": "Arial",
+          "font_size": 18,
+          "color": "#111111",
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Actions",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 18,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "temporal",
+          "kind": "text",
+          "z": 115,
+          "box": [
+            1200,
+            114,
+            225,
+            33
+          ],
+          "font_family": "Arial",
+          "font_size": 23,
+          "color": "#111111",
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Temporal Distance",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 23,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "temporal_dim",
+          "kind": "text",
+          "z": 116,
+          "box": [
+            1238,
+            143,
+            171,
+            26
+          ],
+          "font_family": "Arial",
+          "font_size": 16,
+          "color": "#C55F50",
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "1-D, Continuous",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 16,
+              "bold": false,
+              "italic": true,
+              "color": "#C55F50"
+            }
+          ]
+        },
+        {
+          "id": "normalized",
+          "kind": "text",
+          "z": 117,
+          "box": [
+            1195,
+            357,
+            238,
+            32
+          ],
+          "font_family": "Arial",
+          "font_size": 23,
+          "color": "#111111",
+          "italic": false,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Normalized Actions",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 23,
+              "bold": false,
+              "italic": false,
+              "color": "#111111"
+            }
+          ]
+        },
+        {
+          "id": "normalized_dim",
+          "kind": "text",
+          "z": 118,
+          "box": [
+            1229,
+            385,
+            195,
+            26
+          ],
+          "font_family": "Arial",
+          "font_size": 16,
+          "color": "#8870BC",
+          "italic": true,
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "3x5-D, Continuous",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 16,
+              "bold": false,
+              "italic": true,
+              "color": "#8870BC"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

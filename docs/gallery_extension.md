@@ -4,7 +4,7 @@
 组成 [README 六例画廊](../README.md#真实复杂图效果)。每例提供完整原图、实际 PPTX
 渲染、PPTX/SVG、可复建场景、字体清单、许可与失败记录。
 
-[下载六例文件包](../examples/gallery/paper_gallery.zip) · [校验和](../examples/gallery/SHA256SUMS) · [第三方归属](../examples/gallery/NOTICE.md)
+[下载本轮冻结六例文件包](https://github.com/asimfish/super_img2ppt/releases/download/v0.3.4/paper_gallery.zip) · [当前画廊校验和](../examples/gallery/SHA256SUMS) · [第三方归属](../examples/gallery/NOTICE.md)
 
 ## 本轮实际结果
 

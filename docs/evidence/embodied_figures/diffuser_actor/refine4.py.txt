@@ -1,0 +1,6 @@
+import json
+p='/tmp/diffuser_fig2_zPTOQk/job/scene.json';s=json.load(open(p));d={e['id']:e for e in s['slides'][0]['elements']}
+for pre in ['ice_image','ice_language']:
+ for k in range(6):
+  e=d[f'{pre}_{k}'];e['allow_overlap_with']=[f'{pre}_{k}_{j}_{sgn}' for j in range(2) for sgn in [-1,1]]+[f'{pre}_{(k+1)%6}'];e['overlap_reason']='Source snowflake: each of these four twig segments physically joins its named radial stem, and adjacent radial stems share the center.'
+json.dump(s,open(p,'w'),indent=2)

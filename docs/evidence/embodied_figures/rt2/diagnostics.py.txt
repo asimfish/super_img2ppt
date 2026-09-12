@@ -1,0 +1,25 @@
+import json, pathlib, hashlib
+from PIL import Image
+r=pathlib.Path('/tmp/rt2_forward_20260912'); d=r/'diagnostics';d.mkdir(exist_ok=True)
+rois=[('dev','data_title',[54,2,520,34],'gray'),('dev','robot_rotation',[255,516,505,544],'gray'),('dev','detokenize',[989,395,1108,420],'purple'),('heldout_exposed','rt2_label',[789,57,884,101],'gray'),('heldout_exposed','llm_label',[947,78,1254,110],'orange'),('heldout_exposed','action_label',[1145,422,1287,448],'purple')]
+def mask(im,b,col):
+ crop=im.crop(b).convert('RGB'); vals=[]
+ for rr,g,bb in crop.getdata():
+  if col=='gray':v=max(rr,g,bb)-min(rr,g,bb)<22 and max(rr,g,bb)<170
+  elif col=='purple':v=bb>rr+20 and rr>g+8 and rr<170 and g<150
+  else:v=rr>230 and 70<g<190 and bb<80
+  vals.append(255 if v else 0)
+ out=Image.new('L',crop.size);out.putdata(vals);return out
+
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+src=Image.open(r/'source.png'); contract={'timing':'Frozen after both actual candidates viewed; diagnostic only, no blind/generalization claim; no further tuning','rois':rois,'source_sha256':sha(r/'source.png'),'scene_sha256':sha(r/'job/scene.json')}
+(d/'contract.json').write_text(json.dumps(contract,indent=2))
+for _,name,b,c in rois:mask(src,b,c).save(d/f'{name}_source_mask.png')
+# First invocation freezes source masks; measure is a separate invocation after visual mask review.
+if __import__('sys').argv[-1]=='measure':
+ out=Image.open(r/'build_02/actual_source_width.png');rows=[]
+ for split,name,b,c in rois:
+  s=mask(src,b,c);o=mask(out,b,c)
+  sb,ob=s.getbbox(),o.getbbox();sp=list(s.getdata());op=list(o.getdata());intersection=sum(bool(a and b) for a,b in zip(sp,op));union=sum(bool(a or b) for a,b in zip(sp,op))
+  rows.append(dict(split=split,id=name,source_bounds=sb,actual_bounds=ob,edge_delta_px=[v-u for u,v in zip(sb,ob)],iou=intersection/union,source_mask_validated=True))
+ (d/'measurements.json').write_text(json.dumps({'disclaimer':'Post-view diagnostic; both split labels exposed; not blind; no threshold-based fidelity pass. Gray masks include only isolated intended glyphs; purple/orange exclude fills.','results':rows},indent=2))

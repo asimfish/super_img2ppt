@@ -1,0 +1,24 @@
+from pathlib import Path
+import json,hashlib,collections
+
+from PIL import Image, ImageDraw, ImageChops
+R=Path('/tmp/diffuser_fig2_zPTOQk');s=json.loads((R/'job/scene.json').read_text());E=s['slides'][0]['elements']
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+a=Image.open(R/'actual_final_source_width.png');src=Image.open(R/'figure1.png');assets=[];union=Image.new("L",(1589,1052),0);draw=ImageDraw.Draw(union)
+for e in E:
+ if e['kind']=='image':
+  x,y,w,h=e['box'];draw.rectangle((x,y,x+w-1,y+h-1),fill=255);assets.append({'id':e['id'],'crop_xywh':e['box'],'path':e['path'],'sha256':sha(R/'job'/e['path']),'contains_text':False})
+provenance={'paper':'3D Diffuser Actor: Policy Diffusion with 3D Scene Representations','authors':['Tsung-Wei Ke','Nikolaos Gkanatsios','Katerina Fragkiadaki'],'conference':'CoRL 2024','proceedings':'PMLR 270:1949–1974 (2025)','article_url':'https://proceedings.mlr.press/v270/ke25a.html','pdf_url':'https://raw.githubusercontent.com/mlresearch/v270/main/assets/ke25a/ke25a.pdf','pdf_sha256':sha(R/'paper.pdf'),'figure':1,'complete_panels':['a','b','c'],'pdf_page_one_based':4,'rasterizer':'pypdfium2/PDFium','source_render_scale':4,'source_dpi':288,'page_pixel_size':[2448,3168],'source_crop_xyxy':[427,248,2016,1300],'source_size':[1589,1052],'source_sha256':sha(R/'figure1.png'),'license':'Copyright belongs to the authors; inspected official article/PDF and PMLR pages did not state an explicit reuse license. No code-repository license was assumed to apply to the figure.','license_source':'https://proceedings.mlr.press/ (authors retain copyright)','reconstruction_inputs':'Rendered source pixels and local OCR hints only. No source PDF text coordinates, vector paths, figure code or author drawing assets extracted.','assets':assets,'asset_count':len(assets),'asset_rectangle_area_sum_fraction':sum(e['crop_xywh'][2]*e['crop_xywh'][3] for e in assets)/(1589*1052),'asset_rectangle_union_fraction':sum(union.histogram()[128:])/(1589*1052),'native_counts':dict(collections.Counter(e['kind'] for e in E)),'actual_preview':{'path':'actual_final_source_width.png','sha256':sha(R/'actual_final_source_width.png'),'pdf':'job/build_06/render/editable.pdf','pdf_size_pt':[960.0094604492188,635.555908203125],'scale':1.6551920220207588,'size':[1589,1052],'command':'/Users/liyufeng/Code/super_img2ppt/.venv/bin/python /tmp/diffuser_fig2_zPTOQk/render_source_width.py /tmp/diffuser_fig2_zPTOQk/job/build_06 /tmp/diffuser_fig2_zPTOQk/actual_final_source_width.png'}}
+(R/'provenance.json').write_text(json.dumps(provenance,indent=2));(R/'assets_manifest.json').write_text(json.dumps(assets,indent=2))
+# Post-inspection development diagnostics, no held-out/independent-fidelity claim.
+rois={'depth_label':[50,147,157,180],'multiview_label':[582,359,837,401],'panel_a_label':[577,418,1045,456],'panel_b_label':[670,718,939,758],'panel_c_label':[550,1009,1060,1050]}
+records=[]
+for name,b in rois.items():
+ def ink(im):
+  rr,gg,bb=im.convert('RGB').crop(b).split();mask=ImageChops.lighter(ImageChops.lighter(rr,gg),bb).point(lambda v:255 if v<130 else 0);x0,y0,x1,y1=mask.getbbox()
+  return [x0+b[0],y0+b[1],x1+b[0],y1+b[1]]
+ aa=ink(src);bb=ink(a);records.append(dict(id=name,roi=b,source_ink_bbox=aa,actual_ink_bbox=bb,edge_difference_actual_minus_source=[b-a for a,b in zip(aa,bb)]))
+(R/'development_ink_diagnostics.json').write_text(json.dumps({'status':'post-inspection development diagnostics only; ROIs not blinded/held-out; no global fidelity percentage','threshold':'all RGB channels <130','registration':'none; both raster images 1589x1052','regions':records},indent=2))
+a.crop((1270,0,1580,205)).resize((930,615)).save(R/'actual_final_equations.png')
+a.crop((220,619,338,689)).resize((590,350)).save(R/'actual_final_transition.png')
+print(json.dumps({'counts':provenance['native_counts'],'assets':len(assets),'sum':provenance['asset_rectangle_area_sum_fraction'],'union':provenance['asset_rectangle_union_fraction'],'ink_diagnostics':records},indent=2))

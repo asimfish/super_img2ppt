@@ -11,19 +11,62 @@
 ![Python](https://img.shields.io/badge/python-3.11%2B-3776AB)
 [![License](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 
-[看真实效果](#真实复杂图效果) · [开始使用](#开始使用) · [曲线修复](#把案例反馈变成系统能力) · [工作流程](#工作流程) · [质量与边界](#质量与边界)
+[看具身智能案例](#具身智能与机器人) · [全部真实效果](#真实复杂图效果) · [开始使用](#开始使用) · [曲线修复](#把案例反馈变成系统能力) · [质量与边界](#质量与边界)
 
 </div>
 
 一个 **Agent Skill + 本地 Python 运行时**：Agent 看图、纠正 OCR、理解结构；运行时测量真实字体、检查重叠、导出原生对象，再渲染 **实际 PPTX** 验收。适合论文架构图、流程图、训练曲线和图片版幻灯片。
 
-**v0.3.4：再添 BLIP-2、Hyena、Griffin 三张完整复杂图，画廊扩展到六例，并修复 PDF 行末连字符误报。**
-从多模态掩码、密集数据库表格、算子链到训练曲线，均提供原图与实际 PPTX 对照。复杂文字的高保真仍未全部达标。
+**新增具身智能案例：RT-2、3D Diffuser Actor、ViNT，完整论文图画廊扩展到九例。**
+从机器人 VLA、三维动作扩散、视觉导航，到密集表格与训练曲线，均提供原图与实际 PPTX 对照。
+运行时为 v0.3.4；自动检查与图像保真分别报告，复杂字体仍有差异。
 
 ## 真实复杂图效果
 
 所有对照均为 **左：论文原图；右：实际 PPTX 经 LibreOffice 渲染**。点击图片查看原尺寸。
 保留完整图面板，没有只挑容易的局部。原生对象数量说明编辑边界；区域对比记录对齐和字形差异，两者分别报告。
+
+### 具身智能与机器人
+
+这一批包含真实照片、点云、动作轨迹和方法结构。**文字与图间结构可编辑，照片及其内部不可分离的轨迹保留为图片**；每例给出具体边界。本轮是完整案例实测与复建核验，没有将人工复核包装成盲测准确率。
+
+#### RT-2 · 视觉—语言—动作模型
+
+[![RT-2 完整原图与实际 PPTX 对照](docs/previews/gallery/rt2.png)](docs/previews/gallery/rt2.png)
+
+**134 个原生对象，7 处照片资产，约占源图面积 19.05%。** 完整保留互联网 VQA 与机器人训练样例、ViT / 大语言模型、动作 token、反标记化和闭环控制三栏。法文、动作数值和照片下方说明均为可编辑文字；照片内浅紫色运动箭头随照片保留。
+
+[下载 PPTX](examples/gallery/rt2/editable.pptx) · [SVG](examples/gallery/rt2/svg/page_001.svg) · [动作解码细节](docs/previews/gallery/rt2_detail.png) · [原图](examples/gallery/rt2/source.png) · [实际渲染](examples/gallery/rt2/actual.png) · [场景与报告](examples/gallery/rt2)
+
+结构及文字阻断检查通过，字宽漂移保留 `review`。Δ 符号大小和动作行距已定点修正；照片说明底板用纯灰色近似半透明效果，细字、阴影和括号曲率仍不同。
+
+<sub>改编自 Zitkovich et al., “RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control”, CoRL 2023, Figure 1。[论文与作者](https://proceedings.mlr.press/v229/zitkovich23a.html) · [CC BY 4.0 / 归属](examples/gallery/rt2/ATTRIBUTION.md)。</sub>
+
+#### 3D Diffuser Actor · 点云、动作去噪与真实机器人任务
+
+[![3D Diffuser Actor 完整原图与实际 PPTX 对照](docs/previews/gallery/diffuser_actor.png)](docs/previews/gallery/diffuser_actor.png)
+
+**274 个原生对象，19 处照片/点云资产，矩形并集约占源图面积 35.31%。** 完整保留 **模型架构、去噪过程、真实多任务操作** 三大面板，包括多视角聚合、三维 scene token、语言编码器、去噪 Transformer、公式以及机器人任务描述。点云内部不可分离的抓手轨迹、部分相机射线和彩色箭尾随图片保留。
+
+[下载 PPTX](examples/gallery/diffuser_actor/editable.pptx) · [SVG](examples/gallery/diffuser_actor/svg/page_001.svg) · [公式与模块细节](docs/previews/gallery/diffuser_actor_detail.png) · [原图](examples/gallery/diffuser_actor/source.png) · [实际渲染](examples/gallery/diffuser_actor/actual.png) · [场景与报告](examples/gallery/diffuser_actor)
+
+结构、原生对象与实际文字检查通过，部分数学字符字体替代保留 `review`。雪花图标、特征网格和公式间距已修正；公式字形、阴影和渐变仍有近似，不代表高保真全部达标。
+
+<sub>改编自 Ke, Gkanatsios & Fragkiadaki, “3D Diffuser Actor: Policy Diffusion with 3D Scene Representations”, CoRL 2024, Figure 1；PMLR 论文集于 2025 年出版。[论文与作者](https://proceedings.mlr.press/v270/ke25a.html) · [CC BY 4.0 / 归属](examples/gallery/diffuser_actor/ATTRIBUTION.md)。</sub>
+
+#### ViNT · 视觉导航 Transformer
+
+[![ViNT 完整原图与实际 PPTX 对照](docs/previews/gallery/vint.png)](docs/previews/gallery/vint.png)
+
+**115 个原生对象，3 处照片资产，约占源图面积 13.40%。** 完整保留观察堆叠、双 EfficientNet-B0 编码器、token、位置编码、自注意力模块、时间距离和动作输出。照片堆叠、边框和输出照片内的白色路径随图片保留；两处竖排 Self-Attention、希腊符号、维度和输出说明可编辑。
+
+[下载 PPTX](examples/gallery/vint/editable.pptx) · [SVG](examples/gallery/vint/svg/page_001.svg) · [注意力模块细节](docs/previews/gallery/vint_detail.png) · [原图](examples/gallery/vint/source.png) · [实际渲染](examples/gallery/vint/actual.png) · [场景与报告](examples/gallery/vint)
+
+阻断检查通过，7 Tokens 字宽漂移保留 `review`。斜体、希腊符号和竖排文字经过实际渲染复核与位置修正；部分字重、字宽以及秒表图标轮廓仍有近似。
+
+<sub>改编自 Shah et al., “ViNT: A Foundation Model for Visual Navigation”, CoRL 2023, Figure 2。[论文与作者](https://proceedings.mlr.press/v229/shah23a.html) · [CC BY 4.0 / 归属](examples/gallery/vint/ATTRIBUTION.md)。</sub>
+
+[具身案例测试与复建记录](docs/embodied_figures.md) · [下载九例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
 
 ### Griffin · 数据库表格到图模型
 
@@ -61,7 +104,7 @@
 
 <sub>改编自 Poli et al., “Hyena Hierarchy: Towards Larger Convolutional Language Models”, ICML 2023, Figure 1。[论文与作者](https://proceedings.mlr.press/v202/poli23a.html) · [CC BY 4.0 / 归属](examples/gallery/hyena/ATTRIBUTION.md)。</sub>
 
-[本轮完整测量、失败与修复证据](docs/gallery_extension.md) · [下载六例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
+[本轮完整测量、失败与修复证据](docs/gallery_extension.md) · [下载当前九例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
 
 ### GaLore · 四面板训练曲线
 

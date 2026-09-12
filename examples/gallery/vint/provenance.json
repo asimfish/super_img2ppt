@@ -1,0 +1,72 @@
+{
+  "paper": "ViNT: A Foundation Model for Visual Navigation",
+  "authors": [
+    "Dhruv Shah",
+    "Ajay Sridhar",
+    "Nitish Dashora",
+    "Kyle Stachowicz",
+    "Kevin Black",
+    "Noriaki Hirose",
+    "Sergey Levine"
+  ],
+  "publication": "CoRL 2023, PMLR 229:711\u2013733",
+  "article_url": "https://proceedings.mlr.press/v229/shah23a.html",
+  "pdf_url": "https://proceedings.mlr.press/v229/shah23a/shah23a.pdf",
+  "figure": 2,
+  "pdf_page_one_based": 3,
+  "rasterizer": "pypdfium2 5.13.0",
+  "source_scale": 4,
+  "source_crop_xyxy_pixels": [
+    510,
+    275,
+    1945,
+    711
+  ],
+  "source_dimensions": [
+    1435,
+    436
+  ],
+  "source_sha256": "04d02254518be72aa932dfa284b7e42892db6c3aeedb9e5a394e4a865940798a",
+  "pdf_sha256": "7298c0d3c5164f4e2b693766c4925a028a17c3e32aa0548827b417e28a5a8488",
+  "license": "CC BY 4.0 per PMLR publication agreement; paper-specific signed agreement not independently retrieved",
+  "license_evidence": "https://proceedings.mlr.press/pmlr-license-agreement.html",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "method": "Image-only reconstruction; no source PDF text/vector extraction, no author drawing code",
+  "raster_assets": [
+    {
+      "id": "observations_photo",
+      "box": [
+        16,
+        86,
+        184,
+        130
+      ],
+      "contains_text": false,
+      "provenance": "Exact text-free photo/montage crop from published Figure 2 pixels; actions crop includes original white trajectory markers."
+    },
+    {
+      "id": "goal_photo",
+      "box": [
+        24,
+        261,
+        173,
+        117
+      ],
+      "contains_text": false,
+      "provenance": "Exact text-free photo/montage crop from published Figure 2 pixels; actions crop includes original white trajectory markers."
+    },
+    {
+      "id": "actions_photo",
+      "box": [
+        1172,
+        187,
+        248,
+        160
+      ],
+      "contains_text": false,
+      "provenance": "Exact text-free photo/montage crop from published Figure 2 pixels; actions crop includes original white trajectory markers."
+    }
+  ],
+  "raster_asset_area_px2": 83841,
+  "raster_asset_area_fraction": 0.13400409167918678
+}

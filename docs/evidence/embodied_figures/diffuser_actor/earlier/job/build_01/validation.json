@@ -1,0 +1,2217 @@
+{
+  "status": "fail",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "fail",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "language_encoder_label",
+            "language_encoder"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "output_rot_theta",
+            "output_equations"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "output_rot_args",
+            "output_equations"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "step_loc_0_theta",
+            "noise_box_0"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "step_rot_0_theta",
+            "noise_box_0"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "step_loc_1_theta",
+            "noise_box_1"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "step_rot_1_theta",
+            "noise_box_1"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "step_loc_2_theta",
+            "noise_box_2"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "step_rot_2_theta",
+            "noise_box_2"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "language1_front",
+            "lang_dots"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "proprio",
+            "prop_c"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "noised",
+            "noise_tau"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "noised",
+            "noise_i"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "noise_tau",
+            "noise_i"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "denoising_step",
+            "denoising_i"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "output_loc_epsilon",
+            "output_loc_sup"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "output_loc_epsilon",
+            "output_loc_theta"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "output_loc_sup",
+            "output_loc_args"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "output_loc_theta",
+            "output_rot_sup"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "output_rot_epsilon",
+            "output_rot_sup"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "output_rot_epsilon",
+            "output_rot_theta"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "output_rot_sup",
+            "output_rot_args"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "denoiseN",
+            "tauN"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "denoiseN",
+            "tauN_sup"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 245.0
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "denoiseN",
+            "gaussian"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "denoiseNm1",
+            "tauNm1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "denoiseNm1",
+            "tauNm1_sup"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 245.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "denoiseNm1",
+            "noise_box_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 208.0
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "denoiseNm1",
+            "step_rot_0_sup"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "denoise2",
+            "tau2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "denoise2",
+            "tau2_sup"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 245.0
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "denoise1",
+            "tau1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "denoise1",
+            "tau1_sup"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 245.0
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "denoise0",
+            "tau0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "denoise0",
+            "tau0_sup"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 40.0
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "denoise0",
+            "trajectory"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "tauN",
+            "tauN_sup"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "tauN_sup",
+            "gaussian"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "tauNm1",
+            "tauNm1_sup"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "tau2",
+            "tau2_sup"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "tau1",
+            "tau1_sup"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "tau0",
+            "tau0_sup"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "tau0",
+            "trajectory"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_loc_0_epsilon",
+            "step_loc_0_sup"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_loc_0_epsilon",
+            "step_loc_0_theta"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_loc_0_sup",
+            "step_rot_0_epsilon"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_loc_0_sup",
+            "comma_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_rot_0_epsilon",
+            "step_rot_0_sup"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_rot_0_epsilon",
+            "step_rot_0_theta"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_rot_0_epsilon",
+            "comma_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_loc_1_epsilon",
+            "step_loc_1_sup"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_loc_1_epsilon",
+            "step_loc_1_theta"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_loc_1_sup",
+            "step_rot_1_epsilon"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_loc_1_sup",
+            "comma_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_rot_1_epsilon",
+            "step_rot_1_sup"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_rot_1_epsilon",
+            "step_rot_1_theta"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_rot_1_epsilon",
+            "comma_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_loc_2_epsilon",
+            "step_loc_2_sup"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_loc_2_epsilon",
+            "step_loc_2_theta"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_loc_2_sup",
+            "step_rot_2_epsilon"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_loc_2_sup",
+            "comma_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_rot_2_epsilon",
+            "step_rot_2_sup"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_rot_2_epsilon",
+            "step_rot_2_theta"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "step_rot_2_epsilon",
+            "comma_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "image": 19,
+            "shape": 111,
+            "text": 73,
+            "line": 86
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "single_cloud",
+                "grid_cloud"
+              ],
+              "reason": "Source arrow enters empty left margin of pointcloud crop.",
+              "area_px2": 95.0
+            },
+            {
+              "elements": [
+                "camera_top",
+                "camtop_l"
+              ],
+              "reason": "Source camera ray leaves lower-right image corner.",
+              "area_px2": 4.896
+            },
+            {
+              "elements": [
+                "camera_top",
+                "camtop_r"
+              ],
+              "reason": "Source camera ray leaves lower-right image corner.",
+              "area_px2": 5.229
+            },
+            {
+              "elements": [
+                "camera_right",
+                "camright_r"
+              ],
+              "reason": "Source camera ray leaves lower-left image corner.",
+              "area_px2": 18.498
+            },
+            {
+              "elements": [
+                "camera_right",
+                "camright_l"
+              ],
+              "reason": "Source camera ray leaves lower-left image corner.",
+              "area_px2": 20.545
+            },
+            {
+              "elements": [
+                "multi_cloud",
+                "camright_l"
+              ],
+              "reason": "Source ray tip ends at top white margin of multiview artwork.",
+              "area_px2": 48.238
+            },
+            {
+              "elements": [
+                "depth_h",
+                "depth_v"
+              ],
+              "reason": "Source depth branch has a right-angle join.",
+              "area_px2": 1.0
+            },
+            {
+              "elements": [
+                "depth_v",
+                "grid_cloud"
+              ],
+              "reason": "Source depth branch merges with image feature arrow.",
+              "area_px2": 2.0
+            },
+            {
+              "elements": [
+                "rgb_arrow_upper",
+                "rgb_arrow_lower"
+              ],
+              "reason": "Source open arrowhead upper corner.",
+              "area_px2": 1.822
+            },
+            {
+              "elements": [
+                "rgb_arrow_upper",
+                "rgb_arrow_notch"
+              ],
+              "reason": "Source open arrowhead upper corner.",
+              "area_px2": 2.825
+            },
+            {
+              "elements": [
+                "rgb_arrow_lower",
+                "rgb_arrow_notch2"
+              ],
+              "reason": "Source open arrowhead lower corner.",
+              "area_px2": 3.211
+            },
+            {
+              "elements": [
+                "prop_0",
+                "prop_2"
+              ],
+              "reason": "Source gripper symbol consists of connected native segments at these joints.",
+              "area_px2": 4.516
+            },
+            {
+              "elements": [
+                "prop_1",
+                "prop_2"
+              ],
+              "reason": "Source gripper symbol consists of connected native segments at these joints.",
+              "area_px2": 4.516
+            },
+            {
+              "elements": [
+                "prop_2",
+                "prop_3"
+              ],
+              "reason": "Source gripper symbol consists of connected native segments at these joints.",
+              "area_px2": 9.031
+            },
+            {
+              "elements": [
+                "noised0_0",
+                "noised0_2"
+              ],
+              "reason": "Source gripper symbol consists of connected native segments at these joints.",
+              "area_px2": 4.516
+            },
+            {
+              "elements": [
+                "noised0_1",
+                "noised0_2"
+              ],
+              "reason": "Source gripper symbol consists of connected native segments at these joints.",
+              "area_px2": 4.516
+            },
+            {
+              "elements": [
+                "noised0_2",
+                "noised0_3"
+              ],
+              "reason": "Source gripper symbol consists of connected native segments at these joints.",
+              "area_px2": 9.031
+            },
+            {
+              "elements": [
+                "noised1_0",
+                "noised1_2"
+              ],
+              "reason": "Source gripper symbol consists of connected native segments at these joints.",
+              "area_px2": 4.516
+            },
+            {
+              "elements": [
+                "noised1_1",
+                "noised1_2"
+              ],
+              "reason": "Source gripper symbol consists of connected native segments at these joints.",
+              "area_px2": 4.516
+            },
+            {
+              "elements": [
+                "noised1_2",
+                "noised1_3"
+              ],
+              "reason": "Source gripper symbol consists of connected native segments at these joints.",
+              "area_px2": 9.031
+            },
+            {
+              "elements": [
+                "noised2_0",
+                "noised2_2"
+              ],
+              "reason": "Source gripper symbol consists of connected native segments at these joints.",
+              "area_px2": 4.516
+            },
+            {
+              "elements": [
+                "noised2_1",
+                "noised2_2"
+              ],
+              "reason": "Source gripper symbol consists of connected native segments at these joints.",
+              "area_px2": 4.516
+            },
+            {
+              "elements": [
+                "noised2_2",
+                "noised2_3"
+              ],
+              "reason": "Source gripper symbol consists of connected native segments at these joints.",
+              "area_px2": 9.031
+            },
+            {
+              "elements": [
+                "transformer",
+                "denoise_step_arrow"
+              ],
+              "reason": "Source denoising-step arrow points into the slanted transformer top edge.",
+              "area_px2": 1.025
+            },
+            {
+              "elements": [
+                "denoiseN",
+                "noise_box_0"
+              ],
+              "reason": "Source denoising transition overlaps white/ground margin beside the pointcloud frame.",
+              "area_px2": 78.0
+            },
+            {
+              "elements": [
+                "denoiseN",
+                "curve_in_0"
+              ],
+              "reason": "Source denoising transition overlaps white/ground margin beside the pointcloud frame.",
+              "area_px2": 25.298
+            },
+            {
+              "elements": [
+                "denoiseN",
+                "curve_join_0"
+              ],
+              "reason": "Source denoising transition overlaps white/ground margin beside the pointcloud frame.",
+              "area_px2": 15.62
+            },
+            {
+              "elements": [
+                "denoiseNm1",
+                "curve_out_0"
+              ],
+              "reason": "Source transition arrow enters white/ground margin of next pointcloud frame.",
+              "area_px2": 76.225
+            },
+            {
+              "elements": [
+                "denoise2",
+                "noise_box_1"
+              ],
+              "reason": "Source denoising transition overlaps white/ground margin beside the pointcloud frame.",
+              "area_px2": 52.0
+            },
+            {
+              "elements": [
+                "denoise2",
+                "curve_in_1"
+              ],
+              "reason": "Source denoising transition overlaps white/ground margin beside the pointcloud frame.",
+              "area_px2": 25.298
+            },
+            {
+              "elements": [
+                "denoise2",
+                "curve_join_1"
+              ],
+              "reason": "Source denoising transition overlaps white/ground margin beside the pointcloud frame.",
+              "area_px2": 15.62
+            },
+            {
+              "elements": [
+                "denoise1",
+                "noise_box_1"
+              ],
+              "reason": "Source equation box sits across whitespace between adjacent pointcloud frame crops.",
+              "area_px2": 78.0
+            },
+            {
+              "elements": [
+                "denoise1",
+                "curve_out_1"
+              ],
+              "reason": "Source equation box sits across whitespace between adjacent pointcloud frame crops.",
+              "area_px2": 76.225
+            },
+            {
+              "elements": [
+                "denoise1",
+                "noise_box_2"
+              ],
+              "reason": "Source equation box sits across whitespace between adjacent pointcloud frame crops.",
+              "area_px2": 78.0
+            },
+            {
+              "elements": [
+                "denoise1",
+                "curve_in_2"
+              ],
+              "reason": "Source equation box sits across whitespace between adjacent pointcloud frame crops.",
+              "area_px2": 25.298
+            },
+            {
+              "elements": [
+                "denoise1",
+                "curve_join_2"
+              ],
+              "reason": "Source equation box sits across whitespace between adjacent pointcloud frame crops.",
+              "area_px2": 15.62
+            },
+            {
+              "elements": [
+                "denoise0",
+                "curve_out_2"
+              ],
+              "reason": "Source transition arrow enters white/ground margin of next pointcloud frame.",
+              "area_px2": 23.229
+            },
+            {
+              "elements": [
+                "noise_box_0",
+                "curve_out_0"
+              ],
+              "reason": "Source transition arrow begins at blue equation box right edge.",
+              "area_px2": 0.625
+            },
+            {
+              "elements": [
+                "noise_box_1",
+                "curve_out_1"
+              ],
+              "reason": "Source transition arrow begins at blue equation box right edge.",
+              "area_px2": 0.625
+            },
+            {
+              "elements": [
+                "noise_box_2",
+                "curve_out_2"
+              ],
+              "reason": "Source transition arrow begins at blue equation box right edge.",
+              "area_px2": 0.625
+            },
+            {
+              "elements": [
+                "blocks1",
+                "blocks_inset"
+              ],
+              "reason": "Source inset photograph sits over lower-left corner of blocks first frame.",
+              "area_px2": 4814.0
+            },
+            {
+              "elements": [
+                "cups1",
+                "cups_inset"
+              ],
+              "reason": "Source inset photograph sits over lower-left corner of cups first frame.",
+              "area_px2": 4814.0
+            },
+            {
+              "elements": [
+                "ice_image_0_-1",
+                "ice_image_5_1"
+              ],
+              "reason": "Adjacent branches join in the source frozen-encoder snowflake icon.",
+              "area_px2": 0.8
+            },
+            {
+              "elements": [
+                "ice_image_0_1",
+                "ice_image_1_-1"
+              ],
+              "reason": "Adjacent branches join in the source frozen-encoder snowflake icon.",
+              "area_px2": 0.8
+            },
+            {
+              "elements": [
+                "ice_image_1_1",
+                "ice_image_2_-1"
+              ],
+              "reason": "Adjacent branches join in the source frozen-encoder snowflake icon.",
+              "area_px2": 0.8
+            },
+            {
+              "elements": [
+                "ice_image_2_1",
+                "ice_image_3_-1"
+              ],
+              "reason": "Adjacent branches join in the source frozen-encoder snowflake icon.",
+              "area_px2": 0.8
+            },
+            {
+              "elements": [
+                "ice_image_3_1",
+                "ice_image_4_-1"
+              ],
+              "reason": "Adjacent branches join in the source frozen-encoder snowflake icon.",
+              "area_px2": 0.8
+            },
+            {
+              "elements": [
+                "ice_image_4_1",
+                "ice_image_5_-1"
+              ],
+              "reason": "Adjacent branches join in the source frozen-encoder snowflake icon.",
+              "area_px2": 0.8
+            },
+            {
+              "elements": [
+                "ice_language_0_-1",
+                "ice_language_5_1"
+              ],
+              "reason": "Adjacent branches join in the source frozen-encoder snowflake icon.",
+              "area_px2": 0.8
+            },
+            {
+              "elements": [
+                "ice_language_0_1",
+                "ice_language_1_-1"
+              ],
+              "reason": "Adjacent branches join in the source frozen-encoder snowflake icon.",
+              "area_px2": 0.8
+            },
+            {
+              "elements": [
+                "ice_language_1_1",
+                "ice_language_2_-1"
+              ],
+              "reason": "Adjacent branches join in the source frozen-encoder snowflake icon.",
+              "area_px2": 0.8
+            },
+            {
+              "elements": [
+                "ice_language_2_1",
+                "ice_language_3_-1"
+              ],
+              "reason": "Adjacent branches join in the source frozen-encoder snowflake icon.",
+              "area_px2": 0.8
+            },
+            {
+              "elements": [
+                "ice_language_3_1",
+                "ice_language_4_-1"
+              ],
+              "reason": "Adjacent branches join in the source frozen-encoder snowflake icon.",
+              "area_px2": 0.8
+            },
+            {
+              "elements": [
+                "ice_language_4_1",
+                "ice_language_5_-1"
+              ],
+              "reason": "Adjacent branches join in the source frozen-encoder snowflake icon.",
+              "area_px2": 0.8
+            }
+          ],
+          "text_layouts": {
+            "image_encoder_label": {
+              "scale": 1,
+              "effective_font_size_px": 19,
+              "width_px": 71.0,
+              "height_px": 43.7,
+              "available_width_px": 72.5,
+              "available_height_px": 50,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 71.5,
+              "required_height_px": 44.2,
+              "fits": true,
+              "lines": [
+                "Image",
+                "Encoder"
+              ]
+            },
+            "mlp_text_0": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 42.25,
+              "height_px": 23.0,
+              "available_width_px": 49,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 42.75,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "MLP"
+              ]
+            },
+            "mlp_text_1": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 42.25,
+              "height_px": 23.0,
+              "available_width_px": 49,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 42.75,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "MLP"
+              ]
+            },
+            "mlp_text_2": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 41.25,
+              "height_px": 23.0,
+              "available_width_px": 49,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.75,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "MLP"
+              ]
+            },
+            "mlp_text_3": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 41.25,
+              "height_px": 23.0,
+              "available_width_px": 49,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.75,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "MLP"
+              ]
+            },
+            "proprio": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 116.0,
+              "height_px": 41.4,
+              "available_width_px": 139,
+              "available_height_px": 45,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 116.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "Proprioception",
+                "token"
+              ]
+            },
+            "prop_c": {
+              "scale": 1,
+              "effective_font_size_px": 28,
+              "width_px": 12.5,
+              "height_px": 32.2,
+              "available_width_px": 30,
+              "available_height_px": 33.7,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 13.0,
+              "required_height_px": 32.7,
+              "fits": true,
+              "lines": [
+                "c"
+              ]
+            },
+            "noised": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 135.0,
+              "height_px": 41.4,
+              "available_width_px": 146,
+              "available_height_px": 48,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 135.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "Noised trajectory",
+                "tokens"
+              ]
+            },
+            "noise_tau": {
+              "scale": 1,
+              "effective_font_size_px": 31,
+              "width_px": 14.75,
+              "height_px": 35.65,
+              "available_width_px": 30,
+              "available_height_px": 37.15,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 15.25,
+              "required_height_px": 36.15,
+              "fits": true,
+              "lines": [
+                "τ"
+              ]
+            },
+            "noise_i": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 5.0,
+              "height_px": 20.7,
+              "available_width_px": 12,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 5.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "i"
+              ]
+            },
+            "scene_3d": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 23.0,
+              "height_px": 20.7,
+              "available_width_px": 26,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 23.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "3D"
+              ]
+            },
+            "scene_word": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 48.0,
+              "height_px": 20.7,
+              "available_width_px": 49.5,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 48.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "scene"
+              ]
+            },
+            "token_word": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 53.0,
+              "height_px": 20.7,
+              "available_width_px": 56,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 53.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "tokens"
+              ]
+            },
+            "scene_o": {
+              "scale": 1,
+              "effective_font_size_px": 31,
+              "width_px": 15.5,
+              "height_px": 35.65,
+              "available_width_px": 31,
+              "available_height_px": 37.15,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 16.0,
+              "required_height_px": 36.15,
+              "fits": true,
+              "lines": [
+                "o"
+              ]
+            },
+            "language_tokens": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 138.0,
+              "height_px": 20.7,
+              "available_width_px": 158,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 138.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Language tokens"
+              ]
+            },
+            "lang_l": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 8.75,
+              "height_px": 33.35,
+              "available_width_px": 25,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.25,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "l"
+              ]
+            },
+            "lang_dots": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 16.5,
+              "height_px": 23.0,
+              "available_width_px": 25,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 17.0,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "..."
+              ]
+            },
+            "transformer_label": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 110.0,
+              "height_px": 46.0,
+              "available_width_px": 116,
+              "available_height_px": 52,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 110.5,
+              "required_height_px": 46.5,
+              "fits": true,
+              "lines": [
+                "Denoising",
+                "Transformer"
+              ]
+            },
+            "language_encoder_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 80.0,
+              "height_px": 41.4,
+              "available_width_px": 103,
+              "available_height_px": 49,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 80.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "Language",
+                "Encoder"
+              ]
+            },
+            "denoising_step": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 119.0,
+              "height_px": 20.7,
+              "available_width_px": 132,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 119.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Denoising step"
+              ]
+            },
+            "denoising_i": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 8.0,
+              "height_px": 33.35,
+              "available_width_px": 17,
+              "available_height_px": 34.85,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "i"
+              ]
+            },
+            "output_loc_epsilon": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 9.0,
+              "height_px": 23.0,
+              "available_width_px": 13,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.5,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "ϵ"
+              ]
+            },
+            "output_loc_sup": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 14.5,
+              "height_px": 13.8,
+              "available_width_px": 25,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 15.0,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "loc"
+              ]
+            },
+            "output_loc_theta": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.25,
+              "height_px": 13.8,
+              "available_width_px": 11,
+              "available_height_px": 16,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.75,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "θ"
+              ]
+            },
+            "output_loc_args": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 67.75,
+              "height_px": 21.0,
+              "available_width_px": 82,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.25,
+              "required_height_px": 21.5,
+              "fits": true,
+              "lines": [
+                "(o,l,c,τⁱ,i)"
+              ]
+            },
+            "output_rot_epsilon": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 9.0,
+              "height_px": 23.0,
+              "available_width_px": 13,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.5,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "ϵ"
+              ]
+            },
+            "output_rot_sup": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 14.5,
+              "height_px": 13.8,
+              "available_width_px": 25,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 15.0,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "rot"
+              ]
+            },
+            "output_rot_theta": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.25,
+              "height_px": 13.8,
+              "available_width_px": 11,
+              "available_height_px": 16,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.75,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "θ"
+              ]
+            },
+            "output_rot_args": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 67.75,
+              "height_px": 21.0,
+              "available_width_px": 82,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.25,
+              "required_height_px": 21.5,
+              "fits": true,
+              "lines": [
+                "(o,l,c,τⁱ,i)"
+              ]
+            },
+            "prompt": {
+              "scale": 1,
+              "effective_font_size_px": 25,
+              "width_px": 255.0,
+              "height_px": 28.75,
+              "available_width_px": 307,
+              "available_height_px": 36,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 255.5,
+              "required_height_px": 29.25,
+              "fits": true,
+              "lines": [
+                "“Open the drawer”"
+              ]
+            },
+            "unprojection": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 212.75,
+              "height_px": 25.3,
+              "available_width_px": 287,
+              "available_height_px": 33,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 213.25,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "2D to 3D unprojection"
+              ]
+            },
+            "multiview": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 220.25,
+              "height_px": 25.3,
+              "available_width_px": 286,
+              "available_height_px": 33,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 220.75,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "Multi-view aggregation"
+              ]
+            },
+            "panel_a": {
+              "scale": 1,
+              "effective_font_size_px": 25,
+              "width_px": 441.5,
+              "height_px": 28.75,
+              "available_width_px": 573,
+              "available_height_px": 37,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 442.0,
+              "required_height_px": 29.25,
+              "fits": true,
+              "lines": [
+                "(a) 3D Diffuser Actor model architecture"
+              ]
+            },
+            "tauN": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 14.25,
+              "height_px": 34.5,
+              "available_width_px": 25,
+              "available_height_px": 36.0,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.75,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "τ"
+              ]
+            },
+            "tauN_sup": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 14.25,
+              "height_px": 20.7,
+              "available_width_px": 49,
+              "available_height_px": 22.2,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.75,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "N"
+              ]
+            },
+            "tauNm1": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 14.25,
+              "height_px": 34.5,
+              "available_width_px": 25,
+              "available_height_px": 36.0,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.75,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "τ"
+              ]
+            },
+            "tauNm1_sup": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 33.75,
+              "height_px": 20.7,
+              "available_width_px": 49,
+              "available_height_px": 22.2,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 34.25,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "N−1"
+              ]
+            },
+            "tau2": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 14.25,
+              "height_px": 34.5,
+              "available_width_px": 25,
+              "available_height_px": 36.0,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.75,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "τ"
+              ]
+            },
+            "tau2_sup": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 9.0,
+              "height_px": 20.7,
+              "available_width_px": 49,
+              "available_height_px": 22.2,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "tau1": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 14.25,
+              "height_px": 34.5,
+              "available_width_px": 25,
+              "available_height_px": 36.0,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.75,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "τ"
+              ]
+            },
+            "tau1_sup": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 9.0,
+              "height_px": 20.7,
+              "available_width_px": 49,
+              "available_height_px": 22.2,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "tau0": {
+              "scale": 1,
+              "effective_font_size_px": 30,
+              "width_px": 14.25,
+              "height_px": 34.5,
+              "available_width_px": 25,
+              "available_height_px": 36.0,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.75,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "τ"
+              ]
+            },
+            "tau0_sup": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 9.0,
+              "height_px": 20.7,
+              "available_width_px": 49,
+              "available_height_px": 22.2,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "0"
+              ]
+            },
+            "gaussian": {
+              "scale": 1,
+              "effective_font_size_px": 27,
+              "width_px": 100.75,
+              "height_px": 31.75,
+              "available_width_px": 102.25,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 101.25,
+              "required_height_px": 32.25,
+              "fits": true,
+              "lines": [
+                "∼N(0, 1)"
+              ]
+            },
+            "trajectory": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 199.25,
+              "height_px": 25.3,
+              "available_width_px": 200.75,
+              "available_height_px": 33,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 199.75,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "Trajectory prediction"
+              ]
+            },
+            "denoising_dots": {
+              "scale": 1,
+              "effective_font_size_px": 44,
+              "width_px": 36.75,
+              "height_px": 50.6,
+              "available_width_px": 66,
+              "available_height_px": 53,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 37.25,
+              "required_height_px": 51.1,
+              "fits": true,
+              "lines": [
+                "..."
+              ]
+            },
+            "step_loc_0_epsilon": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 9.0,
+              "height_px": 23.0,
+              "available_width_px": 13,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.5,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "ϵ"
+              ]
+            },
+            "step_loc_0_sup": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 14.5,
+              "height_px": 13.8,
+              "available_width_px": 25,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 15.0,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "loc"
+              ]
+            },
+            "step_loc_0_theta": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.25,
+              "height_px": 13.8,
+              "available_width_px": 11,
+              "available_height_px": 16,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.75,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "θ"
+              ]
+            },
+            "step_rot_0_epsilon": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 9.0,
+              "height_px": 23.0,
+              "available_width_px": 13,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.5,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "ϵ"
+              ]
+            },
+            "step_rot_0_sup": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 14.5,
+              "height_px": 13.8,
+              "available_width_px": 25,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 15.0,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "rot"
+              ]
+            },
+            "step_rot_0_theta": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.25,
+              "height_px": 13.8,
+              "available_width_px": 11,
+              "available_height_px": 16,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.75,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "θ"
+              ]
+            },
+            "comma_0": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 4.5,
+              "height_px": 20.7,
+              "available_width_px": 9,
+              "available_height_px": 22.2,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 5.0,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                ","
+              ]
+            },
+            "step_loc_1_epsilon": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 9.0,
+              "height_px": 23.0,
+              "available_width_px": 13,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.5,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "ϵ"
+              ]
+            },
+            "step_loc_1_sup": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 14.5,
+              "height_px": 13.8,
+              "available_width_px": 25,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 15.0,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "loc"
+              ]
+            },
+            "step_loc_1_theta": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.25,
+              "height_px": 13.8,
+              "available_width_px": 11,
+              "available_height_px": 16,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.75,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "θ"
+              ]
+            },
+            "step_rot_1_epsilon": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 9.0,
+              "height_px": 23.0,
+              "available_width_px": 13,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.5,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "ϵ"
+              ]
+            },
+            "step_rot_1_sup": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 14.5,
+              "height_px": 13.8,
+              "available_width_px": 25,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 15.0,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "rot"
+              ]
+            },
+            "step_rot_1_theta": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.25,
+              "height_px": 13.8,
+              "available_width_px": 11,
+              "available_height_px": 16,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.75,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "θ"
+              ]
+            },
+            "comma_1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 4.5,
+              "height_px": 20.7,
+              "available_width_px": 9,
+              "available_height_px": 22.2,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 5.0,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                ","
+              ]
+            },
+            "step_loc_2_epsilon": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 9.0,
+              "height_px": 23.0,
+              "available_width_px": 13,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.5,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "ϵ"
+              ]
+            },
+            "step_loc_2_sup": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 14.5,
+              "height_px": 13.8,
+              "available_width_px": 25,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 15.0,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "loc"
+              ]
+            },
+            "step_loc_2_theta": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.25,
+              "height_px": 13.8,
+              "available_width_px": 11,
+              "available_height_px": 16,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.75,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "θ"
+              ]
+            },
+            "step_rot_2_epsilon": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 9.0,
+              "height_px": 23.0,
+              "available_width_px": 13,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.5,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "ϵ"
+              ]
+            },
+            "step_rot_2_sup": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 14.5,
+              "height_px": 13.8,
+              "available_width_px": 25,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 15.0,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "rot"
+              ]
+            },
+            "step_rot_2_theta": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.25,
+              "height_px": 13.8,
+              "available_width_px": 11,
+              "available_height_px": 16,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.75,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "θ"
+              ]
+            },
+            "comma_2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 4.5,
+              "height_px": 20.7,
+              "available_width_px": 9,
+              "available_height_px": 22.2,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 5.0,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                ","
+              ]
+            },
+            "panel_b": {
+              "scale": 1,
+              "effective_font_size_px": 25,
+              "width_px": 243.75,
+              "height_px": 28.75,
+              "available_width_px": 375,
+              "available_height_px": 39,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 244.25,
+              "required_height_px": 29.25,
+              "fits": true,
+              "lines": [
+                "(b) Denoising process"
+              ]
+            },
+            "blocks_prompt": {
+              "scale": 1,
+              "effective_font_size_px": 25,
+              "width_px": 646.25,
+              "height_px": 28.75,
+              "available_width_px": 656,
+              "available_height_px": 37,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 646.75,
+              "required_height_px": 29.25,
+              "fits": true,
+              "lines": [
+                "“Put the blocks in a triangle on the plate”"
+              ]
+            },
+            "cups_prompt": {
+              "scale": 1,
+              "effective_font_size_px": 25,
+              "width_px": 241.25,
+              "height_px": 28.75,
+              "available_width_px": 280,
+              "available_height_px": 37,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 241.75,
+              "required_height_px": 29.25,
+              "fits": true,
+              "lines": [
+                "“Stack the cups”"
+              ]
+            },
+            "panel_c": {
+              "scale": 1,
+              "effective_font_size_px": 25,
+              "width_px": 484.25,
+              "height_px": 28.75,
+              "available_width_px": 650,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 484.75,
+              "required_height_px": 29.25,
+              "fits": true,
+              "lines": [
+                "(c) Real-world multi-task manipulation tasks"
+              ]
+            },
+            "depth_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 88.0,
+              "height_px": 20.7,
+              "available_width_px": 100,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 88.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Depth map"
+              ]
+            },
+            "image_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 50.0,
+              "height_px": 20.7,
+              "available_width_px": 69,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 50.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Image"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "5005cb67e265e9635dbc0d508bb8d8f90af71d780c46015a97bf398914dae40f",
+  "font_substitutions": [
+    {
+      "code": "font_substitution",
+      "requested": "Times New Roman",
+      "resolved": "DejaVu Sans"
+    }
+  ]
+}

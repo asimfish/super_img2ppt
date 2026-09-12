@@ -1,0 +1,61 @@
+"""Rebuild distributed scenes and compare their actual render without registration."""
+import hashlib
+import json
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+import pypdfium2 as pdfium
+from PIL import Image, ImageChops
+
+ROOT = Path(__file__).resolve().parents[2]
+WORK = Path(__file__).parent
+env = dict(os.environ, PATH="/opt/homebrew/bin:" + os.environ["PATH"])
+results = []
+for case in json.loads((WORK / "cases.json").read_text()):
+    name = case["id"]
+    if sys.argv[1:] and name not in sys.argv[1:]:
+        continue
+    gallery = ROOT / "examples/gallery" / name
+    output = WORK / ("replay_" + name)
+    command = [str(ROOT / ".venv/bin/super-img2ppt"), "build", str(gallery / "scene.resolved.json"), "--out", str(output), "--font-dir", "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype", "--font-dir", "/System/Library/Fonts/Supplemental"]
+    process = subprocess.run(command, cwd=ROOT, env=env, capture_output=True, text=True)
+    (WORK / (name + "_replay.log")).write_text(process.stdout + process.stderr)
+    if process.returncode:
+        raise RuntimeError(f"{name} replay failed: {process.returncode}; see log")
+    mode = case["rasterization"]
+    target = output / "actual-source-width.png"
+    width, height = Image.open(gallery / "source.png").size
+    if mode["engine"] == "pdfium":
+        with pdfium.PdfDocument(output / "render/editable.pdf") as document:
+            page = document[0]
+            bitmap = page.render(scale=width / page.get_width())
+            actual = bitmap.to_pil().convert("RGB")
+            if mode.get("crop_to_source_size"):
+                assert actual.width == width and actual.height in {height, height + 1}
+                if actual.height > height:
+                    assert all(pixel == (255, 255, 255) for pixel in actual.crop((0, height, width, actual.height)).getdata())
+                actual = actual.crop((0, 0, width, height))
+            actual.save(target)
+            bitmap.close()
+            page.close()
+    elif mode["engine"] == "poppler":
+        subprocess.run(["/opt/homebrew/bin/pdftoppm", "-f", "1", "-singlefile", "-png", "-scale-to-x", str(width), "-scale-to-y", str(height) if mode["explicit_height"] else "-1", str(output / "render/editable.pdf"), str(target.with_suffix(""))], check=True)
+    else:
+        raise ValueError(mode)
+    with Image.open(target) as actual, Image.open(gallery / "actual.png") as frozen:
+        assert actual.size == frozen.size, (name, actual.size, frozen.size)
+        diff = ImageChops.difference(actual.convert("RGB"), frozen.convert("RGB"))
+        count = sum(pixel != (0, 0, 0) for pixel in diff.getdata())
+    validation = json.loads((output / "validation.json").read_text())
+    result = {"case": name, "command": command, "status": validation["status"], "actual_size": [width, height], "changed_pixels": count, "actual_sha256": hashlib.sha256(target.read_bytes()).hexdigest(), "rasterization": mode}
+    results.append(result)
+    (WORK / (name + "_replay.json")).write_text(json.dumps(result, indent=2) + "\n")
+    print(json.dumps(result), flush=True)
+    assert count == 0, f"{name} actual preview is not reproducible with recorded rasterization"
+    assert validation["status"] in {"pass", "review"}
+evidence = ROOT / "docs/evidence/embodied_figures"
+evidence.mkdir(parents=True, exist_ok=True)
+all_results = [json.loads((WORK / (case["id"] + "_replay.json")).read_text()) for case in json.loads((WORK / "cases.json").read_text()) if (WORK / (case["id"] + "_replay.json")).exists()]
+(evidence / "replay.json").write_text(json.dumps(all_results, indent=2) + "\n")

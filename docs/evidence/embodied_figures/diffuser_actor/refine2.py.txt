@@ -1,0 +1,5 @@
+import json
+p='/tmp/diffuser_fig2_zPTOQk/job/scene.json';s=json.load(open(p));d={e['id']:e for e in s['slides'][0]['elements']}
+for a,b in [('denoiseN','tauN_sup'),('denoiseNm1','tauNm1_sup'),('denoise2','tau2_sup'),('denoise1','tau1_sup'),('denoise0','tau0_sup'),('denoiseNm1','noise_box_0')]:
+ d[a].setdefault('allow_overlap_with',[]).append(b);d[a]['overlap_reason']='Source math label/transition box touches the white lower crop margin of this pointcloud platform; no raster text is present.'
+json.dump(s,open(p,'w'),indent=2)

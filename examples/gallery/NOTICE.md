@@ -1,11 +1,15 @@
 # Third-party figure attribution
 
-These are complete figure crops and editable adaptations of ICML 2023, 2024 and 2025
-papers published in Proceedings of Machine Learning Research, volumes 202, 235 and 267. The authors retain copyright.
+These are complete figure crops and editable adaptations of ICML and CoRL papers
+published in Proceedings of Machine Learning Research, volumes 202, 229, 235, 267 and 270.
+The authors retain copyright.
 The publisher [publication agreement](https://proceedings.mlr.press/pmlr-license-agreement.html),
 paragraphs 2–3, permits publication under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 Archived publisher evidence is in `docs/evidence/public_figures/*/publisher-license.html`
 and `docs/evidence/gallery_extension/*/publisher-license.html` (Hyena uses the publisher PDF).
+The embodied-robotics batch also archives the agreement in
+`docs/evidence/embodied_figures/publisher-license.html`; this is the publisher's standard
+agreement, not an individually signed author form.
 
 - **GaLore**, Figure 6: Jiawei Zhao, Zhenyu Zhang, Beidi Chen, Zhangyang Wang, Anima
   Anandkumar, Yuandong Tian. “GaLore: Memory-Efficient LLM Training by Gradient Low-Rank
@@ -31,7 +35,18 @@ and `docs/evidence/gallery_extension/*/publisher-license.html` (Hyena uses the p
   Model.” ICML 2025, PMLR 267:64604–64627.
   https://proceedings.mlr.press/v267/wang25da.html
 
-Changes: rasterized and cropped complete figures (captions excluded), reconstructed text
+- **RT-2**, Figure 1: Brianna Zitkovich et al. (full author list on the linked publication).
+  “RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control.”
+  CoRL 2023, PMLR 229:2165–2183. https://proceedings.mlr.press/v229/zitkovich23a.html
+- **ViNT**, Figure 2: Dhruv Shah, Ajay Sridhar, Nitish Dashora, Kyle Stachowicz,
+  Kevin Black, Noriaki Hirose, Sergey Levine. “ViNT: A Foundation Model for Visual Navigation.”
+  CoRL 2023, PMLR 229:711–733. https://proceedings.mlr.press/v229/shah23a.html
+- **3D Diffuser Actor**, Figure 1: Tsung-Wei Ke, Nikolaos Gkanatsios, Katerina Fragkiadaki.
+  “3D Diffuser Actor: Policy Diffusion with 3D Scene Representations.”
+  CoRL 2024; proceedings published 2025, PMLR 270:1949–1974.
+  https://proceedings.mlr.press/v270/ke25a.html
+
+Changes: rasterized and cropped complete figures (paper captions excluded), reconstructed text
 and geometry into PPTX/SVG/JSON, retained explicitly disclosed image-only regions, and
 composed labeled source-versus-actual-render comparisons. These adaptations and previews
 are shared under CC BY 4.0; the repository's MIT code license does not replace figure rights.

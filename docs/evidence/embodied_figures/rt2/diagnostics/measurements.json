@@ -1,0 +1,151 @@
+{
+  "disclaimer": "Post-view diagnostic; both split labels exposed; not blind; no threshold-based fidelity pass. Gray masks include only isolated intended glyphs; purple/orange exclude fills.",
+  "results": [
+    {
+      "split": "dev",
+      "id": "data_title",
+      "source_bounds": [
+        7,
+        6,
+        440,
+        25
+      ],
+      "actual_bounds": [
+        5,
+        5,
+        427,
+        23
+      ],
+      "edge_delta_px": [
+        -2,
+        -1,
+        -13,
+        -2
+      ],
+      "iou": 0.136804209360288,
+      "source_mask_validated": true
+    },
+    {
+      "split": "dev",
+      "id": "robot_rotation",
+      "source_bounds": [
+        4,
+        3,
+        225,
+        25
+      ],
+      "actual_bounds": [
+        0,
+        4,
+        236,
+        24
+      ],
+      "edge_delta_px": [
+        -4,
+        1,
+        11,
+        -1
+      ],
+      "iou": 0.09647602541883304,
+      "source_mask_validated": true,
+      "actual_mask_touches_roi_boundary": true,
+      "limitation": "Output left ink reaches ROI boundary; full output edge may be cropped. Do not use in acceptance aggregate."
+    },
+    {
+      "split": "dev",
+      "id": "detokenize",
+      "source_bounds": [
+        4,
+        4,
+        110,
+        18
+      ],
+      "actual_bounds": [
+        3,
+        3,
+        112,
+        17
+      ],
+      "edge_delta_px": [
+        -1,
+        -1,
+        2,
+        -1
+      ],
+      "iou": 0.2531446540880503,
+      "source_mask_validated": true
+    },
+    {
+      "split": "heldout_exposed",
+      "id": "rt2_label",
+      "source_bounds": [
+        4,
+        10,
+        82,
+        37
+      ],
+      "actual_bounds": [
+        4,
+        8,
+        81,
+        35
+      ],
+      "edge_delta_px": [
+        0,
+        -2,
+        -1,
+        -2
+      ],
+      "iou": 0.5119047619047619,
+      "source_mask_validated": true
+    },
+    {
+      "split": "heldout_exposed",
+      "id": "llm_label",
+      "source_bounds": [
+        5,
+        7,
+        267,
+        28
+      ],
+      "actual_bounds": [
+        5,
+        4,
+        272,
+        27
+      ],
+      "edge_delta_px": [
+        0,
+        -3,
+        5,
+        -1
+      ],
+      "iou": 0.21430937396488903,
+      "source_mask_validated": true
+    },
+    {
+      "split": "heldout_exposed",
+      "id": "action_label",
+      "source_bounds": [
+        6,
+        5,
+        118,
+        19
+      ],
+      "actual_bounds": [
+        5,
+        4,
+        116,
+        18
+      ],
+      "edge_delta_px": [
+        -1,
+        -1,
+        -2,
+        -1
+      ],
+      "iou": 0.2288488210818308,
+      "source_mask_validated": true
+    }
+  ]
+}

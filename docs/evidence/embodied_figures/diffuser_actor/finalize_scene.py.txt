@@ -1,0 +1,7 @@
+import json
+p='/tmp/diffuser_fig2_zPTOQk/job/scene.json';s=json.load(open(p))
+for e in s['slides'][0]['elements']:
+ if e['kind']=='image':e['provenance']=f"Exact text-free crop from Figure 1, Ke et al. CoRL 2024 / PMLR 2025, source pixels {e['box']}. Photographic/pointcloud artwork retains internally fused trajectory and camera ray marks."
+ if e['id'].endswith('_theta'):e['box'][1]+=2
+s['slides'][0]['notes']+=' All three panels preserved. Raster artwork comprises 19 local text-free crops; small camera rays, pointcloud gripper poses and three multiview arrow tails remain fused in those crops. Long denoising arrow uses a solid color instead of the source gradient; source module shadows are omitted. Copyright remains with Ke, Gkanatsios and Fragkiadaki; explicit reuse license was not located on the inspected PDF/article.'
+json.dump(s,open(p,'w'),indent=2)

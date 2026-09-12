@@ -1,0 +1,72 @@
+{
+  "runtime_changed": false,
+  "commands": [
+    {
+      "command": [
+        "uv",
+        "run",
+        "--no-sync",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--no-sync",
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "exit_code": 0,
+      "stdout": "124 files already formatted\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--no-sync",
+        "python",
+        "scripts/verify_skill.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"pass\",\n  \"activation_cases\": 8,\n  \"problems\": [],\n  \"scope\": \"Static package checks; semantic review and forward tests are separate evidence\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--no-sync",
+        "python",
+        "scripts/build_capability_registry.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "Capability registry is current\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--no-sync",
+        "python",
+        "scripts/build_package.py"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/liyufeng/code/super_img2ppt/dist/super-img2ppt.skill\nSHA256 288a95420802ea39edc41ed396af336383bb5ec2e0ee62a324a84cd250c186c6\n",
+      "stderr": ""
+    }
+  ],
+  "local_rebuilds": "3/3 completed and pixel-identical",
+  "unit_tests": "runtime unchanged; complete test suite will run on exact pushed commit in CI",
+  "package_sha256": "288a95420802ea39edc41ed396af336383bb5ec2e0ee62a324a84cd250c186c6"
+}

@@ -1,0 +1,3227 @@
+{
+  "version": 1,
+  "title": "RT-2 Figure 1: full architecture",
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 1583,
+      "height": 580,
+      "background": "#FFFFFF",
+      "source": "assets/c8c05be969d5d6d6e4af.png",
+      "notes": "Reconstructed from Zitkovich et al., RT-2, CoRL 2023, Figure 1, published PMLR PDF page 2. Seven local raster photo assets (including source motion annotations); all readable diagram labels and captions native.",
+      "reviewed": true,
+      "elements": [
+        {
+          "id": "data",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            11,
+            17,
+            531,
+            561
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#D5D5D5",
+          "stroke_width": 2,
+          "radius": 12
+        },
+        {
+          "id": "model",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            560,
+            17,
+            739,
+            442
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#D5D5D5",
+          "stroke_width": 2,
+          "radius": 12
+        },
+        {
+          "id": "closed",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            1320,
+            17,
+            253,
+            561
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#D5D5D5",
+          "stroke_width": 2,
+          "radius": 12
+        },
+        {
+          "id": "data_title_bg",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            30,
+            0,
+            494,
+            38
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": null,
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "data"
+          ],
+          "overlap_reason": "White title backing interrupts the source outer border at its top edge."
+        },
+        {
+          "id": "model_title_bg",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            579,
+            0,
+            564,
+            37
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": null,
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "model"
+          ],
+          "overlap_reason": "White title backing interrupts the source outer border at its top edge."
+        },
+        {
+          "id": "closed_title_bg",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1359,
+            0,
+            174,
+            63
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": null,
+          "stroke_width": 2,
+          "allow_overlap_with": [
+            "closed"
+          ],
+          "overlap_reason": "White title backing interrupts the source outer border at its top edge."
+        },
+        {
+          "id": "data_title",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            57,
+            2,
+            463,
+            35
+          ],
+          "font_size": 24,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "data_title_bg",
+          "allow_overlap_with": [
+            "data"
+          ],
+          "overlap_reason": "The source section heading straddles its panel border, on the white title backing.",
+          "runs": [
+            {
+              "text": "Internet-Scale VQA + Robot Action Data",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "model_title",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            590,
+            2,
+            554,
+            35
+          ],
+          "font_size": 24,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "model_title_bg",
+          "allow_overlap_with": [
+            "model"
+          ],
+          "overlap_reason": "The source section heading straddles its panel border, on the white title backing.",
+          "runs": [
+            {
+              "text": "Vision-Language-Action Models for Robot Control",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "closed_title",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            1361,
+            3,
+            172,
+            61
+          ],
+          "font_size": 25,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "center",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "closed_title_bg",
+          "allow_overlap_with": [
+            "closed"
+          ],
+          "overlap_reason": "The source section heading straddles its panel border, on the white title backing.",
+          "runs": [
+            {
+              "text": "Closed-Loop\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 25,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            },
+            {
+              "text": "Robot Control",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 25,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "vqa_en",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            31,
+            41,
+            491,
+            160
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#D5D5D5",
+          "stroke_width": 2,
+          "radius": 11,
+          "container": "data"
+        },
+        {
+          "id": "vqa_fr",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            31,
+            219,
+            491,
+            148
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#D5D5D5",
+          "stroke_width": 2,
+          "radius": 11,
+          "container": "data"
+        },
+        {
+          "id": "robot_data",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            31,
+            384,
+            491,
+            176
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#D5D5D5",
+          "stroke_width": 2,
+          "radius": 11,
+          "container": "data"
+        },
+        {
+          "id": "donkey",
+          "kind": "image",
+          "z": 4,
+          "box": [
+            43,
+            51,
+            189,
+            140
+          ],
+          "path": "assets/057d66c624f55aecd372.png",
+          "contains_text": false,
+          "image_fit": "stretch",
+          "provenance": "Exact source pixel crop [43, 51, 189, 140]; published RT-2 Figure1, page2, PDFium4x",
+          "container": "vqa_en"
+        },
+        {
+          "id": "baking",
+          "kind": "image",
+          "z": 4,
+          "box": [
+            322,
+            231,
+            188,
+            126
+          ],
+          "path": "assets/69825e4c49675552c2c3.png",
+          "contains_text": false,
+          "image_fit": "stretch",
+          "provenance": "Exact source pixel crop [322, 231, 188, 126]; published RT-2 Figure1, page2, PDFium4x",
+          "container": "vqa_fr"
+        },
+        {
+          "id": "robot_train",
+          "kind": "image",
+          "z": 4,
+          "box": [
+            40,
+            394,
+            175,
+            145
+          ],
+          "path": "assets/892387c706b5c283e07d.png",
+          "contains_text": false,
+          "image_fit": "stretch",
+          "provenance": "Exact source pixel crop [40, 394, 175, 145]; published RT-2 Figure1, page2, PDFium4x",
+          "container": "robot_data"
+        },
+        {
+          "id": "en_q",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            234,
+            52,
+            228,
+            53
+          ],
+          "font_size": 22,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "center",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "vqa_en",
+          "runs": [
+            {
+              "text": "Q: What is happening\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            },
+            {
+              "text": "in the image?",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "en_tokens",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            243,
+            102,
+            235,
+            29
+          ],
+          "font_size": 22,
+          "font_family": "Arial",
+          "color": "#D5D5D5",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "vqa_en",
+          "runs": [
+            {
+              "text": "A: 311 423 170 55 244",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#D5D5D5"
+            }
+          ]
+        },
+        {
+          "id": "en_answer_bg",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            266,
+            134,
+            225,
+            58
+          ],
+          "shape": "round_rect",
+          "fill": "#D9D2E8",
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "radius": 7,
+          "container": "vqa_en"
+        },
+        {
+          "id": "en_answer",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            279,
+            136,
+            210,
+            55
+          ],
+          "font_size": 22,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "en_answer_bg",
+          "runs": [
+            {
+              "text": "A grey donkey walks\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            },
+            {
+              "text": "down the street.",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "fr_q",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            41,
+            222,
+            278,
+            55
+          ],
+          "font_size": 22,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "vqa_fr",
+          "runs": [
+            {
+              "text": "Q: Que puis-je faire avec\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            },
+            {
+              "text": "ces objets?",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "fr_tokens",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            41,
+            281,
+            251,
+            29
+          ],
+          "font_size": 22,
+          "font_family": "Arial",
+          "color": "#D5D5D5",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "vqa_fr",
+          "runs": [
+            {
+              "text": "A: 3455 1144 189 25673",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#D5D5D5"
+            }
+          ]
+        },
+        {
+          "id": "fr_answer_bg",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            63,
+            311,
+            221,
+            36
+          ],
+          "shape": "round_rect",
+          "fill": "#D9D2E8",
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "radius": 5,
+          "container": "vqa_fr"
+        },
+        {
+          "id": "fr_answer",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            69,
+            313,
+            215,
+            29
+          ],
+          "font_size": 22,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "fr_answer_bg",
+          "runs": [
+            {
+              "text": "Faire cuire un gâteau.",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "robot_q",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            228,
+            394,
+            288,
+            29
+          ],
+          "font_size": 22,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "robot_data",
+          "runs": [
+            {
+              "text": "Q: What should the robot",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "robot_q2",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            258,
+            421,
+            240,
+            29
+          ],
+          "font_size": 22,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "do to ",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            },
+            {
+              "text": "<task>",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": true,
+              "italic": false,
+              "color": "#FF9200"
+            },
+            {
+              "text": "?",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ],
+          "container": "robot_data"
+        },
+        {
+          "id": "robot_tokens",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            230,
+            451,
+            252,
+            29
+          ],
+          "font_size": 22,
+          "font_family": "Arial",
+          "color": "#D5D5D5",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "robot_data",
+          "runs": [
+            {
+              "text": "A: 132 114 128 5 25 156",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#D5D5D5"
+            }
+          ]
+        },
+        {
+          "id": "robot_answer_bg",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            227,
+            482,
+            283,
+            66
+          ],
+          "shape": "round_rect",
+          "fill": "#D9D2E8",
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "radius": 5,
+          "container": "robot_data"
+        },
+        {
+          "id": "robot_delta_0",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            239,
+            490,
+            15,
+            17
+          ],
+          "shape": "triangle",
+          "fill": null,
+          "stroke": "#666666",
+          "stroke_width": 2,
+          "container": "robot_answer_bg"
+        },
+        {
+          "id": "robot_answer_0",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            254,
+            484,
+            254,
+            30
+          ],
+          "font_size": 22,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "robot_answer_bg",
+          "runs": [
+            {
+              "text": "Translation = [0.1, -0.2, 0]",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "robot_delta_1",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            239,
+            522,
+            15,
+            17
+          ],
+          "shape": "triangle",
+          "fill": null,
+          "stroke": "#666666",
+          "stroke_width": 2,
+          "container": "robot_answer_bg"
+        },
+        {
+          "id": "robot_answer_1",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            254,
+            516,
+            254,
+            30
+          ],
+          "font_size": 22,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "robot_answer_bg",
+          "runs": [
+            {
+              "text": "Rotation = [10°, 25°, -7°]",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 22,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "en_curve_0",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              478,
+              113
+            ],
+            [
+              487,
+              113
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "container": "vqa_en"
+        },
+        {
+          "id": "en_curve_1",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              487,
+              113
+            ],
+            [
+              495,
+              116
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "container": "vqa_en",
+          "allow_overlap_with": [
+            "en_curve_0"
+          ],
+          "overlap_reason": "Adjacent segments join along the visible source curved arrow."
+        },
+        {
+          "id": "en_curve_2",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              495,
+              116
+            ],
+            [
+              501,
+              122
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "container": "vqa_en",
+          "allow_overlap_with": [
+            "en_curve_1"
+          ],
+          "overlap_reason": "Adjacent segments join along the visible source curved arrow."
+        },
+        {
+          "id": "en_curve_3",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              501,
+              122
+            ],
+            [
+              505,
+              129
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "container": "vqa_en",
+          "allow_overlap_with": [
+            "en_curve_2"
+          ],
+          "overlap_reason": "Adjacent segments join along the visible source curved arrow."
+        },
+        {
+          "id": "en_curve_4",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              505,
+              129
+            ],
+            [
+              505,
+              138
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "container": "vqa_en",
+          "allow_overlap_with": [
+            "en_curve_3"
+          ],
+          "overlap_reason": "Adjacent segments join along the visible source curved arrow."
+        },
+        {
+          "id": "en_curve_5",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              505,
+              138
+            ],
+            [
+              499,
+              149
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "vqa_en",
+          "allow_overlap_with": [
+            "en_curve_4"
+          ],
+          "overlap_reason": "Adjacent segments join along the visible source curved arrow."
+        },
+        {
+          "id": "fr_curve_0",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              295,
+              295
+            ],
+            [
+              303,
+              297
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "container": "vqa_fr"
+        },
+        {
+          "id": "fr_curve_1",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              303,
+              297
+            ],
+            [
+              309,
+              303
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "container": "vqa_fr",
+          "allow_overlap_with": [
+            "fr_curve_0"
+          ],
+          "overlap_reason": "Adjacent segments join along the visible source curved arrow."
+        },
+        {
+          "id": "fr_curve_2",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              309,
+              303
+            ],
+            [
+              311,
+              311
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "container": "vqa_fr",
+          "allow_overlap_with": [
+            "fr_curve_1"
+          ],
+          "overlap_reason": "Adjacent segments join along the visible source curved arrow."
+        },
+        {
+          "id": "fr_curve_3",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              311,
+              311
+            ],
+            [
+              308,
+              320
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "container": "vqa_fr",
+          "allow_overlap_with": [
+            "fr_curve_2"
+          ],
+          "overlap_reason": "Adjacent segments join along the visible source curved arrow."
+        },
+        {
+          "id": "fr_curve_4",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              308,
+              320
+            ],
+            [
+              295,
+              326
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "vqa_fr",
+          "allow_overlap_with": [
+            "fr_curve_3"
+          ],
+          "overlap_reason": "Adjacent segments join along the visible source curved arrow."
+        },
+        {
+          "id": "robot_curve_0",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              477,
+              462
+            ],
+            [
+              483,
+              462
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "container": "robot_data"
+        },
+        {
+          "id": "robot_curve_1",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              483,
+              462
+            ],
+            [
+              490,
+              465
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "container": "robot_data",
+          "allow_overlap_with": [
+            "robot_curve_0"
+          ],
+          "overlap_reason": "Adjacent segments join along the visible source curved arrow."
+        },
+        {
+          "id": "robot_curve_2",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              490,
+              465
+            ],
+            [
+              494,
+              470
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "container": "robot_data",
+          "allow_overlap_with": [
+            "robot_curve_1"
+          ],
+          "overlap_reason": "Adjacent segments join along the visible source curved arrow."
+        },
+        {
+          "id": "robot_curve_3",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              494,
+              470
+            ],
+            [
+              494,
+              478
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 6.4,
+            "width": 7
+          },
+          "container": "robot_data",
+          "allow_overlap_with": [
+            "robot_curve_2"
+          ],
+          "overlap_reason": "Adjacent segments join along the visible source curved arrow."
+        },
+        {
+          "id": "rt2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            775,
+            44,
+            512,
+            262
+          ],
+          "shape": "round_rect",
+          "fill": "#F7F7F7",
+          "stroke": "#D5D5D5",
+          "stroke_width": 2,
+          "radius": 17,
+          "container": "model"
+        },
+        {
+          "id": "rt2_label",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            790,
+            56,
+            121,
+            53
+          ],
+          "font_size": 38,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": true,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "rt2",
+          "runs": [
+            {
+              "text": "RT-2",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 38,
+              "bold": true,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "vit",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            793,
+            183,
+            113,
+            99
+          ],
+          "shape": "round_rect",
+          "fill": "#CCDDF9",
+          "stroke": null,
+          "stroke_width": 2,
+          "radius": 17,
+          "container": "rt2"
+        },
+        {
+          "id": "vit_label",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            805,
+            213,
+            88,
+            42
+          ],
+          "font_size": 28,
+          "font_family": "Arial",
+          "color": "#4385F5",
+          "bold": true,
+          "align": "center",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "vit",
+          "runs": [
+            {
+              "text": "ViT",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 28,
+              "bold": true,
+              "italic": false,
+              "color": "#4385F5"
+            }
+          ]
+        },
+        {
+          "id": "llm",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            937,
+            66,
+            333,
+            216
+          ],
+          "shape": "round_rect",
+          "fill": "#FCEBDB",
+          "stroke": null,
+          "stroke_width": 2,
+          "radius": 18,
+          "container": "rt2"
+        },
+        {
+          "id": "llm_label",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            950,
+            77,
+            307,
+            39
+          ],
+          "font_size": 25,
+          "font_family": "Arial",
+          "color": "#FF9200",
+          "bold": true,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "llm",
+          "runs": [
+            {
+              "text": "Large Language Model",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 25,
+              "bold": true,
+              "italic": false,
+              "color": "#FF9200"
+            }
+          ]
+        },
+        {
+          "id": "input_q",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            579,
+            56,
+            188,
+            22
+          ],
+          "font_size": 15,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "model",
+          "runs": [
+            {
+              "text": "Q: What should the robot",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 15,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "input_q2",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            601,
+            75,
+            167,
+            22
+          ],
+          "font_size": 15,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "do to ",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 15,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            },
+            {
+              "text": "<task>",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 15,
+              "bold": true,
+              "italic": false,
+              "color": "#FF9200"
+            },
+            {
+              "text": "? A: …",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 15,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ],
+          "container": "model"
+        },
+        {
+          "id": "input_token_0",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            593,
+            123,
+            18,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#FF9200",
+          "stroke_width": 1.6,
+          "radius": 4,
+          "container": "model"
+        },
+        {
+          "id": "input_arrow_0",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              602,
+              99
+            ],
+            [
+              602,
+              117
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "model"
+        },
+        {
+          "id": "input_token_1",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            617,
+            123,
+            18,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#FF9200",
+          "stroke_width": 1.6,
+          "radius": 4,
+          "container": "model"
+        },
+        {
+          "id": "input_arrow_1",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              626,
+              99
+            ],
+            [
+              626,
+              117
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "model"
+        },
+        {
+          "id": "input_token_2",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            642,
+            123,
+            18,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#FF9200",
+          "stroke_width": 1.6,
+          "radius": 4,
+          "container": "model"
+        },
+        {
+          "id": "input_arrow_2",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              651,
+              99
+            ],
+            [
+              651,
+              117
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "model"
+        },
+        {
+          "id": "input_token_3",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            667,
+            123,
+            18,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#FF9200",
+          "stroke_width": 1.6,
+          "radius": 4,
+          "container": "model"
+        },
+        {
+          "id": "input_arrow_3",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              676,
+              99
+            ],
+            [
+              676,
+              117
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "model"
+        },
+        {
+          "id": "input_token_4",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            692,
+            123,
+            18,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#FF9200",
+          "stroke_width": 1.6,
+          "radius": 4,
+          "container": "model"
+        },
+        {
+          "id": "input_arrow_4",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              701,
+              99
+            ],
+            [
+              701,
+              117
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "model"
+        },
+        {
+          "id": "input_token_5",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            716,
+            123,
+            18,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#FF9200",
+          "stroke_width": 1.6,
+          "radius": 4,
+          "container": "model"
+        },
+        {
+          "id": "input_arrow_5",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              725,
+              99
+            ],
+            [
+              725,
+              117
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "model"
+        },
+        {
+          "id": "patches",
+          "kind": "image",
+          "z": 4,
+          "box": [
+            591,
+            167,
+            154,
+            129
+          ],
+          "path": "assets/56bd27f8990918dcaea9.png",
+          "contains_text": false,
+          "image_fit": "stretch",
+          "provenance": "Exact source pixel crop [591, 167, 154, 129]; published RT-2 Figure1, page2, PDFium4x",
+          "container": "model"
+        },
+        {
+          "id": "input_text_to_llm",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              744,
+              127
+            ],
+            [
+              925,
+              127
+            ]
+          ],
+          "stroke": "#D5D5D5",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "model",
+          "allow_overlap_with": [
+            "rt2"
+          ],
+          "overlap_reason": "Input connector enters the left edge of the RT-2 panel in source."
+        },
+        {
+          "id": "input_image_to_vit",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              748,
+              232
+            ],
+            [
+              788,
+              232
+            ]
+          ],
+          "stroke": "#D5D5D5",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "model",
+          "allow_overlap_with": [
+            "rt2"
+          ],
+          "overlap_reason": "Input image connector enters the model panel at ViT height."
+        },
+        {
+          "id": "vit_to_llm",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              910,
+              232
+            ],
+            [
+              931,
+              232
+            ]
+          ],
+          "stroke": "#D5D5D5",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "rt2"
+        },
+        {
+          "id": "llm_input_0",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            957,
+            128,
+            29,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#CCDDF9",
+          "stroke": "#4385F5",
+          "stroke_width": 2,
+          "radius": 4,
+          "container": "llm"
+        },
+        {
+          "id": "llm_downin_0",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              971,
+              143
+            ],
+            [
+              971,
+              160
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "llm"
+        },
+        {
+          "id": "llm_downout_0",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              971,
+              206
+            ],
+            [
+              971,
+              224
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "llm"
+        },
+        {
+          "id": "llm_output_0",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            957,
+            230,
+            29,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#EEEEEE",
+          "stroke": "#D5D5D5",
+          "stroke_width": 2,
+          "radius": 4,
+          "container": "llm"
+        },
+        {
+          "id": "llm_input_1",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            995,
+            128,
+            29,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#CCDDF9",
+          "stroke": "#4385F5",
+          "stroke_width": 2,
+          "radius": 4,
+          "container": "llm"
+        },
+        {
+          "id": "llm_downin_1",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1009,
+              143
+            ],
+            [
+              1009,
+              160
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "llm"
+        },
+        {
+          "id": "llm_downout_1",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1009,
+              206
+            ],
+            [
+              1009,
+              224
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "llm"
+        },
+        {
+          "id": "llm_output_1",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            995,
+            230,
+            29,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#EEEEEE",
+          "stroke": "#D5D5D5",
+          "stroke_width": 2,
+          "radius": 4,
+          "container": "llm"
+        },
+        {
+          "id": "llm_input_2",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            1033,
+            128,
+            29,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#CCDDF9",
+          "stroke": "#4385F5",
+          "stroke_width": 2,
+          "radius": 4,
+          "container": "llm"
+        },
+        {
+          "id": "llm_downin_2",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1047,
+              143
+            ],
+            [
+              1047,
+              160
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "llm"
+        },
+        {
+          "id": "llm_downout_2",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1047,
+              206
+            ],
+            [
+              1047,
+              224
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "llm"
+        },
+        {
+          "id": "llm_output_2",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            1033,
+            230,
+            29,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#EEEEEE",
+          "stroke": "#D5D5D5",
+          "stroke_width": 2,
+          "radius": 4,
+          "container": "llm"
+        },
+        {
+          "id": "llm_input_3",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            1070,
+            128,
+            29,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#FF9200",
+          "stroke_width": 2,
+          "radius": 4,
+          "container": "llm"
+        },
+        {
+          "id": "llm_downin_3",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1084,
+              143
+            ],
+            [
+              1084,
+              160
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "llm"
+        },
+        {
+          "id": "llm_downout_3",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1084,
+              206
+            ],
+            [
+              1084,
+              224
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "llm"
+        },
+        {
+          "id": "llm_output_3",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            1070,
+            230,
+            29,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#EEEEEE",
+          "stroke": "#D5D5D5",
+          "stroke_width": 2,
+          "radius": 4,
+          "container": "llm"
+        },
+        {
+          "id": "llm_input_4",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            1108,
+            128,
+            29,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#FF9200",
+          "stroke_width": 2,
+          "radius": 4,
+          "container": "llm"
+        },
+        {
+          "id": "llm_downin_4",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1122,
+              143
+            ],
+            [
+              1122,
+              160
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "llm"
+        },
+        {
+          "id": "llm_downout_4",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1122,
+              206
+            ],
+            [
+              1122,
+              224
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "llm"
+        },
+        {
+          "id": "llm_output_4",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            1108,
+            230,
+            29,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#EEEEEE",
+          "stroke": "#D5D5D5",
+          "stroke_width": 2,
+          "radius": 4,
+          "container": "llm"
+        },
+        {
+          "id": "llm_input_5",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            1145,
+            128,
+            29,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#FF9200",
+          "stroke_width": 2,
+          "radius": 4,
+          "container": "llm"
+        },
+        {
+          "id": "llm_downin_5",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1159,
+              143
+            ],
+            [
+              1159,
+              160
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "llm"
+        },
+        {
+          "id": "llm_downout_5",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1159,
+              206
+            ],
+            [
+              1159,
+              224
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "llm"
+        },
+        {
+          "id": "llm_output_5",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            1145,
+            230,
+            29,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#D9D2E8",
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "radius": 4,
+          "container": "llm"
+        },
+        {
+          "id": "llm_input_6",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            1183,
+            128,
+            29,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#D5D5D5",
+          "stroke_width": 2,
+          "radius": 4,
+          "container": "llm"
+        },
+        {
+          "id": "llm_downin_6",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1197,
+              143
+            ],
+            [
+              1197,
+              160
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "llm"
+        },
+        {
+          "id": "llm_downout_6",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1197,
+              206
+            ],
+            [
+              1197,
+              224
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "llm"
+        },
+        {
+          "id": "llm_output_6",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            1183,
+            230,
+            29,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#D9D2E8",
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "radius": 4,
+          "container": "llm"
+        },
+        {
+          "id": "llm_input_7",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            1221,
+            128,
+            29,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#FFFFFF",
+          "stroke": "#D5D5D5",
+          "stroke_width": 2,
+          "radius": 4,
+          "container": "llm"
+        },
+        {
+          "id": "llm_downin_7",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1235,
+              143
+            ],
+            [
+              1235,
+              160
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "llm"
+        },
+        {
+          "id": "llm_downout_7",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1235,
+              206
+            ],
+            [
+              1235,
+              224
+            ]
+          ],
+          "stroke": "#FF9200",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "llm"
+        },
+        {
+          "id": "llm_output_7",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            1221,
+            230,
+            29,
+            9
+          ],
+          "shape": "round_rect",
+          "fill": "#D9D2E8",
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "radius": 4,
+          "container": "llm"
+        },
+        {
+          "id": "transformer",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            956,
+            168,
+            295,
+            31
+          ],
+          "shape": "round_rect",
+          "fill": "#FDE6CE",
+          "stroke": "#FF9200",
+          "stroke_width": 2,
+          "radius": 7,
+          "container": "llm"
+        },
+        {
+          "id": "brace_0",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1145,
+              245
+            ],
+            [
+              1152,
+              250
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 1.6,
+          "container": "llm"
+        },
+        {
+          "id": "brace_1",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1152,
+              250
+            ],
+            [
+              1165,
+              253
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 1.6,
+          "container": "llm",
+          "allow_overlap_with": [
+            "brace_0"
+          ],
+          "overlap_reason": "Adjacent strokes form the source action-token underbrace."
+        },
+        {
+          "id": "brace_2",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1165,
+              253
+            ],
+            [
+              1182,
+              253
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 1.6,
+          "container": "llm",
+          "allow_overlap_with": [
+            "brace_1"
+          ],
+          "overlap_reason": "Adjacent strokes form the source action-token underbrace."
+        },
+        {
+          "id": "brace_3",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1182,
+              253
+            ],
+            [
+              1191,
+              255
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 1.6,
+          "container": "llm",
+          "allow_overlap_with": [
+            "brace_2"
+          ],
+          "overlap_reason": "Adjacent strokes form the source action-token underbrace."
+        },
+        {
+          "id": "brace_4",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1191,
+              255
+            ],
+            [
+              1197,
+              260
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 1.6,
+          "container": "llm",
+          "allow_overlap_with": [
+            "brace_3"
+          ],
+          "overlap_reason": "Adjacent strokes form the source action-token underbrace."
+        },
+        {
+          "id": "brace_5",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1197,
+              260
+            ],
+            [
+              1204,
+              255
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 1.6,
+          "container": "llm",
+          "allow_overlap_with": [
+            "brace_4"
+          ],
+          "overlap_reason": "Adjacent strokes form the source action-token underbrace."
+        },
+        {
+          "id": "brace_6",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1204,
+              255
+            ],
+            [
+              1214,
+              253
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 1.6,
+          "container": "llm",
+          "allow_overlap_with": [
+            "brace_5"
+          ],
+          "overlap_reason": "Adjacent strokes form the source action-token underbrace."
+        },
+        {
+          "id": "brace_7",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1214,
+              253
+            ],
+            [
+              1231,
+              253
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 1.6,
+          "container": "llm",
+          "allow_overlap_with": [
+            "brace_6"
+          ],
+          "overlap_reason": "Adjacent strokes form the source action-token underbrace."
+        },
+        {
+          "id": "brace_8",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1231,
+              253
+            ],
+            [
+              1243,
+              250
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 1.6,
+          "container": "llm",
+          "allow_overlap_with": [
+            "brace_7"
+          ],
+          "overlap_reason": "Adjacent strokes form the source action-token underbrace."
+        },
+        {
+          "id": "brace_9",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1243,
+              250
+            ],
+            [
+              1250,
+              245
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 1.6,
+          "container": "llm",
+          "allow_overlap_with": [
+            "brace_8"
+          ],
+          "overlap_reason": "Adjacent strokes form the source action-token underbrace."
+        },
+        {
+          "id": "action_down",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1197,
+              266
+            ],
+            [
+              1197,
+              329
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "container": "model",
+          "allow_overlap_with": [
+            "rt2",
+            "llm"
+          ],
+          "overlap_reason": "Source action wire leaves the bottom of the LLM and RT-2 panels."
+        },
+        {
+          "id": "action_left",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1197,
+              329
+            ],
+            [
+              871,
+              329
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "container": "model",
+          "allow_overlap_with": [
+            "action_down"
+          ],
+          "overlap_reason": "Action connector elbow visible at source (1197,329)."
+        },
+        {
+          "id": "action_to_tokens",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              871,
+              329
+            ],
+            [
+              871,
+              366
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "model",
+          "allow_overlap_with": [
+            "action_left"
+          ],
+          "overlap_reason": "Action connector elbow visible at source (871,329)."
+        },
+        {
+          "id": "action_tokens_bg",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            775,
+            374,
+            203,
+            29
+          ],
+          "shape": "round_rect",
+          "fill": "#D9D2E8",
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "radius": 4,
+          "container": "model"
+        },
+        {
+          "id": "action_tokens",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            781,
+            376,
+            196,
+            24
+          ],
+          "font_size": 17,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "action_tokens_bg",
+          "runs": [
+            {
+              "text": "A: 132 114 128 5 25 156",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "detokenize_arrow",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              988,
+              387
+            ],
+            [
+              1107,
+              387
+            ]
+          ],
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 7
+          },
+          "container": "model"
+        },
+        {
+          "id": "detokenize",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            991,
+            394,
+            119,
+            31
+          ],
+          "font_size": 20,
+          "font_family": "Arial",
+          "color": "#7052B5",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "model",
+          "runs": [
+            {
+              "text": "De-Tokenize",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#7052B5"
+            }
+          ]
+        },
+        {
+          "id": "action_bg",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            1118,
+            349,
+            169,
+            69
+          ],
+          "shape": "round_rect",
+          "fill": "#D9D2E8",
+          "stroke": "#7052B5",
+          "stroke_width": 2,
+          "radius": 5,
+          "container": "model"
+        },
+        {
+          "id": "action_delta_0",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            1129,
+            363,
+            14,
+            17
+          ],
+          "shape": "triangle",
+          "fill": null,
+          "stroke": "#666666",
+          "stroke_width": 2,
+          "container": "action_bg"
+        },
+        {
+          "id": "action_0",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            1146,
+            359,
+            138,
+            26
+          ],
+          "font_size": 17,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "action_bg",
+          "runs": [
+            {
+              "text": "T = [0.1, -0.2, 0]",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "action_delta_1",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            1129,
+            387,
+            14,
+            17
+          ],
+          "shape": "triangle",
+          "fill": null,
+          "stroke": "#666666",
+          "stroke_width": 2,
+          "container": "action_bg"
+        },
+        {
+          "id": "action_1",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            1146,
+            383,
+            138,
+            26
+          ],
+          "font_size": 17,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "action_bg",
+          "runs": [
+            {
+              "text": "R = [10°, 25°, -7°]",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "action_label",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            1149,
+            421,
+            139,
+            28
+          ],
+          "font_size": 20,
+          "font_family": "Arial",
+          "color": "#7052B5",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "model",
+          "runs": [
+            {
+              "text": "Robot Action",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 20,
+              "bold": false,
+              "italic": false,
+              "color": "#7052B5"
+            }
+          ]
+        },
+        {
+          "id": "cotrain_horizontal",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              550,
+              504
+            ],
+            [
+              774,
+              504
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 3
+        },
+        {
+          "id": "cotrain_vertical",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              774,
+              504
+            ],
+            [
+              774,
+              468
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 12,
+            "width": 12
+          },
+          "allow_overlap_with": [
+            "cotrain_horizontal"
+          ],
+          "overlap_reason": "Source co-fine-tune connector has a joined elbow."
+        },
+        {
+          "id": "cotrain_label",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            566,
+            509,
+            225,
+            39
+          ],
+          "font_size": 25,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Co-Fine-Tune",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 25,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "deploy_vertical",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1090,
+              468
+            ],
+            [
+              1090,
+              504
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 3
+        },
+        {
+          "id": "deploy_horizontal",
+          "kind": "line",
+          "z": 5,
+          "points": [
+            [
+              1090,
+              504
+            ],
+            [
+              1312,
+              504
+            ]
+          ],
+          "stroke": "#999999",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 12,
+            "width": 12
+          },
+          "allow_overlap_with": [
+            "deploy_vertical"
+          ],
+          "overlap_reason": "Source deployment connector has a joined elbow."
+        },
+        {
+          "id": "deploy_label",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            1211,
+            509,
+            102,
+            39
+          ],
+          "font_size": 25,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "left",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Deploy",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 25,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "closed_photo_0",
+          "kind": "image",
+          "z": 4,
+          "box": [
+            1338,
+            71,
+            216,
+            124
+          ],
+          "path": "assets/2a1ac7ea9e03020030a3.png",
+          "contains_text": false,
+          "image_fit": "stretch",
+          "provenance": "Exact source pixel crop [1338, 71, 216, 124]; published RT-2 Figure1, page2, PDFium4x",
+          "container": "closed"
+        },
+        {
+          "id": "caption_bg_0",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            1338,
+            195,
+            216,
+            41
+          ],
+          "shape": "rect",
+          "fill": "#DDDDDD",
+          "stroke": "#333333",
+          "stroke_width": 1,
+          "container": "closed"
+        },
+        {
+          "id": "caption_0",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            1341,
+            194,
+            210,
+            43
+          ],
+          "font_size": 17,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "center",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "caption_bg_0",
+          "runs": [
+            {
+              "text": "Put the strawberry\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            },
+            {
+              "text": "into the correct bowl",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "closed_photo_1",
+          "kind": "image",
+          "z": 4,
+          "box": [
+            1338,
+            252,
+            216,
+            122
+          ],
+          "path": "assets/da708a138d07274050e8.png",
+          "contains_text": false,
+          "image_fit": "stretch",
+          "provenance": "Exact source pixel crop [1338, 252, 216, 122]; published RT-2 Figure1, page2, PDFium4x",
+          "container": "closed"
+        },
+        {
+          "id": "caption_bg_1",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            1338,
+            374,
+            216,
+            25
+          ],
+          "shape": "rect",
+          "fill": "#DDDDDD",
+          "stroke": "#333333",
+          "stroke_width": 1,
+          "container": "closed"
+        },
+        {
+          "id": "caption_1",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            1341,
+            373,
+            210,
+            27
+          ],
+          "font_size": 17,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "center",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "caption_bg_1",
+          "runs": [
+            {
+              "text": "Pick the nearly falling bag",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        },
+        {
+          "id": "closed_photo_2",
+          "kind": "image",
+          "z": 4,
+          "box": [
+            1338,
+            412,
+            216,
+            122
+          ],
+          "path": "assets/aba7a45ea3023eac3062.png",
+          "contains_text": false,
+          "image_fit": "stretch",
+          "provenance": "Exact source pixel crop [1338, 412, 216, 122]; published RT-2 Figure1, page2, PDFium4x",
+          "container": "closed"
+        },
+        {
+          "id": "caption_bg_2",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            1338,
+            534,
+            216,
+            25
+          ],
+          "shape": "rect",
+          "fill": "#DDDDDD",
+          "stroke": "#333333",
+          "stroke_width": 1,
+          "container": "closed"
+        },
+        {
+          "id": "caption_2",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            1341,
+            533,
+            210,
+            27
+          ],
+          "font_size": 17,
+          "font_family": "Arial",
+          "color": "#666666",
+          "bold": false,
+          "align": "center",
+          "valign": "top",
+          "fit": "strict",
+          "wrap": false,
+          "container": "caption_bg_2",
+          "runs": [
+            {
+              "text": "Pick object that is different",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": false,
+              "italic": false,
+              "color": "#666666"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

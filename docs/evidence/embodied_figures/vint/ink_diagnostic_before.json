@@ -1,0 +1,135 @@
+{
+  "method": "Diagnostic after visual inspection; fixed source-coordinate ROIs; RGB max<160; no registration; edge differences actual minus source; no blind/heldout claim",
+  "rois": {
+    "observations": {
+      "roi": [
+        38,
+        7,
+        192,
+        36
+      ],
+      "source_ink_xyxy": [
+        44,
+        15,
+        181,
+        32
+      ],
+      "actual_ink_xyxy": [
+        44,
+        13,
+        183,
+        31
+      ],
+      "delta_px": [
+        0,
+        -2,
+        2,
+        -1
+      ]
+    },
+    "parameters": {
+      "roi": [
+        410,
+        58,
+        552,
+        84
+      ],
+      "source_ink_xyxy": [
+        420,
+        64,
+        526,
+        77
+      ],
+      "actual_ink_xyxy": [
+        420,
+        62,
+        528,
+        74
+      ],
+      "delta_px": [
+        0,
+        -2,
+        2,
+        -3
+      ]
+    },
+    "attention": {
+      "roi": [
+        897,
+        104,
+        932,
+        300
+      ],
+      "source_ink_xyxy": [
+        902,
+        118,
+        923,
+        279
+      ],
+      "actual_ink_xyxy": [
+        900,
+        128,
+        920,
+        291
+      ],
+      "delta_px": [
+        -2,
+        10,
+        -3,
+        12
+      ]
+    },
+    "goal_label": {
+      "roi": [
+        7,
+        379,
+        225,
+        407
+      ],
+      "source_ink_xyxy": [
+        13,
+        385,
+        210,
+        402
+      ],
+      "actual_ink_xyxy": [
+        13,
+        385,
+        209,
+        402
+      ],
+      "delta_px": [
+        0,
+        0,
+        -1,
+        0
+      ]
+    },
+    "transformer": {
+      "roi": [
+        899,
+        342,
+        1049,
+        371
+      ],
+      "source_ink_xyxy": [
+        905,
+        349,
+        1032,
+        366
+      ],
+      "actual_ink_xyxy": [
+        905,
+        348,
+        1034,
+        366
+      ],
+      "delta_px": [
+        0,
+        -1,
+        2,
+        0
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "status": "fail",
+  "visual_review": "required",
+  "automated_checks": {},
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "2976352c062fe189468c9326f78669b3a20de2262d2a13996720a832543e2fca",
+  "error": "Local font discovery timed out after 30 seconds: /opt/homebrew/bin/fc-list. Check the fc-list selected by PATH before retrying"
+}

@@ -1,0 +1,11 @@
+#!/bin/bash
+set -euo pipefail
+# Usage: bash reproduce.sh /tmp/new_vint_build
+# Requires the existing super_img2ppt project environment and local fonts/LibreOffice.
+HERE=$(cd "$(dirname "$0")" && pwd)
+OUT=${1:?Pass a fresh output directory}
+cd /Users/liyufeng/Code/super_img2ppt
+PATH=/opt/homebrew/bin:$PATH uv run super-img2ppt build "$HERE/job/build_05/scene.resolved.json" --out "$OUT" --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype --font-dir /System/Library/Fonts/Supplemental
+/Users/liyufeng/Code/super_img2ppt/.venv/bin/python "$HERE/raster_actual.py" "$OUT"
+
+/Users/liyufeng/Code/super_img2ppt/.venv/bin/python "$HERE/presentation_crop.py" "$OUT"

@@ -1,0 +1,51 @@
+import hashlib
+import json
+import re
+import subprocess
+import zipfile
+from pathlib import Path
+
+from PIL import Image
+
+root = Path(__file__).resolve().parents[2]
+gallery = root / "examples/gallery"
+evidence = root / "docs/evidence/embodied_figures"
+broken = []
+checked = 0
+for name in ["README.md", "docs/embodied_figures.md", "docs/gallery_extension.md"]:
+    path = root / name
+    for link in re.findall(r"\]\(([^)]+)\)", path.read_text()):
+        if link.startswith(("http:", "https:", "#")):
+            continue
+        checked += 1
+        if not (path.parent / link.split("#", 1)[0]).exists():
+            broken.append([name, link])
+assert not broken, broken
+index = json.loads((gallery / "index.json").read_text())
+assert len(index["cases"]) == 9
+for case in index["cases"]:
+    folder = gallery / case["id"]
+    with zipfile.ZipFile(folder / "editable.pptx") as archive:
+        assert archive.testzip() is None
+    assert Image.open(folder / "source.png").size == Image.open(folder / "actual.png").size
+lines = (gallery / "SHA256SUMS").read_text().splitlines()
+for line in lines:
+    sha, name = line.split("  ", 1)
+    assert hashlib.sha256((gallery / name).read_bytes()).hexdigest() == sha, name
+target = gallery / "paper_gallery.zip"
+before = hashlib.sha256(target.read_bytes()).hexdigest()
+with zipfile.ZipFile(target) as archive:
+    assert archive.testzip() is None
+    for line in archive.read("SHA256SUMS").decode().splitlines():
+        sha, name = line.split("  ", 1)
+        assert hashlib.sha256(archive.read(name)).hexdigest() == sha, name
+subprocess.run([str(root / ".venv/bin/python"), "scripts/build_gallery_bundle.py"], cwd=root, check=True)
+assert hashlib.sha256(target.read_bytes()).hexdigest() == before
+historical = ["examples/gallery/" + name for name in ["griffin", "blip2", "hyena", "galore", "vision_mamba", "mamba2", "complex_figures.zip"]]
+historical += ["docs/previews/gallery/" + name + ".png" for name in ["griffin", "griffin_detail", "blip2", "blip2_detail", "hyena", "hyena_detail", "galore", "vision_mamba", "mamba2", "curve_caps"]]
+subprocess.run(["git", "diff", "--exit-code", "79bfa83", "--", *historical], cwd=root, check=True, capture_output=True)
+replays = json.loads((evidence / "replay.json").read_text())
+assert len(replays) == 3 and all(item["changed_pixels"] == 0 for item in replays)
+report = {"gallery_cases": 9, "local_links_checked": checked, "broken_links": broken, "gallery_hashes_checked": len(lines), "zip_sha256": before, "zip_size": target.stat().st_size, "zip_rebuild_identical": True, "pptx_zip_integrity": "9/9 pass", "source_actual_dimensions_match": "9/9 pass", "new_complete_scene_replays": "3/3 pixel-identical to frozen actual previews", "original_six_cases_and_ten_previews": "unchanged from 79bfa83", "native_powerpoint_wps": "not verified"}
+(evidence / "artifact_checks.json").write_text(json.dumps(report, indent=2) + "\n")
+print(json.dumps(report, indent=2))

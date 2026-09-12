@@ -1,0 +1,8 @@
+#!/bin/zsh
+set -eu
+repo=/Users/liyufeng/Code/super_img2ppt
+run_root=/tmp/rt2_forward_20260912
+rebuild_out=${1:?Provide a fresh absolute build output directory}
+cd "$repo"
+PATH=/opt/homebrew/bin:$PATH uv run --no-sync super-img2ppt build "$run_root/job/scene.json" --out "$rebuild_out" --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype --font-dir /System/Library/Fonts/Supplemental
+/opt/homebrew/bin/pdftoppm -png -singlefile -scale-to-x 1583 -scale-to-y 580 "$rebuild_out/render/editable.pdf" "$rebuild_out/actual_source_width"

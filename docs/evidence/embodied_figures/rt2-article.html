@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Search Engine Info --><title>RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control</title><meta name="description" content="RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic ControlBrianna Zitkovich,&nbsp;Tianhe Yu,&nbsp;Sichun Xu,&nbsp;Peng Xu,&nbsp;Ted Xiao,&..."><!-- Solution from http://stackoverflow.com/questions/31593297/using-execcommand-javascript-to-copy-hidden-text-to-clipboard -->
+<script src="https://proceedings.mlr.press/v229/assets/js/copy_input.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://proceedings.mlr.press/v229/assets/js/download.js"></script>
+<meta name="citation_publisher" content="PMLR"/><meta name="citation_title" content="RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control"/><meta name="citation_language" content="en"/>
+<meta name="citation_abstract_html_url" content="https://proceedings.mlr.press/v229/zitkovich23a.html"/><meta name="citation_pdf_url" content="https://proceedings.mlr.press/v229/zitkovich23a/zitkovich23a.pdf"><meta name="citation_firstpage" content="2165"><meta name="citation_lastpage" content="2183"><meta name="citation_author" content="Brianna Zitkovich"><meta name="citation_author" content="Tianhe Yu"><meta name="citation_author" content="Sichun Xu"><meta name="citation_author" content="Peng Xu"><meta name="citation_author" content="Ted Xiao"><meta name="citation_author" content="Fei Xia"><meta name="citation_author" content="Jialin Wu"><meta name="citation_author" content="Paul Wohlhart"><meta name="citation_author" content="Stefan Welker"><meta name="citation_author" content="Ayzaan Wahid"><meta name="citation_author" content="Quan Vuong"><meta name="citation_author" content="Vincent Vanhoucke"><meta name="citation_author" content="Huong Tran"><meta name="citation_author" content="Radu Soricut"><meta name="citation_author" content="Anikait Singh"><meta name="citation_author" content="Jaspiar Singh"><meta name="citation_author" content="Pierre Sermanet"><meta name="citation_author" content="Pannag R. Sanketi"><meta name="citation_author" content="Grecia Salazar"><meta name="citation_author" content="Michael S. Ryoo"><meta name="citation_author" content="Krista Reymann"><meta name="citation_author" content="Kanishka Rao"><meta name="citation_author" content="Karl Pertsch"><meta name="citation_author" content="Igor Mordatch"><meta name="citation_author" content="Henryk Michalewski"><meta name="citation_author" content="Yao Lu"><meta name="citation_author" content="Sergey Levine"><meta name="citation_author" content="Lisa Lee"><meta name="citation_author" content="Tsang-Wei Edward Lee"><meta name="citation_author" content="Isabel Leal"><meta name="citation_author" content="Yuheng Kuang"><meta name="citation_author" content="Dmitry Kalashnikov"><meta name="citation_author" content="Ryan Julian"><meta name="citation_author" content="Nikhil J. Joshi"><meta name="citation_author" content="Alex Irpan"><meta name="citation_author" content="Brian Ichter"><meta name="citation_author" content="Jasmine Hsu"><meta name="citation_author" content="Alexander Herzog"><meta name="citation_author" content="Karol Hausman"><meta name="citation_author" content="Keerthana Gopalakrishnan"><meta name="citation_author" content="Chuyuan Fu"><meta name="citation_author" content="Pete Florence"><meta name="citation_author" content="Chelsea Finn"><meta name="citation_author" content="Kumar Avinava Dubey"><meta name="citation_author" content="Danny Driess"><meta name="citation_author" content="Tianli Ding"><meta name="citation_author" content="Krzysztof Marcin Choromanski"><meta name="citation_author" content="Xi Chen"><meta name="citation_author" content="Yevgen Chebotar"><meta name="citation_author" content="Justice Carbajal"><meta name="citation_author" content="Noah Brown"><meta name="citation_author" content="Anthony Brohan"><meta name="citation_author" content="Montserrat Gonzalez Arenas"><meta name="citation_author" content="Kehang Han"><meta name="citation_publication_date" content="2023/12/02"><meta name="citation_inbook_title" content="Conference on Robot Learning"/><meta name="citation_conference_title" content="Conference on Robot Learning"/><meta name="citation_issn" content="2640-3498"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control"/><meta name="twitter:site" content="@MLResearchPress" /><meta name="twitter:description" content="We study how vision-language models trained on Internet-scale data can be incorporated directly into end-to-end robotic control to boost generalization and e..."/><meta name="twitter:image" content="https://proceedings.mlr.press/v229/assets/images/logo-pmlr.png"/>
+<meta name="twitter:image:alt" content="PMLR Logo"/><meta property="og:title" content="RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control"/>
+<meta property="og:description" content="We study how vision-language models trained on Internet-scale data can be incorporated directly into end-to-end robotic control to boost generalization and enable emergent semantic reasoning. Our g..."/>
+<meta property="og:type" content="article"/><meta property="article:published_time" content="2023-12-02T00:00:00+00:00"><meta property="og:url" content="https://proceedings.mlr.press/v229/zitkovich23a.html"/><meta property="og:image" content="https://proceedings.mlr.press/v229/assets/images/logo-pmlr.png"/><meta property="og:site_name" content="PMLR"/><!-- Style Info -->
+  <link rel="stylesheet" type="text/css" href="https://proceedings.mlr.press/v229/assets/css/pmlr.css" />
+  <style>.hero-text {
+    color: #303030;
+  }</style>
+
+  <!-- Icon Info -->
+  <link rel="shortcut icon" href="https://proceedings.mlr.press/v229/assets/images/favicon-pmlr.ico" type="image/x-icon">
+  <link rel="icon" href="https://proceedings.mlr.press/v229/assets/images/favicon-pmlr.ico" type="image/x-icon">
+
+  <!-- Feed Info --><link type="application/atom+xml" rel="alternate" href="https://proceedings.mlr.press/v229/feed.xml" title="Proceedings of Machine Learning Research" /><!-- Scripting info --><!-- Solution from http://stackoverflow.com/questions/31593297/using-execcommand-javascript-to-copy-hidden-text-to-clipboard -->
+<script src="https://proceedings.mlr.press/v229/assets/js/copy_input.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://proceedings.mlr.press/v229/assets/js/download.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92432422-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+          autoNumber: "AMS"
+        }
+      },
+      tex2jax: {
+      inlineMath: [ ['$','$'], ['\\(', '\\)'] ],
+      displayMath: [ ['$$','$$'], ['\\[', '\\]'] ],
+      processEscapes: true,
+    }
+  });
+</script>
+<script  async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <!-- User custom header -->
+</head>
+
+
+
+
+
+
+<body>
+
+
+<header class="site-header">
+  <div class="wrapper">
+    
+
+
+<div class="hero-image">
+  <div class="hero-text">
+    <a href="/" target="_top"><img src="/v229/assets/images/logo-pmlr.svg" alt="[Conference on Robot Learning Logo]"></a>
+    Proceedings of Machine Learning Research
+  </div>
+</div>
+
+
+    <nav class="site-nav">
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger">
+  <span class="menu-icon"><svg viewBox="0 0 18 15" width="18px" height="15px">
+  <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+</svg>
+</span>
+  </label>
+  <div class="trigger"><a class="page-link" href="https://proceedings.mlr.press/v229/">Volume 229</a><a class="page-link" href="https://www.jmlr.org/">JMLR</a> 
+    <a class="page-link" href="https://data.mlr.press/">DMLR</a> 
+    <a class="page-link" href="https://jmlr.org/tmlr/">TMLR</a> 
+    <a class="page-link" href="https://www.jmlr.org/mloss">MLOSS</a>
+    <a class="page-link" href="/faq.html">FAQ</a>
+    <a class="page-link" href="/spec.html">Submission Format</a>
+    <a class="page-link" href="https://proceedings.mlr.press//v229/assets/rss/feed.xml">
+      <img src="https://proceedings.mlr.press/v229/assets/images/RSS.gif" class="rss" alt="RSS Feed">
+    </a>
+  </div>
+</nav>
+
+  </div>
+</header>
+
+
+
+
+
+<main class="page-content" aria-label="Content"><div class="wrapper">
+
+
+<p style="text-align:right">[<a href="https://github.com/mlresearch/v229/edit/gh-pages/_posts/2023-12-02-zitkovich23a.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/mlresearch/v229/edit/gh-pages/_posts/2023-12-02-zitkovich23a.md', 13);">edit</a>]</p>
+
+<article class="post-content">
+  <h1>RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control</h1><span class="authors">Brianna Zitkovich,&nbsp;Tianhe Yu,&nbsp;Sichun Xu,&nbsp;Peng Xu,&nbsp;Ted Xiao,&nbsp;Fei Xia,&nbsp;Jialin Wu,&nbsp;Paul Wohlhart,&nbsp;Stefan Welker,&nbsp;Ayzaan Wahid,&nbsp;Quan Vuong,&nbsp;Vincent Vanhoucke,&nbsp;Huong Tran,&nbsp;Radu Soricut,&nbsp;Anikait Singh,&nbsp;Jaspiar Singh,&nbsp;Pierre Sermanet,&nbsp;Pannag R. Sanketi,&nbsp;Grecia Salazar,&nbsp;Michael S. Ryoo,&nbsp;Krista Reymann,&nbsp;Kanishka Rao,&nbsp;Karl Pertsch,&nbsp;Igor Mordatch,&nbsp;Henryk Michalewski,&nbsp;Yao Lu,&nbsp;Sergey Levine,&nbsp;Lisa Lee,&nbsp;Tsang-Wei Edward Lee,&nbsp;Isabel Leal,&nbsp;Yuheng Kuang,&nbsp;Dmitry Kalashnikov,&nbsp;Ryan Julian,&nbsp;Nikhil J. Joshi,&nbsp;Alex Irpan,&nbsp;Brian Ichter,&nbsp;Jasmine Hsu,&nbsp;Alexander Herzog,&nbsp;Karol Hausman,&nbsp;Keerthana Gopalakrishnan,&nbsp;Chuyuan Fu,&nbsp;Pete Florence,&nbsp;Chelsea Finn,&nbsp;Kumar Avinava Dubey,&nbsp;Danny Driess,&nbsp;Tianli Ding,&nbsp;Krzysztof Marcin Choromanski,&nbsp;Xi Chen,&nbsp;Yevgen Chebotar,&nbsp;Justice Carbajal,&nbsp;Noah Brown,&nbsp;Anthony Brohan,&nbsp;Montserrat Gonzalez Arenas,&nbsp;Kehang Han</span>
+<div id="info"><i>Proceedings of The 7th Conference on Robot Learning</i>,&nbsp;PMLR 229:2165-2183,&nbsp;2023.
+  </div> <!-- info -->
+  
+  <h4>Abstract</h4>
+  <div id="abstract" class="abstract">
+    We study how vision-language models trained on Internet-scale data can be incorporated directly into end-to-end robotic control to boost generalization and enable emergent semantic reasoning. Our goal is to enable a single end-to-end trained model to both learn to map robot observations to actions and enjoy the benefits of large-scale pretraining on language and vision-language data from the web. To this end, we propose to co-fine-tune state-of-the-art vision-language models on both robotic trajectory data and Internet-scale vision-language tasks, such as visual question answering. In contrast to other approaches, we propose a simple, general recipe to achieve this goal: in order to fit both natural language responses and robotic actions into the same format, we express the actions as text tokens and incorporate them directly into the training set of the model in the same way as natural language tokens. We refer to such category of models as vision-language-action models (VLA) and instantiate an example of such a model, which we call RT-2. Our extensive evaluation (6k evaluation trials) shows that our approach leads to performant robotic policies and enables RT-2 to obtain a range of emergent capabilities from Internet-scale training. This includes significantly improved generalization to novel objects, the ability to interpret commands not present in the robot training data (such as placing an object onto a particular number or icon), and the ability to perform rudimentary reasoning in response to user commands (such as picking up the smallest or largest object, or the one closest to another object). We further show that incorporating chain of thought reasoning allows RT-2 to perform multi-stage semantic reasoning, for example figuring out which object to pick up for use as an improvised hammer (a rock), or which type of drink is best suited for someone who is tired (an energy drink).
+  </div>
+  <h4>Cite this Paper</h4>
+<hr class="bibhr">
+
+<div class="bibbuttongroup row row--justified">
+  <div class="bibbuttontext column">
+    BibTeX
+  </div>
+  <div class="column">
+  <div class="codebox">
+    <code class="citecode" id="bibtex">@InProceedings{pmlr-v229-zitkovich23a,
+  title = 	 {RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control},
+  author =       {Zitkovich, Brianna and Yu, Tianhe and Xu, Sichun and Xu, Peng and Xiao, Ted and Xia, Fei and Wu, Jialin and Wohlhart, Paul and Welker, Stefan and Wahid, Ayzaan and Vuong, Quan and Vanhoucke, Vincent and Tran, Huong and Soricut, Radu and Singh, Anikait and Singh, Jaspiar and Sermanet, Pierre and Sanketi, Pannag R. and Salazar, Grecia and Ryoo, Michael S. and Reymann, Krista and Rao, Kanishka and Pertsch, Karl and Mordatch, Igor and Michalewski, Henryk and Lu, Yao and Levine, Sergey and Lee, Lisa and Lee, Tsang-Wei Edward and Leal, Isabel and Kuang, Yuheng and Kalashnikov, Dmitry and Julian, Ryan and Joshi, Nikhil J. and Irpan, Alex and Ichter, Brian and Hsu, Jasmine and Herzog, Alexander and Hausman, Karol and Gopalakrishnan, Keerthana and Fu, Chuyuan and Florence, Pete and Finn, Chelsea and Dubey, Kumar Avinava and Driess, Danny and Ding, Tianli and Choromanski, Krzysztof Marcin and Chen, Xi and Chebotar, Yevgen and Carbajal, Justice and Brown, Noah and Brohan, Anthony and Arenas, Montserrat Gonzalez and Han, Kehang},
+  booktitle = 	 {Proceedings of The 7th Conference on Robot Learning},
+  pages = 	 {2165--2183},
+  year = 	 {2023},
+  editor = 	 {Tan, Jie and Toussaint, Marc and Darvish, Kourosh},
+  volume = 	 {229},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {06--09 Nov},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v229/zitkovich23a/zitkovich23a.pdf},
+  url = 	 {https://proceedings.mlr.press/v229/zitkovich23a.html},
+  abstract = 	 {We study how vision-language models trained on Internet-scale data can be incorporated directly into end-to-end robotic control to boost generalization and enable emergent semantic reasoning. Our goal is to enable a single end-to-end trained model to both learn to map robot observations to actions and enjoy the benefits of large-scale pretraining on language and vision-language data from the web. To this end, we propose to co-fine-tune state-of-the-art vision-language models on both robotic trajectory data and Internet-scale vision-language tasks, such as visual question answering. In contrast to other approaches, we propose a simple, general recipe to achieve this goal: in order to fit both natural language responses and robotic actions into the same format, we express the actions as text tokens and incorporate them directly into the training set of the model in the same way as natural language tokens. We refer to such category of models as vision-language-action models (VLA) and instantiate an example of such a model, which we call RT-2. Our extensive evaluation (6k evaluation trials) shows that our approach leads to performant robotic policies and enables RT-2 to obtain a range of emergent capabilities from Internet-scale training. This includes significantly improved generalization to novel objects, the ability to interpret commands not present in the robot training data (such as placing an object onto a particular number or icon), and the ability to perform rudimentary reasoning in response to user commands (such as picking up the smallest or largest object, or the one closest to another object). We further show that incorporating chain of thought reasoning allows RT-2 to perform multi-stage semantic reasoning, for example figuring out which object to pick up for use as an improvised hammer (a rock), or which type of drink is best suited for someone who is tired (an energy drink).}
+}
+</code>
+  </div>
+  <button class="button"  id="button-bibtex1" onclick="CopyToClipboard('bibtex');  ga('send', 'event', 'Ref Copy', 'CopyToClipboard', '/v229/pmlr-v229-zitkovich23a.bib', 15);">Copy to Clipboard</button>
+  <button class="button" id="button-bibtex2" onclick="DownloadTexToFile('pmlr-v229-zitkovich23a.bib', 'bibtex'); ga('send', 'event', 'Ref Downloads', 'Download', '/v229/pmlr-v229-zitkovich23a.bib', 16);">Download</button>
+  </div>
+</div>
+
+
+<div class="bibbuttongroup row row--justified">
+  <div class="bibbuttontext column">
+    Endnote
+  </div>
+  <div class="column">
+  <div class="codebox">
+    <code class="citecode" id="endnote">%0 Conference Paper
+%T RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control
+%A Brianna Zitkovich
+%A Tianhe Yu
+%A Sichun Xu
+%A Peng Xu
+%A Ted Xiao
+%A Fei Xia
+%A Jialin Wu
+%A Paul Wohlhart
+%A Stefan Welker
+%A Ayzaan Wahid
+%A Quan Vuong
+%A Vincent Vanhoucke
+%A Huong Tran
+%A Radu Soricut
+%A Anikait Singh
+%A Jaspiar Singh
+%A Pierre Sermanet
+%A Pannag R. Sanketi
+%A Grecia Salazar
+%A Michael S. Ryoo
+%A Krista Reymann
+%A Kanishka Rao
+%A Karl Pertsch
+%A Igor Mordatch
+%A Henryk Michalewski
+%A Yao Lu
+%A Sergey Levine
+%A Lisa Lee
+%A Tsang-Wei Edward Lee
+%A Isabel Leal
+%A Yuheng Kuang
+%A Dmitry Kalashnikov
+%A Ryan Julian
+%A Nikhil J. Joshi
+%A Alex Irpan
+%A Brian Ichter
+%A Jasmine Hsu
+%A Alexander Herzog
+%A Karol Hausman
+%A Keerthana Gopalakrishnan
+%A Chuyuan Fu
+%A Pete Florence
+%A Chelsea Finn
+%A Kumar Avinava Dubey
+%A Danny Driess
+%A Tianli Ding
+%A Krzysztof Marcin Choromanski
+%A Xi Chen
+%A Yevgen Chebotar
+%A Justice Carbajal
+%A Noah Brown
+%A Anthony Brohan
+%A Montserrat Gonzalez Arenas
+%A Kehang Han
+%B Proceedings of The 7th Conference on Robot Learning
+%C Proceedings of Machine Learning Research
+%D 2023
+%E Jie Tan
+%E Marc Toussaint
+%E Kourosh Darvish	
+%F pmlr-v229-zitkovich23a
+%I PMLR
+%P 2165--2183
+%U https://proceedings.mlr.press/v229/zitkovich23a.html
+%V 229
+%X We study how vision-language models trained on Internet-scale data can be incorporated directly into end-to-end robotic control to boost generalization and enable emergent semantic reasoning. Our goal is to enable a single end-to-end trained model to both learn to map robot observations to actions and enjoy the benefits of large-scale pretraining on language and vision-language data from the web. To this end, we propose to co-fine-tune state-of-the-art vision-language models on both robotic trajectory data and Internet-scale vision-language tasks, such as visual question answering. In contrast to other approaches, we propose a simple, general recipe to achieve this goal: in order to fit both natural language responses and robotic actions into the same format, we express the actions as text tokens and incorporate them directly into the training set of the model in the same way as natural language tokens. We refer to such category of models as vision-language-action models (VLA) and instantiate an example of such a model, which we call RT-2. Our extensive evaluation (6k evaluation trials) shows that our approach leads to performant robotic policies and enables RT-2 to obtain a range of emergent capabilities from Internet-scale training. This includes significantly improved generalization to novel objects, the ability to interpret commands not present in the robot training data (such as placing an object onto a particular number or icon), and the ability to perform rudimentary reasoning in response to user commands (such as picking up the smallest or largest object, or the one closest to another object). We further show that incorporating chain of thought reasoning allows RT-2 to perform multi-stage semantic reasoning, for example figuring out which object to pick up for use as an improvised hammer (a rock), or which type of drink is best suited for someone who is tired (an energy drink).
+</code>
+  </div>
+  <button class="button"  id="button-endnote1" onclick="CopyToClipboard('endnote');  ga('send', 'event', 'Ref Copy', 'CopyToClipboard', '/v229/pmlr-v229-zitkovich23a.enw', 15);">Copy to Clipboard</button>
+  <button class="button" id="button-endnote2" onclick="DownloadTexToFile('pmlr-v229-zitkovich23a.enw', 'endnote'); ga('send', 'event', 'Ref Downloads', 'Download', '/v229/pmlr-v229-zitkovich23a.enw', 16);">Download</button>
+  </div>
+</div>
+
+
+
+<div class="bibbuttongroup row row--justified">
+  <div class="bibbuttontext column">
+    APA
+  </div>
+  <div class="column">
+  <div class="codebox">
+    <code class="citecode" id="apa">Zitkovich, B., Yu, T., Xu, S., Xu, P., Xiao, T., Xia, F., Wu, J., Wohlhart, P., Welker, S., Wahid, A., Vuong, Q., Vanhoucke, V., Tran, H., Soricut, R., Singh, A., Singh, J., Sermanet, P., Sanketi, P.R., Salazar, G., Ryoo, M.S., Reymann, K., Rao, K., Pertsch, K., Mordatch, I., Michalewski, H., Lu, Y., Levine, S., Lee, L., Lee, T.E., Leal, I., Kuang, Y., Kalashnikov, D., Julian, R., Joshi, N.J., Irpan, A., Ichter, B., Hsu, J., Herzog, A., Hausman, K., Gopalakrishnan, K., Fu, C., Florence, P., Finn, C., Dubey, K.A., Driess, D., Ding, T., Choromanski, K.M., Chen, X., Chebotar, Y., Carbajal, J., Brown, N., Brohan, A., Arenas, M.G. & Han, K.. (2023). RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control. <i>Proceedings of The 7th Conference on Robot Learning</i>, in <i>Proceedings of Machine Learning Research</i> 229:2165-2183 Available from https://proceedings.mlr.press/v229/zitkovich23a.html.
+
+</code>
+  </div>
+  <button class="button"  id="button-apa1" onclick="CopyToClipboard('apa');  ga('send', 'event', 'Ref Copy', 'CopyToClipboard', '/v229/pmlr-v229-zitkovich23a.txt', 15);">Copy to Clipboard</button>
+  <button class="button" id="button-apa2" onclick="DownloadTexToFile('pmlr-v229-zitkovich23a.txt', 'apa'); ga('send', 'event', 'Ref Downloads', 'Download', '/v229/pmlr-v229-zitkovich23a.txt', 16);">Download</button>
+  </div>
+</div>
+
+<hr class="bibhr">
+
+
+  
+  <h4>Related Material</h4>
+  <div id="extras">
+    <ul>
+      <li><a href="https://proceedings.mlr.press/v229/zitkovich23a/zitkovich23a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://proceedings.mlr.press/v229/zitkovich23a/zitkovich23a.pdf', 10);">Download PDF</a></li>
+      <li><a href="https://openreview.net/forum?id=XMQgwiJ7KSX" target="_blank" onclick="ga('send', 'event', 'OpenReview site', 'Openreview', 'https://openreview.net/forum?id=XMQgwiJ7KSX', 10);">OpenReview</a></li>
+    </ul>
+  </div>
+  
+
+</article>
+
+
+
+
+
+
+
+
+
+      </div>
+    </main>
+
+
+<footer class="site-footer">
+  <div class="wrapper">
+    <p>This site last compiled Sun, 05 Jul 2026 14:57:48 +0000</p>
+      <div class="footer-left"><i><a href="https://github.com/mlresearch/v229">Github Account</a></i>
+      </div>
+      <div class="footer-right">Copyright &copy; <a href="https://proceedings.mlr.press">The authors and PMLR</a> 2026.<a href="https://twitter.com/MLResearchPress"><i class="icon-twitter"></i>&nbsp;MLResearchPress</a></div>
+  </div>
+</footer>
+
+
+
+
+
+</body>
+
+</html>

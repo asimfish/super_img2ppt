@@ -1,0 +1,10 @@
+"""Rasterize the actual exported PPTX PDF at exactly the source width; no registration."""
+import sys
+from pathlib import Path
+import pypdfium2 as pdfium
+build=Path(sys.argv[1]);out=Path(sys.argv[2])
+pdf=pdfium.PdfDocument(build/'render/editable.pdf');page=pdf[0]
+scale=1589/page.get_width();image=page.render(scale=scale).to_pil()
+assert image.size==(1589,1052),image.size
+image.save(out)
+print({'actual_pdf':str(build/'render/editable.pdf'),'pdf_size_pt':page.get_size(),'scale':scale,'image_size':image.size,'output':str(out)})

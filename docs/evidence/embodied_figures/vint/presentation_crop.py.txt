@@ -1,0 +1,8 @@
+from pathlib import Path
+import sys
+from PIL import Image
+b=Path(sys.argv[1]);im=Image.open(b/'actual_source_width.png').convert('RGB')
+assert im.size == (1435,437)
+assert set(im.crop((0,436,1435,437)).getdata()) == {(255,255,255)}, 'Extra row is not entirely white'
+im.crop((0,0,1435,436)).save(b/'actual_presentation.png')
+print('Cropped only verified all-white bottom row caused by PDF dimension rounding; no registration or rescaling.')

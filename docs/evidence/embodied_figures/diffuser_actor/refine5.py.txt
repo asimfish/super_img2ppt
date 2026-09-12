@@ -1,0 +1,7 @@
+import json
+p='/tmp/diffuser_fig2_zPTOQk/job/scene.json';s=json.load(open(p));E=s['slides'][0]['elements']
+for e in E:
+ if e['id'].endswith('_theta'):e['box'][1]-=5
+ if e['id'] in ['output_loc_args','output_rot_args']:
+  e['font_size']=20.5;e['text']='(o,l,c, τⁱ,i)';e['box'][2]=86
+json.dump(s,open(p,'w'),indent=2)

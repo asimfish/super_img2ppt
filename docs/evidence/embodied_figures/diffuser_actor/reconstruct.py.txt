@@ -1,0 +1,127 @@
+import json, math, hashlib
+from pathlib import Path
+from PIL import Image
+R=Path('/tmp/diffuser_fig2_zPTOQk'); J=R/'job'; (J/'assets').mkdir(exist_ok=True)
+src=Image.open(R/'figure1.png'); E=[]; assets=[]
+def add(kind,id,**kw):
+ e=dict(id=id,kind=kind,z=len(E)+1,**kw); E.append(e); return id
+def shp(id,b,fill=None,shape='rect',stroke=None,sw=1,**kw):return add('shape',id,box=b,shape=shape,fill=fill,stroke=stroke,stroke_width=sw,**kw)
+def poly(id,pts,fill,stroke=None,sw=1):
+ x=min(p[0] for p in pts);y=min(p[1] for p in pts);w=max(p[0] for p in pts)-x;h=max(p[1] for p in pts)-y
+ return shp(id,[x,y,w,h],fill,'polygon',stroke,sw,vertices=[[(a-x)/w,(b-y)/h] for a,b in pts])
+def txt(id,text,b,sz=20,color='#000000',font='Arial',bold=False,italic=False,container=None,align='left'):
+ kw=dict(box=b,text=text,font_size=sz,font_family=font,color=color,bold=bold,italic=italic,fit='strict',wrap=False,align=align,valign='top',reviewed=True) if False else dict(box=b,text=text,font_size=sz,font_family=font,color=color,bold=bold,italic=italic,fit='strict',wrap=False,align=align,valign='top')
+ if container:kw['container']=container
+ return add('text',id,**kw)
+def line(id,a,b,color='#000000',sw=2,arrow=False):return add('line',id,points=[a,b],stroke=color,stroke_width=sw,**({'arrow':True,'arrow_head':{'length':10,'width':9}} if arrow else {}))
+def crop(id,b):
+ x,y,w,h=b;p=J/'assets'/f'{id}.png';src.crop((x,y,x+w,y+h)).save(p);assets.append(dict(id=id,box=b,sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
+ return add('image',id,box=b,path=f'assets/{id}.png',contains_text=False,provenance=f'Exact text-free crop from Figure 1, Ke et al. 2025, source pixels {b}',image_fit='stretch')
+def pair(a,b,reason):
+ e=next(x for x in E if x['id']==a);e.setdefault('allow_overlap_with',[]).append(b);e['overlap_reason']=reason
+# (a) independent visual artwork crops. Input cameras and feature point clouds contain no labels.
+for id,b in [('depth',[67,25,70,118]),('rgb',[68,191,69,115]),('single_cloud',[350,162,148,164]),('camera_top',[552,25,43,88]),('camera_right',[762,24,62,88]),('camera_left',[545,181,48,88]),('multi_cloud',[556,116,278,239])]:crop(id,b)
+# native image encoder
+enc=poly('image_encoder',[(148,194),(241,216),(241,280),(148,304)],'#F3B184')
+txt('image_encoder_label','Image\nEncoder',[165,231, seventy:= seventy if False else  seventy if False else 70,50],19,container=enc,align='center')
+# snowflake frozen-network icon, native spokes and twigs
+for prefix,cx,cy in [('ice_image',165,217),('ice_language',1295,350)]:
+ for k in range(6):
+  a=k*math.pi/3;ux=math.cos(a);uy=math.sin(a)
+  line(f'{prefix}_{k}',[cx,cy],[cx+8*ux,cy+8*uy],sw=1)
+  for sign in [-1,1]:
+   a2=a+sign*2*math.pi/3
+   line(f'{prefix}_{k}_{sign}',[cx+5*ux,cy+5*uy],[cx+5*ux+3*math.cos(a2),cy+5*uy+3*math.sin(a2)],sw=.8)
+# feature grid native colored parallelograms, sampled cell centers from pixels
+for row in range(10):
+ for col in range(7):
+  x=269+col*7.2;y=215+col*3.7+row*6.7
+  color='#%02x%02x%02x'%src.getpixel((int(x+2),int(y+3)))[:3]
+  poly(f'feature_{row}_{col}',[(x,y),(x+5.7,y+3),(x+5.7,y+8.3),(x,y+5.3)],color)
+# connector layout
+for id,a,b in [('depth_h',[138,104],[348,104]),('depth_v',[348,104],[348,253]),('rgb_l',[43,253],[68,253]),('rgb_r',[137,253],[148,253]),('enc_grid',[243,253],[262,253]),('grid_cloud',[326,253],[385,253]),('camtop_l',[554,72],[520,48]),('camtop_r',[593,98],[612,114]),('camright_r',[817,51],[839,32]),('camright_l',[769,96],[742,125]),('camleft_l',[545,224],[513,219]),('camleft_r',[593,226],[625,235])]:line(id,a,b,arrow=id not in ['depth_h','depth_v','rgb_l','rgb_r'])
+line('rgb_arrow_upper',[18,251],[38,241],sw=2);line('rgb_arrow_lower',[18,251],[38,263],sw=2);line('rgb_arrow_notch',[38,241],[33,252],sw=2);line('rgb_arrow_notch2',[33,252],[38,263],sw=2)
+# slim colored arrows start at crop boundary; fused tails inside cloud disclosed
+for id,y,col in [('scene_yellow',264,'#F1B72E'),('scene_magenta',274,'#F73CCA'),('scene_teal',283,'#44B5AD')]:line(id,[834,y],[1038,y],col,1.3,True)
+# source gripper symbols (native joined strokes)
+def grip(id,cx,cy,ang,col,scale=1):
+ a=math.radians(ang)
+ def t(x,y):return [cx+scale*(x*math.cos(a)-y*math.sin(a)),cy+scale*(x*math.sin(a)+y*math.cos(a))]
+ for k,(aa,bb) in enumerate([((-8,-10),(-8,13)),((8,-10),(8,13)),((-8,-10),(8,-10)),((0,-10),(0,-21))]):line(f'{id}_{k}',t(*aa),t(*bb),col,5*scale)
+for args in [('prop',915,31,32,'#7836A8',.85),('noised0',914,96,7,'#B6C9E6',.85),('noised1',914,132,-64,'#B6C9E6',.85),('noised2',914,179,68,'#B6C9E6',.85),('floating',625,160,-65,'#B6C9E6',1.25)]:grip(*args)
+# MLP blocks and labels
+for i,(y,col) in enumerate([(10,'#7836A8'),(74,'#5B9CDD'),(117,'#5B9CDD'),(159,'#5B9CDD')]):
+ s=shp(f'mlp_{i}',[954,y,65,36],None,stroke=col,sw=1.5);txt(f'mlp_text_{i}','MLP',[964,y+5,49,29],20,col,bold=i<2,container=s)
+# token cubes native three-face geometry
+def cube(id,x,y,col,top,side):
+ shp(id+'_front',[x,y+8,29,29],col)
+ poly(id+'_top',[(x,y+8),(x+9,y),(x+38,y),(x+29,y+8)],top)
+ poly(id+'_side',[(x+29,y+8),(x+38,y),(x+38,y+29),(x+29,y+37)],side)
+for args in [('proptoken',1207,10,'#7430A5','#8F53B5','#64248F'),('noise0',1207,74,'#BEDAEA','#D4E0F1','#94ACBE'),('noise1',1207,116,'#BEDAEA','#D4E0F1','#94ACBE'),('noise2',1207,158,'#BEDAEA','#D4E0F1','#94ACBE'),('scene0',1207,215,'#FFB92D','#FFCE5B','#DFA12D'),('scene1',1208,259,'#E848BE','#F374D1','#C73BA4'),('scene2',1209,317,'#41B3AA','#6BC4BC','#349C96'),('language0',1297,260,'#A6CF8A','#B9D89E','#8EBB71'),('language1',1359,259,'#A6CF8A','#B9D89E','#8EBB71')]:cube(*args)
+txt('proprio','Proprioception\ntoken',[1048,8,139,45],18,'#7836A8',align='center')
+txt('prop_c','c',[1149,25,30,32],28,'#7836A8','Times New Roman',bold=True,italic=True)
+txt('noised','Noised trajectory\ntokens',[1043,99,146,48],18,'#5B9CDD',align='center')
+txt('noise_tau','τ',[1110,145,30,34],31,'#5B9CDD','Times New Roman',bold=True,italic=True);txt('noise_i','i',[1129,140,12,22],18,'#5B9CDD','Times New Roman',italic=True)
+txt('scene_3d','3D',[1052,264,26,27],18,'#F1B72E');txt('scene_word','scene',[1080,264,48,27],18,'#F73CCA');txt('token_word','tokens',[1131,264,56,27],18,'#44B5AD');txt('scene_o','o',[1113,291,31,36],31,font='Times New Roman',bold=True,italic=True)
+txt('language_tokens','Language tokens',[1422,263,158,29],18,'#76AA4E');txt('lang_l','l',[1488,293,25,35],29,'#76AA4E','Times New Roman',italic=True)
+txt('scene_dots','⋮',[1222,294,16,28],20,font='DejaVu Sans');txt('lang_dots','...',[1335,264,25,26],20)
+trans=poly('transformer',[(1280,70),(1406,101),(1406,173),(1280,203)],'#EDEDED')
+txt('transformer_label','Denoising\nTransformer',[1286,112,116,52],20,container=trans,align='center')
+lang=poly('language_encoder',[(1288,316),(1412,316),(1424,366),(1276,366)],'#C6E0B1')
+txt('language_encoder_label','Language\nEncoder',[1310,318,103,49],18,container=lang,align='center')
+for id,a,b in [('denoise_step_arrow',[1343,60],[1343,87]),('noise_transformer',[1251,141],[1279,141]),('language_transformer',[1344,259],[1344,194]),('transformer_output',[1408,141],[1436,141])]:line(id,a,b,arrow=True)
+txt('denoising_step','Denoising step',[1283,32,132,27],18);txt('denoising_i','i',[1410,27,17,33],29,font='Times New Roman',italic=True)
+shp('output_equations',[1437,105,121,63],None,stroke='#000000',sw=1.3)
+# Equation is native italic text plus positioned superscript/subscript elements.
+def eps(id,x,y,sz=20,container=None):
+ txt(id+'_epsilon','ϵ',[x,y,13,27],sz,font='Times New Roman',italic=True,container=container)
+ txt(id+'_loc','loc',[x+10,y-3,25,17],sz*.62,font='Times New Roman',italic=True,container=container)
+ txt(id+'_theta','θ',[x+7,y+15,11,15],sz*.58,font='Times New Roman',italic=True,container=container)
+def eq(id,x,y,sup,tail=False):
+ txt(id+'_epsilon','ϵ',[x,y,13,25],20,font='Times New Roman',italic=True,container='output_equations' if tail else None)
+ txt(id+'_sup',sup,[x+10,y-4,25,17],12,font='Times New Roman',italic=True)
+ txt(id+'_theta','θ',[x+7,y+14,11,16],12,font='Times New Roman',italic=True)
+ if tail:txt(id+'_args','(o, l, c, τⁱ, i)',[x+32,y-1, eighty:= eighty if False else 83,27],18,font='Times New Roman',italic=True)
+eq('output_loc',1443,113,'loc',True);eq('output_rot',1443,143,'rot',True)
+txt('prompt','“Open the drawer”',[1238,385,307,36],25,font='Courier New')
+txt('unprojection','2D to 3D unprojection',[180,367,287,33],22);txt('multiview','Multi-view aggregation',[592,367,286,33],22)
+txt('panel_a','(a) 3D Diffuser Actor model architecture',[582,421,573,37],25)
+line('rule_a',[45,461],[1550,461],'#E6E6E6',2.5)
+# (b) exact text-free pointcloud trajectory frames. Five crops have complex robot/gripper artwork.
+for id,b in [('denoiseN',[41,482,204,177]),('denoiseNm1',[333,482,234,177]),('denoise2',[689,482,238,177]),('denoise1',[1001,482,232,177]),('denoise0',[1321,482,224,177])]:crop(id,b)
+# mathematical labels
+for id,x,sup in [('tauN',104,'N'),('tauNm1',424,'N−1'),('tau2',800,'2'),('tau1',1111,'1'),('tau0',1523,'0')]:
+ txt(id,'τ',[x,658,25,34],30,font='Times New Roman',bold=True,italic=True)
+ txt(id+'_sup',sup,[x+14,654,49,20],18,font='Times New Roman',italic=True)
+txt('gaussian','∼N(0, 1)',[138,658,100,35],27,font='Times New Roman',bold=True)
+txt('trajectory','Trajectory prediction',[1325,658,196,33],22)
+txt('denoising_dots','...',[605,554,66,53],44)
+for i,x in enumerate([242,925,1230]):
+ s=shp(f'noise_box_{i}',[x,633,79,35],'#FFFFFF',stroke='#251CFF',sw=1.7)
+ eq(f'step_loc_{i}',x+7,643,'loc');eq(f'step_rot_{i}',x+38,643,'rot')
+ txt(f'comma_{i}',',',[x+31,644,9,20],18,font='Times New Roman')
+ # joins visible at source image edges; short bend approximated by two editable segments
+ line(f'curve_in_{i}',[x-10,622],[x-6,634],'#251CFF',2)
+ line(f'curve_join_{i}',[x-6,634],[x,639],'#251CFF',2)
+ line(f'curve_out_{i}',[x+79,646],[x+95,626],'#251CFF',2,True)
+line('denoising_progress',[284,710],[1306,710],'#716DFF',5,True)
+# progress head matches wider source
+E[-1]['arrow_head']={'length':40,'width':25}
+txt('panel_b','(b) Denoising process',[679,722,375,39],25)
+line('rule_b',[15,769],[1585,769],'#E6E6E6',2.5)
+# (c) real photographs, thumbnails remain independently cropped assets
+for id,b in [('blocks1',[15,785,250,177]),('blocks2',[270,785,250,177]),('blocks3',[526,785,250,177]),('cups1',[807,785,250,177]),('cups2',[1064,785,250,177]),('cups3',[1319,785,250,177]),('blocks_inset',[7,904,91,64]),('cups_inset',[799,904,91,64])]:crop(id,b)
+pair('blocks_inset','blocks1','Source inset photograph sits over lower-left corner of blocks first frame.')
+pair('cups_inset','cups1','Source inset photograph sits over lower-left corner of cups first frame.')
+txt('blocks_prompt','“Put the blocks in a triangle on the plate”',[124,971,656,37],25,font='Courier New',italic=True)
+txt('cups_prompt','“Stack the cups”',[1073,971,280,37],25,font='Courier New',italic=True)
+txt('panel_c','(c) Real-world multi-task manipulation tasks',[560,1012,650,38],25)
+# intentional local layering only: frozen icons inside encoder panels
+for e in E:
+ if e['id'].startswith('ice_image'):e['container']='image_encoder';e['z']=500+e['z']
+ if e['id'].startswith('ice_language'):e['container']='language_encoder';e['z']=500+e['z']
+# Thin arrow-tail joins source-visible at camera/cloud crop boundaries.
+# no generic overlaps are exempted.
+scene={'version':1,'fonts':{'latin':['Arial','Times New Roman','DejaVu Sans'],'cjk':['Arial']},'slides':[{'id':'page_001','width':1589,'height':1052,'source':'pages/page_001/source.png','background':'#FFFFFF','reviewed':True,'notes':'Figure 1, complete panels a–c. Ke, Gkanatsios & Fragkiadaki, 3D Diffuser Actor, CoRL 2024 / PMLR 270 (2025). Image-only reconstruction from official PDF page4 rendered at 4x. Native labels, modules, tokens and connectors; local text-free photographs and point-cloud artwork retained as movable raster crops. Main multiview pointcloud crop contains three short colored arrow tails fused into its artwork. Source typography approximated with locally available Arial, Times New Roman and Courier New.','elements':E}]}
+(J/'scene.json').write_text(json.dumps(scene,indent=2));(R/'assets_manifest.json').write_text(json.dumps(assets,indent=2))
+print(len(E),'elements',len(assets),'raster assets',sum(a['box'][2]*a['box'][3] for a in assets)/(1589*1052))

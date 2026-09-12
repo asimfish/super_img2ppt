@@ -1,0 +1,7 @@
+#!/bin/zsh
+set -euo pipefail
+TASK_ROOT="${0:A:h}"
+BUILD_OUT="${1:?Supply a new output directory}"
+export PATH="/opt/homebrew/bin:$PATH"
+uv run --no-sync --project /Users/liyufeng/Code/super_img2ppt super-img2ppt build "$TASK_ROOT/job/scene.json" --out "$BUILD_OUT" --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype --font-dir /System/Library/Fonts/Supplemental
+/Users/liyufeng/Code/super_img2ppt/.venv/bin/python "$TASK_ROOT/render_source_width.py" "$BUILD_OUT" "$BUILD_OUT/actual_source_width.png"

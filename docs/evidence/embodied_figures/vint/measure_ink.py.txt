@@ -1,0 +1,12 @@
+import json,sys
+from PIL import Image
+from pathlib import Path
+root=Path('/tmp/vint_full_20260912');build=Path(sys.argv[1]);s=Image.open(root/'source.png').convert('RGB');a=Image.open(build/'actual_source_width.png').convert('RGB')
+rois={'observations':[38,7,192,36],'parameters':[410,58,552,84],'attention':[897,104,932,300],'goal_label':[7,379,225,407],'transformer':[899,342,1049,371]}
+result={'method':'Diagnostic after visual inspection; fixed source-coordinate ROIs; RGB max<160; no registration; edge differences actual minus source; no blind/heldout claim','rois':{}}
+for name,(x1,y1,x2,y2) in rois.items():
+ boxes=[]
+ for im in [s,a]:
+  mask=Image.new('1',(x2-x1,y2-y1));mask.putdata([max(p)<160 for p in im.crop((x1,y1,x2,y2)).getdata()]);b=mask.getbbox();boxes.append([b[0]+x1,b[1]+y1,b[2]+x1,b[3]+y1])
+ result['rois'][name]={'roi':[x1,y1,x2,y2],'source_ink_xyxy':boxes[0],'actual_ink_xyxy':boxes[1],'delta_px':[v-u for u,v in zip(*boxes)]}
+(build/'ink_diagnostic.json').write_text(json.dumps(result,indent=2));print(json.dumps(result,indent=2))

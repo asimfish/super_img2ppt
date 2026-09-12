@@ -1,0 +1,8 @@
+import sys
+from pathlib import Path
+import pypdfium2 as pdfium
+build=Path(sys.argv[1]);page=pdfium.PdfDocument(str(build/'render/editable.pdf'))[0]
+scale=1435/page.get_width()
+image=page.render(scale=scale).to_pil()
+image.save(build/'actual_source_width.png')
+print({'pdf_page_points':page.get_size(),'scale':scale,'actual_pixels':image.size})

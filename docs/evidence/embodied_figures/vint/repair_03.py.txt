@@ -1,0 +1,4 @@
+import json
+p='/tmp/vint_full_20260912/job/scene.json';s=json.load(open(p));E={e['id']:e for e in s['slides'][0]['elements']}
+for i in ['attention_1_label','attention_2_label']:E[i]['box'][0]+=2.5;E[i]['box'][1]-=11
+json.dump(s,open(p,'w'),indent=2)

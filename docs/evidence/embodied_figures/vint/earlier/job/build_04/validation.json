@@ -1,0 +1,1823 @@
+{
+  "status": "review",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "pass",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "encoder_stack_0",
+            "obs_symbol"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "encoder_stack_1",
+            "obs_512"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "repeat",
+            "input_token_frame"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "past",
+            "rgb"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "goal_label",
+            "fusion"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "tokens_label",
+            "token_dim"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "transformer",
+            "layers"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "layers",
+            "param"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "temporal",
+            "temporal_dim"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "normalized",
+            "normalized_dim"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "image": 3,
+            "shape": 63,
+            "line": 25,
+            "text": 27
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "encoder_stack_0",
+                "encoder_stack_1"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 58901.04
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "encoder_stack_2"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 55175.76
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "encoder_stack_3"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 51554.16
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "encoder_stack_4"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 48036.24
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "encoder_stack_5"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 44622.0
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "observation_arrow_1"
+              ],
+              "reason": "Source observation arrows traverse exposed rear encoder cards before their own stacked card.",
+              "area_px2": 19.44
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "observation_arrow_2"
+              ],
+              "reason": "Source observation arrows traverse exposed rear encoder cards before their own stacked card.",
+              "area_px2": 34.24
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "observation_arrow_3"
+              ],
+              "reason": "Source observation arrows traverse exposed rear encoder cards before their own stacked card.",
+              "area_px2": 45.76
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "observation_arrow_4"
+              ],
+              "reason": "Source observation arrows traverse exposed rear encoder cards before their own stacked card.",
+              "area_px2": 57.28
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "observation_arrow_5"
+              ],
+              "reason": "Source observation arrows traverse exposed rear encoder cards before their own stacked card.",
+              "area_px2": 68.8
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "obs_efficient"
+              ],
+              "reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+              "area_px2": 14595.75
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "obs_efficient_label"
+              ],
+              "reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+              "area_px2": 4466.0
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "obs_parameters"
+              ],
+              "reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+              "area_px2": 2928.0
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "obs_feature_0"
+              ],
+              "reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+              "area_px2": 1536.0
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "obs_feature_1"
+              ],
+              "reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+              "area_px2": 992.0
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "obs_feature_2"
+              ],
+              "reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+              "area_px2": 544.0
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "obs_encoding_0"
+              ],
+              "reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "obs_encoding_1"
+              ],
+              "reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "obs_encoding_2"
+              ],
+              "reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "obs_encoding_3"
+              ],
+              "reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "obs_encoding_4"
+              ],
+              "reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "obs_encoding_5"
+              ],
+              "reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "obs_encoding_6"
+              ],
+              "reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_0",
+                "obs_encoding_7"
+              ],
+              "reason": "Source foreground observation encoder content lies above intentionally occluded rear encoder cards.",
+              "area_px2": 102.5
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "encoder_stack_2"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 58901.04
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "encoder_stack_3"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 55175.76
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "encoder_stack_4"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 51554.16
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "encoder_stack_5"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 48036.24
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "observation_arrow_2"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 19.44
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "observation_arrow_3"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 34.24
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "observation_arrow_4"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 45.76
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "observation_arrow_5"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 57.28
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "obs_efficient"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 14820.39
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "obs_efficient_label"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 4466.0
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "obs_parameters"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 2928.0
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "obs_feature_0"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 1568.0
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "obs_feature_1"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 992.0
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "obs_feature_2"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 544.0
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "obs_encoding_0"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "obs_encoding_1"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "obs_encoding_2"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "obs_encoding_3"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "obs_encoding_4"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "obs_encoding_5"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "obs_encoding_6"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "obs_encoding_7"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_1",
+                "obs_symbol"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 767.6
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "encoder_stack_3"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 58901.04
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "encoder_stack_4"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 55175.76
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "encoder_stack_5"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 51554.16
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "observation_arrow_3"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 19.44
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "observation_arrow_4"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 34.24
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "observation_arrow_5"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 45.76
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "obs_efficient"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 14829.75
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "obs_efficient_label"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 4466.0
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "obs_parameters"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 2928.0
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "obs_feature_0"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 1568.0
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "obs_feature_1"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 992.0
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "obs_feature_2"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 544.0
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "obs_encoding_0"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "obs_encoding_1"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "obs_encoding_2"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "obs_encoding_3"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "obs_encoding_4"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "obs_encoding_5"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "obs_encoding_6"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "obs_encoding_7"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "obs_512"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 380.36
+            },
+            {
+              "elements": [
+                "encoder_stack_2",
+                "obs_symbol"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 1041.2
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "encoder_stack_4"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 58901.04
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "encoder_stack_5"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 55175.76
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "observation_arrow_4"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 19.44
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "observation_arrow_5"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 34.24
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "obs_efficient"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 14829.75
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "obs_efficient_label"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 4466.0
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "obs_parameters"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 2928.0
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "obs_feature_0"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 1568.0
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "obs_feature_1"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 992.0
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "obs_feature_2"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 544.0
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "obs_encoding_0"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "obs_encoding_1"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "obs_encoding_2"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "obs_encoding_3"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "obs_encoding_4"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "obs_encoding_5"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "obs_encoding_6"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "obs_encoding_7"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "obs_512"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 855.56
+            },
+            {
+              "elements": [
+                "encoder_stack_3",
+                "obs_symbol"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 1314.8
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "encoder_stack_5"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 58901.04
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "observation_arrow_5"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 19.44
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "obs_efficient"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 14829.75
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "obs_efficient_label"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 4466.0
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "obs_parameters"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 2928.0
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "obs_feature_0"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 1568.0
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "obs_feature_1"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 992.0
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "obs_feature_2"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 544.0
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "obs_encoding_0"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "obs_encoding_1"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "obs_encoding_2"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "obs_encoding_3"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "obs_encoding_4"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "obs_encoding_5"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "obs_encoding_6"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "obs_encoding_7"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 122.5
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "obs_512"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 1434.44
+            },
+            {
+              "elements": [
+                "encoder_stack_4",
+                "obs_symbol"
+              ],
+              "reason": "Source Figure 2 shows six intentionally occluded rounded encoder cards in this exact stack.",
+              "area_px2": 1482.0
+            },
+            {
+              "elements": [
+                "token_to_attention",
+                "addition_circle"
+              ],
+              "reason": "Source horizontal flow passes through the sum circle center.",
+              "area_px2": 88.708
+            },
+            {
+              "elements": [
+                "token_to_attention",
+                "addition_horizontal"
+              ],
+              "reason": "Source horizontal flow passes through the sum circle center.",
+              "area_px2": 84.8
+            },
+            {
+              "elements": [
+                "token_to_attention",
+                "addition_vertical"
+              ],
+              "reason": "The plus vertical meets the horizontal input flow at its center.",
+              "area_px2": 2.56
+            },
+            {
+              "elements": [
+                "addition_horizontal",
+                "addition_vertical"
+              ],
+              "reason": "Source horizontal flow passes through the sum circle center.",
+              "area_px2": 2.56
+            },
+            {
+              "elements": [
+                "stopwatch_stem",
+                "stopwatch_button"
+              ],
+              "reason": "The source stopwatch top button deliberately joins and covers the upper stem.",
+              "area_px2": 44.0
+            }
+          ],
+          "text_layouts": {
+            "obs_efficient_label": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 146.75,
+              "height_px": 25.3,
+              "available_width_px": 154,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 147.25,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "EfficientNet-B0"
+              ]
+            },
+            "obs_parameters": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 110.0,
+              "height_px": 18.4,
+              "available_width_px": 122,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 110.5,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "5M Parameters"
+              ]
+            },
+            "obs_512": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 43.75,
+              "height_px": 18.4,
+              "available_width_px": 66,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 44.25,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "512-D"
+              ]
+            },
+            "obs_symbol": {
+              "scale": 1,
+              "effective_font_size_px": 32,
+              "width_px": 20.75,
+              "height_px": 36.8,
+              "available_width_px": 38,
+              "available_height_px": 39,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 21.25,
+              "required_height_px": 37.3,
+              "fits": true,
+              "lines": [
+                "ψ"
+              ]
+            },
+            "goal_efficient_label": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 146.75,
+              "height_px": 25.3,
+              "available_width_px": 154,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 147.25,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "EfficientNet-B0"
+              ]
+            },
+            "goal_parameters": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 110.0,
+              "height_px": 18.4,
+              "available_width_px": 122,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 110.5,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "5M Parameters"
+              ]
+            },
+            "goal_512": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 43.75,
+              "height_px": 18.4,
+              "available_width_px": 66,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 44.25,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "512-D"
+              ]
+            },
+            "goal_symbol": {
+              "scale": 1,
+              "effective_font_size_px": 32,
+              "width_px": 16.5,
+              "height_px": 36.8,
+              "available_width_px": 38,
+              "available_height_px": 39,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 17.0,
+              "required_height_px": 37.3,
+              "fits": true,
+              "lines": [
+                "ϕ"
+              ]
+            },
+            "repeat": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 17.5,
+              "height_px": 18.4,
+              "available_width_px": 30,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.0,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "x6"
+              ]
+            },
+            "attention_1_label": {
+              "scale": 1,
+              "effective_font_size_px": 27,
+              "width_px": 165.5,
+              "height_px": 31.5,
+              "available_width_px": 185,
+              "available_height_px": 37,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 166.0,
+              "required_height_px": 32.0,
+              "fits": true,
+              "lines": [
+                "Self-Attention"
+              ]
+            },
+            "attention_2_label": {
+              "scale": 1,
+              "effective_font_size_px": 27,
+              "width_px": 165.5,
+              "height_px": 31.5,
+              "available_width_px": 185,
+              "available_height_px": 37,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 166.0,
+              "required_height_px": 32.0,
+              "fits": true,
+              "lines": [
+                "Self-Attention"
+              ]
+            },
+            "observations": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 141.0,
+              "height_px": 27.6,
+              "available_width_px": 190,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 141.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Observations"
+              ]
+            },
+            "past": {
+              "scale": 1,
+              "effective_font_size_px": 17,
+              "width_px": 126.0,
+              "height_px": 19.55,
+              "available_width_px": 172,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 126.5,
+              "required_height_px": 20.05,
+              "fits": true,
+              "lines": [
+                "Past 5 timesteps"
+              ]
+            },
+            "rgb": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 100.25,
+              "height_px": 18.4,
+              "available_width_px": 137,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 100.75,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "85x64x3 RGB"
+              ]
+            },
+            "goal_label": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 199.0,
+              "height_px": 26.45,
+              "available_width_px": 245,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 199.5,
+              "required_height_px": 26.95,
+              "fits": true,
+              "lines": [
+                "Goal + Observation"
+              ]
+            },
+            "fusion": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 89.25,
+              "height_px": 18.4,
+              "available_width_px": 140,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 89.75,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "Early Fusion"
+              ]
+            },
+            "position_label": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 141.75,
+              "height_px": 18.4,
+              "available_width_px": 171,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 142.25,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "Positional Encoding"
+              ]
+            },
+            "tokens_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 74.0,
+              "height_px": 20.7,
+              "available_width_px": 98,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 74.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "7 Tokens"
+              ]
+            },
+            "token_dim": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 52.0,
+              "height_px": 18.4,
+              "available_width_px": 90,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 52.5,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "x512-D"
+              ]
+            },
+            "transformer": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 131.0,
+              "height_px": 27.6,
+              "available_width_px": 170,
+              "available_height_px": 33,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 131.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Transformer"
+              ]
+            },
+            "layers": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 131.0,
+              "height_px": 18.4,
+              "available_width_px": 160,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 131.5,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "4 Layers, 4 Heads"
+              ]
+            },
+            "param": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 119.0,
+              "height_px": 18.4,
+              "available_width_px": 152,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 119.5,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "21M Parameters"
+              ]
+            },
+            "actions": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 59.25,
+              "height_px": 20.7,
+              "available_width_px": 88,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 59.75,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Actions"
+              ]
+            },
+            "temporal": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 192.75,
+              "height_px": 26.45,
+              "available_width_px": 225,
+              "available_height_px": 33,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 193.25,
+              "required_height_px": 26.95,
+              "fits": true,
+              "lines": [
+                "Temporal Distance"
+              ]
+            },
+            "temporal_dim": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 116.5,
+              "height_px": 18.4,
+              "available_width_px": 171,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 117.0,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "1-D, Continuous"
+              ]
+            },
+            "normalized": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 197.75,
+              "height_px": 26.45,
+              "available_width_px": 238,
+              "available_height_px": 32,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 198.25,
+              "required_height_px": 26.95,
+              "fits": true,
+              "lines": [
+                "Normalized Actions"
+              ]
+            },
+            "normalized_dim": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 133.5,
+              "height_px": 18.4,
+              "available_width_px": 195,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 134.0,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "3x5-D, Continuous"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "review",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [
+        {
+          "code": "rendered_ink_width_drift",
+          "severity": "warning",
+          "slide": "page_001",
+          "element": "tokens_label",
+          "measured_ink_width_px": 72.75,
+          "rendered_ink_width_px": 69.832,
+          "message": "Visible text width differs from the measured font by over 3% and 2 px; inspect mixed-script spacing and compare the source"
+        }
+      ],
+      "text_boxes": [
+        {
+          "slide": "page_001",
+          "element": "obs_efficient_label",
+          "expected": "EfficientNet-B0",
+          "rendered": "EfficientNet-B0",
+          "rendered_normalized": "EfficientNet-B0",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 144.25,
+          "rendered_ink_width_px": 143.758
+        },
+        {
+          "slide": "page_001",
+          "element": "obs_parameters",
+          "expected": "5M Parameters",
+          "rendered": "5M Parameters",
+          "rendered_normalized": "5M Parameters",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-ItalicMT"
+          ],
+          "measured_ink_width_px": 109.0,
+          "rendered_ink_width_px": 107.862
+        },
+        {
+          "slide": "page_001",
+          "element": "obs_512",
+          "expected": "512-D",
+          "rendered": "512-D",
+          "rendered_normalized": "512-D",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-ItalicMT"
+          ],
+          "measured_ink_width_px": 42.75,
+          "rendered_ink_width_px": 42.174
+        },
+        {
+          "slide": "page_001",
+          "element": "obs_symbol",
+          "expected": "ψ",
+          "rendered": "ψ ",
+          "rendered_normalized": "ψ ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 18.75,
+          "rendered_ink_width_px": 18.459
+        },
+        {
+          "slide": "page_001",
+          "element": "goal_efficient_label",
+          "expected": "EfficientNet-B0",
+          "rendered": "EfficientNet-B0",
+          "rendered_normalized": "EfficientNet-B0",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 144.25,
+          "rendered_ink_width_px": 143.758
+        },
+        {
+          "slide": "page_001",
+          "element": "goal_parameters",
+          "expected": "5M Parameters",
+          "rendered": "5M Parameters",
+          "rendered_normalized": "5M Parameters",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-ItalicMT"
+          ],
+          "measured_ink_width_px": 109.0,
+          "rendered_ink_width_px": 107.862
+        },
+        {
+          "slide": "page_001",
+          "element": "goal_512",
+          "expected": "512-D",
+          "rendered": "512-D",
+          "rendered_normalized": "512-D",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-ItalicMT"
+          ],
+          "measured_ink_width_px": 42.75,
+          "rendered_ink_width_px": 42.174
+        },
+        {
+          "slide": "page_001",
+          "element": "goal_symbol",
+          "expected": "ϕ",
+          "rendered": "ϕ ",
+          "rendered_normalized": "ϕ ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 14.75,
+          "rendered_ink_width_px": 14.428
+        },
+        {
+          "slide": "page_001",
+          "element": "repeat",
+          "expected": "x6",
+          "rendered": "x6",
+          "rendered_normalized": "x6",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-ItalicMT"
+          ],
+          "measured_ink_width_px": 17.5,
+          "rendered_ink_width_px": 17.029
+        },
+        {
+          "slide": "page_001",
+          "element": "attention_1_label",
+          "expected": "Self-Attention",
+          "rendered": "S\r\nelf\r\n-\r\nAt\r\nt\r\ne\r\nn\r\ntio\r\nn",
+          "rendered_normalized": "S\r\nelf\r\n-\r\nAt\r\nt\r\ne\r\nn\r\ntio\r\nn",
+          "matches": true,
+          "actual_fonts": [
+            "HelveticaNeue"
+          ],
+          "measured_ink_width_px": 163.0,
+          "rendered_ink_width_px": 162.274
+        },
+        {
+          "slide": "page_001",
+          "element": "attention_2_label",
+          "expected": "Self-Attention",
+          "rendered": "S\r\nelf\r\n-\r\nAt\r\nt\r\ne\r\nn\r\ntio\r\nn",
+          "rendered_normalized": "S\r\nelf\r\n-\r\nAt\r\nt\r\ne\r\nn\r\ntio\r\nn",
+          "matches": true,
+          "actual_fonts": [
+            "HelveticaNeue"
+          ],
+          "measured_ink_width_px": 163.0,
+          "rendered_ink_width_px": 162.274
+        },
+        {
+          "slide": "page_001",
+          "element": "observations",
+          "expected": "Observations",
+          "rendered": "Observations",
+          "rendered_normalized": "Observations",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 139.25,
+          "rendered_ink_width_px": 139.058
+        },
+        {
+          "slide": "page_001",
+          "element": "past",
+          "expected": "Past 5 timesteps",
+          "rendered": "Past 5 timesteps\r\n85643 RGB",
+          "rendered_normalized": "Past 5 timesteps\r\n85643 RGB",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 124.25,
+          "rendered_ink_width_px": 122.688
+        },
+        {
+          "slide": "page_001",
+          "element": "rgb",
+          "expected": "85x64x3 RGB",
+          "rendered": "85x64x3 RGB",
+          "rendered_normalized": "85x64x3 RGB",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-ItalicMT"
+          ],
+          "measured_ink_width_px": 99.0,
+          "rendered_ink_width_px": 97.862
+        },
+        {
+          "slide": "page_001",
+          "element": "goal_label",
+          "expected": "Goal + Observation",
+          "rendered": "Goal + Observation",
+          "rendered_normalized": "Goal + Observation",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 196.5,
+          "rendered_ink_width_px": 195.544
+        },
+        {
+          "slide": "page_001",
+          "element": "fusion",
+          "expected": "Early Fusion",
+          "rendered": "Early Fusion",
+          "rendered_normalized": "Early Fusion",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-ItalicMT"
+          ],
+          "measured_ink_width_px": 88.25,
+          "rendered_ink_width_px": 87.398
+        },
+        {
+          "slide": "page_001",
+          "element": "position_label",
+          "expected": "Positional Encoding",
+          "rendered": "Positional Encoding",
+          "rendered_normalized": "Positional Encoding",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-ItalicMT"
+          ],
+          "measured_ink_width_px": 141.25,
+          "rendered_ink_width_px": 139.412
+        },
+        {
+          "slide": "page_001",
+          "element": "tokens_label",
+          "expected": "7 Tokens",
+          "rendered": "7 Tokens",
+          "rendered_normalized": "7 Tokens",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 72.75,
+          "rendered_ink_width_px": 69.832
+        },
+        {
+          "slide": "page_001",
+          "element": "token_dim",
+          "expected": "x512-D",
+          "rendered": "x512-D",
+          "rendered_normalized": "x512-D",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-ItalicMT"
+          ],
+          "measured_ink_width_px": 52.0,
+          "rendered_ink_width_px": 51.231
+        },
+        {
+          "slide": "page_001",
+          "element": "transformer",
+          "expected": "Transformer",
+          "rendered": "Transformer\r\n4 L4 Hd",
+          "rendered_normalized": "Transformer\r\n4 L4 Hd",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 130.5,
+          "rendered_ink_width_px": 129.404
+        },
+        {
+          "slide": "page_001",
+          "element": "layers",
+          "expected": "4 Layers, 4 Heads",
+          "rendered": "4 Layers, 4 Heads",
+          "rendered_normalized": "4 Layers, 4 Heads",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-ItalicMT"
+          ],
+          "measured_ink_width_px": 130.5,
+          "rendered_ink_width_px": 128.645
+        },
+        {
+          "slide": "page_001",
+          "element": "param",
+          "expected": "21M Parameters",
+          "rendered": "21M Parameters",
+          "rendered_normalized": "21M Parameters",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-ItalicMT"
+          ],
+          "measured_ink_width_px": 118.25,
+          "rendered_ink_width_px": 116.872
+        },
+        {
+          "slide": "page_001",
+          "element": "actions",
+          "expected": "Actions",
+          "rendered": "Actions",
+          "rendered_normalized": "Actions",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 58.75,
+          "rendered_ink_width_px": 58.002
+        },
+        {
+          "slide": "page_001",
+          "element": "temporal",
+          "expected": "Temporal Distance",
+          "rendered": "Temporal Distance\r\n1DCti",
+          "rendered_normalized": "Temporal Distance\r\n1DCti",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 191.5,
+          "rendered_ink_width_px": 188.526
+        },
+        {
+          "slide": "page_001",
+          "element": "temporal_dim",
+          "expected": "1-D, Continuous",
+          "rendered": "1-D, Continuous",
+          "rendered_normalized": "1-D, Continuous",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-ItalicMT"
+          ],
+          "measured_ink_width_px": 114.25,
+          "rendered_ink_width_px": 112.846
+        },
+        {
+          "slide": "page_001",
+          "element": "normalized",
+          "expected": "Normalized Actions",
+          "rendered": "Normalized Actions\r\n35DCti",
+          "rendered_normalized": "Normalized Actions\r\n35DCti",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 195.25,
+          "rendered_ink_width_px": 193.726
+        },
+        {
+          "slide": "page_001",
+          "element": "normalized_dim",
+          "expected": "3x5-D, Continuous",
+          "rendered": "3x5-D, Continuous",
+          "rendered_normalized": "3x5-D, Continuous",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-ItalicMT"
+          ],
+          "measured_ink_width_px": 132.75,
+          "rendered_ink_width_px": 131.153
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "2976352c062fe189468c9326f78669b3a20de2262d2a13996720a832543e2fca",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "page_001",
+      "mean_absolute_pixel_error": 0.032341,
+      "comparison": "page_001_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+import json
+p='/tmp/vint_full_20260912/job/scene.json';s=json.load(open(p));E={e['id']:e for e in s['slides'][0]['elements']}
+for e in E.values():
+ if e['kind']=='text' and e.get('italic') and e['id'] not in ['obs_symbol','goal_symbol']:e['font_size']=16
+for i in ['obs_symbol','goal_symbol']:E[i]['font_family']='Times New Roman';E[i]['box'][0]+=2;E[i]['box'][1]-=3
+for i in ['attention_1_label','attention_2_label']:E[i]['font_family']='Helvetica Neue';E[i]['font_size']=27
+# Major sans labels source ink is about 3% narrower than first Arial candidate.
+for i in ['goal_label','temporal','normalized']:E[i]['font_size']=23
+json.dump(s,open(p,'w'),indent=2)

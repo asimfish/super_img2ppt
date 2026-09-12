@@ -1,0 +1,51 @@
+import json
+from pathlib import Path
+p=Path('/tmp/diffuser_fig2_zPTOQk/job/scene.json');s=json.loads(p.read_text());E=s['slides'][0]['elements'];d={e['id']:e for e in E}
+def pair(a,b,why):
+ e=d[a];e.setdefault('allow_overlap_with',[]).append(b);e['overlap_reason']=why
+# source-specific frames have whitespace available; enlarge to measured line boxes without moving ink.
+v=json.load(open('/tmp/diffuser_fig2_zPTOQk/job/check_02/validation.json'))
+for f in v['findings']:
+ if f['code']=='text_overflow':
+  e=d[f['elements'][0]];l=f['layout'];e['box'][2]=max(e['box'][2],l['required_width_px']+1);e['box'][3]=max(e['box'][3],l['required_height_px']+1)
+d['image_encoder_label']['box'][0]=164
+# Narrow equation args via faithful compact math spacing, within fixed source frame.
+for pre in ['output_loc','output_rot']:
+ for e in E:
+  if e['id'].startswith(pre):e['container']='output_equations'
+ d[pre+'_args']['text']='(o,l,c,τⁱ,i)';d[pre+'_args']['box'][2]=82
+# Source dots occupy white gap only.
+E.remove(d['scene_dots'])
+for i in range(3):E.append(dict(id=f'vertical_dot_{i}',kind='shape',z=510+i,box=[1227,300+i*5,1.7,1.7],shape='ellipse',fill='#000000'))
+# Crop cloud + adjacent image once, instead of overlapping exact duplicate crop.
+from PIL import Image
+src=Image.open('/tmp/diffuser_fig2_zPTOQk/figure1.png')
+b=[545,116,289,239];d['multi_cloud']['box']=b;src.crop((545,116,834,355)).save('/tmp/diffuser_fig2_zPTOQk/job/assets/multi_cloud.png')
+E[:]=[e for e in E if e['id']!='camera_left' and not e['id'].startswith('floating_') and e['id']!='camleft_r']
+b=[313,482,254,177];d['denoiseNm1']['box']=b;src.crop((313,482,567,659)).save('/tmp/diffuser_fig2_zPTOQk/job/assets/denoiseNm1.png')
+# Native source labels omitted in initial authoring.
+for id,text,b in [('depth_label','Depth map',[59,151,100,29]),('image_label','Image',[78,318,69,29])]:E.append(dict(id=id,kind='text',z=550,box=b,text=text,font_size=18,font_family='Arial',fit='strict'))
+# Native equations inside blue source boxes.
+for i in range(3):
+ for e in E:
+  if e['id'].startswith(f'step_loc_{i}_') or e['id'].startswith(f'step_rot_{i}_') or e['id']==f'comma_{i}':e['container']=f'noise_box_{i}'
+# Individually verified connector/crop and connector joins. Crops include white margin near ink.
+for a,b,why in [
+ ('single_cloud','grid_cloud','Source arrow enters empty left margin of pointcloud crop.'),
+ ('camera_top','camtop_l','Source camera ray leaves upper-left image corner.'),('camera_top','camtop_r','Source camera ray leaves lower-right image corner.'),
+ ('camera_right','camright_r','Source camera ray leaves upper-right image corner.'),('camera_right','camright_l','Source camera ray leaves lower-left image corner.'),
+ ('multi_cloud','camright_l','Source ray tip ends at top white margin of multiview artwork.'),
+ ('depth_h','depth_v','Source depth branch has a right-angle join.'),('depth_v','grid_cloud','Source depth branch merges with image feature arrow.'),
+ ('rgb_arrow_upper','rgb_arrow_lower','Source open arrowhead apex.'),('rgb_arrow_upper','rgb_arrow_notch','Source open arrowhead upper corner.'),('rgb_arrow_lower','rgb_arrow_notch2','Source open arrowhead lower corner.'),
+ ('transformer','denoise_step_arrow','Source denoising-step arrow points into the slanted transformer top edge.')]:pair(a,b,why)
+for pre in ['prop','noised0','noised1','noised2']:
+ for i,j in [(0,2),(1,2),(2,3)]:pair(f'{pre}_{i}',f'{pre}_{j}','Source gripper symbol consists of connected native segments at these joints.')
+for pre in ['ice_image','ice_language']:
+ for a,b in [(0,5),(1,0),(2,1),(3,2),(4,3),(5,4)]:pair(f'{pre}_{a}_-1',f'{pre}_{b}_1','Adjacent branches join in the source frozen-encoder snowflake icon.')
+for i,(left,right) in enumerate([('denoiseN','denoiseNm1'),('denoise2','denoise1'),('denoise1','denoise0')]):
+ for other in [f'noise_box_{i}',f'curve_in_{i}',f'curve_join_{i}']:pair(left,other,'Source denoising transition overlaps white/ground margin beside the pointcloud frame.')
+ pair(right,f'curve_out_{i}','Source transition arrow enters white/ground margin of next pointcloud frame.')
+ pair(f'noise_box_{i}',f'curve_out_{i}','Source transition arrow begins at blue equation box right edge.')
+ pair(f'curve_in_{i}',f'curve_join_{i}','Source incoming denoising arrow has a joined bend.')
+pair('denoise1','noise_box_1','Source equation box sits across whitespace between adjacent pointcloud frame crops.')
+p.write_text(json.dumps(s,indent=2))
