@@ -1,0 +1,1842 @@
+{
+  "version": 1,
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 1195,
+      "height": 476,
+      "source": "assets/302976e126e632477599.png",
+      "background": "#FFFFFF",
+      "reviewed": true,
+      "notes": "Adapted from Figure 2, Cosmos Policy, Kim et al., arXiv:2601.16163v1 (2026-01-22). CC BY 4.0 https://creativecommons.org/licenses/by/4.0/. Native reconstruction from raster; photos and latent textures retained as crops. No endorsement implied.",
+      "elements": [
+        {
+          "id": "conditioning",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            78,
+            35,
+            450,
+            436
+          ],
+          "shape": "round_rect",
+          "fill": "#F1FFE8",
+          "role": "background",
+          "radius": 11,
+          "stroke": "#DDDDDD",
+          "stroke_width": 0.5
+        },
+        {
+          "id": "target",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            531,
+            35,
+            659,
+            436
+          ],
+          "shape": "round_rect",
+          "fill": "#F8E1DB",
+          "role": "background",
+          "radius": 11,
+          "stroke": "#DDDDDD",
+          "stroke_width": 0.5
+        },
+        {
+          "id": "conditioning_title",
+          "kind": "text",
+          "z": 3,
+          "box": [
+            167,
+            3.5,
+            285,
+            30
+          ],
+          "font_size": 23.5,
+          "font_family": "Arial",
+          "fit": "strict",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "conditioning subsequence",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 23.5,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "target_title",
+          "kind": "text",
+          "z": 4,
+          "box": [
+            761,
+            3.5,
+            220,
+            30
+          ],
+          "font_size": 23.5,
+          "font_family": "Arial",
+          "fit": "strict",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "target subsequence",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 23.5,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "image_stack_0",
+          "kind": "image",
+          "z": 5,
+          "box": [
+            199,
+            62,
+            98,
+            99
+          ],
+          "path": "assets/f5aab15ed4f9354cebc5.png",
+          "contains_text": false,
+          "container": "conditioning",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "top_label_0",
+          "kind": "text",
+          "z": 6,
+          "box": [
+            204,
+            44,
+            100,
+            17
+          ],
+          "font_size": 11.8,
+          "font_family": "Arial",
+          "fit": "strict",
+          "container": "conditioning",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "current wrist img",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11.8,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "image_stack_1",
+          "kind": "image",
+          "z": 7,
+          "box": [
+            305,
+            62,
+            98,
+            99
+          ],
+          "path": "assets/1e16e7d9e364d3010d78.png",
+          "contains_text": false,
+          "container": "conditioning",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "top_label_1",
+          "kind": "text",
+          "z": 8,
+          "box": [
+            313,
+            44,
+            100,
+            17
+          ],
+          "font_size": 11.8,
+          "font_family": "Arial",
+          "fit": "strict",
+          "container": "conditioning",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "current left img",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11.8,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "image_stack_2",
+          "kind": "image",
+          "z": 9,
+          "box": [
+            412,
+            62,
+            98,
+            99
+          ],
+          "path": "assets/4e56f76b02dac0422bad.png",
+          "contains_text": false,
+          "container": "conditioning",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "top_label_2",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            417,
+            44,
+            100,
+            17
+          ],
+          "font_size": 11.8,
+          "font_family": "Arial",
+          "fit": "strict",
+          "container": "conditioning",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "current right img",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11.8,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "image_stack_3",
+          "kind": "image",
+          "z": 11,
+          "box": [
+            761,
+            62,
+            98,
+            99
+          ],
+          "path": "assets/6c24e78823f941094ed3.png",
+          "contains_text": false,
+          "container": "target",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "top_label_3",
+          "kind": "text",
+          "z": 12,
+          "box": [
+            768,
+            44,
+            100,
+            17
+          ],
+          "font_size": 11.8,
+          "font_family": "Arial",
+          "fit": "strict",
+          "container": "target",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "future wrist img",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11.8,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "image_stack_4",
+          "kind": "image",
+          "z": 13,
+          "box": [
+            867,
+            62,
+            98,
+            99
+          ],
+          "path": "assets/27aad36d4f7880cfaa78.png",
+          "contains_text": false,
+          "container": "target",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "top_label_4",
+          "kind": "text",
+          "z": 14,
+          "box": [
+            878,
+            44,
+            100,
+            17
+          ],
+          "font_size": 11.8,
+          "font_family": "Arial",
+          "fit": "strict",
+          "container": "target",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "future left img",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11.8,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "image_stack_5",
+          "kind": "image",
+          "z": 15,
+          "box": [
+            972,
+            62,
+            98,
+            99
+          ],
+          "path": "assets/db961d3997acbec04a6f.png",
+          "contains_text": false,
+          "container": "target",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "top_label_5",
+          "kind": "text",
+          "z": 16,
+          "box": [
+            976,
+            44,
+            100,
+            17
+          ],
+          "font_size": 11.8,
+          "font_family": "Arial",
+          "fit": "strict",
+          "container": "target",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "future right img",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11.8,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "injection_title",
+          "kind": "text",
+          "z": 17,
+          "box": [
+            208,
+            163,
+            855,
+            31
+          ],
+          "font_size": 23.35,
+          "font_family": "Arial",
+          "fit": "strict",
+          "runs": [
+            {
+              "text": "latent injection",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 23.35,
+              "bold": true,
+              "italic": false,
+              "color": "#B52B15"
+            },
+            {
+              "text": " of additional modalities: robot proprioception, actions, and value",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 23.35,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ],
+          "color": "#000000",
+          "wrap": false
+        },
+        {
+          "id": "injection_bus",
+          "kind": "line",
+          "z": 18,
+          "points": [
+            [
+              139,
+              192
+            ],
+            [
+              1126,
+              192
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7
+        },
+        {
+          "id": "inject_current",
+          "kind": "line",
+          "z": 19,
+          "points": [
+            [
+              139,
+              192
+            ],
+            [
+              139,
+              208
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "arrow": true,
+          "arrow_head": {
+            "length": 7,
+            "width": 7
+          },
+          "allow_overlap_with": [
+            "injection_bus"
+          ],
+          "overlap_reason": "Source shows injection arrow shaft joined to horizontal bus."
+        },
+        {
+          "id": "inject_action",
+          "kind": "line",
+          "z": 20,
+          "points": [
+            [
+              597,
+              192
+            ],
+            [
+              597,
+              208
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "arrow": true,
+          "arrow_head": {
+            "length": 7,
+            "width": 7
+          },
+          "allow_overlap_with": [
+            "injection_bus"
+          ],
+          "overlap_reason": "Source shows injection arrow shaft joined to horizontal bus."
+        },
+        {
+          "id": "inject_future",
+          "kind": "line",
+          "z": 21,
+          "points": [
+            [
+              702,
+              192
+            ],
+            [
+              702,
+              208
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "arrow": true,
+          "arrow_head": {
+            "length": 7,
+            "width": 7
+          },
+          "allow_overlap_with": [
+            "injection_bus"
+          ],
+          "overlap_reason": "Source shows injection arrow shaft joined to horizontal bus."
+        },
+        {
+          "id": "inject_value",
+          "kind": "line",
+          "z": 22,
+          "points": [
+            [
+              1126,
+              192
+            ],
+            [
+              1126,
+              208
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "arrow": true,
+          "arrow_head": {
+            "length": 7,
+            "width": 7
+          },
+          "allow_overlap_with": [
+            "injection_bus"
+          ],
+          "overlap_reason": "Source shows injection arrow shaft joined to horizontal bus."
+        },
+        {
+          "id": "latent_label_0",
+          "kind": "text",
+          "z": 23,
+          "box": [
+            94,
+            208,
+            91,
+            17
+          ],
+          "font_size": 11.8,
+          "font_family": "Arial",
+          "fit": "strict",
+          "align": "center",
+          "container": "conditioning",
+          "color": "#B52B15",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "current proprio",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11.8,
+              "bold": false,
+              "italic": false,
+              "color": "#B52B15"
+            }
+          ]
+        },
+        {
+          "id": "red_frame_0",
+          "kind": "shape",
+          "z": 24,
+          "box": [
+            94,
+            223,
+            91,
+            92
+          ],
+          "shape": "rect",
+          "fill": "#B52B15",
+          "container": "conditioning"
+        },
+        {
+          "id": "latent_0",
+          "kind": "image",
+          "z": 25,
+          "box": [
+            99,
+            229,
+            81,
+            80
+          ],
+          "path": "assets/a100b487ee317259eaeb.png",
+          "contains_text": false,
+          "container": "red_frame_0",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "noise_0",
+          "kind": "image",
+          "z": 26,
+          "box": [
+            96,
+            340,
+            87,
+            87
+          ],
+          "path": "assets/360b6be2a930028c7e1c.png",
+          "contains_text": false,
+          "container": "conditioning",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "latent_label_1",
+          "kind": "text",
+          "z": 27,
+          "box": [
+            202,
+            208,
+            91,
+            17
+          ],
+          "font_size": 11.8,
+          "font_family": "Arial",
+          "fit": "strict",
+          "align": "center",
+          "container": "conditioning",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "current wrist img",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11.8,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "latent_1",
+          "kind": "image",
+          "z": 28,
+          "box": [
+            204,
+            226,
+            87,
+            87
+          ],
+          "path": "assets/6ddd8503f7e692f62706.png",
+          "contains_text": false,
+          "container": "conditioning",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "noise_1",
+          "kind": "image",
+          "z": 29,
+          "box": [
+            204,
+            340,
+            87,
+            87
+          ],
+          "path": "assets/586781375ed211e2954a.png",
+          "contains_text": false,
+          "container": "conditioning",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "latent_label_2",
+          "kind": "text",
+          "z": 30,
+          "box": [
+            309,
+            208,
+            91,
+            17
+          ],
+          "font_size": 11.8,
+          "font_family": "Arial",
+          "fit": "strict",
+          "align": "center",
+          "container": "conditioning",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "current left img",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11.8,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "latent_2",
+          "kind": "image",
+          "z": 31,
+          "box": [
+            311,
+            226,
+            87,
+            87
+          ],
+          "path": "assets/09b2bfed0cfeffca8c10.png",
+          "contains_text": false,
+          "container": "conditioning",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "noise_2",
+          "kind": "image",
+          "z": 32,
+          "box": [
+            311,
+            340,
+            87,
+            87
+          ],
+          "path": "assets/74a92d78f204c8a1bfff.png",
+          "contains_text": false,
+          "container": "conditioning",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "latent_label_3",
+          "kind": "text",
+          "z": 33,
+          "box": [
+            417,
+            208,
+            91,
+            17
+          ],
+          "font_size": 11.8,
+          "font_family": "Arial",
+          "fit": "strict",
+          "align": "center",
+          "container": "conditioning",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "current right img",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11.8,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "latent_3",
+          "kind": "image",
+          "z": 34,
+          "box": [
+            419,
+            226,
+            87,
+            87
+          ],
+          "path": "assets/7db6ab21fcc798f25a44.png",
+          "contains_text": false,
+          "container": "conditioning",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "noise_3",
+          "kind": "image",
+          "z": 35,
+          "box": [
+            419,
+            340,
+            87,
+            87
+          ],
+          "path": "assets/366bdeaa5f073bc4bb16.png",
+          "contains_text": false,
+          "container": "conditioning",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "latent_label_4",
+          "kind": "text",
+          "z": 36,
+          "box": [
+            552,
+            208,
+            91,
+            17
+          ],
+          "font_size": 11.8,
+          "font_family": "Arial",
+          "fit": "strict",
+          "align": "center",
+          "container": "target",
+          "color": "#B52B15",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "action chunk",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11.8,
+              "bold": false,
+              "italic": false,
+              "color": "#B52B15"
+            }
+          ]
+        },
+        {
+          "id": "red_frame_4",
+          "kind": "shape",
+          "z": 37,
+          "box": [
+            552,
+            223,
+            91,
+            92
+          ],
+          "shape": "rect",
+          "fill": "#B52B15",
+          "container": "target"
+        },
+        {
+          "id": "latent_4",
+          "kind": "image",
+          "z": 38,
+          "box": [
+            557,
+            229,
+            81,
+            80
+          ],
+          "path": "assets/7f321d8206c3cecf33dd.png",
+          "contains_text": false,
+          "container": "red_frame_4",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "noise_4",
+          "kind": "image",
+          "z": 39,
+          "box": [
+            554,
+            340,
+            87,
+            87
+          ],
+          "path": "assets/32ec2558847011f3a41f.png",
+          "contains_text": false,
+          "container": "target",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "latent_label_5",
+          "kind": "text",
+          "z": 40,
+          "box": [
+            657,
+            208,
+            91,
+            17
+          ],
+          "font_size": 11.8,
+          "font_family": "Arial",
+          "fit": "strict",
+          "align": "center",
+          "container": "target",
+          "color": "#B52B15",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "future proprio",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11.8,
+              "bold": false,
+              "italic": false,
+              "color": "#B52B15"
+            }
+          ]
+        },
+        {
+          "id": "red_frame_5",
+          "kind": "shape",
+          "z": 41,
+          "box": [
+            657,
+            223,
+            91,
+            92
+          ],
+          "shape": "rect",
+          "fill": "#B52B15",
+          "container": "target"
+        },
+        {
+          "id": "latent_5",
+          "kind": "image",
+          "z": 42,
+          "box": [
+            662,
+            229,
+            81,
+            80
+          ],
+          "path": "assets/a8b8110690cd3131cc7d.png",
+          "contains_text": false,
+          "container": "red_frame_5",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "noise_5",
+          "kind": "image",
+          "z": 43,
+          "box": [
+            659,
+            340,
+            87,
+            87
+          ],
+          "path": "assets/60e58ff2ea1638b2d078.png",
+          "contains_text": false,
+          "container": "target",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "latent_label_6",
+          "kind": "text",
+          "z": 44,
+          "box": [
+            762,
+            208,
+            91,
+            17
+          ],
+          "font_size": 11.8,
+          "font_family": "Arial",
+          "fit": "strict",
+          "align": "center",
+          "container": "target",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "future wrist img",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11.8,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "latent_6",
+          "kind": "image",
+          "z": 45,
+          "box": [
+            764,
+            226,
+            87,
+            87
+          ],
+          "path": "assets/54976e12511e4dbe6f19.png",
+          "contains_text": false,
+          "container": "target",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "noise_6",
+          "kind": "image",
+          "z": 46,
+          "box": [
+            764,
+            340,
+            87,
+            87
+          ],
+          "path": "assets/f63ec5cbca69e13efa59.png",
+          "contains_text": false,
+          "container": "target",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "latent_label_7",
+          "kind": "text",
+          "z": 47,
+          "box": [
+            868,
+            208,
+            91,
+            17
+          ],
+          "font_size": 11.8,
+          "font_family": "Arial",
+          "fit": "strict",
+          "align": "center",
+          "container": "target",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "future left img",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11.8,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "latent_7",
+          "kind": "image",
+          "z": 48,
+          "box": [
+            870,
+            226,
+            87,
+            87
+          ],
+          "path": "assets/d16982d9a1f5400d4d6c.png",
+          "contains_text": false,
+          "container": "target",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "noise_7",
+          "kind": "image",
+          "z": 49,
+          "box": [
+            870,
+            340,
+            87,
+            87
+          ],
+          "path": "assets/459f9819891271741b13.png",
+          "contains_text": false,
+          "container": "target",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "latent_label_8",
+          "kind": "text",
+          "z": 50,
+          "box": [
+            975,
+            208,
+            91,
+            17
+          ],
+          "font_size": 11.8,
+          "font_family": "Arial",
+          "fit": "strict",
+          "align": "center",
+          "container": "target",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "future right img",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11.8,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "latent_8",
+          "kind": "image",
+          "z": 51,
+          "box": [
+            977,
+            226,
+            87,
+            87
+          ],
+          "path": "assets/97f3aae26e8df8d965ce.png",
+          "contains_text": false,
+          "container": "target",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "noise_8",
+          "kind": "image",
+          "z": 52,
+          "box": [
+            977,
+            340,
+            87,
+            87
+          ],
+          "path": "assets/5e6fcbd9052b1a76dc64.png",
+          "contains_text": false,
+          "container": "target",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "latent_label_9",
+          "kind": "text",
+          "z": 53,
+          "box": [
+            1082,
+            208,
+            91,
+            17
+          ],
+          "font_size": 11.8,
+          "font_family": "Arial",
+          "fit": "strict",
+          "align": "center",
+          "container": "target",
+          "color": "#B52B15",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "value",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 11.8,
+              "bold": false,
+              "italic": false,
+              "color": "#B52B15"
+            }
+          ]
+        },
+        {
+          "id": "red_frame_9",
+          "kind": "shape",
+          "z": 54,
+          "box": [
+            1082,
+            223,
+            91,
+            92
+          ],
+          "shape": "rect",
+          "fill": "#B52B15",
+          "container": "target"
+        },
+        {
+          "id": "latent_9",
+          "kind": "image",
+          "z": 55,
+          "box": [
+            1087,
+            229,
+            81,
+            80
+          ],
+          "path": "assets/170288fc16e746d5355a.png",
+          "contains_text": false,
+          "container": "red_frame_9",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "noise_9",
+          "kind": "image",
+          "z": 56,
+          "box": [
+            1084,
+            340,
+            87,
+            87
+          ],
+          "path": "assets/170a434b01a9a3e8de1d.png",
+          "contains_text": false,
+          "container": "target",
+          "provenance": "Exact local source crop: robot camera photograph or latent/noise texture; no readable labels."
+        },
+        {
+          "id": "bracket_state",
+          "kind": "line",
+          "z": 57,
+          "points": [
+            [
+              96,
+              433
+            ],
+            [
+              506,
+              433
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "container": "conditioning"
+        },
+        {
+          "id": "tick_stateleft",
+          "kind": "line",
+          "z": 58,
+          "points": [
+            [
+              96,
+              429
+            ],
+            [
+              96,
+              437
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "container": "conditioning",
+          "allow_overlap_with": [
+            "bracket_state"
+          ],
+          "overlap_reason": "Source bracket joins end tick at stroke center."
+        },
+        {
+          "id": "tick_stateright",
+          "kind": "line",
+          "z": 59,
+          "points": [
+            [
+              506,
+              429
+            ],
+            [
+              506,
+              437
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "container": "conditioning",
+          "allow_overlap_with": [
+            "bracket_state"
+          ],
+          "overlap_reason": "Source bracket joins end tick at stroke center."
+        },
+        {
+          "id": "math_state",
+          "kind": "text",
+          "z": 60,
+          "box": [
+            264.0,
+            434,
+            76,
+            34
+          ],
+          "font_size": 27,
+          "font_family": "Times New Roman",
+          "fit": "strict",
+          "align": "center",
+          "italic": true,
+          "container": "conditioning",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "s",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 27,
+              "bold": false,
+              "italic": true,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "bracket_action",
+          "kind": "line",
+          "z": 61,
+          "points": [
+            [
+              554,
+              433
+            ],
+            [
+              641,
+              433
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "container": "target"
+        },
+        {
+          "id": "tick_actionleft",
+          "kind": "line",
+          "z": 62,
+          "points": [
+            [
+              554,
+              429
+            ],
+            [
+              554,
+              437
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "container": "target",
+          "allow_overlap_with": [
+            "bracket_action"
+          ],
+          "overlap_reason": "Source bracket joins end tick at stroke center."
+        },
+        {
+          "id": "tick_actionright",
+          "kind": "line",
+          "z": 63,
+          "points": [
+            [
+              641,
+              429
+            ],
+            [
+              641,
+              437
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "container": "target",
+          "allow_overlap_with": [
+            "bracket_action"
+          ],
+          "overlap_reason": "Source bracket joins end tick at stroke center."
+        },
+        {
+          "id": "math_action",
+          "kind": "text",
+          "z": 64,
+          "box": [
+            560.5,
+            434,
+            76,
+            34
+          ],
+          "font_size": 27,
+          "font_family": "Times New Roman",
+          "fit": "strict",
+          "align": "center",
+          "italic": true,
+          "container": "target",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "a",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 27,
+              "bold": false,
+              "italic": true,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "bracket_future",
+          "kind": "line",
+          "z": 65,
+          "points": [
+            [
+              659,
+              433
+            ],
+            [
+              1064,
+              433
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "container": "target"
+        },
+        {
+          "id": "tick_futureleft",
+          "kind": "line",
+          "z": 66,
+          "points": [
+            [
+              659,
+              429
+            ],
+            [
+              659,
+              437
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "container": "target",
+          "allow_overlap_with": [
+            "bracket_future"
+          ],
+          "overlap_reason": "Source bracket joins end tick at stroke center."
+        },
+        {
+          "id": "tick_futureright",
+          "kind": "line",
+          "z": 67,
+          "points": [
+            [
+              1064,
+              429
+            ],
+            [
+              1064,
+              437
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "container": "target",
+          "allow_overlap_with": [
+            "bracket_future"
+          ],
+          "overlap_reason": "Source bracket joins end tick at stroke center."
+        },
+        {
+          "id": "math_future",
+          "kind": "text",
+          "z": 68,
+          "box": [
+            824.5,
+            434,
+            76,
+            34
+          ],
+          "font_size": 27,
+          "font_family": "Times New Roman",
+          "fit": "strict",
+          "align": "center",
+          "italic": true,
+          "container": "target",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "s′",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 27,
+              "bold": false,
+              "italic": true,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "bracket_value",
+          "kind": "line",
+          "z": 69,
+          "points": [
+            [
+              1084,
+              433
+            ],
+            [
+              1171,
+              433
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "container": "target"
+        },
+        {
+          "id": "tick_valueleft",
+          "kind": "line",
+          "z": 70,
+          "points": [
+            [
+              1084,
+              429
+            ],
+            [
+              1084,
+              437
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "container": "target",
+          "allow_overlap_with": [
+            "bracket_value"
+          ],
+          "overlap_reason": "Source bracket joins end tick at stroke center."
+        },
+        {
+          "id": "tick_valueright",
+          "kind": "line",
+          "z": 71,
+          "points": [
+            [
+              1171,
+              429
+            ],
+            [
+              1171,
+              437
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "container": "target",
+          "allow_overlap_with": [
+            "bracket_value"
+          ],
+          "overlap_reason": "Source bracket joins end tick at stroke center."
+        },
+        {
+          "id": "math_value",
+          "kind": "text",
+          "z": 72,
+          "box": [
+            1086.5,
+            434,
+            76,
+            34
+          ],
+          "font_size": 27,
+          "font_family": "Times New Roman",
+          "fit": "strict",
+          "align": "center",
+          "italic": true,
+          "container": "target",
+          "runs": [
+            {
+              "text": "V",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 27,
+              "bold": false,
+              "italic": true,
+              "color": "#000000"
+            },
+            {
+              "text": "(",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 27,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            },
+            {
+              "text": "s′",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 27,
+              "bold": false,
+              "italic": true,
+              "color": "#000000"
+            },
+            {
+              "text": ")",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 27,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ],
+          "color": "#000000",
+          "wrap": false
+        },
+        {
+          "id": "images",
+          "kind": "text",
+          "z": 73,
+          "box": [
+            5,
+            106,
+            65,
+            24
+          ],
+          "font_size": 17,
+          "font_family": "Arial",
+          "fit": "strict",
+          "align": "center",
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "images",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "latent_frames",
+          "kind": "text",
+          "z": 74,
+          "box": [
+            4,
+            251,
+            68,
+            41
+          ],
+          "font_size": 17,
+          "font_family": "Arial",
+          "fit": "strict",
+          "align": "center",
+          "line_height": 1.02,
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "latent\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            },
+            {
+              "text": "frames",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "noised_line_0",
+          "kind": "text",
+          "z": 75,
+          "box": [
+            3,
+            346,
+            71,
+            23
+          ],
+          "font_size": 17,
+          "font_family": "Arial",
+          "fit": "strict",
+          "align": "center",
+          "line_height": 1.02,
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "partially",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "noised_line_1",
+          "kind": "text",
+          "z": 76,
+          "box": [
+            3,
+            364,
+            71,
+            23
+          ],
+          "font_size": 17,
+          "font_family": "Arial",
+          "fit": "strict",
+          "align": "center",
+          "line_height": 1.02,
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "noised",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "noised_line_2",
+          "kind": "text",
+          "z": 77,
+          "box": [
+            3,
+            382,
+            71,
+            23
+          ],
+          "font_size": 17,
+          "font_family": "Arial",
+          "fit": "strict",
+          "align": "center",
+          "line_height": 1.02,
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "latent",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "noised_line_3",
+          "kind": "text",
+          "z": 78,
+          "box": [
+            3,
+            400,
+            71,
+            23
+          ],
+          "font_size": 17,
+          "font_family": "Arial",
+          "fit": "strict",
+          "align": "center",
+          "line_height": 1.02,
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "frames",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 17,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "vae_arrow",
+          "kind": "line",
+          "z": 79,
+          "points": [
+            [
+              38,
+              132
+            ],
+            [
+              38,
+              251
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "arrow": true,
+          "arrow_head": {
+            "length": 7,
+            "width": 7
+          }
+        },
+        {
+          "id": "noise_arrow",
+          "kind": "line",
+          "z": 80,
+          "points": [
+            [
+              38,
+              291
+            ],
+            [
+              38,
+              345
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1.7,
+          "arrow": true,
+          "arrow_head": {
+            "length": 7,
+            "width": 7
+          }
+        },
+        {
+          "id": "vae",
+          "kind": "text",
+          "z": 81,
+          "box": [
+            8,
+            172,
+            42,
+            20
+          ],
+          "font_size": 13,
+          "font_family": "Arial",
+          "fit": "strict",
+          "rotation": -90,
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "VAE",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 13,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "noise",
+          "kind": "text",
+          "z": 82,
+          "box": [
+            7,
+            299,
+            42,
+            20
+          ],
+          "font_size": 12.5,
+          "font_family": "Arial",
+          "fit": "strict",
+          "rotation": -90,
+          "color": "#000000",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "noise",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 12.5,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

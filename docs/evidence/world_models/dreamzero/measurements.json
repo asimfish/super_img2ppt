@@ -1,0 +1,188 @@
+{
+  "actual_raster": {
+    "pdf_page_pt": [
+      960.0094604492188,
+      321.36376953125
+    ],
+    "scale": 1.9666472860762696,
+    "raw_size": [
+      1888,
+      633
+    ],
+    "final_size": [
+      1888,
+      632
+    ],
+    "rounding": "Only wholly white extra bottom row cropped if PDFium ceil generated height 633; no registration/resizing."
+  },
+  "regions": {
+    "train_title": {
+      "roi": [
+        98,
+        15,
+        817,
+        63
+      ],
+      "threshold": "all RGB channels <145, fixed before measurement",
+      "source_ink_bounds": [
+        6,
+        10,
+        707,
+        41
+      ],
+      "actual_ink_bounds": [
+        4,
+        10,
+        698,
+        42
+      ],
+      "edge_delta": [
+        -2,
+        0,
+        -9,
+        1
+      ],
+      "ink_iou": 0.4253220611916264
+    },
+    "encoder": {
+      "roi": [
+        213,
+        185,
+        292,
+        231
+      ],
+      "threshold": "all RGB channels <145, fixed before measurement",
+      "source_ink_bounds": [
+        6,
+        6,
+        73,
+        40
+      ],
+      "actual_ink_bounds": [
+        6,
+        7,
+        72,
+        41
+      ],
+      "edge_delta": [
+        0,
+        1,
+        -1,
+        1
+      ],
+      "ink_iou": 0.4897360703812317
+    },
+    "causal": {
+      "roi": [
+        507,
+        162,
+        642,
+        220
+      ],
+      "threshold": "all RGB channels <145, fixed before measurement",
+      "source_ink_bounds": [
+        5,
+        4,
+        121,
+        51
+      ],
+      "actual_ink_bounds": [
+        4,
+        4,
+        121,
+        50
+      ],
+      "edge_delta": [
+        -1,
+        0,
+        0,
+        -1
+      ],
+      "ink_iou": 0.47462096242584045
+    },
+    "kv": {
+      "roi": [
+        1372,
+        350,
+        1495,
+        382
+      ],
+      "threshold": "all RGB channels <145, fixed before measurement",
+      "source_ink_bounds": [
+        7,
+        5,
+        111,
+        22
+      ],
+      "actual_ink_bounds": [
+        6,
+        4,
+        111,
+        22
+      ],
+      "edge_delta": [
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "ink_iou": 0.3754427390791027
+    },
+    "prompt": {
+      "roi": [
+        29,
+        529,
+        197,
+        573
+      ],
+      "threshold": "all RGB channels <145, fixed before measurement",
+      "source_ink_bounds": [
+        7,
+        5,
+        156,
+        42
+      ],
+      "actual_ink_bounds": [
+        12,
+        5,
+        154,
+        42
+      ],
+      "edge_delta": [
+        5,
+        0,
+        -2,
+        0
+      ],
+      "ink_iou": 0.20223243598161522
+    },
+    "feedback_label": {
+      "roi": [
+        1251,
+        585,
+        1610,
+        620
+      ],
+      "threshold": "all RGB channels <145, fixed before measurement",
+      "source_ink_bounds": [
+        7,
+        5,
+        352,
+        27
+      ],
+      "actual_ink_bounds": [
+        7,
+        6,
+        342,
+        27
+      ],
+      "edge_delta": [
+        0,
+        1,
+        -10,
+        0
+      ],
+      "ink_iou": 0.33703595439929845
+    }
+  }
+}

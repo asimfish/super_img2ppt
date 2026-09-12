@@ -1,0 +1,650 @@
+{
+  "status": "fail",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "fail",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "noised_frames"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 17,
+            "width_px": 58.75,
+            "height_px": 77.0,
+            "available_width_px": 71,
+            "available_height_px": 76,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 59.25,
+            "required_height_px": 77.5,
+            "fits": false,
+            "lines": [
+              "partially",
+              "noised",
+              "latent",
+              "frames"
+            ]
+          }
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "top_label_4",
+            "top_label_5"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "injection_title",
+            "injection_bus"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "latent_label_0",
+            "red_frame_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "latent_label_4",
+            "red_frame_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "latent_label_5",
+            "red_frame_5"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "latent_label_9",
+            "red_frame_9"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "latent_frames",
+            "noise_arrow"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "shape": 6,
+            "text": 28,
+            "image": 26,
+            "line": 19
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "injection_bus",
+                "inject_current"
+              ],
+              "reason": "Source shows injection arrow shaft joined to horizontal bus.",
+              "area_px2": 0.723
+            },
+            {
+              "elements": [
+                "injection_bus",
+                "inject_action"
+              ],
+              "reason": "Source shows injection arrow shaft joined to horizontal bus.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "injection_bus",
+                "inject_future"
+              ],
+              "reason": "Source shows injection arrow shaft joined to horizontal bus.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "injection_bus",
+                "inject_value"
+              ],
+              "reason": "Source shows injection arrow shaft joined to horizontal bus.",
+              "area_px2": 0.723
+            },
+            {
+              "elements": [
+                "bracket_state",
+                "tick_stateleft"
+              ],
+              "reason": "Source bracket joins end tick at stroke center.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "bracket_state",
+                "tick_stateright"
+              ],
+              "reason": "Source bracket joins end tick at stroke center.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "bracket_action",
+                "tick_actionleft"
+              ],
+              "reason": "Source bracket joins end tick at stroke center.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "bracket_action",
+                "tick_actionright"
+              ],
+              "reason": "Source bracket joins end tick at stroke center.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "bracket_future",
+                "tick_futureleft"
+              ],
+              "reason": "Source bracket joins end tick at stroke center.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "bracket_future",
+                "tick_futureright"
+              ],
+              "reason": "Source bracket joins end tick at stroke center.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "bracket_value",
+                "tick_valueleft"
+              ],
+              "reason": "Source bracket joins end tick at stroke center.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "bracket_value",
+                "tick_valueright"
+              ],
+              "reason": "Source bracket joins end tick at stroke center.",
+              "area_px2": 1.445
+            }
+          ],
+          "text_layouts": {
+            "conditioning_title": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 265.25,
+              "height_px": 26.45,
+              "available_width_px": 285,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 265.75,
+              "required_height_px": 26.95,
+              "fits": true,
+              "lines": [
+                "conditioning subsequence"
+              ]
+            },
+            "target_title": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 202.0,
+              "height_px": 26.45,
+              "available_width_px": 220,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 202.5,
+              "required_height_px": 26.95,
+              "fits": true,
+              "lines": [
+                "target subsequence"
+              ]
+            },
+            "top_label_0": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 84.5,
+              "height_px": 13.225,
+              "available_width_px": 100,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 85.0,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "current wrist img"
+              ]
+            },
+            "top_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 76.5,
+              "height_px": 13.225,
+              "available_width_px": 100,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 77.0,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "current left img"
+              ]
+            },
+            "top_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 83.5,
+              "height_px": 13.225,
+              "available_width_px": 100,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 84.0,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "current right img"
+              ]
+            },
+            "top_label_3": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 78.25,
+              "height_px": 13.225,
+              "available_width_px": 100,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 78.75,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "future wrist img"
+              ]
+            },
+            "top_label_4": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 70.25,
+              "height_px": 13.225,
+              "available_width_px": 100,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 70.75,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "future left img"
+              ]
+            },
+            "top_label_5": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 77.25,
+              "height_px": 13.225,
+              "available_width_px": 100,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 77.75,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "future right img"
+              ]
+            },
+            "injection_title": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 818.5,
+              "height_px": 26.45,
+              "available_width_px": 855,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 819.0,
+              "required_height_px": 26.95,
+              "fits": true,
+              "lines": [
+                "latent injection of additional modalities: robot proprioception, actions, and value"
+              ]
+            },
+            "latent_label_0": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 75.25,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 75.75,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "current proprio"
+              ]
+            },
+            "latent_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 84.5,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 85.0,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "current wrist img"
+              ]
+            },
+            "latent_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 76.5,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 77.0,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "current left img"
+              ]
+            },
+            "latent_label_3": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 83.5,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 84.0,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "current right img"
+              ]
+            },
+            "latent_label_4": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 65.25,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 65.75,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "action chunk"
+              ]
+            },
+            "latent_label_5": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 69.0,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 69.5,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "future proprio"
+              ]
+            },
+            "latent_label_6": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 78.25,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 78.75,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "future wrist img"
+              ]
+            },
+            "latent_label_7": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 70.25,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 70.75,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "future left img"
+              ]
+            },
+            "latent_label_8": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 77.25,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 77.75,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "future right img"
+              ]
+            },
+            "latent_label_9": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 27.75,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 28.25,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "value"
+              ]
+            },
+            "math_state": {
+              "scale": 1,
+              "effective_font_size_px": 27,
+              "width_px": 10.75,
+              "height_px": 31.05,
+              "available_width_px": 76,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.25,
+              "required_height_px": 31.55,
+              "fits": true,
+              "lines": [
+                "s"
+              ]
+            },
+            "math_action": {
+              "scale": 1,
+              "effective_font_size_px": 27,
+              "width_px": 13.5,
+              "height_px": 31.05,
+              "available_width_px": 76,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.0,
+              "required_height_px": 31.55,
+              "fits": true,
+              "lines": [
+                "a"
+              ]
+            },
+            "math_future": {
+              "scale": 1,
+              "effective_font_size_px": 27,
+              "width_px": 18.0,
+              "height_px": 31.05,
+              "available_width_px": 76,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.5,
+              "required_height_px": 31.55,
+              "fits": true,
+              "lines": [
+                "s′"
+              ]
+            },
+            "math_value": {
+              "scale": 1,
+              "effective_font_size_px": 27,
+              "width_px": 55.75,
+              "height_px": 31.05,
+              "available_width_px": 76,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 56.25,
+              "required_height_px": 31.55,
+              "fits": true,
+              "lines": [
+                "V(s′)"
+              ]
+            },
+            "images": {
+              "scale": 1,
+              "effective_font_size_px": 17,
+              "width_px": 55.0,
+              "height_px": 19.55,
+              "available_width_px": 65,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 55.5,
+              "required_height_px": 20.05,
+              "fits": true,
+              "lines": [
+                "images"
+              ]
+            },
+            "latent_frames": {
+              "scale": 1,
+              "effective_font_size_px": 17,
+              "width_px": 52.25,
+              "height_px": 38.5,
+              "available_width_px": 68,
+              "available_height_px": 41,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 52.75,
+              "required_height_px": 39.0,
+              "fits": true,
+              "lines": [
+                "latent",
+                "frames"
+              ]
+            },
+            "noised_frames": {
+              "scale": 1,
+              "effective_font_size_px": 17,
+              "width_px": 58.75,
+              "height_px": 77.0,
+              "available_width_px": 71,
+              "available_height_px": 76,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 59.25,
+              "required_height_px": 77.5,
+              "fits": false,
+              "lines": [
+                "partially",
+                "noised",
+                "latent",
+                "frames"
+              ]
+            },
+            "vae": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 24.0,
+              "height_px": 13.8,
+              "available_width_px": 42,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 24.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "VAE"
+              ]
+            },
+            "noise": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 29.0,
+              "height_px": 13.8,
+              "available_width_px": 42,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 29.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "noise"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "090eae12685abb388cd2c7d32308405ea1eaad6dbd52b32dd29544b99e884dda",
+  "font_substitutions": []
+}

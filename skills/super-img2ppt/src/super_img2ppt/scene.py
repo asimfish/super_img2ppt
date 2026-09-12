@@ -59,7 +59,7 @@ ELEMENT = {
         **STYLE,
         "align": {"enum": ["left", "center", "right"]},
         "valign": {"enum": ["top", "middle", "bottom"]},
-        "rotation": {"enum": [-90, 0, 90, 180, 270]},
+        "rotation": {"type": "number", "minimum": -360, "maximum": 360},
         "wrap": {"type": "boolean"},
         "line_height": {"type": "number", "minimum": 1, "maximum": 3},
         "padding": {

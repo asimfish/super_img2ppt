@@ -1,0 +1,114 @@
+import json
+from pathlib import Path
+from PIL import Image
+R=Path('/tmp/dreamzero_forward_20260912'); J=R/'job'; (J/'assets').mkdir(exist_ok=True)
+src=Image.open(R/'source.png'); E=[]
+def add(i,k,**kw):
+ e=dict(id=i,kind=k,z=len(E)+1,**kw); E.append(e); return i
+def shape(i,b,fill=None,stroke=None,kind='rect',**kw): return add(i,'shape',box=b,shape=kind,fill=fill,stroke=stroke,**kw)
+def text(i,t,b,size=24,bold=False,italic=False,color='#000000',container=None):
+ kw=dict(box=b,text=t,font_size=size,font_family='Arial',bold=bold,italic=italic,color=color,fit='strict',wrap=False)
+ if container:kw['container']=container
+ return add(i,'text',**kw)
+def line(i,p,col='#000000',width=1.4,arrow=False,**kw):
+ if arrow:kw.update(arrow=True,arrow_head=dict(length=10,width=10))
+ return add(i,'line',points=p,stroke=col,stroke_width=width,**kw)
+def asset(i,b):
+ src.crop((b[0],b[1],b[0]+b[2],b[1]+b[3])).save(J/'assets'/f'{i}.png')
+ return add(i,'image',box=b,path=f'assets/{i}.png',contains_text=False,provenance='Exact independent crop of Figure 4 source raster; CC BY 4.0, Ye et al. (2026).')
+def block(i,b,t,fill,vertices=None,size=18):
+ shape(i,b,fill,'#BBBBBB',kind='polygon' if vertices else 'rect',**({'vertices':vertices} if vertices else {}))
+ lines=t.split('\n'); th=len(lines)*size*1.15
+ text(i+'_label',t,[b[0]+4,b[1]+(b[3]-th)/2-1,b[2]-8,th+5],size,container=i)
+def token(i,x,y,noise=False,robot=False,dashed=False):
+ if noise or robot:return asset(i,[x,y,53,42])
+ shape(i,[x,y,51,40],None if dashed else '#C9DDD4','#111111' if dashed else '#BBC8C1',kind='round_rect',radius=6,stroke_width=1.6,dash=[7,5] if dashed else None)
+ if not dashed:
+  shape(i+'_screen',[x+12,y+10,27,20],None,'#000000',stroke_width=2)
+  shape(i+'_play',[x+22,y+14,9,12],'#000000',kind='triangle',vertices=None) # replace triangle orientation below
+  E[-1].update(shape='polygon',vertices=[[0,0],[1,0.5],[0,1]])
+  E[-2]['container']=i; E[-1]['container']=i
+text('train_title','Training: Joint Video-Action Flow Matching',[102,18,780,47],34,True)
+text('infer_title','Inference: Closed-Loop Real World Execution',[1050,18,816,47],34,True)
+line('divider',[[921,24],[921,611]],width=2.7,dash=[12,8])
+text('train_dit_title','Joint Video-Action DiT',[440,76,284,35],25,True)
+text('infer_dit_title','Joint Video-Action DiT',[1300,77,287,35],25,True)
+# photos and noisy trajectories are independent raster art; labels native
+for i,b in [('train_video',[26,159,164,97]),('past_video',[979,170,158,89]),('future_video',[1723,171,125,73]),('train_action',[57,302,132,84]),('future_action',[1719,320,137,80]),('execution_photo',[1722,461,123,83])]:asset(i,b)
+for i,t,b in [('video','Video',[82,113,110,34]),('latents','Latents',[292,113,108,34]),('action','Action',[80,271,115,34]),('past','Past frames',[998,131,175,34]),('future','Future frames',[1705,131,181,34]),('future_action_label','Future action\nchunk',[1710,264,171,62])]:text(i,t,b)
+enc=[[0,0],[1,.1],[1,.9],[0,1]]; dec=[[0,.1],[1,0],[1,1],[0,.9]]
+block('vae_enc',[205,156,94,107],'VAE\nEncoder','#AECBBB',enc)
+block('action_enc',[205,300,94,106],'Action\nEncoder','#E3DEC7',enc)
+block('vae_enc_inf',[1157,156,94,107],'VAE\nEncoder','#AECBBB',enc)
+block('vae_dec',[1609,156,94,107],'VAE\nDecoder','#AECBBB',dec)
+block('action_dec',[1609,300,94,107],'Action\nDecoder','#E3DEC7',dec)
+for prefix,x in [('train',468),('infer',1330)]:
+ shape(prefix+'_dit',[x,116,203,306],'#7DAE9E',kind='round_rect',radius=36)
+ for j in range(4):shape(prefix+'_bar'+str(j),[x+21+41.5*j,142,35,174],'#D1E3DC',kind='round_rect',radius=6,container=prefix+'_dit')
+ text(prefix+'_causal','Causal DiT\nBlocks',[x+41,160,146,60],24,container=prefix+'_dit')
+ for j in range(9):shape(prefix+'_grid'+str(j),[x+72+(j%3)*19,233+(j//3)*19,18,18],['#365E53','#B3AC99','#AEA997','#365E53','#365E53','#AEA997','#365E53','#365E53','#365E53'][j],kind='round_rect',radius=3,container=prefix+'_dit')
+ # visible bars are behind overlaid label and grid cells, named pairs only
+ for e in E:
+  if e['id'].startswith(prefix+'_bar'):
+   e.update(allow_overlap_with=[prefix+'_causal']+[prefix+'_grid'+str(j) for j in range(9)],overlap_reason='Source Causal DiT label and nine token cells overlay the four pale vertical bars.')
+shape('kv',[1352,330,158,70],'#D1E3DC',kind='round_rect',radius=14,container='infer_dit')
+text('kv_text','KV Cache',[1377,349,131,37],24,container='kv')
+for i,x,y in [('v1',307,149),('v2',307,189),('v3',307,229),('noisy1',400,149),('noisy2',400,189),('out1',684,227),('iv1',1260,149),('iv2',1260,189),('iout',1548,229)]:token(i,x,y)
+for i,x,y in [('future_blank1',684,147),('future_blank2',684,188),('ifuture_blank1',1548,148),('ifuture_blank2',1548,189)]:token(i,x,y,dashed=True)
+for i,x,y in [('noise_video',400,229),('noise_action',402,331),('inoise_video',1260,229),('inoise_action',1263,332)]:token(i,x,y,noise=True)
+for i,x,y in [('robot_in',307,331),('robot_out',684,330),('irobot_out',1548,331)]:token(i,x,y,robot=True)
+for i,x,y in [('dots1',420,118),('dots2',705,115),('dots3',1281,118),('dots4',1570,117)]:text(i,'⋮',[x,y,17,29],23)
+for y in [250,351]:
+ shape('noise_plus_'+str(y),[371,y-8,16,16],None,'#17251F',kind='ellipse',stroke_width=2.2)
+ line('plus_v_'+str(y),[[379,y-8],[379,y+8]],'#17251F',2.1)
+ line('plus_h_'+str(y),[[371,y],[387,y]],'#17251F',2.1)
+ line('noise_to_'+str(y),[[359,y],[399,y]],'#17251F',1.8,True)
+ line('noise_up_'+str(y),[[379,y+25],[379,y+9]],'#17251F',2)
+ text('noise_label_'+str(y),'noise',[355,y+23,60,30],20)
+# lower state encoders
+for pref,x,y in [('state',206,439),('istate',1163,397)]:
+ shape(pref+'_rear',[x,y,94,107],'#EEEEEE','#CCCCCC',kind='polygon',vertices=enc,stroke_width=.5)
+ block(pref,[x+16,y+19,94,109],'State/Text\nEncoder','#EEEEEE',dec)
+ E[-2]['allow_overlap_with']=[pref+'_rear'];E[-2]['overlap_reason']='Overlapping two encoder pages visible in source.'
+ E[-1]['allow_overlap_with']=[pref+'_rear'];E[-1]['overlap_reason']='Foreground encoder label over rear page footprint as drawn.'
+text('proprio','Proprioception',[26,454,181,35],24)
+text('language','Language',[55,500,139,35],24)
+text('prompt','“Pack up the fruits\ninto the bag”',[33,529,171,47],18,italic=True)
+text('iproprio','Proprioception',[983,411,184,35],24)
+text('ilanguage','Language',[1012,457,150,35],24)
+text('iprompt','“Pack up the fruits\ninto the bag”',[991,486,172,47],18,italic=True)
+line('state_right',[[329,514],[570,514]])
+line('state_up',[[570,514],[570,422]],arrow=True)
+line('istate_right',[[1286,470],[1393,470]])
+line('istate_up',[[1393,470],[1393,423]],arrow=True)
+# curved gold merge retained text-free isolated crop because scene lacks curved connectors
+asset('joint_merge_curve',[735,239,42,116])
+text('joint_label','Joint flow\nmatching',[780,264,135,62],24,color='#847750')
+text('teacher','(Teacher forcing)',[768,322,147,29],18,color='#847750')
+# dotted autoregressive loop is unsupported curved connector, preserved as independent art excluding nearby labels
+asset('autoregressive_loop',[1312,398,239,49])
+text('sampling','Autoregressive\nflow sampling',[1489,442,162,53],20,color='#AAAAAA')
+shape('execution_card',[1706,408,154,145],'#E6E6E6','#BBBBBB',kind='round_rect',radius=21,stroke_width=.5)
+# photo was earlier; lift photo above card
+photo=next(e for e in E if e['id']=='execution_photo'); photo['z']=len(E)+2;photo['container']='execution_card'
+text('execution_label','Async real-world\nexecution',[1717,416,143,46],17,container='execution_card')
+# feedback loop
+for i,p in [('fb_left',[[951,573],[951,243]]),('fb_bottom',[[951,573],[1783,573]]),('fb_right',[[1783,573],[1783,553]]),('fb_top_right',[[1783,408],[1783,395]])]:line(i,p,'#527F69',4)
+for i,p in [('fb_video',[[951,243],[990,243]]),('fb_prop',[[951,427],[978,427]]),('fb_kv',[[1432,573],[1432,423]])]:line(i,p,'#527F69',4,True)
+text('update','Update with Real Observation',[1256,584,423,35],24,True,color='#426154')
+# approve only literal source joins, plus explicit token interior relationships
+for a in E:
+ if a['id'].startswith('noise_') or a['id'].startswith('plus_'):
+  yy='250' if ('250' in a['id']) else '351' if '351' in a['id'] else None
+  if yy:
+   a['allow_overlap_with']=[e['id'] for e in E if e['id']!=a['id'] and (e['id'].startswith('noise_') or e['id'].startswith('plus_')) and yy in e['id']]
+   a['overlap_reason']='Source noise injection plus circle and intersecting horizontal/vertical lines.'
+# fix duplicate z after moved image
+for n,e in enumerate(sorted(E,key=lambda e:e['z'])):e['z']=n+1
+scene={'version':1,'slides':[{'id':'page_001','width':1888,'height':632,'source':'pages/page_001/source.png','background':'#FFFFFF','reviewed':True,'notes':'Adapted from Ye et al., World Action Models are Zero-shot Policies, arXiv:2602.15922v1 (2026-02-17), Figure 4. CC BY 4.0 https://creativecommons.org/licenses/by/4.0/. Reconstructed editable labels, shapes and lines; photos, noise tiles, robot icons, trajectories and curved loop/merge remain cropped raster. Changes: manually reconstructed geometry and substitute Arial fonts.','elements':E}]}
+(J/'scene.json').write_text(json.dumps(scene,indent=2))
+print(len(E))
+for e in E:
+ for k in list(e):
+  if e[k] is None: del e[k]
+(J/'scene.json').write_text(json.dumps(scene,indent=2))

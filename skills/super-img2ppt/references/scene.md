@@ -53,7 +53,7 @@ In v0.3, a shape can use `gradient` instead of a solid `fill`. For example:
 Use 2–16 ordered stops covering exactly 0–1. Stops must remain distinct after rounding to
 Office's 1/100000 position units. `vertical` runs top to bottom; `horizontal` left to right.
 Sample colors and stop positions from the source; do not invent chart values. PPTX and SVG
-both retain one editable gradient shape. Radial gradients, opacity and arbitrary angles remain
+both retain one editable gradient shape. Radial gradients, opacity and arbitrary gradient directions remain
 unsupported. A sampled gradient approximates its source color map and still needs comparison.
 
 The v0.3 runtime also supports `shape: "polygon"` with `vertices`: 3–32 normalized `[u,v]`
@@ -66,11 +66,12 @@ freeforms, with round stroke joins. They support fill, stroke, dash and text con
 collision and containment use the actual slanted footprint. Curves and polygon corner radii
 remain unsupported. Do not approximate an unsupported path with a misleading rectangle.
 
-- `rotation`: text only, one of `-90`, `0`, `90`, `180`, `270`, clockwise in screen coordinates.
+- `rotation`: text only, finite degrees between `-360` and `360`, clockwise in screen coordinates.
   The `box` is the **unrotated horizontal** text frame. Fit its text normally, then rotate about
   `[x+w/2, y+h/2]`. For a final vertical footprint `[x,y,w,h]`, use horizontal box
   `[x+w/2-h/2, y+h/2-w/2, h, w]` and `rotation: 90` or `-90`. This preserves native text,
-  font runs and editability. Geometry and actual PDF checks use the rotated position.
+  font runs and editability. For diagonal text and compound formulas, read
+  [diagonal_text.md](diagonal_text.md); actual slanted-edge ink containment requires visual review.
 - `dash: [on, off]`: positive source-pixel dash and gap lengths for lines or shape outlines.
   Requires a positive visible stroke. No automatic split into hundreds of line elements.
   Collision checks conservatively treat the complete stroke as occupied, including gaps.

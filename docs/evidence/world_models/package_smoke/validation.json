@@ -1,0 +1,189 @@
+{
+  "status": "review",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "pass",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "key_label_0",
+            "key_label_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "key_label_0",
+            "key_label_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "key_label_1",
+            "key_label_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "text": 3
+          },
+          "intentional_overlaps": [],
+          "text_layouts": {
+            "key_label_0": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 5.75,
+              "height_px": 14.95,
+              "available_width_px": 6.75,
+              "available_height_px": 15.95,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.25,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "v"
+              ]
+            },
+            "key_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 8.45,
+              "width_px": 4.25,
+              "height_px": 9.75,
+              "available_width_px": 5.25,
+              "available_height_px": 10.75,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 4.75,
+              "required_height_px": 10.25,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "key_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 8.45,
+              "width_px": 12.0,
+              "height_px": 9.75,
+              "available_width_px": 13.0,
+              "available_height_px": 10.75,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 12.5,
+              "required_height_px": 10.25,
+              "fits": true,
+              "lines": [
+                "AR"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "review",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [
+        {
+          "code": "diagonal_glyph_bounds_require_visual_review",
+          "severity": "warning",
+          "slide": "page_001",
+          "element": "key_label_0",
+          "message": "Diagonal text centers are checked in the rotated frame; PDF glyph bounds are page-axis rectangles, so exact slanted-edge ink containment requires actual-image review"
+        },
+        {
+          "code": "diagonal_glyph_bounds_require_visual_review",
+          "severity": "warning",
+          "slide": "page_001",
+          "element": "key_label_1",
+          "message": "Diagonal text centers are checked in the rotated frame; PDF glyph bounds are page-axis rectangles, so exact slanted-edge ink containment requires actual-image review"
+        },
+        {
+          "code": "diagonal_glyph_bounds_require_visual_review",
+          "severity": "warning",
+          "slide": "page_001",
+          "element": "key_label_2",
+          "message": "Diagonal text centers are checked in the rotated frame; PDF glyph bounds are page-axis rectangles, so exact slanted-edge ink containment requires actual-image review"
+        }
+      ],
+      "text_boxes": [
+        {
+          "slide": "page_001",
+          "element": "key_label_0",
+          "expected": "v",
+          "rendered": "v1AR",
+          "rendered_normalized": "v",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "width_measurement_axis": "page_x",
+          "measured_ink_width_px": 8.132,
+          "rendered_ink_width_px": 8.022
+        },
+        {
+          "slide": "page_001",
+          "element": "key_label_1",
+          "expected": "1",
+          "rendered": "v1A",
+          "rendered_normalized": "1",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "width_measurement_axis": "page_x",
+          "measured_ink_width_px": 5.657,
+          "rendered_ink_width_px": 5.615
+        },
+        {
+          "slide": "page_001",
+          "element": "key_label_2",
+          "expected": "AR",
+          "rendered": "v1AR",
+          "rendered_normalized": "AR",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "width_measurement_axis": "page_x",
+          "measured_ink_width_px": 12.551,
+          "rendered_ink_width_px": 12.317
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "e05bb2cf2f2e0c867e7fa6213462e0aff35672becb16b1d5de37e6fcfd334c3c",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": []
+}

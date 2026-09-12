@@ -1,0 +1,87 @@
+[
+  {
+    "args": [
+      "-c",
+      "import super_img2ppt; from pathlib import Path; print(super_img2ppt.__file__,super_img2ppt.__version__); assert super_img2ppt.__version__=='0.3.6'; assert str(Path(super_img2ppt.__file__).resolve()).startswith('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt036-smoke-f1sl73ea/super-img2ppt/src')"
+    ],
+    "exit": 0,
+    "stdout": "/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt036-smoke-f1sl73ea/super-img2ppt/src/super_img2ppt/__init__.py 0.3.6\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "-m",
+      "super_img2ppt",
+      "compose-math",
+      "spec.json",
+      "--out",
+      "math",
+      "--font-dir",
+      "/System/Library/Fonts/Supplemental"
+    ],
+    "exit": 0,
+    "stdout": "{\"status\": \"unverified\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt036-smoke-f1sl73ea/math\"}\n",
+    "stderr": "'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n"
+  },
+  {
+    "args": [
+      "-m",
+      "super_img2ppt",
+      "build",
+      "scene.json",
+      "--out",
+      "build",
+      "--font-dir",
+      "/System/Library/Fonts/Supplemental"
+    ],
+    "exit": 0,
+    "stdout": "{\"status\": \"review\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt036-smoke-f1sl73ea/build\"}\n",
+    "stderr": "'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n"
+  },
+  {
+    "args": [
+      "-m",
+      "super_img2ppt",
+      "compare-roi",
+      "/Users/liyufeng/code/super_img2ppt/examples/gallery/cosmos_policy/source.png",
+      "/tmp/cosmos-policy-1VceF4/build_04/render/page_001_comparison.png",
+      "--roi",
+      "1095",
+      "439",
+      "65",
+      "31",
+      "--color",
+      "#000000",
+      "--tolerance",
+      "149",
+      "--out",
+      "wrong_size"
+    ],
+    "exit": 0,
+    "stdout": "{\"status\": \"review\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt036-smoke-f1sl73ea/roi\"}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "-m",
+      "super_img2ppt",
+      "compare-roi",
+      "/Users/liyufeng/code/super_img2ppt/examples/gallery/cosmos_policy/source.png",
+      "/tmp/cosmos-policy-1VceF4/build_04/render/page_001_comparison.png",
+      "--roi",
+      "1095",
+      "439",
+      "65",
+      "31",
+      "--color",
+      "#000000",
+      "--tolerance",
+      "149",
+      "--out",
+      "wrong_size"
+    ],
+    "exit": 2,
+    "stdout": "{\"status\": \"fail\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt036-smoke-f1sl73ea/wrong_size\"}\n",
+    "stderr": ""
+  }
+]

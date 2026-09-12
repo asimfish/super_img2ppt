@@ -1,0 +1,21 @@
+import json,hashlib,collections
+from pathlib import Path
+import pypdfium2 as pdf
+from PIL import Image,ImageChops
+
+R=Path('/tmp/dreamzero_forward_20260912');B=R/'job/build_05';d=pdf.PdfDocument(B/'render/editable.pdf');p=d[0];scale=1888/p.get_width();im=p.render(scale=scale).to_pil().convert('RGB');raw=im.size;im.save(R/'actual_raw.png')
+# ceil(PDFium) can produce 633rd trailing white row; crop only if entirely white
+if im.height==633 and im.crop((0,632,1888,633)).getextrema()==((255,255),(255,255),(255,255)):im=im.crop((0,0,1888,632))
+im.save(R/'actual_source_width.png');src=Image.open(R/'source.png').convert('RGB')
+comparison=Image.new('RGB',(1888,632*2),'white');comparison.paste(src,(0,0));comparison.paste(im,(0,632));comparison.save(R/'source_comparison.png')
+rois={'train_title':[98,15,817,63],'encoder':[213,185,292,231],'causal':[507,162,642,220],'kv':[1372,350,1495,382],'prompt':[29,529,197,573],'feedback_label':[1251,585,1610,620]}
+metrics={}
+for name,box in rois.items():
+ a=src.crop(box);b=im.crop(box);panel=Image.new('RGB',(a.width*2,a.height),'white');panel.paste(a);panel.paste(b,(a.width,0));panel.resize((panel.width*3,panel.height*3)).save(R/f'detail_{name}.png')
+ def ink(z):
+  m={i for i,v in enumerate(z.getdata()) if max(v)<145}; xs=[i%z.width for i in m];ys=[i//z.width for i in m];return m,([min(xs),min(ys),max(xs),max(ys)] if xs else None)
+ ma,ba=ink(a);mb,bb=ink(b);metrics[name]={'roi':box,'threshold':'all RGB channels <145, fixed before measurement','source_ink_bounds':ba,'actual_ink_bounds':bb,'edge_delta':[b-a for a,b in zip(ba,bb)] if ba and bb else None,'ink_iou':float(len(ma&mb)/max(len(ma|mb),1))}
+(R/'measurements.json').write_text(json.dumps({'actual_raster':{'pdf_page_pt':[p.get_width(),p.get_height()],'scale':scale,'raw_size':raw,'final_size':im.size,'rounding':'Only wholly white extra bottom row cropped if PDFium ceil generated height 633; no registration/resizing.'},'regions':metrics},indent=2))
+s=json.loads((B/'scene.resolved.json').read_text()); counts=collections.Counter(e['kind'] for e in s['slides'][0]['elements']);assets=[{'id':e['id'],'box':e['box'],'path':e['path'],'contains_text':e['contains_text']}for e in s['slides'][0]['elements'] if e['kind']=='image']
+pro={'title':'World Action Models are Zero-shot Policies','authors':'Seonghyeon Ye et al.','arxiv':'2602.15922v1','submitted':'2026-02-17 15:04:02 UTC','current_version_verified':'v1 on 2026-09-12','official_pdf_url':'https://arxiv.org/pdf/2602.15922','pdf_sha256':hashlib.sha256((R/'paper.pdf').read_bytes()).hexdigest(),'page_one_based':6,'figure':4,'pdf_raster_scale':4,'crop_ltrb':[248,332,2136,964],'source_size':[1888,632],'license':'CC BY 4.0','license_url':'https://creativecommons.org/licenses/by/4.0/','evidence':['arxiv.html','license.html'],'attribution':'Adapted from Figure 4, Ye et al. (2026), World Action Models are Zero-shot Policies, arXiv:2602.15922v1. CC BY 4.0. Changes: manually reconstructed native geometry/text with Arial substitution; independent artwork crops retained.','native_counts':dict(counts),'assets':assets,'method':'PDFium raster only for source; visible pixels and local macOS Vision OCR. No source PDF text/vector coordinate extraction or drawing source.'}
+(R/'provenance.json').write_text(json.dumps(pro,indent=2));print(json.dumps(metrics,indent=2))

@@ -1,0 +1,9 @@
+from PIL import Image
+import pypdfium2 as p,json
+from pathlib import Path
+q=Path('/tmp/cosmos3-xNo4Kd');d=p.PdfDocument(q/'build_02/render/editable.pdf');pg=d[0];im=pg.render(scale=1400/pg.get_width()).to_pil().convert('RGB');print(im.size,pg.get_size());im.save(q/'actualsourcewidth02.png')
+s=Image.open(q/'source.png'); box=(145,258,756,305);a=s.crop(box);b=im.crop(box);o=Image.new('RGB',(a.width,a.height*2+10),'white');o.paste(a,(0,0));o.paste(b,(0,a.height+10));o.resize((1222,208)).save(q/'formula_compare02.png')
+x=json.load(open(q/'build_02/validation.json'))
+for k,v in x['automated_checks'].items():
+ for f in v.get('findings',[]):
+  if f.get('severity')=='warning':print(k,f)

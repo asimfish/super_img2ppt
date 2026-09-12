@@ -31,6 +31,23 @@ def _pdf_text_frame(element, tx, page_width, page_height):
     return left, bottom, right, top
 
 
+def _pdf_frame_polygon(element, tx, page_width, page_height):
+    points = rotate_points(box_points(element["box"]), element)
+    inches = [tx.point(x, y) for x, y in points]
+    return [
+        (x / tx.width_inches * page_width, page_height - y / tx.height_inches * page_height)
+        for x, y in inches
+    ]
+
+
+def _inside_polygon(x, y, points):
+    sides = [
+        (b[0] - a[0]) * (y - a[1]) - (b[1] - a[1]) * (x - a[0])
+        for a, b in zip(points, points[1:] + points[:1], strict=True)
+    ]
+    return all(side >= -1e-8 for side in sides) or all(side <= 1e-8 for side in sides)
+
+
 def _pdf_hyphen_boxes(textpage):
     """Identify PDFium's line-end hyphen sentinel using the engine's explicit flag."""
     is_hyphen = getattr(pdfium.raw, "FPDFText_IsHyphen", None)
@@ -57,8 +74,9 @@ def _restore_bounded_hyphens(extracted, frame, hyphens):
     return extracted.replace("\x02", "-") if count == verified else extracted
 
 
-def _pdf_glyph_owners(textpage, elements, frames, hyphens=None):
+def _pdf_glyph_owners(textpage, elements, frames, hyphens=None, polygons=None):
     hyphens = {} if hyphens is None else hyphens
+    polygons = {} if polygons is None else polygons
     get_object = getattr(pdfium.raw, "FPDFText_GetTextObject", None)
     if get_object is None:
         return {}
@@ -81,7 +99,12 @@ def _pdf_glyph_owners(textpage, elements, frames, hyphens=None):
                 text
                 and text in expected[eid]
                 and all(
-                    left <= (x0 + x1) / 2 <= right and bottom <= (y0 + y1) / 2 <= top
+                    left <= (x0 + x1) / 2 <= right
+                    and bottom <= (y0 + y1) / 2 <= top
+                    and (
+                        eid not in polygons
+                        or _inside_polygon((x0 + x1) / 2, (y0 + y1) / 2, polygons[eid])
+                    )
                     for _, _, (x0, y0, x1, y1) in glyphs
                 )
             ):
@@ -189,8 +212,13 @@ def verify_rendered_text(pdf: Path, scene: dict, layouts: dict | None = None) ->
                 pw, ph = page.get_size()
                 elements = [e for e in slide["elements"] if e["kind"] == "text"]
                 frames = {e["id"]: _pdf_text_frame(e, tx, pw, ph) for e in elements}
+                diagonal = {
+                    e["id"]: _pdf_frame_polygon(e, tx, pw, ph)
+                    for e in elements
+                    if e.get("rotation", 0) % 90
+                }
                 hyphens = _pdf_hyphen_boxes(textpage)
-                owners = _pdf_glyph_owners(textpage, elements, frames, hyphens)
+                owners = _pdf_glyph_owners(textpage, elements, frames, hyphens, diagonal)
                 for element in elements:
                     left, bottom, right, top = frames[element["id"]]
                     extracted = textpage.get_text_bounded(
@@ -198,6 +226,21 @@ def verify_rendered_text(pdf: Path, scene: dict, layouts: dict | None = None) ->
                     )
                     expected = compact_text(text_content(element))
                     normalized = _restore_bounded_hyphens(extracted, frames[element["id"]], hyphens)
+                    if element["id"] in diagonal:
+                        selected = []
+                        for char_index in range(textpage.count_chars()):
+                            if char_index in owners and owners[char_index] != element["id"]:
+                                continue
+                            x0, y0, x1, y1 = textpage.get_charbox(char_index)
+                            if _inside_polygon(
+                                (x0 + x1) / 2, (y0 + y1) / 2, diagonal[element["id"]]
+                            ):
+                                selected.append(
+                                    "-"
+                                    if char_index in hyphens
+                                    else textpage.get_text_range(char_index, 1)
+                                )
+                        normalized = "".join(selected)
                     actual = compact_text(normalized)
                     matched = expected in actual
                     boxes.append(
@@ -243,9 +286,16 @@ def verify_rendered_text(pdf: Path, scene: dict, layouts: dict | None = None) ->
                             continue
                         x0, y0, x1, y1 = textpage.get_charbox(char_index)
                         cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+                        if element["id"] in diagonal and not _inside_polygon(
+                            cx, cy, diagonal[element["id"]]
+                        ):
+                            continue
                         if left <= cx <= right and bottom <= cy <= top:
                             rendered_ink.append(
-                                (y0, y1) if element.get("rotation", 0) % 180 else (x0, x1)
+                                (y0, y1)
+                                if element.get("rotation", 0) % 180
+                                and element["id"] not in diagonal
+                                else (x0, x1)
                             )
                             length = pdfium.raw.FPDFText_GetFontInfo(
                                 textpage, char_index, None, 0, None
@@ -297,9 +347,36 @@ def verify_rendered_text(pdf: Path, scene: dict, layouts: dict | None = None) ->
                             }
                         )
                     boxes[-1]["actual_fonts"] = sorted(observed_fonts)
+                    if element["id"] in diagonal:
+                        boxes[-1]["width_measurement_axis"] = "page_x"
+                        findings.append(
+                            {
+                                "code": "diagonal_glyph_bounds_require_visual_review",
+                                "severity": "warning",
+                                "slide": slide["id"],
+                                "element": element["id"],
+                                "message": "Diagonal text centers are checked in the rotated frame; PDF glyph bounds are page-axis rectangles, so exact slanted-edge ink containment requires actual-image review",
+                            }
+                        )
                     if layouts is not None and rendered_ink:
                         predicted = text_ink_boxes(element, layouts[slide["id"], element["id"]])
                         if predicted:
+                            if element["id"] in diagonal:
+                                corners = [
+                                    p
+                                    for x0, y0, x1, y1 in predicted
+                                    for p in rotate_points(
+                                        box_points([x0, y0, x1 - x0, y1 - y0]), element
+                                    )
+                                ]
+                                predicted = [
+                                    (
+                                        min(p[0] for p in corners),
+                                        min(p[1] for p in corners),
+                                        max(p[0] for p in corners),
+                                        max(p[1] for p in corners),
+                                    )
+                                ]
                             expected_width = max(b[2] for b in predicted) - min(
                                 b[0] for b in predicted
                             )

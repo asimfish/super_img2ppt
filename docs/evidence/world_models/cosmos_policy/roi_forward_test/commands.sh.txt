@@ -1,0 +1,10 @@
+#!/bin/zsh
+set -u
+export PATH=/opt/homebrew/bin:$PATH
+CLI=/Users/liyufeng/Code/super_img2ppt/.venv/bin/super-img2ppt
+R=/tmp/cosmos-policy-1VceF4
+D=$R/roi_forward_test
+$CLI compare-roi "$R/source.png" "$R/build_04/actual_sourcewidth.png" --roi 160 0 295 33 --color '#000000' --tolerance 149 --out "$D/title"
+$CLI compare-roi "$R/source.png" "$R/build_04/actual_sourcewidth.png" --roi 198 42 104 19 --color '#000000' --tolerance 149 --out "$D/small_label"
+$CLI compare-roi "$R/source.png" "$R/build_04/actual_sourcewidth.png" --roi 1095 439 65 31 --color '#000000' --tolerance 149 --out "$D/value_formula"
+$CLI compare-roi "$R/source.png" "$R/build_04/render/page_001.png" --roi 160 0 295 33 --color '#000000' --tolerance 149 --out "$D/wrong_resolution"

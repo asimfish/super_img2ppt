@@ -1,0 +1,79 @@
+{
+  "status": "pass",
+  "unpacked_root": "/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt036-smoke-f1sl73ea",
+  "version": "0.3.6",
+  "import_verified": true,
+  "documented_formula_build": "review",
+  "valid_region": {
+    "status": "review",
+    "source_sha256": "302976e126e632477599a48edba30bb8e0632a7aa0d50dd753758b96b803a960",
+    "actual_sha256": "0a0f5e449223a9b9689a8000a6829676a3d9e5262107b341cbe96d9f7097179f",
+    "source_size": [
+      1195,
+      476
+    ],
+    "actual_size": [
+      1195,
+      476
+    ],
+    "roi": [
+      1095,
+      439,
+      65,
+      31
+    ],
+    "canvas_size": [
+      1195,
+      476
+    ],
+    "mask_color": "#000000",
+    "mask_tolerance": 149,
+    "mask_rule": "Every RGB channel differs from the selected color by at most tolerance",
+    "source_pixels": 273,
+    "actual_pixels": 233,
+    "source_ink_box": [
+      1102,
+      441,
+      1150,
+      465
+    ],
+    "actual_ink_box": [
+      1103,
+      441,
+      1149,
+      465
+    ],
+    "source_touches_roi": [],
+    "actual_touches_roi": [],
+    "edge_metrics_valid": true,
+    "edge_delta_px": [
+      1,
+      0,
+      -1,
+      0
+    ],
+    "mask_iou": 0.22815533980582525,
+    "issues": [],
+    "limits": [
+      "ROI and color must isolate the intended ink; nearby same-color geometry can contaminate the mask.",
+      "Boundary contact invalidates complete-ink edges; any IoU still describes only the cropped mask.",
+      "Equal extrema do not prove equal glyphs; no aggregate or automatic source-fidelity pass.",
+      "Caller must supply the actual PPTX render; this command cannot attest its origin."
+    ],
+    "normalization": "EXIF orientation and alpha-on-white only; no resizing or registration"
+  },
+  "wrong_size": {
+    "status": "fail",
+    "source_sha256": "302976e126e632477599a48edba30bb8e0632a7aa0d50dd753758b96b803a960",
+    "actual_sha256": "8c8549463c65ab64a126e886bbb82752953cabc81fac7cab85cab5215e27c841",
+    "source_size": [
+      1195,
+      476
+    ],
+    "actual_size": [
+      3585,
+      514
+    ],
+    "error": "Source and actual canvas sizes must match; do not register or resize them"
+  }
+}

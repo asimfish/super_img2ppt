@@ -1,6 +1,6 @@
 # Super Img2PPT capability card
 
-Owner: super_img2ppt contributors. Version: 0.3.5. Risk: scoped_change.
+Owner: super_img2ppt contributors. Version: 0.3.6. Risk: scoped_change.
 Canonical owner: this repository's `skills/super-img2ppt`.
 
 Reads: user-selected image/PDF/PPTX files; scene JSON and relative local assets; installed font
@@ -60,3 +60,13 @@ code execution, network or automatic spacing inference. Rejects unavailable font
 glyphs or styles, Unicode script shortcuts, duplicate fields and oversized inputs. Ordinary
 letters plus explicit script offsets preserve editable typography; actual source comparison
 is still required.
+
+Region diagnostics read two bounded local images and explicit ROI/color, write normalized
+images/crops/masks and source-coordinate ink metrics. No image registration, resizing or
+universal PASS; clipped/empty masks have explicit invalid edge metrics. Caller provides and
+attests the actual PPTX render. No new executable, dependency, network or credential behavior.
+
+Diagonal native text extends the bounded rotation field and formula common-pivot placement.
+Actual PDF glyph-center ownership uses the rotated frame; width comparison uses common page
+axes. PDF glyph rectangles do not prove exact slanted-edge containment, so diagonal text
+always retains a visual-review warning; missing text/font substitution still block.

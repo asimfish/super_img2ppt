@@ -20,6 +20,7 @@ from .layout import layout_scene
 from .mathtext import compose_file
 from .prepare import fresh_directory, json_write, prepare
 from .qa import comparison, inspect_pptx, preflight
+from .regions import compare_region_files
 from .render import make_renderer, rasterize_pdf, verify_rendered_text
 from .scene import SCHEMA, InputError, load_scene, safe_asset, slide_transform
 
@@ -250,6 +251,15 @@ def main(argv: list[str] | None = None) -> int:
     math_cmd.add_argument("spec", type=Path)
     math_cmd.add_argument("--out", type=Path, required=True)
     math_cmd.add_argument("--font-dir", type=Path, action="append", default=[])
+    region = commands.add_parser(
+        "compare-roi", help="Compare isolated ink in source and actual-render regions"
+    )
+    region.add_argument("source", type=Path)
+    region.add_argument("actual", type=Path)
+    region.add_argument("--roi", nargs=4, type=int, required=True, metavar=("X", "Y", "W", "H"))
+    region.add_argument("--color", required=True, help="Ink mask color as #RRGGBB")
+    region.add_argument("--tolerance", type=int, default=64)
+    region.add_argument("--out", type=Path, required=True)
     for name in ["build", "check"]:
         cmd = commands.add_parser(
             name,
@@ -290,9 +300,25 @@ def main(argv: list[str] | None = None) -> int:
             result = build(args.scene, args.out, not args.no_render, tuple(args.font_dir))
         elif args.command == "compose-math":
             result = compose_file(args.spec, args.out, tuple(args.font_dir))
+        elif args.command == "compare-roi":
+            result = compare_region_files(
+                args.source,
+                args.actual,
+                args.out,
+                roi=args.roi,
+                color=args.color,
+                tolerance=args.tolerance,
+            )
         else:
             result = check(args.scene, args.out, tuple(args.font_dir))
-        if args.command in {"build", "prepare", "check", "trace-curve", "compose-math"}:
+        if args.command in {
+            "build",
+            "prepare",
+            "check",
+            "trace-curve",
+            "compose-math",
+            "compare-roi",
+        }:
             print(
                 json.dumps(
                     {"status": result["status"], "output": str(args.out.resolve())},

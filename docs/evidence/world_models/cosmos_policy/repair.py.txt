@@ -1,0 +1,25 @@
+import json
+from pathlib import Path
+from PIL import Image
+r=Path(__file__).parent;p=r/'job/scene.json';d=json.loads(p.read_text());es=d['slides'][0]['elements'];out=[];s=Image.open(r/'source.png')
+for e in es:
+ id=e['id']
+ if e['kind']=='text':e.setdefault('color','#000000')
+ if id.endswith('_title'):
+  e['font_size']=23.5
+  if id=='injection_title':e['box'][1]+=2;e['font_size']=23.35
+  else:e['box'][1]+=.5
+ if id.startswith(('top_label_','latent_label_')):e['font_size']=11.8
+ if id=='vae':e['box'][0]+=3;e['box'][1]-=8;e['font_size']=13
+ if id=='noise':e['box'][0]+=2;e['box'][1]-=7;e['font_size']=12.5
+ if id=='math_value':e['box'][0]-=3
+ if id in ('math_state','math_action','math_future'):e['box'][0]+=1
+ if id=='noised_frames':
+  for i,t in enumerate(['partially','noised','latent','frames']):
+   v=e.copy();v['id']=f'noised_line_{i}';v['text']=t;v['box']=[3,346+i*18,71,23];v['z']=e['z']+i;out.append(v)
+  continue
+ if id in ['conditioning','target']:
+  c=s.getpixel((100,100) if id=='conditioning' else (550,100));e['fill']='#%02X%02X%02X'%c[:3]
+ out.append(e)
+for i,e in enumerate(out):e['z']=i+1
+d['slides'][0]['elements']=out;p.write_text(json.dumps(d,indent=2))

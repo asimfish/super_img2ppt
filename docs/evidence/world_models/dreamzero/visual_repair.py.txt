@@ -1,0 +1,11 @@
+import json
+from pathlib import Path
+P=Path('/tmp/dreamzero_forward_20260912/job');s=json.loads((P/'scene.json').read_text());D={e['id']:e for e in s['slides'][0]['elements']}
+for e in D.values():
+ if e['id'].endswith('_label') and e.get('container') or e['id'] in ['train_causal','infer_causal','future_action_label','prompt','iprompt','execution_label','sampling']:
+  e['align']='center'
+for i in ['state','istate']:D[i]['vertices']=[[0,0],[1,.1],[1,.9],[0,1]]
+# prompt boxes keep their first-line source start while centering the second line
+for i in ['prompt','iprompt']:D[i]['box'][2]=157
+# source arc should sit behind native arrows and foreground model: preserve exact crop base as disclosed
+(P/'scene.json').write_text(json.dumps(s,indent=2))

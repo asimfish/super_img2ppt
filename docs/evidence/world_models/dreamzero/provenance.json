@@ -1,0 +1,227 @@
+{
+  "title": "World Action Models are Zero-shot Policies",
+  "authors": "Seonghyeon Ye et al.",
+  "arxiv": "2602.15922v1",
+  "submitted": "2026-02-17 15:04:02 UTC",
+  "current_version_verified": "v1 on 2026-09-12",
+  "official_pdf_url": "https://arxiv.org/pdf/2602.15922",
+  "pdf_sha256": "cb91d24a04717a6c77fd39594af7f3f85a05317b7078b0d9c8d8b4ddd932f483",
+  "page_one_based": 6,
+  "figure": 4,
+  "pdf_raster_scale": 4,
+  "crop_ltrb": [
+    248,
+    332,
+    2136,
+    964
+  ],
+  "source_size": [
+    1888,
+    632
+  ],
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "evidence": [
+    "arxiv.html",
+    "license.html"
+  ],
+  "attribution": "Adapted from Figure 4, Ye et al. (2026), World Action Models are Zero-shot Policies, arXiv:2602.15922v1. CC BY 4.0. Changes: manually reconstructed native geometry/text with Arial substitution; independent artwork crops retained.",
+  "native_counts": {
+    "text": 37,
+    "line": 20,
+    "image": 15,
+    "shape": 72
+  },
+  "assets": [
+    {
+      "id": "train_video",
+      "box": [
+        26,
+        159,
+        164,
+        97
+      ],
+      "path": "assets/e45403e7295ac4710400.png",
+      "contains_text": false
+    },
+    {
+      "id": "past_video",
+      "box": [
+        979,
+        170,
+        158,
+        89
+      ],
+      "path": "assets/3ba60e448803b163bec5.png",
+      "contains_text": false
+    },
+    {
+      "id": "future_video",
+      "box": [
+        1723,
+        171,
+        125,
+        73
+      ],
+      "path": "assets/d59f8cfa52806dfc6173.png",
+      "contains_text": false
+    },
+    {
+      "id": "train_action",
+      "box": [
+        57,
+        302,
+        132,
+        84
+      ],
+      "path": "assets/bcaf9385da21f0179ebf.png",
+      "contains_text": false
+    },
+    {
+      "id": "future_action",
+      "box": [
+        1719,
+        320,
+        137,
+        80
+      ],
+      "path": "assets/c1d08b04293b1ee2a088.png",
+      "contains_text": false
+    },
+    {
+      "id": "execution_photo",
+      "box": [
+        1722,
+        461,
+        123,
+        83
+      ],
+      "path": "assets/d0f2fec483690defdbea.png",
+      "contains_text": false
+    },
+    {
+      "id": "noise_video",
+      "box": [
+        400,
+        229,
+        53,
+        42
+      ],
+      "path": "assets/262099d3ebe1e0853417.png",
+      "contains_text": false
+    },
+    {
+      "id": "noise_action",
+      "box": [
+        402,
+        331,
+        53,
+        42
+      ],
+      "path": "assets/9c2e5e25bae3db8b8813.png",
+      "contains_text": false
+    },
+    {
+      "id": "inoise_video",
+      "box": [
+        1260,
+        229,
+        53,
+        42
+      ],
+      "path": "assets/1c39127f200ce02ec8d3.png",
+      "contains_text": false
+    },
+    {
+      "id": "inoise_action",
+      "box": [
+        1263,
+        332,
+        53,
+        42
+      ],
+      "path": "assets/57ed111faf3976cc760f.png",
+      "contains_text": false
+    },
+    {
+      "id": "robot_in",
+      "box": [
+        307,
+        331,
+        53,
+        42
+      ],
+      "path": "assets/976634bad622b3e83ea0.png",
+      "contains_text": false
+    },
+    {
+      "id": "robot_out",
+      "box": [
+        684,
+        330,
+        53,
+        42
+      ],
+      "path": "assets/28ba0264c95369e27b6c.png",
+      "contains_text": false
+    },
+    {
+      "id": "irobot_out",
+      "box": [
+        1548,
+        331,
+        53,
+        42
+      ],
+      "path": "assets/6058ff678dcdc812b427.png",
+      "contains_text": false
+    },
+    {
+      "id": "joint_merge_curve",
+      "box": [
+        735,
+        239,
+        42,
+        116
+      ],
+      "path": "assets/428a6defffe5fa4294dc.png",
+      "contains_text": false
+    },
+    {
+      "id": "autoregressive_loop",
+      "box": [
+        1312,
+        398,
+        239,
+        49
+      ],
+      "path": "assets/2f710caefa68fe9ee890.png",
+      "contains_text": false
+    }
+  ],
+  "method": "PDFium raster only for source; visible pixels and local macOS Vision OCR. No source PDF text/vector coordinate extraction or drawing source.",
+  "measurement_contract": {
+    "fixed_before_first_measurement": true,
+    "registration": false,
+    "threshold_relaxation": false,
+    "ink_mask": "max(R,G,B) < 145",
+    "regions": "measurements.json",
+    "earlier_candidate": "measurements_build04.json"
+  },
+  "actual_raster": {
+    "pdf_page_pt": [
+      960.0094604492188,
+      321.36376953125
+    ],
+    "scale": 1.9666472860762696,
+    "raw_size": [
+      1888,
+      633
+    ],
+    "final_size": [
+      1888,
+      632
+    ],
+    "rounding": "Only wholly white extra bottom row cropped if PDFium ceil generated height 633; no registration/resizing."
+  }
+}

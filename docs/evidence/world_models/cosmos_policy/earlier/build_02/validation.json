@@ -1,0 +1,1017 @@
+{
+  "status": "pass",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "pass",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "top_label_4",
+            "top_label_5"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "injection_title",
+            "injection_bus"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "latent_label_0",
+            "red_frame_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "latent_label_4",
+            "red_frame_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "latent_label_5",
+            "red_frame_5"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "latent_label_9",
+            "red_frame_9"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "latent_frames",
+            "noise_arrow"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "shape": 6,
+            "text": 28,
+            "image": 26,
+            "line": 19
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "injection_bus",
+                "inject_current"
+              ],
+              "reason": "Source shows injection arrow shaft joined to horizontal bus.",
+              "area_px2": 0.723
+            },
+            {
+              "elements": [
+                "injection_bus",
+                "inject_action"
+              ],
+              "reason": "Source shows injection arrow shaft joined to horizontal bus.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "injection_bus",
+                "inject_future"
+              ],
+              "reason": "Source shows injection arrow shaft joined to horizontal bus.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "injection_bus",
+                "inject_value"
+              ],
+              "reason": "Source shows injection arrow shaft joined to horizontal bus.",
+              "area_px2": 0.723
+            },
+            {
+              "elements": [
+                "bracket_state",
+                "tick_stateleft"
+              ],
+              "reason": "Source bracket joins end tick at stroke center.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "bracket_state",
+                "tick_stateright"
+              ],
+              "reason": "Source bracket joins end tick at stroke center.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "bracket_action",
+                "tick_actionleft"
+              ],
+              "reason": "Source bracket joins end tick at stroke center.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "bracket_action",
+                "tick_actionright"
+              ],
+              "reason": "Source bracket joins end tick at stroke center.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "bracket_future",
+                "tick_futureleft"
+              ],
+              "reason": "Source bracket joins end tick at stroke center.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "bracket_future",
+                "tick_futureright"
+              ],
+              "reason": "Source bracket joins end tick at stroke center.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "bracket_value",
+                "tick_valueleft"
+              ],
+              "reason": "Source bracket joins end tick at stroke center.",
+              "area_px2": 1.445
+            },
+            {
+              "elements": [
+                "bracket_value",
+                "tick_valueright"
+              ],
+              "reason": "Source bracket joins end tick at stroke center.",
+              "area_px2": 1.445
+            }
+          ],
+          "text_layouts": {
+            "conditioning_title": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 265.25,
+              "height_px": 26.45,
+              "available_width_px": 285,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 265.75,
+              "required_height_px": 26.95,
+              "fits": true,
+              "lines": [
+                "conditioning subsequence"
+              ]
+            },
+            "target_title": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 202.0,
+              "height_px": 26.45,
+              "available_width_px": 220,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 202.5,
+              "required_height_px": 26.95,
+              "fits": true,
+              "lines": [
+                "target subsequence"
+              ]
+            },
+            "top_label_0": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 84.5,
+              "height_px": 13.225,
+              "available_width_px": 100,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 85.0,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "current wrist img"
+              ]
+            },
+            "top_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 76.5,
+              "height_px": 13.225,
+              "available_width_px": 100,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 77.0,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "current left img"
+              ]
+            },
+            "top_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 83.5,
+              "height_px": 13.225,
+              "available_width_px": 100,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 84.0,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "current right img"
+              ]
+            },
+            "top_label_3": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 78.25,
+              "height_px": 13.225,
+              "available_width_px": 100,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 78.75,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "future wrist img"
+              ]
+            },
+            "top_label_4": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 70.25,
+              "height_px": 13.225,
+              "available_width_px": 100,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 70.75,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "future left img"
+              ]
+            },
+            "top_label_5": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 77.25,
+              "height_px": 13.225,
+              "available_width_px": 100,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 77.75,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "future right img"
+              ]
+            },
+            "injection_title": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 818.5,
+              "height_px": 26.45,
+              "available_width_px": 855,
+              "available_height_px": 31,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 819.0,
+              "required_height_px": 26.95,
+              "fits": true,
+              "lines": [
+                "latent injection of additional modalities: robot proprioception, actions, and value"
+              ]
+            },
+            "latent_label_0": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 75.25,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 75.75,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "current proprio"
+              ]
+            },
+            "latent_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 84.5,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 85.0,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "current wrist img"
+              ]
+            },
+            "latent_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 76.5,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 77.0,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "current left img"
+              ]
+            },
+            "latent_label_3": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 83.5,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 84.0,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "current right img"
+              ]
+            },
+            "latent_label_4": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 65.25,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 65.75,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "action chunk"
+              ]
+            },
+            "latent_label_5": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 69.0,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 69.5,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "future proprio"
+              ]
+            },
+            "latent_label_6": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 78.25,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 78.75,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "future wrist img"
+              ]
+            },
+            "latent_label_7": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 70.25,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 70.75,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "future left img"
+              ]
+            },
+            "latent_label_8": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 77.25,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 77.75,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "future right img"
+              ]
+            },
+            "latent_label_9": {
+              "scale": 1,
+              "effective_font_size_px": 11.5,
+              "width_px": 27.75,
+              "height_px": 13.225,
+              "available_width_px": 91,
+              "available_height_px": 17,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 28.25,
+              "required_height_px": 13.725,
+              "fits": true,
+              "lines": [
+                "value"
+              ]
+            },
+            "math_state": {
+              "scale": 1,
+              "effective_font_size_px": 27,
+              "width_px": 10.75,
+              "height_px": 31.05,
+              "available_width_px": 76,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.25,
+              "required_height_px": 31.55,
+              "fits": true,
+              "lines": [
+                "s"
+              ]
+            },
+            "math_action": {
+              "scale": 1,
+              "effective_font_size_px": 27,
+              "width_px": 13.5,
+              "height_px": 31.05,
+              "available_width_px": 76,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.0,
+              "required_height_px": 31.55,
+              "fits": true,
+              "lines": [
+                "a"
+              ]
+            },
+            "math_future": {
+              "scale": 1,
+              "effective_font_size_px": 27,
+              "width_px": 18.0,
+              "height_px": 31.05,
+              "available_width_px": 76,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.5,
+              "required_height_px": 31.55,
+              "fits": true,
+              "lines": [
+                "s′"
+              ]
+            },
+            "math_value": {
+              "scale": 1,
+              "effective_font_size_px": 27,
+              "width_px": 55.75,
+              "height_px": 31.05,
+              "available_width_px": 76,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 56.25,
+              "required_height_px": 31.55,
+              "fits": true,
+              "lines": [
+                "V(s′)"
+              ]
+            },
+            "images": {
+              "scale": 1,
+              "effective_font_size_px": 17,
+              "width_px": 55.0,
+              "height_px": 19.55,
+              "available_width_px": 65,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 55.5,
+              "required_height_px": 20.05,
+              "fits": true,
+              "lines": [
+                "images"
+              ]
+            },
+            "latent_frames": {
+              "scale": 1,
+              "effective_font_size_px": 17,
+              "width_px": 52.25,
+              "height_px": 38.5,
+              "available_width_px": 68,
+              "available_height_px": 41,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 52.75,
+              "required_height_px": 39.0,
+              "fits": true,
+              "lines": [
+                "latent",
+                "frames"
+              ]
+            },
+            "noised_frames": {
+              "scale": 1,
+              "effective_font_size_px": 17,
+              "width_px": 58.75,
+              "height_px": 77.0,
+              "available_width_px": 71,
+              "available_height_px": 79,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 59.25,
+              "required_height_px": 77.5,
+              "fits": true,
+              "lines": [
+                "partially",
+                "noised",
+                "latent",
+                "frames"
+              ]
+            },
+            "vae": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 24.0,
+              "height_px": 13.8,
+              "available_width_px": 42,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 24.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "VAE"
+              ]
+            },
+            "noise": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 29.0,
+              "height_px": 13.8,
+              "available_width_px": 42,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 29.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "noise"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "pass",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [],
+      "text_boxes": [
+        {
+          "slide": "page_001",
+          "element": "conditioning_title",
+          "expected": "conditioning subsequence",
+          "rendered": "conditioning subsequence ",
+          "rendered_normalized": "conditioning subsequence ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 263.75,
+          "rendered_ink_width_px": 264.327
+        },
+        {
+          "slide": "page_001",
+          "element": "target_title",
+          "expected": "target subsequence",
+          "rendered": "target subsequence",
+          "rendered_normalized": "target subsequence",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 201.0,
+          "rendered_ink_width_px": 200.826
+        },
+        {
+          "slide": "page_001",
+          "element": "top_label_0",
+          "expected": "current wrist img",
+          "rendered": "current wrist img ",
+          "rendered_normalized": "current wrist img ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 83.5,
+          "rendered_ink_width_px": 83.088
+        },
+        {
+          "slide": "page_001",
+          "element": "top_label_1",
+          "expected": "current left img",
+          "rendered": "current left img ",
+          "rendered_normalized": "current left img ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 75.5,
+          "rendered_ink_width_px": 74.796
+        },
+        {
+          "slide": "page_001",
+          "element": "top_label_2",
+          "expected": "current right img",
+          "rendered": "current right img ",
+          "rendered_normalized": "current right img ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 82.5,
+          "rendered_ink_width_px": 81.815
+        },
+        {
+          "slide": "page_001",
+          "element": "top_label_3",
+          "expected": "future wrist img",
+          "rendered": "future wrist img ",
+          "rendered_normalized": "future wrist img ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 77.5,
+          "rendered_ink_width_px": 77.021
+        },
+        {
+          "slide": "page_001",
+          "element": "top_label_4",
+          "expected": "future left img",
+          "rendered": "future left img f",
+          "rendered_normalized": "future left img f",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 69.5,
+          "rendered_ink_width_px": 68.741
+        },
+        {
+          "slide": "page_001",
+          "element": "top_label_5",
+          "expected": "future right img",
+          "rendered": "future right img",
+          "rendered_normalized": "future right img",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 76.5,
+          "rendered_ink_width_px": 75.759
+        },
+        {
+          "slide": "page_001",
+          "element": "injection_title",
+          "expected": "latent injection of additional modalities: robot proprioception, actions, and value",
+          "rendered": "latent injection of additional modalities: robot proprioception, actions, and value",
+          "rendered_normalized": "latent injection of additional modalities: robot proprioception, actions, and value",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT",
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 816.25,
+          "rendered_ink_width_px": 815.897
+        },
+        {
+          "slide": "page_001",
+          "element": "latent_label_0",
+          "expected": "current proprio",
+          "rendered": "current proprio ",
+          "rendered_normalized": "current proprio ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 74.5,
+          "rendered_ink_width_px": 73.89
+        },
+        {
+          "slide": "page_001",
+          "element": "latent_label_1",
+          "expected": "current wrist img",
+          "rendered": "current wrist img ",
+          "rendered_normalized": "current wrist img ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 83.5,
+          "rendered_ink_width_px": 83.088
+        },
+        {
+          "slide": "page_001",
+          "element": "latent_label_2",
+          "expected": "current left img",
+          "rendered": "current left img ",
+          "rendered_normalized": "current left img ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 75.5,
+          "rendered_ink_width_px": 74.796
+        },
+        {
+          "slide": "page_001",
+          "element": "latent_label_3",
+          "expected": "current right img",
+          "rendered": "current right img ",
+          "rendered_normalized": "current right img ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 82.5,
+          "rendered_ink_width_px": 81.815
+        },
+        {
+          "slide": "page_001",
+          "element": "latent_label_4",
+          "expected": "action chunk",
+          "rendered": "action chunk ",
+          "rendered_normalized": "action chunk ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 65.0,
+          "rendered_ink_width_px": 64.073
+        },
+        {
+          "slide": "page_001",
+          "element": "latent_label_5",
+          "expected": "future proprio",
+          "rendered": "future proprio ",
+          "rendered_normalized": "future proprio ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 68.5,
+          "rendered_ink_width_px": 67.835
+        },
+        {
+          "slide": "page_001",
+          "element": "latent_label_6",
+          "expected": "future wrist img",
+          "rendered": "future wrist img ",
+          "rendered_normalized": "future wrist img ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 77.5,
+          "rendered_ink_width_px": 77.021
+        },
+        {
+          "slide": "page_001",
+          "element": "latent_label_7",
+          "expected": "future left img",
+          "rendered": "future left img ",
+          "rendered_normalized": "future left img ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 69.5,
+          "rendered_ink_width_px": 68.741
+        },
+        {
+          "slide": "page_001",
+          "element": "latent_label_8",
+          "expected": "future right img",
+          "rendered": "future right img ",
+          "rendered_normalized": "future right img ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 76.5,
+          "rendered_ink_width_px": 75.759
+        },
+        {
+          "slide": "page_001",
+          "element": "latent_label_9",
+          "expected": "value",
+          "rendered": "value",
+          "rendered_normalized": "value",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 27.25,
+          "rendered_ink_width_px": 26.836
+        },
+        {
+          "slide": "page_001",
+          "element": "math_state",
+          "expected": "s",
+          "rendered": "s ",
+          "rendered_normalized": "s ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 10.25,
+          "rendered_ink_width_px": 10.027
+        },
+        {
+          "slide": "page_001",
+          "element": "math_action",
+          "expected": "a",
+          "rendered": "a ",
+          "rendered_normalized": "a ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 12.25,
+          "rendered_ink_width_px": 12.055
+        },
+        {
+          "slide": "page_001",
+          "element": "math_future",
+          "expected": "s′",
+          "rendered": "s′ ",
+          "rendered_normalized": "s′ ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 18.0,
+          "rendered_ink_width_px": 17.785
+        },
+        {
+          "slide": "page_001",
+          "element": "math_value",
+          "expected": "V(s′)",
+          "rendered": "V(s′)",
+          "rendered_normalized": "V(s′)",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT",
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 46.75,
+          "rendered_ink_width_px": 46.468
+        },
+        {
+          "slide": "page_001",
+          "element": "images",
+          "expected": "images",
+          "rendered": "images",
+          "rendered_normalized": "images",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 53.5,
+          "rendered_ink_width_px": 53.07
+        },
+        {
+          "slide": "page_001",
+          "element": "latent_frames",
+          "expected": "latent\nframes",
+          "rendered": "latent\r\nframes",
+          "rendered_normalized": "latent\r\nframes",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 51.75,
+          "rendered_ink_width_px": 51.178
+        },
+        {
+          "slide": "page_001",
+          "element": "noised_frames",
+          "expected": "partially\nnoised\nlatent\nframes",
+          "rendered": "partially\r\nnoised\r\nlatent\r\nframes",
+          "rendered_normalized": "partially\r\nnoised\r\nlatent\r\nframes",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 57.75,
+          "rendered_ink_width_px": 57.331
+        },
+        {
+          "slide": "page_001",
+          "element": "vae",
+          "expected": "VAE",
+          "rendered": "VA\r\nE ",
+          "rendered_normalized": "VA\r\nE ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 23.5,
+          "rendered_ink_width_px": 22.315
+        },
+        {
+          "slide": "page_001",
+          "element": "noise",
+          "expected": "noise",
+          "rendered": "noise",
+          "rendered_normalized": "noise",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 27.75,
+          "rendered_ink_width_px": 27.283
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "0fc135ebdde6278a88ef00086664d6bf473a8421d562e845f1662b3c3bbfa9e7",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "page_001",
+      "mean_absolute_pixel_error": 0.036197,
+      "comparison": "page_001_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

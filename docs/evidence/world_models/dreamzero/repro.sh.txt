@@ -1,0 +1,6 @@
+#!/bin/zsh
+set -eu
+export PATH=/opt/homebrew/bin:$PATH
+TASK_ROOT=${0:A:h}
+: ${1:?Pass a fresh output directory}
+/Users/liyufeng/Code/super_img2ppt/.venv/bin/super-img2ppt build "$TASK_ROOT/job/build_05/scene.resolved.json" --out "$1" --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype --font-dir /System/Library/Fonts/Supplemental

@@ -275,3 +275,20 @@ STIXGeneral passed local composition but failed actual Office font checks, missi
 was rejected, and a DejaVu Serif candidate was blocked for overlap. Final source glyphs are
 not perfectly matched. See repository docs/formula_gallery.md, source/actual crops, and the
 independent report; automated PASS and source fidelity are deliberately separate claims.
+
+## v0.3.6 world-model figures, diagonal text and local diagnostics
+
+Three complete 2026 raster-source reconstructions: DreamZero Fig.4 (129 native objects,
+15 images), Cosmos Policy Fig.2 (56 native, 26 images), Cosmos 3 Fig.5 (414 native, one
+text-free brace image). All distributed scenes reproduce their frozen actual preview with
+zero changed pixels using the same local fonts/renderer; this measures reproducibility,
+not agreement with the paper. Source glyph differences remain.
+
+Cosmos 3's diagonal header strip was removed and replaced with 32 native text parts using
+common-origin rotation. Actual export passes blockers, while explicit slanted-boundary review
+warnings remain. An adversarial neighboring PDF glyph outside the rotated frame cannot satisfy
+a missing label. The generic compare-roi helper was independently checked on three Cosmos
+Policy regions against a separate integer-set mask oracle. Value-label edges differ by at most
+one pixel but mask IoU is 0.228155; this is not text-recognition accuracy. Wrong image dimensions
+fail without resizing; empty or clipped masks do not produce valid edge metrics. See repository
+docs/world_models.md for exact artifacts, failures, commands and limitations.

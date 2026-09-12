@@ -1,0 +1,8 @@
+from pathlib import Path
+import pypdfium2 as pdf
+r=Path(__file__).parent
+# Raster page only. Deliberately never call PDF text/vector extraction APIs.
+p=pdf.PdfDocument(r/'paper.pdf')[3]
+im=p.render(scale=3).to_pil()
+im.save(r/'page4_3x_reproduced.png')
+im.crop((320,246,1515,722)).save(r/'source_reproduced.png')

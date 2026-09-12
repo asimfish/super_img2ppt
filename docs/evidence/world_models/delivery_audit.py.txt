@@ -1,0 +1,41 @@
+import hashlib,json,re,subprocess,zipfile
+from pathlib import Path
+from PIL import Image
+root=Path.cwd();base='cd9d263045f97d5c5ad488109f577ae83d32eb8d';e=Path('docs/evidence/world_models');result={}
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+old=json.loads(subprocess.check_output(['git','show',base+':examples/gallery/index.json']))['cases']; oldfiles=[]
+for c in old:
+ oldfiles+=subprocess.check_output(['git','ls-tree','-r','--name-only',base,'examples/gallery/'+c['id']]).decode().splitlines()
+oldfiles+=subprocess.check_output(['git','ls-tree','-r','--name-only',base,'docs/previews/gallery']).decode().splitlines()
+for s in oldfiles:assert Path(s).read_bytes()==subprocess.check_output(['git','show',base+':'+s]),s
+result['previous_cases']={'count':12,'checked_files':len(oldfiles),'changed_files':0,'baseline':base}
+index=json.loads(Path('examples/gallery/index.json').read_text());rows=[]
+for c in index['cases']:
+ p=Path('examples/gallery')/c['id'];s=Image.open(p/'source.png');a=Image.open(p/'actual.png');assert s.size==a.size
+ with zipfile.ZipFile(p/'editable.pptx') as z:assert z.testzip() is None
+ scene=json.loads((p/'scene.resolved.json').read_text());rows.append({'id':c['id'],'dimensions':list(s.size),'objects':len(scene['slides'][0]['elements'])})
+result['gallery']=rows
+for line in Path('examples/gallery/SHA256SUMS').read_text().splitlines():
+ h,n=line.split('  ',1);assert sha(Path('examples/gallery')/n)==h,n
+with zipfile.ZipFile('examples/gallery/paper_gallery.zip') as z:
+ assert z.testzip() is None
+ for line in z.read('SHA256SUMS').decode().splitlines():
+  h,n=line.split('  ',1);assert hashlib.sha256(z.read(n)).hexdigest()==h,n
+h=sha(Path('examples/gallery/paper_gallery.zip'));subprocess.run(['.venv/bin/python','scripts/build_gallery_bundle.py'],check=True,capture_output=True);assert sha(Path('examples/gallery/paper_gallery.zip'))==h
+result['bundle']={'cases':15,'sha256':h,'size':Path('examples/gallery/paper_gallery.zip').stat().st_size,'deterministic':True,'all_internal_and_external_sums_verified':True}
+result['skill_package']={'version':'0.3.6','sha256':sha(Path('dist/super-img2ppt.skill')),'isolated_smoke':'package_smoke/result.json'}
+checks=[['.venv/bin/ruff','check','.'],['.venv/bin/ruff','format','--check','.'],['.venv/bin/python','scripts/verify_skill.py'],['.venv/bin/python','scripts/build_capability_registry.py','--check'],['.venv/bin/python','/Users/liyufeng/Code/cursur/skills/agent_meta/skill-quality-gate/scripts/audit_skill_governance.py','--repo',str(root),'--json'],['.venv/bin/python','/Users/liyufeng/Code/cursur/skills/agent_meta/skill-creator/scripts/quick_validate.py','skills/super-img2ppt']]
+result['checks']=[]
+for cmd in checks:
+ p=subprocess.run(cmd,capture_output=True,text=True);result['checks'].append({'command':cmd,'exit':p.returncode,'output':p.stdout+p.stderr});assert p.returncode==0,result['checks'][-1]
+assert '119 passed' in (e/'full_tests.log').read_text();result['tests']='119 passed; full_tests.log'
+result['semantic_review']={'status':'pass_with_documented_limits','scope':'All-angle native text and common-pivot formula positions; bounds-aware ROI diagnostics; full-source gallery comparisons. No automatic typography inference or fidelity PASS. Diagonal center ownership excludes outside-quad decoy, exact slanted glyph containment explicitly review-only. Existing quarter-turn/text-mismatch/font checks remain covered. Fresh output, image/pixel/ROI size limits reused or explicit; no new subprocess/network/dependency for ROI. No font/PDF source-text extraction added.','evidence':['diagonal_red.log','diagonal_neighbor.log','cosmos_policy/roi_forward_test/CONCLUSION.md','cosmos3/before_after_scenediff.json','replay.json']}
+result['status']='pass';(e/'delivery.json').write_text(json.dumps(result,indent=2)+'\n')
+# Relative Markdown links in the changed top-level documentation must resolve.
+missing=[]
+for p in [Path('README.md'),Path('docs/world_models.md'),Path('docs/formula_gallery.md')]:
+ for target in re.findall(r'\]\(([^)]+)\)',p.read_text()):
+  if target.startswith(('http:','https:','#','mailto:')):continue
+  if not (p.parent/target.split('#')[0]).exists():missing.append([str(p),target])
+assert not missing,missing
+print(json.dumps({'status':'pass','unchanged_files':len(oldfiles),'gallery_cases':len(rows),'bundle_sha256':h}))

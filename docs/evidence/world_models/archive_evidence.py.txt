@@ -1,0 +1,17 @@
+import hashlib,json,shutil
+from pathlib import Path
+w=Path('output/world_gallery_20260912');e=Path('docs/evidence/world_models');e.mkdir(parents=True,exist_ok=True)
+rows=[];attrs=[]
+for c in json.loads((w/'cases.json').read_text()):
+ base=Path(c['base']);target=e/c['id'];target.mkdir(parents=True,exist_ok=True)
+ for p in base.iterdir():
+  if p.suffix=='.html':
+   shutil.copy2(p,target/p.name);attrs.append(f'{target/p.name} -whitespace')
+ rows.append({'id':c['id'],'source_sha256':hashlib.sha256(Path(c['source']).read_bytes()).hexdigest(),'publisher_evidence':[{'path':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in target.glob('*.html')]})
+(e/'source_audit.json').write_text(json.dumps(rows,indent=2)+'\n')
+p=Path('.gitattributes');s=p.read_text();extra=[a for a in attrs if a not in s];p.write_text(s+'\n# Preserve paper-specific world-model license evidence.\n'+'\n'.join(extra)+'\n')
+for name in ['contract.md','region_red.log','region_green.log','diagonal_red.log','diagonal_green_01.log','new_features_green.log','diagonal_neighbor.log']:
+ shutil.copy2(w/name,e/name)
+for name in ['archive.py','replay.py','archive_evidence.py']:
+ shutil.copy2(w/name,e/(name+'.txt'))
+shutil.copy2(w/'cases.json',e/'cases.json')

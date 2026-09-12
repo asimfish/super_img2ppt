@@ -1,0 +1,1474 @@
+{
+  "status": "fail",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "fail",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "dots1"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 23,
+            "width_px": 23.0,
+            "height_px": 27.0,
+            "available_width_px": 17,
+            "available_height_px": 29,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 23.5,
+            "required_height_px": 27.5,
+            "fits": false,
+            "lines": [
+              "⋮"
+            ]
+          }
+        },
+        {
+          "slide": "page_001",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "dots2"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 23,
+            "width_px": 23.0,
+            "height_px": 27.0,
+            "available_width_px": 17,
+            "available_height_px": 29,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 23.5,
+            "required_height_px": 27.5,
+            "fits": false,
+            "lines": [
+              "⋮"
+            ]
+          }
+        },
+        {
+          "slide": "page_001",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "dots3"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 23,
+            "width_px": 23.0,
+            "height_px": 27.0,
+            "available_width_px": 17,
+            "available_height_px": 29,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 23.5,
+            "required_height_px": 27.5,
+            "fits": false,
+            "lines": [
+              "⋮"
+            ]
+          }
+        },
+        {
+          "slide": "page_001",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "dots4"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 23,
+            "width_px": 23.0,
+            "height_px": 27.0,
+            "available_width_px": 17,
+            "available_height_px": 29,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 23.5,
+            "required_height_px": 27.5,
+            "fits": false,
+            "lines": [
+              "⋮"
+            ]
+          }
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "past_video",
+            "fb_video"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 54.0
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "train_action",
+            "action"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "future_action",
+            "future_action_label"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "future_action",
+            "fb_top_right"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 20.0
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "past",
+            "vae_enc_inf"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "infer_dit",
+            "autoregressive_loop"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4872.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "kv",
+            "autoregressive_loop"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 316.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "v1_screen",
+            "v1_play"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 54.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "v2_screen",
+            "v2_play"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 54.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "v3_screen",
+            "v3_play"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 54.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "noisy1_screen",
+            "noisy1_play"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 54.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "noisy2_screen",
+            "noisy2_play"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 54.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "out1",
+            "future_blank2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 51.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "out1_screen",
+            "out1_play"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 54.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "iv1_screen",
+            "iv1_play"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 54.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "iv2_screen",
+            "iv2_play"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 54.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "iout_screen",
+            "iout_play"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 54.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "robot_in",
+            "noise_to_351"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 1.8
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "robot_out",
+            "joint_merge_curve"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 50.0
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "noise_up_250",
+            "noise_label_250"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "noise_up_351",
+            "noise_label_351"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "state_rear",
+            "proprio"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "istate_rear",
+            "iproprio"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "language",
+            "prompt"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "ilanguage",
+            "iprompt"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "istate_up",
+            "autoregressive_loop"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 69.6
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "joint_merge_curve",
+            "teacher"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 261.0
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "joint_label",
+            "teacher"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "autoregressive_loop",
+            "sampling"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 310.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "autoregressive_loop",
+            "fb_kv"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 106.0
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "execution_label",
+            "execution_photo"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "fb_left",
+            "fb_bottom"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "fb_left",
+            "fb_video"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "fb_left",
+            "fb_prop"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 8.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "fb_bottom",
+            "fb_right"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 4.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "fb_bottom",
+            "fb_kv"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 8.0
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "text": 37,
+            "line": 20,
+            "image": 15,
+            "shape": 72
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "train_bar0",
+                "train_causal"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 900.0
+            },
+            {
+              "elements": [
+                "train_bar1",
+                "train_causal"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 2100.0
+            },
+            {
+              "elements": [
+                "train_bar1",
+                "train_grid0"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "train_bar1",
+                "train_grid1"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 117.0
+            },
+            {
+              "elements": [
+                "train_bar1",
+                "train_grid3"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "train_bar1",
+                "train_grid4"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 117.0
+            },
+            {
+              "elements": [
+                "train_bar1",
+                "train_grid6"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "train_bar1",
+                "train_grid7"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 117.0
+            },
+            {
+              "elements": [
+                "train_bar2",
+                "train_causal"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 2100.0
+            },
+            {
+              "elements": [
+                "train_bar2",
+                "train_grid1"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 90.0
+            },
+            {
+              "elements": [
+                "train_bar2",
+                "train_grid2"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "train_bar2",
+                "train_grid4"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 90.0
+            },
+            {
+              "elements": [
+                "train_bar2",
+                "train_grid5"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "train_bar2",
+                "train_grid7"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 90.0
+            },
+            {
+              "elements": [
+                "train_bar2",
+                "train_grid8"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "train_bar3",
+                "train_causal"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 2100.0
+            },
+            {
+              "elements": [
+                "infer_bar0",
+                "infer_causal"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 900.0
+            },
+            {
+              "elements": [
+                "infer_bar1",
+                "infer_causal"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 2100.0
+            },
+            {
+              "elements": [
+                "infer_bar1",
+                "infer_grid0"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "infer_bar1",
+                "infer_grid1"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 117.0
+            },
+            {
+              "elements": [
+                "infer_bar1",
+                "infer_grid3"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "infer_bar1",
+                "infer_grid4"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 117.0
+            },
+            {
+              "elements": [
+                "infer_bar1",
+                "infer_grid6"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "infer_bar1",
+                "infer_grid7"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 117.0
+            },
+            {
+              "elements": [
+                "infer_bar2",
+                "infer_causal"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 2100.0
+            },
+            {
+              "elements": [
+                "infer_bar2",
+                "infer_grid1"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 90.0
+            },
+            {
+              "elements": [
+                "infer_bar2",
+                "infer_grid2"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "infer_bar2",
+                "infer_grid4"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 90.0
+            },
+            {
+              "elements": [
+                "infer_bar2",
+                "infer_grid5"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "infer_bar2",
+                "infer_grid7"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 90.0
+            },
+            {
+              "elements": [
+                "infer_bar2",
+                "infer_grid8"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "infer_bar3",
+                "infer_causal"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 2100.0
+            },
+            {
+              "elements": [
+                "noise_plus_250",
+                "plus_v_250"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 33.455
+            },
+            {
+              "elements": [
+                "noise_plus_250",
+                "plus_h_250"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 33.455
+            },
+            {
+              "elements": [
+                "noise_plus_250",
+                "noise_to_250"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 28.694
+            },
+            {
+              "elements": [
+                "plus_v_250",
+                "plus_h_250"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 4.41
+            },
+            {
+              "elements": [
+                "plus_v_250",
+                "noise_to_250"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 3.78
+            },
+            {
+              "elements": [
+                "plus_h_250",
+                "noise_to_250"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 28.8
+            },
+            {
+              "elements": [
+                "noise_plus_351",
+                "plus_v_351"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 33.455
+            },
+            {
+              "elements": [
+                "noise_plus_351",
+                "plus_h_351"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 33.455
+            },
+            {
+              "elements": [
+                "noise_plus_351",
+                "noise_to_351"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 28.694
+            },
+            {
+              "elements": [
+                "plus_v_351",
+                "plus_h_351"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 4.41
+            },
+            {
+              "elements": [
+                "plus_v_351",
+                "noise_to_351"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 3.78
+            },
+            {
+              "elements": [
+                "plus_h_351",
+                "noise_to_351"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 28.8
+            },
+            {
+              "elements": [
+                "state_rear",
+                "state"
+              ],
+              "reason": "Overlapping two encoder pages visible in source.",
+              "area_px2": 5878.213
+            },
+            {
+              "elements": [
+                "state_rear",
+                "state_label"
+              ],
+              "reason": "Foreground encoder label over rear page footprint as drawn.",
+              "area_px2": 3417.743
+            },
+            {
+              "elements": [
+                "istate_rear",
+                "istate"
+              ],
+              "reason": "Overlapping two encoder pages visible in source.",
+              "area_px2": 5878.213
+            },
+            {
+              "elements": [
+                "istate_rear",
+                "istate_label"
+              ],
+              "reason": "Foreground encoder label over rear page footprint as drawn.",
+              "area_px2": 3417.743
+            }
+          ],
+          "text_layouts": {
+            "train_title": {
+              "scale": 1,
+              "effective_font_size_px": 34,
+              "width_px": 701.25,
+              "height_px": 39.1,
+              "available_width_px": 780,
+              "available_height_px": 47,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 701.75,
+              "required_height_px": 39.6,
+              "fits": true,
+              "lines": [
+                "Training: Joint Video-Action Flow Matching"
+              ]
+            },
+            "infer_title": {
+              "scale": 1,
+              "effective_font_size_px": 34,
+              "width_px": 739.5,
+              "height_px": 39.1,
+              "available_width_px": 816,
+              "available_height_px": 47,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 740.0,
+              "required_height_px": 39.6,
+              "fits": true,
+              "lines": [
+                "Inference: Closed-Loop Real World Execution"
+              ]
+            },
+            "train_dit_title": {
+              "scale": 1,
+              "effective_font_size_px": 25,
+              "width_px": 268.25,
+              "height_px": 28.75,
+              "available_width_px": 284,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 268.75,
+              "required_height_px": 29.25,
+              "fits": true,
+              "lines": [
+                "Joint Video-Action DiT"
+              ]
+            },
+            "infer_dit_title": {
+              "scale": 1,
+              "effective_font_size_px": 25,
+              "width_px": 268.25,
+              "height_px": 28.75,
+              "available_width_px": 287,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 268.75,
+              "required_height_px": 29.25,
+              "fits": true,
+              "lines": [
+                "Joint Video-Action DiT"
+              ]
+            },
+            "video": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 61.0,
+              "height_px": 27.6,
+              "available_width_px": 110,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 61.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Video"
+              ]
+            },
+            "latents": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 78.5,
+              "height_px": 27.6,
+              "available_width_px": 108,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 79.0,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Latents"
+              ]
+            },
+            "action": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 66.75,
+              "height_px": 27.6,
+              "available_width_px": 115,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 67.25,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Action"
+              ]
+            },
+            "past": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 128.0,
+              "height_px": 27.6,
+              "available_width_px": 175,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 128.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Past frames"
+              ]
+            },
+            "future": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 149.25,
+              "height_px": 27.6,
+              "available_width_px": 181,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 149.75,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Future frames"
+              ]
+            },
+            "future_action_label": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 139.75,
+              "height_px": 55.2,
+              "available_width_px": 171,
+              "available_height_px": 62,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 140.25,
+              "required_height_px": 55.7,
+              "fits": true,
+              "lines": [
+                "Future action",
+                "chunk"
+              ]
+            },
+            "vae_enc_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 67.25,
+              "height_px": 41.4,
+              "available_width_px": 86,
+              "available_height_px": 46.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 67.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "VAE",
+                "Encoder"
+              ]
+            },
+            "action_enc_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 67.25,
+              "height_px": 41.4,
+              "available_width_px": 86,
+              "available_height_px": 46.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 67.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "Action",
+                "Encoder"
+              ]
+            },
+            "vae_enc_inf_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 67.25,
+              "height_px": 41.4,
+              "available_width_px": 86,
+              "available_height_px": 46.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 67.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "VAE",
+                "Encoder"
+              ]
+            },
+            "vae_dec_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 68.25,
+              "height_px": 41.4,
+              "available_width_px": 86,
+              "available_height_px": 46.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "VAE",
+                "Decoder"
+              ]
+            },
+            "action_dec_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 68.25,
+              "height_px": 41.4,
+              "available_width_px": 86,
+              "available_height_px": 46.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "Action",
+                "Decoder"
+              ]
+            },
+            "train_causal": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 118.25,
+              "height_px": 55.2,
+              "available_width_px": 146,
+              "available_height_px": 60,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 118.75,
+              "required_height_px": 55.7,
+              "fits": true,
+              "lines": [
+                "Causal DiT",
+                "Blocks"
+              ]
+            },
+            "infer_causal": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 118.25,
+              "height_px": 55.2,
+              "available_width_px": 146,
+              "available_height_px": 60,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 118.75,
+              "required_height_px": 55.7,
+              "fits": true,
+              "lines": [
+                "Causal DiT",
+                "Blocks"
+              ]
+            },
+            "kv_text": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 107.75,
+              "height_px": 27.6,
+              "available_width_px": 131,
+              "available_height_px": 37,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 108.25,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "KV Cache"
+              ]
+            },
+            "dots1": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 23.0,
+              "height_px": 27.0,
+              "available_width_px": 17,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 23.5,
+              "required_height_px": 27.5,
+              "fits": false,
+              "lines": [
+                "⋮"
+              ]
+            },
+            "dots2": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 23.0,
+              "height_px": 27.0,
+              "available_width_px": 17,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 23.5,
+              "required_height_px": 27.5,
+              "fits": false,
+              "lines": [
+                "⋮"
+              ]
+            },
+            "dots3": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 23.0,
+              "height_px": 27.0,
+              "available_width_px": 17,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 23.5,
+              "required_height_px": 27.5,
+              "fits": false,
+              "lines": [
+                "⋮"
+              ]
+            },
+            "dots4": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 23.0,
+              "height_px": 27.0,
+              "available_width_px": 17,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 23.5,
+              "required_height_px": 27.5,
+              "fits": false,
+              "lines": [
+                "⋮"
+              ]
+            },
+            "noise_label_250": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 48.25,
+              "height_px": 23.0,
+              "available_width_px": 60,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 48.75,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "noise"
+              ]
+            },
+            "noise_label_351": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 48.25,
+              "height_px": 23.0,
+              "available_width_px": 60,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 48.75,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "noise"
+              ]
+            },
+            "state_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 82.0,
+              "height_px": 41.4,
+              "available_width_px": 86,
+              "available_height_px": 46.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 82.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "State/Text",
+                "Encoder"
+              ]
+            },
+            "istate_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 82.0,
+              "height_px": 41.4,
+              "available_width_px": 86,
+              "available_height_px": 46.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 82.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "State/Text",
+                "Encoder"
+              ]
+            },
+            "proprio": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 154.0,
+              "height_px": 27.6,
+              "available_width_px": 181,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 154.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Proprioception"
+              ]
+            },
+            "language": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 106.0,
+              "height_px": 27.6,
+              "available_width_px": 139,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 106.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Language"
+              ]
+            },
+            "prompt": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 145.25,
+              "height_px": 41.4,
+              "available_width_px": 171,
+              "available_height_px": 47,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 145.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "“Pack up the fruits",
+                "into the bag”"
+              ]
+            },
+            "iproprio": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 154.0,
+              "height_px": 27.6,
+              "available_width_px": 184,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 154.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Proprioception"
+              ]
+            },
+            "ilanguage": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 106.0,
+              "height_px": 27.6,
+              "available_width_px": 150,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 106.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Language"
+              ]
+            },
+            "iprompt": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 145.25,
+              "height_px": 41.4,
+              "available_width_px": 172,
+              "available_height_px": 47,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 145.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "“Pack up the fruits",
+                "into the bag”"
+              ]
+            },
+            "joint_label": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 99.75,
+              "height_px": 55.2,
+              "available_width_px": 135,
+              "available_height_px": 62,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 100.25,
+              "required_height_px": 55.7,
+              "fits": true,
+              "lines": [
+                "Joint flow",
+                "matching"
+              ]
+            },
+            "teacher": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 137.0,
+              "height_px": 20.7,
+              "available_width_px": 147,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 137.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "(Teacher forcing)"
+              ]
+            },
+            "sampling": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 134.5,
+              "height_px": 46.0,
+              "available_width_px": 162,
+              "available_height_px": 53,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 135.0,
+              "required_height_px": 46.5,
+              "fits": true,
+              "lines": [
+                "Autoregressive",
+                "flow sampling"
+              ]
+            },
+            "execution_label": {
+              "scale": 1,
+              "effective_font_size_px": 17,
+              "width_px": 126.25,
+              "height_px": 39.1,
+              "available_width_px": 143,
+              "available_height_px": 46,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 126.75,
+              "required_height_px": 39.6,
+              "fits": true,
+              "lines": [
+                "Async real-world",
+                "execution"
+              ]
+            },
+            "update": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 340.25,
+              "height_px": 27.6,
+              "available_width_px": 423,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 340.75,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Update with Real Observation"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "5b12fa9c79eaf18397a601400e0c58147baacad1fd35eece506e2075cd28f928",
+  "font_substitutions": [
+    {
+      "code": "font_substitution",
+      "requested": "Arial",
+      "resolved": "DejaVu Sans"
+    }
+  ]
+}

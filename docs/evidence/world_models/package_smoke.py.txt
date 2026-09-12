@@ -1,0 +1,21 @@
+import json,os,re,subprocess,tempfile,zipfile,shutil
+from pathlib import Path
+root=Path.cwd(); work=Path(tempfile.mkdtemp(prefix='img2ppt036-smoke-')); logs=[]
+with zipfile.ZipFile(root/'dist/super-img2ppt.skill') as z: z.extractall(work)
+work=work.resolve();src=work/'super-img2ppt/src'; env=dict(os.environ,PYTHONPATH=str(src),PATH='/opt/homebrew/bin:'+os.environ['PATH'])
+python=str(root/'.venv/bin/python')
+def run(args,expect=0):
+ p=subprocess.run([python,*args],cwd=work,env=env,text=True,capture_output=True);logs.append({'args':args,'exit':p.returncode,'stdout':p.stdout,'stderr':p.stderr});assert p.returncode==expect,logs[-1];return p
+run(['-c',"import super_img2ppt; from pathlib import Path; print(super_img2ppt.__file__,super_img2ppt.__version__); assert super_img2ppt.__version__=='0.3.6'; assert str(Path(super_img2ppt.__file__).resolve()).startswith("+repr(str(src))+')'])
+text=(work/'super-img2ppt/references/diagonal_text.md').read_text(); spec=json.loads(re.search(r'```json\n(.*?)\n```',text,re.S).group(1));(work/'spec.json').write_text(json.dumps(spec))
+run(['-m','super_img2ppt','compose-math','spec.json','--out','math','--font-dir','/System/Library/Fonts/Supplemental'])
+elements=json.loads((work/'math/elements.json').read_text());scene={'version':1,'slides':[{'id':'page_001','width':1400,'height':625,'reviewed':True,'notes':'Package smoke: documented diagonal formula example','elements':elements}]};(work/'scene.json').write_text(json.dumps(scene))
+run(['-m','super_img2ppt','build','scene.json','--out','build','--font-dir','/System/Library/Fonts/Supplemental'])
+validation=json.loads((work/'build/validation.json').read_text());assert validation['status']=='review'
+gallery=root/'examples/gallery/cosmos_policy'; cmd=['-m','super_img2ppt','compare-roi',str(gallery/'source.png'),str(gallery/'actual.png'),'--roi','1095','439','65','31','--color','#000000','--tolerance','149','--out','roi'];run(cmd)
+roi=json.loads((work/'roi/region.json').read_text());assert roi['edge_delta_px']==[1,0,-1,0];assert abs(roi['mask_iou']-94/412)<1e-12
+cmd[4]='/tmp/cosmos-policy-1VceF4/build_04/render/page_001.png'
+# Select the actual build's fixed-width preview, without generating a resized imitation.
+preview=next((Path('/tmp/cosmos-policy-1VceF4/build_04/render')).glob('*.png'));cmd[4]=str(preview);cmd[-1]='wrong_size';run(cmd,2)
+wrong=json.loads((work/'wrong_size/region.json').read_text());assert wrong['source_size']==[1195,476] and wrong['actual_size']!=wrong['source_size']
+evidence=root/'docs/evidence/world_models/package_smoke';evidence.mkdir();(evidence/'commands.json').write_text(json.dumps(logs,indent=2)+'\n');(evidence/'result.json').write_text(json.dumps({'status':'pass','unpacked_root':str(work),'version':'0.3.6','import_verified':True,'documented_formula_build':validation['status'],'valid_region':roi,'wrong_size':wrong},indent=2)+'\n');shutil.copy2(work/'build/validation.json',evidence/'validation.json');shutil.copy2(work/'build/editable.pptx',evidence/'editable.pptx');print(work,'PASS')

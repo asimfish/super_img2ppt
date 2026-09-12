@@ -1,0 +1,19 @@
+from pathlib import Path
+from PIL import Image,ImageDraw
+import json,hashlib
+r=Path(__file__).parent;root=r.parent
+s=Image.open(root/'source.png').convert('RGB');a=Image.open(root/'build_04/actual_sourcewidth.png').convert('RGB')
+results={};contact=Image.new('RGB',(1240,450),'white');draw=ImageDraw.Draw(contact)
+for row,name in enumerate(['title','small_label','value_formula']):
+ d=json.loads((r/name/'region.json').read_text());x,y,w,h=d['roi'];masks=[]
+ for col,(label,im) in enumerate([('source',s),('actual',a)]):
+  crop=im.crop((x,y,x+w,y+h));mask={(i%w,i//w) for i,c in enumerate(crop.get_flattened_data()) if all(abs(v)<=149 for v in c)};masks.append(mask)
+  assert len(mask)==d[label+'_pixels']
+  xs=[p[0] for p in mask];ys=[p[1] for p in mask];assert [x+min(xs),y+min(ys),x+max(xs)+1,y+max(ys)+1]==d[label+'_ink_box']
+  binary=Image.new('L',(w,h),255)
+  for p in mask:binary.putpixel(p,0)
+  factor=min(3,600/w);cw,ch=round(w*factor),round(h*factor)
+  contact.paste(crop.resize((cw,ch),Image.Resampling.NEAREST),(col*620,row*150+20));contact.paste(binary.resize((cw,ch),Image.Resampling.NEAREST),(col*620,row*150+90));draw.text((col*620,row*150),name+' '+label,fill='black')
+ assert len(masks[0]&masks[1])/len(masks[0]|masks[1])==d['mask_iou']
+ results[name]={'independent_counts_bounds_iou_match':True,'intersection':len(masks[0]&masks[1]),'union':len(masks[0]|masks[1])}
+contact.save(r/'audit_contact.png');results['wrong_resolution_sizes']={'source':list(s.size),'actual':list(Image.open(root/'build_04/render/page_001.png').size)};(r/'independent_audit.json').write_text(json.dumps(results,indent=2));print(json.dumps(results))

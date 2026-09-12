@@ -1,0 +1,48 @@
+import json
+from pathlib import Path
+from PIL import Image
+R=Path(__file__).parent; J=R/'job'; (J/'assets').mkdir(exist_ok=True); im=Image.open(R/'source.png'); E=[]; assets=[]
+def add(id,kind,**kw):
+ e=dict(id=id,kind=kind,z=len(E)+1,**kw); E.append(e); return e
+def shape(id,box,fill,**kw): return add(id,'shape',box=box,shape='rect',fill=fill,**kw)
+def text(id,txt,box,size=12,**kw):return add(id,'text',box=box,text=txt,font_size=size,font_family='Arial',fit='strict',**kw)
+def line(id,p,**kw): return add(id,'line',points=p,stroke='#111111',stroke_width=1.7,**kw)
+def asset(id,b,container):
+ im.crop(b).save(J/'assets'/f'{id}.png');assets.append(dict(id=id,crop=list(b),contains_text=False));return add(id,'image',box=[b[0],b[1],b[2]-b[0],b[3]-b[1]],path=f'assets/{id}.png',contains_text=False,container=container,provenance='Exact local source crop: robot camera photograph or latent/noise texture; no readable labels.')
+for id,b,c in [('conditioning',[78,35,450,436],'#F1FFE6'),('target',[531,35,659,436],'#F9E1DC')]:
+ e=shape(id,b,c,role='background');e['shape']='round_rect';e['radius']=11
+text('conditioning_title','conditioning subsequence',[167,3,285,30],23)
+text('target_title','target subsequence',[761,3,220,30],23)
+labels=['current wrist img','current left img','current right img','future wrist img','future left img','future right img']
+for i,(x,tx,t) in enumerate(zip([199,305,412,761,867,972],[204,313,417,768,878,976],labels)):
+ c='conditioning' if i<3 else 'target';asset('image_stack_'+str(i),(x,62,x+98,161),c);text('top_label_'+str(i),t,[tx,44,100,17],11.5,container=c)
+text('injection_title','latent injection of additional modalities: robot proprioception, actions, and value',[208,161,855,31],23)
+e=E[-1];e.pop('text');e['runs']=[{'text':'latent injection','bold':True,'color':'#B52B15'},{'text':' of additional modalities: robot proprioception, actions, and value'}]
+line('injection_bus',[[139,192],[1126,192]])
+for x,id in [(139,'current'),(597,'action'),(702,'future'),(1126,'value')]:
+ line('inject_'+id,[[x,192],[x,208]],arrow=True,arrow_head={'length':7,'width':7},allow_overlap_with=['injection_bus'],overlap_reason='Source shows injection arrow shaft joined to horizontal bus.')
+cols=[(96,183),(204,291),(311,398),(419,506),(554,641),(659,746),(764,851),(870,957),(977,1064),(1084,1171)]
+rowlabels=['current proprio','current wrist img','current left img','current right img','action chunk','future proprio','future wrist img','future left img','future right img','value']
+for i,((x,r),lab) in enumerate(zip(cols,rowlabels)):
+ c='conditioning' if i<4 else 'target'; red=i in [0,4,5,9]
+ text('latent_label_'+str(i),lab,[x-2,208,r-x+4,17],11.5,align='center',container=c,color='#B52B15' if red else '#000000')
+ if red:
+  shape('red_frame_'+str(i),[x-2,223,r-x+4,92],'#B52B15',container=c)
+  asset('latent_'+str(i),(x+3,229,r-3,309),'red_frame_'+str(i))
+ else: asset('latent_'+str(i),(x,226,r,313),c)
+ asset('noise_'+str(i),(x,340,r,427),c)
+for id,l,r,lab in [('state',96,506,'s'),('action',554,641,'a'),('future',659,1064,'s′'),('value',1084,1171,'V(s′)')]:
+ c='conditioning' if id=='state' else 'target';line('bracket_'+id,[[l,433],[r,433]],container=c)
+ for suffix,x in [('left',l),('right',r)]:line('tick_'+id+suffix,[[x,429],[x,437]],container=c,allow_overlap_with=['bracket_'+id],overlap_reason='Source bracket joins end tick at stroke center.')
+ e=text('math_'+id,lab,[(l+r)/2-38,434,76,34],27,align='center',italic=True,container=c);e['font_family']='Times New Roman'
+ if id=='value':
+  e.pop('text');e['runs']=[{'text':'V','italic':True},{'text':'(','italic':False},{'text':'s′','italic':True},{'text':')','italic':False}]
+text('images','images',[5,106,65,24],17,align='center')
+text('latent_frames','latent\nframes',[4,251,68,41],17,align='center',line_height=1.02)
+text('noised_frames','partially\nnoised\nlatent\nframes',[3,346,71,76],17,align='center',line_height=1.02)
+line('vae_arrow',[[38,132],[38,251]],arrow=True,arrow_head={'length':7,'width':7})
+line('noise_arrow',[[38,291],[38,345]],arrow=True,arrow_head={'length':7,'width':7})
+text('vae','VAE',[5,180,42,20],12,rotation=-90)
+text('noise','noise',[5,306,42,20],12,rotation=-90)
+scene={'version':1,'slides':[{'id':'page_001','width':1195,'height':476,'source':'pages/page_001/source.png','background':'#FFFFFF','reviewed':True,'notes':'Adapted from Figure 2, Cosmos Policy, Kim et al., arXiv:2601.16163v1 (2026-01-22). CC BY 4.0 https://creativecommons.org/licenses/by/4.0/. Native reconstruction from raster; photos and latent textures retained as crops. No endorsement implied.','elements':E}]}
+(J/'scene.json').write_text(json.dumps(scene,indent=2));(R/'asset_manifest.json').write_text(json.dumps(assets,indent=2))

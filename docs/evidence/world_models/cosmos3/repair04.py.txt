@@ -1,0 +1,9 @@
+import json
+p='/tmp/cosmos3-xNo4Kd/job/scene.json';s=json.load(open(p));E=s['slides'][0]['elements']
+for e in E:
+ if e['id']=='attentiontitle':e['font_size']=21.5
+ if e['id']=='masktitle':e['box'][0]-=12;e['box'][1]-=1
+ if e['id'] in ['arlabel1','arlabel2','dmlabel1','dmlabel2']:e['font_size']=19
+# noisy vision matrix row had tilde; restore editable source symbol
+E.append(dict(id='rowvtilde1',kind='text',z=max(e['z'] for e in E)+1,box=[988,305,12,12],text='~',font_size=10,font_family='Times New Roman',color='#111111',fit='strict',wrap=False))
+open(p,'w').write(json.dumps(s,indent=2))

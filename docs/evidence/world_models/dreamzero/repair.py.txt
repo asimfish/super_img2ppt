@@ -1,0 +1,13 @@
+import json
+from pathlib import Path
+P=Path('/tmp/dreamzero_forward_20260912/job');s=json.loads((P/'scene.json').read_text());E=s['slides'][0]['elements'];D={e['id']:e for e in E}
+def pair(a,b,why):
+ D[a].setdefault('allow_overlap_with',[]).append(b);D[a]['overlap_reason']=why
+for i in range(1,5):D['dots'+str(i)]['box'][2]=25
+for e in E:
+ if e['id'].endswith('_play'):e['container']=e['id'].replace('_play','_screen')
+for a,b in [('past_video','fb_video'),('future_action','fb_top_right'),('robot_in','noise_to_351'),('robot_out','joint_merge_curve'),('out1','future_blank2')]:pair(a,b,'Source arrow/stack ends touch or overlap the adjacent raster crop margin by 1–11 px; visible contents remain source-aligned.')
+for b in ['infer_dit','kv','istate_up','sampling','fb_kv']:pair('autoregressive_loop',b,'Source dotted sampling arc curves around DiT base and is crossed by input/feedback arrows. Crop contains text-free background, including the base silhouette, in precisely its source position.')
+pair('joint_merge_curve','teacher','Teacher forcing label ink lies to the right of gold curve; only empty image margin overlaps text frame.')
+for a,b in [('fb_left','fb_bottom'),('fb_left','fb_video'),('fb_left','fb_prop'),('fb_bottom','fb_right'),('fb_bottom','fb_kv'),('execution_card','fb_right')]:pair(a,b,'Source feedback connector segments join at these specific endpoints.')
+(P/'scene.json').write_text(json.dumps(s,indent=2))

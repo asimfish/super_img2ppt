@@ -1,0 +1,101 @@
+{
+  "before": "build_04",
+  "after": "build_06",
+  "removed_ids": [
+    "diagonal_mask_labels"
+  ],
+  "added_ids": [
+    "diag_a_0",
+    "diag_a_1",
+    "diag_a_2",
+    "diag_bog_0",
+    "diag_dots1_0",
+    "diag_dots1_1",
+    "diag_dots1_2",
+    "diag_dots2_0",
+    "diag_dots2_1",
+    "diag_dots2_2",
+    "diag_dots3_0",
+    "diag_dots3_1",
+    "diag_dots3_2",
+    "diag_dots4_0",
+    "diag_dots4_1",
+    "diag_dots4_2",
+    "diag_dots5_0",
+    "diag_dots5_1",
+    "diag_dots5_2",
+    "diag_eos_0",
+    "diag_l_0",
+    "diag_l_1",
+    "diag_s_0",
+    "diag_s_1",
+    "diag_s_2",
+    "diag_v_ar_0",
+    "diag_v_ar_1",
+    "diag_v_ar_2",
+    "diag_v_dm_0",
+    "diag_v_dm_1",
+    "diag_v_dm_2",
+    "diag_v_dm_3"
+  ],
+  "changed_existing_ids": [],
+  "before_counts": {
+    "shape": 198,
+    "image": 2,
+    "text": 156,
+    "line": 28
+  },
+  "after_counts": {
+    "shape": 198,
+    "image": 1,
+    "text": 188,
+    "line": 28
+  },
+  "before_visible_assets": [
+    {
+      "id": "repeat_brace",
+      "kind": "image",
+      "z": 3,
+      "box": [
+        47,
+        161,
+        18,
+        279
+      ],
+      "path": "assets/repeat_brace.png",
+      "contains_text": false,
+      "provenance": "Exact inspected source pixel crop; retained due unsupported arbitrary-angle labels or curved brace"
+    },
+    {
+      "id": "diagonal_mask_labels",
+      "kind": "image",
+      "z": 315,
+      "box": [
+        1024,
+        115,
+        310,
+        34
+      ],
+      "path": "assets/diagonal_mask_labels.png",
+      "contains_text": true,
+      "provenance": "Exact inspected source pixel crop; retained due unsupported arbitrary-angle labels or curved brace"
+    }
+  ],
+  "after_visible_assets": [
+    {
+      "id": "repeat_brace",
+      "kind": "image",
+      "z": 3,
+      "box": [
+        47,
+        161,
+        18,
+        279
+      ],
+      "path": "assets/repeat_brace.png",
+      "contains_text": false,
+      "provenance": "Exact inspected source pixel crop; retained due unsupported arbitrary-angle labels or curved brace"
+    }
+  ],
+  "notes_changed": true
+}

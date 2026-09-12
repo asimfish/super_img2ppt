@@ -1,5 +1,6 @@
 import copy
 import json
+import math
 import shutil
 import xml.etree.ElementTree as ET
 import zipfile
@@ -57,9 +58,11 @@ def test_baselines_and_native_styles_are_preserved(fonts, scene, tmp_path):
 
 
 @pytest.mark.render
+@pytest.mark.parametrize("rotation", [0, -45, 25])
 @pytest.mark.skipif(shutil.which("soffice") is None, reason="LibreOffice not installed")
-def test_actual_pdf_scripts_keep_their_vertical_order(fonts, scene, tmp_path):
+def test_actual_pdf_scripts_keep_their_vertical_order(fonts, scene, tmp_path, rotation):
     spec = formula(fonts)
+    spec["rotation"] = rotation
     scene["slides"][0].update(width=240, height=160, elements=compose_math(spec, fonts)["elements"])
     layouts = layout_scene(scene, fonts)
     pptx = tmp_path / "formula.pptx"
@@ -75,7 +78,10 @@ def test_actual_pdf_scripts_keep_their_vertical_order(fonts, scene, tmp_path):
             char = chr(pdfium.raw.FPDFText_GetUnicode(textpage, i))
             if char in {"x", "i", "k"}:
                 left, bottom, right, top = textpage.get_charbox(i)
-                centers[char] = (bottom + top) / 2
+                angle = math.radians(rotation)
+                centers[char] = (left + right) / 2 * math.sin(angle) + (
+                    bottom + top
+                ) / 2 * math.cos(angle)
         assert centers["i"] > centers["x"] > centers["k"]
         textpage.close()
         page.close()

@@ -1,0 +1,194 @@
+{
+  "recipe": "No image registration, grayscale-like min RGB <150 threshold, fixed local regions; differences include font/antialiasing and geometry. Source pixel bounds half-open. Actual PDF scale=1400/page_width, PDFium output 1400\u00d7625 without resize.",
+  "regions": {
+    "ar_heading": {
+      "roi": [
+        170,
+        114,
+        340,
+        142
+      ],
+      "source_ink_bbox_local": [
+        14,
+        7,
+        148,
+        24
+      ],
+      "actual_ink_bbox_local": [
+        15,
+        7,
+        147,
+        24
+      ],
+      "edge_delta_source_px": [
+        1,
+        0,
+        -1,
+        0
+      ],
+      "glyph_mask_IoU": 0.3441295546558704
+    },
+    "layernorm": {
+      "roi": [
+        185,
+        173,
+        320,
+        200
+      ],
+      "source_ink_bbox_local": [
+        20,
+        6,
+        112,
+        22
+      ],
+      "actual_ink_bbox_local": [
+        21,
+        5,
+        112,
+        22
+      ],
+      "edge_delta_source_px": [
+        1,
+        -1,
+        0,
+        0
+      ],
+      "glyph_mask_IoU": 0.3570057581573896
+    },
+    "shared_title": {
+      "roi": [
+        295,
+        236,
+        590,
+        260
+      ],
+      "source_ink_bbox_local": [
+        11,
+        4,
+        278,
+        19
+      ],
+      "actual_ink_bbox_local": [
+        9,
+        4,
+        277,
+        19
+      ],
+      "edge_delta_source_px": [
+        -2,
+        0,
+        -1,
+        0
+      ],
+      "glyph_mask_IoU": 0.5495495495495496
+    },
+    "formula_left": {
+      "roi": [
+        176,
+        279,
+        324,
+        302
+      ],
+      "source_ink_bbox_local": [
+        5,
+        3,
+        145,
+        16
+      ],
+      "actual_ink_bbox_local": [
+        5,
+        2,
+        143,
+        15
+      ],
+      "edge_delta_source_px": [
+        0,
+        -1,
+        -2,
+        -1
+      ],
+      "glyph_mask_IoU": 0.11836115326251896
+    },
+    "formula_right": {
+      "roi": [
+        502,
+        279,
+        750,
+        302
+      ],
+      "source_ink_bbox_local": [
+        6,
+        2,
+        242,
+        17
+      ],
+      "actual_ink_bbox_local": [
+        6,
+        2,
+        243,
+        15
+      ],
+      "edge_delta_source_px": [
+        0,
+        0,
+        1,
+        -2
+      ],
+      "glyph_mask_IoU": 0.26777020447906524
+    },
+    "mask_title": {
+      "roi": [
+        1080,
+        6,
+        1297,
+        42
+      ],
+      "source_ink_bbox_local": [
+        17,
+        6,
+        184,
+        24
+      ],
+      "actual_ink_bbox_local": [
+        18,
+        7,
+        184,
+        24
+      ],
+      "edge_delta_source_px": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "glyph_mask_IoU": 0.4336283185840708
+    },
+    "tokenlegend": {
+      "roi": [
+        101,
+        576,
+        208,
+        613
+      ],
+      "source_ink_bbox_local": [
+        5,
+        9,
+        89,
+        27
+      ],
+      "actual_ink_bbox_local": [
+        5,
+        10,
+        85,
+        27
+      ],
+      "edge_delta_source_px": [
+        0,
+        1,
+        -4,
+        0
+      ],
+      "glyph_mask_IoU": 0.4433497536945813
+    }
+  }
+}

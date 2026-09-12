@@ -2,7 +2,7 @@
 
 2026-09-12，运行时 v0.3.5。新增 OpenVLA Fig.2、ECoT Fig.4、DexVLA Fig.2，
 并回修 3D Diffuser Actor Fig.1 的数学排版。[README 实图](../README.md#具身智能与机器人) ·
-[十二例文件包](../examples/gallery/paper_gallery.zip) · [校验](../examples/gallery/SHA256SUMS)。
+[十二例文件包](https://github.com/asimfish/super_img2ppt/blob/cd9d263045f97d5c5ad488109f577ae83d32eb8d/examples/gallery/paper_gallery.zip) · [校验](../examples/gallery/SHA256SUMS)。
 
 ## 实测范围与来源
 

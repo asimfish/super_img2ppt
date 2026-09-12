@@ -1,6 +1,6 @@
 # Third-party figure attribution
 
-These are complete figure crops and editable adaptations of ICML and CoRL papers
+The first twelve cases are complete figure crops and editable adaptations of ICML and CoRL papers
 published in Proceedings of Machine Learning Research, volumes 202, 229, 235, 267, 270 and 305.
 The authors retain copyright.
 The publisher [publication agreement](https://proceedings.mlr.press/pmlr-license-agreement.html),
@@ -55,6 +55,18 @@ agreement, not an individually signed author form.
 - **DexVLA**, Figure 2: Junjie Wen et al. (full author list on the publication page).
   “DexVLA: Vision-Language Model with Plug-In Diffusion Expert for General Robot Control.”
   CoRL 2025, PMLR 305. https://proceedings.mlr.press/v305/wen25b.html
+
+The 2026 world-model cases use the **paper's individual arXiv CC BY 4.0 license link**,
+archived with the linked license page in `docs/evidence/world_models/<case>/`.
+This claim does not derive from a model/code license or the PMLR agreement above.
+
+- **DreamZero**, Figure 4: authors listed on [arXiv 2602.15922v1](https://arxiv.org/abs/2602.15922v1),
+  “World Action Models are Zero-shot Policies”, 17 February 2026.
+- **Cosmos Policy**, Figure 2: Moo Jin Kim et al., “Cosmos Policy: Fine-Tuning Video Models
+  for Visuomotor Control and Planning”, [arXiv 2601.16163v1](https://arxiv.org/abs/2601.16163v1),
+  22 January 2026; ICLR 2026. Frozen figure source is the arXiv version.
+- **Cosmos 3**, Figure 5: NVIDIA et al., “Cosmos 3: Omnimodal World Models for Physical AI”,
+  [arXiv 2606.02800v4](https://arxiv.org/abs/2606.02800v4), 23 June 2026 (PDF cover 24 June).
 
 Changes: rasterized and cropped complete figures (paper captions excluded), reconstructed text
 and geometry into PPTX/SVG/JSON, retained explicitly disclosed image-only regions, and

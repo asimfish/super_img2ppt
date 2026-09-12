@@ -1,0 +1,77 @@
+[
+  {
+    "case": "dreamzero",
+    "command": [
+      "/Users/liyufeng/code/super_img2ppt/.venv/bin/super-img2ppt",
+      "build",
+      "/Users/liyufeng/code/super_img2ppt/examples/gallery/dreamzero/scene.resolved.json",
+      "--out",
+      "/Users/liyufeng/code/super_img2ppt/output/world_gallery_20260912/replay_dreamzero",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "--font-dir",
+      "/System/Library/Fonts/Supplemental"
+    ],
+    "status": "pass",
+    "actual_size": [
+      1888,
+      632
+    ],
+    "changed_pixels": 0,
+    "actual_sha256": "ea30391e7e9f935f0d49dcc2445c15d0c037ff7ce9f57fc1243cdb442dbb363f",
+    "rasterization": {
+      "engine": "pdfium",
+      "crop_to_source_size": true
+    }
+  },
+  {
+    "case": "cosmos_policy",
+    "command": [
+      "/Users/liyufeng/code/super_img2ppt/.venv/bin/super-img2ppt",
+      "build",
+      "/Users/liyufeng/code/super_img2ppt/examples/gallery/cosmos_policy/scene.resolved.json",
+      "--out",
+      "/Users/liyufeng/code/super_img2ppt/output/world_gallery_20260912/replay_cosmos_policy",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "--font-dir",
+      "/System/Library/Fonts/Supplemental"
+    ],
+    "status": "pass",
+    "actual_size": [
+      1195,
+      476
+    ],
+    "changed_pixels": 0,
+    "actual_sha256": "0a0f5e449223a9b9689a8000a6829676a3d9e5262107b341cbe96d9f7097179f",
+    "rasterization": {
+      "engine": "pdfium",
+      "crop_to_source_size": false
+    }
+  },
+  {
+    "case": "cosmos3",
+    "command": [
+      "/Users/liyufeng/code/super_img2ppt/.venv/bin/super-img2ppt",
+      "build",
+      "/Users/liyufeng/code/super_img2ppt/examples/gallery/cosmos3/scene.resolved.json",
+      "--out",
+      "/Users/liyufeng/code/super_img2ppt/output/world_gallery_20260912/replay_cosmos3",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "--font-dir",
+      "/System/Library/Fonts/Supplemental"
+    ],
+    "status": "review",
+    "actual_size": [
+      1400,
+      625
+    ],
+    "changed_pixels": 0,
+    "actual_sha256": "cadbeee3ecce248fc0d443244b4bbd5b3dd3c5d852d53a9f6ad7a1c47f9f4768",
+    "rasterization": {
+      "engine": "pdfium",
+      "crop_to_source_size": false
+    }
+  }
+]

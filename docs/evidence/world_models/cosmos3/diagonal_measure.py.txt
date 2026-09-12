@@ -1,0 +1,14 @@
+from pathlib import Path
+import pypdfium2 as pdf,json,sys
+from PIL import Image
+q=Path('/tmp/cosmos3-xNo4Kd');which=sys.argv[1];out=q/(which+'_inspection');out.mkdir();d=pdf.PdfDocument(q/which/'render/editable.pdf');p=d[0];a=p.render(scale=1400/p.get_width()).to_pil().convert('RGB');s=Image.open(q/'source.png').convert('RGB');a.save(out/'actualsourcewidth.png');c=Image.new('RGB',(1400,1250));c.paste(s,(0,0));c.paste(a,(0,625));c.save(out/'comparison.png')
+rois={'header_all':(1024,114,1338,150),'v_ar':(1024,115,1050,148),'language':(1076,126,1101,149),'eos':(1129,118,1158,148),'bog':(1155,118,1183,148),'v_dm':(1180,113,1211,148),'s':(1232,126,1260,149),'a':(1285,126,1313,149)}
+res={}
+for name,b in rois.items():
+ si=s.crop(b);ai=a.crop(b);o=Image.new('RGB',(si.width,si.height*2+8),'white');o.paste(si,(0,0));o.paste(ai,(0,si.height+8));o.resize((o.width*5,o.height*5)).save(out/(name+'.png'))
+ masks=[]
+ for im in [si,ai]:
+  m=Image.new('1',im.size);m.putdata([min(px)<150 for px in im.get_flattened_data()]);masks.append(m)
+ bounds=[list(m.getbbox()) if m.getbbox() else None for m in masks]
+ res[name]={'roi':b,'source_bbox_local':bounds[0],'actual_bbox_local':bounds[1],'edge_delta_source_px':[y-x for x,y in zip(*bounds)],'threshold_mask_iou':sum(bool(x and y) for x,y in zip(masks[0].get_flattened_data(),masks[1].get_flattened_data()))/sum(bool(x or y) for x,y in zip(masks[0].get_flattened_data(),masks[1].get_flattened_data()))}
+(out/'measurements.json').write_text(json.dumps({'recipe':'Frozen ROIs source minRGB<150 binary masks, no registration/resampling. Actual PDF at scale 1400/page width. Detailed preview crops use 5× display scale only. Half-open pixel bounds; IoU is descriptive not an acceptance threshold.','regions':res},indent=2));print(json.dumps(res,indent=2))

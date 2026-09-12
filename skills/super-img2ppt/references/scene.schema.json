@@ -255,13 +255,9 @@
                   ]
                 },
                 "rotation": {
-                  "enum": [
-                    -90,
-                    0,
-                    90,
-                    180,
-                    270
-                  ]
+                  "type": "number",
+                  "minimum": -360,
+                  "maximum": 360
                 },
                 "wrap": {
                   "type": "boolean"

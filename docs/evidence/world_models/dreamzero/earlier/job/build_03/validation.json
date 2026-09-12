@@ -1,0 +1,1740 @@
+{
+  "status": "review",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "pass",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "train_action",
+            "action"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "future_action",
+            "future_action_label"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "past",
+            "vae_enc_inf"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "noise_up_250",
+            "noise_label_250"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "noise_up_351",
+            "noise_label_351"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "state_rear",
+            "proprio"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "istate_rear",
+            "iproprio"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "language",
+            "prompt"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "ilanguage",
+            "iprompt"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "joint_label",
+            "teacher"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "execution_label",
+            "execution_photo"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "text": 37,
+            "line": 20,
+            "image": 15,
+            "shape": 72
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "past_video",
+                "fb_video"
+              ],
+              "reason": "Source arrow/stack ends touch or overlap the adjacent raster crop margin by 1–11 px; visible contents remain source-aligned.",
+              "area_px2": 54.0
+            },
+            {
+              "elements": [
+                "future_action",
+                "fb_top_right"
+              ],
+              "reason": "Source arrow/stack ends touch or overlap the adjacent raster crop margin by 1–11 px; visible contents remain source-aligned.",
+              "area_px2": 20.0
+            },
+            {
+              "elements": [
+                "train_bar0",
+                "train_causal"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 900.0
+            },
+            {
+              "elements": [
+                "train_bar1",
+                "train_causal"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 2100.0
+            },
+            {
+              "elements": [
+                "train_bar1",
+                "train_grid0"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "train_bar1",
+                "train_grid1"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 117.0
+            },
+            {
+              "elements": [
+                "train_bar1",
+                "train_grid3"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "train_bar1",
+                "train_grid4"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 117.0
+            },
+            {
+              "elements": [
+                "train_bar1",
+                "train_grid6"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "train_bar1",
+                "train_grid7"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 117.0
+            },
+            {
+              "elements": [
+                "train_bar2",
+                "train_causal"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 2100.0
+            },
+            {
+              "elements": [
+                "train_bar2",
+                "train_grid1"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 90.0
+            },
+            {
+              "elements": [
+                "train_bar2",
+                "train_grid2"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "train_bar2",
+                "train_grid4"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 90.0
+            },
+            {
+              "elements": [
+                "train_bar2",
+                "train_grid5"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "train_bar2",
+                "train_grid7"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 90.0
+            },
+            {
+              "elements": [
+                "train_bar2",
+                "train_grid8"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "train_bar3",
+                "train_causal"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 2100.0
+            },
+            {
+              "elements": [
+                "infer_dit",
+                "autoregressive_loop"
+              ],
+              "reason": "Source dotted sampling arc curves around DiT base and is crossed by input/feedback arrows. Crop contains text-free background, including the base silhouette, in precisely its source position.",
+              "area_px2": 4872.0
+            },
+            {
+              "elements": [
+                "infer_bar0",
+                "infer_causal"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 900.0
+            },
+            {
+              "elements": [
+                "infer_bar1",
+                "infer_causal"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 2100.0
+            },
+            {
+              "elements": [
+                "infer_bar1",
+                "infer_grid0"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "infer_bar1",
+                "infer_grid1"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 117.0
+            },
+            {
+              "elements": [
+                "infer_bar1",
+                "infer_grid3"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "infer_bar1",
+                "infer_grid4"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 117.0
+            },
+            {
+              "elements": [
+                "infer_bar1",
+                "infer_grid6"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "infer_bar1",
+                "infer_grid7"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 117.0
+            },
+            {
+              "elements": [
+                "infer_bar2",
+                "infer_causal"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 2100.0
+            },
+            {
+              "elements": [
+                "infer_bar2",
+                "infer_grid1"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 90.0
+            },
+            {
+              "elements": [
+                "infer_bar2",
+                "infer_grid2"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "infer_bar2",
+                "infer_grid4"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 90.0
+            },
+            {
+              "elements": [
+                "infer_bar2",
+                "infer_grid5"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "infer_bar2",
+                "infer_grid7"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 90.0
+            },
+            {
+              "elements": [
+                "infer_bar2",
+                "infer_grid8"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 324.0
+            },
+            {
+              "elements": [
+                "infer_bar3",
+                "infer_causal"
+              ],
+              "reason": "Source Causal DiT label and nine token cells overlay the four pale vertical bars.",
+              "area_px2": 2100.0
+            },
+            {
+              "elements": [
+                "kv",
+                "autoregressive_loop"
+              ],
+              "reason": "Source dotted sampling arc curves around DiT base and is crossed by input/feedback arrows. Crop contains text-free background, including the base silhouette, in precisely its source position.",
+              "area_px2": 316.0
+            },
+            {
+              "elements": [
+                "out1",
+                "future_blank2"
+              ],
+              "reason": "Source arrow/stack ends touch or overlap the adjacent raster crop margin by 1–11 px; visible contents remain source-aligned.",
+              "area_px2": 51.0
+            },
+            {
+              "elements": [
+                "robot_in",
+                "noise_to_351"
+              ],
+              "reason": "Source arrow/stack ends touch or overlap the adjacent raster crop margin by 1–11 px; visible contents remain source-aligned.",
+              "area_px2": 1.8
+            },
+            {
+              "elements": [
+                "robot_out",
+                "joint_merge_curve"
+              ],
+              "reason": "Source arrow/stack ends touch or overlap the adjacent raster crop margin by 1–11 px; visible contents remain source-aligned.",
+              "area_px2": 50.0
+            },
+            {
+              "elements": [
+                "noise_plus_250",
+                "plus_v_250"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 33.455
+            },
+            {
+              "elements": [
+                "noise_plus_250",
+                "plus_h_250"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 33.455
+            },
+            {
+              "elements": [
+                "noise_plus_250",
+                "noise_to_250"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 28.694
+            },
+            {
+              "elements": [
+                "plus_v_250",
+                "plus_h_250"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 4.41
+            },
+            {
+              "elements": [
+                "plus_v_250",
+                "noise_to_250"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 3.78
+            },
+            {
+              "elements": [
+                "plus_h_250",
+                "noise_to_250"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 28.8
+            },
+            {
+              "elements": [
+                "noise_plus_351",
+                "plus_v_351"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 33.455
+            },
+            {
+              "elements": [
+                "noise_plus_351",
+                "plus_h_351"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 33.455
+            },
+            {
+              "elements": [
+                "noise_plus_351",
+                "noise_to_351"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 28.694
+            },
+            {
+              "elements": [
+                "plus_v_351",
+                "plus_h_351"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 4.41
+            },
+            {
+              "elements": [
+                "plus_v_351",
+                "noise_to_351"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 3.78
+            },
+            {
+              "elements": [
+                "plus_h_351",
+                "noise_to_351"
+              ],
+              "reason": "Source noise injection plus circle and intersecting horizontal/vertical lines.",
+              "area_px2": 28.8
+            },
+            {
+              "elements": [
+                "state_rear",
+                "state"
+              ],
+              "reason": "Overlapping two encoder pages visible in source.",
+              "area_px2": 5878.213
+            },
+            {
+              "elements": [
+                "state_rear",
+                "state_label"
+              ],
+              "reason": "Foreground encoder label over rear page footprint as drawn.",
+              "area_px2": 3417.743
+            },
+            {
+              "elements": [
+                "istate_rear",
+                "istate"
+              ],
+              "reason": "Overlapping two encoder pages visible in source.",
+              "area_px2": 5878.213
+            },
+            {
+              "elements": [
+                "istate_rear",
+                "istate_label"
+              ],
+              "reason": "Foreground encoder label over rear page footprint as drawn.",
+              "area_px2": 3417.743
+            },
+            {
+              "elements": [
+                "istate_up",
+                "autoregressive_loop"
+              ],
+              "reason": "Source dotted sampling arc curves around DiT base and is crossed by input/feedback arrows. Crop contains text-free background, including the base silhouette, in precisely its source position.",
+              "area_px2": 69.6
+            },
+            {
+              "elements": [
+                "joint_merge_curve",
+                "teacher"
+              ],
+              "reason": "Teacher forcing label ink lies to the right of gold curve; only empty image margin overlaps text frame.",
+              "area_px2": 261.0
+            },
+            {
+              "elements": [
+                "autoregressive_loop",
+                "sampling"
+              ],
+              "reason": "Source dotted sampling arc curves around DiT base and is crossed by input/feedback arrows. Crop contains text-free background, including the base silhouette, in precisely its source position.",
+              "area_px2": 310.0
+            },
+            {
+              "elements": [
+                "autoregressive_loop",
+                "fb_kv"
+              ],
+              "reason": "Source dotted sampling arc curves around DiT base and is crossed by input/feedback arrows. Crop contains text-free background, including the base silhouette, in precisely its source position.",
+              "area_px2": 106.0
+            },
+            {
+              "elements": [
+                "fb_left",
+                "fb_bottom"
+              ],
+              "reason": "Source feedback connector segments join at these specific endpoints.",
+              "area_px2": 4.0
+            },
+            {
+              "elements": [
+                "fb_left",
+                "fb_video"
+              ],
+              "reason": "Source feedback connector segments join at these specific endpoints.",
+              "area_px2": 4.0
+            },
+            {
+              "elements": [
+                "fb_left",
+                "fb_prop"
+              ],
+              "reason": "Source feedback connector segments join at these specific endpoints.",
+              "area_px2": 8.0
+            },
+            {
+              "elements": [
+                "fb_bottom",
+                "fb_right"
+              ],
+              "reason": "Source feedback connector segments join at these specific endpoints.",
+              "area_px2": 4.0
+            },
+            {
+              "elements": [
+                "fb_bottom",
+                "fb_kv"
+              ],
+              "reason": "Source feedback connector segments join at these specific endpoints.",
+              "area_px2": 8.0
+            }
+          ],
+          "text_layouts": {
+            "train_title": {
+              "scale": 1,
+              "effective_font_size_px": 34,
+              "width_px": 701.25,
+              "height_px": 39.1,
+              "available_width_px": 780,
+              "available_height_px": 47,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 701.75,
+              "required_height_px": 39.6,
+              "fits": true,
+              "lines": [
+                "Training: Joint Video-Action Flow Matching"
+              ]
+            },
+            "infer_title": {
+              "scale": 1,
+              "effective_font_size_px": 34,
+              "width_px": 739.5,
+              "height_px": 39.1,
+              "available_width_px": 816,
+              "available_height_px": 47,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 740.0,
+              "required_height_px": 39.6,
+              "fits": true,
+              "lines": [
+                "Inference: Closed-Loop Real World Execution"
+              ]
+            },
+            "train_dit_title": {
+              "scale": 1,
+              "effective_font_size_px": 25,
+              "width_px": 268.25,
+              "height_px": 28.75,
+              "available_width_px": 284,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 268.75,
+              "required_height_px": 29.25,
+              "fits": true,
+              "lines": [
+                "Joint Video-Action DiT"
+              ]
+            },
+            "infer_dit_title": {
+              "scale": 1,
+              "effective_font_size_px": 25,
+              "width_px": 268.25,
+              "height_px": 28.75,
+              "available_width_px": 287,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 268.75,
+              "required_height_px": 29.25,
+              "fits": true,
+              "lines": [
+                "Joint Video-Action DiT"
+              ]
+            },
+            "video": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 61.0,
+              "height_px": 27.6,
+              "available_width_px": 110,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 61.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Video"
+              ]
+            },
+            "latents": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 78.5,
+              "height_px": 27.6,
+              "available_width_px": 108,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 79.0,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Latents"
+              ]
+            },
+            "action": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 66.75,
+              "height_px": 27.6,
+              "available_width_px": 115,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 67.25,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Action"
+              ]
+            },
+            "past": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 128.0,
+              "height_px": 27.6,
+              "available_width_px": 175,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 128.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Past frames"
+              ]
+            },
+            "future": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 149.25,
+              "height_px": 27.6,
+              "available_width_px": 181,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 149.75,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Future frames"
+              ]
+            },
+            "future_action_label": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 139.75,
+              "height_px": 55.2,
+              "available_width_px": 171,
+              "available_height_px": 62,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 140.25,
+              "required_height_px": 55.7,
+              "fits": true,
+              "lines": [
+                "Future action",
+                "chunk"
+              ]
+            },
+            "vae_enc_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 67.25,
+              "height_px": 41.4,
+              "available_width_px": 86,
+              "available_height_px": 46.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 67.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "VAE",
+                "Encoder"
+              ]
+            },
+            "action_enc_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 67.25,
+              "height_px": 41.4,
+              "available_width_px": 86,
+              "available_height_px": 46.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 67.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "Action",
+                "Encoder"
+              ]
+            },
+            "vae_enc_inf_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 67.25,
+              "height_px": 41.4,
+              "available_width_px": 86,
+              "available_height_px": 46.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 67.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "VAE",
+                "Encoder"
+              ]
+            },
+            "vae_dec_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 68.25,
+              "height_px": 41.4,
+              "available_width_px": 86,
+              "available_height_px": 46.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "VAE",
+                "Decoder"
+              ]
+            },
+            "action_dec_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 68.25,
+              "height_px": 41.4,
+              "available_width_px": 86,
+              "available_height_px": 46.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "Action",
+                "Decoder"
+              ]
+            },
+            "train_causal": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 118.25,
+              "height_px": 55.2,
+              "available_width_px": 146,
+              "available_height_px": 60,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 118.75,
+              "required_height_px": 55.7,
+              "fits": true,
+              "lines": [
+                "Causal DiT",
+                "Blocks"
+              ]
+            },
+            "infer_causal": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 118.25,
+              "height_px": 55.2,
+              "available_width_px": 146,
+              "available_height_px": 60,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 118.75,
+              "required_height_px": 55.7,
+              "fits": true,
+              "lines": [
+                "Causal DiT",
+                "Blocks"
+              ]
+            },
+            "kv_text": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 107.75,
+              "height_px": 27.6,
+              "available_width_px": 131,
+              "available_height_px": 37,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 108.25,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "KV Cache"
+              ]
+            },
+            "dots1": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 23.0,
+              "height_px": 27.0,
+              "available_width_px": 25,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 23.5,
+              "required_height_px": 27.5,
+              "fits": true,
+              "lines": [
+                "⋮"
+              ]
+            },
+            "dots2": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 23.0,
+              "height_px": 27.0,
+              "available_width_px": 25,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 23.5,
+              "required_height_px": 27.5,
+              "fits": true,
+              "lines": [
+                "⋮"
+              ]
+            },
+            "dots3": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 23.0,
+              "height_px": 27.0,
+              "available_width_px": 25,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 23.5,
+              "required_height_px": 27.5,
+              "fits": true,
+              "lines": [
+                "⋮"
+              ]
+            },
+            "dots4": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 23.0,
+              "height_px": 27.0,
+              "available_width_px": 25,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 23.5,
+              "required_height_px": 27.5,
+              "fits": true,
+              "lines": [
+                "⋮"
+              ]
+            },
+            "noise_label_250": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 48.25,
+              "height_px": 23.0,
+              "available_width_px": 60,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 48.75,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "noise"
+              ]
+            },
+            "noise_label_351": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 48.25,
+              "height_px": 23.0,
+              "available_width_px": 60,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 48.75,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "noise"
+              ]
+            },
+            "state_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 82.0,
+              "height_px": 41.4,
+              "available_width_px": 86,
+              "available_height_px": 46.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 82.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "State/Text",
+                "Encoder"
+              ]
+            },
+            "istate_label": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 82.0,
+              "height_px": 41.4,
+              "available_width_px": 86,
+              "available_height_px": 46.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 82.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "State/Text",
+                "Encoder"
+              ]
+            },
+            "proprio": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 154.0,
+              "height_px": 27.6,
+              "available_width_px": 181,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 154.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Proprioception"
+              ]
+            },
+            "language": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 106.0,
+              "height_px": 27.6,
+              "available_width_px": 139,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 106.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Language"
+              ]
+            },
+            "prompt": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 145.25,
+              "height_px": 41.4,
+              "available_width_px": 171,
+              "available_height_px": 47,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 145.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "“Pack up the fruits",
+                "into the bag”"
+              ]
+            },
+            "iproprio": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 154.0,
+              "height_px": 27.6,
+              "available_width_px": 184,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 154.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Proprioception"
+              ]
+            },
+            "ilanguage": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 106.0,
+              "height_px": 27.6,
+              "available_width_px": 150,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 106.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Language"
+              ]
+            },
+            "iprompt": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 145.25,
+              "height_px": 41.4,
+              "available_width_px": 172,
+              "available_height_px": 47,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 145.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "“Pack up the fruits",
+                "into the bag”"
+              ]
+            },
+            "joint_label": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 99.75,
+              "height_px": 55.2,
+              "available_width_px": 135,
+              "available_height_px": 62,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 100.25,
+              "required_height_px": 55.7,
+              "fits": true,
+              "lines": [
+                "Joint flow",
+                "matching"
+              ]
+            },
+            "teacher": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 137.0,
+              "height_px": 20.7,
+              "available_width_px": 147,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 137.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "(Teacher forcing)"
+              ]
+            },
+            "sampling": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 134.5,
+              "height_px": 46.0,
+              "available_width_px": 162,
+              "available_height_px": 53,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 135.0,
+              "required_height_px": 46.5,
+              "fits": true,
+              "lines": [
+                "Autoregressive",
+                "flow sampling"
+              ]
+            },
+            "execution_label": {
+              "scale": 1,
+              "effective_font_size_px": 17,
+              "width_px": 126.25,
+              "height_px": 39.1,
+              "available_width_px": 143,
+              "available_height_px": 46,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 126.75,
+              "required_height_px": 39.6,
+              "fits": true,
+              "lines": [
+                "Async real-world",
+                "execution"
+              ]
+            },
+            "update": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 340.25,
+              "height_px": 27.6,
+              "available_width_px": 423,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 340.75,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "Update with Real Observation"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "pass",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [],
+      "text_boxes": [
+        {
+          "slide": "page_001",
+          "element": "train_title",
+          "expected": "Training: Joint Video-Action Flow Matching",
+          "rendered": "Training: Joint Video-Action Flow Matching ",
+          "rendered_normalized": "Training: Joint Video-Action Flow Matching ",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 698.75,
+          "rendered_ink_width_px": 694.531
+        },
+        {
+          "slide": "page_001",
+          "element": "infer_title",
+          "expected": "Inference: Closed-Loop Real World Execution",
+          "rendered": "Inference: Closed-Loop Real World Execution",
+          "rendered_normalized": "Inference: Closed-Loop Real World Execution",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 735.0,
+          "rendered_ink_width_px": 732.414
+        },
+        {
+          "slide": "page_001",
+          "element": "train_dit_title",
+          "expected": "Joint Video-Action DiT",
+          "rendered": "Joint Video-Action DiT ",
+          "rendered_normalized": "Joint Video-Action DiT ",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 267.75,
+          "rendered_ink_width_px": 266.455
+        },
+        {
+          "slide": "page_001",
+          "element": "infer_dit_title",
+          "expected": "Joint Video-Action DiT",
+          "rendered": "Joint Video-Action DiT",
+          "rendered_normalized": "Joint Video-Action DiT",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 267.75,
+          "rendered_ink_width_px": 266.455
+        },
+        {
+          "slide": "page_001",
+          "element": "video",
+          "expected": "Video",
+          "rendered": "Video ",
+          "rendered_normalized": "Video ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 60.25,
+          "rendered_ink_width_px": 59.977
+        },
+        {
+          "slide": "page_001",
+          "element": "latents",
+          "expected": "Latents",
+          "rendered": "Latents",
+          "rendered_normalized": "Latents",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 76.0,
+          "rendered_ink_width_px": 76.038
+        },
+        {
+          "slide": "page_001",
+          "element": "action",
+          "expected": "Action",
+          "rendered": "Action",
+          "rendered_normalized": "Action",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 65.25,
+          "rendered_ink_width_px": 65.011
+        },
+        {
+          "slide": "page_001",
+          "element": "past",
+          "expected": "Past frames",
+          "rendered": "Past frames ",
+          "rendered_normalized": "Past frames ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 125.5,
+          "rendered_ink_width_px": 125.252
+        },
+        {
+          "slide": "page_001",
+          "element": "future",
+          "expected": "Future frames",
+          "rendered": "Future frames",
+          "rendered_normalized": "Future frames",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 146.75,
+          "rendered_ink_width_px": 146.491
+        },
+        {
+          "slide": "page_001",
+          "element": "future_action_label",
+          "expected": "Future action\nchunk",
+          "rendered": "Future action\r\nchunk",
+          "rendered_normalized": "Future action\r\nchunk",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 137.5,
+          "rendered_ink_width_px": 137.526
+        },
+        {
+          "slide": "page_001",
+          "element": "vae_enc_label",
+          "expected": "VAE\nEncoder",
+          "rendered": "VAE\r\nEncoder",
+          "rendered_normalized": "VAE\r\nEncoder",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 67.25,
+          "rendered_ink_width_px": 67.149
+        },
+        {
+          "slide": "page_001",
+          "element": "action_enc_label",
+          "expected": "Action\nEncoder",
+          "rendered": "Action\r\nEncoder",
+          "rendered_normalized": "Action\r\nEncoder",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 67.5,
+          "rendered_ink_width_px": 67.221
+        },
+        {
+          "slide": "page_001",
+          "element": "vae_enc_inf_label",
+          "expected": "VAE\nEncoder",
+          "rendered": "VAE\r\nEncoder",
+          "rendered_normalized": "VAE\r\nEncoder",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 67.25,
+          "rendered_ink_width_px": 67.149
+        },
+        {
+          "slide": "page_001",
+          "element": "vae_dec_label",
+          "expected": "VAE\nDecoder",
+          "rendered": "VAE\r\nDecoder",
+          "rendered_normalized": "VAE\r\nDecoder",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 68.25,
+          "rendered_ink_width_px": 68.091
+        },
+        {
+          "slide": "page_001",
+          "element": "action_dec_label",
+          "expected": "Action\nDecoder",
+          "rendered": "Action\r\nDecoder",
+          "rendered_normalized": "Action\r\nDecoder",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 68.5,
+          "rendered_ink_width_px": 68.163
+        },
+        {
+          "slide": "page_001",
+          "element": "train_causal",
+          "expected": "Causal DiT\nBlocks",
+          "rendered": "Causal DiT\r\nBlocks",
+          "rendered_normalized": "Causal DiT\r\nBlocks",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 116.75,
+          "rendered_ink_width_px": 117.006
+        },
+        {
+          "slide": "page_001",
+          "element": "infer_causal",
+          "expected": "Causal DiT\nBlocks",
+          "rendered": "Causal DiT\r\nBlocks",
+          "rendered_normalized": "Causal DiT\r\nBlocks",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 116.75,
+          "rendered_ink_width_px": 117.006
+        },
+        {
+          "slide": "page_001",
+          "element": "kv_text",
+          "expected": "KV Cache",
+          "rendered": "KV Cache",
+          "rendered_normalized": "KV Cache",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 105.25,
+          "rendered_ink_width_px": 105.356
+        },
+        {
+          "slide": "page_001",
+          "element": "dots1",
+          "expected": "⋮",
+          "rendered": "⋮ ",
+          "rendered_normalized": "⋮ ",
+          "matches": true,
+          "actual_fonts": [
+            "DejaVuSans"
+          ],
+          "measured_ink_width_px": 2.5,
+          "rendered_ink_width_px": 2.371
+        },
+        {
+          "slide": "page_001",
+          "element": "dots2",
+          "expected": "⋮",
+          "rendered": "⋮ ",
+          "rendered_normalized": "⋮ ",
+          "matches": true,
+          "actual_fonts": [
+            "DejaVuSans"
+          ],
+          "measured_ink_width_px": 2.5,
+          "rendered_ink_width_px": 2.371
+        },
+        {
+          "slide": "page_001",
+          "element": "dots3",
+          "expected": "⋮",
+          "rendered": "⋮ ",
+          "rendered_normalized": "⋮ ",
+          "matches": true,
+          "actual_fonts": [
+            "DejaVuSans"
+          ],
+          "measured_ink_width_px": 2.5,
+          "rendered_ink_width_px": 2.371
+        },
+        {
+          "slide": "page_001",
+          "element": "dots4",
+          "expected": "⋮",
+          "rendered": "⋮",
+          "rendered_normalized": "⋮",
+          "matches": true,
+          "actual_fonts": [
+            "DejaVuSans"
+          ],
+          "measured_ink_width_px": 2.5,
+          "rendered_ink_width_px": 2.371
+        },
+        {
+          "slide": "page_001",
+          "element": "noise_label_250",
+          "expected": "noise",
+          "rendered": "noise",
+          "rendered_normalized": "noise",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 46.25,
+          "rendered_ink_width_px": 45.585
+        },
+        {
+          "slide": "page_001",
+          "element": "noise_label_351",
+          "expected": "noise",
+          "rendered": "noise",
+          "rendered_normalized": "noise",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 46.25,
+          "rendered_ink_width_px": 45.585
+        },
+        {
+          "slide": "page_001",
+          "element": "state_label",
+          "expected": "State/Text\nEncoder",
+          "rendered": "State/Text\r\nEncoder",
+          "rendered_normalized": "State/Text\r\nEncoder",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 81.25,
+          "rendered_ink_width_px": 78.962
+        },
+        {
+          "slide": "page_001",
+          "element": "istate_label",
+          "expected": "State/Text\nEncoder",
+          "rendered": "State/Text\r\nEncoder ",
+          "rendered_normalized": "State/Text\r\nEncoder ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 81.25,
+          "rendered_ink_width_px": 78.962
+        },
+        {
+          "slide": "page_001",
+          "element": "proprio",
+          "expected": "Proprioception",
+          "rendered": "Proprioception",
+          "rendered_normalized": "Proprioception",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 150.75,
+          "rendered_ink_width_px": 151.285
+        },
+        {
+          "slide": "page_001",
+          "element": "language",
+          "expected": "Language",
+          "rendered": "Language\r\nk thfit",
+          "rendered_normalized": "Language\r\nk thfit",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 103.5,
+          "rendered_ink_width_px": 104.109
+        },
+        {
+          "slide": "page_001",
+          "element": "prompt",
+          "expected": "“Pack up the fruits\ninto the bag”",
+          "rendered": "“Pack up the fruits\r\ninto the bag”",
+          "rendered_normalized": "“Pack up the fruits\r\ninto the bag”",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-ItalicMT"
+          ],
+          "measured_ink_width_px": 144.75,
+          "rendered_ink_width_px": 144.335
+        },
+        {
+          "slide": "page_001",
+          "element": "iproprio",
+          "expected": "Proprioception",
+          "rendered": "Proprioception",
+          "rendered_normalized": "Proprioception",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 150.75,
+          "rendered_ink_width_px": 151.285
+        },
+        {
+          "slide": "page_001",
+          "element": "ilanguage",
+          "expected": "Language",
+          "rendered": "Language\r\nk thfit",
+          "rendered_normalized": "Language\r\nk thfit",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 103.5,
+          "rendered_ink_width_px": 104.109
+        },
+        {
+          "slide": "page_001",
+          "element": "iprompt",
+          "expected": "“Pack up the fruits\ninto the bag”",
+          "rendered": "“Pack up the fruits\r\ninto the bag”",
+          "rendered_normalized": "“Pack up the fruits\r\ninto the bag”",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-ItalicMT"
+          ],
+          "measured_ink_width_px": 144.75,
+          "rendered_ink_width_px": 144.335
+        },
+        {
+          "slide": "page_001",
+          "element": "joint_label",
+          "expected": "Joint flow\nmatching",
+          "rendered": "Joint flow\r\nmatching\r\nf)",
+          "rendered_normalized": "Joint flow\r\nmatching\r\nf)",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 99.25,
+          "rendered_ink_width_px": 99.243
+        },
+        {
+          "slide": "page_001",
+          "element": "teacher",
+          "expected": "(Teacher forcing)",
+          "rendered": "(Teacher forcing)",
+          "rendered_normalized": "(Teacher forcing)",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 135.5,
+          "rendered_ink_width_px": 133.065
+        },
+        {
+          "slide": "page_001",
+          "element": "sampling",
+          "expected": "Autoregressive\nflow sampling",
+          "rendered": "Autoregressive\r\nflow sampling",
+          "rendered_normalized": "Autoregressive\r\nflow sampling",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 133.75,
+          "rendered_ink_width_px": 132.43
+        },
+        {
+          "slide": "page_001",
+          "element": "execution_label",
+          "expected": "Async real-world\nexecution",
+          "rendered": "Async real-world\r\nexecution",
+          "rendered_normalized": "Async real-world\r\nexecution",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 125.0,
+          "rendered_ink_width_px": 123.918
+        },
+        {
+          "slide": "page_001",
+          "element": "update",
+          "expected": "Update with Real Observation",
+          "rendered": "Update with Real Observation",
+          "rendered_normalized": "Update with Real Observation",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 337.25,
+          "rendered_ink_width_px": 336.802
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "bf57728e29c025e66451a94bb54eab3ab90546813e309fc369746bcc1d4d4285",
+  "font_substitutions": [
+    {
+      "code": "font_substitution",
+      "requested": "Arial",
+      "resolved": "DejaVu Sans"
+    }
+  ],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "page_001",
+      "mean_absolute_pixel_error": 0.040597,
+      "comparison": "page_001_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

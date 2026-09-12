@@ -60,6 +60,7 @@ installed working tool with a command-local PATH; do not alter global settings o
    exclusions and short interpolated gaps require visual review; ambiguous crossings fail.
    For formulas, read [math.md](references/math.md): preserve per-symbol styles and script
    baselines; `compose-math` emits measured native parts from explicit source offsets.
+   For angled table headers and formulas, see [diagonal_text.md](references/diagonal_text.md).
    Split independent assets out of the source using exact crops when appropriate.
    Store approved assets under the job directory. Do not regenerate logos, invent chart data,
    or put editable text over baked text. Never reuse the entire source as a fake reconstruction.
@@ -84,8 +85,8 @@ Use parallel page work only if it is separately authorized and supported by the 
   (default 85% of the requested size). Give same-level text a shared `font_group` to preserve
   relative sizes. Do not lower minimums repeatedly just to make a failing layout pass.
 - Preserve manual line breaks and set `wrap: true` only when wrapping is intended. Rich text
-  remains editable; quarter-turn text uses `rotation` (see scene reference). If superscript,
-  arbitrary-angle rotation, vertical writing, freeform geometry or effects
+  remains editable; rotated text uses `rotation` (see scene reference). If superscript,
+  vertical writing, freeform geometry or effects
   exceed the schema, use separate measured text/shape objects or report the unsupported region.
   Do not silently drop style information.
 - Declare text's background shape through `container`, with that shape behind its content.
@@ -112,7 +113,9 @@ Open the generated `render/page_NNN.png` and comparison images. These are render
 page and at dense text/diagram crops. Check missing text, baselines, line breaks, font weight,
 container spacing, z-order, arrow direction, image crop and page order.
 For dense pages, measure source and rendered ink in the same isolated regions. Record actual
-edge/baseline differences in source pixels, including failures; a matching font name alone does
+edge/baseline differences in source pixels, including failures; use
+[compare-roi](references/regions.md) for isolated color-mask bounds and glyph overlap, checking
+empty masks, boundary clipping and same-color contamination. A matching font name alone does
 not prove alignment. Line coordinates describe stroke centers, while bitmap pixel indices
 describe cells: account for the half-pixel center when measuring thin grid lines.
 For source-sized arrows, use `arrow: true` and `arrow_head: {length, width}` in source pixels.

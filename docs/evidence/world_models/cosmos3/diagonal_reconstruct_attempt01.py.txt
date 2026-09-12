@@ -1,0 +1,18 @@
+from pathlib import Path
+import json,subprocess,os
+q=Path('/tmp/cosmos3-xNo4Kd');root=q/'diagonal_01';root.mkdir();exe='/Users/liyufeng/Code/super_img2ppt/.venv/bin/super-img2ppt'
+env=dict(os.environ);env['PATH']='/opt/homebrew/bin:'+env.get('PATH','')
+labels=[('v_ar',1034,144,14,'v','AR',False),('dots1',1060,143,14,'⋯','',False),('l',1086,145,15,'l','',False),('dots2',1112,143,14,'⋯','',False),('eos',1138,145,11,'EOS','',False),('bog',1164,145,11,'BOG','',False),('v_dm',1192,145,15,'v','DM',True),('dots3',1217,143,14,'⋯','',False),('s',1243,145,15,'s','',True),('dots4',1270,143,14,'⋯','',False),('a',1296,145,15,'a','',True),('dots5',1322,143,14,'⋯','',False)]
+new=[]
+for name,x,y,sz,base,sup,tilde in labels:
+ parts=[dict(text=base,offset=[0,0],italic=base in ['v','l','s','a'])]
+ if base in ['v','l','s','a']:parts.append(dict(text='1',offset=[7,3],size_scale=.65))
+ if sup:parts.append(dict(text=sup,offset=[7,-7],size_scale=.65))
+ if tilde:parts.append(dict(text='~',offset=[1,-8],size_scale=.75))
+ spec=dict(id='diag_'+name,origin=[x,y],font_family='Times New Roman',font_size=sz,rotation=-45,parts=parts,z=500+len(new))
+ ip=root/(name+'.json');ip.write_text(json.dumps(spec,indent=2));out=root/(name+'_composed')
+ r=subprocess.run([exe,'compose-math',str(ip),'--out',str(out),'--font-dir','/System/Library/Fonts/Supplemental'],env=env,capture_output=True,text=True);(root/(name+'.log')).write_text(r.stdout+r.stderr)
+ if r.returncode:raise RuntimeError((name,r.returncode,r.stdout,r.stderr))
+ el=json.load(open(out/'elements.json'));print(name,type(el),len(el));new.extend(el if isinstance(el,list) else el['elements'])
+s=json.load(open(q/'scene_before_diagonal.json'));E=s['slides'][0]['elements'];E[:]=[e for e in E if e['id']!='diagonal_mask_labels'];E.extend(new);s['slides'][0]['notes']=s['slides'][0]['notes'].replace('brace and diagonal labels remain local raster assets','brace remains a local text-free raster asset; diagonal header labels are native rotated text parts')
+(q/'job/scene.json').write_text(json.dumps(s,indent=2));(root/'added_elements.json').write_text(json.dumps(new,indent=2))

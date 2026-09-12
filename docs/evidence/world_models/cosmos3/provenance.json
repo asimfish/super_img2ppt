@@ -1,0 +1,69 @@
+{
+  "paper": "Cosmos 3: Omnimodal World Models for Physical AI",
+  "authors": "NVIDIA et al.",
+  "arxiv": "2606.02800v4",
+  "first_submitted": "2026-06-01",
+  "version_date": "2026-06-23",
+  "retrieved": "2026-09-12",
+  "pdf_url": "https://arxiv.org/pdf/2606.02800v4",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence": "arxiv.html paper-license link; applies to paper. OpenMDW model/code license is NOT used for paper figures.",
+  "figure": 5,
+  "page_one_based": 11,
+  "pdf_sha256": "df058bd2447fbdd83d13fd63be60a8b0aceb00ef6e50ba428b0a6bdbbed64b8d",
+  "page_raster_size": [
+    1786,
+    2526
+  ],
+  "raster_recipe": "pypdfium2 5.13.0, PDF page index10, render(scale=3); only pixels consumed. No PDF text, vector coordinates, or author drawing source used. PDFium integer output raster; no post-raster rounding or resampling before crop.",
+  "crop_xyxy": [
+    220,
+    250,
+    1620,
+    875
+  ],
+  "source_size": [
+    1400,
+    625
+  ],
+  "source_sha256": "46a1676b16124aefa1ce2f1ffaa1cf0ae18343a06237a5ca3dae1469e1c3d8aa",
+  "count_by_kind": {
+    "shape": 198,
+    "image": 1,
+    "text": 188,
+    "line": 28
+  },
+  "raster_assets": [
+    {
+      "id": "repeat_brace",
+      "crop_xywh": [
+        47,
+        161,
+        18,
+        279
+      ],
+      "contains_text": false,
+      "reason": "Curved brace unsupported by schema"
+    }
+  ],
+  "changes": "Editable redraw of geometry/text from raster. Font substitution approximation, explicit math script parts, token masks, colors sampled visually. No photo/image generation. Diagonal labels and brace retained before enhancement.",
+  "attribution": "Adapted from NVIDIA et al., Cosmos 3: Omnimodal World Models for Physical AI, arXiv:2606.02800v4, Figure 5, p. 11, 23 June 2026. CC BY 4.0; reconstruction is modified; no endorsement implied.",
+  "current_baseline": "build_04",
+  "visible_object_count": 415,
+  "validation_status": "review",
+  "renderer": "LibreOffice actual PPTX to PDF, PDFium raster",
+  "pdf_cover_printed_date": "2026-06-24",
+  "date_note": "arXiv v4 submission timestamp is 2026-06-23 17:33:32 UTC; PDF cover visibly prints 2026-6-24 (archived cover_date.png).",
+  "current_final": "build_06",
+  "native_diagonal": {
+    "angle": -45,
+    "parts": 32,
+    "helper": "compose-math with common origin rotation",
+    "before": "build_04",
+    "after": "build_06",
+    "raster_text_remaining": false,
+    "known_boundary": "32 expected diagonal_glyph_bounds_require_visual_review warnings; no blocking errors",
+    "source_glyph_note": "Three-dot sequences composed from explicit ordinary period glyphs; U+22EF missing in selected Times New Roman and strict helper rejected first attempt."
+  }
+}

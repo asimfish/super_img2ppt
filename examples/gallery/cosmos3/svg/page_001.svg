@@ -1,0 +1,1652 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 625" width="1400" height="625">
+  <rect width="100%" height="100%" fill="#FFFFFF" />
+  <g id="ar_bg">
+    <rect x="69" y="161" width="364" height="277" fill="#F6F5FF" stroke="none" stroke-width="1" />
+  </g>
+  <g id="dm_bg">
+    <rect x="445" y="161" width="364" height="277" fill="#FFFAF5" stroke="none" stroke-width="1" />
+  </g>
+  <g id="repeat_brace">
+    <image x="47" y="161" width="18" height="279" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAEXCAIAAAAvFoMHAAACf0lEQVR4nO2bS6uqUBSA194lpVk3kKKkFzTp8f9/SIOgmgT2QGqQZpkPyssxuCdcae4zOIPL+oZtPtx9W2mwkkVRBOLwHzhA2heu6wZBAEIlTdOczWabzUZAM01zvV5XKhVd1/99WMx2bNt+OpPJpFgs5r2aYRic8/F4/Op80E6n0+Vy0XVdkqTEUpZ2PB4ZY+12Gy9laZfLRVXVxPY+aEEQ+L5frVbfrqZqrusCQKVSEdMejwcAFAoFMS2KH1/GmJiWDWkISoKgJAhKgqAkCEqCoCQISoKgJAhKgqAkCEqCoCQISoKgJAhKgqAkCEqCoCQISoKgJAhK8ktJmOgY4REPLYS1+/3+tcy5mHa9XgFAlmUxzXEcRVHEJithGN5ut7TZT6q22+0AQNM0Ac33fdM0/8Tk1cIwXCwWURR1u900Jznt8zxvtVq5rjscDjO+2LcWRZFhGPv9HgAGg0Gz2cxwvjfJGNM07XlKlmU9b5EMWGICbRjGbrer1+uj0SjtznqTpNfrtdtty7IOh8PnTSbMUqm03W4ztvpG45x3Op0gCI7Ho4AGAI1Gg3Nu27aYxhhTVdVxHDENAFRVfQ4zxTQ5PsPXYXUujcfPdVrMVI3FZ532dwT6DUBQEgQlQVASBCVBUBIEJUFQEgQlQVASBCVBUBIEJUFQEgQlQVASBCVBUBIEJUFQEgQlQVCS/ywJ+9n0QYpfXhMekSiKwhhLG+WkaoVCQVEUYQ0AarWa53nPAaqA1mq1GGOv7x3m0srlcrPZPJ1OlmUJaADQ6XQkSVoul+fzOWtIiLndbvP5/H6/9/v9VquV9y6RZXk6nSZmyp+v9iTx8l1eLcHvPgF/AYLJ32EUxKO9AAAAAElFTkSuQmCC" preserveAspectRatio="xMidYMid meet" />
+  </g>
+  <g id="repeat_times">
+    <text x="10" y="307.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="23" font-weight="normal" font-style="normal" fill="#626262">×</tspan>
+    </text>
+  </g>
+  <g id="repeat_L">
+    <text x="27" y="307.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="23" font-weight="normal" font-style="italic" fill="#626262">L</tspan>
+    </text>
+  </g>
+  <g id="vit">
+    <rect x="89" y="15" width="119" height="45" fill="#EEF5FA" stroke="#126082" stroke-width="0.7" />
+  </g>
+  <g id="vit_label">
+    <text x="128.5" y="32.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="normal" fill="#126082">Vision</tspan>
+    </text>
+    <text x="104.375" y="49.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="normal" fill="#126082">Encoder (ViT)</tspan>
+    </text>
+  </g>
+  <g id="lang">
+    <rect x="212" y="15" width="202" height="45" fill="#F2F0FC" stroke="#100099" stroke-width="0.7" />
+  </g>
+  <g id="lang_label">
+    <text x="283.25" y="32.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="normal" fill="#100099">Language</tspan>
+    </text>
+    <text x="282.25" y="49.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="normal" fill="#100099">Tokenizer</tspan>
+    </text>
+  </g>
+  <g id="vae">
+    <rect x="444" y="15" width="119" height="45" fill="#FFF7EE" stroke="#A65000" stroke-width="0.7" />
+  </g>
+  <g id="vae_label">
+    <text x="483.5" y="32.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="normal" fill="#A65000">Vision</tspan>
+    </text>
+    <text x="456.125" y="49.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="normal" fill="#A65000">Encoder (VAE)</tspan>
+    </text>
+  </g>
+  <g id="audio">
+    <rect x="567" y="15" width="119" height="45" fill="#F7EDF6" stroke="#66246D" stroke-width="0.7" />
+  </g>
+  <g id="audio_label">
+    <text x="607.75" y="32.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="normal" fill="#66246D">Audio</tspan>
+    </text>
+    <text x="601.25" y="49.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="normal" fill="#66246D">Encoder</tspan>
+    </text>
+  </g>
+  <g id="action">
+    <rect x="690" y="15" width="119" height="45" fill="#F5F8F5" stroke="#4D684B" stroke-width="0.7" />
+  </g>
+  <g id="action_label">
+    <text x="729.0" y="32.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="normal" fill="#4D684B">Action</tspan>
+    </text>
+    <text x="724.25" y="49.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="normal" fill="#4D684B">Encoder</tspan>
+    </text>
+  </g>
+  <g id="ar_v0">
+    <rect x="89" y="71" width="38" height="25" rx="5" fill="#D0E5F0" stroke="#005A80" stroke-width="1.2" />
+  </g>
+  <g id="ar_v0b">
+    <text x="95" y="89.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">v</tspan>
+    </text>
+  </g>
+  <g id="ar_v0s">
+    <text x="104" y="92.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">1</tspan>
+    </text>
+  </g>
+  <g id="ar_v0u">
+    <text x="104" y="80.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">AR</tspan>
+    </text>
+  </g>
+  <g id="ar_v1">
+    <rect x="130" y="71" width="38" height="25" rx="5" fill="#D0E5F0" stroke="#005A80" stroke-width="1.2" />
+  </g>
+  <g id="ar_v1b">
+    <text x="136" y="89.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">v</tspan>
+    </text>
+  </g>
+  <g id="ar_v1s">
+    <text x="145" y="92.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">2</tspan>
+    </text>
+  </g>
+  <g id="ar_v1u">
+    <text x="145" y="80.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">AR</tspan>
+    </text>
+  </g>
+  <g id="ar_ellipsis">
+    <rect x="171" y="71" width="38" height="25" rx="5" fill="#D0E5F0" stroke="#005A80" stroke-width="1.2" />
+  </g>
+  <g id="ar_ellipsisb">
+    <text x="177" y="89.75" xml:space="preserve">
+      <tspan font-family="DejaVu Sans" font-size="18" font-weight="normal" font-style="normal" fill="#111111">⋯</tspan>
+    </text>
+  </g>
+  <g id="ar_l0">
+    <rect x="212" y="71" width="38" height="25" rx="5" fill="#E0DDFA" stroke="#100099" stroke-width="1.2" />
+  </g>
+  <g id="ar_l0b">
+    <text x="218" y="89.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">l</tspan>
+    </text>
+  </g>
+  <g id="ar_l0s">
+    <text x="227" y="92.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">1</tspan>
+    </text>
+  </g>
+  <g id="ar_l1">
+    <rect x="253" y="71" width="38" height="25" rx="5" fill="#E0DDFA" stroke="#100099" stroke-width="1.2" />
+  </g>
+  <g id="ar_l1b">
+    <text x="259" y="89.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">l</tspan>
+    </text>
+  </g>
+  <g id="ar_l1s">
+    <text x="268" y="92.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">2</tspan>
+    </text>
+  </g>
+  <g id="ar_ldots">
+    <rect x="294" y="71" width="38" height="25" rx="5" fill="#E0DDFA" stroke="#100099" stroke-width="1.2" />
+  </g>
+  <g id="ar_ldotsb">
+    <text x="300" y="89.75" xml:space="preserve">
+      <tspan font-family="DejaVu Sans" font-size="18" font-weight="normal" font-style="normal" fill="#111111">⋯</tspan>
+    </text>
+  </g>
+  <g id="specialEOS">
+    <rect x="335" y="71" width="38" height="25" rx="4" fill="#ECECEC" stroke="#AAAAAA" stroke-width="1" />
+  </g>
+  <g id="specialtxtEOS">
+    <text x="345.5" y="86.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#626262">EOS</tspan>
+    </text>
+  </g>
+  <g id="specialBOG">
+    <rect x="376" y="71" width="38" height="25" rx="4" fill="#ECECEC" stroke="#AAAAAA" stroke-width="1" />
+  </g>
+  <g id="specialtxtBOG">
+    <text x="385.5" y="86.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#626262">BOG</tspan>
+    </text>
+  </g>
+  <g id="in0">
+    <rect x="444" y="71" width="38" height="25" rx="5" fill="#FAF7F3" stroke="#A65000" stroke-width="1.2" stroke-dasharray="4 4" />
+  </g>
+  <g id="in0b">
+    <text x="450" y="89.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">v</tspan>
+    </text>
+  </g>
+  <g id="in0s">
+    <text x="459" y="92.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">1</tspan>
+    </text>
+  </g>
+  <g id="in0u">
+    <text x="459" y="80.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">DM</tspan>
+    </text>
+  </g>
+  <g id="in0tilde">
+    <text x="450" y="82.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#626262">~</tspan>
+    </text>
+  </g>
+  <g id="in1">
+    <rect x="485" y="71" width="38" height="25" rx="5" fill="#FAF7F3" stroke="#A65000" stroke-width="1.2" stroke-dasharray="4 4" />
+  </g>
+  <g id="in1b">
+    <text x="491" y="89.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">v</tspan>
+    </text>
+  </g>
+  <g id="in1s">
+    <text x="500" y="92.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">2</tspan>
+    </text>
+  </g>
+  <g id="in1u">
+    <text x="500" y="80.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">DM</tspan>
+    </text>
+  </g>
+  <g id="in1tilde">
+    <text x="491" y="82.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#626262">~</tspan>
+    </text>
+  </g>
+  <g id="in2">
+    <rect x="526" y="71" width="38" height="25" rx="5" fill="#FAF7F3" stroke="#A65000" stroke-width="1.2" stroke-dasharray="4 4" />
+  </g>
+  <g id="in2b">
+    <text x="532" y="89.75" xml:space="preserve">
+      <tspan font-family="DejaVu Sans" font-size="18" font-weight="normal" font-style="normal" fill="#111111">⋯</tspan>
+    </text>
+  </g>
+  <g id="in3">
+    <rect x="567" y="71" width="38" height="25" rx="5" fill="#FAF7F3" stroke="#76237E" stroke-width="1.2" stroke-dasharray="4 4" />
+  </g>
+  <g id="in3b">
+    <text x="573" y="89.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">s</tspan>
+    </text>
+  </g>
+  <g id="in3s">
+    <text x="582" y="92.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">1</tspan>
+    </text>
+  </g>
+  <g id="in3tilde">
+    <text x="573" y="82.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#626262">~</tspan>
+    </text>
+  </g>
+  <g id="in4">
+    <rect x="608" y="71" width="38" height="25" rx="5" fill="#FAF7F3" stroke="#76237E" stroke-width="1.2" stroke-dasharray="4 4" />
+  </g>
+  <g id="in4b">
+    <text x="614" y="89.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">s</tspan>
+    </text>
+  </g>
+  <g id="in4s">
+    <text x="623" y="92.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">2</tspan>
+    </text>
+  </g>
+  <g id="in4tilde">
+    <text x="614" y="82.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#626262">~</tspan>
+    </text>
+  </g>
+  <g id="in5">
+    <rect x="649" y="71" width="38" height="25" rx="5" fill="#FAF7F3" stroke="#76237E" stroke-width="1.2" stroke-dasharray="4 4" />
+  </g>
+  <g id="in5b">
+    <text x="655" y="89.75" xml:space="preserve">
+      <tspan font-family="DejaVu Sans" font-size="18" font-weight="normal" font-style="normal" fill="#111111">⋯</tspan>
+    </text>
+  </g>
+  <g id="in6">
+    <rect x="690" y="71" width="38" height="25" rx="5" fill="#FAF7F3" stroke="#375D37" stroke-width="1.2" stroke-dasharray="4 4" />
+  </g>
+  <g id="in6b">
+    <text x="696" y="89.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">a</tspan>
+    </text>
+  </g>
+  <g id="in6s">
+    <text x="705" y="92.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">1</tspan>
+    </text>
+  </g>
+  <g id="in6tilde">
+    <text x="696" y="82.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#626262">~</tspan>
+    </text>
+  </g>
+  <g id="in7">
+    <rect x="731" y="71" width="38" height="25" rx="5" fill="#FAF7F3" stroke="#375D37" stroke-width="1.2" stroke-dasharray="4 4" />
+  </g>
+  <g id="in7b">
+    <text x="737" y="89.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">a</tspan>
+    </text>
+  </g>
+  <g id="in7s">
+    <text x="746" y="92.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">2</tspan>
+    </text>
+  </g>
+  <g id="in7tilde">
+    <text x="737" y="82.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#626262">~</tspan>
+    </text>
+  </g>
+  <g id="in8">
+    <rect x="772" y="71" width="38" height="25" rx="5" fill="#FAF7F3" stroke="#375D37" stroke-width="1.2" stroke-dasharray="4 4" />
+  </g>
+  <g id="in8b">
+    <text x="778" y="89.75" xml:space="preserve">
+      <tspan font-family="DejaVu Sans" font-size="18" font-weight="normal" font-style="normal" fill="#111111">⋯</tspan>
+    </text>
+  </g>
+  <g id="out0">
+    <rect x="444" y="459" width="38" height="25" rx="5" fill="#FBE1C5" stroke="#A65000" stroke-width="1.2" />
+  </g>
+  <g id="out0b">
+    <text x="450" y="477.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">v</tspan>
+    </text>
+  </g>
+  <g id="out0s">
+    <text x="459" y="480.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">1</tspan>
+    </text>
+  </g>
+  <g id="out0u">
+    <text x="459" y="468.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">DM</tspan>
+    </text>
+  </g>
+  <g id="out1">
+    <rect x="485" y="459" width="38" height="25" rx="5" fill="#FBE1C5" stroke="#A65000" stroke-width="1.2" />
+  </g>
+  <g id="out1b">
+    <text x="491" y="477.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">v</tspan>
+    </text>
+  </g>
+  <g id="out1s">
+    <text x="500" y="480.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">2</tspan>
+    </text>
+  </g>
+  <g id="out1u">
+    <text x="500" y="468.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">DM</tspan>
+    </text>
+  </g>
+  <g id="out2">
+    <rect x="526" y="459" width="38" height="25" rx="5" fill="#FBE1C5" stroke="#A65000" stroke-width="1.2" />
+  </g>
+  <g id="out2b">
+    <text x="532" y="477.75" xml:space="preserve">
+      <tspan font-family="DejaVu Sans" font-size="18" font-weight="normal" font-style="normal" fill="#111111">⋯</tspan>
+    </text>
+  </g>
+  <g id="out3">
+    <rect x="567" y="459" width="38" height="25" rx="5" fill="#DEC5E0" stroke="#76237E" stroke-width="1.2" />
+  </g>
+  <g id="out3b">
+    <text x="573" y="477.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">s</tspan>
+    </text>
+  </g>
+  <g id="out3s">
+    <text x="582" y="480.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">1</tspan>
+    </text>
+  </g>
+  <g id="out4">
+    <rect x="608" y="459" width="38" height="25" rx="5" fill="#DEC5E0" stroke="#76237E" stroke-width="1.2" />
+  </g>
+  <g id="out4b">
+    <text x="614" y="477.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">s</tspan>
+    </text>
+  </g>
+  <g id="out4s">
+    <text x="623" y="480.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">2</tspan>
+    </text>
+  </g>
+  <g id="out5">
+    <rect x="649" y="459" width="38" height="25" rx="5" fill="#DEC5E0" stroke="#76237E" stroke-width="1.2" />
+  </g>
+  <g id="out5b">
+    <text x="655" y="477.75" xml:space="preserve">
+      <tspan font-family="DejaVu Sans" font-size="18" font-weight="normal" font-style="normal" fill="#111111">⋯</tspan>
+    </text>
+  </g>
+  <g id="out6">
+    <rect x="690" y="459" width="38" height="25" rx="5" fill="#DDEADB" stroke="#375D37" stroke-width="1.2" />
+  </g>
+  <g id="out6b">
+    <text x="696" y="477.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">a</tspan>
+    </text>
+  </g>
+  <g id="out6s">
+    <text x="705" y="480.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">1</tspan>
+    </text>
+  </g>
+  <g id="out7">
+    <rect x="731" y="459" width="38" height="25" rx="5" fill="#DDEADB" stroke="#375D37" stroke-width="1.2" />
+  </g>
+  <g id="out7b">
+    <text x="737" y="477.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">a</tspan>
+    </text>
+  </g>
+  <g id="out7s">
+    <text x="746" y="480.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">2</tspan>
+    </text>
+  </g>
+  <g id="out8">
+    <rect x="772" y="459" width="38" height="25" rx="5" fill="#DDEADB" stroke="#375D37" stroke-width="1.2" />
+  </g>
+  <g id="out8b">
+    <text x="778" y="477.75" xml:space="preserve">
+      <tspan font-family="DejaVu Sans" font-size="18" font-weight="normal" font-style="normal" fill="#111111">⋯</tspan>
+    </text>
+  </g>
+  <g id="arout0">
+    <rect x="233" y="459" width="38" height="25" rx="5" fill="#E0DDFA" stroke="#100099" stroke-width="1.2" />
+  </g>
+  <g id="arout0b">
+    <text x="239" y="477.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">l</tspan>
+    </text>
+  </g>
+  <g id="arout0s">
+    <text x="248" y="480.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">2</tspan>
+    </text>
+  </g>
+  <g id="arout1">
+    <rect x="274" y="459" width="38" height="25" rx="5" fill="#E0DDFA" stroke="#100099" stroke-width="1.2" />
+  </g>
+  <g id="arout1b">
+    <text x="280" y="477.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="italic" fill="#111111">l</tspan>
+    </text>
+  </g>
+  <g id="arout1s">
+    <text x="289" y="480.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">3</tspan>
+    </text>
+  </g>
+  <g id="arout2">
+    <rect x="315" y="459" width="38" height="25" rx="5" fill="#E0DDFA" stroke="#100099" stroke-width="1.2" />
+  </g>
+  <g id="arout2b">
+    <text x="321" y="477.75" xml:space="preserve">
+      <tspan font-family="DejaVu Sans" font-size="18" font-weight="normal" font-style="normal" fill="#111111">⋯</tspan>
+    </text>
+  </g>
+  <g id="arbracket">
+    <line x1="89" y1="111" x2="414" y2="111" stroke="#100099" stroke-width="1" />
+  </g>
+  <g id="arbrleft">
+    <line x1="89" y1="104" x2="89" y2="111" stroke="#100099" stroke-width="1" />
+  </g>
+  <g id="arbrright">
+    <line x1="414" y1="104" x2="414" y2="111" stroke="#100099" stroke-width="1" />
+  </g>
+  <g id="arheading">
+    <text x="184.625" y="133.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="19" font-weight="bold" font-style="normal" fill="#100099">AR subsequence</tspan>
+    </text>
+  </g>
+  <g id="dmbracket">
+    <line x1="444" y1="111" x2="809" y2="111" stroke="#A65000" stroke-width="1" />
+  </g>
+  <g id="dmbrleft">
+    <line x1="444" y1="104" x2="444" y2="111" stroke="#A65000" stroke-width="1" />
+  </g>
+  <g id="dmbrright">
+    <line x1="809" y1="104" x2="809" y2="111" stroke="#A65000" stroke-width="1" />
+  </g>
+  <g id="dmheading">
+    <text x="536.0" y="133.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="19" font-weight="bold" font-style="normal" fill="#A65000">Diffusion subsequence</tspan>
+    </text>
+  </g>
+  <g id="arnode1">
+    <rect x="172" y="170" width="159" height="33" fill="#E7E5FC" stroke="#100099" stroke-width="1.5" />
+  </g>
+  <g id="arlabel1">
+    <text x="204.875" y="190.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="19" font-weight="normal" font-style="normal" fill="#111111">Layer Norm</tspan>
+    </text>
+  </g>
+  <g id="arnode2">
+    <rect x="172" y="340" width="159" height="33" fill="#E7E5FC" stroke="#100099" stroke-width="1.5" />
+  </g>
+  <g id="arlabel2">
+    <text x="204.875" y="360.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="19" font-weight="normal" font-style="normal" fill="#111111">Layer Norm</tspan>
+    </text>
+  </g>
+  <g id="arnode3">
+    <rect x="172" y="400" width="159" height="33" fill="#E7E5FC" stroke="#100099" stroke-width="1.5" />
+  </g>
+  <g id="arlabel3">
+    <text x="233.0" y="419.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="normal" fill="#111111">MLP</tspan>
+    </text>
+  </g>
+  <g id="ararrow1">
+    <polygon points="252.15,145.0 252.15,161.0 254.0,161.0 251.5,168 249.0,161.0 250.85,161.0 250.85,145.0" fill="#100099" />
+  </g>
+  <g id="ararrow2">
+    <polygon points="252.15,205.0 252.15,220.0 254.0,220.0 251.5,227 249.0,220.0 250.85,220.0 250.85,205.0" fill="#100099" />
+  </g>
+  <g id="ararrow3">
+    <polygon points="252.15,315.0 252.15,331.0 254.0,331.0 251.5,338 249.0,331.0 250.85,331.0 250.85,315.0" fill="#100099" />
+  </g>
+  <g id="ararrow4">
+    <polygon points="252.15,375.0 252.15,390.0 254.0,390.0 251.5,397 249.0,390.0 250.85,390.0 250.85,375.0" fill="#100099" />
+  </g>
+  <g id="ararrow5">
+    <polygon points="252.15,435.0 252.15,450.0 254.0,450.0 251.5,457 249.0,450.0 250.85,450.0 250.85,435.0" fill="#100099" />
+  </g>
+  <g id="arrole">
+    <text x="201.625" y="532.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="25" font-weight="bold" font-style="normal" fill="#626262">Reasoner</tspan>
+    </text>
+  </g>
+  <g id="dmnode1">
+    <rect x="547" y="170" width="159" height="33" fill="#FFF1E2" stroke="#A65000" stroke-width="1.5" />
+  </g>
+  <g id="dmlabel1">
+    <text x="579.875" y="190.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="19" font-weight="normal" font-style="normal" fill="#111111">Layer Norm</tspan>
+    </text>
+  </g>
+  <g id="dmnode2">
+    <rect x="547" y="340" width="159" height="33" fill="#FFF1E2" stroke="#A65000" stroke-width="1.5" />
+  </g>
+  <g id="dmlabel2">
+    <text x="579.875" y="360.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="19" font-weight="normal" font-style="normal" fill="#111111">Layer Norm</tspan>
+    </text>
+  </g>
+  <g id="dmnode3">
+    <rect x="547" y="400" width="159" height="33" fill="#FFF1E2" stroke="#A65000" stroke-width="1.5" />
+  </g>
+  <g id="dmlabel3">
+    <text x="608.0" y="419.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="normal" font-style="normal" fill="#111111">MLP</tspan>
+    </text>
+  </g>
+  <g id="dmarrow1">
+    <polygon points="627.15,145.0 627.15,161.0 629.0,161.0 626.5,168 624.0,161.0 625.85,161.0 625.85,145.0" fill="#A65000" />
+  </g>
+  <g id="dmarrow2">
+    <polygon points="627.15,205.0 627.15,220.0 629.0,220.0 626.5,227 624.0,220.0 625.85,220.0 625.85,205.0" fill="#A65000" />
+  </g>
+  <g id="dmarrow3">
+    <polygon points="627.15,315.0 627.15,331.0 629.0,331.0 626.5,338 624.0,331.0 625.85,331.0 625.85,315.0" fill="#A65000" />
+  </g>
+  <g id="dmarrow4">
+    <polygon points="627.15,375.0 627.15,390.0 629.0,390.0 626.5,397 624.0,390.0 625.85,390.0 625.85,375.0" fill="#A65000" />
+  </g>
+  <g id="dmarrow5">
+    <polygon points="627.15,435.0 627.15,450.0 629.0,450.0 626.5,457 624.0,450.0 625.85,450.0 625.85,435.0" fill="#A65000" />
+  </g>
+  <g id="dmrole">
+    <text x="571.125" y="532.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="25" font-weight="bold" font-style="normal" fill="#626262">Generator</tspan>
+    </text>
+  </g>
+  <g id="attention">
+    <rect x="98" y="230" width="682" height="83" fill="#ECECEC" stroke="#555555" stroke-width="2" />
+  </g>
+  <g id="attentiontitle">
+    <text x="301.375" y="254.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="21.5" font-weight="bold" font-style="normal" fill="#626262">Shared Multimodal Attention</tspan>
+    </text>
+  </g>
+  <g id="causal">
+    <text x="201.25" y="273.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#111111">Causal Self-Attn</tspan>
+    </text>
+  </g>
+  <g id="full">
+    <text x="583.625" y="273.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#111111">Full Attention</tspan>
+    </text>
+  </g>
+  <g id="expand1">
+    <line x1="781" y1="230" x2="933" y2="149" stroke="#B6B6B6" stroke-width="1.4" stroke-dasharray="6 6" />
+  </g>
+  <g id="expand2">
+    <line x1="781" y1="314" x2="933" y2="414" stroke="#B6B6B6" stroke-width="1.4" stroke-dasharray="6 6" />
+  </g>
+  <g id="cell_0_0">
+    <rect x="1023.0" y="150.0" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_0_1">
+    <rect x="1049.1667" y="150.0" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_0_2">
+    <rect x="1075.3334" y="150.0" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_0_3">
+    <rect x="1101.5001" y="150.0" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_0_4">
+    <rect x="1127.6668" y="150.0" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_0_5">
+    <rect x="1153.8335" y="150.0" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_0_6">
+    <rect x="1180.0002" y="150.0" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_0_7">
+    <rect x="1206.1669" y="150.0" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_0_8">
+    <rect x="1232.3336" y="150.0" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_0_9">
+    <rect x="1258.5003" y="150.0" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_0_10">
+    <rect x="1284.667" y="150.0" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_0_11">
+    <rect x="1310.8337" y="150.0" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_1_0">
+    <rect x="1023.0" y="176.1667" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_1_1">
+    <rect x="1049.1667" y="176.1667" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_1_2">
+    <rect x="1075.3334" y="176.1667" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_1_3">
+    <rect x="1101.5001" y="176.1667" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_1_4">
+    <rect x="1127.6668" y="176.1667" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_1_5">
+    <rect x="1153.8335" y="176.1667" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_1_6">
+    <rect x="1180.0002" y="176.1667" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_1_7">
+    <rect x="1206.1669" y="176.1667" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_1_8">
+    <rect x="1232.3336" y="176.1667" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_1_9">
+    <rect x="1258.5003" y="176.1667" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_1_10">
+    <rect x="1284.667" y="176.1667" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_1_11">
+    <rect x="1310.8337" y="176.1667" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_2_0">
+    <rect x="1023.0" y="202.33339999999998" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_2_1">
+    <rect x="1049.1667" y="202.33339999999998" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_2_2">
+    <rect x="1075.3334" y="202.33339999999998" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_2_3">
+    <rect x="1101.5001" y="202.33339999999998" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_2_4">
+    <rect x="1127.6668" y="202.33339999999998" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_2_5">
+    <rect x="1153.8335" y="202.33339999999998" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_2_6">
+    <rect x="1180.0002" y="202.33339999999998" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_2_7">
+    <rect x="1206.1669" y="202.33339999999998" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_2_8">
+    <rect x="1232.3336" y="202.33339999999998" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_2_9">
+    <rect x="1258.5003" y="202.33339999999998" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_2_10">
+    <rect x="1284.667" y="202.33339999999998" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_2_11">
+    <rect x="1310.8337" y="202.33339999999998" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_3_0">
+    <rect x="1023.0" y="228.5001" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_3_1">
+    <rect x="1049.1667" y="228.5001" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_3_2">
+    <rect x="1075.3334" y="228.5001" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_3_3">
+    <rect x="1101.5001" y="228.5001" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_3_4">
+    <rect x="1127.6668" y="228.5001" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_3_5">
+    <rect x="1153.8335" y="228.5001" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_3_6">
+    <rect x="1180.0002" y="228.5001" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_3_7">
+    <rect x="1206.1669" y="228.5001" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_3_8">
+    <rect x="1232.3336" y="228.5001" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_3_9">
+    <rect x="1258.5003" y="228.5001" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_3_10">
+    <rect x="1284.667" y="228.5001" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_3_11">
+    <rect x="1310.8337" y="228.5001" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_4_0">
+    <rect x="1023.0" y="254.6668" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_4_1">
+    <rect x="1049.1667" y="254.6668" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_4_2">
+    <rect x="1075.3334" y="254.6668" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_4_3">
+    <rect x="1101.5001" y="254.6668" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_4_4">
+    <rect x="1127.6668" y="254.6668" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_4_5">
+    <rect x="1153.8335" y="254.6668" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_4_6">
+    <rect x="1180.0002" y="254.6668" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_4_7">
+    <rect x="1206.1669" y="254.6668" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_4_8">
+    <rect x="1232.3336" y="254.6668" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_4_9">
+    <rect x="1258.5003" y="254.6668" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_4_10">
+    <rect x="1284.667" y="254.6668" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_4_11">
+    <rect x="1310.8337" y="254.6668" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_5_0">
+    <rect x="1023.0" y="280.83349999999996" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_5_1">
+    <rect x="1049.1667" y="280.83349999999996" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_5_2">
+    <rect x="1075.3334" y="280.83349999999996" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_5_3">
+    <rect x="1101.5001" y="280.83349999999996" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_5_4">
+    <rect x="1127.6668" y="280.83349999999996" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_5_5">
+    <rect x="1153.8335" y="280.83349999999996" width="26.1667" height="26.1667" fill="#B1ADEB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_5_6">
+    <rect x="1180.0002" y="280.83349999999996" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_5_7">
+    <rect x="1206.1669" y="280.83349999999996" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_5_8">
+    <rect x="1232.3336" y="280.83349999999996" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_5_9">
+    <rect x="1258.5003" y="280.83349999999996" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_5_10">
+    <rect x="1284.667" y="280.83349999999996" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_5_11">
+    <rect x="1310.8337" y="280.83349999999996" width="26.1667" height="26.1667" fill="#F7F7F7" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_6_0">
+    <rect x="1023.0" y="307.0002" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_6_1">
+    <rect x="1049.1667" y="307.0002" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_6_2">
+    <rect x="1075.3334" y="307.0002" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_6_3">
+    <rect x="1101.5001" y="307.0002" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_6_4">
+    <rect x="1127.6668" y="307.0002" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_6_5">
+    <rect x="1153.8335" y="307.0002" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_6_6">
+    <rect x="1180.0002" y="307.0002" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_6_7">
+    <rect x="1206.1669" y="307.0002" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_6_8">
+    <rect x="1232.3336" y="307.0002" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_6_9">
+    <rect x="1258.5003" y="307.0002" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_6_10">
+    <rect x="1284.667" y="307.0002" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_6_11">
+    <rect x="1310.8337" y="307.0002" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_7_0">
+    <rect x="1023.0" y="333.1669" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_7_1">
+    <rect x="1049.1667" y="333.1669" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_7_2">
+    <rect x="1075.3334" y="333.1669" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_7_3">
+    <rect x="1101.5001" y="333.1669" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_7_4">
+    <rect x="1127.6668" y="333.1669" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_7_5">
+    <rect x="1153.8335" y="333.1669" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_7_6">
+    <rect x="1180.0002" y="333.1669" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_7_7">
+    <rect x="1206.1669" y="333.1669" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_7_8">
+    <rect x="1232.3336" y="333.1669" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_7_9">
+    <rect x="1258.5003" y="333.1669" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_7_10">
+    <rect x="1284.667" y="333.1669" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_7_11">
+    <rect x="1310.8337" y="333.1669" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_8_0">
+    <rect x="1023.0" y="359.3336" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_8_1">
+    <rect x="1049.1667" y="359.3336" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_8_2">
+    <rect x="1075.3334" y="359.3336" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_8_3">
+    <rect x="1101.5001" y="359.3336" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_8_4">
+    <rect x="1127.6668" y="359.3336" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_8_5">
+    <rect x="1153.8335" y="359.3336" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_8_6">
+    <rect x="1180.0002" y="359.3336" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_8_7">
+    <rect x="1206.1669" y="359.3336" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_8_8">
+    <rect x="1232.3336" y="359.3336" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_8_9">
+    <rect x="1258.5003" y="359.3336" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_8_10">
+    <rect x="1284.667" y="359.3336" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_8_11">
+    <rect x="1310.8337" y="359.3336" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_9_0">
+    <rect x="1023.0" y="385.5003" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_9_1">
+    <rect x="1049.1667" y="385.5003" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_9_2">
+    <rect x="1075.3334" y="385.5003" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_9_3">
+    <rect x="1101.5001" y="385.5003" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_9_4">
+    <rect x="1127.6668" y="385.5003" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_9_5">
+    <rect x="1153.8335" y="385.5003" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_9_6">
+    <rect x="1180.0002" y="385.5003" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_9_7">
+    <rect x="1206.1669" y="385.5003" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_9_8">
+    <rect x="1232.3336" y="385.5003" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_9_9">
+    <rect x="1258.5003" y="385.5003" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_9_10">
+    <rect x="1284.667" y="385.5003" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_9_11">
+    <rect x="1310.8337" y="385.5003" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_10_0">
+    <rect x="1023.0" y="411.667" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_10_1">
+    <rect x="1049.1667" y="411.667" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_10_2">
+    <rect x="1075.3334" y="411.667" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_10_3">
+    <rect x="1101.5001" y="411.667" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_10_4">
+    <rect x="1127.6668" y="411.667" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_10_5">
+    <rect x="1153.8335" y="411.667" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_10_6">
+    <rect x="1180.0002" y="411.667" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_10_7">
+    <rect x="1206.1669" y="411.667" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_10_8">
+    <rect x="1232.3336" y="411.667" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_10_9">
+    <rect x="1258.5003" y="411.667" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_10_10">
+    <rect x="1284.667" y="411.667" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_10_11">
+    <rect x="1310.8337" y="411.667" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_11_0">
+    <rect x="1023.0" y="437.83369999999996" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_11_1">
+    <rect x="1049.1667" y="437.83369999999996" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_11_2">
+    <rect x="1075.3334" y="437.83369999999996" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_11_3">
+    <rect x="1101.5001" y="437.83369999999996" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_11_4">
+    <rect x="1127.6668" y="437.83369999999996" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_11_5">
+    <rect x="1153.8335" y="437.83369999999996" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_11_6">
+    <rect x="1180.0002" y="437.83369999999996" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_11_7">
+    <rect x="1206.1669" y="437.83369999999996" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_11_8">
+    <rect x="1232.3336" y="437.83369999999996" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_11_9">
+    <rect x="1258.5003" y="437.83369999999996" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_11_10">
+    <rect x="1284.667" y="437.83369999999996" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="cell_11_11">
+    <rect x="1310.8337" y="437.83369999999996" width="26.1667" height="26.1667" fill="#EDCDAB" stroke="#D7D7D7" stroke-width="0.65" />
+  </g>
+  <g id="matrix_border">
+    <rect x="1023" y="150" width="314" height="314" fill="none" stroke="#777777" stroke-width="2" />
+  </g>
+  <g id="matrix_v">
+    <line x1="1180" y1="150" x2="1180" y2="464" stroke="#777777" stroke-width="2" />
+  </g>
+  <g id="matrix_h">
+    <line x1="1023" y1="307" x2="1337" y2="307" stroke="#777777" stroke-width="2" />
+  </g>
+  <g id="masktitle">
+    <text x="1097.25" y="28.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="25" font-weight="bold" font-style="normal" fill="#626262">Attention Mask</tspan>
+    </text>
+  </g>
+  <g id="keys">
+    <text x="1133" y="78.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="18" font-weight="bold" font-style="normal" fill="#111111">Keys (K)</tspan>
+    </text>
+  </g>
+  <g id="kar">
+    <text x="1087" y="93.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="bold" font-style="normal" fill="#100099">K</tspan>
+    </text>
+  </g>
+  <g id="karsub">
+    <text x="1097" y="98.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#100099">AR</tspan>
+    </text>
+  </g>
+  <g id="kdm">
+    <text x="1243" y="93.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="bold" font-style="normal" fill="#A65000">K</tspan>
+    </text>
+  </g>
+  <g id="kdmsub">
+    <text x="1253" y="98.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#A65000">DM</tspan>
+    </text>
+  </g>
+  <g id="key_ar">
+    <polygon points="1027.0,106.5 1170.0,106.5 1170.0,104.5 1177,107 1170.0,109.5 1170.0,107.5 1027.0,107.5" fill="#AAAAAA" />
+  </g>
+  <g id="key_arreverse">
+    <polygon points="1177.0,107.5 1034.0,107.5 1034.0,109.5 1027,107 1034.0,104.5 1034.0,106.5 1177.0,106.5" fill="#AAAAAA" />
+  </g>
+  <g id="key_dm">
+    <polygon points="1184.0,106.5 1327.0,106.5 1327.0,104.5 1334,107 1327.0,109.5 1327.0,107.5 1184.0,107.5" fill="#AAAAAA" />
+  </g>
+  <g id="key_dmreverse">
+    <polygon points="1334.0,107.5 1191.0,107.5 1191.0,109.5 1184,107 1191.0,104.5 1191.0,106.5 1334.0,106.5" fill="#AAAAAA" />
+  </g>
+  <g id="query_ar">
+    <polygon points="975.5,155.0 975.5,296.0 977.5,296.0 975,303 972.5,296.0 974.5,296.0 974.5,155.0" fill="#AAAAAA" />
+  </g>
+  <g id="query_arreverse">
+    <polygon points="974.5,303.0 974.5,162.0 972.5,162.0 975,155 977.5,162.0 975.5,162.0 975.5,303.0" fill="#AAAAAA" />
+  </g>
+  <g id="query_dm">
+    <polygon points="975.5,312.0 975.5,454.0 977.5,454.0 975,461 972.5,454.0 974.5,454.0 974.5,312.0" fill="#AAAAAA" />
+  </g>
+  <g id="query_dmreverse">
+    <polygon points="974.5,461.0 974.5,319.0 972.5,319.0 975,312 977.5,319.0 975.5,319.0 975.5,461.0" fill="#AAAAAA" />
+  </g>
+  <g id="queries" transform="rotate(-90 933.0 303.0)">
+    <text x="872" y="307.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="20" font-weight="bold" font-style="normal" fill="#111111">Queries (Q)</tspan>
+    </text>
+  </g>
+  <g id="qar" transform="rotate(-90 957.0 238.5)">
+    <text x="947" y="243.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="19" font-weight="normal" font-style="italic" fill="#100099">Q</tspan>
+    </text>
+  </g>
+  <g id="qarsub" transform="rotate(-90 959.5 219.5)">
+    <text x="948" y="221.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="bold" font-style="normal" fill="#100099">AR</tspan>
+    </text>
+  </g>
+  <g id="qdm" transform="rotate(-90 957.0 395.5)">
+    <text x="947" y="400.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="19" font-weight="normal" font-style="italic" fill="#A65000">Q</tspan>
+    </text>
+  </g>
+  <g id="qdmsub" transform="rotate(-90 959.5 376.5)">
+    <text x="948" y="378.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="bold" font-style="normal" fill="#A65000">DM</tspan>
+    </text>
+  </g>
+  <g id="rowv0">
+    <text x="988" y="167.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="italic" fill="#111111">v</tspan>
+    </text>
+  </g>
+  <g id="rowvsub0">
+    <text x="998" y="172.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">1</tspan>
+    </text>
+  </g>
+  <g id="rowvsup0">
+    <text x="997" y="159.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">AR</tspan>
+    </text>
+  </g>
+  <g id="rowv1">
+    <text x="988" y="323.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="italic" fill="#111111">v</tspan>
+    </text>
+  </g>
+  <g id="rowvsub1">
+    <text x="998" y="328.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">1</tspan>
+    </text>
+  </g>
+  <g id="rowvsup1">
+    <text x="997" y="315.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">DM</tspan>
+    </text>
+  </g>
+  <g id="row0">
+    <text x="986" y="195.0" xml:space="preserve">
+      <tspan font-family="DejaVu Sans" font-size="15" font-weight="normal" font-style="normal" fill="#111111">⋯</tspan>
+    </text>
+  </g>
+  <g id="row1">
+    <text x="986" y="220.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="italic" fill="#111111">l</tspan>
+    </text>
+  </g>
+  <g id="rowsub1">
+    <text x="996" y="224.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">1</tspan>
+    </text>
+  </g>
+  <g id="row2">
+    <text x="986" y="248.0" xml:space="preserve">
+      <tspan font-family="DejaVu Sans" font-size="15" font-weight="normal" font-style="normal" fill="#111111">⋯</tspan>
+    </text>
+  </g>
+  <g id="row3">
+    <text x="986" y="271.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">EOS</tspan>
+    </text>
+  </g>
+  <g id="row4">
+    <text x="986" y="298.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">BOG</tspan>
+    </text>
+  </g>
+  <g id="row5">
+    <text x="986" y="352.0" xml:space="preserve">
+      <tspan font-family="DejaVu Sans" font-size="15" font-weight="normal" font-style="normal" fill="#111111">⋯</tspan>
+    </text>
+  </g>
+  <g id="row6">
+    <text x="986" y="375.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="italic" fill="#111111">s</tspan>
+    </text>
+  </g>
+  <g id="rowsub6">
+    <text x="996" y="379.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">1</tspan>
+    </text>
+  </g>
+  <g id="rowtilde6">
+    <text x="988" y="366.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">~</tspan>
+    </text>
+  </g>
+  <g id="row7">
+    <text x="986" y="404.0" xml:space="preserve">
+      <tspan font-family="DejaVu Sans" font-size="15" font-weight="normal" font-style="normal" fill="#111111">⋯</tspan>
+    </text>
+  </g>
+  <g id="row8">
+    <text x="986" y="430.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="italic" fill="#111111">a</tspan>
+    </text>
+  </g>
+  <g id="rowsub8">
+    <text x="996" y="434.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">1</tspan>
+    </text>
+  </g>
+  <g id="rowtilde8">
+    <text x="988" y="421.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">~</tspan>
+    </text>
+  </g>
+  <g id="row9">
+    <text x="986" y="457.0" xml:space="preserve">
+      <tspan font-family="DejaVu Sans" font-size="15" font-weight="normal" font-style="normal" fill="#111111">⋯</tspan>
+    </text>
+  </g>
+  <g id="causalmask">
+    <text x="1079.5" y="223.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="bold" font-style="normal" fill="#100099">Causal</tspan>
+    </text>
+    <text x="1063.5" y="240.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="bold" font-style="normal" fill="#100099">(triangular)</tspan>
+    </text>
+  </g>
+  <g id="zero">
+    <text x="1235.125" y="223.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="normal" fill="#C0C0C0">Masked</tspan>
+    </text>
+    <text x="1241.0" y="240.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="normal" fill="#C0C0C0">(zero)</tspan>
+    </text>
+  </g>
+  <g id="fullleft">
+    <text x="1091.0" y="380.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="bold" font-style="normal" fill="#AD5700">Full</tspan>
+    </text>
+    <text x="1083.625" y="397.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="bold" font-style="normal" fill="#AD5700">attend</tspan>
+    </text>
+  </g>
+  <g id="fullright">
+    <text x="1248.0" y="380.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="bold" font-style="normal" fill="#AD5700">Full</tspan>
+    </text>
+    <text x="1240.625" y="397.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="bold" font-style="normal" fill="#AD5700">attend</tspan>
+    </text>
+  </g>
+  <g id="legend_ar">
+    <rect x="1029" y="482" width="16" height="12" fill="#B1ADEB" stroke="#DDDDDD" stroke-width="0.7" />
+  </g>
+  <g id="legend_artxt">
+    <text x="1054" y="494.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="21" font-weight="normal" font-style="normal" fill="#111111">AR causal self-attention</tspan>
+    </text>
+  </g>
+  <g id="legend_dm">
+    <rect x="1029" y="508" width="16" height="12" fill="#EDCDAB" stroke="#DDDDDD" stroke-width="0.7" />
+  </g>
+  <g id="legend_dmtxt">
+    <text x="1054" y="520.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="21" font-weight="normal" font-style="normal" fill="#111111">DM full attention</tspan>
+    </text>
+  </g>
+  <g id="tokenlegend">
+    <rect x="95" y="573" width="1210" height="43" fill="none" stroke="#BFBFBF" stroke-width="1" />
+  </g>
+  <g id="tokensheading">
+    <text x="105" y="601.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="25" font-weight="bold" font-style="normal" fill="#626262">Tokens:</tspan>
+    </text>
+  </g>
+  <g id="legend_v">
+    <rect x="218" y="582" width="38" height="25" rx="5" fill="#D0E5F0" stroke="#005A80" stroke-width="1.2" />
+  </g>
+  <g id="legend_txtv">
+    <text x="262" y="600.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="25" font-weight="normal" font-style="normal" fill="#111111">Vision (AR)</tspan>
+    </text>
+  </g>
+  <g id="legend_l">
+    <rect x="408" y="582" width="38" height="25" rx="5" fill="#E0DDFA" stroke="#100099" stroke-width="1.2" />
+  </g>
+  <g id="legend_txtl">
+    <text x="453" y="600.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="25" font-weight="normal" font-style="normal" fill="#111111">Language</tspan>
+    </text>
+  </g>
+  <g id="legend_sp">
+    <rect x="580" y="582" width="38" height="25" rx="5" fill="#ECECEC" stroke="#AAAAAA" stroke-width="1.2" />
+  </g>
+  <g id="legend_txtsp">
+    <text x="625" y="600.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="25" font-weight="normal" font-style="normal" fill="#111111">Special</tspan>
+    </text>
+  </g>
+  <g id="legend_d">
+    <rect x="725" y="582" width="38" height="25" rx="5" fill="#FBE1C5" stroke="#A65000" stroke-width="1.2" />
+  </g>
+  <g id="legend_txtd">
+    <text x="769" y="600.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="25" font-weight="normal" font-style="normal" fill="#111111">Vision (DM)</tspan>
+    </text>
+  </g>
+  <g id="legend_s">
+    <rect x="923" y="582" width="38" height="25" rx="5" fill="#DEC5E0" stroke="#76237E" stroke-width="1.2" />
+  </g>
+  <g id="legend_txts">
+    <text x="968" y="600.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="25" font-weight="normal" font-style="normal" fill="#111111">Audio</tspan>
+    </text>
+  </g>
+  <g id="legend_a">
+    <rect x="1055" y="582" width="38" height="25" rx="5" fill="#DDEADB" stroke="#375D37" stroke-width="1.2" />
+  </g>
+  <g id="legend_txta">
+    <text x="1099" y="600.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="25" font-weight="normal" font-style="normal" fill="#111111">Action</tspan>
+    </text>
+  </g>
+  <g id="legend_n">
+    <rect x="1193" y="582" width="38" height="25" rx="5" fill="#F4F4F4" stroke="#BBBBBB" stroke-width="1.2" stroke-dasharray="5 5" />
+  </g>
+  <g id="legend_txtn">
+    <text x="1237" y="600.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="25" font-weight="normal" font-style="normal" fill="#111111">Noisy</tspan>
+    </text>
+  </g>
+  <g id="f1part0">
+    <text x="181" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#111111">Attn(</tspan>
+    </text>
+  </g>
+  <g id="f1part1">
+    <text x="215" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#111111">Q</tspan>
+    </text>
+  </g>
+  <g id="f1part2">
+    <text x="225" y="294.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">AR</tspan>
+    </text>
+  </g>
+  <g id="f1part3">
+    <text x="240" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#111111">,</tspan>
+    </text>
+  </g>
+  <g id="f1part4">
+    <text x="248" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#111111">K</tspan>
+    </text>
+  </g>
+  <g id="f1part5">
+    <text x="258" y="294.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">AR</tspan>
+    </text>
+  </g>
+  <g id="f1part6">
+    <text x="274" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#111111">,</tspan>
+    </text>
+  </g>
+  <g id="f1part7">
+    <text x="282" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#111111">V</tspan>
+    </text>
+  </g>
+  <g id="f1part8">
+    <text x="292" y="294.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">AR</tspan>
+    </text>
+  </g>
+  <g id="f1part9">
+    <text x="315" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#111111">)</tspan>
+    </text>
+  </g>
+  <g id="f2part0">
+    <text x="507" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#111111">Attn(</tspan>
+    </text>
+  </g>
+  <g id="f2part1">
+    <text x="546" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#111111">Q</tspan>
+    </text>
+  </g>
+  <g id="f2part2">
+    <text x="559" y="294.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">DM</tspan>
+    </text>
+  </g>
+  <g id="f2part3">
+    <text x="577" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#111111">,</tspan>
+    </text>
+  </g>
+  <g id="f2part4">
+    <text x="585" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#111111">[</tspan>
+    </text>
+  </g>
+  <g id="f2part5">
+    <text x="588" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#111111">K</tspan>
+    </text>
+  </g>
+  <g id="f2part6">
+    <text x="604" y="294.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">AR</tspan>
+    </text>
+  </g>
+  <g id="f2part7">
+    <text x="617" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#111111">;</tspan>
+    </text>
+  </g>
+  <g id="f2part8">
+    <text x="624" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#111111">K</tspan>
+    </text>
+  </g>
+  <g id="f2part9">
+    <text x="639" y="294.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">DM</tspan>
+    </text>
+  </g>
+  <g id="f2part10">
+    <text x="654" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#111111">]</tspan>
+    </text>
+  </g>
+  <g id="f2part11">
+    <text x="660" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#111111">,</tspan>
+    </text>
+  </g>
+  <g id="f2part12">
+    <text x="668" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#111111">[</tspan>
+    </text>
+  </g>
+  <g id="f2part13">
+    <text x="671" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#111111">V</tspan>
+    </text>
+  </g>
+  <g id="f2part14">
+    <text x="685" y="294.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">AR</tspan>
+    </text>
+  </g>
+  <g id="f2part15">
+    <text x="700" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#111111">;</tspan>
+    </text>
+  </g>
+  <g id="f2part16">
+    <text x="707" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#111111">V</tspan>
+    </text>
+  </g>
+  <g id="f2part17">
+    <text x="720" y="294.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9" font-weight="normal" font-style="normal" fill="#111111">DM</tspan>
+    </text>
+  </g>
+  <g id="f2part18">
+    <text x="735" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#111111">]</tspan>
+    </text>
+  </g>
+  <g id="f2part19">
+    <text x="741" y="290.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#111111">)</tspan>
+    </text>
+  </g>
+  <g id="rowvtilde1">
+    <text x="988" y="314.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#111111">~</tspan>
+    </text>
+  </g>
+  <g id="diag_v_ar_0" transform="rotate(-45 1031.416636905521 138.6436661325119)">
+    <text x="1028.041636905521" y="142.84366613251188" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="italic" fill="#000000">v</tspan>
+    </text>
+  </g>
+  <g id="diag_v_ar_1" transform="rotate(-45 1038.881916747898 137.44688790535366)">
+    <text x="1036.381916747898" y="140.21438790535368" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9.1" font-weight="normal" font-style="normal" fill="#000000">1</tspan>
+    </text>
+  </g>
+  <g id="diag_v_ar_2" transform="rotate(-45 1034.7276644084272 127.45900462109367)">
+    <text x="1028.1026644084272" y="130.22650462109368" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9.1" font-weight="normal" font-style="normal" fill="#000000">AR</tspan>
+    </text>
+  </g>
+  <g id="diag_dots1_0" transform="rotate(-45 1053.479720420449 138.82806999099938)">
+    <text x="1051.604720420449" y="142.8530699909994" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">.</tspan>
+    </text>
+  </g>
+  <g id="diag_dots1_1" transform="rotate(-45 1059.1365746699414 133.171215741507)">
+    <text x="1057.2615746699414" y="137.19621574150702" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">.</tspan>
+    </text>
+  </g>
+  <g id="diag_dots1_2" transform="rotate(-45 1064.7934289194338 127.5143614920146)">
+    <text x="1062.9184289194338" y="131.53936149201462" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">.</tspan>
+    </text>
+  </g>
+  <g id="diag_l_0" transform="rotate(-45 1081.4973980899786 139.96186418404585)">
+    <text x="1078.9973980899786" y="144.58686418404585" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="italic" fill="#000000">l</tspan>
+    </text>
+  </g>
+  <g id="diag_l_1" transform="rotate(-45 1089.9694212120698 138.18083897893223)">
+    <text x="1087.2194212120698" y="141.07458897893224" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9.75" font-weight="normal" font-style="normal" fill="#000000">1</tspan>
+    </text>
+  </g>
+  <g id="diag_dots2_0" transform="rotate(-45 1105.479720420449 138.82806999099938)">
+    <text x="1103.604720420449" y="142.8530699909994" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">.</tspan>
+    </text>
+  </g>
+  <g id="diag_dots2_1" transform="rotate(-45 1111.1365746699414 133.171215741507)">
+    <text x="1109.2615746699414" y="137.19621574150702" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">.</tspan>
+    </text>
+  </g>
+  <g id="diag_dots2_2" transform="rotate(-45 1116.7934289194338 127.5143614920146)">
+    <text x="1114.9184289194338" y="131.53936149201462" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">.</tspan>
+    </text>
+  </g>
+  <g id="diag_eos_0" transform="rotate(-45 1139.684582425361 136.07277688751984)">
+    <text x="1130.059582425361" y="139.07277688751984" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#000000">EOS</tspan>
+    </text>
+  </g>
+  <g id="diag_bog_0" transform="rotate(-45 1166.568465901844 135.18889341103667)">
+    <text x="1155.693465901844" y="138.18889341103667" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="10" font-weight="normal" font-style="normal" fill="#000000">BOG</tspan>
+    </text>
+  </g>
+  <g id="diag_v_dm_0" transform="rotate(-45 1193.2928932188133 139.16636905521096)">
+    <text x="1189.6678932188133" y="143.79136905521096" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="italic" fill="#000000">v</tspan>
+    </text>
+  </g>
+  <g id="diag_v_dm_1" transform="rotate(-45 1200.9694212120698 138.18083897893223)">
+    <text x="1198.2194212120698" y="141.07458897893224" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9.75" font-weight="normal" font-style="normal" fill="#000000">1</tspan>
+    </text>
+  </g>
+  <g id="diag_v_dm_2" transform="rotate(-45 1198.4061591302686 123.7735383122563)">
+    <text x="1190.2811591302686" y="126.6672883122563" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9.75" font-weight="normal" font-style="normal" fill="#000000">DM</tspan>
+    </text>
+  </g>
+  <g id="diag_v_dm_3" transform="rotate(-45 1188.8513787494855 133.8409711093998)">
+    <text x="1185.6013787494855" y="137.3722211093998" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="11.25" font-weight="normal" font-style="normal" fill="#000000">~</tspan>
+    </text>
+  </g>
+  <g id="diag_dots3_0" transform="rotate(-45 1210.479720420449 138.82806999099938)">
+    <text x="1208.604720420449" y="142.8530699909994" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">.</tspan>
+    </text>
+  </g>
+  <g id="diag_dots3_1" transform="rotate(-45 1216.1365746699414 133.171215741507)">
+    <text x="1214.2615746699414" y="137.19621574150702" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">.</tspan>
+    </text>
+  </g>
+  <g id="diag_dots3_2" transform="rotate(-45 1221.7934289194338 127.5143614920146)">
+    <text x="1219.9184289194338" y="131.53936149201462" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">.</tspan>
+    </text>
+  </g>
+  <g id="diag_s_0" transform="rotate(-45 1241.93933982822 138.51992244580424)">
+    <text x="1238.81433982822" y="143.14492244580424" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="italic" fill="#000000">s</tspan>
+    </text>
+  </g>
+  <g id="diag_s_1" transform="rotate(-45 1249.9694212120698 137.18083897893223)">
+    <text x="1247.2194212120698" y="140.07458897893224" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9.75" font-weight="normal" font-style="normal" fill="#000000">1</tspan>
+    </text>
+  </g>
+  <g id="diag_s_2" transform="rotate(-45 1237.8513787494855 132.8409711093998)">
+    <text x="1234.6013787494855" y="136.3722211093998" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="11.25" font-weight="normal" font-style="normal" fill="#000000">~</tspan>
+    </text>
+  </g>
+  <g id="diag_dots4_0" transform="rotate(-45 1263.479720420449 138.82806999099938)">
+    <text x="1261.604720420449" y="142.8530699909994" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">.</tspan>
+    </text>
+  </g>
+  <g id="diag_dots4_1" transform="rotate(-45 1269.1365746699414 133.171215741507)">
+    <text x="1267.2615746699414" y="137.19621574150702" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">.</tspan>
+    </text>
+  </g>
+  <g id="diag_dots4_2" transform="rotate(-45 1274.7934289194338 127.5143614920146)">
+    <text x="1272.9184289194338" y="131.53936149201462" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">.</tspan>
+    </text>
+  </g>
+  <g id="diag_a_0" transform="rotate(-45 1294.5580582617583 137.90120401226602)">
+    <text x="1290.5580582617583" y="142.52620401226602" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="italic" fill="#000000">a</tspan>
+    </text>
+  </g>
+  <g id="diag_a_1" transform="rotate(-45 1301.9694212120698 137.18083897893223)">
+    <text x="1299.2194212120698" y="140.07458897893224" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="9.75" font-weight="normal" font-style="normal" fill="#000000">1</tspan>
+    </text>
+  </g>
+  <g id="diag_a_2" transform="rotate(-45 1289.8513787494855 132.8409711093998)">
+    <text x="1286.6013787494855" y="136.3722211093998" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="11.25" font-weight="normal" font-style="normal" fill="#000000">~</tspan>
+    </text>
+  </g>
+  <g id="diag_dots5_0" transform="rotate(-45 1315.479720420449 138.82806999099938)">
+    <text x="1313.604720420449" y="142.8530699909994" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">.</tspan>
+    </text>
+  </g>
+  <g id="diag_dots5_1" transform="rotate(-45 1321.1365746699414 133.171215741507)">
+    <text x="1319.2615746699414" y="137.19621574150702" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">.</tspan>
+    </text>
+  </g>
+  <g id="diag_dots5_2" transform="rotate(-45 1326.7934289194338 127.5143614920146)">
+    <text x="1324.9184289194338" y="131.53936149201462" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">.</tspan>
+    </text>
+  </g>
+</svg>

@@ -9,6 +9,7 @@ import unicodedata
 from pathlib import Path
 
 from .fonts import FontCatalog, ink_bounds, measure
+from .geometry import box_points, rotate_points
 from .prepare import fresh_directory, json_write
 from .scene import InputError, _unique_pairs
 
@@ -46,7 +47,17 @@ def compose_math(spec: dict, catalog: FontCatalog) -> dict:
     """
     _keys(
         spec,
-        {"id", "origin", "font_family", "font_size", "color", "parts", "z", "container"},
+        {
+            "id",
+            "origin",
+            "font_family",
+            "font_size",
+            "color",
+            "parts",
+            "z",
+            "container",
+            "rotation",
+        },
         {"id", "origin", "font_family", "font_size", "parts"},
         "formula",
     )
@@ -54,6 +65,7 @@ def compose_math(spec: dict, catalog: FontCatalog) -> dict:
     if not isinstance(prefix, str) or not re.fullmatch(r"[A-Za-z][A-Za-z0-9_-]{0,63}", prefix):
         raise InputError("Formula id must be a short scene identifier")
     origin = _pair(spec["origin"], "origin")
+    rotation = _number(spec.get("rotation", 0), -360, 360, "rotation")
     size = _number(spec["font_size"], 1, 300, "font_size")
     family = spec["font_family"]
     if not isinstance(family, str) or not family.strip() or len(family) > 128:
@@ -146,13 +158,28 @@ def compose_math(spec: dict, catalog: FontCatalog) -> dict:
         }
         if "container" in spec:
             element["container"] = spec["container"]
+        ink_quad = box_points([x + ink[0], baseline + ink[1], ink[2] - ink[0], ink[3] - ink[1]])
+        measured_baseline = [x, baseline]
+        if rotation:
+            pivot = {"box": [*origin, 0, 0], "rotation": rotation}
+            bx, by, bw, bh = element["box"]
+            cx, cy = rotate_points([(bx + bw / 2, by + bh / 2)], pivot)[0]
+            element.update(box=[cx - bw / 2, cy - bh / 2, bw, bh], rotation=rotation)
+            measured_baseline = list(rotate_points([measured_baseline], pivot)[0])
+            ink_quad = rotate_points(ink_quad, pivot)
         elements.append(element)
         metrics.append(
             {
                 "id": element["id"],
                 "text": text,
-                "baseline": [x, baseline],
-                "ink_box": [x + ink[0], baseline + ink[1], x + ink[2], baseline + ink[3]],
+                "baseline": measured_baseline,
+                "ink_box": [
+                    min(p[0] for p in ink_quad),
+                    min(p[1] for p in ink_quad),
+                    max(p[0] for p in ink_quad),
+                    max(p[1] for p in ink_quad),
+                ],
+                "rotation": rotation,
                 "font_family": face.family,
                 "font_size": part_size,
                 "bold": bold,

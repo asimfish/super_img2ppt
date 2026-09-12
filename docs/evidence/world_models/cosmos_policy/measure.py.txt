@@ -1,0 +1,18 @@
+from pathlib import Path
+from PIL import Image,ImageChops
+import pypdfium2 as pdf,json,sys
+r=Path(__file__).parent;b=r/sys.argv[1];p=pdf.PdfDocument(b/'render/editable.pdf')[0];out=p.render(scale=1195/p.get_width()).to_pil().convert('RGB');out.save(b/'actual_sourcewidth.png');s=Image.open(r/'source.png').convert('RGB');print('actual raw',out.size)
+# PDFium ceil may add white row: no registration/resizing; use source canvas and retain raw.
+a=out.crop((0,0,1195,476));a.save(b/'actual_sourcecanvas.png')
+regions={'title':[160,0,455,33],'small_label':[198,42,302,61],'injection_title':[200,162,1055,190],'state_math':[285,439,321,470],'value_math':[1095,439,1160,470],'vae':[16,170,34,219],'multiline':[0,347,76,426],'bus':[130,187,1135,209]}
+res={};detail=Image.new('RGB',(900,len(regions)*95),'white')
+for i,(name,box) in enumerate(regions.items()):
+ si=s.crop(box);ai=a.crop(box)
+ def ink(im):
+  return {(i % im.width,i // im.width) for i,c in enumerate(im.getdata()) if max(c)<150}
+ sm,am=ink(si),ink(ai)
+ def bounds(m):
+  xs=[v[0] for v in m];ys=[v[1] for v in m];return [min(xs),min(ys),max(xs)+1,max(ys)+1] if m else None
+ sb,ab=bounds(sm),bounds(am);res[name]={'source_roi':box,'source_ink_box':sb,'actual_ink_box':ab,'edge_delta':[y-x for x,y in zip(sb,ab)],'glyph_iou':float(len(sm&am)/max(len(sm|am),1))}
+ si.thumbnail((440,80));ai.thumbnail((440,80));detail.paste(si,(0,i*95));detail.paste(ai,(450,i*95))
+comparison=Image.new('RGB',(1195,952),'white');comparison.paste(s,(0,0));comparison.paste(a,(0,476));comparison.save(b/'comparison_sourcewidth.png');detail.save(b/'detail_comparison.png');(b/'measurements.json').write_text(json.dumps(res,indent=2));print(json.dumps(res,indent=2))

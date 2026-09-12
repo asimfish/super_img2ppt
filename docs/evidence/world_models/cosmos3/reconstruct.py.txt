@@ -1,0 +1,92 @@
+import json,shutil,hashlib
+from pathlib import Path
+from PIL import Image
+q=Path('/tmp/cosmos3-xNo4Kd'); j=q/'job'; (j/'assets').mkdir(exist_ok=True); E=[]
+blue='#100099';orange='#A65000';gray='#626262'
+def shape(id,box,fill=None,stroke=None,sw=1,typ='rect',**kw):
+ e=dict(id=id,kind='shape',z=len(E)+1,box=box,shape=typ,fill=fill,stroke=stroke,stroke_width=sw,**kw);E.append(e);return id
+def text(id,txt,box,size=18,color='#111111',**kw):
+ e=dict(id=id,kind='text',z=len(E)+1,box=box,text=txt,font_size=size,font_family='Times New Roman',color=color,fit='strict',wrap=False,**kw);E.append(e);return id
+def line(id,a,b,c='#111111',sw=1,arrow=False,**kw):
+ e=dict(id=id,kind='line',z=len(E)+1,points=[a,b],stroke=c,stroke_width=sw,**kw)
+ if arrow:e.update(arrow=True,arrow_head=dict(length=7,width=5))
+ E.append(e);return id
+def asset(id,box,contains=False):
+ Image.open(q/'source.png').crop((box[0],box[1],box[0]+box[2],box[1]+box[3])).save(j/'assets'/f'{id}.png');E.append(dict(id=id,kind='image',z=len(E)+1,box=box,path=f'assets/{id}.png',contains_text=contains,provenance='Exact inspected source pixel crop; retained due unsupported arbitrary-angle labels or curved brace'))
+def token(id,x,y,w,fill,col,base='',sub='',sup='',dashed=False):
+ shape(id,[x,y,w,25],fill,col,1.2,'round_rect',radius=5,**({'dash':[4,4]} if dashed else {}))
+ if base:
+  text(id+'b',base,[x+6,y+2,w-10,23],18,container=id,italic=base not in ['⋯','EOS','BOG'])
+  if sub:text(id+'s',sub,[x+15,y+12,10,12],10,container=id)
+  if sup:text(id+'u',sup,[x+15,y+1,20,12],9,container=id)
+# core tower backgrounds
+shape('ar_bg',[69,161,364,277],'#F6F5FF',role='background');shape('dm_bg',[445,161,364,277],'#FFFAF5',role='background')
+asset('repeat_brace',[47,161,18,279]);text('repeat_times','×',[10,287,17,29],23,gray);text('repeat_L','L',[27,287,17,29],23,gray,italic=True)
+# encoders
+for id,x,w,label,fill,col in [('vit',89,119,'Vision\nEncoder (ViT)','#EEF5FA','#126082'),('lang',212,202,'Language\nTokenizer','#F2F0FC',blue),('vae',444,119,'Vision\nEncoder (VAE)','#FFF7EE',orange),('audio',567,119,'Audio\nEncoder','#F7EDF6','#66246D'),('action',690,119,'Action\nEncoder','#F5F8F5','#4D684B')]:
+ shape(id,[x,15,w,45],fill,col,.7);text(id+'_label',label,[x+3,19,w-6,39],15,col,align='center',container=id,line_height=1)
+cols=[('#D0E5F0','#005A80'),('#E0DDFA',blue),('#FBE1C5',orange),('#DEC5E0','#76237E'),('#DDEADB','#375D37')]
+for k,x in enumerate([89,130]):token('ar_v'+str(k),x,71,38,*cols[0],'v',str(k+1),'AR')
+token('ar_ellipsis',171,71,38,*cols[0],'⋯')
+for k,x in enumerate([212,253]):token('ar_l'+str(k),x,71,38,*cols[1],'l',str(k+1))
+token('ar_ldots',294,71,38,*cols[1],'⋯')
+for txt,x in [('EOS',335),('BOG',376)]:
+ shape('special'+txt,[x,71,38,25],'#ECECEC','#AAAAAA',1,'round_rect',radius=4);text('specialtxt'+txt,txt,[x+3,78,32,13],9,gray,align='center',container='special'+txt)
+for row,y in [('in',71),('out',459)]:
+ for k,x in enumerate([444,485,526,567,608,649,690,731,772]):
+  ci=2+k//3; base=['v','v','⋯','s','s','⋯','a','a','⋯'][k]; sub=str(k%3+1) if k%3<2 else '';sup='DM' if k<2 else ''
+  token(row+str(k),x,y,38,('#FAF7F3' if row=='in' else cols[ci][0]),cols[ci][1],base,sub,sup,row=='in')
+  if row=='in' and k%3<2:text(row+str(k)+'tilde','~',[x+6,y-2,12,10],12,gray,container=row+str(k))
+for k,x in enumerate([233,274,315]):token('arout'+str(k),x,459,38,*cols[1],'l' if k<2 else '⋯',str(k+2) if k<2 else '')
+for id,x1,x2,c,label in [('ar',89,414,blue,'AR subsequence'),('dm',444,809,orange,'Diffusion subsequence')]:
+ line(id+'bracket',[x1,111],[x2,111],c);line(id+'brleft',[x1,104],[x1,111],c);line(id+'brright',[x2,104],[x2,111],c)
+ text(id+'heading',label,[x1,116,x2-x1,26],19,c,bold=True,align='center')
+for id,x,c,fill in [('ar',172,blue,'#E7E5FC'),('dm',547,orange,'#FFF1E2')]:
+ for n,y,label in [(1,170,'Layer Norm'),(2,340,'Layer Norm'),(3,400,'MLP')]:
+  shape(id+'node'+str(n),[x,y,159,33],fill,c,1.5);text(id+'label'+str(n),label,[x+5,y+3,149,28],18,align='center',container=id+'node'+str(n))
+ for n,ya,yb in [(1,145,168),(2,205,227),(3,315,338),(4,375,397),(5,435,457)]:line(id+'arrow'+str(n),[x+79.5,ya],[x+79.5,yb],c,1.3,True)
+ text(id+'role','Reasoner' if id=='ar' else 'Generator',[x-5,510,169,36],25,gray,bold=True,align='center')
+shape('attention',[98,230,682,83],'#ECECEC','#555555',2)
+text('attentiontitle','Shared Multimodal Attention',[210,235,456,28],20,gray,bold=True,align='center',container='attention')
+for id,x,w,label in [('causal',151,200,'Causal Self-Attn'),('full',501,250,'Full Attention')]:text(id,label,[x,261,w,20],14,bold=True,align='center',container='attention')
+# formulas, explicit styled main letters and script baselines from inspected pixels
+for id,x,parts in [('f1',181,[('Attn(',0,False),('Q',33,True),(',',53,False),('K',61,True),(',',81,False),('V',89,True),(')',119,False)]),('f2',507,[('Attn(',0,False),('Q',34,True),(', [',57,False),('K',79,True),('; K',105,True),('], [',140,False),('V',163,True),('; V',189,True),('])',226,False)])]:
+ for k,(txt,dx,bold) in enumerate(parts):text(id+'p'+str(k),txt,[x+dx,278,45 if len(txt)>3 else 30,19],14,bold=bold,container='attention')
+ subs=[(43,'AR'),(71,'AR'),(99,'AR')] if id=='f1' else [(44,'DM'),(89,'AR'),(121,'DM'),(173,'AR'),(205,'DM')]
+ for k,(dx,txt) in enumerate(subs):text(id+'sub'+str(k),txt,[x+dx,286,20,12],9,container='attention')
+# dashed links to right panel
+line('expand1',[781,230],[933,149],'#B6B6B6',1.4,dash=[6,6]);line('expand2',[781,314],[933,414],'#B6B6B6',1.4,dash=[6,6])
+# attention matrix background cells
+for r in range(12):
+ for c in range(12):
+  fill=('#B1ADEB' if c<=r else '#F7F7F7') if r<6 else '#EDCDAB'
+  shape(f'cell_{r}_{c}',[1023+c*26.1667,150+r*26.1667,26.1667,26.1667],fill,'#D7D7D7',.65,role='background')
+shape('matrix_border',[1023,150,314,314],None,'#777777',2,role='background')
+line('matrix_v',[1180,150],[1180,464],'#777777',2);line('matrix_h',[1023,307],[1337,307],'#777777',2)
+text('masktitle','Attention Mask',[1078,7,230,34],25,gray,bold=True,align='center')
+text('keys','Keys (K)',[1133,62,130,25],18,bold=True)
+asset('diagonal_mask_labels',[1024,115,310,34],True)
+for id,txt,box,c in [('kar','K',[1087,80,18,23],blue),('kdm','K',[1243,80,18,23],orange)]:
+ text(id,txt,box,15,c,bold=True);text(id+'sub','AR' if id=='kar' else 'DM',[box[0]+10,box[1]+10,24,14],9,c)
+for id,a,b in [('key_ar',[1027,107],[1177,107]),('key_dm',[1184,107],[1334,107]),('query_ar',[975,155],[975,303]),('query_dm',[975,312],[975,461])]:
+ line(id,a,b,'#AAAAAA',1,True);line(id+'reverse',b,a,'#AAAAAA',1,True,allow_overlap_with=[id],overlap_reason='Source double-headed axis arrow, two native arrows share shaft')
+text('queries','Queries (Q)',[872,289,122,28],20,bold=True,rotation=-90)
+for id,txt,x,y,col in [('qar','Q',947,226,blue),('qdm','Q',947,383,orange)]:
+ text(id,txt,[x,y,20,25],19,col,italic=True,rotation=-90);text(id+'sub','AR' if id=='qar' else 'DM',[x+1,y-14,23,15],10,col,bold=True,rotation=-90)
+# row labels (native components)
+for k,y in enumerate([154,310]):
+ text('rowv'+str(k),'v',[988,y,12,21],15,italic=True);text('rowvsub'+str(k),'1',[998,y+10,9,12],9);text('rowvsup'+str(k),'AR' if k==0 else 'DM',[997,y-3,22,12],9)
+for k,(txt,y) in enumerate([('⋯',181),('l',207),('⋯',234),('EOS',262),('BOG',289),('⋯',338),('s',362),('⋯',390),('a',417),('⋯',443)]):
+ text('row'+str(k),txt,[986,y,32,20],10 if txt in ['EOS','BOG'] else 15,italic=txt in ['l','s','a'])
+ if txt in ['l','s','a']:text('rowsub'+str(k),'1',[996,y+9,9,12],9)
+ if txt in ['s','a']:text('rowtilde'+str(k),'~',[988,y-5,12,12],10)
+for id,txt,box,c in [('causalmask','Causal\n(triangular)',[1054,210,95,39],blue),('zero','Masked\n(zero)',[1221,210,76,39],'#C0C0C0'),('fullleft','Full\nattend',[1065,367,78,40],'#AD5700'),('fullright','Full\nattend',[1222,367,78,40],'#AD5700')]:text(id,txt,box,15,c,bold=id!='zero',align='center',line_height=1)
+for id,y,fill,txt in [('legend_ar',482,'#B1ADEB','AR causal self-attention'),('legend_dm',508,'#EDCDAB','DM full attention')]:
+ shape(id,[1029,y,16,12],fill,'#DDDDDD',.7);text(id+'txt',txt,[1054,y-6,300,30],21)
+shape('tokenlegend',[95,573,1210,43],None,'#BFBFBF',1)
+text('tokensheading','Tokens:',[105,579,104,34],25,gray,bold=True,container='tokenlegend')
+for id,x,col,fill,txt,tx,tw in [('v',218,*cols[0][::-1],'Vision (AR)',262,140),('l',408,*cols[1][::-1],'Language',453,130),('sp',580,'#AAAAAA','#ECECEC','Special',625,97),('d',725,*cols[2][::-1],'Vision (DM)',769,152),('s',923,*cols[3][::-1],'Audio',968,86),('a',1055,*cols[4][::-1],'Action',1099,92),('n',1193,'#BBBBBB','#F4F4F4','Noisy',1237,66)]:
+ shape('legend_'+id,[x,582,38,25],fill,col,1.2,'round_rect',radius=5,container='tokenlegend',**({'dash':[5,5]} if id=='n' else {}));text('legend_txt'+id,txt,[tx,578,tw,36],25,container='tokenlegend')
+s=dict(version=1,slides=[dict(id='page_001',width=1400,height=625,source='pages/page_001/source.png',background='#FFFFFF',reviewed=True,notes='Adapted from NVIDIA et al., Cosmos 3: Omnimodal World Models for Physical AI, arXiv:2606.02800v4, Figure 5, p.11 (23 June 2026). CC BY 4.0 https://creativecommons.org/licenses/by/4.0/. Reconstruction changes typography and editable geometry; brace and diagonal labels remain local raster assets. No endorsement implied.',elements=E)])
+(j/'scene.json').write_text(json.dumps(s,indent=2))
+print(len(E))

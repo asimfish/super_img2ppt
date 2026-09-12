@@ -42,3 +42,11 @@ Real 3D Diffuser Actor raster-only reconstruction exposed blanket bold-italic ar
 and a Unicode superscript that selected an unrelated fallback face. No paper vector/text
 coordinates, author drawing code, TeX engine or third-party math implementation was imported.
 The new helper compiles explicit observed baselines and styles to existing native text objects.
+
+v0.3.6 region diagnostics and diagonal text support are independent extensions of this runtime.
+Source-only Cosmos 3 reconstruction exposed a 45-degree attention-header strip that v0.3.5
+could only retain as raster text. Native rotation reuses existing python-pptx/SVG transforms;
+formula parts share one explicit rotation anchor. PDF verification keeps the page-axis glyph
+bounds limitation visible instead of treating a rotated AABB as proof of exact containment.
+Repeated public-paper measurements (OpenVLA, Cosmos Policy) motivated explicit empty/clipped
+mask diagnostics. No figure-author code or upstream math/vision implementation was imported.

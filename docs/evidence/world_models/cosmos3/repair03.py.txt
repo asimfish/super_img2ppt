@@ -1,0 +1,8 @@
+import json
+p='/tmp/cosmos3-xNo4Kd/job/scene.json';s=json.load(open(p));E=s['slides'][0]['elements'];E[:]=[e for e in E if not e['id'].startswith(('f1','f2'))]
+z=max(e['z'] for e in E)+1
+for name,parts in [('f1',[('Attn(',181,14,False,278),('Q',215,14,True,278),('AR',225,9,False,286),(',',240,14,False,278),('K',248,14,True,278),('AR',258,9,False,286),(',',274,14,False,278),('V',282,14,True,278),('AR',292,9,False,286),(')',315,14,False,278)]),('f2',[('Attn(',507,14,False,278),('Q',546,14,True,278),('DM',559,9,False,286),(',',577,14,False,278),('[',585,14,False,278),('K',588,14,True,278),('AR',604,9,False,286),(';',617,14,False,278),('K',624,14,True,278),('DM',639,9,False,286),(']',654,14,False,278),(',',660,14,False,278),('[',668,14,False,278),('V',671,14,True,278),('AR',685,9,False,286),(';',700,14,False,278),('V',707,14,True,278),('DM',720,9,False,286),(']',735,14,False,278),(')',741,14,False,278)])]:
+ for i,(txt,x,sz,bold,y) in enumerate(parts):
+  # explicit source symbol offsets; ordinary script glyphs on lowered baseline
+  E.append(dict(id=name+'part'+str(i),kind='text',z=z,box=[x,y,38 if txt=='Attn(' else 22,19 if sz==14 else 12],text=txt,font_size=sz,font_family='Times New Roman',color='#111111',bold=bold,fit='strict',wrap=False,container='attention'));z+=1
+open(p,'w').write(json.dumps(s,indent=2))

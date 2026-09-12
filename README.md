@@ -7,7 +7,7 @@
 **Image → Editable PPTX · SVG · Scene JSON**
 
 [![Verify](https://github.com/asimfish/super_img2ppt/actions/workflows/verify.yml/badge.svg)](https://github.com/asimfish/super_img2ppt/actions/workflows/verify.yml)
-![Version](https://img.shields.io/badge/version-0.3.5-2563eb)
+![Version](https://img.shields.io/badge/version-0.3.6-2563eb)
 ![Python](https://img.shields.io/badge/python-3.11%2B-3776AB)
 [![License](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 
@@ -17,14 +17,50 @@
 
 一个 **Agent Skill + 本地 Python 运行时**：Agent 看图、纠正 OCR、理解结构；运行时测量真实字体、检查重叠、导出原生对象，再渲染 **实际 PPTX** 验收。适合论文架构图、流程图、训练曲线和图片版幻灯片。
 
-**新增 OpenVLA、ECoT、DexVLA 三张完整方法图：具身案例共六例，完整论文图画廊共十二例。**
-从机器人 VLA、三维动作扩散、视觉导航，到密集表格与训练曲线，均提供原图与实际 PPTX 对照。
-v0.3.5 新增公式部件排版：分别控制字重、斜体、上下标基线和标点；已回修 3D Diffuser Actor，剩余字形差异公开展示。
+**新增 2026 年 DreamZero、Cosmos Policy、Cosmos 3 三张完整图，论文画廊共十五例。**
+覆盖世界动作模型、视频模型控制与多模态世界模型；提供原图、实际 PPTX 渲染、可编辑文件和复建记录。
+v0.3.6 将斜排公式表头改为原生文字，并新增同坐标局部墨迹诊断，明确区分对齐与字形保真。
 
 ## 真实复杂图效果
 
 所有对照均为 **左：论文原图；右：实际 PPTX 经 LibreOffice 渲染**。点击图片查看原尺寸。
 保留完整图面板，没有只挑容易的局部。原生对象数量说明编辑边界；区域对比记录对齐和字形差异，两者分别报告。
+
+### 2026 具身与世界模型
+
+以下是截至 2026-09-12 核实的三个近期公开项目案例，使用固定论文版本；不作热度排名。原图只通过栅格像素与本地 OCR 解读，没有使用 PDF 文字/矢量坐标或作者绘图源码。完整面板均保留。
+
+#### DreamZero · 世界动作模型的训练与推理
+
+[![DreamZero 完整原图与实际 PPTX 对照](docs/previews/gallery/dreamzero.png)](docs/previews/gallery/dreamzero.png)
+
+**129 个原生对象，15 处局部图片。** 完整保留视频/动作输入、VAE、因果 DiT、KV Cache、动作执行和自回归反馈回路。文字、主要模块和直线可编辑；视频、噪声、机器人、动作示意及两条复杂弯曲连接保留为图片。原始构建保留字体替代 `review`；提示语字重、反馈标签字宽仍与源图不同。
+
+[下载 PPTX](examples/gallery/dreamzero/editable.pptx) · [SVG](examples/gallery/dreamzero/svg/page_001.svg) · [细节](docs/previews/gallery/dreamzero_detail.png) · [原图与报告](examples/gallery/dreamzero)
+
+<sub>“World Action Models are Zero-shot Policies”, Figure 4，arXiv 2602.15922v1，2026-02-17。[论文与作者](https://arxiv.org/abs/2602.15922v1) · [官方项目](https://dreamzero0.github.io/) · [CC BY 4.0 / 归属](examples/gallery/dreamzero/ATTRIBUTION.md)。</sub>
+
+#### Cosmos Policy · 条件序列、潜变量注入与预测目标
+
+[![Cosmos Policy 完整原图与实际 PPTX 对照](docs/previews/gallery/cosmos_policy.png)](docs/previews/gallery/cosmos_policy.png)
+
+**56 个原生对象，26 处相机、视频或潜变量图片。** 保留完整三行序列、条件/目标分区、状态与动作注入、未来状态与价值括号，文字与 `V(s′)` 可编辑。自动检查通过；小字字形仍有差异。独立局部诊断中，`V(s′)` 外缘差在 1 px 内，墨迹 IoU 仍只有 0.228，说明仅看外框不足以验收公式。此图不包含规划搜索算法。
+
+[下载 PPTX](examples/gallery/cosmos_policy/editable.pptx) · [SVG](examples/gallery/cosmos_policy/svg/page_001.svg) · [细节](docs/previews/gallery/cosmos_policy_detail.png) · [原图与报告](examples/gallery/cosmos_policy)
+
+<sub>Kim et al., “Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning”, Figure 2，arXiv 2601.16163v1，2026-01-22；[ICLR 2026](https://proceedings.iclr.cc/paper_files/paper/2026/hash/748becc400a57c0e31cfe6a2e7951467-Abstract-Conference.html)。[固定论文版本](https://arxiv.org/abs/2601.16163v1) · [CC BY 4.0 / 归属](examples/gallery/cosmos_policy/ATTRIBUTION.md)。</sub>
+
+#### Cosmos 3 · 双塔世界模型与完整注意力矩阵
+
+[![Cosmos 3 完整原图与实际 PPTX 对照](docs/previews/gallery/cosmos3.png)](docs/previews/gallery/cosmos3.png)
+
+**414 个原生对象，仅 1 处无文字曲线括号图片。** 完整保留两座 MoT 塔、五个编码器、共享注意力公式、144 格矩阵及图例。实测后删除整条斜排文字截图，新增 **32 个原生旋转文字部件**；上下标围绕共同锚点旋转。实际渲染无阻断错误，斜排字形边界仍明确要求人工复核，字体与字距未完全匹配源图。
+
+[下载 PPTX](examples/gallery/cosmos3/editable.pptx) · [SVG](examples/gallery/cosmos3/svg/page_001.svg) · [斜排公式细节](docs/previews/gallery/cosmos3_detail.png) · [原图与报告](examples/gallery/cosmos3) · [改动前后证据](docs/evidence/world_models/cosmos3/before_after_scenediff.json)
+
+<sub>NVIDIA et al., “Cosmos 3: Omnimodal World Models for Physical AI”, Figure 5，arXiv 2606.02800v4，2026-06-23（PDF 封面印 06-24）。[论文与作者](https://arxiv.org/abs/2606.02800v4) · [官方项目](https://research.nvidia.com/labs/cosmos-lab/cosmos3/) · [CC BY 4.0 / 归属](examples/gallery/cosmos3/ATTRIBUTION.md)。</sub>
+
+[本轮实测、改进与限制](docs/world_models.md) · [下载十五例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
 
 ### 具身智能与机器人
 
@@ -60,7 +96,7 @@ v0.3.5 新增公式部件排版：分别控制字重、斜体、上下标基线�
 
 <sub>Wen et al., “DexVLA: Vision-Language Model with Plug-In Diffusion Expert for General Robot Control”, CoRL 2025, Figure 2。[论文与作者](https://proceedings.mlr.press/v305/wen25b.html) · [CC BY 4.0 / 归属](examples/gallery/dexvla/ATTRIBUTION.md)。</sub>
 
-[新增三例与公式实测](docs/formula_gallery.md) · [下载十二例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
+[新增三例与公式实测](docs/formula_gallery.md) · [下载十五例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
 
 #### RT-2 · 视觉—语言—动作模型
 
@@ -98,7 +134,7 @@ v0.3.5 新增公式部件排版：分别控制字重、斜体、上下标基线�
 
 <sub>改编自 Shah et al., “ViNT: A Foundation Model for Visual Navigation”, CoRL 2023, Figure 2。[论文与作者](https://proceedings.mlr.press/v229/shah23a.html) · [CC BY 4.0 / 归属](examples/gallery/vint/ATTRIBUTION.md)。</sub>
 
-[具身案例测试与复建记录](docs/embodied_figures.md) · [下载十二例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
+[具身案例测试与复建记录](docs/embodied_figures.md) · [下载十五例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
 
 ### Griffin · 数据库表格到图模型
 
@@ -136,7 +172,7 @@ v0.3.5 新增公式部件排版：分别控制字重、斜体、上下标基线�
 
 <sub>改编自 Poli et al., “Hyena Hierarchy: Towards Larger Convolutional Language Models”, ICML 2023, Figure 1。[论文与作者](https://proceedings.mlr.press/v202/poli23a.html) · [CC BY 4.0 / 归属](examples/gallery/hyena/ATTRIBUTION.md)。</sub>
 
-[本轮完整测量、失败与修复证据](docs/gallery_extension.md) · [下载当前十二例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
+[本轮完整测量、失败与修复证据](docs/gallery_extension.md) · [下载当前十五例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
 
 ### GaLore · 四面板训练曲线
 
@@ -179,6 +215,20 @@ v0.3.5 新增公式部件排版：分别控制字重、斜体、上下标基线�
 GaLore 和 Mamba-2 的部分原保留区域曾在调整期间被查看，因此不能作为盲测；Mamba-2 还记录了一处超过三次修复预算的偏差。原始记录和失败结果均保留。不同案例的掩码与区域不同，不合并成“转换准确率”。
 
 ## 把案例反馈变成系统能力
+
+### 斜排公式保持共同旋转中心；局部对比同时检查墨迹
+
+`compose-math` 新增整体 `rotation`：先测量各部件，再围绕同一个 `origin` 旋转。Cosmos 3 的 12 个斜排表头由 32 个原生文字部件组成，替换了旧文字图片条；这是编辑能力的提升，字体近似仍然公开。自动诊断会排除只落在斜框外接矩形内的邻近文字，斜边精确包容性保留人工复核提示。
+
+新增 `compare-roi` 在**相同分辨率、相同坐标**比较颜色墨迹，记录外缘偏差与掩码 IoU，保存裁片和掩码。它拒绝尺寸不一致的输入，对空掩码、触边截断明确标记，不会把相同外框判成字体一致，也不自动给出保真 PASS。
+
+```bash
+uv run super-img2ppt compare-roi source.png actual.png \
+  --roi 1095 439 65 31 --color '#000000' --tolerance 149 \
+  --out output/value_roi_01
+```
+
+[斜排文字与公式](skills/super-img2ppt/references/diagonal_text.md) · [局部诊断用法](skills/super-img2ppt/references/regions.md) · [独立实测与失败记录](docs/world_models.md)
 
 ### 公式保持逐符号样式与上下标关系
 

@@ -1,0 +1,65 @@
+"""Archive reviewed independent robotics cases; keep scripts as audit text."""
+import hashlib
+import json
+import shutil
+import sys
+from collections import Counter
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+WORK = Path(__file__).parent
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+for case in json.loads((WORK / "cases.json").read_text()):
+    name = case["id"]
+    if sys.argv[1:] and name not in sys.argv[1:]:
+        continue
+    base, build = Path(case["base"]), Path(case["build"])
+    dest = ROOT / "examples/gallery" / name
+    evidence = ROOT / "docs/evidence/world_models" / name
+    dest.mkdir(parents=True, exist_ok=False)
+    evidence.mkdir(parents=True, exist_ok=False)
+    for filename in ("editable.pptx", "scene.resolved.json", "fonts.json", "validation.json"):
+        shutil.copy2(build / filename, dest / filename)
+    for folder in ("assets", "svg"):
+        shutil.copytree(build / folder, dest / folder)
+    for source, target in ((case["source"], "source.png"), (case["actual"], "actual.png"), (str(build / "render/editable.pdf"), "actual.pdf")):
+        shutil.copy2(source, dest / target)
+    shutil.copy2(case["attribution"], dest / "ATTRIBUTION.md")
+    report = Path(case.get("report", str(base / "REPORT.md")))
+    shutil.copy2(report, dest / "REPORT.md")
+    shutil.copy2(base / "provenance.json", dest / "provenance.json")
+    for path in base.iterdir():
+        if path.is_file() and path.suffix in {".json", ".md", ".py", ".sh"}:
+            suffix = ".txt" if path.suffix in {".py", ".sh"} else ""
+            shutil.copy2(path, evidence / (path.name + suffix))
+    for folder in case.get("evidence_folders", []):
+        shutil.copytree(base / folder, evidence / folder)
+        for path in (evidence / folder).rglob("*"):
+            if path.suffix in {".py", ".sh"}:
+                path.rename(path.with_name(path.name + ".txt"))
+    for path in base.rglob("validation.json"):
+        if path.is_relative_to(build):
+            continue
+        target = evidence / "earlier" / path.relative_to(base)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(path, target)
+    for filename in case.get("extra_evidence", []):
+        path = Path(filename)
+        shutil.copy2(path, evidence / path.name)
+    shutil.copy2(report, evidence / "REPORT.md")
+    scene = json.loads((dest / "scene.resolved.json").read_text())
+    elements = scene["slides"][0]["elements"]
+    counts = Counter(element["kind"] for element in elements)
+    manifest = {
+        "runtime": "0.3.6", "paper": case["paper"], "figure": case["figure"],
+        "source_sha256": sha(dest / "source.png"), "pptx_sha256": sha(dest / "editable.pptx"),
+        "actual_sha256": sha(dest / "actual.png"), "original_build": str(build),
+        "native_counts": dict(counts), "actual_preview": "actual.png",
+        "visual_fidelity": "Manually inspected complete source and actual render; see report for differences. No blind accuracy claim.",
+        "rasterization": case["rasterization"],
+    }
+    (dest / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+    print(name, dict(counts))

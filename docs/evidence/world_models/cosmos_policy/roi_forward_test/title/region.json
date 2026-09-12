@@ -1,0 +1,50 @@
+{
+  "status": "review",
+  "source_sha256": "302976e126e632477599a48edba30bb8e0632a7aa0d50dd753758b96b803a960",
+  "actual_sha256": "0a0f5e449223a9b9689a8000a6829676a3d9e5262107b341cbe96d9f7097179f",
+  "roi": [
+    160,
+    0,
+    295,
+    33
+  ],
+  "canvas_size": [
+    1195,
+    476
+  ],
+  "mask_color": "#000000",
+  "mask_tolerance": 149,
+  "mask_rule": "Every RGB channel differs from the selected color by at most tolerance",
+  "source_pixels": 1686,
+  "actual_pixels": 1593,
+  "source_ink_box": [
+    168,
+    9,
+    438,
+    30
+  ],
+  "actual_ink_box": [
+    168,
+    9,
+    437,
+    31
+  ],
+  "source_touches_roi": [],
+  "actual_touches_roi": [],
+  "edge_metrics_valid": true,
+  "edge_delta_px": [
+    0,
+    0,
+    -1,
+    1
+  ],
+  "mask_iou": 0.34716516023007393,
+  "issues": [],
+  "limits": [
+    "ROI and color must isolate the intended ink; nearby same-color geometry can contaminate the mask.",
+    "Boundary contact invalidates complete-ink edges; any IoU still describes only the cropped mask.",
+    "Equal extrema do not prove equal glyphs; no aggregate or automatic source-fidelity pass.",
+    "Caller must supply the actual PPTX render; this command cannot attest its origin."
+  ],
+  "normalization": "EXIF orientation and alpha-on-white only; no resizing or registration"
+}

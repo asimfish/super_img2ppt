@@ -1,0 +1,8 @@
+import json
+from pathlib import Path
+p=Path(__file__).parent/'job/scene.json'; s=json.loads(p.read_text())
+for e in s['slides'][0]['elements']:
+    if e['id'] in ['train_causal','infer_causal']:
+        e['box'][0]-=12
+        e['box'][1]+=1
+p.write_text(json.dumps(s,indent=2))

@@ -55,7 +55,7 @@ def test_diagram_contract_rejects_silent_style_loss(scene):
     spec = diagram(scene)
     assert validate_scene(spec) == spec
     for element, changes in [
-        (0, {"rotation": 45}),
+        (0, {"rotation": 361}),
         (1, {"arrow": False}),
         (1, {"arrow_head": {"length": 300, "width": 20}}),
         (2, {"dash": [0, 4]}),

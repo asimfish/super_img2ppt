@@ -1,0 +1,213 @@
+{
+  "previous_cases": {
+    "count": 12,
+    "checked_files": 233,
+    "changed_files": 0,
+    "baseline": "cd9d263045f97d5c5ad488109f577ae83d32eb8d"
+  },
+  "gallery": [
+    {
+      "id": "dreamzero",
+      "dimensions": [
+        1888,
+        632
+      ],
+      "objects": 144
+    },
+    {
+      "id": "cosmos_policy",
+      "dimensions": [
+        1195,
+        476
+      ],
+      "objects": 82
+    },
+    {
+      "id": "cosmos3",
+      "dimensions": [
+        1400,
+        625
+      ],
+      "objects": 415
+    },
+    {
+      "id": "openvla",
+      "dimensions": [
+        1276,
+        477
+      ],
+      "objects": 83
+    },
+    {
+      "id": "ecot",
+      "dimensions": [
+        1587,
+        593
+      ],
+      "objects": 77
+    },
+    {
+      "id": "dexvla",
+      "dimensions": [
+        1605,
+        500
+      ],
+      "objects": 312
+    },
+    {
+      "id": "rt2",
+      "dimensions": [
+        1583,
+        580
+      ],
+      "objects": 141
+    },
+    {
+      "id": "diffuser_actor",
+      "dimensions": [
+        1589,
+        1052
+      ],
+      "objects": 321
+    },
+    {
+      "id": "vint",
+      "dimensions": [
+        1435,
+        436
+      ],
+      "objects": 118
+    },
+    {
+      "id": "griffin",
+      "dimensions": [
+        1460,
+        724
+      ],
+      "objects": 338
+    },
+    {
+      "id": "blip2",
+      "dimensions": [
+        1464,
+        303
+      ],
+      "objects": 139
+    },
+    {
+      "id": "hyena",
+      "dimensions": [
+        1518,
+        342
+      ],
+      "objects": 415
+    },
+    {
+      "id": "galore",
+      "dimensions": [
+        1170,
+        860
+      ],
+      "objects": 754
+    },
+    {
+      "id": "vision_mamba",
+      "dimensions": [
+        980,
+        258
+      ],
+      "objects": 161
+    },
+    {
+      "id": "mamba2",
+      "dimensions": [
+        1236,
+        440
+      ],
+      "objects": 475
+    }
+  ],
+  "bundle": {
+    "cases": 15,
+    "sha256": "18e2d265dc5ebd29056c647541659ceb2c8151f509981b211919ef4dc04ccd86",
+    "size": 21404172,
+    "deterministic": true,
+    "all_internal_and_external_sums_verified": true
+  },
+  "skill_package": {
+    "version": "0.3.6",
+    "sha256": "bd35a39ebe724905ec28c6e41f108e79833fafbf6b3d862818b082dca1170596",
+    "isolated_smoke": "package_smoke/result.json"
+  },
+  "checks": [
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "exit": 0,
+      "output": "All checks passed!\n"
+    },
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "exit": 0,
+      "output": "163 files already formatted\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/verify_skill.py"
+      ],
+      "exit": 0,
+      "output": "{\n  \"status\": \"pass\",\n  \"activation_cases\": 8,\n  \"problems\": [],\n  \"scope\": \"Static package checks; semantic review and forward tests are separate evidence\"\n}\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/build_capability_registry.py",
+        "--check"
+      ],
+      "exit": 0,
+      "output": "Capability registry is current\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "/Users/liyufeng/Code/cursur/skills/agent_meta/skill-quality-gate/scripts/audit_skill_governance.py",
+        "--repo",
+        "/Users/liyufeng/code/super_img2ppt",
+        "--json"
+      ],
+      "exit": 0,
+      "output": "{\n  \"verdict\": \"PASS\",\n  \"skills_checked\": [\n    \"super-img2ppt\"\n  ],\n  \"findings\": [],\n  \"semantic_review\": \"REQUIRED \u2014 deterministic checks do not prove behavior-description alignment\"\n}\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "/Users/liyufeng/Code/cursur/skills/agent_meta/skill-creator/scripts/quick_validate.py",
+        "skills/super-img2ppt"
+      ],
+      "exit": 0,
+      "output": "Skill is valid!\n"
+    }
+  ],
+  "tests": "119 passed; full_tests.log",
+  "semantic_review": {
+    "status": "pass_with_documented_limits",
+    "scope": "All-angle native text and common-pivot formula positions; bounds-aware ROI diagnostics; full-source gallery comparisons. No automatic typography inference or fidelity PASS. Diagonal center ownership excludes outside-quad decoy, exact slanted glyph containment explicitly review-only. Existing quarter-turn/text-mismatch/font checks remain covered. Fresh output, image/pixel/ROI size limits reused or explicit; no new subprocess/network/dependency for ROI. No font/PDF source-text extraction added.",
+    "evidence": [
+      "diagonal_red.log",
+      "diagonal_neighbor.log",
+      "cosmos_policy/roi_forward_test/CONCLUSION.md",
+      "cosmos3/before_after_scenediff.json",
+      "replay.json"
+    ]
+  },
+  "status": "pass"
+}

@@ -1,0 +1,59 @@
+[
+  {
+    "id": "dreamzero",
+    "base": "/tmp/dreamzero_forward_20260912",
+    "build": "/tmp/dreamzero_forward_20260912/job/build_05",
+    "source": "/tmp/dreamzero_forward_20260912/source.png",
+    "actual": "/tmp/dreamzero_forward_20260912/actual_source_width.png",
+    "attribution": "output/world_gallery_20260912/dreamzero_attribution.md",
+    "paper": "DreamZero / arXiv 2602.15922v1 / February 2026",
+    "figure": 4,
+    "rasterization": {
+      "engine": "pdfium",
+      "crop_to_source_size": true
+    }
+  },
+  {
+    "id": "cosmos_policy",
+    "base": "/tmp/cosmos-policy-1VceF4",
+    "build": "/tmp/cosmos-policy-1VceF4/build_04",
+    "source": "/tmp/cosmos-policy-1VceF4/source.png",
+    "actual": "/tmp/cosmos-policy-1VceF4/build_04/actual_sourcewidth.png",
+    "attribution": "output/world_gallery_20260912/cosmos_policy_attribution.md",
+    "paper": "Cosmos Policy / ICLR 2026 / arXiv 2601.16163v1",
+    "figure": 2,
+    "rasterization": {
+      "engine": "pdfium",
+      "crop_to_source_size": false
+    },
+    "evidence_folders": [
+      "roi_forward_test"
+    ]
+  },
+  {
+    "id": "cosmos3",
+    "base": "/tmp/cosmos3-xNo4Kd",
+    "build": "/tmp/cosmos3-xNo4Kd/build_06",
+    "source": "/tmp/cosmos3-xNo4Kd/source.png",
+    "actual": "/tmp/cosmos3-xNo4Kd/actualsourcewidth.png",
+    "attribution": "output/world_gallery_20260912/cosmos3_attribution.md",
+    "paper": "Cosmos 3 / arXiv 2606.02800v4 / June 2026",
+    "figure": 5,
+    "rasterization": {
+      "engine": "pdfium",
+      "crop_to_source_size": false
+    },
+    "evidence_folders": [
+      "diagonal_01",
+      "diagonal_02",
+      "diagonal_03",
+      "build_05_inspection",
+      "build_06_inspection"
+    ],
+    "extra_evidence": [
+      "/tmp/cosmos3-xNo4Kd/before_actualsourcewidth.png",
+      "/tmp/cosmos3-xNo4Kd/cover_date.png",
+      "/tmp/cosmos3-xNo4Kd/diagonal_after_detail.png"
+    ]
+  }
+]

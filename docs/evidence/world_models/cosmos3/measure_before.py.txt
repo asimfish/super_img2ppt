@@ -1,0 +1,17 @@
+from PIL import Image,ImageChops
+import pypdfium2 as pdf,json
+from pathlib import Path
+q=Path('/tmp/cosmos3-xNo4Kd');d=pdf.PdfDocument(q/'build_03/render/editable.pdf');p=d[0];a=p.render(scale=1400/p.get_width()).to_pil().convert('RGB');a.save(q/'actualsourcewidth.png');s=Image.open(q/'source.png').convert('RGB');c=Image.new('RGB',(1400,1250),'white');c.paste(s,(0,0));c.paste(a,(0,625));c.save(q/'comparison.png')
+regions={'ar_heading':(170,114,340,142),'layernorm':(185,173,320,200),'shared_title':(295,236,590,260),'formula_left':(176,279,324,302),'formula_right':(502,279,750,302),'mask_title':(1080,6,1297,42),'tokenlegend':(101,576,208,613)}
+res={}
+for name,b in regions.items():
+ si=s.crop(b);ai=a.crop(b);o=Image.new('RGB',(si.width,si.height*2+8),'white');o.paste(si,(0,0));o.paste(ai,(0,si.height+8));o.resize((o.width*3,o.height*3)).save(q/(name+'_detail.png'))
+ masks=[]
+ for im in [si,ai]:
+  m=Image.new('1',im.size);m.putdata([min(px)<150 for px in im.getdata()]);masks.append(m)
+ bounds=[]
+ for m in masks:
+  bounds.append(list(m.getbbox()) if m.getbbox() else None)
+ res[name]={'roi':b,'source_ink_bbox_local':bounds[0],'actual_ink_bbox_local':bounds[1],'edge_delta_source_px':[y-x for x,y in zip(*bounds)],'glyph_mask_IoU':sum(bool(x and y) for x,y in zip(masks[0].getdata(),masks[1].getdata()))/sum(bool(x or y) for x,y in zip(masks[0].getdata(),masks[1].getdata()))}
+(q/'measurements.json').write_text(json.dumps({'recipe':'No image registration, grayscale-like min RGB <150 threshold, fixed local regions; differences include font/antialiasing and geometry. Source pixel bounds half-open. Actual PDF scale=1400/page_width, PDFium output 1400×625 without resize.','regions':res},indent=2))
+print(json.dumps(res,indent=2))

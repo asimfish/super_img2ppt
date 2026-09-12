@@ -1,0 +1,62 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+___________ test_diagonal_text_is_native_and_schema_preserves_angle ____________
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10d526ff0>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-243/test_diagonal_text_is_native_a0')
+
+    def test_diagonal_text_is_native_and_schema_preserves_angle(scene,fonts,tmp_path):
+        spec=diagonal(scene)
+>       validate_scene(spec)
+
+tests/test_diagonal_text.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+
+    def validate_scene(scene: dict) -> dict:
+        _validate_finite(scene)
+        errors = sorted(Draft202012Validator(SCHEMA).iter_errors(scene), key=lambda e: str(e.path))
+        if errors:
+>           raise InputError(
+                "; ".join(f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5])
+            )
+E           super_img2ppt.scene.InputError: slides/0/elements/0/rotation: -45 is not one of [-90, 0, 90, 180, 270]
+
+skills/super-img2ppt/src/super_img2ppt/scene.py:237: InputError
+------------------------------ Captured log setup ------------------------------
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:63 'created' timestamp out of range; ignoring top bytes
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:63 'created' timestamp out of range; ignoring top bytes
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+____________ test_actual_diagonal_orientation_text_and_font_checks _____________
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10d526ff0>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-243/test_actual_diagonal_orientati0')
+
+    @pytest.mark.render
+    @pytest.mark.skipif(shutil.which('soffice') is None,reason='LibreOffice not installed')
+    def test_actual_diagonal_orientation_text_and_font_checks(scene,fonts,tmp_path):
+        spec=diagonal(scene)
+        layouts=layout_scene(spec,fonts);pptx=tmp_path/'diagonal.pptx';write_pptx(spec,layouts,tmp_path,pptx)
+        pdf=make_renderer().render(pptx,tmp_path/'render')
+        report=verify_rendered_text(pdf,spec,layouts)
+        assert report['status']=='review',report
+        assert report['text_boxes'][0]['matches'] is True
+>       assert report['text_boxes'][0]['width_measurement_axis']=='page_x'
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'width_measurement_axis'
+
+tests/test_diagonal_text.py:50: KeyError
+=========================== short test summary info ============================
+FAILED tests/test_diagonal_text.py::test_diagonal_text_is_native_and_schema_preserves_angle
+FAILED tests/test_diagonal_text.py::test_actual_diagonal_orientation_text_and_font_checks
+2 failed in 4.20s
