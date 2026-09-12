@@ -4,23 +4,27 @@ description: >-
   Reconstruct existing screenshots, slide images, PDFs, and image-based PPTX pages as editable
   PowerPoint and SVG files with measured fonts, explicit layer relationships, and real PPTX
   render checks. Use when the user wants image-to-editable conversion or needs to fix font,
-  wrapping, or overlap errors in a reconstruction, including optional academic restyling. Do not use for creating new presentations
+  wrapping, or overlap errors in a reconstruction, including optional semantic redrawing and style refinement. Do not use for creating new presentations
   from articles or outlines, ordinary image editing, or editing an already-native document
   when its original objects can be used directly.
 ---
 
 # Super Img2PPT
 
-Produce an editable reconstruction of an existing page. Preserve its content,
-coordinates, reading order, aspect ratio, and notes. Deliver PPTX plus editable SVG and the
+Produce an editable reconstruction of an existing page. In faithful conversion, preserve its
+content, coordinates, reading order, aspect ratio, and notes. Optional semantic redrawing may
+change local layout in a separate candidate while retaining the faithful baseline. Deliver PPTX plus editable SVG and the
 resolved scene JSON. Photos and complex artwork may remain separately movable raster assets;
 describe that boundary accurately.
 
 ## Optional visual refinement
 
-When the user explicitly requests a cleaner academic style or reduced AI-generated look,
-read [restyle.md](references/restyle.md). Use the independent `restyle` command to export
-both faithful and refined versions with a change audit. Default conversion stays faithful.
+When the user asks to reduce an AI-generated look, inspect concrete visual defects and read
+[redraw.md](references/redraw.md). This is semantic redrawing: preserve technical information
+while rebuilding inconsistent icons, typography and geometry in a separate candidate scene.
+Do not assume the user wants minimalism. For a request limited to palette, font or stroke
+changes, read [restyle.md](references/restyle.md) and use the independent `restyle` command.
+Default conversion stays faithful; both optional workflows retain the baseline.
 
 ## Run the local runtime
 

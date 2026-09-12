@@ -1,7 +1,8 @@
 # Optional academic restyling
 
-Activate only when the user asks for visual refinement, academic styling, or reducing an
-AI-generated look during conversion. Do not infer AI origin from appearance. Default conversion
+Activate when the user requests only visual style-field adjustments during conversion.
+For inconsistent artwork, distorted typography or an AI-generated look, first read
+[redraw.md](redraw.md); these usually require rebuilding elements, not a restyle plan. Do not infer AI origin from appearance. Default conversion
 remains faithful. No detection or detector-evasion claims.
 
 Inspect the source and reconstruct a faithful scene first. Inventory labels, numbers,

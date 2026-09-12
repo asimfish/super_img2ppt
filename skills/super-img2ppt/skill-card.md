@@ -1,6 +1,6 @@
 # Super Img2PPT capability card
 
-Owner: super_img2ppt contributors. Version: 0.3.8. Risk: scoped_change.
+Owner: super_img2ppt contributors. Version: 0.3.9. Risk: scoped_change.
 Canonical owner: this repository's `skills/super-img2ppt`.
 
 Reads: user-selected image/PDF/PPTX files; scene JSON and relative local assets; installed font
@@ -86,3 +86,11 @@ Reads an explicit bounded local style plan; writes portable baseline/refined sce
 assets, dual exports and per-field audit. Default build is unchanged. No AI classification,
 network or credential behavior. Rich text, content, geometry, image paths and groups cannot
 be patched. Semantic color selection still requires visual judgment.
+
+## Semantic redrawing workflow
+
+Opt-in agent-authored candidate scene can replace inconsistent illustrative icons with native
+geometry and revise typography/local spacing while preserving content and diagram meaning.
+Uses the existing check/build runtime; no automatic redraw CLI, network or extra executable.
+Faithful baseline is retained. Region mapping and content coverage require explicit agent
+review; static checks do not prove semantic equivalence or aesthetic improvement.

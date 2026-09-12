@@ -50,6 +50,11 @@
       "id": "ai_detection",
       "prompt": "判断这张照片是不是 AI 生成的，不需要转换文件。",
       "should_activate": false
+    },
+    {
+      "id": "semantic_redraw",
+      "prompt": "不是简洁，保留信息丰富程度，把这张图里不自然的图标和文字重新绘制，转成可编辑。",
+      "should_activate": true
     }
   ]
 }
