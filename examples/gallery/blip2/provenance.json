@@ -1,0 +1,50 @@
+{
+  "paper": "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models",
+  "authors": [
+    "Junnan Li",
+    "Dongxu Li",
+    "Silvio Savarese",
+    "Steven Hoi"
+  ],
+  "publication": "ICML 2023, PMLR 202:19730\u201319742",
+  "url": "https://proceedings.mlr.press/v202/li23q.html",
+  "pdf_url": "https://proceedings.mlr.press/v202/li23q/li23q.pdf",
+  "license": "CC BY 4.0",
+  "license_evidence": "https://proceedings.mlr.press/pmlr-license-agreement.html",
+  "license_evidence_scope": "Publisher publication agreement grants CC BY 4.0; paper first page says Copyright 2023 by authors.",
+  "figure": 2,
+  "page_1based": 3,
+  "rasterizer": "pypdfium2; render(scale=3), no PDF text/vector coordinate extraction",
+  "crop_xyxy": [
+    164,
+    204,
+    1628,
+    507
+  ],
+  "source_dimensions": [
+    1464,
+    303
+  ],
+  "raster_crops": {
+    "cat": [
+      4,
+      104,
+      121,
+      120
+    ],
+    "snowflake": [
+      157,
+      110,
+      22,
+      21
+    ]
+  },
+  "changes": "Editable native geometry/text reconstruction; crop of entire figure excluding caption. Photo and snowflake remain image assets.",
+  "hashes": {
+    "paper.pdf": "d59913d16edf1dc7e661ca3510c6efaa2b001146840d2e464a7fde980d088dd2",
+    "source.png": "ac829affd7b3cc5eff44cf91173dfa5994499e31d66a8848db44b45d9072a5a8",
+    "page3-full.png": "8382a54baa4a82ef863e0c343c8b07ae31641cf35fd53406d2a1451897249558",
+    "publisher.html": "59194cd169cd70a9629710ccf97692c1fd64913dd275f79e22cd4a81eb2d6d3b",
+    "license.html": "1c3bcff83dd07df3faa8abca10cd84f8c2b140b6fee4aa4e30f994369a8e4ea1"
+  }
+}

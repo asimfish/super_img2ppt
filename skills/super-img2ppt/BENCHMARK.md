@@ -1,5 +1,23 @@
 # Bounded reconstruction evidence
 
+## v0.3.4 additional complete paper figures
+
+BLIP-2 ICML2023 Figure2 adds137 native objects and two image crops; Hyena ICML2023
+Figure1 adds408 native objects and seven text-free heatmaps; relational-database Griffin
+ICML2025 Figure1 adds338 native objects with no visible raster. All full panels are
+retained. Frozen dev/heldout results are BLIP-2 3/8 and zero of three valid heldout regions
+plus one invalid white-text mask; Hyena 2/8 and0/4; Griffin5/8 and0/4. The invalid BLIP-2
+ROI is retained as invalid, not counted as a valid accuracy sample. No post-heldout scene
+repairs. Parent feedback before freeze repaired Hyena stem centers/overlap declarations
+and Griffin crop/style details. These remain source-fidelity failures, not universal accuracy.
+
+Griffin established a runtime false mismatch: the same actual PDF contains visible line-end
+hyphens, while PDFium returns U+0002/U+FFFE. The explicit IsHyphen flag restores only
+verified sentinels. Two real-render regression cases fail before the fix and pass afterward;
+missing text and unconfirmed marker cases still fail. PDF pixels are unchanged by this
+validation-only correction. Full raw evidence, parent replays and final checks are in the
+owning repository docs/gallery_extension.md and docs/evidence/gallery_extension.
+
 ## v0.3.3 reusable curve tracing and public ICML figures
 
 Three independent pixel-only reconstructions retain complete GaLore Figure 6 (753 native

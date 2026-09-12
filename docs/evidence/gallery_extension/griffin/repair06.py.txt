@@ -1,0 +1,11 @@
+import json
+from pathlib import Path
+D=Path('/tmp/griffin-forward-0912');s=json.loads((D/'scene.json').read_text())
+for e in s['slides'][0]['elements']:
+ id=e['id']
+ if id in ['header0t','header1t','header2t']:e['box'][0]-=.5;e['box'][1]-=.5
+ if id in ['encoderlabel','lenct']:e['box'][1]-=1
+ if id=='task':
+  e.pop('text');e['runs']=[{'text':'Task:','bold':True,'color':'#FF0000'},{'text':' What’s the rating of a given purchase record?'}]
+ if id=='sample_product_1_0':e['fill']='#F6C59F'
+(D/'scene.json').write_text(json.dumps(s,indent=2))

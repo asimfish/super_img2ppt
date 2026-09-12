@@ -1,0 +1,16 @@
+import sys,json,hashlib
+from pathlib import Path
+
+from PIL import Image,ImageChops
+D=Path(__file__).parent;build=sys.argv[1];split=sys.argv[2];c=json.loads((D/'roi-contract.json').read_text())
+if split=='heldout':
+ assert (D/'FROZEN.json').exists()
+ f=json.loads((D/'FROZEN.json').read_text())
+ for p,h in f.items():assert hashlib.sha256((D/p).read_bytes()).hexdigest()==h,p
+s=Image.open(D/'source.png').convert('RGB');r=Image.open(D/build/'render/source-width.png').convert('RGB');out=[]
+for z in c['regions']:
+ if z['split']!=split:continue
+ def mask(im):
+  im=im.crop(z['box']);p=Image.new('1',im.size);p.putdata([max(v)<180 for v in im.getdata()]);return p
+ a=mask(s);b=mask(r);A=list(a.getbbox() or [0]*4);B=list(b.getbbox() or [0]*4);edge=max(abs(v-w) for v,w in zip(A,B));iou=sum(bool(v) for v in ImageChops.logical_and(a,b).getdata())/max(1,sum(bool(v) for v in ImageChops.logical_or(a,b).getdata()));out.append(dict(**z,source_ink_bbox=A,render_ink_bbox=B,max_edge_error_px=edge,unregistered_iou=iou,joint_pass=edge<=4 and iou>=.7))
+p=D/(build+'-'+split+'-metrics.json');p.write_text(json.dumps(out,indent=2));print(json.dumps(out,indent=2))

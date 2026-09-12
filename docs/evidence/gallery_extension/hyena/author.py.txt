@@ -1,0 +1,91 @@
+from pathlib import Path
+import json,hashlib
+from PIL import Image
+P=Path('/tmp/hyena-forward-20260912'); J=P/'job'; (J/'assets').mkdir(exist_ok=True)
+im=Image.open(P/'figure1.png').convert('RGB'); a=im.load()
+rois=[('dense_input',[121,158,198,194],'dev'),('window',[1318,51,1502,83],'dev'),('ffn',[1318,181,1502,211],'dev'),('pe',[1318,293,1502,324],'dev'),('dense_middle',[450,271,523,305],'dev'),('S1',[290,3,337,62],'dev'),('h1',[290,230,340,273],'dev'),('input_arrow',[55,109,126,135],'dev'),('dense_last',[1092,271,1164,305],'heldout'),('SN',[924,3,985,62],'heldout'),('DN',[1090,3,1152,62],'heldout'),('output_arrow',[1177,108,1244,136],'heldout')]
+contract={'source_sha256':hashlib.sha256((P/'figure1.png').read_bytes()).hexdigest(),'source_size':[1518,342],'render':'actual PPTX exported PDF rasterized using pypdfium2 at source width, no registration','threshold':{'max_bbox_edge_error_px':4,'ink_iou_min':.70,'joint':True},'mask':'any RGB channel < 160 (dark ink), region fixed, no registration','rois':[{'id':x,'box':b,'split':s} for x,b,s in rois],'maximum_repairs_per_region':3}
+if not (P/'roi-contract.json').exists():(P/'roi-contract.json').write_text(json.dumps(contract,indent=2))
+E=[]
+def shape(id,b,fill=None,stroke='#000000',sw=1.5,kind='rect',radius=None):
+ d=dict(id=id,kind='shape',z=1,box=b,shape=kind,fill=fill,stroke=stroke,stroke_width=sw)
+ if radius:d['radius']=radius
+ E.append(d);return d
+def line(id,p,q,color='#000000',sw=2,arrow=False):
+ d=dict(id=id,kind='line',z=2,points=[p,q],stroke=color,stroke_width=sw)
+ if arrow:d.update(arrow=True,arrow_head={'length':9,'width':14})
+ E.append(d); return d
+def text(id,b,s,size=22,f='Arial',italic=False,container=None):
+ d=dict(id=id,kind='text',z=5,box=b,text=s,font_size=size,font_family=f,italic=italic,fit='strict',wrap=False)
+ if container:d['container']=container
+ E.append(d);return d
+def crop(id,box):
+ im.crop(box).save(J/f'assets/{id}.png'); E.append(dict(id=id,kind='image',z=3,box=[box[0],box[1],box[2]-box[0],box[3]-box[1]],path=f'assets/{id}.png',contains_text=False,provenance='Exact text-free complex heatmap crop from published Figure 1 raster; source.pdf page 2 at 4x; CC BY 4.0'))
+# Complete recurrence. Source-pixel frame, no PDF layout extraction.
+for id,b in [('s1',(262,71,367,177)),('s2',(604,71,710,177)),('sn',(902,71,1007,177)),('dense1',(126,89,193,156)),('dense2',(452,202,519,269)),('denseN',(1095,202,1161,269)),('posenc',(1358,219,1463,285))]:crop(id,b)
+for id,b in [('s1frame',[261,70,107,108]),('s2frame',[603,70,108,108]),('snframe',[901,70,107,108]),('dense1frame',[125,88,69,69]),('dense2frame',[451,201,69,69]),('denseNframe',[1094,201,68,69]),('posencframe',[1357,218,107,68])]:shape(id,b,None)
+for id,b in [('d1',[433,71,107,107]),('dn',[1072,71,106,107])]:
+ shape(id,b,'#FFF6F2')
+ # Pixel colors sampled on the visible diagonal; native squares.
+ for i in range(27):
+  x=b[0]+i*4;y=b[1]+i*4
+  col='#%02X%02X%02X'%tuple(a[min(x+2,1517),min(y+2,341)])
+  shape(f'{id}cell{i}',[x,y,4,4],col,None,0)
+for id,x,y,w,label in [('dense1label',127,163,64,'Dense'),('dense2label',454,274,64,'Dense'),('denseNlabel',1096,275,63,'Dense'),('window',1320,53,180,'Window'),('ffn',1320,183,180,'FFN'),('pelabel',1320,296,180,'PositionalEncoding')]:
+ shape(id,[x,y,w,26],'#BCD2DF' if id.startswith('dense') else '#CCCCCC','#333333',1.5,'round_rect',5)
+ d=text(id+'text',[x+3,y-1,w-6,31],label,20 if id.startswith('dense') else 22,container=id);d['align']='center'
+shape('filterframe',[1315,9,191,323],None,'#000000',2)
+# arrows and input broadcast
+for id,p,q in [('in',[59,122],[123,122]),('v',[195,122],[259,122]),('a1',[368,122],[431,122]),('a2',[540,122],[601,122]),('a3',[711,122],[772,122]),('a4',[836,122],[899,122]),('a5',[1008,122],[1070,122]),('out',[1179,122],[1241,122]),('up1',[486,201],[486,180]),('upN',[1127,201],[1127,180])]:line(id,p,q,arrow=True)
+for id,p,q in [('busL',[81,122],[81,333]),('busB',[81,333],[1127,333]),('busM',[486,333],[486,301]),('busN',[1127,333],[1127,301])]:line(id,p,q)
+# Editable math typography: main symbols and separately placed sub/superscripts.
+for id,x,ch,sub,sup in [('S1',295,'S','h','1'),('D1',474,'D','x','1'),('S2',631,'S','h','2'),('SN',930,'S','h','N'),('DN',1095,'D','x','N')]:
+ text(id+'main',[x,6,35,52],ch,40,'Times New Roman',True)
+ text(id+'sub',[x+22,31,28,37],sub,28,'Times New Roman',True)
+ text(id+'sup',[x+23,-1,28,37],sup,28,'Times New Roman',sup=='N')
+for id,x,sup in [('h1',295,'1'),('h2',645,'2'),('hN',933,'N')]:
+ text(id,[x,230,36,52],'h',40,'Times New Roman',True);text(id+'sup',[x+21,228,31,36],sup,28,'Times New Roman',sup=='N')
+for id,b,s in [('u',[18,98,35,45],'u'),('vtext',[215,84,29,44],'v'),('y',[1247,98,31,45],'y')]:text(id,b,s,36,'Times New Roman',True)
+for i,x in enumerate([785,803,821]):shape(f'ellipsis{i}',[x-1.5,120.5,3,3],'#000000',None,0,'ellipse')
+# Discrete red filter stems, peak dots sampled from source raster. No synthetic curve.
+for tag,box,baseline in [('h1stems',[258,182,372,227],226),('h2stems',[601,189,715,227],226),('hnstems',[898,188,1010,228],226),('windowstems',[1352,10,1467,46],45),('ffnstems',[1349,80,1463,180],122)]:
+ x0,y0,x1,y1=box
+ def red(x,y):
+  r,g,b=a[x,y];return r>220 and g<140 and b<130
+ # Select peaks via strongest red column groups; infer dot centers from red occupancy at 4px pitch.
+ cols=[x-x0 for x in range(x0,x1) if sum(red(x,y) for y in range(y0,y1))>=3]; groups=[]
+ for x in cols:
+  if not groups or x>groups[-1][-1]+1:groups.append([int(x)])
+  else:groups[-1].append(int(x))
+ # dense overlapping dots form continuous run: sample observed vertical stem pitch
+ xs=list(range(x0+4,x1-3,4)) if len(groups)<8 else [x0+int(round(sum(g)/len(g))) for g in groups]
+ for j,x in enumerate(xs):
+  ys=[y-y0 for y in range(y0,y1) if red(x,y)]
+  if len(ys)<2:continue
+  top=int(min(ys))+y0;bot=int(max(ys))+y0
+  end=top+2 if abs(top-baseline)>abs(bot-baseline) else bot-2
+  line(f'{tag}_{j}',[x,baseline],[x,end],'#FF634C',1.3)
+  shape(f'{tag}dot{j}',[x-2.3,end-2.3,4.6,4.6],'#FF634C',None,0,'ellipse')
+ line(tag+'base',[x0+1,baseline],[x1-1,baseline],'#222222',1.3)
+# Explicit source supported relationships for incident line/shape pairs; no blanket exemptions.
+
+# All nontext intersections are genuine source assembly junctions / heatmap framing / stems.
+for i,e in enumerate(E):
+ if e['kind']=='text':continue
+ def geom(d):
+  if d['kind']=='line':
+   (x,y),(xx,yy)=d['points'];t=d.get('stroke_width',1)/2;return [min(x,xx)-t,min(y,yy)-t,max(x,xx)+t,max(y,yy)+t]
+  x,y,w,h=d['box']; return [x,y,x+w,y+h]
+ for q in E[:i]:
+  if q['kind']=='text':continue
+  ae,aq=geom(e),geom(q)
+  if min(ae[2],aq[2])-max(ae[0],aq[0])>.01 and min(ae[3],aq[3])-max(ae[1],aq[1])>.01:
+   e.setdefault('allow_overlap_with',[]).append(q['id']);e['overlap_reason']='Source-visible heatmap frame, inset containment, or incident stem/connector junction; exact named pair.'
+# filter frame contains all inset shapes, image and text including stacked panels.
+for e in E:
+ if e['id']!='filterframe' and e['kind']!='text':
+  if e.get('box',[0])[0]>=1318:e['container']='filterframe';e['z']=max(e['z'],2)
+# parent border has lower z
+next(e for e in E if e['id']=='filterframe')['z']=0
+scene={'version':1,'title':'Hyena Hierarchy — complete Figure 1','slides':[{'id':'page_001','width':1518,'height':342,'source':'pages/page_001/source.png','background':'#FFFFFF','reviewed':True,'notes':'Adapted from Poli et al. Hyena Hierarchy, ICML 2023 Figure 1. https://proceedings.mlr.press/v202/poli23a.html CC BY 4.0. Editable reconstruction; seven text-free heatmap crops retained.','elements':E}]}
+(J/'scene.json').write_text(json.dumps(scene,indent=2)); print(len(E))

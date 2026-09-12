@@ -1,0 +1,38 @@
+{
+  "same_pdf_sha256": "80e5d888cdf6bde5d6e189181a8eb9d480d4d00eb553b8d0326dbb3843b99ed7",
+  "before_status": "fail",
+  "before_codes": [
+    "rendered_text_mismatch",
+    "rendered_text_mismatch"
+  ],
+  "after_status": "pass",
+  "after_codes": [],
+  "restored": [
+    {
+      "slide": "page_001",
+      "element": "upt0",
+      "expected": "User-",
+      "rendered": "User\u0002",
+      "rendered_normalized": "User-",
+      "matches": true,
+      "actual_fonts": [
+        "TimesNewRomanPS-BoldMT"
+      ],
+      "measured_ink_width_px": 30.0,
+      "rendered_ink_width_px": 29.103
+    },
+    {
+      "slide": "page_001",
+      "element": "lcrosst0",
+      "expected": "Cross-",
+      "rendered": "Cross\u0002",
+      "rendered_normalized": "Cross-",
+      "matches": true,
+      "actual_fonts": [
+        "TimesNewRomanPSMT"
+      ],
+      "measured_ink_width_px": 35.75,
+      "rendered_ink_width_px": 35.575
+    }
+  ]
+}

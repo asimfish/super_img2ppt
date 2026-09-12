@@ -1,0 +1,137 @@
+{
+  "source_sha256": "abe6be7bcee73711844ca5565f40e578aef38b919bbced3038c87cb3225d2f58",
+  "source_size": [
+    1518,
+    342
+  ],
+  "render": "actual PPTX exported PDF rasterized using pypdfium2 at source width, no registration",
+  "threshold": {
+    "max_bbox_edge_error_px": 4,
+    "ink_iou_min": 0.7,
+    "joint": true
+  },
+  "mask": "any RGB channel < 160 (dark ink), region fixed, no registration",
+  "rois": [
+    {
+      "id": "dense_input",
+      "box": [
+        121,
+        158,
+        198,
+        194
+      ],
+      "split": "dev"
+    },
+    {
+      "id": "window",
+      "box": [
+        1318,
+        51,
+        1502,
+        83
+      ],
+      "split": "dev"
+    },
+    {
+      "id": "ffn",
+      "box": [
+        1318,
+        181,
+        1502,
+        211
+      ],
+      "split": "dev"
+    },
+    {
+      "id": "pe",
+      "box": [
+        1318,
+        293,
+        1502,
+        324
+      ],
+      "split": "dev"
+    },
+    {
+      "id": "dense_middle",
+      "box": [
+        450,
+        271,
+        523,
+        305
+      ],
+      "split": "dev"
+    },
+    {
+      "id": "S1",
+      "box": [
+        290,
+        3,
+        337,
+        62
+      ],
+      "split": "dev"
+    },
+    {
+      "id": "h1",
+      "box": [
+        290,
+        230,
+        340,
+        273
+      ],
+      "split": "dev"
+    },
+    {
+      "id": "input_arrow",
+      "box": [
+        55,
+        109,
+        126,
+        135
+      ],
+      "split": "dev"
+    },
+    {
+      "id": "dense_last",
+      "box": [
+        1092,
+        271,
+        1164,
+        305
+      ],
+      "split": "heldout"
+    },
+    {
+      "id": "SN",
+      "box": [
+        924,
+        3,
+        985,
+        62
+      ],
+      "split": "heldout"
+    },
+    {
+      "id": "DN",
+      "box": [
+        1090,
+        3,
+        1152,
+        62
+      ],
+      "split": "heldout"
+    },
+    {
+      "id": "output_arrow",
+      "box": [
+        1177,
+        108,
+        1244,
+        136
+      ],
+      "split": "heldout"
+    }
+  ],
+  "maximum_repairs_per_region": 3
+}

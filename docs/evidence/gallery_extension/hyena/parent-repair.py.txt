@@ -1,0 +1,39 @@
+from pathlib import Path
+from PIL import Image
+import json,math
+P=Path('/tmp/hyena-forward-20260912');p=P/'job/scene.json';d=json.loads(p.read_text());E=d['slides'][0]['elements']; E=[e for e in E if not e['id'].startswith('ffnstems')];a=Image.open(P/'figure1.png').load()
+# Each source stem has visibly constant pitch ~4.35px; lock each center using source red vertical column.
+for j in range(25):
+ x=1352.7+j*(1456.75-1352.7)/24;xx=round(x)
+ ys=[y for y in range(81,180) if a[xx,y][0]>220 and a[xx,y][1]<140 and a[xx,y][2]<130]
+ endpoint=min(ys)+2 if abs(min(ys)-122)>abs(max(ys)-122) else max(ys)-2
+ E.append(dict(id=f'ffnstems_{j}',kind='line',z=2,points=[[x,122],[x,endpoint]],stroke='#FF634C',stroke_width=1.3))
+ E.append(dict(id=f'ffnstemsdot{j}',kind='shape',z=2,box=[x-2.3,endpoint-2.3,4.6,4.6],shape='ellipse',fill='#FF634C',stroke=None,stroke_width=0))
+E.append(dict(id='ffnstemsbase',kind='line',z=2,points=[[1350,122],[1462,122]],stroke='#222222',stroke_width=1.3))
+D={e['id']:e for e in E}
+for e in E:e.pop('allow_overlap_with',None);e.pop('overlap_reason',None)
+def allow(a,b,reason):
+ e=D[a];e.setdefault('allow_overlap_with',[]).append(b);e['overlap_reason']=reason
+for id in ['s1','s2','sn','dense1','dense2','denseN','posenc']:
+ allow(id+'frame',id,'Source heatmap image lies inside its own native outline; no text in asset.')
+for e in E:
+ i=e['id']
+ if i.startswith('d1cell'):e['container']='d1';e['z']=2
+ if i.startswith('dncell'):e['container']='dn';e['z']=2
+ if i.startswith(('windowstems','ffnstems')):e['container']='filterframe';e['z']=2
+ for tag in ['h1stems','h2stems','hnstems','windowstems','ffnstems']:
+  if i.startswith(tag+'_'):
+   j=i[len(tag)+1:];allow(i,tag+'dot'+j,'Source-visible red stem ends at its matching round sample marker.');allow(i,tag+'base','Source-visible stem originates at its own horizontal baseline.')
+  if i.startswith(tag+'dot'):
+   j=int(i[len(tag)+3:]);prev=tag+'dot'+str(j-1)
+   if prev in D:allow(i,prev,'Adjacent source sample markers can touch at this densely spaced discrete stem plot.')
+   # dot can meet its own baseline for near-zero source stem
+   allow(i,tag+'base','Source dot is near or on its own stem baseline; only this same-plot named pair.')
+ if 'head' in i:
+  stem=i.split('head')[0];allow(i,stem,'Open source arrowhead joins its corresponding native shaft.')
+  if i.endswith('1'):allow(i,stem+'head0','Two arms meet at the same open source arrow tip.')
+for x,y in [('busL','in'),('busL','busB'),('busB','busM'),('busB','busN')]:allow(x,y,'Source broadcast branch has this visible incident T/elbow junction.')
+# Image frames and diagonal matrix outlines touch source input/output shafts at their endpoints.
+for x,y in [('in','dense1frame'),('v','dense1frame'),('a1','s1frame'),('a2','d1'),('a3','s2frame'),('a4','snframe'),('a5','snframe'),('out','dn'),('up1','dense2frame'),('upN','denseNframe'),('busM','dense2label'),('busN','denseNlabel')]:
+ allow(x,y,'Source connector attaches to this specific adjacent node outline.')
+d['slides'][0]['elements']=E;p.write_text(json.dumps(d,indent=2))

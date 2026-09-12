@@ -1,0 +1,17 @@
+from pathlib import Path
+import pypdfium2 as pdf,json,sys
+from PIL import Image
+r=Path('/tmp/blip2-gallery-ovi4ki');build=r/sys.argv[1]; split=sys.argv[2]
+if split=='heldout':
+ freeze=json.loads((r/'FINAL_FREEZE.json').read_text());import hashlib
+ for f,h in freeze['hashes'].items():assert hashlib.sha256((r/f).read_bytes()).hexdigest()==h
+p=pdf.PdfDocument(str(build/'render/editable.pdf'))[0];im=p.render(scale=1464/p.get_width()).to_pil().convert('RGB');im.save(build/'render/source-width.png');src=Image.open(r/'source.png').convert('RGB');res=[]
+for roi in json.loads((r/'roi-contract.json').read_text())['rois']:
+ if roi['split']!=split:continue
+ x,y,w,h=roi['box_xywh'];a=src.crop((x,y,x+w,y+h));b=im.crop((x,y,x+w,y+h))
+ def mask(a):return [min(c)>220 and max(c)-min(c)<30 if roi['white_ink'] else max(c)<150 for c in a.getdata()]
+ aa,bb=mask(a),mask(b)
+ def edges(a):
+  coords=[(i%w,i//w) for i,v in enumerate(a) if v];return [min(c[0] for c in coords),min(c[1] for c in coords),max(c[0] for c in coords)+1,max(c[1] for c in coords)+1] if coords else None
+ ea,eb=edges(aa),edges(bb);edge=max(abs(c-d) for c,d in zip(ea,eb)) if ea and eb else 999;iou=sum(c and d for c,d in zip(aa,bb))/max(sum(c or d for c,d in zip(aa,bb)),1);res.append(dict(id=roi['id'],source_edges=ea,actual_edges=eb,edge_px=edge,iou=iou,joint_pass=edge<=4 and iou>=.70))
+(build/f'{split}-metrics.json').write_text(json.dumps(res,indent=2));print(json.dumps(res,indent=2))

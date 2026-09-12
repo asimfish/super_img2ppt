@@ -1,0 +1,6 @@
+import json,hashlib,time
+from pathlib import Path
+r=Path('/tmp/blip2-gallery-ovi4ki')
+regions=[('qformer',[245,12,92,25]),('input_image',[10,65,110,30]),('feed_forward',[348,99,129,28]),('image_matching',[360,24,109,46]),('learned_queries',[265,246,81,47]),('mask_grid1',[938,82,113,113]),('encoder_arrow',[122,157,34,15]),('legend',[912,27,205,25]),('held_cross_attention',[347,148,134,27]),('held_input_text',[640,261,212,29]),('held_grid3',[1309,83,114,114]),('held_mask_title',[1092,205,168,42])]
+f={'frozen_at':time.time(),'source_sha256':hashlib.sha256((r/'source.png').read_bytes()).hexdigest(),'method':'At source width, RGB max<150 for black ink; feed_forward uses RGB min>220 and max-min<30 (white glyphs). Unregistered binary IoU; edge=max absolute difference of ink bounding box coordinates; empty mismatches fail. No registration.','thresholds':{'edge_px_max':4,'iou_min':.70},'rois':[{'id':n,'box_xywh':b,'split':'heldout' if n.startswith('held') else 'dev','white_ink':n=='feed_forward'} for n,b in regions]}
+(r/'roi-contract.json').write_text(json.dumps(f,indent=2)); (r/'roi-contract.sha256').write_text(hashlib.sha256((r/'roi-contract.json').read_bytes()).hexdigest())

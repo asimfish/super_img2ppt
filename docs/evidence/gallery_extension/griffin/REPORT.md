@@ -1,0 +1,27 @@
+# Griffin Figure 1 complete framework forward reconstruction
+
+Final candidate: `build06/`. Source: complete Figure 1 on page 3 of **Griffin: Towards a Graph-Centric Relational Database Foundation Model**, Yanbo Wang, Xiyuan Wang, Quan Gan, Minjie Wang, Qibin Yang, David Wipf, Muhan Zhang, ICML 2025, PMLR 267:64604–64627. https://proceedings.mlr.press/v267/wang25da.html . Official PDF link from that page: https://raw.githubusercontent.com/mlresearch/v267/main/assets/wang25da/wang25da.pdf . This is the relational database Griffin, not recurrent Griffin.
+
+Licensed source: CC BY 4.0, evidenced by PMLR publication agreement at https://proceedings.mlr.press/pmlr-license-agreement.html (archived locally), paragraphs 2–3. License link https://creativecommons.org/licenses/by/4.0/ . Attribution: adapted/reconstructed from Figure 1 of Wang et al. (2025), cited above; editable recreation changes typography, geometry, line rasterization, and highlight opacity approximation. Source authors retain copyright. Fonts are not redistributed or embedded.
+
+## Complete artifact
+
+`build06/editable.pptx`, `build06/svg/page_001.svg`, `build06/scene.resolved.json`, `build06/assets/`, `build06/fonts.json`, `build06/validation.json`, `build06/render/editable.pdf`, and `build06/render/source-width.png` (1460×724 actual-PPTX PDF raster). The asset directory contains the comparison source only; zero scene image elements. 338 native objects: 139 shapes, 139 text objects, 60 lines/arrows. Native table cells are independent shapes/text, not Excel-linked tables. All three raw tables, sampled tables and relation tags, masking/highlight, legend, encoder, cross-attention, decoder branches/labels, and MPNN graph retained.
+
+Source PDF was rasterized with Poppler at 216 DPI. Page raster is 1836×2376. Exact Pillow crop `(160,195,1620,919)` gives source.png 1460×724. Earlier `(160,195,1620,925)` included caption fragments and is preserved in source-v0-caption-fragments.png with roi-contract-v0.json; corrected source contract was frozen before successful render/metric feedback. Figure was visually authored from raster. No source PDF text/vector coordinate extraction or author drawing code used.
+
+## Validation and limits
+
+Overall runtime status remains **fail**, not passed: preflight and native-object checks pass; actual rendered-text check reports 2 hyphen decoding mismatches. PPTX XML preserves literal `User-` and `Cross-`; PDF extraction returns `User\u0002` and `Cross\u0002`. Actual raster visibly retains the small hyphens. build04 and build05 show reproduction before/after splitting semantic lines. Runtime was not changed. This is a runtime QA false-negative candidate with concrete evidence, not grounds to overwrite validation.
+
+Times New Roman regular/bold/italic/bold-italic resolved from installed fonts; fonts.json has file hashes and rights flags. Exact source font identity is inferred visually, not established. Mathematical subscript i uses editable Unicode subscript. Selected text baselines, table line weights, dotted path topology and translucent highlight details remain approximate. Price highlight uses sampled-looking solid peach fill instead of transparency. Complete native editability is not pixel-perfect fidelity.
+
+Frozen unregistered dark-ink ROI contract: 12 regions, 8 development / 4 heldout; maximum bounding ink edge deviation ≤4 source px AND pixel IoU≥0.70. Dark mask is max(R,G,B)<180; no registration. Table ROI metrics include grid and dark header fill, so header IoU does not alone prove text accuracy. Source-width PDF render avoids preview scaling. FROZEN.json fixed final source, metric script, scene, PPTX/SVG/PDF/PNG and validation hashes before heldout execution. No artifact edits after heldout reveal.
+
+Final dev 5/8 pass: Raw RDB .908, User header .918, sampled Rating .745, Cross-Attention .940, MPNN .848. Fail: User values .386, Unified Feature Encoder .534, legend .512. Heldout 0/4 pass: Purchase values .489, Product values .495, numeric decoder .180, graph .367. All final ROI bbox errors are ≤1 px, demonstrating that edge agreement alone overstates glyph/line match. Exact numbers and bounding boxes in build06-dev-metrics.json and build06-heldout-metrics.json. Keep these failures when presenting this example.
+
+Parent visually reviewed the first actual render before freeze and requested native red-bold Task label plus orange price-cell fill; both restored in final candidate. Final candidate rendered through LibreOffice/PDFium, with source-width raster from its actual PDF via Poppler. No PowerPoint or WPS verification performed.
+
+## Raw attempts and repair budget
+
+All commands/scripts, original/candidate scenes and build logs kept in this directory. Attempt01 rejected header arrow head too narrow for shaft; one repair. Attempt02 preflight exposed two-line variable-height table headers and narrow Product-Purchase tag. Attempt03 fixed table heights and first tag-width change; tag still failed. Attempt04 second tag-width/source-edge exemption fix produced first actual PPTX. Attempt05 targeted dev-measured text baselines/line spacing and split User-/Cross- semantic lines (hyphen extraction mismatch persisted). Attempt06 final small title/encoder/legend positioning plus parent-requested Task styling and price fill. Per affected region maximum 3 meaningful changes; failed candidates retained. User table repair includes header geometry then baseline correction (2); relation tag 2; major titles 2; encoder and legend 2; hyphen regions 1. No heldout feedback drove repairs.

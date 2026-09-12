@@ -1,0 +1,302 @@
+[
+  {
+    "id": "dense_input",
+    "box": [
+      121,
+      158,
+      198,
+      194
+    ],
+    "split": "dev",
+    "source_bbox": [
+      6,
+      4,
+      70,
+      31
+    ],
+    "actual_bbox": [
+      5,
+      4,
+      70,
+      31
+    ],
+    "max_edge_error_px": 1,
+    "ink_iou": 0.5444839857651246,
+    "pass_joint": false
+  },
+  {
+    "id": "window",
+    "box": [
+      1318,
+      51,
+      1502,
+      83
+    ],
+    "split": "dev",
+    "source_bbox": [
+      1,
+      1,
+      182,
+      31
+    ],
+    "actual_bbox": [
+      1,
+      1,
+      182,
+      31
+    ],
+    "max_edge_error_px": 0,
+    "ink_iou": 0.6840696117804551,
+    "pass_joint": false
+  },
+  {
+    "id": "ffn",
+    "box": [
+      1318,
+      181,
+      1502,
+      211
+    ],
+    "split": "dev",
+    "source_bbox": [
+      1,
+      1,
+      182,
+      28
+    ],
+    "actual_bbox": [
+      1,
+      1,
+      182,
+      28
+    ],
+    "max_edge_error_px": 0,
+    "ink_iou": 0.7263598326359832,
+    "pass_joint": true
+  },
+  {
+    "id": "pe",
+    "box": [
+      1318,
+      293,
+      1502,
+      324
+    ],
+    "split": "dev",
+    "source_bbox": [
+      1,
+      2,
+      182,
+      28
+    ],
+    "actual_bbox": [
+      1,
+      2,
+      182,
+      29
+    ],
+    "max_edge_error_px": 1,
+    "ink_iou": 0.5501113585746102,
+    "pass_joint": false
+  },
+  {
+    "id": "dense_middle",
+    "box": [
+      450,
+      271,
+      523,
+      305
+    ],
+    "split": "dev",
+    "source_bbox": [
+      3,
+      3,
+      67,
+      33
+    ],
+    "actual_bbox": [
+      3,
+      2,
+      68,
+      33
+    ],
+    "max_edge_error_px": 1,
+    "ink_iou": 0.48552338530066813,
+    "pass_joint": false
+  },
+  {
+    "id": "S1",
+    "box": [
+      290,
+      3,
+      337,
+      62
+    ],
+    "split": "dev",
+    "source_bbox": [
+      6,
+      8,
+      42,
+      52
+    ],
+    "actual_bbox": [
+      5,
+      8,
+      40,
+      51
+    ],
+    "max_edge_error_px": 2,
+    "ink_iou": 0.3419354838709677,
+    "pass_joint": false
+  },
+  {
+    "id": "h1",
+    "box": [
+      290,
+      230,
+      340,
+      273
+    ],
+    "split": "dev",
+    "source_bbox": [
+      7,
+      3,
+      39,
+      35
+    ],
+    "actual_bbox": [
+      7,
+      3,
+      37,
+      35
+    ],
+    "max_edge_error_px": 2,
+    "ink_iou": 0.4186046511627907,
+    "pass_joint": false
+  },
+  {
+    "id": "input_arrow",
+    "box": [
+      55,
+      109,
+      126,
+      135
+    ],
+    "split": "dev",
+    "source_bbox": [
+      4,
+      0,
+      70,
+      25
+    ],
+    "actual_bbox": [
+      4,
+      0,
+      70,
+      25
+    ],
+    "max_edge_error_px": 0,
+    "ink_iou": 0.8133802816901409,
+    "pass_joint": true
+  },
+  {
+    "id": "dense_last",
+    "box": [
+      1092,
+      271,
+      1164,
+      305
+    ],
+    "split": "heldout",
+    "source_bbox": [
+      3,
+      3,
+      67,
+      33
+    ],
+    "actual_bbox": [
+      3,
+      3,
+      67,
+      33
+    ],
+    "max_edge_error_px": 0,
+    "ink_iou": 0.5929526123936817,
+    "pass_joint": false
+  },
+  {
+    "id": "SN",
+    "box": [
+      924,
+      3,
+      985,
+      62
+    ],
+    "split": "heldout",
+    "source_bbox": [
+      7,
+      7,
+      53,
+      52
+    ],
+    "actual_bbox": [
+      6,
+      8,
+      49,
+      51
+    ],
+    "max_edge_error_px": 4,
+    "ink_iou": 0.2676767676767677,
+    "pass_joint": false
+  },
+  {
+    "id": "DN",
+    "box": [
+      1090,
+      3,
+      1152,
+      62
+    ],
+    "split": "heldout",
+    "source_bbox": [
+      8,
+      7,
+      59,
+      52
+    ],
+    "actual_bbox": [
+      6,
+      8,
+      53,
+      51
+    ],
+    "max_edge_error_px": 6,
+    "ink_iou": 0.24582701062215478,
+    "pass_joint": false
+  },
+  {
+    "id": "output_arrow",
+    "box": [
+      1177,
+      108,
+      1244,
+      136
+    ],
+    "split": "heldout",
+    "source_bbox": [
+      0,
+      0,
+      63,
+      27
+    ],
+    "actual_bbox": [
+      0,
+      0,
+      63,
+      27
+    ],
+    "max_edge_error_px": 0,
+    "ink_iou": 0.13470319634703196,
+    "pass_joint": false
+  }
+]

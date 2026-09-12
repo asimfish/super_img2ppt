@@ -1,0 +1,143 @@
+{
+  "frozen_at": 1789201549.512745,
+  "source_sha256": "ac829affd7b3cc5eff44cf91173dfa5994499e31d66a8848db44b45d9072a5a8",
+  "method": "At source width, RGB max<150 for black ink; feed_forward uses RGB min>220 and max-min<30 (white glyphs). Unregistered binary IoU; edge=max absolute difference of ink bounding box coordinates; empty mismatches fail. No registration.",
+  "thresholds": {
+    "edge_px_max": 4,
+    "iou_min": 0.7
+  },
+  "rois": [
+    {
+      "id": "qformer",
+      "box_xywh": [
+        245,
+        12,
+        92,
+        25
+      ],
+      "split": "dev",
+      "white_ink": false
+    },
+    {
+      "id": "input_image",
+      "box_xywh": [
+        10,
+        65,
+        110,
+        30
+      ],
+      "split": "dev",
+      "white_ink": false
+    },
+    {
+      "id": "feed_forward",
+      "box_xywh": [
+        348,
+        99,
+        129,
+        28
+      ],
+      "split": "dev",
+      "white_ink": true
+    },
+    {
+      "id": "image_matching",
+      "box_xywh": [
+        360,
+        24,
+        109,
+        46
+      ],
+      "split": "dev",
+      "white_ink": false
+    },
+    {
+      "id": "learned_queries",
+      "box_xywh": [
+        265,
+        246,
+        81,
+        47
+      ],
+      "split": "dev",
+      "white_ink": false
+    },
+    {
+      "id": "mask_grid1",
+      "box_xywh": [
+        938,
+        82,
+        113,
+        113
+      ],
+      "split": "dev",
+      "white_ink": false
+    },
+    {
+      "id": "encoder_arrow",
+      "box_xywh": [
+        122,
+        157,
+        34,
+        15
+      ],
+      "split": "dev",
+      "white_ink": false
+    },
+    {
+      "id": "legend",
+      "box_xywh": [
+        912,
+        27,
+        205,
+        25
+      ],
+      "split": "dev",
+      "white_ink": false
+    },
+    {
+      "id": "held_cross_attention",
+      "box_xywh": [
+        347,
+        148,
+        134,
+        27
+      ],
+      "split": "heldout",
+      "white_ink": false
+    },
+    {
+      "id": "held_input_text",
+      "box_xywh": [
+        640,
+        261,
+        212,
+        29
+      ],
+      "split": "heldout",
+      "white_ink": false
+    },
+    {
+      "id": "held_grid3",
+      "box_xywh": [
+        1309,
+        83,
+        114,
+        114
+      ],
+      "split": "heldout",
+      "white_ink": false
+    },
+    {
+      "id": "held_mask_title",
+      "box_xywh": [
+        1092,
+        205,
+        168,
+        42
+      ],
+      "split": "heldout",
+      "white_ink": false
+    }
+  ]
+}

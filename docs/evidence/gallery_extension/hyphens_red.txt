@@ -1,0 +1,83 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+____ test_actual_pdf_hyphen_marker_preserves_visible_dash[User-\nPurchase] _____
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 300, 'height': 180, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x107eef4a0>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-222/test_actual_pdf_hyphen_marker_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1095c83b0>
+label = 'User-\nPurchase'
+
+    @pytest.mark.render
+    @pytest.mark.skipif(shutil.which("soffice") is None, reason="LibreOffice not installed")
+    @pytest.mark.parametrize("label", ["User-\nPurchase", "Cross-\nAttention"])
+    def test_actual_pdf_hyphen_marker_preserves_visible_dash(scene, fonts, tmp_path, monkeypatch, label):
+        slide = scene["slides"][0]
+        slide.update(width=300, height=180)
+        slide["elements"] = [{"id": "label", "kind": "text", "z": 1, "box": [30, 30, 140, 85], "text": label, "font_family": "Times New Roman", "font_size": 24}]
+        layouts = layout_scene(scene, fonts)
+        pptx = tmp_path / "hyphen.pptx"
+        write_pptx(scene, layouts, tmp_path, pptx)
+        pdf = make_renderer().render(pptx, tmp_path / "render")
+        with pdfium.PdfDocument(pdf) as doc:
+            page = doc[0]
+            textpage = page.get_textpage()
+            assert any(pdfium.raw.FPDFText_GetUnicode(textpage, i) == 2 and pdfium.raw.FPDFText_IsHyphen(textpage, i) == 1 for i in range(textpage.count_chars()))
+            textpage.close()
+            page.close()
+        report = verify_rendered_text(pdf, scene, layouts)
+>       assert all(b["matches"] for b in report["text_boxes"]), report
+E       AssertionError: {'status': 'fail', 'renderer': 'LibreOffice/PDFium', 'findings': [{'code': 'rendered_text_mismatch', 'slide': 'page_00...: [{'slide': 'page_001', 'element': 'label', 'expected': 'User-
+E         Purchase', 'rendered': 'User\x02Purchase', ...}], ...}
+E       assert False
+E        +  where False = all(<generator object test_actual_pdf_hyphen_marker_preserves_visible_dash.<locals>.<genexpr> at 0x1096469b0>)
+
+tests/test_pdf_hyphens.py:29: AssertionError
+------------------------------ Captured log setup ------------------------------
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:63 'created' timestamp out of range; ignoring top bytes
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:63 'created' timestamp out of range; ignoring top bytes
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+___ test_actual_pdf_hyphen_marker_preserves_visible_dash[Cross-\nAttention] ____
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 300, 'height': 180, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x107eef4a0>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-222/test_actual_pdf_hyphen_marker_1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1095c85c0>
+label = 'Cross-\nAttention'
+
+    @pytest.mark.render
+    @pytest.mark.skipif(shutil.which("soffice") is None, reason="LibreOffice not installed")
+    @pytest.mark.parametrize("label", ["User-\nPurchase", "Cross-\nAttention"])
+    def test_actual_pdf_hyphen_marker_preserves_visible_dash(scene, fonts, tmp_path, monkeypatch, label):
+        slide = scene["slides"][0]
+        slide.update(width=300, height=180)
+        slide["elements"] = [{"id": "label", "kind": "text", "z": 1, "box": [30, 30, 140, 85], "text": label, "font_family": "Times New Roman", "font_size": 24}]
+        layouts = layout_scene(scene, fonts)
+        pptx = tmp_path / "hyphen.pptx"
+        write_pptx(scene, layouts, tmp_path, pptx)
+        pdf = make_renderer().render(pptx, tmp_path / "render")
+        with pdfium.PdfDocument(pdf) as doc:
+            page = doc[0]
+            textpage = page.get_textpage()
+            assert any(pdfium.raw.FPDFText_GetUnicode(textpage, i) == 2 and pdfium.raw.FPDFText_IsHyphen(textpage, i) == 1 for i in range(textpage.count_chars()))
+            textpage.close()
+            page.close()
+        report = verify_rendered_text(pdf, scene, layouts)
+>       assert all(b["matches"] for b in report["text_boxes"]), report
+E       AssertionError: {'status': 'fail', 'renderer': 'LibreOffice/PDFium', 'findings': [{'code': 'rendered_text_mismatch', 'slide': 'page_00...'slide': 'page_001', 'element': 'label', 'expected': 'Cross-
+E         Attention', 'rendered': 'Cross\x02Attention', ...}], ...}
+E       assert False
+E        +  where False = all(<generator object test_actual_pdf_hyphen_marker_preserves_visible_dash.<locals>.<genexpr> at 0x109646b50>)
+
+tests/test_pdf_hyphens.py:29: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_pdf_hyphens.py::test_actual_pdf_hyphen_marker_preserves_visible_dash[User-\nPurchase]
+FAILED tests/test_pdf_hyphens.py::test_actual_pdf_hyphen_marker_preserves_visible_dash[Cross-\nAttention]
+2 failed in 16.12s

@@ -1,0 +1,13 @@
+# Existing environment only; no installation, repository edits, or publishing.
+# Acquisition:
+curl -L https://raw.githubusercontent.com/mlresearch/v267/main/assets/wang25da/wang25da.pdf -o source.pdf
+pdftoppm -f 3 -l 3 -r 216 -png -singlefile source.pdf page3-216dpi
+# Pillow crop (160,195,1620,919), no PDF drawing/text extraction.
+# Recreate original scene with author.py; sequential repairs reproduce final scene:
+/Users/liyufeng/Code/super_img2ppt/.venv/bin/python author.py
+/Users/liyufeng/Code/super_img2ppt/.venv/bin/python repair05.py
+/Users/liyufeng/Code/super_img2ppt/.venv/bin/python repair06.py
+# Final exact candidate rebuild (new output directory required):
+PATH=/opt/homebrew/bin:$PATH /Users/liyufeng/Code/super_img2ppt/.venv/bin/super-img2ppt build /tmp/griffin-forward-0912/build06/scene.resolved.json --out /tmp/griffin-replay-NEW --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype --font-dir /System/Library/Fonts/Supplemental
+pdftoppm -scale-to-x 1460 -scale-to-y 724 -singlefile -png /tmp/griffin-replay-NEW/render/editable.pdf /tmp/griffin-replay-NEW/render/source-width
+# Frozen final heldout was executed exactly once after FROZEN.json creation.

@@ -30,3 +30,9 @@ Primary technical references reviewed:
 - https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.presentation.font — font information and embedding relationship.
 
 Upstream updates require new source/license review; no automatic synchronization is provided.
+
+v0.3.4 PDF text validation reference (reviewed 2026-09-12): PDFium's public
+`FPDFText_IsHyphen` API and its `IsHyphen` / `GetTextWithHyphen` embedder tests explain
+U+0002/U+FFFE line-end markers. Independently implemented a narrowly confirmed conversion;
+no PDFium implementation or fixture content copied.
+https://pdfium.googlesource.com/pdfium/+/45a5ea16c998110d9aa2ce2dbf8d47ad1d2ae364/fpdfsdk/fpdf_text_embeddertest.cpp

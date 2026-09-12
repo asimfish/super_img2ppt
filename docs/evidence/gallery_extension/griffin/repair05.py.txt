@@ -1,0 +1,24 @@
+import json
+from pathlib import Path
+D=Path('/tmp/griffin-forward-0912');s=json.loads((D/'scene.json').read_text());es=s['slides'][0]['elements'];out=[]
+for e in es:
+ id=e['id']
+ if id in ['header0t','header1t','header2t']:e['box'][1]+=2.5
+ if id=='cross_title':e['box'][0]+=1;e['box'][1]+=1
+ if id=='mpnntitle':e['box'][1]+=2
+ if id=='encoderlabel':e['box'][0]+=1;e['box'][1]+=1;e['line_height']=1.25
+ if id=='lenct':e['box'][0]+=1;e['line_height']=1.25
+ if id.startswith('user_') and id.endswith('t'):
+  if not id.startswith('user_0_'):e['box'][1]+=5
+  elif '\n' not in e['text']:e['box'][1]+=8
+ if id in ['upt','lcrosst']:
+  rows=e['text'].split('\n')
+  for j,t in enumerate(rows):
+   q=dict(e);q['id']=id+str(j);q['text']=t;q['box']=list(e['box']);q['box'][1]+=j*17;q['box'][3]=19;out.append(q)
+  continue
+ out.append(e)
+s['slides'][0]['elements']=out
+# Update narrow pair refs for split text where necessary
+for e in out:
+ if 'allow_overlap_with' in e:e['allow_overlap_with']=[k for k in e['allow_overlap_with'] if k not in ['upt','lcrosst']]
+(D/'scene.json').write_text(json.dumps(s,indent=2))

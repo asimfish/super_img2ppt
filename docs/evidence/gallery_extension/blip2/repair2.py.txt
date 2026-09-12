@@ -1,0 +1,9 @@
+import json
+from pathlib import Path
+p=Path('/tmp/blip2-gallery-ovi4ki/job/scene.json');s=json.loads(p.read_text());e=s['slides'][0]['elements'];d={v['id']:v for v in e}
+# Targeted development label ink-origin corrections from actual source-width render. Shared text style calibration only, no heldout measurements.
+for id,dx,dy in [('qformer',1,1),('inputimage',0,2),('ff1_text',.5,2.5),('itm_text',0,1),('learned',-3,1.5),('masked_text',0,1),('unmasked_text',0,1)]:d[id]['box'][0]+=dx;d[id]['box'][1]+=dy
+# All development-grid cell edges are 1 source pixel too low in actual render.
+for row in range(4):
+ for col in range(4):d[f'grid0_{row}_{col}']['box'][1]-=1
+p.write_text(json.dumps(s,indent=2))

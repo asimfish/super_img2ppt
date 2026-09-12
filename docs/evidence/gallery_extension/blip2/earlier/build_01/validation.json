@@ -1,0 +1,1682 @@
+{
+  "status": "review",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "pass",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "objective_text0",
+            "objective0"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "objective_text1",
+            "objective1"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "objective_text2",
+            "objective2"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "left_block",
+            "every"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "unmasked",
+            "masked_text"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "grid0_2_0",
+            "tleft0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "grid0_3_0",
+            "tleft0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "grid1_2_0",
+            "tleft1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "grid1_3_0",
+            "tleft1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "grid2_2_0",
+            "tleft2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "grid2_3_0",
+            "tleft2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "bidir_r",
+            "bidirectional"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "causal_l",
+            "causal"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "masking",
+            "bidirectional"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "bidirectional",
+            "causal"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "causal",
+            "unimodal"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "causal",
+            "cross_l"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "causal",
+            "cross_r"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "legend_q",
+            "legend_query"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "legend_q",
+            "masked_text"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "legend_query",
+            "masked_text"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "legend_query",
+            "unmasked_text"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "legend_t",
+            "legend_text"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "shape": 71,
+            "image": 2,
+            "text": 48,
+            "line": 18
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "left_block",
+                "l3"
+              ],
+              "reason": "Visible nested module label or connector entering outlined transformer block, as source.",
+              "area_px2": 27.5
+            },
+            {
+              "elements": [
+                "left_block",
+                "bidir_l"
+              ],
+              "reason": "Source-visible icon inside encoder, connector boundary contact, branch junction, or x on dashed mask connector.",
+              "area_px2": 11.344
+            },
+            {
+              "elements": [
+                "left_block",
+                "causal_l"
+              ],
+              "reason": "Visible nested module label or connector entering outlined transformer block, as source.",
+              "area_px2": 5.5
+            },
+            {
+              "elements": [
+                "right_block",
+                "r2"
+              ],
+              "reason": "Visible nested module label or connector entering outlined transformer block, as source.",
+              "area_px2": 27.5
+            },
+            {
+              "elements": [
+                "right_block",
+                "bidir_r"
+              ],
+              "reason": "Source-visible icon inside encoder, connector boundary contact, branch junction, or x on dashed mask connector.",
+              "area_px2": 24.5
+            },
+            {
+              "elements": [
+                "right_block",
+                "causal_r"
+              ],
+              "reason": "Source-visible icon inside encoder, connector boundary contact, branch junction, or x on dashed mask connector.",
+              "area_px2": 24.5
+            },
+            {
+              "elements": [
+                "encoder",
+                "snowflake"
+              ],
+              "reason": "Source-visible icon inside encoder, connector boundary contact, branch junction, or x on dashed mask connector.",
+              "area_px2": 462.0
+            },
+            {
+              "elements": [
+                "uni_l",
+                "cross_l"
+              ],
+              "reason": "Source-visible icon inside encoder, connector boundary contact, branch junction, or x on dashed mask connector.",
+              "area_px2": 14.0
+            },
+            {
+              "elements": [
+                "uni_r",
+                "cross_r"
+              ],
+              "reason": "Source-visible icon inside encoder, connector boundary contact, branch junction, or x on dashed mask connector.",
+              "area_px2": 14.0
+            }
+          ],
+          "text_layouts": {
+            "inputimage": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 101.0,
+              "height_px": 20.7,
+              "available_width_px": 116,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 101.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Input Image"
+              ]
+            },
+            "enc_text": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 67.25,
+              "height_px": 41.4,
+              "available_width_px": 75,
+              "available_height_px": 49,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 67.75,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "Image",
+                "Encoder"
+              ]
+            },
+            "qformer": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 82.25,
+              "height_px": 20.7,
+              "available_width_px": 96,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 82.75,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Q-Former"
+              ]
+            },
+            "every": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 88.0,
+              "height_px": 41.0,
+              "available_width_px": 95,
+              "available_height_px": 47,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 88.5,
+              "required_height_px": 41.5,
+              "fits": true,
+              "lines": [
+                "for every",
+                "other block"
+              ]
+            },
+            "ff1_text": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 112.0,
+              "height_px": 20.7,
+              "available_width_px": 138,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 112.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Feed Forward"
+              ]
+            },
+            "ca_text": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 123.0,
+              "height_px": 20.7,
+              "available_width_px": 138,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 123.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Cross Attention"
+              ]
+            },
+            "sa1_text": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 107.0,
+              "height_px": 20.7,
+              "available_width_px": 138,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 107.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Self Attention"
+              ]
+            },
+            "ff2_text": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 112.0,
+              "height_px": 20.7,
+              "available_width_px": 138,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 112.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Feed Forward"
+              ]
+            },
+            "sa2_text": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 107.0,
+              "height_px": 20.7,
+              "available_width_px": 138,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 107.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Self Attention"
+              ]
+            },
+            "itm_text": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 91.0,
+              "height_px": 41.0,
+              "available_width_px": 115,
+              "available_height_px": 45,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 91.5,
+              "required_height_px": 41.5,
+              "fits": true,
+              "lines": [
+                "Image-Text",
+                "Matching"
+              ]
+            },
+            "itc_text": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 91.0,
+              "height_px": 61.5,
+              "available_width_px": 105,
+              "available_height_px": 66.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 91.5,
+              "required_height_px": 62.0,
+              "fits": true,
+              "lines": [
+                "Image-Text",
+                "Contrastive",
+                "Learning"
+              ]
+            },
+            "itg_text": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 136.0,
+              "height_px": 41.0,
+              "available_width_px": 145,
+              "available_height_px": 46,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 136.5,
+              "required_height_px": 41.5,
+              "fits": true,
+              "lines": [
+                "Image-Grounded",
+                "Text Generation"
+              ]
+            },
+            "nx1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 27.0,
+              "height_px": 20.7,
+              "available_width_px": 35,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 27.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "x N"
+              ]
+            },
+            "nx2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 27.0,
+              "height_px": 20.7,
+              "available_width_px": 33,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 27.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "x N"
+              ]
+            },
+            "masking": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 156.0,
+              "height_px": 20.7,
+              "available_width_px": 162,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 156.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Attention Masking"
+              ]
+            },
+            "bidirectional": {
+              "scale": 1,
+              "effective_font_size_px": 17,
+              "width_px": 91.0,
+              "height_px": 19.55,
+              "available_width_px": 113,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 91.5,
+              "required_height_px": 20.05,
+              "fits": true,
+              "lines": [
+                "bidirectional"
+              ]
+            },
+            "causal": {
+              "scale": 1,
+              "effective_font_size_px": 17,
+              "width_px": 136.5,
+              "height_px": 19.55,
+              "available_width_px": 143,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 137.0,
+              "required_height_px": 20.05,
+              "fits": true,
+              "lines": [
+                "multimodal causal"
+              ]
+            },
+            "unimodal": {
+              "scale": 1,
+              "effective_font_size_px": 17,
+              "width_px": 75.0,
+              "height_px": 19.55,
+              "available_width_px": 82,
+              "available_height_px": 23,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 75.5,
+              "required_height_px": 20.05,
+              "fits": true,
+              "lines": [
+                "uni-modal"
+              ]
+            },
+            "cross_l": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 8.0,
+              "height_px": 18.4,
+              "available_width_px": 14,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "x"
+              ]
+            },
+            "cross_r": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 8.0,
+              "height_px": 18.4,
+              "available_width_px": 14,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "x"
+              ]
+            },
+            "learned": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 70.0,
+              "height_px": 41.4,
+              "available_width_px": 77,
+              "available_height_px": 47,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 70.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "Learned",
+                "Queries"
+              ]
+            },
+            "dots": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 12.0,
+              "height_px": 13.8,
+              "available_width_px": 15,
+              "available_height_px": 18,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 12.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "···"
+              ]
+            },
+            "inputtext": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 86.0,
+              "height_px": 20.7,
+              "available_width_px": 88,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 86.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Input Text"
+              ]
+            },
+            "prompt_text": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 202.25,
+              "height_px": 20.7,
+              "available_width_px": 205,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 202.75,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "a cat wearing sunglasses"
+              ]
+            },
+            "legend_q": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 20.0,
+              "height_px": 20.7,
+              "available_width_px": 24,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 20.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Q:"
+              ]
+            },
+            "legend_query": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 175.0,
+              "height_px": 20.7,
+              "available_width_px": 187,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 175.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "query token positions;"
+              ]
+            },
+            "legend_t": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 17.0,
+              "height_px": 20.7,
+              "available_width_px": 23,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 17.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "T:"
+              ]
+            },
+            "legend_text": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 159.0,
+              "height_px": 20.7,
+              "available_width_px": 181,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 159.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "text token positions."
+              ]
+            },
+            "masked_text": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 63.0,
+              "height_px": 20.7,
+              "available_width_px": 74,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 63.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "masked"
+              ]
+            },
+            "unmasked_text": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 83.0,
+              "height_px": 20.7,
+              "available_width_px": 93,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 83.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "unmasked"
+              ]
+            },
+            "qtop0": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 14.0,
+              "height_px": 20.7,
+              "available_width_px": 23,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Q"
+              ]
+            },
+            "ttop0": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 11.0,
+              "height_px": 20.7,
+              "available_width_px": 23,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "T"
+              ]
+            },
+            "qleft0": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 14.0,
+              "height_px": 20.7,
+              "available_width_px": 23,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Q"
+              ]
+            },
+            "tleft0": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 11.0,
+              "height_px": 20.7,
+              "available_width_px": 23,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "T"
+              ]
+            },
+            "qtop1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 14.0,
+              "height_px": 20.7,
+              "available_width_px": 23,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Q"
+              ]
+            },
+            "ttop1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 11.0,
+              "height_px": 20.7,
+              "available_width_px": 23,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "T"
+              ]
+            },
+            "qleft1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 14.0,
+              "height_px": 20.7,
+              "available_width_px": 23,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Q"
+              ]
+            },
+            "tleft1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 11.0,
+              "height_px": 20.7,
+              "available_width_px": 23,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "T"
+              ]
+            },
+            "qtop2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 14.0,
+              "height_px": 20.7,
+              "available_width_px": 23,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Q"
+              ]
+            },
+            "ttop2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 11.0,
+              "height_px": 20.7,
+              "available_width_px": 23,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "T"
+              ]
+            },
+            "qleft2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 14.0,
+              "height_px": 20.7,
+              "available_width_px": 23,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "Q"
+              ]
+            },
+            "tleft2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 11.0,
+              "height_px": 20.7,
+              "available_width_px": 23,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.5,
+              "required_height_px": 21.2,
+              "fits": true,
+              "lines": [
+                "T"
+              ]
+            },
+            "masktitle0": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 156.0,
+              "height_px": 41.4,
+              "available_width_px": 164,
+              "available_height_px": 45,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 156.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "Bi-directional",
+                "Self-Attention Mask"
+              ]
+            },
+            "objective_text0": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 91.0,
+              "height_px": 41.0,
+              "available_width_px": 117,
+              "available_height_px": 46,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 91.5,
+              "required_height_px": 41.5,
+              "fits": true,
+              "lines": [
+                "Image-Text",
+                "Matching"
+              ]
+            },
+            "masktitle1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 156.0,
+              "height_px": 41.4,
+              "available_width_px": 164,
+              "available_height_px": 45,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 156.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "Multi-modal Causal",
+                "Self-Attention Mask"
+              ]
+            },
+            "objective_text1": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 136.0,
+              "height_px": 41.0,
+              "available_width_px": 158,
+              "available_height_px": 46,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 136.5,
+              "required_height_px": 41.5,
+              "fits": true,
+              "lines": [
+                "Image-Grounded",
+                "Text Generation"
+              ]
+            },
+            "masktitle2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 156.0,
+              "height_px": 41.4,
+              "available_width_px": 178,
+              "available_height_px": 45,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 156.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "Uni-modal",
+                "Self-Attention Mask"
+              ]
+            },
+            "objective_text2": {
+              "scale": 1,
+              "effective_font_size_px": 18,
+              "width_px": 166.0,
+              "height_px": 41.0,
+              "available_width_px": 171.5,
+              "available_height_px": 46,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 166.5,
+              "required_height_px": 41.5,
+              "fits": true,
+              "lines": [
+                "Image-Text",
+                "Contrastive Learning"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "review",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [
+        {
+          "code": "rendered_ink_width_drift",
+          "severity": "warning",
+          "slide": "page_001",
+          "element": "legend_t",
+          "measured_ink_width_px": 15.0,
+          "rendered_ink_width_px": 12.786,
+          "message": "Visible text width differs from the measured font by over 3% and 2 px; inspect mixed-script spacing and compare the source"
+        }
+      ],
+      "text_boxes": [
+        {
+          "slide": "page_001",
+          "element": "inputimage",
+          "expected": "Input Image",
+          "rendered": "Input Image",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 99.5,
+          "rendered_ink_width_px": 98.69
+        },
+        {
+          "slide": "page_001",
+          "element": "enc_text",
+          "expected": "Image\nEncoder",
+          "rendered": "Image\r\nEncoder",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 66.0,
+          "rendered_ink_width_px": 65.601
+        },
+        {
+          "slide": "page_001",
+          "element": "qformer",
+          "expected": "Q-Former",
+          "rendered": "Q-Former",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 81.5,
+          "rendered_ink_width_px": 81.12
+        },
+        {
+          "slide": "page_001",
+          "element": "every",
+          "expected": "for every\nother block",
+          "rendered": "for every\r\nother block",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 87.5,
+          "rendered_ink_width_px": 87.001
+        },
+        {
+          "slide": "page_001",
+          "element": "ff1_text",
+          "expected": "Feed Forward",
+          "rendered": "Feed Forward",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 109.5,
+          "rendered_ink_width_px": 108.814
+        },
+        {
+          "slide": "page_001",
+          "element": "ca_text",
+          "expected": "Cross Attention",
+          "rendered": "Cross Attention",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 121.25,
+          "rendered_ink_width_px": 119.388
+        },
+        {
+          "slide": "page_001",
+          "element": "sa1_text",
+          "expected": "Self Attention",
+          "rendered": "Self Attention",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 105.25,
+          "rendered_ink_width_px": 103.563
+        },
+        {
+          "slide": "page_001",
+          "element": "ff2_text",
+          "expected": "Feed Forward",
+          "rendered": "Feed Forward",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 109.5,
+          "rendered_ink_width_px": 108.814
+        },
+        {
+          "slide": "page_001",
+          "element": "sa2_text",
+          "expected": "Self Attention",
+          "rendered": "Self Attention",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 105.25,
+          "rendered_ink_width_px": 103.563
+        },
+        {
+          "slide": "page_001",
+          "element": "itm_text",
+          "expected": "Image-Text\nMatching",
+          "rendered": "Image-Text\r\nMatching ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 89.5,
+          "rendered_ink_width_px": 86.839
+        },
+        {
+          "slide": "page_001",
+          "element": "itc_text",
+          "expected": "Image-Text\nContrastive\nLearning",
+          "rendered": "Image-Text\r\nContrastive\r\nLearning",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 90.25,
+          "rendered_ink_width_px": 88.979
+        },
+        {
+          "slide": "page_001",
+          "element": "itg_text",
+          "expected": "Image-Grounded\nText Generation",
+          "rendered": "Image-Grounded\r\nText Generation",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 133.25,
+          "rendered_ink_width_px": 132.551
+        },
+        {
+          "slide": "page_001",
+          "element": "nx1",
+          "expected": "x N",
+          "rendered": "x N ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 25.75,
+          "rendered_ink_width_px": 25.284
+        },
+        {
+          "slide": "page_001",
+          "element": "nx2",
+          "expected": "x N",
+          "rendered": "x N",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 25.75,
+          "rendered_ink_width_px": 25.284
+        },
+        {
+          "slide": "page_001",
+          "element": "masking",
+          "expected": "Attention Masking",
+          "rendered": "Attention Masking",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 155.0,
+          "rendered_ink_width_px": 154.22
+        },
+        {
+          "slide": "page_001",
+          "element": "bidirectional",
+          "expected": "bidirectional",
+          "rendered": "bidirectional\r\nltidl l",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 89.0,
+          "rendered_ink_width_px": 88.406
+        },
+        {
+          "slide": "page_001",
+          "element": "causal",
+          "expected": "multimodal causal",
+          "rendered": "multimodal causal\r\nx uni\r\nmodal x",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 134.5,
+          "rendered_ink_width_px": 133.719
+        },
+        {
+          "slide": "page_001",
+          "element": "unimodal",
+          "expected": "uni-modal",
+          "rendered": "ltimodal cau\r\nuni-modal ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 73.0,
+          "rendered_ink_width_px": 72.376
+        },
+        {
+          "slide": "page_001",
+          "element": "cross_l",
+          "expected": "x",
+          "rendered": "m\r\nx ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 8.0,
+          "rendered_ink_width_px": 7.773
+        },
+        {
+          "slide": "page_001",
+          "element": "cross_r",
+          "expected": "x",
+          "rendered": "al\r\nx",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 8.0,
+          "rendered_ink_width_px": 7.773
+        },
+        {
+          "slide": "page_001",
+          "element": "learned",
+          "expected": "Learned\nQueries",
+          "rendered": "Learned\r\nQueries ",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 67.75,
+          "rendered_ink_width_px": 67.22
+        },
+        {
+          "slide": "page_001",
+          "element": "dots",
+          "expected": "···",
+          "rendered": "··· ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 9.5,
+          "rendered_ink_width_px": 9.13
+        },
+        {
+          "slide": "page_001",
+          "element": "inputtext",
+          "expected": "Input Text",
+          "rendered": "Input Text ",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 85.0,
+          "rendered_ink_width_px": 82.883
+        },
+        {
+          "slide": "page_001",
+          "element": "prompt_text",
+          "expected": "a cat wearing sunglasses",
+          "rendered": "a cat wearing sunglasses",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-ItalicMT"
+          ],
+          "measured_ink_width_px": 201.5,
+          "rendered_ink_width_px": 200.49
+        },
+        {
+          "slide": "page_001",
+          "element": "legend_q",
+          "expected": "Q:",
+          "rendered": "Q:q",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 17.5,
+          "rendered_ink_width_px": 17.371
+        },
+        {
+          "slide": "page_001",
+          "element": "legend_query",
+          "expected": "query token positions;",
+          "rendered": "query token positions; ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 173.0,
+          "rendered_ink_width_px": 172.113
+        },
+        {
+          "slide": "page_001",
+          "element": "legend_t",
+          "expected": "T:",
+          "rendered": "T: t",
+          "matches": true,
+          "actual_fonts": [
+            "Arial-BoldMT"
+          ],
+          "measured_ink_width_px": 15.0,
+          "rendered_ink_width_px": 12.786
+        },
+        {
+          "slide": "page_001",
+          "element": "legend_text",
+          "expected": "text token positions.",
+          "rendered": "text token positions.",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 157.25,
+          "rendered_ink_width_px": 156.486
+        },
+        {
+          "slide": "page_001",
+          "element": "masked_text",
+          "expected": "masked",
+          "rendered": "masked ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 60.75,
+          "rendered_ink_width_px": 60.278
+        },
+        {
+          "slide": "page_001",
+          "element": "unmasked_text",
+          "expected": "unmasked",
+          "rendered": "unmasked",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 80.75,
+          "rendered_ink_width_px": 80.275
+        },
+        {
+          "slide": "page_001",
+          "element": "qtop0",
+          "expected": "Q",
+          "rendered": "Q ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 12.75,
+          "rendered_ink_width_px": 12.552
+        },
+        {
+          "slide": "page_001",
+          "element": "ttop0",
+          "expected": "T",
+          "rendered": "T",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 10.5,
+          "rendered_ink_width_px": 10.214
+        },
+        {
+          "slide": "page_001",
+          "element": "qleft0",
+          "expected": "Q",
+          "rendered": "Q",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 12.75,
+          "rendered_ink_width_px": 12.552
+        },
+        {
+          "slide": "page_001",
+          "element": "tleft0",
+          "expected": "T",
+          "rendered": "T",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 10.5,
+          "rendered_ink_width_px": 10.214
+        },
+        {
+          "slide": "page_001",
+          "element": "qtop1",
+          "expected": "Q",
+          "rendered": "Q ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 12.75,
+          "rendered_ink_width_px": 12.552
+        },
+        {
+          "slide": "page_001",
+          "element": "ttop1",
+          "expected": "T",
+          "rendered": "T",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 10.5,
+          "rendered_ink_width_px": 10.214
+        },
+        {
+          "slide": "page_001",
+          "element": "qleft1",
+          "expected": "Q",
+          "rendered": "Q",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 12.75,
+          "rendered_ink_width_px": 12.552
+        },
+        {
+          "slide": "page_001",
+          "element": "tleft1",
+          "expected": "T",
+          "rendered": "T",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 10.5,
+          "rendered_ink_width_px": 10.214
+        },
+        {
+          "slide": "page_001",
+          "element": "qtop2",
+          "expected": "Q",
+          "rendered": "Q ",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 12.75,
+          "rendered_ink_width_px": 12.552
+        },
+        {
+          "slide": "page_001",
+          "element": "ttop2",
+          "expected": "T",
+          "rendered": "T",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 10.5,
+          "rendered_ink_width_px": 10.214
+        },
+        {
+          "slide": "page_001",
+          "element": "qleft2",
+          "expected": "Q",
+          "rendered": "Q",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 12.75,
+          "rendered_ink_width_px": 12.552
+        },
+        {
+          "slide": "page_001",
+          "element": "tleft2",
+          "expected": "T",
+          "rendered": "T",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 10.5,
+          "rendered_ink_width_px": 10.214
+        },
+        {
+          "slide": "page_001",
+          "element": "masktitle0",
+          "expected": "Bi-directional\nSelf-Attention Mask",
+          "rendered": "Bi-directional\r\nSelf-Attention Mask",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 155.25,
+          "rendered_ink_width_px": 154.454
+        },
+        {
+          "slide": "page_001",
+          "element": "objective_text0",
+          "expected": "Image-Text\nMatching",
+          "rendered": "Image-Text\r\nMatching",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 89.5,
+          "rendered_ink_width_px": 86.839
+        },
+        {
+          "slide": "page_001",
+          "element": "masktitle1",
+          "expected": "Multi-modal Causal\nSelf-Attention Mask",
+          "rendered": "Multi-modal Causal\r\nSelf-Attention Mask",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 155.25,
+          "rendered_ink_width_px": 154.454
+        },
+        {
+          "slide": "page_001",
+          "element": "objective_text1",
+          "expected": "Image-Grounded\nText Generation",
+          "rendered": "Image-Grounded\r\nText Generation",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 133.25,
+          "rendered_ink_width_px": 132.551
+        },
+        {
+          "slide": "page_001",
+          "element": "masktitle2",
+          "expected": "Uni-modal\nSelf-Attention Mask",
+          "rendered": "Uni-modal\r\nSelf-Attention Mask",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 155.25,
+          "rendered_ink_width_px": 154.454
+        },
+        {
+          "slide": "page_001",
+          "element": "objective_text2",
+          "expected": "Image-Text\nContrastive Learning",
+          "rendered": "Image-Text\r\nContrastive Learning",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 164.25,
+          "rendered_ink_width_px": 163.266
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "03307c1249b4c01a69a0155977d769e1ff34b211ec63ee4daaf1d6ed5f6312a9",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "page_001",
+      "mean_absolute_pixel_error": 0.049996,
+      "comparison": "page_001_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

@@ -31,13 +31,40 @@ def _pdf_text_frame(element, tx, page_width, page_height):
     return left, bottom, right, top
 
 
-def _pdf_glyph_owners(textpage, elements, frames):
+def _pdf_hyphen_boxes(textpage):
+    """Identify PDFium's line-end hyphen sentinel using the engine's explicit flag."""
+    is_hyphen = getattr(pdfium.raw, "FPDFText_IsHyphen", None)
+    if is_hyphen is None:
+        return {}
+    return {
+        index: textpage.get_charbox(index)
+        for index in range(textpage.count_chars())
+        if pdfium.raw.FPDFText_GetUnicode(textpage, index) == 2 and is_hyphen(textpage, index) == 1
+    }
+
+
+def _restore_bounded_hyphens(extracted, frame, hyphens):
+    # Bounded extraction emits U+0002, while range extraction emits U+FFFE.
+    # Never replace an arbitrary control character based only on expected scene text.
+    count = extracted.count("\x02")
+    if not count:
+        return extracted
+    left, bottom, right, top = frame
+    verified = sum(
+        left <= (x0 + x1) / 2 <= right and bottom <= (y0 + y1) / 2 <= top
+        for x0, y0, x1, y1 in hyphens.values()
+    )
+    return extracted.replace("\x02", "-") if count == verified else extracted
+
+
+def _pdf_glyph_owners(textpage, elements, frames, hyphens=None):
+    hyphens = {} if hyphens is None else hyphens
     get_object = getattr(pdfium.raw, "FPDFText_GetTextObject", None)
     if get_object is None:
         return {}
     groups = {}
     for index in range(textpage.count_chars()):
-        char = textpage.get_text_range(index, 1)
+        char = "-" if index in hyphens else textpage.get_text_range(index, 1)
         if not char.strip():
             continue
         obj = get_object(textpage, index)
@@ -162,14 +189,16 @@ def verify_rendered_text(pdf: Path, scene: dict, layouts: dict | None = None) ->
                 pw, ph = page.get_size()
                 elements = [e for e in slide["elements"] if e["kind"] == "text"]
                 frames = {e["id"]: _pdf_text_frame(e, tx, pw, ph) for e in elements}
-                owners = _pdf_glyph_owners(textpage, elements, frames)
+                hyphens = _pdf_hyphen_boxes(textpage)
+                owners = _pdf_glyph_owners(textpage, elements, frames, hyphens)
                 for element in elements:
                     left, bottom, right, top = frames[element["id"]]
                     extracted = textpage.get_text_bounded(
                         left=left, bottom=bottom, right=right, top=top
                     )
                     expected = compact_text(text_content(element))
-                    actual = compact_text(extracted)
+                    normalized = _restore_bounded_hyphens(extracted, frames[element["id"]], hyphens)
+                    actual = compact_text(normalized)
                     matched = expected in actual
                     boxes.append(
                         {
@@ -177,6 +206,7 @@ def verify_rendered_text(pdf: Path, scene: dict, layouts: dict | None = None) ->
                             "element": element["id"],
                             "expected": text_content(element),
                             "rendered": extracted,
+                            "rendered_normalized": normalized,
                             "matches": matched,
                         }
                     )
@@ -206,7 +236,9 @@ def verify_rendered_text(pdf: Path, scene: dict, layouts: dict | None = None) ->
                     for char_index in range(textpage.count_chars()):
                         if char_index in owners and owners[char_index] != element["id"]:
                             continue
-                        char = textpage.get_text_range(char_index, 1)
+                        char = (
+                            "-" if char_index in hyphens else textpage.get_text_range(char_index, 1)
+                        )
                         if not char.strip():
                             continue
                         x0, y0, x1, y1 = textpage.get_charbox(char_index)

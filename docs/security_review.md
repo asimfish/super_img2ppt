@@ -110,3 +110,12 @@ bounds/collision checks. Font metadata reads add `head.macStyle` only; no new fi
 Directional overflow fields are measured diagnostics and do not auto-mutate user scenes.
 No new high/critical issue was found in this bounded semantic diff review; native parser
 residual risks above remain. No vulnerability-database claim is made.
+
+## v0.3.4 PDF hyphen verification boundary
+
+The verifier accepts a restored hyphen only when PDFium explicitly flags that indexed
+U+0002 glyph as a hyphen, and the number of verified in-frame glyphs equals the bounded
+extraction marker count. Raw extracted strings are retained. Unsupported APIs, false/error
+flags, unexpected controls and missing text remain mismatches. Normalized glyph identity
+is shared with ownership/font/ink checks. Existing parser and execution boundaries are
+unchanged; actual-render positive and negative regressions exercise this narrow change.

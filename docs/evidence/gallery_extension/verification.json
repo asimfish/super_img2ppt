@@ -1,0 +1,104 @@
+{
+  "version": "0.3.4",
+  "steps": [
+    {
+      "command": [
+        "uv",
+        "run",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "log": "pytest.txt",
+      "result": "90 passed in 72.59s; final runtime/test implementation unchanged since this run"
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "seconds": 0.097,
+      "log": "gate_00.txt"
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "exit_code": 0,
+      "seconds": 0.048,
+      "log": "gate_01.txt"
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/verify_skill.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.217,
+      "log": "gate_02.txt"
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/build_capability_registry.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.063,
+      "log": "gate_03.txt"
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "/Users/liyufeng/.whalent-agent/profiles/acct-63aacf96110c0e9595f3/agents/rjguoiuibvgcfiv8w56gq7bu5/codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/super-img2ppt"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06,
+      "log": "gate_04.txt"
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "/Users/liyufeng/.agents/skills/skill-quality-gate/scripts/audit_skill_governance.py",
+        "--repo",
+        "/Users/liyufeng/code/super_img2ppt",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.064,
+      "log": "gate_05.txt"
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/build_package.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.063,
+      "log": "gate_06.txt"
+    }
+  ],
+  "verdict": "CONDITIONAL",
+  "remaining": "source-fidelity ROI failures; native PowerPoint/WPS unverified; one invalid BLIP2 heldout mask disclosed",
+  "regression_replays": "six actual PPTX builds, five pass and BLIP2 review; all frozen preview pixels reproduced"
+}

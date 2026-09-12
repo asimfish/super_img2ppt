@@ -1,0 +1,146 @@
+[
+  {
+    "id": "qformer",
+    "source_edges": [
+      5,
+      6,
+      86,
+      20
+    ],
+    "actual_edges": [
+      4,
+      5,
+      85,
+      19
+    ],
+    "edge_px": 1,
+    "iou": 0.43636363636363634,
+    "joint_pass": false
+  },
+  {
+    "id": "input_image",
+    "source_edges": [
+      5,
+      7,
+      104,
+      23
+    ],
+    "actual_edges": [
+      5,
+      5,
+      104,
+      22
+    ],
+    "edge_px": 2,
+    "iou": 0.3960149439601494,
+    "joint_pass": false
+  },
+  {
+    "id": "feed_forward",
+    "source_edges": [
+      12,
+      9,
+      119,
+      21
+    ],
+    "actual_edges": [
+      11,
+      6,
+      119,
+      19
+    ],
+    "edge_px": 3,
+    "iou": 0.16049382716049382,
+    "joint_pass": false
+  },
+  {
+    "id": "image_matching",
+    "source_edges": [
+      0,
+      5,
+      109,
+      46
+    ],
+    "actual_edges": [
+      0,
+      4,
+      109,
+      46
+    ],
+    "edge_px": 1,
+    "iou": 0.5228595178719867,
+    "joint_pass": false
+  },
+  {
+    "id": "learned_queries",
+    "source_edges": [
+      7,
+      6,
+      74,
+      42
+    ],
+    "actual_edges": [
+      10,
+      5,
+      77,
+      40
+    ],
+    "edge_px": 3,
+    "iou": 0.1932367149758454,
+    "joint_pass": false
+  },
+  {
+    "id": "mask_grid1",
+    "source_edges": [
+      3,
+      3,
+      110,
+      111
+    ],
+    "actual_edges": [
+      3,
+      4,
+      110,
+      112
+    ],
+    "edge_px": 1,
+    "iou": 0.39969604863221886,
+    "joint_pass": false
+  },
+  {
+    "id": "encoder_arrow",
+    "source_edges": [
+      3,
+      0,
+      33,
+      15
+    ],
+    "actual_edges": [
+      3,
+      0,
+      33,
+      15
+    ],
+    "edge_px": 0,
+    "iou": 0.6790123456790124,
+    "joint_pass": false
+  },
+  {
+    "id": "legend",
+    "source_edges": [
+      4,
+      5,
+      200,
+      19
+    ],
+    "actual_edges": [
+      4,
+      4,
+      200,
+      19
+    ],
+    "edge_px": 1,
+    "iou": 0.3790322580645161,
+    "joint_pass": false
+  }
+]

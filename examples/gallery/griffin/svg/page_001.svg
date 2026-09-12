@@ -1,0 +1,1348 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1460 724" width="1460" height="724">
+  <rect width="100%" height="100%" fill="#FFFFFF" />
+  <g id="header0">
+    <rect x="67" y="6" width="293" height="54" fill="#CECECE" stroke="none" stroke-width="1" />
+  </g>
+  <g id="header0t">
+    <text x="165.375" y="40.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="22" font-weight="bold" font-style="normal" fill="#000000">Raw RDB</tspan>
+    </text>
+  </g>
+  <g id="header1">
+    <rect x="422" y="6" width="333" height="54" fill="#CECECE" stroke="none" stroke-width="1" />
+  </g>
+  <g id="header1t">
+    <text x="504.0" y="40.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="22" font-weight="bold" font-style="normal" fill="#000000">Sample Subgraph</tspan>
+    </text>
+  </g>
+  <g id="header2">
+    <rect x="807" y="6" width="644" height="54" fill="#CECECE" stroke="none" stroke-width="1" />
+  </g>
+  <g id="header2t">
+    <text x="1036.125" y="40.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="22" font-weight="bold" font-style="normal" fill="#000000">Model Architecture</tspan>
+    </text>
+  </g>
+  <g id="header_arrow379">
+    <polygon points="379.0,27.0 390.0,27.0 390.0,24.0 402,33 390.0,42.0 390.0,39.0 379.0,39.0" fill="#000000" />
+  </g>
+  <g id="header_arrow770">
+    <polygon points="770.0,27.0 781.0,27.0 781.0,24.0 793,33 781.0,42.0 781.0,39.0 770.0,39.0" fill="#000000" />
+  </g>
+  <g id="sample_panel">
+    <rect x="421" y="93" width="335" height="460" rx="10" fill="#E1EDF7" stroke="#2879BD" stroke-width="2" stroke-dasharray="6 3" />
+  </g>
+  <g id="sample_inner">
+    <rect x="440" y="381" width="299" height="73" rx="7" fill="#E1EED6" stroke="#598633" stroke-width="2" stroke-dasharray="6 3" />
+  </g>
+  <g id="temporal">
+    <rect x="587" y="476" width="152" height="69" rx="12" fill="#FFF2CC" stroke="#FFD65C" stroke-width="2" stroke-dasharray="6 3" />
+  </g>
+  <g id="encoder_panel">
+    <rect x="806" y="142" width="303" height="80" rx="14" fill="#FBE4D1" stroke="#CE5C00" stroke-width="2" stroke-dasharray="6 3" />
+  </g>
+  <g id="cross_panel">
+    <rect x="806" y="300" width="303" height="248" rx="14" fill="#E1EED6" stroke="#598633" stroke-width="2" stroke-dasharray="6 3" />
+  </g>
+  <g id="cross">
+    <rect x="833" y="357" width="235" height="174" fill="#ACCF8C" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="decoder_panel">
+    <rect x="1179" y="143" width="271" height="160" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="mpnn_panel">
+    <rect x="1175" y="473" width="278" height="247" rx="7" fill="#E1EDF7" stroke="#2879BD" stroke-width="2" stroke-dasharray="6 3" />
+  </g>
+  <g id="ut">
+    <text x="190.625" y="100.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#000000">User Table</tspan>
+    </text>
+  </g>
+  <g id="pt">
+    <text x="178.0" y="258.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#000000">Purchase Table</tspan>
+    </text>
+  </g>
+  <g id="prod">
+    <text x="179.5" y="498.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#000000">Product Table</tspan>
+    </text>
+  </g>
+  <g id="user_0_0">
+    <rect x="86" y="113" width="92" height="35" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="user_0_0t">
+    <text x="110.125" y="133.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#FFFFFF">User ID</tspan>
+    </text>
+  </g>
+  <g id="user_0_1">
+    <rect x="178" y="113" width="91" height="35" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="user_0_1t">
+    <text x="183.625" y="133.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#FFFFFF">Account Level</tspan>
+    </text>
+  </g>
+  <g id="user_0_2">
+    <rect x="269" y="113" width="92" height="35" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="user_0_2t">
+    <text x="289.375" y="125.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#FFFFFF">Purchase</tspan>
+    </text>
+    <text x="292.25" y="140.7" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#FFFFFF">Amount</tspan>
+    </text>
+  </g>
+  <g id="user_1_0">
+    <rect x="86" y="148" width="92" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="user_1_0t">
+    <text x="128.75" y="165.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">1</tspan>
+    </text>
+  </g>
+  <g id="user_1_1">
+    <rect x="178" y="148" width="91" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="user_1_1t">
+    <text x="210.375" y="165.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">Gold</tspan>
+    </text>
+  </g>
+  <g id="user_1_2">
+    <rect x="269" y="148" width="92" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="user_1_2t">
+    <text x="305.25" y="165.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">100</tspan>
+    </text>
+  </g>
+  <g id="user_2_0">
+    <rect x="86" y="175" width="92" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="user_2_0t">
+    <text x="128.75" y="192.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">2</tspan>
+    </text>
+  </g>
+  <g id="user_2_1">
+    <rect x="178" y="175" width="91" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="user_2_1t">
+    <text x="208.0" y="192.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">Silver</tspan>
+    </text>
+  </g>
+  <g id="user_2_2">
+    <rect x="269" y="175" width="92" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="user_2_2t">
+    <text x="308.5" y="192.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">80</tspan>
+    </text>
+  </g>
+  <g id="user_3_0">
+    <rect x="86" y="202" width="92" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="user_3_0t">
+    <text x="128.75" y="219.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">3</tspan>
+    </text>
+  </g>
+  <g id="user_3_1">
+    <rect x="178" y="202" width="91" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="user_3_1t">
+    <text x="204.75" y="219.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">Bronze</tspan>
+    </text>
+  </g>
+  <g id="user_3_2">
+    <rect x="269" y="202" width="92" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="user_3_2t">
+    <text x="308.5" y="219.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">10</tspan>
+    </text>
+  </g>
+  <g id="purchase_0_0">
+    <rect x="88" y="269" width="68" height="25.8" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_0_0t">
+    <text x="101.75" y="280.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="bold" font-style="normal" fill="#FFFFFF">User ID</tspan>
+    </text>
+  </g>
+  <g id="purchase_0_1">
+    <rect x="156" y="269" width="68" height="25.8" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_0_1t">
+    <text x="169.75" y="280.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="bold" font-style="normal" fill="#FFFFFF">Item ID</tspan>
+    </text>
+  </g>
+  <g id="purchase_0_2">
+    <rect x="224" y="269" width="68" height="25.8" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_0_2t">
+    <text x="240.625" y="280.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="bold" font-style="normal" fill="#FFFFFF">Rating</tspan>
+    </text>
+  </g>
+  <g id="purchase_0_3">
+    <rect x="292" y="269" width="68" height="25.8" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_0_3t">
+    <text x="297.0" y="280.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="bold" font-style="normal" fill="#FFFFFF">Timestamp</tspan>
+    </text>
+  </g>
+  <g id="purchase_1_0">
+    <rect x="88" y="294.8" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_1_0t">
+    <text x="119.0" y="306.55" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">1</tspan>
+    </text>
+  </g>
+  <g id="purchase_1_1">
+    <rect x="156" y="294.8" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_1_1t">
+    <text x="187.0" y="306.55" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">2</tspan>
+    </text>
+  </g>
+  <g id="purchase_1_2">
+    <rect x="224" y="294.8" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_1_2t">
+    <text x="255.0" y="306.55" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">5</tspan>
+    </text>
+  </g>
+  <g id="purchase_1_3">
+    <rect x="292" y="294.8" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_1_3t">
+    <text x="309.375" y="306.55" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">Jan 1st</tspan>
+    </text>
+  </g>
+  <g id="purchase_2_0">
+    <rect x="88" y="320.6" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_2_0t">
+    <text x="119.0" y="332.35" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">1</tspan>
+    </text>
+  </g>
+  <g id="purchase_2_1">
+    <rect x="156" y="320.6" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_2_1t">
+    <text x="187.0" y="332.35" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">3</tspan>
+    </text>
+  </g>
+  <g id="purchase_2_2">
+    <rect x="224" y="320.6" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_2_2t">
+    <text x="255.0" y="332.35" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">3</tspan>
+    </text>
+  </g>
+  <g id="purchase_2_3">
+    <rect x="292" y="320.6" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_2_3t">
+    <text x="307.375" y="332.35" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">Jan 2nd</tspan>
+    </text>
+  </g>
+  <g id="purchase_3_0">
+    <rect x="88" y="346.40000000000003" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_3_0t">
+    <text x="119.0" y="358.15000000000003" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">1</tspan>
+    </text>
+  </g>
+  <g id="purchase_3_1">
+    <rect x="156" y="346.40000000000003" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_3_1t">
+    <text x="187.0" y="358.15000000000003" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">4</tspan>
+    </text>
+  </g>
+  <g id="purchase_3_2">
+    <rect x="224" y="346.40000000000003" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_3_2t">
+    <text x="255.0" y="358.15000000000003" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">2</tspan>
+    </text>
+  </g>
+  <g id="purchase_3_3">
+    <rect x="292" y="346.40000000000003" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_3_3t">
+    <text x="308.375" y="358.15000000000003" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">Jan 3rd</tspan>
+    </text>
+  </g>
+  <g id="purchase_4_0">
+    <rect x="88" y="372.20000000000005" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_4_0t">
+    <text x="119.0" y="383.95000000000005" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">2</tspan>
+    </text>
+  </g>
+  <g id="purchase_4_1">
+    <rect x="156" y="372.20000000000005" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_4_1t">
+    <text x="187.0" y="383.95000000000005" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">1</tspan>
+    </text>
+  </g>
+  <g id="purchase_4_2">
+    <rect x="224" y="372.20000000000005" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_4_2t">
+    <text x="255.0" y="383.95000000000005" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">4</tspan>
+    </text>
+  </g>
+  <g id="purchase_4_3">
+    <rect x="292" y="372.20000000000005" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_4_3t">
+    <text x="308.375" y="383.95000000000005" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">Feb 1st</tspan>
+    </text>
+  </g>
+  <g id="purchase_5_0">
+    <rect x="88" y="398.00000000000006" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_5_0t">
+    <text x="119.0" y="409.75000000000006" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">2</tspan>
+    </text>
+  </g>
+  <g id="purchase_5_1">
+    <rect x="156" y="398.00000000000006" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_5_1t">
+    <text x="187.0" y="409.75000000000006" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">2</tspan>
+    </text>
+  </g>
+  <g id="purchase_5_2">
+    <rect x="224" y="398.00000000000006" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_5_2t">
+    <text x="255.0" y="409.75000000000006" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">2</tspan>
+    </text>
+  </g>
+  <g id="purchase_5_3">
+    <rect x="292" y="398.00000000000006" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_5_3t">
+    <text x="306.375" y="409.75000000000006" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">Feb 2nd</tspan>
+    </text>
+  </g>
+  <g id="purchase_6_0">
+    <rect x="88" y="423.80000000000007" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_6_0t">
+    <text x="119.0" y="435.55000000000007" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">2</tspan>
+    </text>
+  </g>
+  <g id="purchase_6_1">
+    <rect x="156" y="423.80000000000007" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_6_1t">
+    <text x="187.0" y="435.55000000000007" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">4</tspan>
+    </text>
+  </g>
+  <g id="purchase_6_2">
+    <rect x="224" y="423.80000000000007" width="68" height="25.8" fill="#F8BEBC" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_6_2t">
+    <text x="255.0" y="435.55000000000007" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="bold" font-style="normal" fill="#ED2117">?</tspan>
+    </text>
+  </g>
+  <g id="purchase_6_3">
+    <rect x="292" y="423.80000000000007" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_6_3t">
+    <text x="307.375" y="435.55000000000007" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">Feb 3rd</tspan>
+    </text>
+  </g>
+  <g id="purchase_7_0">
+    <rect x="88" y="449.6000000000001" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_7_0t">
+    <text x="119.0" y="461.3500000000001" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">3</tspan>
+    </text>
+  </g>
+  <g id="purchase_7_1">
+    <rect x="156" y="449.6000000000001" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_7_1t">
+    <text x="187.0" y="461.3500000000001" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">4</tspan>
+    </text>
+  </g>
+  <g id="purchase_7_2">
+    <rect x="224" y="449.6000000000001" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_7_2t">
+    <text x="255.0" y="461.3500000000001" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">5</tspan>
+    </text>
+  </g>
+  <g id="purchase_7_3">
+    <rect x="292" y="449.6000000000001" width="68" height="25.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="purchase_7_3t">
+    <text x="307.375" y="461.3500000000001" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="12" font-weight="normal" font-style="normal" fill="#000000">Mar 1st</tspan>
+    </text>
+  </g>
+  <g id="product_0_0">
+    <rect x="86" y="509" width="92" height="26.8" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="product_0_0t">
+    <text x="108.375" y="522.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#FFFFFF">Item ID</tspan>
+    </text>
+  </g>
+  <g id="product_0_1">
+    <rect x="178" y="509" width="91" height="26.8" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="product_0_1t">
+    <text x="207.875" y="522.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#FFFFFF">Price</tspan>
+    </text>
+  </g>
+  <g id="product_0_2">
+    <rect x="269" y="509" width="89" height="26.8" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="product_0_2t">
+    <text x="285.875" y="522.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#FFFFFF">Category</tspan>
+    </text>
+  </g>
+  <g id="product_1_0">
+    <rect x="86" y="535.8" width="92" height="26.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="product_1_0t">
+    <text x="128.5" y="549.3" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">1</tspan>
+    </text>
+  </g>
+  <g id="product_1_1">
+    <rect x="178" y="535.8" width="91" height="26.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="product_1_1t">
+    <text x="213.0" y="549.3" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">$10</tspan>
+    </text>
+  </g>
+  <g id="product_1_2">
+    <rect x="269" y="535.8" width="89" height="26.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="product_1_2t">
+    <text x="298.25" y="549.3" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Book</tspan>
+    </text>
+  </g>
+  <g id="product_2_0">
+    <rect x="86" y="562.5999999999999" width="92" height="26.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="product_2_0t">
+    <text x="128.5" y="576.0999999999999" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">2</tspan>
+    </text>
+  </g>
+  <g id="product_2_1">
+    <rect x="178" y="562.5999999999999" width="91" height="26.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="product_2_1t">
+    <text x="216.5" y="576.0999999999999" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">$5</tspan>
+    </text>
+  </g>
+  <g id="product_2_2">
+    <rect x="269" y="562.5999999999999" width="89" height="26.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="product_2_2t">
+    <text x="299.0" y="576.0999999999999" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Food</tspan>
+    </text>
+  </g>
+  <g id="product_3_0">
+    <rect x="86" y="589.3999999999999" width="92" height="26.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="product_3_0t">
+    <text x="128.5" y="602.8999999999999" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">3</tspan>
+    </text>
+  </g>
+  <g id="product_3_1">
+    <rect x="178" y="589.3999999999999" width="91" height="26.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="product_3_1t">
+    <text x="213.0" y="602.8999999999999" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">$30</tspan>
+    </text>
+  </g>
+  <g id="product_3_2">
+    <rect x="269" y="589.3999999999999" width="89" height="26.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="product_3_2t">
+    <text x="287.25" y="602.8999999999999" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Furniture</tspan>
+    </text>
+  </g>
+  <g id="product_4_0">
+    <rect x="86" y="616.1999999999998" width="92" height="26.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="product_4_0t">
+    <text x="128.5" y="629.6999999999998" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">4</tspan>
+    </text>
+  </g>
+  <g id="product_4_1">
+    <rect x="178" y="616.1999999999998" width="91" height="26.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="product_4_1t">
+    <text x="216.5" y="629.6999999999998" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">$2</tspan>
+    </text>
+  </g>
+  <g id="product_4_2">
+    <rect x="269" y="616.1999999999998" width="89" height="26.8" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="product_4_2t">
+    <text x="299.0" y="629.6999999999998" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Food</tspan>
+    </text>
+  </g>
+  <g id="task_bg">
+    <rect x="53" y="662" width="330" height="24" fill="#FABFBD" stroke="none" stroke-width="1" />
+  </g>
+  <g id="task">
+    <text x="83.125" y="676.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#FF0000">Task:</tspan>
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000"> What’s the rating of a given purchase record?</tspan>
+    </text>
+  </g>
+  <g id="fkleft0">
+    <line x1="68" y1="333" x2="87" y2="333" stroke="#000000" stroke-width="0.8" stroke-dasharray="1 1" />
+  </g>
+  <g id="fkleft1">
+    <line x1="68" y1="359" x2="87" y2="359" stroke="#000000" stroke-width="0.8" stroke-dasharray="1 1" />
+  </g>
+  <g id="fkleft2">
+    <line x1="68" y1="385" x2="87" y2="385" stroke="#000000" stroke-width="0.8" stroke-dasharray="1 1" />
+  </g>
+  <g id="fkleft3">
+    <line x1="68" y1="411" x2="87" y2="411" stroke="#000000" stroke-width="0.8" stroke-dasharray="1 1" />
+  </g>
+  <g id="fkleft4">
+    <line x1="68" y1="437" x2="87" y2="437" stroke="#000000" stroke-width="0.8" stroke-dasharray="1 1" />
+  </g>
+  <g id="fkleftvert">
+    <line x1="67" y1="187" x2="67" y2="437" stroke="#000000" stroke-width="0.8" stroke-dasharray="1 1" />
+  </g>
+  <g id="fklefttop">
+    <line x1="67" y1="187" x2="86" y2="187" stroke="#000000" stroke-width="0.8" stroke-dasharray="1 1" />
+  </g>
+  <g id="fkright0">
+    <line x1="360" y1="357" x2="383" y2="357" stroke="#000000" stroke-width="0.8" stroke-dasharray="1 1" />
+  </g>
+  <g id="fkright1">
+    <line x1="360" y1="385" x2="383" y2="385" stroke="#000000" stroke-width="0.8" stroke-dasharray="1 1" />
+  </g>
+  <g id="fkright2">
+    <line x1="360" y1="436" x2="383" y2="436" stroke="#000000" stroke-width="0.8" stroke-dasharray="1 1" />
+  </g>
+  <g id="fkright3">
+    <line x1="360" y1="462" x2="383" y2="462" stroke="#000000" stroke-width="0.8" stroke-dasharray="1 1" />
+  </g>
+  <g id="fkright4">
+    <line x1="360" y1="629" x2="383" y2="629" stroke="#000000" stroke-width="0.8" stroke-dasharray="1 1" />
+  </g>
+  <g id="fkrightvert">
+    <line x1="383" y1="357" x2="383" y2="629" stroke="#000000" stroke-width="0.8" stroke-dasharray="1 1" />
+  </g>
+  <g id="useridtag">
+    <rect x="7" y="305" width="59" height="22" fill="#D9D9D9" stroke="none" stroke-width="1" />
+  </g>
+  <g id="userid">
+    <text x="14.625" y="318.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#000000">User ID</tspan>
+    </text>
+  </g>
+  <g id="itemidtag">
+    <rect x="316" y="478" width="58" height="23" fill="#D9D9D9" stroke="none" stroke-width="1" />
+  </g>
+  <g id="itemid">
+    <text x="321.375" y="492.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#000000">Item ID</tspan>
+    </text>
+  </g>
+  <g id="userpoint">
+    <line x1="36" y1="305" x2="67" y2="284" stroke="#888888" stroke-width="0.6" />
+  </g>
+  <g id="itempoint">
+    <line x1="346" y1="500" x2="383" y2="518" stroke="#888888" stroke-width="0.6" />
+  </g>
+  <g id="sampleedge0">
+    <polygon points="515.1628475282284,157.69019250727283 588.7370262035544,196.36379924686725 589.5047359794881,194.90327820972482 593,199 587.6436213711637,198.44393526946402 588.4113311470975,196.9834142323216 514.8371524717716,158.30980749272717" fill="#000000" />
+  </g>
+  <g id="sampleedge1">
+    <polygon points="669.1678850665345,158.3071068290265 598.5551254811987,196.9087487356767 599.3465836520041,198.35653807251592 594,199 597.4278971773243,194.84674574078448 598.2193553481297,196.2945350776237 668.8321149334655,157.6928931709735" fill="#000000" />
+  </g>
+  <g id="sampleedge2">
+    <polygon points="594.35,254.0 594.35,294.0 596.0,294.0 594,299 592.0,294.0 593.65,294.0 593.65,254.0" fill="#000000" />
+  </g>
+  <g id="sampleedge3">
+    <polygon points="594.35,300.0 594.35,341.0 596.0,341.0 594,346 592.0,341.0 593.65,341.0 593.65,300.0" fill="#000000" />
+  </g>
+  <g id="sampleedge4">
+    <polygon points="593.65,396.0 593.65,351.0 592.0,351.0 594,346 596.0,351.0 594.35,351.0 594.35,396.0" fill="#000000" />
+  </g>
+  <g id="sampleedge5">
+    <line x1="569" y1="454" x2="512" y2="487" stroke="#000000" stroke-width="0.7" />
+  </g>
+  <g id="sampleedge6">
+    <line x1="594" y1="442" x2="664" y2="487" stroke="#000000" stroke-width="0.7" />
+  </g>
+  <g id="sample_a_0_0">
+    <rect x="446" y="113" width="73" height="22.5" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_a_0_0t">
+    <text x="463.75" y="125.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#FFFFFF">Rating</tspan>
+    </text>
+  </g>
+  <g id="sample_a_0_1">
+    <rect x="519" y="113" width="71" height="22.5" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_a_0_1t">
+    <text x="523.25" y="125.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#FFFFFF">Timestamp</tspan>
+    </text>
+  </g>
+  <g id="sample_a_1_0">
+    <rect x="446" y="135.5" width="73" height="22.5" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_a_1_0t">
+    <text x="479.25" y="148.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">4</tspan>
+    </text>
+  </g>
+  <g id="sample_a_1_1">
+    <rect x="519" y="135.5" width="71" height="22.5" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_a_1_1t">
+    <text x="534.375" y="148.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">Feb 3rd</tspan>
+    </text>
+  </g>
+  <g id="sample_b_0_0">
+    <rect x="596" y="113" width="72" height="22.5" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_b_0_0t">
+    <text x="613.25" y="125.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#FFFFFF">Rating</tspan>
+    </text>
+  </g>
+  <g id="sample_b_0_1">
+    <rect x="668" y="113" width="71" height="22.5" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_b_0_1t">
+    <text x="672.25" y="125.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#FFFFFF">Timestamp</tspan>
+    </text>
+  </g>
+  <g id="sample_b_1_0">
+    <rect x="596" y="135.5" width="72" height="22.5" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_b_1_0t">
+    <text x="628.75" y="148.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">2</tspan>
+    </text>
+  </g>
+  <g id="sample_b_1_1">
+    <rect x="668" y="135.5" width="71" height="22.5" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_b_1_1t">
+    <text x="682.25" y="148.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">Feb 2nd</tspan>
+    </text>
+  </g>
+  <g id="sample_user_0_0">
+    <rect x="519" y="199" width="74" height="36" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_user_0_0t">
+    <text x="532.875" y="211.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#FFFFFF">Account</tspan>
+    </text>
+    <text x="540.875" y="226.7" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#FFFFFF">Level</tspan>
+    </text>
+  </g>
+  <g id="sample_user_0_1">
+    <rect x="593" y="199" width="74" height="36" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_user_0_1t">
+    <text x="604.375" y="211.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#FFFFFF">Purchase</tspan>
+    </text>
+    <text x="607.25" y="226.7" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#FFFFFF">Amount</tspan>
+    </text>
+  </g>
+  <g id="sample_user_1_0">
+    <rect x="519" y="235" width="74" height="19" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_user_1_0t">
+    <text x="540.5" y="247.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">Silver</tspan>
+    </text>
+  </g>
+  <g id="sample_user_1_1">
+    <rect x="593" y="235" width="74" height="19" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_user_1_1t">
+    <text x="623.5" y="247.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">80</tspan>
+    </text>
+  </g>
+  <g id="sample_target_0_0">
+    <rect x="518" y="299" width="75" height="23" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_target_0_0t">
+    <text x="535.25" y="312.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#FFFFFF">Rating</tspan>
+    </text>
+  </g>
+  <g id="sample_target_0_1">
+    <rect x="593" y="299" width="74" height="23" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_target_0_1t">
+    <text x="596.0" y="312.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#FFFFFF">Timestamp</tspan>
+    </text>
+  </g>
+  <g id="sample_target_1_0">
+    <rect x="518" y="322" width="75" height="23" fill="#F8BEBC" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_target_1_0t">
+    <text x="552.0" y="335.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#ED2117">?</tspan>
+    </text>
+  </g>
+  <g id="sample_target_1_1">
+    <rect x="593" y="322" width="74" height="23" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_target_1_1t">
+    <text x="608.25" y="335.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Feb 3rd</tspan>
+    </text>
+  </g>
+  <g id="sample_product_0_0">
+    <rect x="519" y="396" width="75" height="23" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_product_0_0t">
+    <text x="540.875" y="409.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#FFFFFF">Price</tspan>
+    </text>
+  </g>
+  <g id="sample_product_0_1">
+    <rect x="594" y="396" width="73" height="23" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_product_0_1t">
+    <text x="602.875" y="409.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#FFFFFF">Category</tspan>
+    </text>
+  </g>
+  <g id="sample_product_1_0">
+    <rect x="519" y="419" width="75" height="23" fill="#F6C59F" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_product_1_0t">
+    <text x="549.5" y="432.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">$2</tspan>
+    </text>
+  </g>
+  <g id="sample_product_1_1">
+    <rect x="594" y="419" width="73" height="23" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_product_1_1t">
+    <text x="616.0" y="432.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Food</tspan>
+    </text>
+  </g>
+  <g id="sample_p1_0_0">
+    <rect x="440" y="487" width="72" height="22.5" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_p1_0_0t">
+    <text x="457.25" y="499.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#FFFFFF">Rating</tspan>
+    </text>
+  </g>
+  <g id="sample_p1_0_1">
+    <rect x="512" y="487" width="72" height="22.5" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_p1_0_1t">
+    <text x="516.75" y="499.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#FFFFFF">Timestamp</tspan>
+    </text>
+  </g>
+  <g id="sample_p1_1_0">
+    <rect x="440" y="509.5" width="72" height="22.5" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_p1_1_0t">
+    <text x="472.75" y="522.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">2</tspan>
+    </text>
+  </g>
+  <g id="sample_p1_1_1">
+    <rect x="512" y="509.5" width="72" height="22.5" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_p1_1_1t">
+    <text x="529.0" y="522.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">Jan 3rd</tspan>
+    </text>
+  </g>
+  <g id="sample_p2_0_0">
+    <rect x="590" y="487" width="72" height="22.5" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_p2_0_0t">
+    <text x="607.25" y="499.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#FFFFFF">Rating</tspan>
+    </text>
+  </g>
+  <g id="sample_p2_0_1">
+    <rect x="662" y="487" width="71" height="22.5" fill="#777373" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_p2_0_1t">
+    <text x="666.25" y="499.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#FFFFFF">Timestamp</tspan>
+    </text>
+  </g>
+  <g id="sample_p2_1_0">
+    <rect x="590" y="509.5" width="72" height="22.5" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_p2_1_0t">
+    <text x="622.75" y="522.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">5</tspan>
+    </text>
+  </g>
+  <g id="sample_p2_1_1">
+    <rect x="662" y="509.5" width="71" height="22.5" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sample_p2_1_1t">
+    <text x="677.5" y="522.25" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">Mar 1st</tspan>
+    </text>
+  </g>
+  <g id="highlight_price">
+    <rect x="511" y="416" width="85" height="28" rx="4" fill="none" stroke="#D16B17" stroke-width="3" stroke-dasharray="6 2" />
+  </g>
+  <g id="up">
+    <rect x="440" y="164" width="72" height="40" fill="#D9D9D9" stroke="none" stroke-width="1" />
+  </g>
+  <g id="upt0">
+    <text x="443" y="177.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#000000">User-</tspan>
+    </text>
+  </g>
+  <g id="upt1">
+    <text x="443" y="194.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#000000">Purchase</tspan>
+    </text>
+  </g>
+  <g id="pu">
+    <rect x="486" y="267" width="97" height="22" fill="#D9D9D9" stroke="none" stroke-width="1" />
+  </g>
+  <g id="put">
+    <text x="489" y="280.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#000000">Purchase-User</tspan>
+    </text>
+  </g>
+  <g id="pp">
+    <rect x="468" y="352" width="115" height="22" fill="#D9D9D9" stroke="none" stroke-width="1" />
+  </g>
+  <g id="ppt">
+    <text x="471" y="365.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#000000">Purchase-Product</tspan>
+    </text>
+  </g>
+  <g id="prp">
+    <rect x="423" y="457" width="108" height="22" fill="#D9D9D9" stroke="none" stroke-width="1" />
+  </g>
+  <g id="prpt">
+    <text x="426" y="470.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="bold" font-style="normal" fill="#000000">Product-Purchase</tspan>
+    </text>
+  </g>
+  <g id="lenc">
+    <rect x="449" y="592" width="60" height="22" rx="5" fill="#FBE4D1" stroke="#CE5C00" stroke-width="2" stroke-dasharray="6 3" />
+  </g>
+  <g id="lenct">
+    <text x="522" y="587.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Unified</tspan>
+    </text>
+    <text x="522" y="605.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Feature</tspan>
+    </text>
+    <text x="522" y="622.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Encoder</tspan>
+    </text>
+  </g>
+  <g id="lmpnn">
+    <rect x="604" y="591" width="60" height="22" rx="5" fill="#E1EDF7" stroke="#2879BD" stroke-width="2" stroke-dasharray="6 3" />
+  </g>
+  <g id="lmpnnt">
+    <text x="676" y="599.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">MPNN</tspan>
+    </text>
+  </g>
+  <g id="lcross">
+    <rect x="449" y="646" width="60" height="22" rx="5" fill="#E1EED6" stroke="#598633" stroke-width="2" stroke-dasharray="6 3" />
+  </g>
+  <g id="lcrosst0">
+    <text x="521" y="654.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Cross-</tspan>
+    </text>
+  </g>
+  <g id="lcrosst1">
+    <text x="521" y="671.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Attention</tspan>
+    </text>
+  </g>
+  <g id="ltemp">
+    <rect x="604" y="647" width="60" height="22" rx="5" fill="#FFF2CC" stroke="#FFD65C" stroke-width="2" stroke-dasharray="6 3" />
+  </g>
+  <g id="ltempt">
+    <text x="676" y="655.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Temporal</tspan>
+    </text>
+    <text x="676" y="671.6" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Restriction</tspan>
+    </text>
+    <text x="676" y="687.7" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Masking</tspan>
+    </text>
+  </g>
+  <g id="tasktoken">
+    <rect x="816" y="91" width="36" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="tasktokent">
+    <text x="820.25" y="106.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Task</tspan>
+    </text>
+  </g>
+  <g id="price">
+    <rect x="870" y="91" width="68" height="27" fill="#606060" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="pricet">
+    <text x="888.375" y="106.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#FFFFFF">Price</tspan>
+    </text>
+  </g>
+  <g id="category">
+    <rect x="938" y="91" width="67" height="27" fill="#606060" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="categoryt">
+    <text x="943.875" y="106.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#FFFFFF">Category</tspan>
+    </text>
+  </g>
+  <g id="dollar">
+    <rect x="1019" y="91" width="48" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="dollart">
+    <text x="1036.0" y="106.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">$2</tspan>
+    </text>
+  </g>
+  <g id="food">
+    <rect x="1067" y="91" width="48" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="foodt">
+    <text x="1076.5" y="106.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Food</tspan>
+    </text>
+  </g>
+  <g id="encoderin0">
+    <polygon points="835.35,119.0 835.35,137.0 837.0,137.0 835,142 833.0,137.0 834.65,137.0 834.65,119.0" fill="#000000" />
+  </g>
+  <g id="encoderin1">
+    <polygon points="938.35,119.0 938.35,137.0 940.0,137.0 938,142 936.0,137.0 937.65,137.0 937.65,119.0" fill="#000000" />
+  </g>
+  <g id="encoderin2">
+    <polygon points="1068.35,119.0 1068.35,137.0 1070.0,137.0 1068,142 1066.0,137.0 1067.65,137.0 1067.65,119.0" fill="#000000" />
+  </g>
+  <g id="encoderlabel">
+    <text x="815" y="169.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#000000">Unified</tspan>
+    </text>
+    <text x="815" y="187.0" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#000000">Feature</tspan>
+    </text>
+    <text x="815" y="204.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="bold" font-style="normal" fill="#000000">Encoder</tspan>
+    </text>
+  </g>
+  <g id="sentence">
+    <rect x="873" y="158" width="96" height="52" fill="#EFB185" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="sentencet">
+    <text x="895.625" y="170.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Sentence</tspan>
+    </text>
+    <text x="888.625" y="186.6" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Embedding</tspan>
+    </text>
+    <text x="897.625" y="202.7" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Encoder</tspan>
+    </text>
+  </g>
+  <g id="numeric">
+    <rect x="994" y="158" width="97" height="52" fill="#EFB185" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="numerict">
+    <text x="1013.375" y="170.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Pretrained</tspan>
+    </text>
+    <text x="1017.75" y="186.6" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Numeric</tspan>
+    </text>
+    <text x="1019.125" y="202.7" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Encoder</tspan>
+    </text>
+  </g>
+  <g id="ti">
+    <rect x="818" y="249" width="36" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="tit">
+    <text x="832.625" y="264.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="italic" fill="#000000">tᵢ</tspan>
+    </text>
+  </g>
+  <g id="mi">
+    <rect x="888" y="249" width="101" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="mit">
+    <text x="931.875" y="264.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="italic" fill="#000000">mᵢ</tspan>
+    </text>
+  </g>
+  <g id="miinner">
+    <rect x="891" y="251" width="95" height="23" fill="none" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="xi">
+    <rect x="1018" y="249" width="101" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="xit">
+    <text x="1063.5" y="264.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="italic" fill="#FF0000">xᵢ</tspan>
+    </text>
+  </g>
+  <g id="xiinner">
+    <rect x="1021" y="251" width="95" height="23" fill="none" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="encoderout0">
+    <polygon points="836.35,223.0 836.35,243.0 838.0,243.0 836,248 834.0,243.0 835.65,243.0 835.65,223.0" fill="#000000" />
+  </g>
+  <g id="encoderout1">
+    <polygon points="936.35,223.0 936.35,243.0 938.0,243.0 936,248 934.0,243.0 935.65,243.0 935.65,223.0" fill="#000000" />
+  </g>
+  <g id="encoderout2">
+    <polygon points="1068.35,223.0 1068.35,243.0 1070.0,243.0 1068,248 1066.0,243.0 1067.65,243.0 1067.65,223.0" fill="#000000" />
+  </g>
+  <g id="attnin0_0">
+    <line x1="836" y1="276" x2="836" y2="323" stroke="#000000" stroke-width="0.7" />
+  </g>
+  <g id="attnin0_1">
+    <line x1="836" y1="323" x2="872" y2="323" stroke="#000000" stroke-width="0.7" />
+  </g>
+  <g id="attnin0_2">
+    <polygon points="872.35,323.0 872.35,365.0 874.0,365.0 872,370 870.0,365.0 871.65,365.0 871.65,323.0" fill="#000000" />
+  </g>
+  <g id="attnin1_0">
+    <line x1="939" y1="279" x2="939" y2="324" stroke="#000000" stroke-width="0.7" />
+  </g>
+  <g id="attnin1_1">
+    <line x1="939" y1="324" x2="947" y2="324" stroke="#000000" stroke-width="0.7" />
+  </g>
+  <g id="attnin1_2">
+    <polygon points="947.35,324.0 947.35,366.0 949.0,366.0 947,371 945.0,366.0 946.65,366.0 946.65,324.0" fill="#000000" />
+  </g>
+  <g id="attnin2_0">
+    <line x1="1069" y1="279" x2="1069" y2="324" stroke="#000000" stroke-width="0.7" />
+  </g>
+  <g id="attnin2_1">
+    <line x1="1069" y1="324" x2="1023" y2="324" stroke="#000000" stroke-width="0.7" />
+  </g>
+  <g id="attnin2_2">
+    <polygon points="1023.35,324.0 1023.35,366.0 1025.0,366.0 1023,371 1021.0,366.0 1022.65,366.0 1022.65,324.0" fill="#000000" />
+  </g>
+  <g id="q">
+    <rect x="855" y="372" width="33" height="32" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="qt">
+    <text x="866.0" y="391.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="bold" font-style="italic" fill="#000000">Q</tspan>
+    </text>
+  </g>
+  <g id="k">
+    <rect x="930" y="372" width="33" height="32" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="kt">
+    <text x="940.625" y="391.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="bold" font-style="italic" fill="#000000">K</tspan>
+    </text>
+  </g>
+  <g id="v">
+    <rect x="1007" y="372" width="33" height="32" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="vt">
+    <text x="1017.625" y="391.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="bold" font-style="italic" fill="#000000">V</tspan>
+    </text>
+  </g>
+  <g id="cross_title">
+    <text x="896.0" y="448.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="16" font-weight="bold" font-style="normal" fill="#000000">Cross-Attention</tspan>
+    </text>
+  </g>
+  <g id="cross_out">
+    <polygon points="948.35,531.0 948.35,595.0 950.0,595.0 948,600 946.0,595.0 947.65,595.0 947.65,531.0" fill="#000000" />
+  </g>
+  <g id="vi">
+    <rect x="929" y="600" width="38" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="vit">
+    <text x="943.375" y="615.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="normal" font-style="italic" fill="#000000">vᵢ</tspan>
+    </text>
+  </g>
+  <g id="vi_mpnn">
+    <polygon points="967.0,613.7 1259.0,613.7 1259.0,612.0 1264,614 1259.0,616.0 1259.0,614.3 967.0,614.3" fill="#555555" />
+  </g>
+  <g id="r_x">
+    <polygon points="1281.705986217781,600.8101160989835 1309.9933590604026,557.0103129878273 1308.607294087084,556.1151460258925 1313,553 1311.9674515981592,558.2852477517952 1310.5813866248407,557.3900807898603 1282.294013782219,601.1898839010165" fill="#000000" />
+  </g>
+  <g id="r_u">
+    <polygon points="1342.7032005935982,601.1854996290011 1315.3531952936141,557.4254911490266 1313.9539980920058,558.2999894000318 1313,553 1317.345991308026,556.1799936400191 1315.9467941064177,557.0544918910243 1343.2967994064018,600.8145003709989" fill="#000000" />
+  </g>
+  <g id="a_x">
+    <polygon points="1249.714765636401,672.797166674774 1278.8171467046009,631.8719432976177 1277.4724704190626,630.9157290501237 1282,628 1280.7322917173374,633.2338241955638 1279.387615431799,632.2776099480698 1250.285234363599,673.202833325226" fill="#000000" />
+  </g>
+  <g id="b_u">
+    <polygon points="1315.6998774760007,672.8199264856004 1340.127398698863,632.1073911141631 1338.7125353714373,631.2584731177077 1343,628 1342.1425070742876,633.3164561394177 1340.7276437468618,632.4675381429623 1316.3001225239993,673.1800735143996" fill="#000000" />
+  </g>
+  <g id="c_u">
+    <polygon points="1377.7237267239184,673.2148792147302 1345.793429791493,632.1616403016119 1344.490998632822,633.1746423139115 1343,628 1347.6484075023272,630.7188798598519 1346.3459763436563,631.7318818721515 1378.2762732760816,672.7851207852698" fill="#000000" />
+  </g>
+  <g id="loop0">
+    <line x1="1264" y1="615" x2="1250" y2="615" stroke="#555555" stroke-width="0.5" />
+  </g>
+  <g id="loop1">
+    <line x1="1250" y1="615" x2="1250" y2="643" stroke="#555555" stroke-width="0.5" />
+  </g>
+  <g id="loop2">
+    <line x1="1250" y1="643" x2="1283" y2="643" stroke="#555555" stroke-width="0.5" />
+  </g>
+  <g id="loop3">
+    <line x1="1283" y1="643" x2="1283" y2="628" stroke="#555555" stroke-width="0.5" />
+  </g>
+  <g id="loop4">
+    <line x1="1283" y1="601" x2="1283" y2="588" stroke="#555555" stroke-width="0.5" />
+  </g>
+  <g id="loop5">
+    <line x1="1283" y1="588" x2="1250" y2="588" stroke="#555555" stroke-width="0.5" />
+  </g>
+  <g id="loop6">
+    <polygon points="1250.25,588.0 1250.25,610.0 1252.0,610.0 1250,615 1248.0,610.0 1249.75,610.0 1249.75,588.0" fill="#555555" />
+  </g>
+  <g id="root">
+    <rect x="1283" y="526" width="60" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="roott">
+    <text x="1287.625" y="542.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Purchase</tspan>
+    </text>
+  </g>
+  <g id="xnode">
+    <rect x="1264" y="601" width="36" height="27" fill="#F8BEBC" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="xnodet">
+    <text x="1277.5" y="617.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="italic" fill="#FF0000">xᵢ</tspan>
+    </text>
+  </g>
+  <g id="unode">
+    <rect x="1324" y="601" width="37" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="unodet">
+    <text x="1329.25" y="617.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">User</tspan>
+    </text>
+  </g>
+  <g id="pa">
+    <rect x="1222" y="673" width="56" height="26" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="pat">
+    <text x="1224.625" y="689.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Purchase</tspan>
+    </text>
+  </g>
+  <g id="pb">
+    <rect x="1288" y="673" width="56" height="26" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="pbt">
+    <text x="1290.625" y="689.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Purchase</tspan>
+    </text>
+  </g>
+  <g id="pc">
+    <rect x="1350" y="673" width="56" height="26" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="pct">
+    <text x="1352.625" y="689.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Purchase</tspan>
+    </text>
+  </g>
+  <g id="mpnntitle">
+    <text x="1291.125" y="498.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="16" font-weight="bold" font-style="normal" fill="#000000">MPNN</tspan>
+    </text>
+  </g>
+  <g id="mpnn_z">
+    <polygon points="1313.65,473.0 1313.65,419.0 1312.0,419.0 1314,414 1316.0,419.0 1314.35,419.0 1314.35,473.0" fill="#000000" />
+  </g>
+  <g id="z">
+    <rect x="1296" y="388" width="36" height="25" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="zt">
+    <text x="1310.875" y="403.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="italic" fill="#000000">z</tspan>
+    </text>
+  </g>
+  <g id="z_reg">
+    <polygon points="1313.7153819461134,388.2036972346444 1243.6253424410331,290.26966943302534 1242.2835716155673,291.2299563963488 1241,286 1245.536349374272,288.9019880004131 1244.1945785488062,289.8622749637366 1314.2846180538866,387.7963027653556" fill="#000000" />
+  </g>
+  <g id="z_class">
+    <polygon points="1313.670978222617,387.8806489631061 1348.965963409847,290.58096006857943 1347.4148607450409,290.0183051803654 1351,286 1351.1751096294195,291.3823170305812 1349.6240069646133,290.8196621423672 1314.329021777383,388.1193510368939" fill="#000000" />
+  </g>
+  <g id="decodertitle">
+    <text x="1252.5" y="160.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="15" font-weight="bold" font-style="normal" fill="#000000">Unified Task Decoder</tspan>
+    </text>
+  </g>
+  <g id="regtitle">
+    <text x="1196.25" y="187.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Regression Task</tspan>
+    </text>
+  </g>
+  <g id="classtitle">
+    <text x="1322.125" y="186.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Classification Task</tspan>
+    </text>
+  </g>
+  <g id="regdecoder">
+    <rect x="1193" y="197" width="95" height="89" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="regtxt">
+    <text x="1211.875" y="229.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Pretrained</tspan>
+    </text>
+    <text x="1216.25" y="245.6" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Numeric</tspan>
+    </text>
+    <text x="1217.25" y="261.7" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Decoder</tspan>
+    </text>
+  </g>
+  <g id="classdecoder">
+    <rect x="1318" y="197" width="65" height="89" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="classtxt">
+    <text x="1333.0" y="229.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Query</tspan>
+    </text>
+    <text x="1322.0" y="245.6" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Candidate</tspan>
+    </text>
+    <text x="1331.75" y="261.7" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">Labels</tspan>
+    </text>
+  </g>
+  <g id="classout0">
+    <line x1="1383" y1="210" x2="1398" y2="210" stroke="#000000" stroke-width="0.7" />
+  </g>
+  <g id="classlabel0">
+    <rect x="1398" y="197" width="36" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="classlabel0t">
+    <text x="1412.5" y="213.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#EF1D11">1</tspan>
+    </text>
+  </g>
+  <g id="classout1">
+    <line x1="1383" y1="241" x2="1398" y2="241" stroke="#000000" stroke-width="0.7" />
+  </g>
+  <g id="classlabel1">
+    <rect x="1398" y="228" width="36" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="classlabel1t">
+    <text x="1410.75" y="244.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#000000">...</tspan>
+    </text>
+  </g>
+  <g id="classout2">
+    <line x1="1383" y1="272" x2="1398" y2="272" stroke="#000000" stroke-width="0.7" />
+  </g>
+  <g id="classlabel2">
+    <rect x="1398" y="259" width="36" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="classlabel2t">
+    <text x="1412.5" y="275.5" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="14" font-weight="normal" font-style="normal" fill="#EF1D11">5</tspan>
+    </text>
+  </g>
+  <g id="prediction">
+    <rect x="1264" y="90" width="100" height="27" fill="#FFFFFF" stroke="#000000" stroke-width="1" />
+  </g>
+  <g id="predictiont">
+    <text x="1287.5" y="105.75" xml:space="preserve">
+      <tspan font-family="Times New Roman" font-size="13" font-weight="normal" font-style="normal" fill="#000000">Prediction</tspan>
+    </text>
+  </g>
+  <g id="predictionline">
+    <polygon points="1314.65,142.0 1314.65,122.0 1313.0,122.0 1315,117 1317.0,122.0 1315.35,122.0 1315.35,142.0" fill="#000000" />
+  </g>
+</svg>

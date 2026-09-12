@@ -80,3 +80,12 @@ Differences worth reporting: unavailable source font, editable diagrams reconstr
 raster labels in a complex chart, uncertain OCR, and no native target-application check.
 Rebuild from `scene.resolved.json` with its sibling assets to reproduce selected fonts and line
 breaks on a machine containing the same fonts. Rebuild into a new output directory.
+
+## PDFium line-end hyphen markers
+
+PDFium may return U+0002 in bounded extraction and U+FFFE in range extraction for a
+visible line-end hyphen. The runtime restores a hyphen only when the engine reports
+`FPDFText_IsHyphen == 1` and Unicode U+0002 at the indexed glyph, with a matching count
+inside the text frame. Raw `rendered` text is retained beside `rendered_normalized`.
+The same indexed glyph remains in ownership, font and overflow checks. Missing or
+unconfirmed markers still fail; no general control-character stripping is performed.

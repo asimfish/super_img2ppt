@@ -1,0 +1,2438 @@
+{
+  "version": 1,
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 1464,
+      "height": 303,
+      "source": "pages/page_001/source.png",
+      "background": "#FFFFFF",
+      "reviewed": true,
+      "notes": "Adapted editable reconstruction of Figure 2, Li et al., BLIP-2, ICML 2023, PMLR 202:19730\u201319742. https://proceedings.mlr.press/v202/li23q.html CC BY 4.0 https://creativecommons.org/licenses/by/4.0/ . Changes: native editable text and diagram geometry reconstructed from pixels; cat and snowflake retained raster.",
+      "elements": [
+        {
+          "id": "panel",
+          "kind": "shape",
+          "z": 0,
+          "box": [
+            236,
+            4,
+            635,
+            294
+          ],
+          "shape": "round_rect",
+          "fill": "#FFF7DF",
+          "stroke": null,
+          "stroke_width": 1,
+          "role": "background",
+          "radius": 6
+        },
+        {
+          "id": "cat",
+          "kind": "image",
+          "z": 4,
+          "box": [
+            4,
+            104,
+            121,
+            120
+          ],
+          "path": "assets/cat.png",
+          "contains_text": false,
+          "provenance": "Exact source raster crop; BLIP-2 Figure 2 PMLR 2023, CC BY 4.0."
+        },
+        {
+          "id": "snowflake",
+          "kind": "image",
+          "z": 4,
+          "box": [
+            157,
+            110,
+            22,
+            21
+          ],
+          "path": "assets/snowflake.png",
+          "contains_text": false,
+          "provenance": "Exact source raster crop; BLIP-2 Figure 2 PMLR 2023, CC BY 4.0.",
+          "allow_overlap_with": [
+            "encoder"
+          ],
+          "overlap_reason": "Source-visible icon inside encoder, connector boundary contact, branch junction, or x on dashed mask connector."
+        },
+        {
+          "id": "encoder",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            154,
+            99,
+            80,
+            130
+          ],
+          "shape": "polygon",
+          "fill": "#1682C1",
+          "stroke": "#111111",
+          "stroke_width": 1,
+          "vertices": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0.2
+            ],
+            [
+              1,
+              0.8
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": "inputimage",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            14,
+            66,
+            116,
+            26
+          ],
+          "text": "Input Image",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false,
+          "bold": true
+        },
+        {
+          "id": "enc_text",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            159,
+            142,
+            75,
+            49
+          ],
+          "text": "Image\nEncoder",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#FFFFFF",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1.15,
+          "container": "encoder"
+        },
+        {
+          "id": "qformer",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            249,
+            13,
+            96,
+            26
+          ],
+          "text": "Q-Former",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false,
+          "bold": true
+        },
+        {
+          "id": "every",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            239,
+            115,
+            95,
+            47
+          ],
+          "text": "for every\nother block",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1.1
+        },
+        {
+          "id": "image_to_encoder",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              125,
+              164.5
+            ],
+            [
+              153,
+              164.5
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          }
+        },
+        {
+          "id": "encoder_to_q",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              234,
+              164.5
+            ],
+            [
+              332,
+              164.5
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          }
+        },
+        {
+          "id": "left_block",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            332.5,
+            90.5,
+            159,
+            148
+          ],
+          "shape": "round_rect",
+          "fill": null,
+          "stroke": "#222222",
+          "stroke_width": 1,
+          "radius": 6
+        },
+        {
+          "id": "right_block",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            666.5,
+            90.5,
+            159,
+            148
+          ],
+          "shape": "round_rect",
+          "fill": null,
+          "stroke": "#222222",
+          "stroke_width": 1,
+          "radius": 6
+        },
+        {
+          "id": "ff1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            341.5,
+            98,
+            144,
+            31
+          ],
+          "shape": "round_rect",
+          "fill": "#B477BF",
+          "stroke": null,
+          "stroke_width": 1,
+          "radius": 6
+        },
+        {
+          "id": "ff1_text",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            344.5,
+            101,
+            138,
+            26
+          ],
+          "text": "Feed Forward",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#FFFFFF",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "container": "ff1"
+        },
+        {
+          "id": "ca",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            341.5,
+            147,
+            144,
+            31
+          ],
+          "shape": "round_rect",
+          "fill": "#8FA4BA",
+          "stroke": null,
+          "stroke_width": 1,
+          "radius": 6
+        },
+        {
+          "id": "ca_text",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            344.5,
+            150,
+            138,
+            26
+          ],
+          "text": "Cross Attention",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#FFFFFF",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "container": "ca"
+        },
+        {
+          "id": "sa1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            341.5,
+            195,
+            144,
+            31
+          ],
+          "shape": "round_rect",
+          "fill": "#EE8B50",
+          "stroke": null,
+          "stroke_width": 1,
+          "radius": 6
+        },
+        {
+          "id": "sa1_text",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            344.5,
+            198,
+            138,
+            26
+          ],
+          "text": "Self Attention",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#FFFFFF",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "container": "sa1"
+        },
+        {
+          "id": "ff2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            675,
+            98,
+            144,
+            31
+          ],
+          "shape": "round_rect",
+          "fill": "#70A745",
+          "stroke": null,
+          "stroke_width": 1,
+          "radius": 6
+        },
+        {
+          "id": "ff2_text",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            678,
+            101,
+            138,
+            26
+          ],
+          "text": "Feed Forward",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#FFFFFF",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "container": "ff2"
+        },
+        {
+          "id": "sa2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            675,
+            195,
+            144,
+            31
+          ],
+          "shape": "round_rect",
+          "fill": "#EE8B50",
+          "stroke": null,
+          "stroke_width": 1,
+          "radius": 6
+        },
+        {
+          "id": "sa2_text",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            678,
+            198,
+            138,
+            26
+          ],
+          "text": "Self Attention",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#FFFFFF",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "container": "sa2"
+        },
+        {
+          "id": "l1",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              413.5,
+              147
+            ],
+            [
+              413.5,
+              130
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          }
+        },
+        {
+          "id": "l2",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              413.5,
+              195
+            ],
+            [
+              413.5,
+              179
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          }
+        },
+        {
+          "id": "l3",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              413.5,
+              261
+            ],
+            [
+              413.5,
+              227
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          }
+        },
+        {
+          "id": "r1",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              747,
+              195
+            ],
+            [
+              747,
+              130
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          }
+        },
+        {
+          "id": "r2",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              747,
+              259
+            ],
+            [
+              747,
+              227
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          }
+        },
+        {
+          "id": "l4",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              414,
+              90
+            ],
+            [
+              414,
+              71
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          }
+        },
+        {
+          "id": "r3",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              747,
+              90
+            ],
+            [
+              747,
+              72
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          }
+        },
+        {
+          "id": "itm",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            354,
+            22.5,
+            121,
+            47
+          ],
+          "shape": "round_rect",
+          "fill": "#FBE5D6",
+          "stroke": "#222222",
+          "stroke_width": 1,
+          "radius": 6
+        },
+        {
+          "id": "itm_text",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            357,
+            24.5,
+            115,
+            45
+          ],
+          "text": "Image-Text\nMatching",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#000000",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1.1,
+          "container": "itm"
+        },
+        {
+          "id": "itc",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            523.5,
+            46.5,
+            111,
+            68.5
+          ],
+          "shape": "round_rect",
+          "fill": "#FBE5D6",
+          "stroke": "#222222",
+          "stroke_width": 1,
+          "radius": 6
+        },
+        {
+          "id": "itc_text",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            526.5,
+            48.5,
+            105,
+            66.5
+          ],
+          "text": "Image-Text\nContrastive\nLearning",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#000000",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1.1,
+          "container": "itc"
+        },
+        {
+          "id": "itg",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            671.5,
+            22.5,
+            151,
+            48
+          ],
+          "shape": "round_rect",
+          "fill": "#FBE5D6",
+          "stroke": "#222222",
+          "stroke_width": 1,
+          "radius": 6
+        },
+        {
+          "id": "itg_text",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            674.5,
+            24.5,
+            145,
+            46
+          ],
+          "text": "Image-Grounded\nText Generation",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#000000",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1.1,
+          "container": "itg"
+        },
+        {
+          "id": "contrast_l",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              414,
+              85
+            ],
+            [
+              523,
+              85
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          },
+          "allow_overlap_with": [
+            "l4"
+          ],
+          "overlap_reason": "Source-visible icon inside encoder, connector boundary contact, branch junction, or x on dashed mask connector."
+        },
+        {
+          "id": "contrast_r",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              747,
+              85
+            ],
+            [
+              635,
+              85
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          },
+          "allow_overlap_with": [
+            "r3"
+          ],
+          "overlap_reason": "Source-visible icon inside encoder, connector boundary contact, branch junction, or x on dashed mask connector."
+        },
+        {
+          "id": "nx1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            294,
+            205,
+            35,
+            26
+          ],
+          "text": "x N",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "nx2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            837,
+            205,
+            33,
+            26
+          ],
+          "text": "x N",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "masking",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            502,
+            159,
+            162,
+            26
+          ],
+          "text": "Attention Masking",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false,
+          "bold": true
+        },
+        {
+          "id": "bidirectional",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            531,
+            183,
+            113,
+            24
+          ],
+          "text": "bidirectional",
+          "font_size": 17,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center"
+        },
+        {
+          "id": "causal",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            507,
+            200,
+            143,
+            24
+          ],
+          "text": "multimodal causal",
+          "font_size": 17,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center"
+        },
+        {
+          "id": "unimodal",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            536,
+            216,
+            82,
+            23
+          ],
+          "text": "uni-modal",
+          "font_size": 17,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center"
+        },
+        {
+          "id": "bidir_l",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              515,
+              197
+            ],
+            [
+              486,
+              197
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          },
+          "allow_overlap_with": [
+            "left_block",
+            "sa1"
+          ],
+          "overlap_reason": "Source-visible icon inside encoder, connector boundary contact, branch junction, or x on dashed mask connector."
+        },
+        {
+          "id": "bidir_r",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              642,
+              197
+            ],
+            [
+              675,
+              197
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          },
+          "allow_overlap_with": [
+            "right_block"
+          ],
+          "overlap_reason": "Source-visible icon inside encoder, connector boundary contact, branch junction, or x on dashed mask connector."
+        },
+        {
+          "id": "causal_l",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              486,
+              211
+            ],
+            [
+              508,
+              211
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1
+        },
+        {
+          "id": "causal_r",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              650,
+              211
+            ],
+            [
+              675,
+              211
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1,
+          "arrow": true,
+          "arrow_head": {
+            "length": 8,
+            "width": 6
+          },
+          "allow_overlap_with": [
+            "right_block"
+          ],
+          "overlap_reason": "Source-visible icon inside encoder, connector boundary contact, branch junction, or x on dashed mask connector."
+        },
+        {
+          "id": "uni_l",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              491,
+              225
+            ],
+            [
+              534,
+              225
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1,
+          "dash": [
+            6,
+            4
+          ],
+          "allow_overlap_with": [
+            "left_block"
+          ],
+          "overlap_reason": "Source-visible icon inside encoder, connector boundary contact, branch junction, or x on dashed mask connector."
+        },
+        {
+          "id": "uni_r",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              621,
+              225
+            ],
+            [
+              666,
+              225
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1,
+          "dash": [
+            6,
+            4
+          ],
+          "allow_overlap_with": [
+            "right_block"
+          ],
+          "overlap_reason": "Source-visible icon inside encoder, connector boundary contact, branch junction, or x on dashed mask connector."
+        },
+        {
+          "id": "cross_l",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            504,
+            216,
+            14,
+            22
+          ],
+          "text": "x",
+          "font_size": 16,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false,
+          "allow_overlap_with": [
+            "uni_l"
+          ],
+          "overlap_reason": "Source-visible icon inside encoder, connector boundary contact, branch junction, or x on dashed mask connector."
+        },
+        {
+          "id": "cross_r",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            638,
+            216,
+            14,
+            22
+          ],
+          "text": "x",
+          "font_size": 16,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false,
+          "allow_overlap_with": [
+            "uni_r"
+          ],
+          "overlap_reason": "Source-visible icon inside encoder, connector boundary contact, branch junction, or x on dashed mask connector."
+        },
+        {
+          "id": "learned",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            270,
+            247,
+            77,
+            47
+          ],
+          "text": "Learned\nQueries",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false,
+          "bold": true,
+          "line_height": 1.15,
+          "align": "center"
+        },
+        {
+          "id": "queries",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            355.5,
+            261.5,
+            115.5,
+            26
+          ],
+          "shape": "round_rect",
+          "fill": "#FFF7DF",
+          "stroke": "#222222",
+          "stroke_width": 1,
+          "radius": 6
+        },
+        {
+          "id": "query0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            366,
+            268,
+            13,
+            13
+          ],
+          "shape": "rect",
+          "fill": "#FAB5A1",
+          "stroke": "#111111",
+          "stroke_width": 1
+        },
+        {
+          "id": "query1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            390,
+            268,
+            13,
+            13
+          ],
+          "shape": "rect",
+          "fill": "#FFDE7A",
+          "stroke": "#111111",
+          "stroke_width": 1
+        },
+        {
+          "id": "query2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            424,
+            268,
+            13,
+            13
+          ],
+          "shape": "rect",
+          "fill": "#A8CDA0",
+          "stroke": "#111111",
+          "stroke_width": 1
+        },
+        {
+          "id": "query3",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            448,
+            268,
+            13,
+            13
+          ],
+          "shape": "rect",
+          "fill": "#B3C9E5",
+          "stroke": "#111111",
+          "stroke_width": 1
+        },
+        {
+          "id": "dots",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            407,
+            264,
+            15,
+            18
+          ],
+          "text": "\u00b7\u00b7\u00b7",
+          "font_size": 12,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "inputtext",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            547,
+            264,
+            88,
+            27
+          ],
+          "text": "Input Text",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false,
+          "bold": true
+        },
+        {
+          "id": "prompt",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            640,
+            259.5,
+            213.5,
+            31
+          ],
+          "shape": "round_rect",
+          "fill": "#FFF7DF",
+          "stroke": "#222222",
+          "stroke_width": 1,
+          "radius": 6
+        },
+        {
+          "id": "prompt_text",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            647,
+            263,
+            205,
+            27
+          ],
+          "text": "a cat wearing sunglasses",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#000000",
+          "fit": "strict",
+          "wrap": false,
+          "italic": true,
+          "container": "prompt"
+        },
+        {
+          "id": "separator",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              884.5,
+              4
+            ],
+            [
+              884.5,
+              298
+            ]
+          ],
+          "stroke": "#111111",
+          "stroke_width": 1
+        },
+        {
+          "id": "legend_q",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            915,
+            3,
+            24,
+            25
+          ],
+          "text": "Q:",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false,
+          "bold": true
+        },
+        {
+          "id": "legend_query",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            937,
+            3,
+            187,
+            25
+          ],
+          "text": "query token positions;",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "legend_t",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1128,
+            3,
+            23,
+            25
+          ],
+          "text": "T:",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false,
+          "bold": true
+        },
+        {
+          "id": "legend_text",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1150,
+            3,
+            181,
+            25
+          ],
+          "text": "text token positions.",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "masked",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            916.5,
+            32.5,
+            13,
+            13
+          ],
+          "shape": "rect",
+          "fill": "#9B9B9B",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "masked_text",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            937,
+            27,
+            74,
+            27
+          ],
+          "text": "masked",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "unmasked",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1010,
+            32.5,
+            13,
+            13
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "unmasked_text",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1031,
+            27,
+            93,
+            27
+          ],
+          "text": "unmasked",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "qtop0",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            956.5,
+            57.5,
+            23,
+            25
+          ],
+          "text": "Q",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "ttop0",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1016.5,
+            57.5,
+            23,
+            25
+          ],
+          "text": "T",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "qleft0",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            918.5,
+            97.5,
+            23,
+            25
+          ],
+          "text": "Q",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "tleft0",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            919.5,
+            156.5,
+            23,
+            25
+          ],
+          "text": "T",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "grid0_0_0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            941.5,
+            86.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid0_0_1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            968.0,
+            86.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid0_0_2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1000.5,
+            86.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid0_0_3",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1027.0,
+            86.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid0_1_0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            941.5,
+            113.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid0_1_1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            968.0,
+            113.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid0_1_2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1000.5,
+            113.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid0_1_3",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1027.0,
+            113.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid0_2_0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            941.5,
+            146.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid0_2_1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            968.0,
+            146.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid0_2_2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1000.5,
+            146.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid0_2_3",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1027.0,
+            146.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid0_3_0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            941.5,
+            173.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid0_3_1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            968.0,
+            173.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid0_3_2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1000.5,
+            173.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid0_3_3",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1027.0,
+            173.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "qtop1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1141,
+            59.5,
+            23,
+            25
+          ],
+          "text": "Q",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "ttop1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1201,
+            59.5,
+            23,
+            25
+          ],
+          "text": "T",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "qleft1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1103,
+            99.5,
+            23,
+            25
+          ],
+          "text": "Q",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "tleft1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1104,
+            158.5,
+            23,
+            25
+          ],
+          "text": "T",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "grid1_0_0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1126.0,
+            88.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid1_0_1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1152.5,
+            88.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid1_0_2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1185.0,
+            88.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#9B9B9B",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid1_0_3",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1211.5,
+            88.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#9B9B9B",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid1_1_0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1126.0,
+            115.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid1_1_1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1152.5,
+            115.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid1_1_2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1185.0,
+            115.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#9B9B9B",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid1_1_3",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1211.5,
+            115.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#9B9B9B",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid1_2_0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1126.0,
+            148.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid1_2_1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1152.5,
+            148.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid1_2_2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1185.0,
+            148.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid1_2_3",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1211.5,
+            148.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#9B9B9B",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid1_3_0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1126.0,
+            175.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid1_3_1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1152.5,
+            175.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid1_3_2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1185.0,
+            175.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid1_3_3",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1211.5,
+            175.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "qtop2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1328.5,
+            59.5,
+            23,
+            25
+          ],
+          "text": "Q",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "ttop2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1388.5,
+            59.5,
+            23,
+            25
+          ],
+          "text": "T",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "qleft2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1290.5,
+            99.5,
+            23,
+            25
+          ],
+          "text": "Q",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "tleft2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1291.5,
+            158.5,
+            23,
+            25
+          ],
+          "text": "T",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false
+        },
+        {
+          "id": "grid2_0_0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1313.5,
+            88.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid2_0_1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1340.0,
+            88.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid2_0_2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1372.5,
+            88.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#9B9B9B",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid2_0_3",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1399.0,
+            88.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#9B9B9B",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid2_1_0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1313.5,
+            115.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid2_1_1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1340.0,
+            115.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid2_1_2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1372.5,
+            115.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#9B9B9B",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid2_1_3",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1399.0,
+            115.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#9B9B9B",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid2_2_0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1313.5,
+            148.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#9B9B9B",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid2_2_1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1340.0,
+            148.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#9B9B9B",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid2_2_2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1372.5,
+            148.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid2_2_3",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1399.0,
+            148.5,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid2_3_0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1313.5,
+            175.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#9B9B9B",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid2_3_1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1340.0,
+            175.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#9B9B9B",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid2_3_2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1372.5,
+            175.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "grid2_3_3",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1399.0,
+            175.0,
+            20.5,
+            20.5
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#222222",
+          "stroke_width": 1
+        },
+        {
+          "id": "masktitle0",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            914,
+            205,
+            164,
+            45
+          ],
+          "text": "Bi-directional\nSelf-Attention Mask",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1.15
+        },
+        {
+          "id": "objective0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            935,
+            252.5,
+            121,
+            45
+          ],
+          "shape": "round_rect",
+          "fill": "#FBE5D6",
+          "stroke": "#222222",
+          "stroke_width": 1,
+          "radius": 6
+        },
+        {
+          "id": "objective_text0",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            937,
+            253.5,
+            117,
+            46
+          ],
+          "text": "Image-Text\nMatching",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#000000",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1.1,
+          "container": "objective0"
+        },
+        {
+          "id": "masktitle1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1091,
+            205,
+            164,
+            45
+          ],
+          "text": "Multi-modal Causal\nSelf-Attention Mask",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1.15
+        },
+        {
+          "id": "objective1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1092,
+            252.5,
+            162,
+            45
+          ],
+          "shape": "round_rect",
+          "fill": "#FBE5D6",
+          "stroke": "#222222",
+          "stroke_width": 1,
+          "radius": 6
+        },
+        {
+          "id": "objective_text1",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1094,
+            253.5,
+            158,
+            46
+          ],
+          "text": "Image-Grounded\nText Generation",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#000000",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1.1,
+          "container": "objective1"
+        },
+        {
+          "id": "masktitle2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1283,
+            205,
+            178,
+            45
+          ],
+          "text": "Uni-modal\nSelf-Attention Mask",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#222222",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1.15
+        },
+        {
+          "id": "objective2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            1283.5,
+            252.5,
+            175.5,
+            45
+          ],
+          "shape": "round_rect",
+          "fill": "#FBE5D6",
+          "stroke": "#222222",
+          "stroke_width": 1,
+          "radius": 6
+        },
+        {
+          "id": "objective_text2",
+          "kind": "text",
+          "z": 5,
+          "box": [
+            1285.5,
+            253.5,
+            171.5,
+            46
+          ],
+          "text": "Image-Text\nContrastive Learning",
+          "font_size": 18,
+          "font_family": "Arial",
+          "color": "#000000",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "line_height": 1.1,
+          "container": "objective2"
+        }
+      ]
+    }
+  ]
+}

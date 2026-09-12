@@ -1,0 +1,2813 @@
+{
+  "status": "fail",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "fail",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "user_0_2t"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 13,
+            "width_px": 51.25,
+            "height_px": 29.9,
+            "available_width_px": 90,
+            "available_height_px": 26,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 51.75,
+            "required_height_px": 30.4,
+            "fits": false,
+            "lines": [
+              "Purchase",
+              "Amount"
+            ]
+          }
+        },
+        {
+          "slide": "page_001",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "sample_user_0_0t"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 13,
+            "width_px": 46.25,
+            "height_px": 29.9,
+            "available_width_px": 72,
+            "available_height_px": 24.5,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 46.75,
+            "required_height_px": 30.4,
+            "fits": false,
+            "lines": [
+              "Account",
+              "Level"
+            ]
+          }
+        },
+        {
+          "slide": "page_001",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "sample_user_0_1t"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 13,
+            "width_px": 51.25,
+            "height_px": 29.9,
+            "available_width_px": 72,
+            "available_height_px": 24.5,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 51.75,
+            "required_height_px": 30.4,
+            "fits": false,
+            "lines": [
+              "Purchase",
+              "Amount"
+            ]
+          }
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "upt",
+            "up"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "put",
+            "pu"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "ppt",
+            "pp"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "outside_container",
+          "severity": "error",
+          "elements": [
+            "prpt",
+            "prp"
+          ],
+          "message": "Visible content is not fully contained by its declared shape"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_overflow",
+          "severity": "error",
+          "elements": [
+            "prpt"
+          ],
+          "message": "Measured text plus a 0.5 px rendering reserve does not fit; use required_width_px/required_height_px to correct the box or explicitly revise the font",
+          "layout": {
+            "scale": 1,
+            "effective_font_size_px": 13,
+            "width_px": 100.25,
+            "height_px": 14.95,
+            "available_width_px": 97,
+            "available_height_px": 22,
+            "safety_reserve_px": 0.5,
+            "required_width_px": 100.75,
+            "required_height_px": 15.45,
+            "fits": false,
+            "lines": [
+              "Product-Purchase"
+            ]
+          }
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "tasktokent",
+            "tasktoken"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "pricet",
+            "price"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "categoryt",
+            "category"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "dollart",
+            "dollar"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "foodt",
+            "food"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "tit",
+            "ti"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "mit",
+            "mi"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "xit",
+            "xi"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "roott",
+            "root"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "xnodet",
+            "xnode"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "unodet",
+            "unode"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "pat",
+            "pa"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "pbt",
+            "pb"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "pct",
+            "pc"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "zt",
+            "z"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "classlabel0t",
+            "classlabel0"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "classlabel1t",
+            "classlabel1"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "classlabel2t",
+            "classlabel2"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "predictiont",
+            "prediction"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "prod",
+            "itemidtag"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "prod",
+            "itemid"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "prod",
+            "itempoint"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "itemid",
+            "itempoint"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "sampleedge3",
+            "sample_target_0_1t"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "sampleedge3",
+            "sample_target_1_1t"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "sample_product_0_0t",
+            "highlight_price"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "sample_product_0_1t",
+            "highlight_price"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "sample_product_1_1t",
+            "highlight_price"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "lenct",
+            "lmpnn"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "lmpnnt",
+            "ltempt"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "lcrosst",
+            "ltemp"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "tasktokent",
+            "encoderin0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "pricet",
+            "encoderin1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "categoryt",
+            "encoderin1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "foodt",
+            "encoderin2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "tit",
+            "attnin0_0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r_x",
+            "roott"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "r_u",
+            "roott"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "a_x",
+            "xnodet"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "b_u",
+            "unodet"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "c_u",
+            "unodet"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "regtitle",
+            "regdecoder"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "classtitle",
+            "classdecoder"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "classtitle",
+            "classlabel0"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "shape": 139,
+            "text": 137,
+            "line": 60
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "sampleedge3",
+                "sample_target_0_1"
+              ],
+              "reason": "Source-visible table borders, cell frame padding, highlight outline, or connector/node join; exact named pair retained.",
+              "area_px2": 15.4
+            },
+            {
+              "elements": [
+                "sampleedge3",
+                "sample_target_1_0"
+              ],
+              "reason": "Source-visible table borders, cell frame padding, highlight outline, or connector/node join; exact named pair retained.",
+              "area_px2": 1.25
+            },
+            {
+              "elements": [
+                "sampleedge3",
+                "sample_target_1_1"
+              ],
+              "reason": "Source-visible table borders, cell frame padding, highlight outline, or connector/node join; exact named pair retained.",
+              "area_px2": 21.65
+            },
+            {
+              "elements": [
+                "sampleedge5",
+                "prpt"
+              ],
+              "reason": "Source-visible table borders, cell frame padding, highlight outline, or connector/node join; exact named pair retained.",
+              "area_px2": 0.516
+            },
+            {
+              "elements": [
+                "sampleedge6",
+                "highlight_price"
+              ],
+              "reason": "Source-visible table borders, cell frame padding, highlight outline, or connector/node join; exact named pair retained.",
+              "area_px2": 1.664
+            },
+            {
+              "elements": [
+                "sample_product_0_0",
+                "highlight_price"
+              ],
+              "reason": "Source-visible table borders, cell frame padding, highlight outline, or connector/node join; exact named pair retained.",
+              "area_px2": 225.0
+            },
+            {
+              "elements": [
+                "sample_product_0_1",
+                "highlight_price"
+              ],
+              "reason": "Source-visible table borders, cell frame padding, highlight outline, or connector/node join; exact named pair retained.",
+              "area_px2": 6.0
+            },
+            {
+              "elements": [
+                "sample_product_1_0",
+                "highlight_price"
+              ],
+              "reason": "Source-visible table borders, cell frame padding, highlight outline, or connector/node join; exact named pair retained.",
+              "area_px2": 1725.0
+            },
+            {
+              "elements": [
+                "sample_product_1_0t",
+                "highlight_price"
+              ],
+              "reason": "Source-visible table borders, cell frame padding, highlight outline, or connector/node join; exact named pair retained.",
+              "area_px2": 1460.0
+            },
+            {
+              "elements": [
+                "sample_product_1_1",
+                "highlight_price"
+              ],
+              "reason": "Source-visible table borders, cell frame padding, highlight outline, or connector/node join; exact named pair retained.",
+              "area_px2": 46.0
+            },
+            {
+              "elements": [
+                "mi",
+                "miinner"
+              ],
+              "reason": "Source-visible table borders, cell frame padding, highlight outline, or connector/node join; exact named pair retained.",
+              "area_px2": 2185.0
+            },
+            {
+              "elements": [
+                "mit",
+                "miinner"
+              ],
+              "reason": "Source-visible table borders, cell frame padding, highlight outline, or connector/node join; exact named pair retained.",
+              "area_px2": 2185.0
+            },
+            {
+              "elements": [
+                "xi",
+                "xiinner"
+              ],
+              "reason": "Source-visible table borders, cell frame padding, highlight outline, or connector/node join; exact named pair retained.",
+              "area_px2": 2185.0
+            },
+            {
+              "elements": [
+                "xit",
+                "xiinner"
+              ],
+              "reason": "Source-visible table borders, cell frame padding, highlight outline, or connector/node join; exact named pair retained.",
+              "area_px2": 2185.0
+            },
+            {
+              "elements": [
+                "vi_mpnn",
+                "loop0"
+              ],
+              "reason": "Source-visible table borders, cell frame padding, highlight outline, or connector/node join; exact named pair retained.",
+              "area_px2": 1.25
+            },
+            {
+              "elements": [
+                "r_x",
+                "loop4"
+              ],
+              "reason": "Source-visible table borders, cell frame padding, highlight outline, or connector/node join; exact named pair retained.",
+              "area_px2": 0.645
+            }
+          ],
+          "text_layouts": {
+            "header0t": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 95.25,
+              "height_px": 25.3,
+              "available_width_px": 293,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 95.75,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "Raw RDB"
+              ]
+            },
+            "header1t": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 168.0,
+              "height_px": 25.3,
+              "available_width_px": 333,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 168.5,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "Sample Subgraph"
+              ]
+            },
+            "header2t": {
+              "scale": 1,
+              "effective_font_size_px": 22,
+              "width_px": 184.75,
+              "height_px": 25.3,
+              "available_width_px": 644,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 185.25,
+              "required_height_px": 25.8,
+              "fits": true,
+              "lines": [
+                "Model Architecture"
+              ]
+            },
+            "ut": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 65.75,
+              "height_px": 16.1,
+              "available_width_px": 275,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 66.25,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "User Table"
+              ]
+            },
+            "pt": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 93.0,
+              "height_px": 16.1,
+              "available_width_px": 273,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 93.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Purchase Table"
+              ]
+            },
+            "prod": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 86.0,
+              "height_px": 16.1,
+              "available_width_px": 273,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 86.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Product Table"
+              ]
+            },
+            "user_0_0t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 43.75,
+              "height_px": 14.95,
+              "available_width_px": 90,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 44.25,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "User ID"
+              ]
+            },
+            "user_0_1t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 79.75,
+              "height_px": 14.95,
+              "available_width_px": 89,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 80.25,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Account Level"
+              ]
+            },
+            "user_0_2t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 51.25,
+              "height_px": 29.9,
+              "available_width_px": 90,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 51.75,
+              "required_height_px": 30.4,
+              "fits": false,
+              "lines": [
+                "Purchase",
+                "Amount"
+              ]
+            },
+            "user_1_0t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 6.5,
+              "height_px": 14.95,
+              "available_width_px": 90,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 7.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "user_1_1t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 26.25,
+              "height_px": 14.95,
+              "available_width_px": 89,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 26.75,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Gold"
+              ]
+            },
+            "user_1_2t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 19.5,
+              "height_px": 14.95,
+              "available_width_px": 90,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 20.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "100"
+              ]
+            },
+            "user_2_0t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 6.5,
+              "height_px": 14.95,
+              "available_width_px": 90,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 7.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "user_2_1t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 31.0,
+              "height_px": 14.95,
+              "available_width_px": 89,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 31.5,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Silver"
+              ]
+            },
+            "user_2_2t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 13.0,
+              "height_px": 14.95,
+              "available_width_px": 90,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 13.5,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "80"
+              ]
+            },
+            "user_3_0t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 6.5,
+              "height_px": 14.95,
+              "available_width_px": 90,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 7.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "3"
+              ]
+            },
+            "user_3_1t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 37.5,
+              "height_px": 14.95,
+              "available_width_px": 89,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 38.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Bronze"
+              ]
+            },
+            "user_3_2t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 13.0,
+              "height_px": 14.95,
+              "available_width_px": 90,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 13.5,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "10"
+              ]
+            },
+            "purchase_0_0t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 40.5,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.0,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "User ID"
+              ]
+            },
+            "purchase_0_1t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 40.5,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.0,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Item ID"
+              ]
+            },
+            "purchase_0_2t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 34.75,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 35.25,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Rating"
+              ]
+            },
+            "purchase_0_3t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 58.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 58.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Timestamp"
+              ]
+            },
+            "purchase_1_0t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "purchase_1_1t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "purchase_1_2t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "5"
+              ]
+            },
+            "purchase_1_3t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 33.25,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 33.75,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Jan 1st"
+              ]
+            },
+            "purchase_2_0t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "purchase_2_1t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "3"
+              ]
+            },
+            "purchase_2_2t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "3"
+              ]
+            },
+            "purchase_2_3t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 37.25,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 37.75,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Jan 2nd"
+              ]
+            },
+            "purchase_3_0t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "purchase_3_1t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "4"
+              ]
+            },
+            "purchase_3_2t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "purchase_3_3t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 35.25,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 35.75,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Jan 3rd"
+              ]
+            },
+            "purchase_4_0t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "purchase_4_1t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "purchase_4_2t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "4"
+              ]
+            },
+            "purchase_4_3t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 35.25,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 35.75,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Feb 1st"
+              ]
+            },
+            "purchase_5_0t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "purchase_5_1t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "purchase_5_2t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "purchase_5_3t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 39.25,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 39.75,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Feb 2nd"
+              ]
+            },
+            "purchase_6_0t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "purchase_6_1t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "4"
+              ]
+            },
+            "purchase_6_2t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "?"
+              ]
+            },
+            "purchase_6_3t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 37.25,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 37.75,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Feb 3rd"
+              ]
+            },
+            "purchase_7_0t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "3"
+              ]
+            },
+            "purchase_7_1t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "4"
+              ]
+            },
+            "purchase_7_2t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "5"
+              ]
+            },
+            "purchase_7_3t": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 37.25,
+              "height_px": 13.8,
+              "available_width_px": 66,
+              "available_height_px": 22.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 37.75,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Mar 1st"
+              ]
+            },
+            "product_0_0t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 47.25,
+              "height_px": 16.1,
+              "available_width_px": 90,
+              "available_height_px": 23.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 47.75,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Item ID"
+              ]
+            },
+            "product_0_1t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 31.25,
+              "height_px": 16.1,
+              "available_width_px": 89,
+              "available_height_px": 23.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 31.75,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Price"
+              ]
+            },
+            "product_0_2t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 55.25,
+              "height_px": 16.1,
+              "available_width_px": 87,
+              "available_height_px": 23.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 55.75,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Category"
+              ]
+            },
+            "product_1_0t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 7.0,
+              "height_px": 16.1,
+              "available_width_px": 90,
+              "available_height_px": 23.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 7.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "product_1_1t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 21.0,
+              "height_px": 16.1,
+              "available_width_px": 89,
+              "available_height_px": 23.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 21.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "$10"
+              ]
+            },
+            "product_1_2t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 30.5,
+              "height_px": 16.1,
+              "available_width_px": 87,
+              "available_height_px": 23.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 31.0,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Book"
+              ]
+            },
+            "product_2_0t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 7.0,
+              "height_px": 16.1,
+              "available_width_px": 90,
+              "available_height_px": 23.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 7.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "product_2_1t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 14.0,
+              "height_px": 16.1,
+              "available_width_px": 89,
+              "available_height_px": 23.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "$5"
+              ]
+            },
+            "product_2_2t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 29.0,
+              "height_px": 16.1,
+              "available_width_px": 87,
+              "available_height_px": 23.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 29.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Food"
+              ]
+            },
+            "product_3_0t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 7.0,
+              "height_px": 16.1,
+              "available_width_px": 90,
+              "available_height_px": 23.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 7.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "3"
+              ]
+            },
+            "product_3_1t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 21.0,
+              "height_px": 16.1,
+              "available_width_px": 89,
+              "available_height_px": 23.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 21.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "$30"
+              ]
+            },
+            "product_3_2t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 52.5,
+              "height_px": 16.1,
+              "available_width_px": 87,
+              "available_height_px": 23.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 53.0,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Furniture"
+              ]
+            },
+            "product_4_0t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 7.0,
+              "height_px": 16.1,
+              "available_width_px": 90,
+              "available_height_px": 23.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 7.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "4"
+              ]
+            },
+            "product_4_1t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 14.0,
+              "height_px": 16.1,
+              "available_width_px": 89,
+              "available_height_px": 23.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "$2"
+              ]
+            },
+            "product_4_2t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 29.0,
+              "height_px": 16.1,
+              "available_width_px": 87,
+              "available_height_px": 23.8,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 29.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Food"
+              ]
+            },
+            "task": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 267.75,
+              "height_px": 14.95,
+              "available_width_px": 323,
+              "available_height_px": 23,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 268.25,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Task: What’s the rating of a given purchase record?"
+              ]
+            },
+            "userid": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 43.75,
+              "height_px": 14.95,
+              "available_width_px": 59,
+              "available_height_px": 21,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 44.25,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "User ID"
+              ]
+            },
+            "itemid": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 47.25,
+              "height_px": 16.1,
+              "available_width_px": 58,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 47.75,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Item ID"
+              ]
+            },
+            "sample_a_0_0t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 37.5,
+              "height_px": 14.95,
+              "available_width_px": 71,
+              "available_height_px": 19.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 38.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Rating"
+              ]
+            },
+            "sample_a_0_1t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 62.5,
+              "height_px": 14.95,
+              "available_width_px": 69,
+              "available_height_px": 19.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 63.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Timestamp"
+              ]
+            },
+            "sample_a_1_0t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 6.5,
+              "height_px": 14.95,
+              "available_width_px": 71,
+              "available_height_px": 19.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 7.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "4"
+              ]
+            },
+            "sample_a_1_1t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 40.25,
+              "height_px": 14.95,
+              "available_width_px": 69,
+              "available_height_px": 19.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 40.75,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Feb 3rd"
+              ]
+            },
+            "sample_b_0_0t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 37.5,
+              "height_px": 14.95,
+              "available_width_px": 70,
+              "available_height_px": 19.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 38.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Rating"
+              ]
+            },
+            "sample_b_0_1t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 62.5,
+              "height_px": 14.95,
+              "available_width_px": 69,
+              "available_height_px": 19.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 63.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Timestamp"
+              ]
+            },
+            "sample_b_1_0t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 6.5,
+              "height_px": 14.95,
+              "available_width_px": 70,
+              "available_height_px": 19.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 7.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "sample_b_1_1t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 42.5,
+              "height_px": 14.95,
+              "available_width_px": 69,
+              "available_height_px": 19.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 43.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Feb 2nd"
+              ]
+            },
+            "sample_user_0_0t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 46.25,
+              "height_px": 29.9,
+              "available_width_px": 72,
+              "available_height_px": 24.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 46.75,
+              "required_height_px": 30.4,
+              "fits": false,
+              "lines": [
+                "Account",
+                "Level"
+              ]
+            },
+            "sample_user_0_1t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 51.25,
+              "height_px": 29.9,
+              "available_width_px": 72,
+              "available_height_px": 24.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 51.75,
+              "required_height_px": 30.4,
+              "fits": false,
+              "lines": [
+                "Purchase",
+                "Amount"
+              ]
+            },
+            "sample_user_1_0t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 31.0,
+              "height_px": 14.95,
+              "available_width_px": 72,
+              "available_height_px": 24.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 31.5,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Silver"
+              ]
+            },
+            "sample_user_1_1t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 13.0,
+              "height_px": 14.95,
+              "available_width_px": 72,
+              "available_height_px": 24.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 13.5,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "80"
+              ]
+            },
+            "sample_target_0_0t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 40.5,
+              "height_px": 16.1,
+              "available_width_px": 73,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 41.0,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Rating"
+              ]
+            },
+            "sample_target_0_1t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 68.0,
+              "height_px": 16.1,
+              "available_width_px": 72,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 68.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Timestamp"
+              ]
+            },
+            "sample_target_1_0t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 7.0,
+              "height_px": 16.1,
+              "available_width_px": 73,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 7.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "?"
+              ]
+            },
+            "sample_target_1_1t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 43.5,
+              "height_px": 16.1,
+              "available_width_px": 72,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 44.0,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Feb 3rd"
+              ]
+            },
+            "sample_product_0_0t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 31.25,
+              "height_px": 16.1,
+              "available_width_px": 73,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 31.75,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Price"
+              ]
+            },
+            "sample_product_0_1t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 55.25,
+              "height_px": 16.1,
+              "available_width_px": 71,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 55.75,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Category"
+              ]
+            },
+            "sample_product_1_0t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 14.0,
+              "height_px": 16.1,
+              "available_width_px": 73,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "$2"
+              ]
+            },
+            "sample_product_1_1t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 29.0,
+              "height_px": 16.1,
+              "available_width_px": 71,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 29.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Food"
+              ]
+            },
+            "sample_p1_0_0t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 37.5,
+              "height_px": 14.95,
+              "available_width_px": 70,
+              "available_height_px": 19.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 38.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Rating"
+              ]
+            },
+            "sample_p1_0_1t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 62.5,
+              "height_px": 14.95,
+              "available_width_px": 70,
+              "available_height_px": 19.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 63.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Timestamp"
+              ]
+            },
+            "sample_p1_1_0t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 6.5,
+              "height_px": 14.95,
+              "available_width_px": 70,
+              "available_height_px": 19.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 7.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "sample_p1_1_1t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 38.0,
+              "height_px": 14.95,
+              "available_width_px": 70,
+              "available_height_px": 19.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 38.5,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Jan 3rd"
+              ]
+            },
+            "sample_p2_0_0t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 37.5,
+              "height_px": 14.95,
+              "available_width_px": 70,
+              "available_height_px": 19.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 38.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Rating"
+              ]
+            },
+            "sample_p2_0_1t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 62.5,
+              "height_px": 14.95,
+              "available_width_px": 69,
+              "available_height_px": 19.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 63.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Timestamp"
+              ]
+            },
+            "sample_p2_1_0t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 6.5,
+              "height_px": 14.95,
+              "available_width_px": 70,
+              "available_height_px": 19.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 7.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "5"
+              ]
+            },
+            "sample_p2_1_1t": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 40.0,
+              "height_px": 14.95,
+              "available_width_px": 69,
+              "available_height_px": 19.5,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 40.5,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Mar 1st"
+              ]
+            },
+            "upt": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 51.25,
+              "height_px": 29.9,
+              "available_width_px": 66,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 51.75,
+              "required_height_px": 30.4,
+              "fits": true,
+              "lines": [
+                "User-",
+                "Purchase"
+              ]
+            },
+            "put": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 81.5,
+              "height_px": 14.95,
+              "available_width_px": 91,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 82.0,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Purchase-User"
+              ]
+            },
+            "ppt": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 100.25,
+              "height_px": 14.95,
+              "available_width_px": 109,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 100.75,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Purchase-Product"
+              ]
+            },
+            "prpt": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 100.25,
+              "height_px": 14.95,
+              "available_width_px": 97,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 100.75,
+              "required_height_px": 15.45,
+              "fits": false,
+              "lines": [
+                "Product-Purchase"
+              ]
+            },
+            "lenct": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 46.75,
+              "height_px": 48.3,
+              "available_width_px": 110,
+              "available_height_px": 60,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 47.25,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "Unified",
+                "Feature",
+                "Encoder"
+              ]
+            },
+            "lmpnnt": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 40.25,
+              "height_px": 16.1,
+              "available_width_px": 110,
+              "available_height_px": 60,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 40.75,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "MPNN"
+              ]
+            },
+            "lcrosst": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 53.25,
+              "height_px": 32.2,
+              "available_width_px": 110,
+              "available_height_px": 60,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 53.75,
+              "required_height_px": 32.7,
+              "fits": true,
+              "lines": [
+                "Cross-",
+                "Attention"
+              ]
+            },
+            "ltempt": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 62.0,
+              "height_px": 48.3,
+              "available_width_px": 110,
+              "available_height_px": 60,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 62.5,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "Temporal",
+                "Restriction",
+                "Masking"
+              ]
+            },
+            "tasktokent": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 27.5,
+              "height_px": 16.1,
+              "available_width_px": 36,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 28.0,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Task"
+              ]
+            },
+            "pricet": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 31.25,
+              "height_px": 16.1,
+              "available_width_px": 68,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 31.75,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Price"
+              ]
+            },
+            "categoryt": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 55.25,
+              "height_px": 16.1,
+              "available_width_px": 67,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 55.75,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Category"
+              ]
+            },
+            "dollart": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 14.0,
+              "height_px": 16.1,
+              "available_width_px": 48,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "$2"
+              ]
+            },
+            "foodt": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 29.0,
+              "height_px": 16.1,
+              "available_width_px": 48,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 29.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Food"
+              ]
+            },
+            "encoderlabel": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 50.5,
+              "height_px": 48.3,
+              "available_width_px": 57,
+              "available_height_px": 59,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 51.0,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "Unified",
+                "Feature",
+                "Encoder"
+              ]
+            },
+            "sentencet": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 64.75,
+              "height_px": 48.3,
+              "available_width_px": 90,
+              "available_height_px": 52,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 65.25,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "Sentence",
+                "Embedding",
+                "Encoder"
+              ]
+            },
+            "numerict": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 58.25,
+              "height_px": 48.3,
+              "available_width_px": 91,
+              "available_height_px": 52,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 58.75,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "Pretrained",
+                "Numeric",
+                "Encoder"
+              ]
+            },
+            "tit": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 6.75,
+              "height_px": 17.25,
+              "available_width_px": 32,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 7.25,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "tᵢ"
+              ]
+            },
+            "mit": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 13.25,
+              "height_px": 17.25,
+              "available_width_px": 97,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 13.75,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "mᵢ"
+              ]
+            },
+            "xit": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 10.0,
+              "height_px": 17.25,
+              "available_width_px": 97,
+              "available_height_px": 26,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 10.5,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "xᵢ"
+              ]
+            },
+            "qt": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 11.0,
+              "height_px": 17.25,
+              "available_width_px": 33,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.5,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "Q"
+              ]
+            },
+            "kt": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 11.75,
+              "height_px": 17.25,
+              "available_width_px": 33,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 12.25,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "K"
+              ]
+            },
+            "vt": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 11.75,
+              "height_px": 17.25,
+              "available_width_px": 33,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 12.25,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "V"
+              ]
+            },
+            "cross_title": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 109.0,
+              "height_px": 18.4,
+              "available_width_px": 185,
+              "available_height_px": 28,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 109.5,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "Cross-Attention"
+              ]
+            },
+            "vit": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 9.25,
+              "height_px": 17.25,
+              "available_width_px": 38,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.75,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "vᵢ"
+              ]
+            },
+            "roott": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 50.75,
+              "height_px": 16.1,
+              "available_width_px": 60,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 51.25,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Purchase"
+              ]
+            },
+            "xnodet": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 9.0,
+              "height_px": 16.1,
+              "available_width_px": 36,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 9.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "xᵢ"
+              ]
+            },
+            "unodet": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 26.5,
+              "height_px": 16.1,
+              "available_width_px": 37,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 27.0,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "User"
+              ]
+            },
+            "pat": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 50.75,
+              "height_px": 16.1,
+              "available_width_px": 56,
+              "available_height_px": 23,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 51.25,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Purchase"
+              ]
+            },
+            "pbt": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 50.75,
+              "height_px": 16.1,
+              "available_width_px": 56,
+              "available_height_px": 23,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 51.25,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Purchase"
+              ]
+            },
+            "pct": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 50.75,
+              "height_px": 16.1,
+              "available_width_px": 56,
+              "available_height_px": 23,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 51.25,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Purchase"
+              ]
+            },
+            "mpnntitle": {
+              "scale": 1,
+              "effective_font_size_px": 16,
+              "width_px": 47.75,
+              "height_px": 18.4,
+              "available_width_px": 120,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 48.25,
+              "required_height_px": 18.9,
+              "fits": true,
+              "lines": [
+                "MPNN"
+              ]
+            },
+            "zt": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 6.25,
+              "height_px": 16.1,
+              "available_width_px": 36,
+              "available_height_px": 23,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.75,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "z"
+              ]
+            },
+            "decodertitle": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 140.0,
+              "height_px": 17.25,
+              "available_width_px": 225,
+              "available_height_px": 27,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 140.5,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "Unified Task Decoder"
+              ]
+            },
+            "regtitle": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 93.5,
+              "height_px": 16.1,
+              "available_width_px": 114,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 94.0,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Regression Task"
+              ]
+            },
+            "classtitle": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 108.75,
+              "height_px": 16.1,
+              "available_width_px": 121,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 109.25,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "Classification Task"
+              ]
+            },
+            "regtxt": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 58.25,
+              "height_px": 48.3,
+              "available_width_px": 80,
+              "available_height_px": 63,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 58.75,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "Pretrained",
+                "Numeric",
+                "Decoder"
+              ]
+            },
+            "classtxt": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 57.0,
+              "height_px": 48.3,
+              "available_width_px": 59,
+              "available_height_px": 63,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 57.5,
+              "required_height_px": 48.8,
+              "fits": true,
+              "lines": [
+                "Query",
+                "Candidate",
+                "Labels"
+              ]
+            },
+            "classlabel0t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 7.0,
+              "height_px": 16.1,
+              "available_width_px": 36,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 7.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "classlabel1t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 10.5,
+              "height_px": 16.1,
+              "available_width_px": 36,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 11.0,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "..."
+              ]
+            },
+            "classlabel2t": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 7.0,
+              "height_px": 16.1,
+              "available_width_px": 36,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 7.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "5"
+              ]
+            },
+            "predictiont": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 53.0,
+              "height_px": 14.95,
+              "available_width_px": 100,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 53.5,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "Prediction"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "ef8eab0829693d707ebf0ce473c125de7d13ac5e0b2021dedc0d6c1f3339f4a4",
+  "font_substitutions": []
+}

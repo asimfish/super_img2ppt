@@ -1,0 +1,127 @@
+import json,hashlib
+from pathlib import Path
+D=Path('/tmp/griffin-forward-0912'); E=[]; n=0
+rois=[('raw_title',[158,18,267,48],'dev'),('user_header',[87,113,360,148],'dev'),('user_values',[87,148,360,230],'dev'),('sample_rating',[446,113,590,159],'dev'),('encoder_title',[810,155,871,212],'dev'),('cross_title',[892,432,1019,455],'dev'),('mpnn_title',[1280,480,1360,507],'dev'),('legend',[517,574,583,629],'dev'),('purchase_values',[88,295,359,476],'heldout'),('product_values',[86,537,360,643],'heldout'),('decoder',[1193,197,1289,286],'heldout'),('graph',[1220,525,1408,700],'heldout')]
+(D/'roi-contract.json').write_text(json.dumps({'source_sha256':hashlib.sha256((D/'source.png').read_bytes()).hexdigest(),'source_size':[1460,724],'metric':'unregistered dark ink mask RGB max<180; bbox maximum edge distance<=4 pixels AND pixel IoU>=0.70; no registration','repair_limit':3,'regions':[{'id':i,'box':b,'split':s} for i,b,s in rois]},indent=2)) if not (D/'roi-contract.json').exists() else None
+
+def add(kind,id,**kw):
+ global n
+ n+=1;E.append(dict(id=id,kind=kind,z=n,**kw));return id
+
+def sh(id,x,y,w,h,fill='#FFFFFF',stroke='#000000',sw=1,shape='rect',**kw):return add('shape',id,box=[x,y,w,h],shape=shape,fill=fill,stroke=stroke,stroke_width=sw,**kw)
+def tx(id,text,x,y,w,h=24,fs=14,b=False,align='center',color='#000000',container=None,italic=False):
+ k=dict(box=[x,y,w,h],text=text,font_size=fs,font_family='Times New Roman',bold=b,italic=italic,align=align,color=color,fit='strict',wrap=False)
+ if container:k['container']=container
+ return add('text',id,**k)
+def ln(id,x,y,X,Y,sw=.7,col='#000000',arrow=False,**kw):
+ k=dict(points=[[x,y],[X,Y]],stroke=col,stroke_width=sw,**kw)
+ if arrow:k.update(arrow=True,arrow_head={'length':max(5,sw),'width':max(4,sw*1.5)})
+ return add('line',id,**k)
+def table(id,x,y,widths,rows,rh=26,fs=13):
+ yy=y
+ for j,row in enumerate(rows):
+  hh=(35 if j==0 else 27) if id=='user' else ((36 if j==0 else 19) if id=='sample_user' else rh)
+  xx=x
+  for k,s in enumerate(row):
+   fill='#777373' if j==0 else '#FFFFFF';color='#FFFFFF' if j==0 else '#000000'
+   if s=='?': fill='#F8BEBC';color='#ED2117'
+   a=sh(f'{id}_{j}_{k}',xx,yy,widths[k],hh,fill)
+   tx(a+'t',s,xx+1,yy+1,widths[k]-2,max(hh-1,16),fs,j==0 or s=='?',color=color,container=a)
+   xx+=widths[k]
+  yy+=hh
+# headers
+for i,(x,w,s) in enumerate([(67,293,'Raw RDB'),(422,333,'Sample Subgraph'),(807,644,'Model Architecture')]):
+ a=sh('header'+str(i),x,6,w,54,'#CECECE',None,role='background');tx(a+'t',s,x,19,w,35,22,True,container=a)
+for x in [379,770]:ln('header_arrow'+str(x),x,33,x+23,33,12,arrow=True)
+# panels behind native content
+sh('sample_panel',421,93,335,460,'#E1EDF7','#2879BD',2,shape='round_rect',radius=10,dash=[6,3],role='background')
+sh('sample_inner',440,381,299,73,'#E1EED6','#598633',2,shape='round_rect',radius=7,dash=[6,3],role='background')
+sh('temporal',587,476,152,69,'#FFF2CC','#FFD65C',2,shape='round_rect',radius=12,dash=[6,3],role='background')
+sh('encoder_panel',806,142,303,80,'#FBE4D1','#CE5C00',2,shape='round_rect',radius=14,dash=[6,3],role='background')
+sh('cross_panel',806,300,303,248,'#E1EED6','#598633',2,shape='round_rect',radius=14,dash=[6,3],role='background')
+sh('cross',833,357,235,174,'#ACCF8C','#000000',1,role='background')
+sh('decoder_panel',1179,143,271,160,role='background')
+sh('mpnn_panel',1175,473,278,247,'#E1EDF7','#2879BD',2,shape='round_rect',radius=7,dash=[6,3],role='background')
+# raw tables
+for id,s,x,y,w in [('ut','User Table',86,88,275),('pt','Purchase Table',88,246,273),('prod','Product Table',86,486,273)]:tx(id,s,x,y,w,22,14,True)
+table('user',86,113,[92,91,92],[['User ID','Account Level','Purchase\nAmount'],['1','Gold','100'],['2','Silver','80'],['3','Bronze','10']],29,13)
+table('purchase',88,269,[68,68,68,68],[['User ID','Item ID','Rating','Timestamp'],['1','2','5','Jan 1st'],['1','3','3','Jan 2nd'],['1','4','2','Jan 3rd'],['2','1','4','Feb 1st'],['2','2','2','Feb 2nd'],['2','4','?','Feb 3rd'],['3','4','5','Mar 1st']],25.8,12)
+table('product',86,509,[92,91,89],[['Item ID','Price','Category'],['1','$10','Book'],['2','$5','Food'],['3','$30','Furniture'],['4','$2','Food']],26.8,14)
+sh('task_bg',53,662,330,24,'#FABFBD',None,role='background');tx('task','Task: What’s the rating of a given purchase record?',57,665,323,23,13)
+# raw fk dotted paths
+for j,yy in enumerate([333,359,385,411,437]):ln('fkleft'+str(j),68,yy,87,yy,.8,dash=[1,1])
+ln('fkleftvert',67,187,67,437,.8,dash=[1,1]);ln('fklefttop',67,187,86,187,.8,dash=[1,1])
+for j,yy in enumerate([357,385,436,462,629]):ln('fkright'+str(j),360,yy,383,yy,.8,dash=[1,1])
+ln('fkrightvert',383,357,383,629,.8,dash=[1,1])
+sh('useridtag',7,305,59,22,'#D9D9D9',None,role='background');tx('userid','User ID',7,307,59,21,13,True)
+sh('itemidtag',316,478,58,23,'#D9D9D9',None,role='background');tx('itemid','Item ID',316,480,58,22,14,True)
+ln('userpoint',36,305,67,284,.6,'#888888');ln('itempoint',346,500,383,518,.6,'#888888')
+# sampled graph tables edges
+for i,p in enumerate([(515,158,593,199),(669,158,594,199),(594,254,594,299),(594,300,594,346),(594,396,594,346),(569,454,512,487),(594,442,664,487)]):ln('sampleedge'+str(i),*p,arrow=i<5)
+table('sample_a',446,113,[73,71],[['Rating','Timestamp'],['4','Feb 3rd']],22.5,13)
+table('sample_b',596,113,[72,71],[['Rating','Timestamp'],['2','Feb 2nd']],22.5,13)
+table('sample_user',519,199,[74,74],[['Account\nLevel','Purchase\nAmount'],['Silver','80']],27.5,13)
+table('sample_target',518,299,[75,74],[['Rating','Timestamp'],['?','Feb 3rd']],23,14)
+table('sample_product',519,396,[75,73],[['Price','Category'],['$2','Food']],23,14)
+table('sample_p1',440,487,[72,72],[['Rating','Timestamp'],['2','Jan 3rd']],22.5,13)
+table('sample_p2',590,487,[72,71],[['Rating','Timestamp'],['5','Mar 1st']],22.5,13)
+# highlights exact native outline over cells, source orange partially translucent approximated outline only
+sh('highlight_price',511,416,85,28,None,'#D16B17',3,shape='round_rect',radius=4,dash=[6,2])
+for id,s,x,y,w,h in [('up','User-\nPurchase',440,164,72,40),('pu','Purchase-User',486,267,97,22),('pp','Purchase-Product',468,352,115,22),('prp','Product-Purchase',423,457,108,22)]:
+ a=sh(id,x,y,w,h,'#D9D9D9',None,role='background');tx(id+'t',s,x+3,y+2,w-6,h,13,True,align='left',container=a)
+# legends
+for id,s,x,y,c in [('lenc','Unified\nFeature\nEncoder',449,592,'#CE5C00'),('lmpnn','MPNN',604,591,'#2879BD'),('lcross','Cross-\nAttention',449,646,'#598633'),('ltemp','Temporal\nRestriction\nMasking',604,647,'#FFD65C')]:
+ sh(id,x,y,60,22,{'#CE5C00':'#FBE4D1','#2879BD':'#E1EDF7','#598633':'#E1EED6','#FFD65C':'#FFF2CC'}[c],c,2,shape='round_rect',radius=5,dash=[6,3]);tx(id+'t',s,x+72,y-16 if id=='lenc' else y-4,110,60,14,align='left')
+# architecture input tokens
+for id,s,x,y,w,h in [('tasktoken','Task',816,91,36,27),('price','Price',870,91,68,27),('category','Category',938,91,67,27),('dollar','$2',1019,91,48,27),('food','Food',1067,91,48,27)]:
+ a=sh(id,x,y,w,h,'#606060' if id in ['price','category'] else '#FFFFFF');tx(id+'t',s,x,y+3,w,h,14,id in ['price','category'],color='#FFFFFF' if id in ['price','category'] else '#000000',container=a)
+for i,x in enumerate([835,938,1068]):ln('encoderin'+str(i),x,119,x,142,arrow=True)
+tx('encoderlabel','Unified\nFeature\nEncoder',814,157,57,59,14,True,align='left',container='encoder_panel')
+for id,s,x,w in [('sentence','Sentence\nEmbedding\nEncoder',873,96),('numeric','Pretrained\nNumeric\nEncoder',994,97)]:
+ a=sh(id,x,158,w,52,'#EFB185');tx(id+'t',s,x+3,158,w-6,52,14,container=a)
+for id,s,x,w in [('ti','tᵢ',818,36),('mi','mᵢ',888,101),('xi','xᵢ',1018,101)]:
+ a=sh(id,x,249,w,27);tx(id+'t',s,x+2,251,w-4,26,15,italic=True,color='#FF0000' if id=='xi' else '#000000',container=a)
+ if id!='ti':sh(id+'inner',x+3,251,w-6,23,None)
+for i,x in enumerate([836,936,1068]):ln('encoderout'+str(i),x,223,x,248,arrow=True)
+for i,pts in enumerate([[(836,276),(836,323),(872,323),(872,370)],[(939,279),(939,324),(947,324),(947,371)],[(1069,279),(1069,324),(1023,324),(1023,371)]]):
+ for j,(a,b) in enumerate(zip(pts,pts[1:])):ln(f'attnin{i}_{j}',*a,*b,arrow=j==2)
+for id,s,x in [('q','Q',855),('k','K',930),('v','V',1007)]:
+ a=sh(id,x,372,33,32);tx(id+'t',s,x,378,33,24,15,True,container=a,italic=True)
+tx('cross_title','Cross-Attention',857,433,185,28,16,True,container='cross')
+ln('cross_out',948,531,948,600,arrow=True)
+a=sh('vi',929,600,38,27);tx('vit','vᵢ',929,602,38,24,15,italic=True,container=a)
+ln('vi_mpnn',967,614,1264,614,.6,'#555555',True)
+# mpnn graph
+nodes={'root':(1283,526,60,27,'Purchase'),'xnode':(1264,601,36,27,'xᵢ'),'unode':(1324,601,37,27,'User'),'pa':(1222,673,56,26,'Purchase'),'pb':(1288,673,56,26,'Purchase'),'pc':(1350,673,56,26,'Purchase')}
+for id,p in [('r_x',(1282,601,1313,553)),('r_u',(1343,601,1313,553)),('a_x',(1250,673,1282,628)),('b_u',(1316,673,1343,628)),('c_u',(1378,673,1343,628))]:ln(id,*p,arrow=True)
+for j,p in enumerate([(1264,615,1250,615),(1250,615,1250,643),(1250,643,1283,643),(1283,643,1283,628),(1283,601,1283,588),(1283,588,1250,588),(1250,588,1250,615)]):ln('loop'+str(j),*p,.5,'#555555',j==6)
+for id,(x,y,w,h,s) in nodes.items():
+ a=sh(id,x,y,w,h,'#F8BEBC' if id=='xnode' else '#FFFFFF');tx(id+'t',s,x,y+4,w,h-3,14,color='#FF0000' if id=='xnode' else '#000000',container=a,italic=id=='xnode')
+tx('mpnntitle','MPNN',1255,482,120,30,16,True,container='mpnn_panel')
+ln('mpnn_z',1314,473,1314,414,arrow=True)
+a=sh('z',1296,388,36,25);tx('zt','z',1296,391,36,23,14,italic=True,container=a)
+# decoder outputs and branches
+ln('z_reg',1314,388,1241,286,arrow=True);ln('z_class',1314,388,1351,286,arrow=True)
+tx('decodertitle','Unified Task Decoder',1210,147,225,27,15,True,container='decoder_panel')
+tx('regtitle','Regression Task',1186,175,114,25,14,container='decoder_panel');tx('classtitle','Classification Task',1316,174,121,25,14,container='decoder_panel')
+a=sh('regdecoder',1193,197,95,89);tx('regtxt','Pretrained\nNumeric\nDecoder',1201,217,80,63,14,container=a)
+a=sh('classdecoder',1318,197,65,89);tx('classtxt','Query\nCandidate\nLabels',1321,217,59,63,14,container=a)
+for j,s in enumerate(['1','...','5']):
+ y=197+j*31;ln('classout'+str(j),1383,y+13,1398,y+13)
+ a=sh('classlabel'+str(j),1398,y,36,27);tx(a+'t',s,1398,y+4,36,24,14,color='#EF1D11' if j!=1 else '#000000',container=a)
+a=sh('prediction',1264,90,100,27);tx('predictiont','Prediction',1264,94,100,24,13,container=a);ln('predictionline',1315,142,1315,117,arrow=True)
+next(e for e in E if e['id']=='prp').update(allow_overlap_with=['sampleedge5'],overlap_reason='The source graph edge passes under this small relation tag.')
+# Narrow declarations for visible source crossings only: compute pairs where no text-text; role background covers fills.
+def bounds(e):
+ if 'box' in e:return e['box']
+ p=e['points'];return [min(p[0][0],p[1][0]),min(p[0][1],p[1][1]),abs(p[1][0]-p[0][0]),abs(p[1][1]-p[0][1])]
+for i,a in enumerate(E):
+ for b in E[:i]:
+  if a['kind']=='text' and b['kind']=='text':continue
+  if a.get('container')==b['id'] or b.get('container')==a['id']:continue
+  if a.get('role')=='background' or b.get('role')=='background':continue
+  x,y,w,h=bounds(a);X,Y,W,H=bounds(b)
+  if min(x+w,X+W)>=max(x,X)-1 and min(y+h,Y+H)>=max(y,Y)-1:
+   a.setdefault('allow_overlap_with',[]).append(b['id']);a['overlap_reason']='Source-visible table borders, cell frame padding, highlight outline, or connector/node join; exact named pair retained.'
+scene={'version':1,'slides':[{'id':'page_001','width':1460,'height':724,'source':'source.png','background':'#FFFFFF','reviewed':True,'notes':'Complete Figure 1, Wang et al., ICML 2025 Griffin. Reconstructed from official PDF raster; all figure objects native. Approximate transparent price highlight as outline.','elements':E}]}
+(D/'scene.json').write_text(json.dumps(scene,indent=2));print(len(E))

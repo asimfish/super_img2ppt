@@ -1,0 +1,12 @@
+import json
+from pathlib import Path
+p=Path('/tmp/hyena-forward-20260912/job/scene.json'); d=json.loads(p.read_text())
+for e in d['slides'][0]['elements']:
+ i=e['id']
+ if i.endswith('labeltext'):
+  e['font_size']=19 if i.startswith('dense') else 20
+  e['box'][0]-=1;e['box'][1]+=1;e['box'][2]+=2;e['box'][3]=27
+ if i.endswith('sup') and i[0] in 'SD':e['box'][1]=0
+ if i in ['D1main','DNmain']:e['italic']=False
+ if i in ['D1sup','DNsup']:e['box'][0]+=5
+p.write_text(json.dumps(d,indent=2))

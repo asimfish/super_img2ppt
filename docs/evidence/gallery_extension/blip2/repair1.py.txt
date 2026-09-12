@@ -1,0 +1,9 @@
+import json
+from pathlib import Path
+p=Path('/tmp/blip2-gallery-ovi4ki/job/scene.json');s=json.loads(p.read_text());e=s['slides'][0]['elements'];d={v['id']:v for v in e}
+for block,children in [('left_block',['ff1','ca','sa1','l1','l2']),('right_block',['ff2','sa2','r1']),('queries',['query0','query1','query2','query3','dots'])]:
+ d[block]['z']=1
+ for c in children:d[c]['container']=block
+for block,children in [('left_block',['ff1_text','ca_text','sa1_text','l3','causal_l']),('right_block',['ff2_text','sa2_text','r2'])]:
+ for c in children:d[c].setdefault('allow_overlap_with',[]).append(block);d[c]['overlap_reason']='Visible nested module label or connector entering outlined transformer block, as source.'
+p.write_text(json.dumps(s,indent=2))

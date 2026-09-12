@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-12",
+  "baseline_commit": "5f112a6df034631319d3a17db096f74eff37428e",
+  "scope": "Three additional complete real paper figure conversions; actual PPTX gallery and downloads",
+  "cases": ["BLIP-2 ICML2023 Figure 2", "Hyena Hierarchy ICML2023 Figure 1", "Griffin relational-database ICML2025 Figure 1"],
+  "requirements": ["official raster source and redistribution license", "complete figure panels", "editable readable labels and supported geometry", "disclosed raster boundaries", "actual PPTX rendering", "frozen ROI failures preserved", "parent replay of published resolved scenes", "README comparison images and downloads", "GitHub push and exact commit CI"],
+  "environment": "existing repository .venv, LibreOffice, PDFium and installed fonts; no installations",
+  "unavailable_claims": ["native PowerPoint/WPS compatibility", "universal pixel fidelity"],
+  "repair_budget": "at most three meaningful repairs per region, including preflight; disclose deviations",
+  "checks": ["ruff", "actual three-case build replays", "PPTX zip integrity", "source-width pixel replay", "gallery checksums and Markdown links", "exact GitHub CI"],
+  "runtime_change_policy": "Only fix a causally established runtime defect; add appropriate regression if changed"
+}

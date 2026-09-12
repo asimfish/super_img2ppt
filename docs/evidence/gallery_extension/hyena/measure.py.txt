@@ -1,0 +1,16 @@
+from pathlib import Path
+import json,sys
+from PIL import Image
+import pypdfium2 as pdf
+P=Path('/tmp/hyena-forward-20260912');B=Path(sys.argv[1]); final='--final' in sys.argv
+page=pdf.PdfDocument(B/'render/editable.pdf')[0];im=page.render(scale=1518/page.get_width()).to_pil().convert('RGB');im.save(B/'actual-source-width.png')
+a=Image.open(P/'figure1.png').convert('RGB');c=json.loads((P/'roi-contract.json').read_text());results=[]
+for r in c['rois']:
+ if r['split']=='heldout' and not final:continue
+ box=r['box']; aa=a.crop(box);bb=im.crop(box)
+ def mask(img):return {(i%img.width,i//img.width) for i,col in enumerate(img.getdata()) if min(col)<160}
+ s,t=mask(aa),mask(bb)
+ def bbox(m):return [min(x for x,y in m),min(y for x,y in m),max(x for x,y in m),max(y for x,y in m)] if m else [0,0,0,0]
+ bs,bt=bbox(s),bbox(t);edge=max(abs(x-y) for x,y in zip(bs,bt));iou=len(s&t)/len(s|t) if s|t else 1
+ results.append(dict(**r,source_bbox=bs,actual_bbox=bt,max_edge_error_px=edge,ink_iou=iou,pass_joint=edge<=4 and iou>=.7))
+(B/('metrics-final.json' if final else 'metrics-dev.json')).write_text(json.dumps(results,indent=2));print(json.dumps(results,indent=2))
