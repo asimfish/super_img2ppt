@@ -50,3 +50,8 @@ formula parts share one explicit rotation anchor. PDF verification keeps the pag
 bounds limitation visible instead of treating a rotated AABB as proof of exact containment.
 Repeated public-paper measurements (OpenVLA, Cosmos Policy) motivated explicit empty/clipped
 mask diagnostics. No figure-author code or upstream math/vision implementation was imported.
+
+The v0.3.7 native edit-group schema/export and recursive object verification are independently
+implemented here, motivated by real editing granularity tests. They are not copied from the
+upstream skill. Explicit semantic grouping is independent of layout containers and retains
+existing leaf geometry and paint order.

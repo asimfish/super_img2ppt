@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+ROOT=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+export PATH=/opt/homebrew/bin:$PATH
+/Users/liyufeng/Code/super_img2ppt/.venv/bin/super-img2ppt build "$ROOT/grouped_01/scene.resolved.json" --out "$ROOT/rebuilt_fresh" --font-dir /System/Library/Fonts/Supplemental --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype

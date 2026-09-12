@@ -1,0 +1,67 @@
+F.......F                                                                [100%]
+=================================== FAILURES ===================================
+___________ test_nested_groups_preserve_native_leaves_and_svg_order ____________
+
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x1086bbcb0>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-259/test_nested_groups_preserve_na0')
+
+    def test_nested_groups_preserve_native_leaves_and_svg_order(fonts, tmp_path):
+>       scene = validate_scene(example(fonts))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_edit_groups.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+
+    def validate_scene(scene: dict) -> dict:
+        _validate_finite(scene)
+        errors = sorted(Draft202012Validator(SCHEMA).iter_errors(scene), key=lambda e: str(e.path))
+        if errors:
+>           raise InputError(
+                "; ".join(f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5])
+            )
+E           super_img2ppt.scene.InputError: slides/0: Additional properties are not allowed ('groups' was unexpected)
+
+skills/super-img2ppt/src/super_img2ppt/scene.py:237: InputError
+------------------------------ Captured log setup ------------------------------
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:63 'created' timestamp out of range; ignoring top bytes
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:63 'created' timestamp out of range; ignoring top bytes
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+__ test_actual_groups_preserve_pixels_and_support_module_move_and_label_edit ___
+
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x1086bbcb0>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-259/test_actual_groups_preserve_pi0')
+
+    @pytest.mark.render
+    @pytest.mark.skipif(shutil.which("soffice") is None, reason="LibreOffice not installed")
+    def test_actual_groups_preserve_pixels_and_support_module_move_and_label_edit(fonts, tmp_path):
+>       scene = validate_scene(example(fonts))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_edit_groups.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 640, 'height': 360, 'reviewed': True, ...}]}
+
+    def validate_scene(scene: dict) -> dict:
+        _validate_finite(scene)
+        errors = sorted(Draft202012Validator(SCHEMA).iter_errors(scene), key=lambda e: str(e.path))
+        if errors:
+>           raise InputError(
+                "; ".join(f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5])
+            )
+E           super_img2ppt.scene.InputError: slides/0: Additional properties are not allowed ('groups' was unexpected)
+
+skills/super-img2ppt/src/super_img2ppt/scene.py:237: InputError
+=========================== short test summary info ============================
+FAILED tests/test_edit_groups.py::test_nested_groups_preserve_native_leaves_and_svg_order
+FAILED tests/test_edit_groups.py::test_actual_groups_preserve_pixels_and_support_module_move_and_label_edit
+2 failed, 7 passed in 0.69s

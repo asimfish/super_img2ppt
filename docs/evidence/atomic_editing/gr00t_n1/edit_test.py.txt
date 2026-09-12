@@ -1,0 +1,40 @@
+from pathlib import Path
+from pptx import Presentation
+from pptx.enum.shapes import MSO_SHAPE_TYPE
+import json,subprocess,pypdfium2 as pdf
+from PIL import Image,ImageChops
+r=Path(__file__).parent;t=r/'edit_test';t.mkdir();src=r/'build_05_grouped/editable.pptx';p=Presentation(src);scale=p.slide_width/1891
+# Absolute effective positions are recursively derived from native group xfrm off/chOff/ext/chExt.
+def snapshot(prs):
+ out={}
+ def walk(shapes,sx=1,sy=1,tx=0,ty=0,path=()):
+  for s in shapes:
+   if s.shape_type==MSO_SHAPE_TYPE.GROUP:
+    xf=s._element.grpSpPr.xfrm;nsx=sx*xf.ext.cx/xf.chExt.cx;nsy=sy*xf.ext.cy/xf.chExt.cy;ntx=tx+sx*(xf.off.x-xf.chOff.x*xf.ext.cx/xf.chExt.cx);nty=ty+sy*(xf.off.y-xf.chOff.y*xf.ext.cy.cy/xf.chExt.cy) if False else ty+sy*(xf.off.y-xf.chOff.y*xf.ext.cy/xf.chExt.cy)
+    walk(s.shapes,nsx,nsy,ntx,nty,path+(s.name,))
+   else:
+    out[s.name]={'path':list(path),'absolute_box_source_px':[(tx+sx*s.left)/scale,(ty+sy*s.top)/scale,s.width*sx/scale,s.height*sy/scale],'text':s.text if s.has_text_frame else None}
+ walk(prs.slides[0].shapes);return out
+before=snapshot(p)
+g=next(s for s in p.slides[0].shapes if s.name=='state_encoder_module');g.left+=round(35*scale);g.top+=round(20*scale);p.save(t/'moved.pptx');after_move=snapshot(Presentation(t/'moved.pptx'))
+q=Presentation(src);gq=next(s for s in q.slides[0].shapes if s.name=='state_encoder_module');label=next(s for s in gq.shapes if s.name=='state_encoder_label_0');assert label.text=='State';label.text_frame.paragraphs[0].runs[0].text='Joint';q.save(t/'label_edited.pptx');after_label=snapshot(Presentation(t/'label_edited.pptx'))
+report={'module':'state_encoder_module','requested_translation_source_px':[35,20],'edited_label':'state_encoder_label_0','text_change':['State','Joint'],'before':before,'after_move':after_move,'after_label_edit':after_label,'coordinate_deltas_move':{},'coordinate_deltas_label_edit':{}}
+for id,v in before.items():
+ report['coordinate_deltas_move'][id]=[b-a for a,b in zip(v['absolute_box_source_px'],after_move[id]['absolute_box_source_px'])]
+ report['coordinate_deltas_label_edit'][id]=[b-a for a,b in zip(v['absolute_box_source_px'],after_label[id]['absolute_box_source_px'])]
+ moved='state_encoder_module' in v['path'];expected=[35,20,0,0] if moved else [0,0,0,0]
+ assert all(abs(a-b)<.001 for a,b in zip(expected,report['coordinate_deltas_move'][id]))
+ assert all(abs(a)<.001 for a in report['coordinate_deltas_label_edit'][id])
+ assert after_move[id]['text']==v['text']
+ assert after_label[id]['text']==('Joint' if id=='state_encoder_label_0' else v['text'])
+report['checks']={'all_descendants_move_together':True,'all_other_167_leaves_unchanged':True,'edit_changes_exactly_one_complete_label':True,'label_edit_all_geometry_unchanged':True,'native_group_ui_interaction':'Not asserted; direct PPTX edit and actual LibreOffice render'}
+(t/'edit_audit.json').write_text(json.dumps(report,indent=2))
+for name in ['moved','label_edited']:
+ out=t/name;out.mkdir();profile=t/('lo_profile_'+name)
+ cmd=['/opt/homebrew/bin/soffice','--headless','-env:UserInstallation='+profile.as_uri(),'--convert-to','pdf','--outdir',str(out),str(t/(name+'.pptx'))]
+ proc=subprocess.run(cmd,capture_output=True,text=True,timeout=60);(out/'render.log').write_text(proc.stdout+proc.stderr);assert proc.returncode==0
+ page=pdf.PdfDocument(out/(name+'.pdf'))[0];im=page.render(scale=1891/page.get_width()).to_pil().convert('RGB');im.save(out/'actual_sourcewidth.png')
+ base=Image.open(r/'build_05_grouped/actual_sourcewidth.png').convert('RGB');df=ImageChops.difference(base,im);box=df.getbbox();(out/'pixel_difference.json').write_text(json.dumps({'changed_pixels':sum(c!=(0,0,0) for c in df.get_flattened_data()),'difference_bbox':box},indent=2));df.save(out/'difference.png')
+ # Side-by-side local view shows actual edited content, not a reconstructed mock.
+ comp=Image.new('RGB',(700,240),'white');comp.paste(base.crop((450,385,780,605)),(0,0));comp.paste(im.crop((450,385,780,605)),(350,0));comp.save(out/'edit_comparison.png')
+print(json.dumps(report['checks']))

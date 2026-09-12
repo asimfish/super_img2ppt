@@ -1,0 +1,16 @@
+from pathlib import Path
+from PIL import Image
+import pypdfium2 as pdf,json,sys
+r=Path(__file__).parent;b=r/sys.argv[1];p=pdf.PdfDocument(b/'render/editable.pdf')[0];a=p.render(scale=1891/p.get_width()).to_pil().convert('RGB');a.save(b/'actual_sourcewidth.png');s=Image.open(r/'source.png').convert('RGB');print('size',a.size)
+regions={'vision_label':[340,90,463,160],'instruction':[12,258,281,346],'q_formula':[313,441,359,481],'input_last_formula':[284,775,386,816],'cross_attention':[882,503,926,719],'legend_label':[1350,120,1740,164],'iterations':[927,941,1099,980]}
+# no resize/registration. If PDFium rounds height upward, document raw and source-canvas copy separately.
+ac=a.crop((0,0,1891,986));ac.save(b/'actual_sourcecanvas.png');out=Image.new('RGB',(1891,1972),'white');out.paste(s,(0,0));out.paste(ac,(0,986));out.save(b/'comparison_sourcewidth.png');res={};detail=Image.new('RGB',(800,7*240),'white')
+for i,(id,roi) in enumerate(regions.items()):
+ si=s.crop(roi);ai=ac.crop(roi)
+ def mask(im):return {(i%im.width,i//im.width) for i,c in enumerate(im.get_flattened_data()) if max(c)<150}
+ sm,am=mask(si),mask(ai)
+ def bounds(m):
+  xs=[x for x,y in m];ys=[y for x,y in m];return [min(xs),min(ys),max(xs)+1,max(ys)+1]
+ sb,ab=bounds(sm),bounds(am);res[id]={'roi_xyxy':roi,'source':sb,'actual':ab,'delta':[y-x for x,y in zip(sb,ab)],'iou':len(sm&am)/len(sm|am)}
+ scale=min(2,380/si.width,220/si.height);size=(round(si.width*scale),round(si.height*scale));detail.paste(si.resize(size),(0,i*240));detail.paste(ai.resize(size),(400,i*240))
+detail.save(b/'detail_comparison.png');(b/'measurements.json').write_text(json.dumps(res,indent=2));print(json.dumps(res,indent=2))

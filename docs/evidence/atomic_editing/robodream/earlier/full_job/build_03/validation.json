@@ -1,0 +1,3378 @@
+{
+  "status": "fail",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "pass",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "concat_label",
+            "concat"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "views_rear",
+            "trajectory_label"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "output_rear",
+            "cross_attention_label"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "shape": 81,
+            "text": 18,
+            "image": 5,
+            "line": 126
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "views_rear",
+                "views_front"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 486244.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "encoder"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 73353.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "encoder_label"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 5373.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "concat"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 12384.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "concat_label"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 11776.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "noise"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 25134.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "noise_label"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 7904.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "motion"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 25800.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "motion_label"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 8512.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "scene"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 25800.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "scene_label"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 2355.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "noise_tokens_0"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "noise_tokens_1"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "noise_tokens_2"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "noise_tokens_3"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "noise_tokens_4"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "noise_tokens_5"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "noise_tokens_6"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "noise_tokens_7"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "noise_tokens_8"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "motion_tokens_0"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "motion_tokens_1"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "motion_tokens_2"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "motion_tokens_3"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "motion_tokens_4"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "motion_tokens_5"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "motion_tokens_6"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "motion_tokens_7"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "motion_tokens_8"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "scene_tokens_0"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "scene_tokens_1"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "scene_tokens_2"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "scene_tokens_3"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "scene_tokens_4"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "scene_tokens_5"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "scene_tokens_6"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "scene_tokens_7"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "scene_tokens_8"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "encoded_token_0"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "encoded_token_1"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "encoded_token_2"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "encoded_token_3"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "encoded_token_4"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "encoded_token_5"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "encoded_token_6"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "encoded_token_7"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "encoded_token_8"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "views_label"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 846.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "motion_to_concat"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 246.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "concat_to_encoded"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 156.0
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_0"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 19.335
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_1"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 41.745
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_2"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 28.181
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_3"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 34.843
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_4"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 46.751
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_5"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 47.809
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_6"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 37.087
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_7"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 67.304
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_8"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 26.918
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_9"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 30.209
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_10"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 59.912
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_11"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 36.125
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_12"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 26.918
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_13"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 45.506
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_14"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 65.09
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_15"
+              ],
+              "reason": "Traced curve joins its visible source arrowhead at the end.",
+              "area_px2": 44.458
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_16"
+              ],
+              "reason": "Traced curve joins its visible source arrowhead at the end.",
+              "area_px2": 46.296
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_0"
+              ],
+              "reason": "Traced curve joins its visible source arrowhead at the end.",
+              "area_px2": 28.932
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_1"
+              ],
+              "reason": "Traced curve joins its visible source arrowhead at the end.",
+              "area_px2": 48.124
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_2"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 40.414
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_3"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 49.117
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_4"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 48.453
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_5"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 26.918
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_6"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 33.16
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_7"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 62.912
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_8"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 33.16
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_9"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 26.918
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_10"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 60.803
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_11"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 49.542
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_12"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 30.932
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_13"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 51.807
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_14"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 44.036
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_15"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 37.49
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_16"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 33.707
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_17"
+              ],
+              "reason": "Source curve starts at middle-right token edge; expanded round cap touches that specific token.",
+              "area_px2": 25.012
+            },
+            {
+              "elements": [
+                "views_rear",
+                "render_head"
+              ],
+              "reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background.",
+              "area_px2": 76.361
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_top_head"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 93.315
+            },
+            {
+              "elements": [
+                "views_rear",
+                "merge_bottom_head"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 99.781
+            },
+            {
+              "elements": [
+                "views_front",
+                "encoder"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 76440.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "encoder_label"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 5373.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "concat"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 12384.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "concat_label"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 11776.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "noise"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 25134.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "noise_label"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 7904.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "motion"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 25800.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "motion_label"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 8512.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "scene"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 25800.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "scene_label"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 5652.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "noise_tokens_0"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "noise_tokens_1"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "noise_tokens_2"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "noise_tokens_3"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "noise_tokens_4"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "noise_tokens_5"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "noise_tokens_6"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "noise_tokens_7"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "noise_tokens_8"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "motion_tokens_0"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "motion_tokens_1"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "motion_tokens_2"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "motion_tokens_3"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "motion_tokens_4"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "motion_tokens_5"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "motion_tokens_6"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "motion_tokens_7"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "motion_tokens_8"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "scene_tokens_0"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "scene_tokens_1"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "scene_tokens_2"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "scene_tokens_3"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "scene_tokens_4"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "scene_tokens_5"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "scene_tokens_6"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "scene_tokens_7"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "scene_tokens_8"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1024.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "encoded_token_0"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "encoded_token_1"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "encoded_token_2"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "encoded_token_3"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "encoded_token_4"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "encoded_token_5"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "encoded_token_6"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "encoded_token_7"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "encoded_token_8"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "views_label"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 2820.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "motion_to_concat"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 246.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "concat_to_encoded"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 156.0
+            },
+            {
+              "elements": [
+                "views_front",
+                "render_curve_39"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 2.696
+            },
+            {
+              "elements": [
+                "views_front",
+                "render_curve_40"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 6.584
+            },
+            {
+              "elements": [
+                "views_front",
+                "render_curve_41"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 28.419
+            },
+            {
+              "elements": [
+                "views_front",
+                "render_curve_42"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 20.594
+            },
+            {
+              "elements": [
+                "views_front",
+                "render_curve_43"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 23.943
+            },
+            {
+              "elements": [
+                "views_front",
+                "render_curve_44"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 21.32
+            },
+            {
+              "elements": [
+                "views_front",
+                "render_curve_45"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 36.244
+            },
+            {
+              "elements": [
+                "views_front",
+                "render_curve_46"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 73.852
+            },
+            {
+              "elements": [
+                "views_front",
+                "render_curve_47"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 62.346
+            },
+            {
+              "elements": [
+                "views_front",
+                "render_curve_48"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 34.271
+            },
+            {
+              "elements": [
+                "views_front",
+                "render_curve_49"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 54.94
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_0"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 19.335
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_1"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 41.745
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_2"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 28.181
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_3"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 34.843
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_4"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 46.751
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_5"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 47.809
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_6"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 37.087
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_7"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 67.304
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_8"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 26.918
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_9"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 30.209
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_10"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 59.912
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_11"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 36.125
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_12"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 26.918
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_13"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 45.506
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_14"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 65.09
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_15"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 44.458
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_16"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 46.296
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_0"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 28.932
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_1"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 48.124
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_2"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 40.414
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_3"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 49.117
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_4"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 48.453
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_5"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 26.918
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_6"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 33.16
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_7"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 62.912
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_8"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 33.16
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_9"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 26.918
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_10"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 60.803
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_11"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 49.542
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_12"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 30.932
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_13"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 51.807
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_14"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 44.036
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_15"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 37.49
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_16"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 33.707
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_17"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 25.012
+            },
+            {
+              "elements": [
+                "views_front",
+                "render_head"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 76.361
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_top_head"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 93.315
+            },
+            {
+              "elements": [
+                "views_front",
+                "merge_bottom_head"
+              ],
+              "reason": "Visible overlapping multi-view cards.",
+              "area_px2": 99.781
+            },
+            {
+              "elements": [
+                "output_rear",
+                "output_front"
+              ],
+              "reason": "Visible overlapping multi-view output cards.",
+              "area_px2": 17898.0
+            },
+            {
+              "elements": [
+                "output_rear",
+                "decoded_token_0"
+              ],
+              "reason": "Source output tokens overlay stacked card backgrounds.",
+              "area_px2": 792.0
+            },
+            {
+              "elements": [
+                "output_rear",
+                "decoded_token_1"
+              ],
+              "reason": "Source output tokens overlay stacked card backgrounds.",
+              "area_px2": 792.0
+            },
+            {
+              "elements": [
+                "output_rear",
+                "decoded_token_2"
+              ],
+              "reason": "Source output tokens overlay stacked card backgrounds.",
+              "area_px2": 792.0
+            },
+            {
+              "elements": [
+                "output_rear",
+                "decoded_token_3"
+              ],
+              "reason": "Source output tokens overlay stacked card backgrounds.",
+              "area_px2": 792.0
+            },
+            {
+              "elements": [
+                "output_rear",
+                "decoded_token_4"
+              ],
+              "reason": "Source output tokens overlay stacked card backgrounds.",
+              "area_px2": 792.0
+            },
+            {
+              "elements": [
+                "output_rear",
+                "decoded_token_5"
+              ],
+              "reason": "Source output tokens overlay stacked card backgrounds.",
+              "area_px2": 792.0
+            },
+            {
+              "elements": [
+                "output_rear",
+                "decoded_token_6"
+              ],
+              "reason": "Source output tokens overlay stacked card backgrounds.",
+              "area_px2": 792.0
+            },
+            {
+              "elements": [
+                "output_rear",
+                "decoded_token_7"
+              ],
+              "reason": "Source output tokens overlay stacked card backgrounds.",
+              "area_px2": 792.0
+            },
+            {
+              "elements": [
+                "output_rear",
+                "decoded_token_8"
+              ],
+              "reason": "Source output tokens overlay stacked card backgrounds.",
+              "area_px2": 624.0
+            },
+            {
+              "elements": [
+                "output_front",
+                "decoded_token_0"
+              ],
+              "reason": "Visible overlapping multi-view output cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "output_front",
+                "decoded_token_1"
+              ],
+              "reason": "Visible overlapping multi-view output cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "output_front",
+                "decoded_token_2"
+              ],
+              "reason": "Visible overlapping multi-view output cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "output_front",
+                "decoded_token_3"
+              ],
+              "reason": "Visible overlapping multi-view output cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "output_front",
+                "decoded_token_4"
+              ],
+              "reason": "Visible overlapping multi-view output cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "output_front",
+                "decoded_token_5"
+              ],
+              "reason": "Visible overlapping multi-view output cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "output_front",
+                "decoded_token_6"
+              ],
+              "reason": "Visible overlapping multi-view output cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "output_front",
+                "decoded_token_7"
+              ],
+              "reason": "Visible overlapping multi-view output cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "output_front",
+                "decoded_token_8"
+              ],
+              "reason": "Visible overlapping multi-view output cards.",
+              "area_px2": 1089.0
+            },
+            {
+              "elements": [
+                "scene_tokens_5",
+                "merge_bottom_17"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 1.783
+            },
+            {
+              "elements": [
+                "trajectory_curve_0",
+                "trajectory_curve_1"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 40.35
+            },
+            {
+              "elements": [
+                "trajectory_curve_0",
+                "trajectory_curve_2"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 11.239
+            },
+            {
+              "elements": [
+                "trajectory_curve_1",
+                "trajectory_curve_2"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 34.446
+            },
+            {
+              "elements": [
+                "trajectory_curve_2",
+                "trajectory_curve_3"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 26.745
+            },
+            {
+              "elements": [
+                "trajectory_curve_3",
+                "trajectory_curve_4"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 27.024
+            },
+            {
+              "elements": [
+                "trajectory_curve_4",
+                "trajectory_curve_5"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 31.389
+            },
+            {
+              "elements": [
+                "trajectory_curve_4",
+                "trajectory_curve_6"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 4.375
+            },
+            {
+              "elements": [
+                "trajectory_curve_5",
+                "trajectory_curve_6"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 36.535
+            },
+            {
+              "elements": [
+                "trajectory_curve_5",
+                "trajectory_curve_7"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 5.246
+            },
+            {
+              "elements": [
+                "trajectory_curve_6",
+                "trajectory_curve_7"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 32.104
+            },
+            {
+              "elements": [
+                "trajectory_curve_7",
+                "trajectory_curve_8"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 32.127
+            },
+            {
+              "elements": [
+                "trajectory_curve_7",
+                "trajectory_curve_9"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 5.243
+            },
+            {
+              "elements": [
+                "trajectory_curve_8",
+                "trajectory_curve_9"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 32.538
+            },
+            {
+              "elements": [
+                "trajectory_curve_9",
+                "trajectory_curve_10"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 26.946
+            },
+            {
+              "elements": [
+                "trajectory_curve_10",
+                "trajectory_curve_11"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 26.633
+            },
+            {
+              "elements": [
+                "trajectory_curve_11",
+                "trajectory_curve_12"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 26.512
+            },
+            {
+              "elements": [
+                "trajectory_curve_12",
+                "trajectory_curve_13"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 26.706
+            },
+            {
+              "elements": [
+                "trajectory_curve_13",
+                "trajectory_curve_14"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 26.726
+            },
+            {
+              "elements": [
+                "trajectory_curve_14",
+                "trajectory_curve_15"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 27.476
+            },
+            {
+              "elements": [
+                "trajectory_curve_14",
+                "trajectory_curve_16"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 0.657
+            },
+            {
+              "elements": [
+                "trajectory_curve_15",
+                "trajectory_curve_16"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 34.231
+            },
+            {
+              "elements": [
+                "trajectory_curve_15",
+                "trajectory_curve_17"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 6.654
+            },
+            {
+              "elements": [
+                "trajectory_curve_16",
+                "trajectory_curve_17"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 33.819
+            },
+            {
+              "elements": [
+                "trajectory_curve_17",
+                "trajectory_curve_18"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 27.003
+            },
+            {
+              "elements": [
+                "trajectory_curve_18",
+                "trajectory_curve_19"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 26.701
+            },
+            {
+              "elements": [
+                "trajectory_curve_19",
+                "trajectory_curve_20"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 26.62
+            },
+            {
+              "elements": [
+                "trajectory_curve_20",
+                "trajectory_curve_21"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 26.485
+            },
+            {
+              "elements": [
+                "trajectory_curve_21",
+                "trajectory_curve_22"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 26.461
+            },
+            {
+              "elements": [
+                "trajectory_curve_22",
+                "trajectory_curve_23"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 26.587
+            },
+            {
+              "elements": [
+                "trajectory_curve_23",
+                "trajectory_curve_24"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 26.666
+            },
+            {
+              "elements": [
+                "trajectory_curve_24",
+                "trajectory_curve_25"
+              ],
+              "reason": "Traced curve joins its visible source arrowhead at the end.",
+              "area_px2": 27.133
+            },
+            {
+              "elements": [
+                "trajectory_curve_25",
+                "trajectory_curve_26"
+              ],
+              "reason": "Traced curve joins its visible source arrowhead at the end.",
+              "area_px2": 26.944
+            },
+            {
+              "elements": [
+                "trajectory_curve_26",
+                "trajectory_curve_27"
+              ],
+              "reason": "Traced curve joins its visible source arrowhead at the end.",
+              "area_px2": 27.642
+            },
+            {
+              "elements": [
+                "trajectory_curve_27",
+                "trajectory_head"
+              ],
+              "reason": "Traced curve joins its visible source arrowhead at the end.",
+              "area_px2": 1.607
+            },
+            {
+              "elements": [
+                "render_curve_0",
+                "render_curve_1"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.051
+            },
+            {
+              "elements": [
+                "render_curve_1",
+                "render_curve_2"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 14.979
+            },
+            {
+              "elements": [
+                "render_curve_2",
+                "render_curve_3"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 14.989
+            },
+            {
+              "elements": [
+                "render_curve_3",
+                "render_curve_4"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 14.929
+            },
+            {
+              "elements": [
+                "render_curve_4",
+                "render_curve_5"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.059
+            },
+            {
+              "elements": [
+                "render_curve_5",
+                "render_curve_6"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 16.634
+            },
+            {
+              "elements": [
+                "render_curve_5",
+                "render_curve_7"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 1.461
+            },
+            {
+              "elements": [
+                "render_curve_6",
+                "render_curve_7"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 16.543
+            },
+            {
+              "elements": [
+                "render_curve_7",
+                "render_curve_8"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 16.543
+            },
+            {
+              "elements": [
+                "render_curve_7",
+                "render_curve_9"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 1.461
+            },
+            {
+              "elements": [
+                "render_curve_8",
+                "render_curve_9"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 16.53
+            },
+            {
+              "elements": [
+                "render_curve_9",
+                "render_curve_10"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 14.992
+            },
+            {
+              "elements": [
+                "render_curve_10",
+                "render_curve_11"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.0
+            },
+            {
+              "elements": [
+                "render_curve_11",
+                "render_curve_12"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.04
+            },
+            {
+              "elements": [
+                "render_curve_12",
+                "render_curve_13"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.084
+            },
+            {
+              "elements": [
+                "render_curve_13",
+                "render_curve_14"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.084
+            },
+            {
+              "elements": [
+                "render_curve_14",
+                "render_curve_15"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.032
+            },
+            {
+              "elements": [
+                "render_curve_15",
+                "render_curve_16"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.073
+            },
+            {
+              "elements": [
+                "render_curve_16",
+                "render_curve_17"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.073
+            },
+            {
+              "elements": [
+                "render_curve_17",
+                "render_curve_18"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.073
+            },
+            {
+              "elements": [
+                "render_curve_18",
+                "render_curve_19"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.05
+            },
+            {
+              "elements": [
+                "render_curve_19",
+                "render_curve_20"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.05
+            },
+            {
+              "elements": [
+                "render_curve_20",
+                "render_curve_21"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.073
+            },
+            {
+              "elements": [
+                "render_curve_21",
+                "render_curve_22"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.073
+            },
+            {
+              "elements": [
+                "render_curve_22",
+                "render_curve_23"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 16.766
+            },
+            {
+              "elements": [
+                "render_curve_22",
+                "render_curve_24"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 1.672
+            },
+            {
+              "elements": [
+                "render_curve_23",
+                "render_curve_24"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 16.889
+            },
+            {
+              "elements": [
+                "render_curve_24",
+                "render_curve_25"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.032
+            },
+            {
+              "elements": [
+                "render_curve_25",
+                "render_curve_26"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.073
+            },
+            {
+              "elements": [
+                "render_curve_26",
+                "render_curve_27"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.073
+            },
+            {
+              "elements": [
+                "render_curve_27",
+                "render_curve_28"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.05
+            },
+            {
+              "elements": [
+                "render_curve_28",
+                "render_curve_29"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.05
+            },
+            {
+              "elements": [
+                "render_curve_29",
+                "render_curve_30"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.073
+            },
+            {
+              "elements": [
+                "render_curve_30",
+                "render_curve_31"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.073
+            },
+            {
+              "elements": [
+                "render_curve_31",
+                "render_curve_32"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.107
+            },
+            {
+              "elements": [
+                "render_curve_32",
+                "render_curve_33"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.107
+            },
+            {
+              "elements": [
+                "render_curve_33",
+                "render_curve_34"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.125
+            },
+            {
+              "elements": [
+                "render_curve_34",
+                "render_curve_35"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.06
+            },
+            {
+              "elements": [
+                "render_curve_35",
+                "render_curve_36"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.091
+            },
+            {
+              "elements": [
+                "render_curve_36",
+                "render_curve_37"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.075
+            },
+            {
+              "elements": [
+                "render_curve_37",
+                "render_curve_38"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 15.075
+            },
+            {
+              "elements": [
+                "render_curve_38",
+                "render_curve_39"
+              ],
+              "reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+              "area_px2": 14.996
+            },
+            {
+              "elements": [
+                "render_curve_39",
+                "render_curve_40"
+              ],
+              "reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background.",
+              "area_px2": 16.581
+            },
+            {
+              "elements": [
+                "render_curve_39",
+                "render_curve_41"
+              ],
+              "reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background.",
+              "area_px2": 1.461
+            },
+            {
+              "elements": [
+                "render_curve_40",
+                "render_curve_41"
+              ],
+              "reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background.",
+              "area_px2": 16.564
+            },
+            {
+              "elements": [
+                "render_curve_41",
+                "render_curve_42"
+              ],
+              "reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background.",
+              "area_px2": 16.564
+            },
+            {
+              "elements": [
+                "render_curve_41",
+                "render_curve_43"
+              ],
+              "reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background.",
+              "area_px2": 1.461
+            },
+            {
+              "elements": [
+                "render_curve_42",
+                "render_curve_43"
+              ],
+              "reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background.",
+              "area_px2": 16.634
+            },
+            {
+              "elements": [
+                "render_curve_43",
+                "render_curve_44"
+              ],
+              "reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background.",
+              "area_px2": 16.634
+            },
+            {
+              "elements": [
+                "render_curve_43",
+                "render_curve_45"
+              ],
+              "reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background.",
+              "area_px2": 1.461
+            },
+            {
+              "elements": [
+                "render_curve_44",
+                "render_curve_45"
+              ],
+              "reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background.",
+              "area_px2": 16.516
+            },
+            {
+              "elements": [
+                "render_curve_45",
+                "render_curve_46"
+              ],
+              "reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background.",
+              "area_px2": 14.944
+            },
+            {
+              "elements": [
+                "render_curve_46",
+                "render_curve_47"
+              ],
+              "reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background.",
+              "area_px2": 14.916
+            },
+            {
+              "elements": [
+                "render_curve_47",
+                "render_curve_48"
+              ],
+              "reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background.",
+              "area_px2": 14.901
+            },
+            {
+              "elements": [
+                "render_curve_48",
+                "render_curve_49"
+              ],
+              "reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background.",
+              "area_px2": 14.924
+            },
+            {
+              "elements": [
+                "merge_top_0",
+                "merge_top_1"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 18.321
+            },
+            {
+              "elements": [
+                "merge_top_1",
+                "merge_top_2"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.188
+            },
+            {
+              "elements": [
+                "merge_top_2",
+                "merge_top_3"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.013
+            },
+            {
+              "elements": [
+                "merge_top_3",
+                "merge_top_4"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.05
+            },
+            {
+              "elements": [
+                "merge_top_4",
+                "merge_top_5"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 14.998
+            },
+            {
+              "elements": [
+                "merge_top_5",
+                "merge_top_6"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 14.947
+            },
+            {
+              "elements": [
+                "merge_top_6",
+                "merge_top_7"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 14.953
+            },
+            {
+              "elements": [
+                "merge_top_7",
+                "merge_top_8"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.101
+            },
+            {
+              "elements": [
+                "merge_top_8",
+                "merge_top_9"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.065
+            },
+            {
+              "elements": [
+                "merge_top_9",
+                "merge_top_10"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.107
+            },
+            {
+              "elements": [
+                "merge_top_10",
+                "merge_top_11"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.05
+            },
+            {
+              "elements": [
+                "merge_top_11",
+                "merge_top_12"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.008
+            },
+            {
+              "elements": [
+                "merge_top_12",
+                "merge_top_13"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.065
+            },
+            {
+              "elements": [
+                "merge_top_13",
+                "merge_top_14"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 14.96
+            },
+            {
+              "elements": [
+                "merge_top_14",
+                "merge_top_15"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 14.978
+            },
+            {
+              "elements": [
+                "merge_top_15",
+                "merge_top_16"
+              ],
+              "reason": "Traced curve joins its visible source arrowhead at the end.",
+              "area_px2": 14.974
+            },
+            {
+              "elements": [
+                "merge_bottom_0",
+                "merge_bottom_1"
+              ],
+              "reason": "Traced curve joins its visible source arrowhead at the end.",
+              "area_px2": 14.956
+            },
+            {
+              "elements": [
+                "merge_bottom_1",
+                "merge_bottom_2"
+              ],
+              "reason": "Traced curve joins its visible source arrowhead at the end.",
+              "area_px2": 14.95
+            },
+            {
+              "elements": [
+                "merge_bottom_2",
+                "merge_bottom_3"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 14.931
+            },
+            {
+              "elements": [
+                "merge_bottom_3",
+                "merge_bottom_4"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 14.95
+            },
+            {
+              "elements": [
+                "merge_bottom_4",
+                "merge_bottom_5"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.047
+            },
+            {
+              "elements": [
+                "merge_bottom_5",
+                "merge_bottom_6"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.032
+            },
+            {
+              "elements": [
+                "merge_bottom_6",
+                "merge_bottom_7"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.073
+            },
+            {
+              "elements": [
+                "merge_bottom_7",
+                "merge_bottom_8"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.073
+            },
+            {
+              "elements": [
+                "merge_bottom_8",
+                "merge_bottom_9"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.032
+            },
+            {
+              "elements": [
+                "merge_bottom_9",
+                "merge_bottom_10"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.065
+            },
+            {
+              "elements": [
+                "merge_bottom_10",
+                "merge_bottom_11"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 14.973
+            },
+            {
+              "elements": [
+                "merge_bottom_11",
+                "merge_bottom_12"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 14.897
+            },
+            {
+              "elements": [
+                "merge_bottom_12",
+                "merge_bottom_13"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 14.957
+            },
+            {
+              "elements": [
+                "merge_bottom_13",
+                "merge_bottom_14"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.006
+            },
+            {
+              "elements": [
+                "merge_bottom_14",
+                "merge_bottom_15"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.148
+            },
+            {
+              "elements": [
+                "merge_bottom_15",
+                "merge_bottom_16"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.124
+            },
+            {
+              "elements": [
+                "merge_bottom_16",
+                "merge_bottom_17"
+              ],
+              "reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+              "area_px2": 15.009
+            }
+          ],
+          "text_layouts": {
+            "encoder_label": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 97.5,
+              "height_px": 35.75,
+              "available_width_px": 135,
+              "available_height_px": 39.800000000000004,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 98.0,
+              "required_height_px": 36.25,
+              "fits": true,
+              "lines": [
+                "Encoder"
+              ]
+            },
+            "trajectory_projector_label": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 116.0,
+              "height_px": 71.5,
+              "available_width_px": 160,
+              "available_height_px": 73.60000000000001,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 116.5,
+              "required_height_px": 72.0,
+              "fits": true,
+              "lines": [
+                "Trajectory",
+                "projector"
+              ]
+            },
+            "text_encoder_label": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 96.5,
+              "height_px": 71.5,
+              "available_width_px": 150,
+              "available_height_px": 73.60000000000001,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 97.0,
+              "required_height_px": 72.0,
+              "fits": true,
+              "lines": [
+                "Text",
+                "encoder"
+              ]
+            },
+            "concat_label": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 108.5,
+              "height_px": 71.5,
+              "available_width_px": 160,
+              "available_height_px": 73.60000000000001,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 109.0,
+              "required_height_px": 72.0,
+              "fits": true,
+              "lines": [
+                "Concat &",
+                "MLP"
+              ]
+            },
+            "mlp_label": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 51.25,
+              "height_px": 35.75,
+              "available_width_px": 160,
+              "available_height_px": 39.800000000000004,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 51.75,
+              "required_height_px": 36.25,
+              "fits": true,
+              "lines": [
+                "MLP"
+              ]
+            },
+            "dit_label": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 140.5,
+              "height_px": 71.5,
+              "available_width_px": 179,
+              "available_height_px": 73.60000000000001,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 141.0,
+              "required_height_px": 72.0,
+              "fits": true,
+              "lines": [
+                "Diffusion",
+                "Transformer"
+              ]
+            },
+            "decoder_label": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 101.25,
+              "height_px": 35.75,
+              "available_width_px": 137,
+              "available_height_px": 39.800000000000004,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 101.75,
+              "required_height_px": 36.25,
+              "fits": true,
+              "lines": [
+                "Decoder"
+              ]
+            },
+            "noise_label": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 150.5,
+              "height_px": 35.75,
+              "available_width_px": 208,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 151.0,
+              "required_height_px": 36.25,
+              "fits": true,
+              "lines": [
+                "Noisy frames"
+              ]
+            },
+            "motion_label": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 204.25,
+              "height_px": 35.75,
+              "available_width_px": 224,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 204.75,
+              "required_height_px": 36.25,
+              "fits": true,
+              "lines": [
+                "Rendered motion"
+              ]
+            },
+            "scene_label": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 133.25,
+              "height_px": 35.75,
+              "available_width_px": 157,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 133.75,
+              "required_height_px": 36.25,
+              "fits": true,
+              "lines": [
+                "Scene prior"
+              ]
+            },
+            "object_label": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 142.5,
+              "height_px": 35.75,
+              "available_width_px": 175,
+              "available_height_px": 37,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 143.0,
+              "required_height_px": 36.25,
+              "fits": true,
+              "lines": [
+                "Object prior"
+              ]
+            },
+            "generated_label": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 302.25,
+              "height_px": 35.75,
+              "available_width_px": 309,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 302.75,
+              "required_height_px": 36.25,
+              "fits": true,
+              "lines": [
+                "Generated demonstration"
+              ]
+            },
+            "trajectory_label": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 188.25,
+              "height_px": 35.75,
+              "available_width_px": 232,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 188.75,
+              "required_height_px": 36.25,
+              "fits": true,
+              "lines": [
+                "Robot trajectory"
+              ]
+            },
+            "rendering_label": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 110.5,
+              "height_px": 33.0,
+              "available_width_px": 123,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 111.0,
+              "required_height_px": 33.5,
+              "fits": true,
+              "lines": [
+                "Rendering"
+              ]
+            },
+            "instruction": {
+              "scale": 1,
+              "effective_font_size_px": 27,
+              "width_px": 227.5,
+              "height_px": 62.1,
+              "available_width_px": 262,
+              "available_height_px": 80,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 228.0,
+              "required_height_px": 62.6,
+              "fits": true,
+              "lines": [
+                "Put the marker",
+                "in the bowl"
+              ]
+            },
+            "instruction_label": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 180.5,
+              "height_px": 35.75,
+              "available_width_px": 221,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 181.0,
+              "required_height_px": 36.25,
+              "fits": true,
+              "lines": [
+                "Task instruction"
+              ]
+            },
+            "cross_attention_label": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 176.75,
+              "height_px": 35.75,
+              "available_width_px": 210,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 177.25,
+              "required_height_px": 36.25,
+              "fits": true,
+              "lines": [
+                "Cross attention"
+              ]
+            },
+            "views_label": {
+              "scale": 1,
+              "effective_font_size_px": 23,
+              "width_px": 74.75,
+              "height_px": 31.5,
+              "available_width_px": 94,
+              "available_height_px": 32,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 75.25,
+              "required_height_px": 32.0,
+              "fits": true,
+              "lines": [
+                "n views"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "fail",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [
+        {
+          "code": "renderer_font_substitution",
+          "slide": "page_001",
+          "element": "encoder_label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        },
+        {
+          "code": "renderer_font_substitution",
+          "slide": "page_001",
+          "element": "trajectory_projector_label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        },
+        {
+          "code": "renderer_font_substitution",
+          "slide": "page_001",
+          "element": "text_encoder_label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        },
+        {
+          "code": "renderer_font_substitution",
+          "slide": "page_001",
+          "element": "concat_label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        },
+        {
+          "code": "renderer_font_substitution",
+          "slide": "page_001",
+          "element": "mlp_label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        },
+        {
+          "code": "renderer_font_substitution",
+          "slide": "page_001",
+          "element": "dit_label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        },
+        {
+          "code": "renderer_font_substitution",
+          "slide": "page_001",
+          "element": "decoder_label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        },
+        {
+          "code": "renderer_font_substitution",
+          "slide": "page_001",
+          "element": "noise_label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        },
+        {
+          "code": "renderer_font_substitution",
+          "slide": "page_001",
+          "element": "motion_label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        },
+        {
+          "code": "renderer_font_substitution",
+          "slide": "page_001",
+          "element": "scene_label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        },
+        {
+          "code": "renderer_font_substitution",
+          "slide": "page_001",
+          "element": "object_label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        },
+        {
+          "code": "renderer_font_substitution",
+          "slide": "page_001",
+          "element": "generated_label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        },
+        {
+          "code": "renderer_font_substitution",
+          "slide": "page_001",
+          "element": "trajectory_label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        },
+        {
+          "code": "renderer_font_substitution",
+          "slide": "page_001",
+          "element": "rendering_label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        },
+        {
+          "code": "renderer_font_substitution",
+          "slide": "page_001",
+          "element": "instruction_label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        },
+        {
+          "code": "renderer_font_substitution",
+          "slide": "page_001",
+          "element": "cross_attention_label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        },
+        {
+          "code": "renderer_font_substitution",
+          "slide": "page_001",
+          "element": "views_label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        }
+      ],
+      "text_boxes": [
+        {
+          "slide": "page_001",
+          "element": "encoder_label",
+          "expected": "Encoder",
+          "rendered": "Encoder",
+          "rendered_normalized": "Encoder",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 95.25,
+          "rendered_ink_width_px": 94.211
+        },
+        {
+          "slide": "page_001",
+          "element": "trajectory_projector_label",
+          "expected": "Trajectory\nprojector",
+          "rendered": "Trajectory\r\nprojector",
+          "rendered_normalized": "Trajectory\r\nprojector",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 115.5,
+          "rendered_ink_width_px": 113.687
+        },
+        {
+          "slide": "page_001",
+          "element": "text_encoder_label",
+          "expected": "Text\nencoder",
+          "rendered": "Text\r\nencoder",
+          "rendered_normalized": "Text\r\nencoder",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 95.5,
+          "rendered_ink_width_px": 94.315
+        },
+        {
+          "slide": "page_001",
+          "element": "concat_label",
+          "expected": "Concat &\nMLP",
+          "rendered": "Concat &\r\nMLP",
+          "rendered_normalized": "Concat &\r\nMLP",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 107.0,
+          "rendered_ink_width_px": 107.377
+        },
+        {
+          "slide": "page_001",
+          "element": "mlp_label",
+          "expected": "MLP",
+          "rendered": "MLP",
+          "rendered_normalized": "MLP",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 48.0,
+          "rendered_ink_width_px": 48.3
+        },
+        {
+          "slide": "page_001",
+          "element": "dit_label",
+          "expected": "Diffusion\nTransformer",
+          "rendered": "Diffusion\r\nTransformer",
+          "rendered_normalized": "Diffusion\r\nTransformer",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 140.25,
+          "rendered_ink_width_px": 137.941
+        },
+        {
+          "slide": "page_001",
+          "element": "decoder_label",
+          "expected": "Decoder",
+          "rendered": "Decoder",
+          "rendered_normalized": "Decoder",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 99.25,
+          "rendered_ink_width_px": 98.418
+        },
+        {
+          "slide": "page_001",
+          "element": "noise_label",
+          "expected": "Noisy frames",
+          "rendered": "Noisy frames",
+          "rendered_normalized": "Noisy frames",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 147.75,
+          "rendered_ink_width_px": 147.445
+        },
+        {
+          "slide": "page_001",
+          "element": "motion_label",
+          "expected": "Rendered motion",
+          "rendered": "Rendered motion",
+          "rendered_normalized": "Rendered motion",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 200.0,
+          "rendered_ink_width_px": 199.225
+        },
+        {
+          "slide": "page_001",
+          "element": "scene_label",
+          "expected": "Scene prior",
+          "rendered": "Scene prior",
+          "rendered_normalized": "Scene prior",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 132.0,
+          "rendered_ink_width_px": 131.475
+        },
+        {
+          "slide": "page_001",
+          "element": "object_label",
+          "expected": "Object prior",
+          "rendered": "Object prior",
+          "rendered_normalized": "Object prior",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 141.25,
+          "rendered_ink_width_px": 140.823
+        },
+        {
+          "slide": "page_001",
+          "element": "generated_label",
+          "expected": "Generated demonstration",
+          "rendered": "Generated demonstration",
+          "rendered_normalized": "Generated demonstration",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 299.0,
+          "rendered_ink_width_px": 299.097
+        },
+        {
+          "slide": "page_001",
+          "element": "trajectory_label",
+          "expected": "Robot trajectory",
+          "rendered": "Robot trajectory",
+          "rendered_normalized": "Robot trajectory",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 185.75,
+          "rendered_ink_width_px": 186.994
+        },
+        {
+          "slide": "page_001",
+          "element": "rendering_label",
+          "expected": "Rendering",
+          "rendered": "R\r\ne\r\nn\r\nd\r\nerin\r\ng",
+          "rendered_normalized": "R\r\ne\r\nn\r\nd\r\nerin\r\ng",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 106.5,
+          "rendered_ink_width_px": 107.527
+        },
+        {
+          "slide": "page_001",
+          "element": "instruction",
+          "expected": "Put the marker\nin the bowl",
+          "rendered": "Put the marker\r\nin the bowl",
+          "rendered_normalized": "Put the marker\r\nin the bowl",
+          "matches": true,
+          "actual_fonts": [
+            "CourierNewPSMT"
+          ],
+          "measured_ink_width_px": 223.75,
+          "rendered_ink_width_px": 221.282
+        },
+        {
+          "slide": "page_001",
+          "element": "instruction_label",
+          "expected": "Task instruction",
+          "rendered": "Task instruction",
+          "rendered_normalized": "Task instruction",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 178.25,
+          "rendered_ink_width_px": 176.269
+        },
+        {
+          "slide": "page_001",
+          "element": "cross_attention_label",
+          "expected": "Cross attention",
+          "rendered": "Cross attention ",
+          "rendered_normalized": "Cross attention ",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 173.5,
+          "rendered_ink_width_px": 173.958
+        },
+        {
+          "slide": "page_001",
+          "element": "views_label",
+          "expected": "n views",
+          "rendered": "n views",
+          "rendered_normalized": "n views",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 72.75,
+          "rendered_ink_width_px": 72.907
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "6c789942ac16947fffa2b1c69a80809fdf4ec5e2dc4bf4d770f1341a1667b45d",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "page_001",
+      "mean_absolute_pixel_error": 0.019057,
+      "comparison": "page_001_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "title": "RoboDream: Compositional World Models for Scalable Robot Data Synthesis",
+  "authors": "Junjie Ye et al.",
+  "arxiv": "2606.02577v1",
+  "submitted": "2026-06-01 17:59:38 UTC",
+  "version_verified": "v1, 2026-09-12",
+  "paper_url": "https://arxiv.org/abs/2606.02577",
+  "pdf_url": "https://arxiv.org/pdf/2606.02577v1",
+  "pdf_sha256": "c6b3596a48d117e39342191d556eb08cd9ecfec1181f905de6ab680cf16f8175",
+  "paper_license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence": [
+    "arxiv.html",
+    "license.html"
+  ],
+  "figure": 2,
+  "page_one_based": 3,
+  "pdf_raster_scale": 4,
+  "crop_ltrb": [
+    264,
+    192,
+    2180,
+    1100
+  ],
+  "source_size": [
+    1916,
+    908
+  ],
+  "source_sha256": "e196bb00a27670a8fefc285ac0311d557e296dec165bd7bc06c94cc34a9935e1",
+  "counts": {
+    "shape": 81,
+    "text": 18,
+    "image": 5,
+    "line": 128
+  },
+  "group_count": 27,
+  "assets": [
+    {
+      "id": "noise",
+      "box": [
+        87,
+        211,
+        213,
+        118
+      ],
+      "contains_text": false
+    },
+    {
+      "id": "motion",
+      "box": [
+        85,
+        382,
+        215,
+        120
+      ],
+      "contains_text": false
+    },
+    {
+      "id": "scene",
+      "box": [
+        85,
+        562,
+        215,
+        120
+      ],
+      "contains_text": false
+    },
+    {
+      "id": "object",
+      "box": [
+        85,
+        741,
+        215,
+        119
+      ],
+      "contains_text": false
+    },
+    {
+      "id": "generated",
+      "box": [
+        1622,
+        192,
+        262,
+        293
+      ],
+      "contains_text": false
+    }
+  ],
+  "method": "Raster pixels and local Vision OCR only. No original PDF text/vector coordinate extraction, source drawing code, network OCR or model-generated substitute art. Native curves traced from source pixels.",
+  "attribution": "Adapted from Fig. 2, Junjie Ye et al., RoboDream: Compositional World Models for Scalable Robot Data Synthesis, arXiv:2606.02577v1 (2026-06-01), CC BY 4.0. Changes: editable reconstruction, substitute Arial/Courier New fonts, horizontal approximation of diagonal token gradients; five artwork crops retained.",
+  "final_build": "full_job/build_13_grouped",
+  "flat_baseline": "full_job/build_14_flat"
+}

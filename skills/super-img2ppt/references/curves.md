@@ -17,6 +17,10 @@ one distinguishable curve. Review the magenta `overlay.png`, `trace.json` and it
 short interpolations before merging `elements.json` into the matching slide. Give every
 curve a unique prefix; arrange z-order and exact allowed joins against the full scene.
 The fragment is not a complete scene, and a successful trace remains `review`.
+A tight ROI can avoid a neighboring border yet omit a visible connector endpoint. Inspect
+both endpoints against the full source, including frame contacts and arrow tips. Add a
+separate native segment only for an observed omitted stroke, include it in the same curve
+group, and recheck joins; never invent a hidden continuation to close a gap.
 
 - A source-verified horizontal guide may be explicitly excluded with repeated
   `--exclude-band TOP BOTTOM` (absolute y, half-open). No automatic horizontal-line removal:
@@ -41,3 +45,8 @@ and source-width curve crops. Preserve original axes, legends, ticks and uncerta
 never infer missing labels or hidden measurements from the traced line. Compare the actual
 PPTX render, not just the helper overlay. Stop after three unresolved repairs to one region
 and report the remaining limitation.
+
+For outputs with multiple parts/segments, the helper also writes `groups.json` with one
+semantic edit group (empty for a single object). Merge it into the slide's `groups` along
+with `elements.json`, using unique IDs and keeping its leaves contiguous in paint order.
+See [editing.md](editing.md); helper output remains unverified until full build and review.

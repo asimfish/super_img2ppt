@@ -1,0 +1,38 @@
+import json,hashlib,zipfile,shutil
+from pathlib import Path
+w=Path('output/atomic_gallery_20260912');cases=json.loads((w/'cases.json').read_text());p=Path('examples/gallery/index.json');index=json.loads(p.read_text());existing={c['id'] for c in index['cases']}
+new=[{'id':'gr00t_n1','title':'GR00T N1 / arXiv 2025 / Figure 3','detail_box':[270,387,430,455]},{'id':'robodream','title':'RoboDream / arXiv 2026 / Figure 2','detail_box':[40,10,275,490]}]
+index['cases']=[c for c in new if c['id'] not in existing]+index['cases'];p.write_text(json.dumps(index,indent=2)+'\n')
+e=Path('examples/editing');e.mkdir(exist_ok=True)
+(e/'NOTICE.md').write_text('''# Semantic editing examples
+
+Three complete editable figures: GR00T N1, RoboDream and a grouped Cosmos 3 edition.
+Each folder retains its own ATTRIBUTION.md, original source and modification notice under
+CC BY 4.0. These figure rights are distinct from the repository MIT runtime license.
+All groups retain editable leaves. Files named editable.pptx are faithful grouped reconstructions;
+operation-test duplicates are in docs/evidence/atomic_editing and intentionally modify source content.
+Source typography still differs. Actual-PPTX checks use LibreOffice; external arrows do not reroute.
+See each editability.json and REPORT.md for group structure, tested operations and remaining limits.
+''')
+editing_index={'cases':[{'id':c['id'],'path':c.get('destination','examples/gallery/'+c['id']),'archive_directory':c['id']} for c in cases]};(e/'index.json').write_text(json.dumps(editing_index,indent=2)+'\n')
+files=[]
+for c in cases:
+ folder=Path(c.get('destination','examples/gallery/'+c['id']))
+ for f in sorted(folder.rglob('*')):
+  if f.is_file():files.append((f,c['id']+'/'+f.relative_to(folder).as_posix()))
+files.extend([(e/'NOTICE.md','NOTICE.md'),(e/'index.json','index.json')]);files.sort(key=lambda x:x[1]);sums=''.join(hashlib.sha256(f.read_bytes()).hexdigest()+'  '+name+'\n' for f,name in files)
+with zipfile.ZipFile(e/'editing_examples.zip','w',compression=zipfile.ZIP_DEFLATED) as z:
+ for f,name in files:
+  info=zipfile.ZipInfo(name,date_time=(2026,9,12,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED;info.external_attr=0o644<<16;z.writestr(info,f.read_bytes())
+ info=zipfile.ZipInfo('SHA256SUMS',date_time=(2026,9,12,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED;info.external_attr=0o644<<16;z.writestr(info,sums)
+(e/'SHA256SUMS').write_text(hashlib.sha256((e/'editing_examples.zip').read_bytes()).hexdigest()+'  editing_examples.zip\n')
+evidence=Path('docs/evidence/atomic_editing');attrs=[]
+for f in evidence.rglob('*'):
+ if f.is_file() and f.suffix in {'.html','.log','.txt'}:
+  try:s=f.read_text()
+  except UnicodeDecodeError:continue
+  if any(line.endswith((' ','\t')) for line in s.splitlines()):attrs.append(str(f)+' -whitespace')
+p=Path('.gitattributes');s=p.read_text();extra=[x for x in attrs if x not in s]
+if extra:p.write_text(s+'\n# Preserve exact paper-license and failed-test evidence whitespace.\n'+'\n'.join(extra)+'\n')
+for name in ['archive.py','replay.py','finish_gallery.py','package_smoke.py']:shutil.copy2(w/name,evidence/(name+'.txt'))
+shutil.copy2(w/'cases.json',evidence/'cases.json');print('17 gallery cases; 3 grouped editing editions')

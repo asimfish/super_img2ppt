@@ -1,0 +1,13 @@
+from pathlib import Path
+from PIL import Image,ImageChops
+import pypdfium2 as pdf,json
+q=Path('/tmp/cosmos3-edit-uBlGYq');ims={}
+for name,path in [('published',q/'published_render/editable.pdf'),('flat_reordered',q/'flat_reordered_01/render/editable.pdf'),('grouped',q/'grouped_01/render/editable.pdf')]:
+ d=pdf.PdfDocument(path);p=d[0];im=p.render(scale=1400/p.get_width()).to_pil().convert('RGB');im.save(q/(name+'_actualsourcewidth.png'));ims[name]=im
+res={}
+for name in ['flat_reordered','grouped']:
+ diff=ImageChops.difference(ims['published'],ims[name]);pixels=list(diff.get_flattened_data());res['published_vs_'+name]={'changed_pixels':sum(px!=(0,0,0) for px in pixels),'diff_bbox':diff.getbbox(),'max_channel_difference':max(max(px) for px in pixels)}
+diff=ImageChops.difference(ims['flat_reordered'],ims['grouped']);res['flat_vs_grouped']={'changed_pixels':sum(px!=(0,0,0) for px in diff.get_flattened_data()),'diff_bbox':diff.getbbox()}
+for name,im in [('published_vs_grouped',ims['published']),('source_vs_grouped',Image.open(q/'published/source.png').convert('RGB'))]:
+ out=Image.new('RGB',(1400,1250));out.paste(im,(0,0));out.paste(ims['grouped'],(0,625));out.save(q/(name+'.png'))
+(q/'render_comparison.json').write_text(json.dumps(res,indent=2));print(res)

@@ -1,0 +1,98 @@
+import json
+from pathlib import Path
+from PIL import Image
+R=Path('/tmp/robodream_atomic_20260912');J=R/'full_job';(J/'assets').mkdir(exist_ok=True);im=Image.open(R/'source.png');E=[];G=[]
+def add(i,k,**kw):e=dict(id=i,kind=k,z=len(E)+1,**kw);E.append(e);return i
+def sh(i,b,fill=None,stroke=None,**kw):return add(i,'shape',box=b,shape=kw.pop('shape','round_rect'),fill=fill,stroke=stroke,**kw)
+def tx(i,t,b,size=26,container=None,**kw):
+ d=dict(box=b,text=t,font_size=size,font_family=kw.pop('font_family','Avenir'),fit='strict',wrap=False,**kw)
+ if container:d['container']=container
+ return add(i,'text',**d)
+def ln(i,p,arrow=False,col='#808080',width=3,**kw):
+ if arrow:kw.update(arrow=True,arrow_head={'length':12,'width':12})
+ return add(i,'line',points=p,stroke=col,stroke_width=width,**kw)
+def asset(i,b):
+ im.crop((b[0],b[1],b[0]+b[2],b[1]+b[3])).save(J/'assets'/f'{i}.png');return add(i,'image',box=b,path=f'assets/{i}.png',contains_text=False,provenance='Exact crop of official RoboDream Figure 2, Ye et al. 2026, arXiv:2606.02577v1, CC BY 4.0.')
+def grp(i,ids,why):G.append(dict(id=i,members=ids,why=why))
+def module(i,b,t,fill,size=26,color='#000000'):
+ sh(i,b,fill,radius=14);tx(i+'_label',t,[b[0]+6,b[1]+(b[3]-len(t.split('\n'))*size*1.3)/2,b[2]-12,len(t.split('\n'))*size*1.3+6],size,container=i,align='center',color=color);grp(i+'_group',[i,i+'_label'],'Keep the module background and its complete label together when moving/resizing.')
+sh('views_rear',[72,174,967,535],'#F2F2F2',radius=18)
+sh('views_front',[48,195,970,535],'#F2F2F2','#FFFFFF',stroke_width=3,radius=18)
+E[-1].update(allow_overlap_with=['views_rear'],overlap_reason='Visible overlapping multi-view cards.')
+sh('output_rear',[1308,174,60,492],'#F2F2F2',radius=15)
+sh('output_front',[1285,195,61,493],'#F2F2F2','#FFFFFF',stroke_width=3,radius=15)
+E[-1].update(allow_overlap_with=['output_rear'],overlap_reason='Visible overlapping multi-view output cards.')
+module('encoder',[359,210,147,650],'Encoder','#40AF6B',26,'#FFFFFF')
+module('trajectory_projector',[749,31,172,82],'Trajectory\nprojector','#DCDBB8')
+module('text_encoder',[1408,31,162,82],'Text\nencoder','#DCDBB8')
+module('concat',[749,406,172,72],'Concat &\nMLP','#DCDBB8')
+module('mlp',[749,766,172,72],'MLP','#DCDBB8')
+module('dit',[1071,177,191,683],'Diffusion\nTransformer','#5D85FF',26,'#FFFFFF')
+module('decoder',[1415,177,149,513],'Decoder','#40AF6B',26,'#FFFFFF')
+# exact independent artwork includes no readable labels
+for i,b,t,lb in [('noise',[87,211,213,118],'Noisy frames',[94,340,208,38]),('motion',[85,382,215,120],'Rendered motion',[95,515,224,38]),('scene',[85,562,215,120],'Scene prior',[126,694,157,38]),('object',[85,741,215,119],'Object prior',[121,872,175,35]),('generated',[1622,192,262,293],'Generated demonstration',[1604,497,309,38])]:
+ asset(i,b);tx(i+'_label',t,lb);grp(i+'_input',[i,i+'_label'],'Photo/illustration and complete readable label form one input/output unit.')
+sh('trajectory_frame',[87,13,214,118],'#FFFFFF','#355361',shape='rect',stroke_width=1.2)
+tx('trajectory_label','Robot trajectory',[99,140,232,38])
+tx('rendering_label','Rendering',[-41,239,123,33],24,rotation=-90)
+# condition tokens
+for i,b,fill in [('trajectory_token_bg',[1049,44,110,55],'#EFF3ED'),('text_token_bg',[1174,44,108,55],'#F9F2EE')]:sh(i,b,fill,radius=12)
+for i,x,c,container in [('trajectory_token1',1060,'#B5CDA8','trajectory_token_bg'),('trajectory_token2',1109,'#B5CDA8','trajectory_token_bg'),('text_token1',1183,'#EBC8B0','text_token_bg'),('text_token2',1232,'#EBC8B0','text_token_bg')]:sh(i,[x,52,39,39],c,radius=9,container=container)
+sh('instruction_bg',[1614,29,278,86],'#D9D9D9',shape='rect')
+tx('instruction','Put the marker\nin the bowl',[1622,34,262,80],27,container='instruction_bg',align='center',font_family='Courier New')
+tx('instruction_label','Task instruction',[1657,140,221,38]);tx('cross_attention_label','Cross attention',[1190,137,210,38])
+# four native 3x3 latent grids
+for pref,y,fill,stroke in [('noise_tokens',211,'#9BBEA0','#8EA992'),('motion_tokens',383,'#D4D9B7','#BAC1A7'),('scene_tokens',564,'#F8B5A9','#D99890'),('object_tokens',743,'#FFD06F','#E6A019')]:
+ ids=[]
+ for j in range(9):ids.append(sh(pref+'_'+str(j),[560+(j%3)*43,y+(j//3)*43,32,32],fill,stroke,stroke_width=3,radius=5))
+ grp(pref,ids,'One 3×3 token grid: move/recolor as a semantic tensor while retaining editable cells.')
+# two nine-token multiview columns: diagonal source gradients approximated by supported horizontal blend
+for pref,x in [('encoded',970),('decoded',1299)]:
+ ids=[]
+ for j in range(9):ids.append(sh(pref+'_token_'+str(j),[x,212+j*53.5,33,33],gradient={'direction':'horizontal','stops':[{'offset':0,'color':'#A2C399'},{'offset':.5,'color':'#D0D8BB'},{'offset':1,'color':'#FAC1AF'}]},radius=7))
+ grp(pref+'_tokens',ids,'Whole token column should be moved together; each gradient token remains individually editable.')
+for j in range(2):sh('object_encoded_'+str(j),[967,757+j*49,39,39],'#FFD079',radius=8)
+tx('views_label','n views',[922,700,94,32],23)
+for pref,x,y in [('views_dots',1025,722),('decoded_dots',1355,678)]:
+ for j in range(3):sh(pref+'_'+str(j),[x+j*6,y-j*5,2.5,2.5],'#000000',shape='ellipse')
+# straight connector branches; curved portions appended from reviewed local trace
+ln('trajectory_to_projector',[[301,71],[749,71]],True)
+ln('projector_to_tokens',[[921,71],[1049,71]],True)
+ln('instruction_to_encoder',[[1614,71],[1570,71]],True)
+ln('text_encoder_to_tokens',[[1408,71],[1282,71]],True)
+ln('conditioning_to_dit',[[1166,102],[1166,177]],True)
+ln('motion_to_concat',[[679,442],[749,442]],True)
+ln('concat_to_encoded',[[921,442],[961,442]],True)
+ln('object_to_mlp',[[678,801],[749,801]],True)
+ln('mlp_to_object',[[921,801],[961,801]],True)
+for n in ['trajectory','render','merge_top','merge_bottom']:
+ es=json.loads((R/f'trace_{n}_02/elements.json').read_text());ids=[]
+ for e in es:e['z']=len(E)+1;E.append(e);ids.append(e['id'])
+ grp(n+'_curve',ids,'Traced single continuous curve is fragmented into native line segments; group is essential for practical editing.')
+# source arrowheads and omitted tiny end fragments, separate native geometry
+ln('trajectory_head',[[245,39],[260,49]],True,col='#C0C0C0',width=4)
+ln('render_head',[[76,430],[85,440]],True,width=3)
+ln('merge_top_head',[[735,403],[749,416]],True,width=3)
+ln('merge_bottom_head',[[735,484],[749,468]],True,width=3)
+# visible source layering and only specific intentional pairs
+D={e['id']:e for e in E}
+def pair(a,b,why):D[a].setdefault('allow_overlap_with',[]).append(b);D[a]['overlap_reason']=why
+for e in E:
+ if e['id'] in ['encoder','encoder_label','concat','concat_label'] or e['id'].startswith(('noise_tokens_','motion_tokens_','scene_tokens_','encoded_token_','merge_top_','merge_bottom_')) or e['id'] in ['noise','noise_label','motion','motion_label','scene','scene_label','motion_to_concat','concat_to_encoded','views_label']:
+  for p in ['views_front','views_rear']:pair(e['id'],p,'Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.')
+ if e['id'].startswith('decoded_token_'):
+  for p in ['output_front','output_rear']:pair(e['id'],p,'Source output tokens overlay stacked card backgrounds.')
+for n,head in [('trajectory','trajectory_head'),('render','render_head'),('merge_top','merge_top_head'),('merge_bottom','merge_bottom_head')]:
+ g=next(g for g in G if g['id']==n+'_curve'); g['members'].append(head)
+ for eid in g['members'][:-1]:
+  # only near end segments actually touch head, not all segments
+  pts=D[eid]['points']; hp=D[head]['points'];
+  if min((x-hp[0][0])**2+(y-hp[0][1])**2 for x,y in pts)<200:pair(eid,head,'Traced curve joins its visible source arrowhead at the end.')
+grp('instruction_unit',['instruction_bg','instruction','instruction_label'],'Move task prompt and caption as one unit; prompt remains two semantic lines in one textbox.')
+grp('trajectory_input',['trajectory_frame','trajectory_label']+next(g['members'] for g in G if g['id']=='trajectory_curve'),'Robot trajectory icon combines frame, curve and label; use parent group with nested curve group when supported.')
+# clean nulls only; no thresholds relaxed
+for e in E:
+ for k in list(e):
+  if e[k] is None:del e[k]
+scene={'version':1,'slides':[{'id':'page_001','width':1916,'height':908,'source':'pages/page_001/source.png','background':'#FFFFFF','reviewed':True,'notes':'Adapted from Junjie Ye et al., RoboDream: Compositional World Models for Scalable Robot Data Synthesis, arXiv:2606.02577v1, Figure 2 (2026-06-01). CC BY 4.0 https://creativecommons.org/licenses/by/4.0/. Changes: editable reconstruction from raster pixels/local OCR; Avenir and Courier New approximate source typography; five independent artwork crops remain raster, token gradients approximate diagonal source blends.','elements':E}]}
+(J/'scene.json').write_text(json.dumps(scene,indent=2));(R/'semantic_groups.json').write_text(json.dumps({'proposed_only':True,'groups':G},indent=2));print(len(E))

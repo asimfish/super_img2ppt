@@ -1,0 +1,8 @@
+import json
+from pathlib import Path
+p=Path('/tmp/robodream_atomic_20260912/full_job/scene.json');s=json.loads(p.read_text());E=s['slides'][0]['elements'];D={e['id']:e for e in E}
+for e in E:
+ if e.get('font_family')=='Avenir':e['font_family']='Avenir Book'
+for curve,head,first in [('trajectory_curve','trajectory_head',False),('render_curve','render_head',False),('merge_top','merge_top_head',False),('merge_bottom','merge_bottom_head',True)]:
+ es=[e for e in E if e['id'].startswith(curve+'_') and e['id'].split('_')[-1].isdigit() and e['kind']=='line'];es.sort(key=lambda e:int(e['id'].split('_')[-1]));pt=es[0]['points'][0] if first else es[-1]['points'][-1];D[head]['points'][0]=pt
+p.write_text(json.dumps(s,indent=2))

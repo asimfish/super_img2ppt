@@ -1,0 +1,31 @@
+from pathlib import Path
+import json,copy
+r=Path(__file__).parent;base=json.loads((r/'job/scene.json').read_text());s=base['slides'][0];es=s['elements'];by={e['id']:e for e in es};rec=json.loads((r/'recommended_groups.json').read_text())['groups'];gs=[{'id':g['id'],'members':g['member_ids'],'description':g['reason']} for g in rec]
+# Nest the freeze symbol inside the VLM, rather than selecting its many strokes independently.
+next(g for g in gs if g['id']=='vlm_module')['members'].append('vlm_frozen_icon')
+gs.extend([
+ {'id':'instruction_text','members':['instruction_0','instruction_1','instruction_2'],'description':'One language instruction with three source-prescribed editable lines.'},
+ {'id':'input_action_sequence','members':['input_chunk','input_a0','input_a1','input_aH','input_ellipsis'],'description':'Move dashed chunk frame and all grouped formulas/ellipsis together.'},
+ {'id':'output_action_sequence','members':['output_chunk','output_a0','output_a1','output_aH','output_ellipsis'],'description':'Move output chunk frame and all grouped formulas/ellipsis together.'},
+ {'id':'dit_block_stack','members':['dit','cross_1_module','self_1_module','cross_2_module','self_2_module','cross_self_1','cross_self_2','dit_gap','repeat_count','dit_label'],'description':'DiT composite module, with nested editable attention sublayers and internal links. Incoming/outgoing cross-module arrows remain independent.'},
+ {'id':'frozen_legend','members':['legend_frozen_icon','legend_frozen_label'],'description':'Freeze-status legend icon and full label.'},
+ {'id':'embodiment_legend','members':['legend_module','legend_module_label'],'description':'Embodiment legend swatch and full label.'},
+ {'id':'motor_output','members':['humanoid_art','motor_label_0','motor_label_1'],'description':'Robot artwork and its two-line editable Motor Action label.'},
+ {'id':'feedback_path','members':['feedback_right','feedback_bottom','feedback_left','feedback_head','iteration_label'],'description':'One feedback route made of editable segments/head and K iterations label; no automatic rerouting.'}])
+# Nest lists according to existing leaf z wherever possible. Make intentional z changes explicit.
+gby={g['id']:g for g in gs};parent={m:g['id'] for g in gs for m in g['members']}
+def leaves(id):
+ if id in by:return [id]
+ return sum([leaves(m) for m in gby[id]['members']],[])
+def rank(id):return min(by[x]['z'] for x in leaves(id))
+for g in gs:g['members'].sort(key=rank)
+roots=[id for id in list(by)+list(gby) if id not in parent];roots.sort(key=rank)
+ordered=sum([leaves(id) for id in roots],[]);assert len(ordered)==len(set(ordered))==len(es)
+changes=[]
+for z,id in enumerate(ordered,1):
+ e=by[id]
+ if e['z']!=z:changes.append({'id':id,'old_z':e['z'],'new_z':z})
+ e['z']=z
+s['elements']=[by[id] for id in ordered]
+(r/'job/scene.reordered_flat.json').write_text(json.dumps(base,indent=2));s['groups']=gs
+(r/'job/scene.grouped.json').write_text(json.dumps(base,indent=2));(r/'group_z_changes.json').write_text(json.dumps(changes,indent=2));print(len(gs),'groups',len(es),'leaves',len(changes),'z changes')

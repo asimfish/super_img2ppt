@@ -292,3 +292,19 @@ Policy regions against a separate integer-set mask oracle. Value-label edges dif
 one pixel but mask IoU is 0.228155; this is not text-recognition accuracy. Wrong image dimensions
 fail without resizing; empty or clipped masks do not produce valid edge metrics. See repository
 docs/world_models.md for exact artifacts, failures, commands and limitations.
+
+## v0.3.7 semantic edit groups
+
+PPTX and SVG now preserve explicitly authored nested groups and all editable leaves. Native
+verification recursively checks group membership and leaf paint order. A focused real-PPTX
+regression verifies flat-versus-grouped pixel identity, moving a parent moves nested formula
+labels by the same amount while neighbors stay fixed, and a child label can be changed without
+changing siblings. Horizontal and vertical segment-only groups retain their rendered strokes.
+Negative cases cover interleaving, duplicated parents/members, missing IDs, cycles and depth
+above eight. Formula and curve helpers emit groups.json; build emits editability.json.
+
+Independent complete GR00T N1 and RoboDream reconstructions and a Cosmos 3 editing pass are
+recorded in repository docs/atomic_editing.md. The demonstrations use actual PPTX copies and
+LibreOffice renderings, not native PowerPoint UI automation. External arrows do not reconnect
+automatically; grouped formula parts are not Office equation objects. Semantic usefulness and
+source typography require review; object/group counts are descriptive, not acceptance scores.

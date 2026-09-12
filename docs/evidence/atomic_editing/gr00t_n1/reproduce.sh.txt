@@ -1,0 +1,9 @@
+#!/bin/zsh
+set -euo pipefail
+R=${0:A:h}
+export PATH=/opt/homebrew/bin:$PATH
+CLI=/Users/liyufeng/Code/super_img2ppt/.venv/bin/super-img2ppt
+PY=/Users/liyufeng/Code/super_img2ppt/.venv/bin/python
+OUT=${1:-$R/rebuild_01}
+$CLI build "$R/job/scene.merged_final.json" --out "$OUT" --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype --font-dir /System/Library/Fonts/Supplemental
+$PY "$R/measure.py" "${OUT#$R/}"

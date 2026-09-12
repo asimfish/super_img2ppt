@@ -18,7 +18,7 @@ from pptx.util import Inches, Pt
 from .fonts import east_asian_name
 from .geometry import arrow_outline, polygon_points
 from .layout import TextLayout, positioned_lines
-from .scene import safe_asset, slide_transform
+from .scene import group_plan, safe_asset, slide_transform
 
 SHAPES = {
     "rect": MSO_SHAPE.RECTANGLE,
@@ -239,8 +239,41 @@ def write_pptx(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pa
             cnv.set(
                 "descr", element.get("provenance", f"Editable {kind}; source id {element['id']}")
             )
+        _pptx_groups(slide, spec)
         slide.notes_slide.notes_text_frame.text = spec.get("notes", "")
     deck.save(out)
+
+
+def _pptx_groups(slide, spec):
+    nodes = {shape.name: shape for shape in slide.shapes}
+    tree = slide.shapes._spTree
+    for group in group_plan(spec):
+        children = [nodes[mid] for mid in group["members"]]
+        position = tree.index(children[0]._element)
+        shape = slide.shapes.add_group_shape(children)
+        shape.name = group["id"]
+        shape._element.xpath("./p:nvGrpSpPr/p:cNvPr")[0].set(
+            "descr", group.get("description", "Editable semantic group")
+        )
+        # A native group moves as one paint-order unit. Keep its original first slot.
+        tree.remove(shape._element)
+        tree.insert(position, shape._element)
+        nodes[group["id"]] = shape
+
+
+def _svg_groups(svg, slide):
+    nodes = {node.get("id"): node for node in svg if node.get("id")}
+    for group in group_plan(slide):
+        children = [nodes[mid] for mid in group["members"]]
+        position = list(svg).index(children[0])
+        node = ET.Element("g", {"id": group["id"]})
+        if "description" in group:
+            ET.SubElement(node, "desc").text = group["description"]
+        for child in children:
+            svg.remove(child)
+            node.append(child)
+        svg.insert(position, node)
+        nodes[group["id"]] = node
 
 
 def write_svg(slide: dict, layouts: dict[tuple[str, str], TextLayout], root: Path, out: Path):
@@ -417,5 +450,6 @@ def write_svg(slide: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                         "polygon",
                         {"points": " ".join(f"{px},{py}" for px, py in points), **style},
                     )
+    _svg_groups(svg, slide)
     ET.indent(svg)
     ET.ElementTree(svg).write(out, encoding="utf-8", xml_declaration=True)

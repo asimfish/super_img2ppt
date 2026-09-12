@@ -1,0 +1,32 @@
+from pathlib import Path
+from pptx import Presentation
+from pptx.enum.shapes import MSO_SHAPE_TYPE
+from lxml import etree
+import json,hashlib
+q=Path('/tmp/cosmos3-edit-uBlGYq');p=Presentation(q/'grouped_01/editable.pptx');scale=p.slide_width/1400
+
+def scan(prs):
+ leaves={};groups={};shapes={}
+ def rec(seq,sx=1,sy=1,tx=0,ty=0):
+  for s in seq:
+   shapes[s.name]=s
+   if s.shape_type==MSO_SHAPE_TYPE.GROUP:
+    x=s._element.grpSpPr.xfrm;offx=int(x.off.x);offy=int(x.off.y);ex=int(x.ext.cx);ey=int(x.ext.cy);cx=int(x.chOff.x);cy=int(x.chOff.y);cex=int(x.chExt.cx);cey=int(x.chExt.cy)
+    groups[s.name]={'xfrm':etree.tostring(x).decode(),'children':[t.name for t in s.shapes]}
+    rec(s.shapes,sx*ex/cex,sy*ey/cey,tx+sx*(offx-cx*ex/cex),ty+sy*(offy-cy*ey/cey))
+   else:leaves[s.name]={'anchor':[tx+sx*s.left,ty+sy*s.top],'size':[sx*s.width,sy*s.height],'text':s.text if s.has_text_frame else None,'xml':hashlib.sha256(etree.tostring(s._element)).hexdigest()}
+ rec(prs.slides[0].shapes);return leaves,groups,shapes
+b,bg,bs=scan(p)
+bs['reasoner_input_norm'].left-=round(16*scale)
+bs['full_attention_formula'].top+=round(8*scale)
+runs=bs['arlabel1'].text_frame.paragraphs[0].runs;assert len(runs)==1,len(runs);runs[0].text='RMS Norm'
+out=q/'edited_operation.pptx';p.save(out);a,ag,_=scan(Presentation(out))
+expected={'arnode1':[-16,0],'arlabel1':[-16,0]};expected.update({k:[0,8] for k in b if k.startswith('f2part')});deltas={};errors=[]
+for k in b:
+ delta=[(v-u)/scale for u,v in zip(b[k]['anchor'],a[k]['anchor'])]
+ if any(abs(t)>1e-7 for t in delta):deltas[k]=delta
+ want=expected.get(k,[0,0])
+ if any(abs(x-y)>.001 for x,y in zip(delta,want)):errors.append({'id':k,'delta':delta,'expected':want})
+ if b[k]['size']!=a[k]['size']:errors.append({'id':k,'size_changed':True})
+ if k!='arlabel1' and b[k]['xml']!=a[k]['xml']:errors.append({'id':k,'leaf_xml_changed':True})
+report={'operations':[{'group':'reasoner_input_norm','translation_source_px':[-16,0]},{'group':'full_attention_formula','translation_source_px':[0,8]},{'child':'arlabel1','text_before':b['arlabel1']['text'],'text_after':a['arlabel1']['text'],'method':'Modify retained single text run; formatting retained'}],'actual_moved_leaf_deltas_source_px':deltas,'expected_moved_leaves':len(expected),'unchanged_leaf_xml_count':sum(b[k]['xml']==a[k]['xml'] for k in b),'total_leaves':len(b),'changed_group_transforms':[k for k in bg if bg[k]['xfrm']!=ag[k]['xfrm']],'group_membership_unchanged':all(bg[k]['children']==ag[k]['children'] for k in bg),'errors':errors,'passed':not errors,'boundary':'Native PPTX edited via python-pptx object API, not interactive PowerPoint/WPS click verification; external arrows intentionally stay fixed.'};(q/'operation_verification.json').write_text(json.dumps(report,indent=2));print(json.dumps(report,indent=2));assert not errors

@@ -1,0 +1,99 @@
+{
+  "title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots",
+  "author_credit": "NVIDIA; Johan Bjorck, Fernando Casta\u00f1eda, Nikita Cherniadev et al. (full author list retained in article.html and paper.pdf)",
+  "version": "arXiv:2503.14734v2",
+  "submitted_v1": "2025-03-18T21:06:21Z",
+  "revised_v2": "2025-03-27T02:52:43Z",
+  "source_url": "https://arxiv.org/pdf/2503.14734v2",
+  "article_url": "https://arxiv.org/abs/2503.14734v2",
+  "paper_license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence": "article.html line184: link explicitly titled Rights to this article; this is the paper license, not the model/code license.",
+  "figure": 3,
+  "figure_title": "GR00T N1 Model Architecture",
+  "page_1based": 4,
+  "pdf_raster_scale": 4,
+  "raster_page_size": [
+    2382,
+    3368
+  ],
+  "crop_xyxy": [
+    246,
+    334,
+    2137,
+    1320
+  ],
+  "source_size": [
+    1891,
+    986
+  ],
+  "reconstruction_inputs": [
+    "source raster visual inspection",
+    "local Tesseract OCR corrected from pixels"
+  ],
+  "forbidden_inputs_used": [],
+  "native_counts": {
+    "shape": 59,
+    "text": 43,
+    "line": 57,
+    "image": 2
+  },
+  "native_groups": 34,
+  "top_level_selectable_objects": 41,
+  "raster_assets": [
+    {
+      "id": "observation_photo",
+      "crop_xyxy": [
+        9,
+        28,
+        273,
+        216
+      ],
+      "boundary": "Camera photograph with its thin source image border; no readable labels."
+    },
+    {
+      "id": "humanoid_art",
+      "crop_xyxy": [
+        1796,
+        449,
+        1884,
+        686
+      ],
+      "boundary": "Detailed robot artwork; Motor Action label is native outside crop."
+    }
+  ],
+  "actual_raster_recipe": {
+    "renderer": "LibreOffice export actual PPTX to PDF then PDFium raster",
+    "scale": "1891 / exported PDF page width in pt",
+    "raw_pixels": [
+      1891,
+      987
+    ],
+    "source_canvas_pixels": [
+      1891,
+      986
+    ],
+    "white_row_rounding": "Keep raw actual_sourcewidth.png. Last row index986 verified 1891 pure-white RGB pixels; remove only that extra bottom row to make actual_sourcecanvas.png. No registration/resampling."
+  },
+  "fonts_embedded_or_distributed": false,
+  "fidelity_status": "review: retained font/glyph differences; no native PowerPoint/WPS UI verification",
+  "group_actual_pixel_audit": "merge_all_pixel_audit.json (old05 vs final09: zero), merge_final_flat_group_pixel_audit.json (final09 group vs final10 flat: zero).",
+  "actual_edit_test": "edit_test_merged/edit_audit.json: State Encoder module 2 leaves translated(+35,+20),159 others unchanged. Full single-box State\\nEncoder changed to Joint\\nEncoder; all161 geometries unchanged.",
+  "sha256": {
+    "paper.pdf": "76e38cf679637b816b16edf7170340883dd09175bf334aeeaed49392777731b9",
+    "article.html": "7e52d738d776011f97d6fc846264016f66edea7067ad5db65d978f8e7154485a",
+    "license.html": "231a5dac65bbf135ba27145969a63cd289faadc172f1512c4810a6c60ba91036",
+    "source.png": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a",
+    "job/scene.grouped.json": "973895db48bf6dd2d678bba6585c4bfc88730cf50ea5ec8ed743f72b2ef71247",
+    "build_05_grouped/editable.pptx": "9b3ad18f17f78c03af4eaa238b81872f8343381aaeb7418c1ecc9fa74b93eb1b",
+    "build_05_grouped/render/editable.pdf": "ab9c11239cd66110d86aae921123e9274b50fa5f0a3b63a9a2d18fc69a509d8b",
+    "build_05_grouped/actual_sourcewidth.png": "dea6781acfcb0f0b58c076fbfffbb7d8866259f262154017a6b80c80ff6e16c9",
+    "job/scene.merged_final.json": "e260f8d90b3b29f4782f8a745e495234f41a9ae86eed7077336a95c57e78be2d",
+    "build_09_merged_grouped/editable.pptx": "e31ff4f4c30f0e080bb1a155fa4567b0c156afa354947ede727c1c641d3637c7",
+    "build_09_merged_grouped/render/editable.pdf": "a2e3e83948653d8b4461c5c24522536a0f646d0e542920c7a30114bf261a7f72",
+    "build_09_merged_grouped/actual_sourcewidth.png": "dea6781acfcb0f0b58c076fbfffbb7d8866259f262154017a6b80c80ff6e16c9"
+  },
+  "final_build": "build_09_merged_grouped",
+  "final_scene": "job/scene.merged_final.json",
+  "atomic_labels": "6 two-line module names, Motor Action and the entire three-line instruction each one native text box; explicit line_height and measured baseline compensation."
+}

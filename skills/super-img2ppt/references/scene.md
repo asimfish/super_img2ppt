@@ -101,3 +101,12 @@ preserves existing behavior. Explicit caps require a plain line without `arrow: 
 Rounded caps extend half the stroke width beyond both endpoints; bounds and collisions
 include that footprint. Adjacent traced segments need specific, source-verified overlap
 declarations; a cap does not exempt unrelated objects.
+
+## Semantic edit groups
+
+Optional slide `groups` contains `{id, members, description?}`. Members reference element or
+group IDs; each member has at most one parent, groups have at least two members, and nesting
+is bounded to eight levels. Native PPTX and SVG groups retain leaf IDs and coordinates.
+All leaves of each group must occupy a contiguous range in stable z order; interleaving
+is rejected rather than changing stacking. This is independent of `container` and never
+exempts overlap checks. See [editing.md](editing.md) for editing granularity and examples.

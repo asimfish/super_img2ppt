@@ -1,6 +1,6 @@
 # Third-party figure attribution
 
-The first twelve cases are complete figure crops and editable adaptations of ICML and CoRL papers
+The original twelve ICML/CoRL cases are complete figure crops and editable adaptations of ICML and CoRL papers
 published in Proceedings of Machine Learning Research, volumes 202, 229, 235, 267, 270 and 305.
 The authors retain copyright.
 The publisher [publication agreement](https://proceedings.mlr.press/pmlr-license-agreement.html),
@@ -67,6 +67,16 @@ This claim does not derive from a model/code license or the PMLR agreement above
   22 January 2026; ICLR 2026. Frozen figure source is the arXiv version.
 - **Cosmos 3**, Figure 5: NVIDIA et al., “Cosmos 3: Omnimodal World Models for Physical AI”,
   [arXiv 2606.02800v4](https://arxiv.org/abs/2606.02800v4), 23 June 2026 (PDF cover 24 June).
+
+The editing-granularity cases likewise use individual arXiv **paper** CC BY 4.0 links,
+archived in `docs/evidence/atomic_editing/<case>/`:
+
+- **GR00T N1**, Figure 3: NVIDIA; Johan Bjorck, Fernando Castañeda et al.,
+  “GR00T N1: An Open Foundation Model for Generalist Humanoid Robots”,
+  [arXiv 2503.14734v2](https://arxiv.org/abs/2503.14734v2), 27 March 2025.
+- **RoboDream**, Figure 2: Junjie Ye et al., “RoboDream: Compositional World Models for
+  Scalable Robot Data Synthesis”, [arXiv 2606.02577v1](https://arxiv.org/abs/2606.02577v1),
+  1 June 2026.
 
 Changes: rasterized and cropped complete figures (paper captions excluded), reconstructed text
 and geometry into PPTX/SVG/JSON, retained explicitly disclosed image-only regions, and

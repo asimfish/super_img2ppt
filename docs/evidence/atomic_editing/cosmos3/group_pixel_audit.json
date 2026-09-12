@@ -1,0 +1,28 @@
+{
+  "published_vs_flat_reordered": {
+    "changed_pixels": 0,
+    "diff_bbox": null,
+    "max_channel_difference": 0
+  },
+  "published_vs_grouped": {
+    "changed_pixels": 0,
+    "diff_bbox": null,
+    "max_channel_difference": 0
+  },
+  "flat_vs_grouped": {
+    "changed_pixels": 0,
+    "diff_bbox": null
+  },
+  "leaf_count": 415,
+  "leaf_content_geometry_style_changes_excluding_z": [],
+  "z_change_count": 276,
+  "z_changes_file": "z_changes.json",
+  "group_count": 81,
+  "root_groups": 21,
+  "ungrouped_roots": 16,
+  "root_selectable_objects": 37,
+  "raster_recipe": "All three actual PDFs rasterized with pypdfium2 at scale 1400/page.get_width(); output1400\u00d7625. No registration, crop compensation, downsampling, or threshold. Pixel comparison tests all RGB bytes.",
+  "original_pptx_rerender": "published_render/editable.pdf",
+  "grouped_actual": "grouped_actualsourcewidth.png",
+  "flat_z_reordered_actual": "flat_reordered_actualsourcewidth.png"
+}

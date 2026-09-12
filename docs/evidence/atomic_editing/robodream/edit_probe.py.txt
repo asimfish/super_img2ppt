@@ -1,0 +1,20 @@
+from pathlib import Path
+import json,hashlib
+from pptx import Presentation
+from pptx.enum.shapes import MSO_SHAPE_TYPE
+R=Path('/tmp/robodream_atomic_20260912');B=R/'full_job/build_13_grouped';out=R/'edit_probe_final3';out.mkdir(exist_ok=True)
+p=Presentation(B/'editable.pptx');scale=p.slide_width/1916
+
+def walk(shapes):
+ for s in shapes:
+  yield s
+  if s.shape_type==MSO_SHAPE_TYPE.GROUP:yield from walk(s.shapes)
+D={s.name:s for s in walk(p.slides[0].shapes)}
+old={k:hashlib.sha256(v._element.xml.encode()).hexdigest() for k,v in D.items() if v.shape_type!=MSO_SHAPE_TYPE.GROUP}
+curve=D['group_trajectory_curve'];oldleft=curve.left;curve.left+=round(12*scale)
+t=D['encoder_label'];oldtext=t.text;t.text_frame.paragraphs[0].runs[0].text='Encode'
+new={k:hashlib.sha256(v._element.xml.encode()).hexdigest() for k,v in D.items() if v.shape_type!=MSO_SHAPE_TYPE.GROUP}
+changed=[k for k in old if old[k]!=new[k]]
+p.save(out/'edited.pptx')
+(out/'operations.json').write_text(json.dumps({'curve_group':'group_trajectory_curve','delta_source_px':[12,0],'delta_emu':curve.left-oldleft,'curve_children':len(curve.shapes),'curve_child_local_geometry_unchanged':all(old[s.name]==new[s.name] for s in curve.shapes),'label_id':'encoder_label','old_text':oldtext,'new_text':t.text,'changed_leaf_XML':changed,'neighbor_leaf_XML_unchanged':changed==['encoder_label'],'method':'python-pptx actual duplicate PPTX mutation; moved native group offset and changed retained run text. No scene rebuild.'},indent=2))
+print(changed)

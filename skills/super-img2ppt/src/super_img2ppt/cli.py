@@ -19,7 +19,7 @@ from .fonts import FontCatalog
 from .layout import layout_scene
 from .mathtext import compose_file
 from .prepare import fresh_directory, json_write, prepare
-from .qa import comparison, inspect_pptx, preflight
+from .qa import comparison, editability_manifest, inspect_pptx, preflight
 from .regions import compare_region_files
 from .render import make_renderer, rasterize_pdf, verify_rendered_text
 from .scene import SCHEMA, InputError, load_scene, safe_asset, slide_transform
@@ -109,6 +109,7 @@ def build(
         svg_dir.mkdir()
         for slide in scene["slides"]:
             write_svg(slide, layouts, root, svg_dir / f"{slide['id']}.svg")
+        json_write(out / "editability.json", editability_manifest(scene))
         native = inspect_pptx(pptx, scene)
         report["automated_checks"]["native_objects"] = native
         report["artifacts"] = {
@@ -116,6 +117,7 @@ def build(
             "svg": "svg/",
             "scene": "scene.resolved.json",
             "fonts": "fonts.json",
+            "editability": "editability.json",
         }
         if native["status"] == "fail":
             return report

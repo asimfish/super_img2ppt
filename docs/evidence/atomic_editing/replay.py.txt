@@ -1,0 +1,21 @@
+import json,os,subprocess,hashlib,sys
+from pathlib import Path
+from PIL import Image,ImageChops
+import pypdfium2 as pdfium
+w=Path('output/atomic_gallery_20260912');record=Path('docs/evidence/atomic_editing/replay.json');rows=json.loads(record.read_text()) if record.exists() else [];env=dict(os.environ,PATH='/opt/homebrew/bin:'+os.environ['PATH'])
+for c in json.loads((w/'cases.json').read_text()):
+ if sys.argv[1:] and c['id'] not in sys.argv[1:]:continue
+ rows=[r for r in rows if r['case']!=c['id']]
+ src=Path(c.get('destination','examples/gallery/'+c['id']));out=w/('replay_'+c['id']);cmd=['.venv/bin/super-img2ppt','build',str(src/'scene.resolved.json'),'--out',str(out),'--font-dir','/System/Library/Fonts/Supplemental','--font-dir','/Applications/LibreOffice.app/Contents/Resources/fonts/truetype'];p=subprocess.run(cmd,env=env,capture_output=True,text=True);(w/(c['id']+'_replay.log')).write_text(p.stdout+p.stderr);assert p.returncode==0,(c['id'],p.returncode)
+ with Image.open(src/'source.png') as im:width,height=im.size
+ with pdfium.PdfDocument(out/'render/editable.pdf') as doc:
+  page=doc[0];bitmap=page.render(scale=width/page.get_width());actual=bitmap.to_pil().convert('RGB');raw=list(actual.size)
+  if actual.height==height+1 and c['rasterization']['crop_to_source_size']:
+   assert actual.width==width and all(px==(255,255,255) for px in actual.crop((0,height,width,height+1)).getdata());actual=actual.crop((0,0,width,height))
+  assert actual.size==(width,height);bitmap.close();page.close()
+ actual.save(out/'actual-source-width.png')
+ with Image.open(src/'actual.png') as frozen:
+  diff=ImageChops.difference(actual,frozen.convert('RGB'));changed=sum(px!=(0,0,0) for px in diff.getdata())
+ assert changed==0,(c['id'],changed)
+ validation=json.loads((out/'validation.json').read_text());rows.append({'case':c['id'],'command':cmd,'status':validation['status'],'raw_size':raw,'actual_size':[width,height],'changed_pixels':changed,'actual_sha256':hashlib.sha256((out/'actual-source-width.png').read_bytes()).hexdigest()});print(c['id'],'0 changed pixels',flush=True)
+Path('docs/evidence/atomic_editing/replay.json').write_text(json.dumps(rows,indent=2)+'\n')

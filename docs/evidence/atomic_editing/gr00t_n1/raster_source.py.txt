@@ -1,0 +1,7 @@
+from pathlib import Path
+import pypdfium2 as pdf
+r=Path(__file__).parent
+# Only PDF raster API; no PDF text/vector coordinate access.
+im=pdf.PdfDocument(r/'paper.pdf')[3].render(scale=4).to_pil()
+im.save(r/'page4_4x_reproduced.png')
+im.crop((246,334,2137,1320)).save(r/'source_reproduced.png')

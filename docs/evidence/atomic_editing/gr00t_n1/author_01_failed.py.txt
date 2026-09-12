@@ -1,0 +1,115 @@
+import json,math,subprocess
+from pathlib import Path
+from PIL import Image
+R=Path(__file__).parent;J=R/'job';(J/'assets').mkdir(exist_ok=True);im=Image.open(R/'source.png');E=[];groups=[]
+S='#5B6067';L='#F2F2F2';G='#D9EBD1';PURPLE='#D398E8';BLUE='#0070C0'
+def add(id,kind,**kw):
+ e=dict(id=id,kind=kind,z=len(E)+1,**kw);E.append(e);return e
+def shape(id,b,fill,**kw):return add(id,'shape',box=b,shape='round_rect',radius=25,fill=fill,stroke=S,stroke_width=3,**kw)
+def text(id,t,b,size=29,**kw):return add(id,'text',box=b,text=t,font_size=size,font_family='Arial',color='#000000',fit='strict',**kw)
+def line(id,p,arrow=False,**kw):
+ if arrow:kw.update(arrow=True,arrow_head={'length':12,'width':10})
+ return add(id,'line',points=p,stroke=S,stroke_width=3,**kw)
+def crop(id,b):
+ im.crop(b).save(J/'assets'/f'{id}.png');return add(id,'image',box=[b[0],b[1],b[2]-b[0],b[3]-b[1]],path=f'assets/{id}.png',contains_text=False,provenance='Exact source raster crop; photo/complex robot rendering, excluding labels.')
+def group(id,ids,why):groups.append({'id':id,'member_ids':ids,'reason':why})
+# Modules are shapes plus meaningful text lines, not glyph-level fragments.
+mods=[('vision',[317,20,170,209],L),('tokenizer',[317,261,170,92],L),('vlm',[569,10,185,362],L),('state_encoder',[482,395,194,122],G),('action_encoder',[482,540,194,279],G),('dit',[840,395,492,438],L),('cross_1',[870,414,68,398],'#D9D9D9'),('self_1',[963,414,69,398],'#D9D9D9'),('cross_2',[1139,414,69,398],'#D9D9D9'),('self_2',[1232,414,69,398],'#D9D9D9'),('decoder',[1414,402,180,417],G)]
+for id,b,fill in mods:
+ kw={'container':'dit'} if id.startswith(('cross_','self_')) else {};e=shape(id,b,fill,**kw)
+ if id in ['dit','vision','vlm','action_encoder','decoder']:e['radius']=33
+ if id.startswith(('cross_','self_')):e['radius']=12
+for id,b in [('input_chunk',[280,523,110,310]),('output_chunk',[1629,456,110,309])]:
+ e=shape(id,b,None);e.update(radius=23,dash=[13,9])
+e=shape('legend_module',[1279,115,53,53],G);e['radius']=9
+# Wire topology. Segment IDs are kept so feedback and VLM branch can be grouped coherently.
+for id,p,arr in [('vision_stub',[[299,122],[317,122]],False),('vision_out',[[487,122],[515,122]],True),('text_stub',[[299,303],[317,303]],False),('text_out',[[487,303],[515,303]],True),('state_in',[[407,454],[482,454]],False),('state_out',[[676,454],[732,454]],True),('action_in',[[407,677],[482,677]],False),('action_out',[[676,677],[732,677]],True),('tokens_to_dit',[[807,614],[840,614]],True),('dit_to_tokens',[[1332,614],[1364,614]],True),('decoder_out',[[1594,611],[1629,611]],True),('motor_out',[[1739,611],[1768,611]],True)]:line(id,p,arr)
+# Incoming VLM branches visibly penetrate the surrounding DiT background and terminate on cross blocks.
+line('vlm_bus',[[807,188],[1173,188]])
+for id,x in [('vlm_cross_1',904),('vlm_cross_2',1173)]:
+ line(id,[[x,188],[x,414]],True,allow_overlap_with=['vlm_bus','dit'],overlap_reason='Source VLM branch joins bus and crosses the outer DiT panel to the cross-attention top edge.')
+for id,p in [('cross_self_1',[[938,613],[963,613]]),('cross_self_2',[[1208,613],[1232,613]])]:line(id,p,container='dit')
+line('dit_gap',[[1032,613],[1139,613]],container='dit',dash=[13,9])
+line('feedback_right',[[1684,765],[1684,928]],dash=[2,4])
+line('feedback_bottom',[[1684,928],[335,928]],dash=[2,4],allow_overlap_with=['feedback_right'],overlap_reason='Source feedback path turns at the lower-right corner.')
+line('feedback_left',[[335,928],[335,833]],dash=[2,4],allow_overlap_with=['feedback_bottom'],overlap_reason='Source feedback path turns at the lower-left corner.')
+# Small explicit arrowhead native triangle at feedback destination (dash+custom-head unsupported together).
+e=add('feedback_head','shape',box=[330,833,10,11],shape='triangle',fill=S,allow_overlap_with=['feedback_left'],overlap_reason='Source upward arrowhead caps the dashed feedback shaft.')
+# 7 visual and 4 text tokens on each side of VLM.
+for side,x in [('input',525),('output',773)]:
+ ids=[]
+ for modality,ys,col in [('vision',[24,53,81,110,138,167,195],PURPLE),('language',[247,276,305,334],BLUE)]:
+  stack=[]
+  for i,y in enumerate(ys):
+   id=f'{side}_{modality}_token_{i}';e=shape(id,[x,y,23,24],col);e.update(shape='rect',stroke_width=2);ids.append(id);stack.append(id)
+  group(f'{side}_{modality}_tokens',stack,'Move one semantic token sequence as a strip; preserve per-token native rectangles for optional count/color editing.')
+for side,x,action_color in [('dit_input',773,'#FFF2D9'),('dit_output',1373,'#FF9900')]:
+ for modality,ys,col in [('state',[425,454],'#E36565'),('action',[552,581,609,638,666,695,724,752,780],action_color)]:
+  ids=[]
+  for i,y in enumerate(ys):
+   id=f'{side}_{modality}_{i}';e=shape(id,[x,y,23,24],col);e.update(shape='rect',stroke_width=2);ids.append(id)
+  group(side+'_'+modality+'_tokens',ids,'A semantically single state/action token strip; moving individual cells is rarely the intended edit.')
+# Raster artwork contains no readable diagram labels.
+crop('observation_photo',(9,28,273,216));crop('humanoid_art',(1796,449,1884,686))
+# Text is separate per source line when line baseline is explicit.
+for id,lines,cx,ys in [('vision',['Vision','Encoder'],402,[90,124]),('tokenizer',['Text','Tokenizer'],402,[273,306]),('vlm',['Eagle-2','VLM'],661,[157,191]),('state_encoder',['State','Encoder'],579,[421,455]),('action_encoder',['Action','Encoder'],579,[646,680]),('decoder',['Action','Decoder'],1504,[577,610])]:
+ ids=[id]
+ for i,(t,y) in enumerate(zip(lines,ys)):
+  tid=id+'_label_'+str(i);text(tid,t,[cx-90,y,180,37],29,align='center',container=id);ids.append(tid)
+ group(id+'_module',ids,'Move the module body and its complete editable label together; each label line stays one text object.')
+for id,t,cx in [('cross_1','Cross-Attention',904),('self_1','Self-Attention',997),('cross_2','Cross-Attention',1173),('self_2','Self-Attention',1266)]:
+ # final ink center measured from source; unrotated frame rotated about its center.
+ text(id+'_label',t,[cx-165,594,330,38],29,align='center',rotation=90,container=id)
+ group(id+'_module',[id,id+'_label'],'Move one attention sublayer as a unit; its whole rotated word remains one native editable text box.')
+text('robot_state_label','Robot State',[65,438,175,38],29)
+text('noised_action_label','Noised Action',[53,660,195,38],29)
+text('motor_label_0','Motor',[1791,710,100,38],29,align='center')
+text('motor_label_1','Action',[1791,744,100,38],29,align='center')
+text('legend_module_label','Embodiment-Specific Module',[1359,123,508,39],29)
+text('legend_frozen_label','Pre-trained and Frozen',[1359,207,465,39],29)
+text('repeat_count','x N',[1046,830,78,34],24,align='center')
+text('dit_label','DiT Blocks',[988,871,195,40],29,align='center')
+text('iteration_label','K iterations',[914,944,190,40],29,align='center')
+for i,t in enumerate(['“Pick up the apple','and place it into','the bottom shelf”']):
+ e=text('instruction_'+str(i),t,[17,258+i*29,285,36],25);e['font_family']='Courier New'
+# Visible six-arm snowflakes as a compact semantic collection of native lines.
+def snowflake(prefix,cx,cy,r,stroke):
+ ids=[];stems=[]
+ for i in range(6):
+  th=math.radians(-90+i*60);u=(math.cos(th),math.sin(th));tip=[cx+r*u[0],cy+r*u[1]];sid=f'{prefix}_arm_{i}'
+  e=line(sid,[[cx,cy],tip],line_cap='round');e['stroke']='#4295FF';e['stroke_width']=stroke
+  if stems:e.update(allow_overlap_with=stems.copy(),overlap_reason='The six source snowflake arms meet at one center.')
+  stems.append(sid);ids.append(sid)
+  base=[cx+.57*r*u[0],cy+.57*r*u[1]]
+  for j,sign in enumerate([-1,1]):
+   # branch projects outward along main arm and sideways, reproducing the source fork.
+   pt=[base[0]+.27*r*u[0]+sign*.24*r*(-u[1]),base[1]+.27*r*u[1]+sign*.24*r*u[0]]
+   tid=f'{prefix}_twig_{i}_{j}';e=line(tid,[base,pt],line_cap='round',allow_overlap_with=[sid]+([f'{prefix}_twig_{i}_0'] if j else []),overlap_reason='Source snowflake fork joins its arm and paired fork at the same point.');e['stroke']='#4295FF';e['stroke_width']=stroke;ids.append(tid)
+ group(prefix,ids,'Snowflake is one freeze-status symbol; all native strokes should move together, never as individual editing targets.')
+snowflake('vlm_frozen_icon',727,44,15,2.4);snowflake('legend_frozen_icon',1306,226,23,3.1)
+# Explicit style/baseline parts for formulas. Each formula is a recommended atomic group.
+formulas=[('state_q',[322,468],'q','t',None),('input_a0',[324,574],'a','t','input_chunk'),('input_a1',[308,634],'a','t+1','input_chunk'),('input_aH',[290,802],'a','t+H−1','input_chunk'),('output_a0',[1673,506],'a','t','output_chunk'),('output_a1',[1657,566],'a','t+1','output_chunk'),('output_aH',[1639,734],'a','t+H−1','output_chunk')]
+for id,origin,var,sub,container in formulas:
+ parts=[{'text':var,'offset':[0,0],'italic':True}]
+ # Keep adjacent subscript styles as semantic runs: t/H italic, digits/operators upright.
+ dx=18
+ for token,italic in ([('t',True)] if sub=='t' else [('t',True),('+1',False)] if sub=='t+1' else [('t',True),('+',False),('H',True),('−1',False)]):
+  parts.append({'text':token,'offset':[dx,8],'size_scale':.66,'italic':italic});dx+=({'t':9,'+1':28,'+':16,'H':17,'−1':29}[token])
+ spec={'id':id,'origin':origin,'font_family':'Times New Roman','font_size':36,'z':1000,'parts':parts}
+ if container:spec['container']=container
+ path=R/f'{id}.json';path.write_text(json.dumps(spec));out=R/f'math_{id}'
+ subprocess.run(['/Users/liyufeng/Code/super_img2ppt/.venv/bin/super-img2ppt','compose-math',str(path),'--out',str(out),'--font-dir','/System/Library/Fonts/Supplemental'],check=True,stdout=subprocess.DEVNULL)
+ entries=json.loads((out/'elements.json').read_text());
+ if isinstance(entries,dict):entries=entries['elements']
+ for e in entries:e['z']=len(E)+1;E.append(e)
+ group(id,[e['id'] for e in entries],'One mathematical quantity: baseline and subscript must move together. Components preserve math style; grouping must not flatten editable text.')
+# Vertical ellipses are one semantic text object each, with source three-line dot spacing.
+for id,x,y,c in [('input_ellipsis',333,697,'input_chunk'),('output_ellipsis',1683,629,'output_chunk')]:
+ text(id,'⋮',[x-12,y,24,49],33,font_family='Times New Roman',align='center',container=c)
+# Connectors touching a module boundary are intentional source junctions; narrow explicit pairs only.
+by={e['id']:e for e in E}
+for a,b in [('vision_stub','vision'),('vision_out','vision'),('text_stub','tokenizer'),('text_out','tokenizer'),('state_in','state_encoder'),('state_out','state_encoder'),('action_in','action_encoder'),('action_out','action_encoder'),('tokens_to_dit','dit'),('dit_to_tokens','dit'),('decoder_out','decoder'),('decoder_out','output_chunk'),('motor_out','output_chunk'),('vlm_cross_1','cross_1'),('vlm_cross_2','cross_2'),('cross_self_1','cross_1'),('cross_self_1','self_1'),('cross_self_2','cross_2'),('cross_self_2','self_2'),('dit_gap','self_1'),('dit_gap','cross_2'),('feedback_left','input_chunk'),('feedback_head','input_chunk'),('feedback_right','output_chunk')]:
+ e=by[a];e.setdefault('allow_overlap_with',[]).append(b);e['overlap_reason']='Source connector terminates on this named module/line boundary; preserves source topology.'
+for i,e in enumerate(E):e['z']=i+1
+scene={'version':1,'slides':[{'id':'page_001','width':1891,'height':986,'source':'pages/page_001/source.png','background':'#FFFFFF','reviewed':True,'notes':'Adapted from GR00T N1, NVIDIA et al., arXiv:2503.14734v2, Figure 3 page 4, 27 March 2025. Paper CC BY 4.0 https://creativecommons.org/licenses/by/4.0/. Native reconstruction from raster; two photographic/robot-art crops remain raster. No endorsement implied.','elements':E}]}
+(J/'scene.json').write_text(json.dumps(scene,indent=2));(R/'recommended_groups.json').write_text(json.dumps({'schema_note':'Recommendations only: containers are not native PowerPoint groups in current schema.','groups':groups},indent=2))

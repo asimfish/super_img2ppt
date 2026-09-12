@@ -1,0 +1,443 @@
+{
+  "slides": [
+    {
+      "id": "page_001",
+      "native_leaf_objects": 227,
+      "raster_images": 5,
+      "groups": [
+        {
+          "id": "group_encoder_group",
+          "members": [
+            "encoder",
+            "encoder_label"
+          ],
+          "description": "Keep the module background and its complete label together when moving/resizing."
+        },
+        {
+          "id": "group_trajectory_projector_group",
+          "members": [
+            "trajectory_projector",
+            "trajectory_projector_label"
+          ],
+          "description": "Keep the module background and its complete label together when moving/resizing."
+        },
+        {
+          "id": "group_text_encoder_group",
+          "members": [
+            "text_encoder",
+            "text_encoder_label"
+          ],
+          "description": "Keep the module background and its complete label together when moving/resizing."
+        },
+        {
+          "id": "group_concat_group",
+          "members": [
+            "concat",
+            "concat_label"
+          ],
+          "description": "Keep the module background and its complete label together when moving/resizing."
+        },
+        {
+          "id": "group_mlp_group",
+          "members": [
+            "mlp",
+            "mlp_label"
+          ],
+          "description": "Keep the module background and its complete label together when moving/resizing."
+        },
+        {
+          "id": "group_dit_group",
+          "members": [
+            "dit",
+            "dit_label"
+          ],
+          "description": "Keep the module background and its complete label together when moving/resizing."
+        },
+        {
+          "id": "group_decoder_group",
+          "members": [
+            "decoder",
+            "decoder_label"
+          ],
+          "description": "Keep the module background and its complete label together when moving/resizing."
+        },
+        {
+          "id": "group_noise_input",
+          "members": [
+            "noise",
+            "noise_label"
+          ],
+          "description": "Photo/illustration and complete readable label form one input/output unit."
+        },
+        {
+          "id": "group_motion_input",
+          "members": [
+            "motion",
+            "motion_label"
+          ],
+          "description": "Photo/illustration and complete readable label form one input/output unit."
+        },
+        {
+          "id": "group_scene_input",
+          "members": [
+            "scene",
+            "scene_label"
+          ],
+          "description": "Photo/illustration and complete readable label form one input/output unit."
+        },
+        {
+          "id": "group_object_input",
+          "members": [
+            "object",
+            "object_label"
+          ],
+          "description": "Photo/illustration and complete readable label form one input/output unit."
+        },
+        {
+          "id": "group_generated_input",
+          "members": [
+            "generated",
+            "generated_label"
+          ],
+          "description": "Photo/illustration and complete readable label form one input/output unit."
+        },
+        {
+          "id": "group_noise_tokens",
+          "members": [
+            "noise_tokens_0",
+            "noise_tokens_1",
+            "noise_tokens_2",
+            "noise_tokens_3",
+            "noise_tokens_4",
+            "noise_tokens_5",
+            "noise_tokens_6",
+            "noise_tokens_7",
+            "noise_tokens_8"
+          ],
+          "description": "One 3×3 token grid: move/recolor as a semantic tensor while retaining editable cells."
+        },
+        {
+          "id": "group_motion_tokens",
+          "members": [
+            "motion_tokens_0",
+            "motion_tokens_1",
+            "motion_tokens_2",
+            "motion_tokens_3",
+            "motion_tokens_4",
+            "motion_tokens_5",
+            "motion_tokens_6",
+            "motion_tokens_7",
+            "motion_tokens_8"
+          ],
+          "description": "One 3×3 token grid: move/recolor as a semantic tensor while retaining editable cells."
+        },
+        {
+          "id": "group_scene_tokens",
+          "members": [
+            "scene_tokens_0",
+            "scene_tokens_1",
+            "scene_tokens_2",
+            "scene_tokens_3",
+            "scene_tokens_4",
+            "scene_tokens_5",
+            "scene_tokens_6",
+            "scene_tokens_7",
+            "scene_tokens_8"
+          ],
+          "description": "One 3×3 token grid: move/recolor as a semantic tensor while retaining editable cells."
+        },
+        {
+          "id": "group_object_tokens",
+          "members": [
+            "object_tokens_0",
+            "object_tokens_1",
+            "object_tokens_2",
+            "object_tokens_3",
+            "object_tokens_4",
+            "object_tokens_5",
+            "object_tokens_6",
+            "object_tokens_7",
+            "object_tokens_8"
+          ],
+          "description": "One 3×3 token grid: move/recolor as a semantic tensor while retaining editable cells."
+        },
+        {
+          "id": "group_encoded_tokens",
+          "members": [
+            "encoded_token_0",
+            "encoded_token_1",
+            "encoded_token_2",
+            "encoded_token_3",
+            "encoded_token_4",
+            "encoded_token_5",
+            "encoded_token_6",
+            "encoded_token_7",
+            "encoded_token_8"
+          ],
+          "description": "Whole token column should be moved together; each gradient token remains individually editable."
+        },
+        {
+          "id": "group_decoded_tokens",
+          "members": [
+            "decoded_token_0",
+            "decoded_token_1",
+            "decoded_token_2",
+            "decoded_token_3",
+            "decoded_token_4",
+            "decoded_token_5",
+            "decoded_token_6",
+            "decoded_token_7",
+            "decoded_token_8"
+          ],
+          "description": "Whole token column should be moved together; each gradient token remains individually editable."
+        },
+        {
+          "id": "group_render_curve",
+          "members": [
+            "render_start_0",
+            "render_start_1",
+            "render_curve_0",
+            "render_curve_1",
+            "render_curve_2",
+            "render_curve_3",
+            "render_curve_4",
+            "render_curve_5",
+            "render_curve_6",
+            "render_curve_7",
+            "render_curve_8",
+            "render_curve_9",
+            "render_curve_10",
+            "render_curve_11",
+            "render_curve_12",
+            "render_curve_13",
+            "render_curve_14",
+            "render_curve_15",
+            "render_curve_16",
+            "render_curve_17",
+            "render_curve_18",
+            "render_curve_19",
+            "render_curve_20",
+            "render_curve_21",
+            "render_curve_22",
+            "render_curve_23",
+            "render_curve_24",
+            "render_curve_25",
+            "render_curve_26",
+            "render_curve_27",
+            "render_curve_28",
+            "render_curve_29",
+            "render_curve_30",
+            "render_curve_31",
+            "render_curve_32",
+            "render_curve_33",
+            "render_curve_34",
+            "render_curve_35",
+            "render_curve_36",
+            "render_curve_37",
+            "render_curve_38",
+            "render_curve_39",
+            "render_curve_40",
+            "render_curve_41",
+            "render_curve_42",
+            "render_curve_43",
+            "render_curve_44",
+            "render_curve_45",
+            "render_curve_46",
+            "render_curve_47",
+            "render_curve_48",
+            "render_curve_49",
+            "render_head"
+          ],
+          "description": "Traced single continuous curve is fragmented into native line segments; group is essential for practical editing."
+        },
+        {
+          "id": "group_merge_top_curve",
+          "members": [
+            "merge_top_0",
+            "merge_top_1",
+            "merge_top_2",
+            "merge_top_3",
+            "merge_top_4",
+            "merge_top_5",
+            "merge_top_6",
+            "merge_top_7",
+            "merge_top_8",
+            "merge_top_9",
+            "merge_top_10",
+            "merge_top_11",
+            "merge_top_12",
+            "merge_top_13",
+            "merge_top_14",
+            "merge_top_15",
+            "merge_top_16",
+            "merge_top_head"
+          ],
+          "description": "Traced single continuous curve is fragmented into native line segments; group is essential for practical editing."
+        },
+        {
+          "id": "group_merge_bottom_curve",
+          "members": [
+            "merge_bottom_0",
+            "merge_bottom_1",
+            "merge_bottom_2",
+            "merge_bottom_3",
+            "merge_bottom_4",
+            "merge_bottom_5",
+            "merge_bottom_6",
+            "merge_bottom_7",
+            "merge_bottom_8",
+            "merge_bottom_9",
+            "merge_bottom_10",
+            "merge_bottom_11",
+            "merge_bottom_12",
+            "merge_bottom_13",
+            "merge_bottom_14",
+            "merge_bottom_15",
+            "merge_bottom_16",
+            "merge_bottom_17",
+            "merge_bottom_head"
+          ],
+          "description": "Traced single continuous curve is fragmented into native line segments; group is essential for practical editing."
+        },
+        {
+          "id": "group_instruction_unit",
+          "members": [
+            "instruction_bg",
+            "instruction",
+            "instruction_label"
+          ],
+          "description": "Move task prompt and caption as one unit; prompt remains two semantic lines in one textbox."
+        },
+        {
+          "id": "group_trajectory_curve",
+          "members": [
+            "trajectory_curve_0",
+            "trajectory_curve_1",
+            "trajectory_curve_2",
+            "trajectory_curve_3",
+            "trajectory_curve_4",
+            "trajectory_curve_5",
+            "trajectory_curve_6",
+            "trajectory_curve_7",
+            "trajectory_curve_8",
+            "trajectory_curve_9",
+            "trajectory_curve_10",
+            "trajectory_curve_11",
+            "trajectory_curve_12",
+            "trajectory_curve_13",
+            "trajectory_curve_14",
+            "trajectory_curve_15",
+            "trajectory_curve_16",
+            "trajectory_curve_17",
+            "trajectory_curve_18",
+            "trajectory_curve_19",
+            "trajectory_curve_20",
+            "trajectory_curve_21",
+            "trajectory_curve_22",
+            "trajectory_curve_23",
+            "trajectory_curve_24",
+            "trajectory_curve_25",
+            "trajectory_curve_26",
+            "trajectory_curve_27",
+            "trajectory_head"
+          ],
+          "description": "Traced single continuous curve is fragmented into native line segments; group is essential for practical editing."
+        },
+        {
+          "id": "group_trajectory_input",
+          "members": [
+            "trajectory_frame",
+            "trajectory_label",
+            "group_trajectory_curve"
+          ],
+          "description": "Robot trajectory icon combines frame, curve and label; use parent group with nested curve group when supported."
+        },
+        {
+          "id": "group_trajectory_condition",
+          "members": [
+            "trajectory_token_bg",
+            "trajectory_token1",
+            "trajectory_token2"
+          ],
+          "description": "Trajectory conditioning token row."
+        },
+        {
+          "id": "group_text_condition",
+          "members": [
+            "text_token_bg",
+            "text_token1",
+            "text_token2"
+          ],
+          "description": "Text conditioning token row."
+        },
+        {
+          "id": "group_object_encoded",
+          "members": [
+            "object_encoded_0",
+            "object_encoded_1"
+          ],
+          "description": "Object conditioning token pair."
+        }
+      ],
+      "root_groups": [
+        "group_encoder_group",
+        "group_trajectory_projector_group",
+        "group_text_encoder_group",
+        "group_concat_group",
+        "group_mlp_group",
+        "group_dit_group",
+        "group_decoder_group",
+        "group_noise_input",
+        "group_motion_input",
+        "group_scene_input",
+        "group_object_input",
+        "group_generated_input",
+        "group_noise_tokens",
+        "group_motion_tokens",
+        "group_scene_tokens",
+        "group_object_tokens",
+        "group_encoded_tokens",
+        "group_decoded_tokens",
+        "group_render_curve",
+        "group_merge_top_curve",
+        "group_merge_bottom_curve",
+        "group_instruction_unit",
+        "group_trajectory_input",
+        "group_trajectory_condition",
+        "group_text_condition",
+        "group_object_encoded"
+      ],
+      "ungrouped_elements": [
+        "views_rear",
+        "views_front",
+        "output_rear",
+        "output_front",
+        "rendering_label",
+        "cross_attention_label",
+        "views_label",
+        "views_dots_0",
+        "views_dots_1",
+        "views_dots_2",
+        "decoded_dots_0",
+        "decoded_dots_1",
+        "decoded_dots_2",
+        "trajectory_to_projector",
+        "projector_to_tokens",
+        "instruction_to_encoder",
+        "text_encoder_to_tokens",
+        "conditioning_to_dit",
+        "motion_to_concat",
+        "concat_to_encoded",
+        "object_to_mlp",
+        "mlp_to_object"
+      ],
+      "top_level_selectable_objects": 48
+    }
+  ],
+  "limits": [
+    "Groups preserve children; enter or ungroup to edit individual objects.",
+    "Semantic grouping is authored, not automatically inferred or scored.",
+    "Connections remain geometry; moving a module does not reroute external arrows.",
+    "Font availability and target editor affect text after editing."
+  ]
+}

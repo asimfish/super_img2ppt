@@ -553,6 +553,39 @@
               ]
             },
             "maxItems": 1500
+          },
+          "groups": {
+            "type": "array",
+            "maxItems": 512,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "members"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,99}$"
+                },
+                "members": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,99}$"
+                  },
+                  "minItems": 2,
+                  "maxItems": 1500,
+                  "uniqueItems": true
+                },
+                "description": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 600
+                }
+              },
+              "additionalProperties": false
+            }
           }
         },
         "additionalProperties": false

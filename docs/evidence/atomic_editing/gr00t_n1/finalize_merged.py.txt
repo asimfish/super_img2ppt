@@ -1,0 +1,16 @@
+from pathlib import Path
+import json,hashlib,collections,shutil,zipfile,xml.etree.ElementTree as ET
+from PIL import Image
+r=Path(__file__).parent
+for name in ['REPORT.md','provenance.json','applied_groups.json']:
+ backup=r/(Path(name).stem+'_premerge'+Path(name).suffix)
+ if not backup.exists():shutil.copy2(r/name,backup)
+s=json.loads((r/'job/scene.merged_final.json').read_text())['slides'][0];(r/'applied_groups.json').write_text(json.dumps(s['groups'],indent=2));counts=dict(collections.Counter(e['kind'] for e in s['elements']));print(counts)
+p=json.loads((r/'provenance_premerge.json').read_text());p.update(final_build='build_09_merged_grouped',final_scene='job/scene.merged_final.json',native_counts=counts,native_groups=len(s['groups']),atomic_labels='6 two-line module names, Motor Action and the entire three-line instruction each one native text box; explicit line_height and measured baseline compensation.',group_actual_pixel_audit='merge_all_pixel_audit.json (old05 vs final09: zero), merge_final_flat_group_pixel_audit.json (final09 group vs final10 flat: zero).',actual_edit_test='edit_test_merged/edit_audit.json: State Encoder module 2 leaves translated(+35,+20),159 others unchanged. Full single-box State\\nEncoder changed to Joint\\nEncoder; all161 geometries unchanged.')
+p['sha256'].update({x:hashlib.sha256((r/x).read_bytes()).hexdigest() for x in ['job/scene.merged_final.json','build_09_merged_grouped/editable.pptx','build_09_merged_grouped/render/editable.pdf','build_09_merged_grouped/actual_sourcewidth.png']});(r/'provenance.json').write_text(json.dumps(p,indent=2))
+rep=(r/'reproduce.sh').read_text().replace('job/scene.grouped.json','job/scene.merged_final.json');(r/'reproduce.sh').write_text(rep)
+a=json.loads((r/'build_09_merged_grouped/editability.json').read_text());print('selectable',a['slides'][0]['top_level_selectable_objects'])
+for b in ['build_06_state_merged','build_07_state_adjusted','build_09_merged_grouped','build_10_merged_flat']:
+ im=Image.open(r/b/'actual_sourcewidth.png').convert('RGB');assert im.crop((0,986,1891,987)).getcolors(1891)==[(1891,(255,255,255))]
+ns={'p':'http://schemas.openxmlformats.org/presentationml/2006/main'};root=ET.fromstring(zipfile.ZipFile(r/'build_09_merged_grouped/editable.pptx').read('ppt/slides/slide1.xml'));print('pptx groups',len(root.findall('.//p:grpSp',ns)))
+sg=ET.parse(r/'build_09_merged_grouped/svg/page_001.svg').getroot();ids={e.get('id') for e in sg.iter() if e.tag.endswith('}g')};assert all(g['id'] in ids for g in s['groups'])

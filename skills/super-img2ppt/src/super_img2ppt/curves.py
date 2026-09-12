@@ -241,7 +241,20 @@ def trace_file(source: Path, out: Path, **options) -> dict:
             draw = ImageDraw.Draw(overlay)
             draw.line([(a - x, b - y) for a, b in result["vertices"]], fill="#FF00FF", width=1)
             overlay.save(out / "overlay.png")
-        json_write(out / "elements.json", report.pop("elements"))
+        elements = report.pop("elements")
+        json_write(out / "elements.json", elements)
+        json_write(
+            out / "groups.json",
+            [
+                {
+                    "id": options.get("prefix", "curve"),
+                    "members": [e["id"] for e in elements],
+                    "description": "One traced curve: move its native segments together",
+                }
+            ]
+            if len(elements) > 1
+            else [],
+        )
     except (InputError, OSError, ValueError, Image.DecompressionBombError) as exc:
         report["status"] = "fail"
         report["error"] = str(exc)

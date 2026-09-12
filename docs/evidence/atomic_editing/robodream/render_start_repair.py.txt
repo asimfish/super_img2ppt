@@ -1,0 +1,13 @@
+import json
+from pathlib import Path
+R=Path('/tmp/robodream_atomic_20260912');J=R/'full_job'
+for name in ['scene.reordered_flat.json','scene.grouped.json']:
+ p=J/name;s=json.loads(p.read_text());sl=s['slides'][0];E=sl['elements'];new=json.loads((R/'trace_render_start/elements.json').read_text())
+ new[0]['allow_overlap_with'].append('render_curve_0');new[0]['overlap_reason']='Visible traced short upper endpoint meets the independently traced curve body at the same source stroke.'
+ new[1]['allow_overlap_with'].append('trajectory_frame');new[1]['overlap_reason']='Visible source curve stroke meets the trajectory frame left edge at (86,71); round cap reaches the source join.'
+ ix=next(i for i,e in enumerate(E) if e['id']=='render_curve_0');E[ix:ix]=new
+ for n,e in enumerate(E):e['z']=n+1
+ for g in sl.get('groups',[]):
+  if g['id']=='group_render_curve':g['members'].extend([e['id'] for e in new])
+ p.write_text(json.dumps(s,indent=2))
+(R/'semantic_groups.final.json').write_text(json.dumps(s['slides'][0]['groups'],indent=2))

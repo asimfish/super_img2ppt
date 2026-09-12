@@ -1,0 +1,12 @@
+import json
+from pathlib import Path
+P=Path('/tmp/robodream_atomic_20260912/full_job');s=json.loads((P/'scene.json').read_text());E=s['slides'][0]['elements'];D={e['id']:e for e in E}
+D['object_label']['box'][1]=870;D['object_label']['box'][3]=38;D['object_label']['padding']=[2,0,0,0]
+D['rendering_label']['box'][3]=34
+for e in E:
+ if e['id'].startswith('trajectory_curve_') or e['id']=='trajectory_head':e['container']='trajectory_frame'
+ if e['id'].startswith('render_curve_') or e['id']=='render_head':
+  if e['id']=='render_head' or int(e['id'].split('_')[-1])>=39:
+   e.setdefault('allow_overlap_with',[]).extend(['views_front','views_rear']);e['overlap_reason']='Source rendering curve enters the multi-view card at the rendered-motion input, above the card background.'
+D['merge_bottom_17'].setdefault('allow_overlap_with',[]).append('scene_tokens_5');D['merge_bottom_17']['overlap_reason']='Source curve starts at middle-right token edge; expanded round cap touches that specific token.'
+(P/'scene.json').write_text(json.dumps(s,indent=2))

@@ -1,0 +1,23 @@
+import json,subprocess
+from pathlib import Path
+from PIL import Image
+r=Path(__file__).parent;p=r/'job/scene.json';d=json.loads(p.read_text());es=d['slides'][0]['elements']
+for e in es:
+ id=e['id']
+ if id.startswith('instruction_'):e['font_family']='Andale Mono';e['font_size']=24;e['box'][1]+=1
+ if id.endswith('_label') and id.startswith(('cross_','self_')):e['box'][0]-=2.5;e['font_size']=28
+ if id in ['legend_module_label','legend_frozen_label']:e['font_size']=28.3;e['box'][1]+=1
+ if id=='iteration_label':e['font_size']=28;e['box'][0]+=4;e['box'][1]+=1
+ # Explicitly name the actual selected symbol family instead of keeping silent fallback.
+ if id in ['input_ellipsis','output_ellipsis']:e['font_family']='DejaVu Sans'
+# Recompose each formula from source-baseline correction, keep original attempts.
+for fid in ['state_q','input_a0','input_a1','input_aH','output_a0','output_a1','output_aH']:
+ spec=json.loads((r/(fid+'.json')).read_text());spec['origin'][1]-=1 if fid=='state_q' else 4
+ for i,part in enumerate(spec['parts'][1:]):
+  part['size_scale']=.72;part['offset'][1]=6
+  part['offset'][0]=[18,30,47,67][i]
+ out=r/('math_repair_'+fid);fn=r/(fid+'_repair.json');fn.write_text(json.dumps(spec));subprocess.run(['/Users/liyufeng/Code/super_img2ppt/.venv/bin/super-img2ppt','compose-math',str(fn),'--out',str(out),'--font-dir','/System/Library/Fonts/Supplemental'],check=True,stdout=subprocess.DEVNULL)
+ entries=json.loads((out/'elements.json').read_text());entries=entries['elements'] if isinstance(entries,dict) else entries
+ old_ids={e['id'] for e in entries};index=next(i for i,e in enumerate(es) if e['id'] in old_ids);es=[e for e in es if e['id'] not in old_ids];es[index:index]=entries
+for i,e in enumerate(es):e['z']=i+1
+d['slides'][0]['elements']=es;p.write_text(json.dumps(d,indent=2))

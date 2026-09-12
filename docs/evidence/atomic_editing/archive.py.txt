@@ -1,0 +1,22 @@
+import hashlib,json,shutil,sys
+from collections import Counter
+from pathlib import Path
+w=Path('output/atomic_gallery_20260912');e=Path('docs/evidence/atomic_editing')
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+for c in json.loads((w/'cases.json').read_text()):
+ if sys.argv[1:] and c['id'] not in sys.argv[1:]:continue
+ b=Path(c['base']);build=Path(c['build']);dest=Path(c.get('destination','examples/gallery/'+c['id']));ev=e/c['id'];dest.mkdir(parents=True,exist_ok=False);ev.mkdir(parents=True,exist_ok=False)
+ for n in ['editable.pptx','scene.resolved.json','fonts.json','validation.json','editability.json']:shutil.copy2(build/n,dest/n)
+ for n in ['assets','svg']:shutil.copytree(build/n,dest/n)
+ for orig,target in [(c['source'],'source.png'),(c['actual'],'actual.png'),(str(build/'render/editable.pdf'),'actual.pdf'),(c['attribution'],'ATTRIBUTION.md'),(str(b/'REPORT.md'),'REPORT.md'),(str(b/'provenance.json'),'provenance.json')]:shutil.copy2(orig,dest/target)
+ for p in b.iterdir():
+  if p.is_file() and p.suffix in {'.json','.md','.py','.sh','.html','.log'}:shutil.copy2(p,ev/(p.name+('.txt' if p.suffix in {'.py','.sh'} else '')))
+ for folder in c.get('evidence_folders',[]):
+  shutil.copytree(b/folder,ev/folder,ignore=shutil.ignore_patterns('lo_profile*','lo-*','__pycache__'))
+  for p in (ev/folder).rglob('*'):
+   if p.suffix in {'.py','.sh'}:p.rename(p.with_name(p.name+'.txt'))
+ for src,target in c.get('extra_evidence',[]):shutil.copy2(b/src,ev/target)
+ for p in b.rglob('validation.json'):
+  if p.is_relative_to(build) or any(p.is_relative_to(b/f) for f in c.get('evidence_folders',[])):continue
+  target=ev/'earlier'/p.relative_to(b);target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,target)
+ scene=json.loads((dest/'scene.resolved.json').read_text());counts=Counter(x['kind'] for x in scene['slides'][0]['elements']);manifest={'runtime':'0.3.7','paper':c['paper'],'figure':c['figure'],'source_sha256':sha(dest/'source.png'),'pptx_sha256':sha(dest/'editable.pptx'),'actual_sha256':sha(dest/'actual.png'),'native_counts':dict(counts),'editability':'editability.json','rasterization':c['rasterization'],'visual_fidelity':'Reviewed full source and actual render; typography differences remain. See report.'};(dest/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n');print(c['id'],dict(counts))

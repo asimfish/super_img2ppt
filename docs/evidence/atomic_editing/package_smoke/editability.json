@@ -1,0 +1,39 @@
+{
+  "slides": [
+    {
+      "id": "page_001",
+      "native_leaf_objects": 5,
+      "raster_images": 0,
+      "groups": [
+        {
+          "id": "key_label",
+          "members": [
+            "key_label_0",
+            "key_label_1",
+            "key_label_2"
+          ],
+          "description": "Formula parts: move together; enter the group to edit individual styles"
+        },
+        {
+          "id": "encoder",
+          "members": [
+            "encoder_body",
+            "encoder_label",
+            "key_label"
+          ]
+        }
+      ],
+      "root_groups": [
+        "encoder"
+      ],
+      "ungrouped_elements": [],
+      "top_level_selectable_objects": 1
+    }
+  ],
+  "limits": [
+    "Groups preserve children; enter or ungroup to edit individual objects.",
+    "Semantic grouping is authored, not automatically inferred or scored.",
+    "Connections remain geometry; moving a module does not reroute external arrows.",
+    "Font availability and target editor affect text after editing."
+  ]
+}

@@ -1,0 +1,7 @@
+import json
+from pathlib import Path
+r=Path(__file__).parent;d=json.loads((r/'job/scene.merged_all.json').read_text());audit=json.loads((r/'merge_all_baseline_audit.json').read_text())
+for e in d['slides'][0]['elements']:
+ if e['id'] in audit:
+  assert audit[e['id']]['all_lines_same_shift'];e['box'][1]+=audit[e['id']]['proposed_box_y_correction']
+(r/'job/scene.merged_final.json').write_text(json.dumps(d,indent=2));d['slides'][0].pop('groups');(r/'job/scene.merged_final_flat.json').write_text(json.dumps(d,indent=2))

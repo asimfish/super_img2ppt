@@ -1,0 +1,48 @@
+from pathlib import Path
+import json,re,shutil
+q=Path('/tmp/cosmos3-edit-uBlGYq');j=q/'job';j.mkdir();shutil.copytree(q/'published/assets',j/'assets');s=json.load(open(q/'published/scene.resolved.json'));S=s['slides'][0];E={e['id']:e for e in S['elements']};old=sorted(E,key=lambda k:E[k]['z']);G=[];sequence=[];used=set()
+def group(id,m,desc=''):
+ G.append(dict(id=id,members=m,description=desc or id.replace('_',' ')));return id
+def emit(ids):
+ for id in ids:
+  assert id not in used,id
+  sequence.append(id);used.add(id)
+def module(id,ids):emit(ids);return group(id,ids)
+def tok(id):return group('token_'+id,[id]+[e['id'] for e in S['elements'] if e.get('container')==id])
+emit(['ar_bg','dm_bg']);module('repeated_transformer_annotation',['repeat_brace','repeat_times','repeat_L'])
+for id,name in [('vit','vision_encoder'),('lang','language_tokenizer'),('vae','vision_vae_encoder'),('audio','audio_encoder'),('action','action_encoder')]:module(name,[id,id+'_label'])
+for name,ids in [('autoregressive_input_tokens',['ar_v0','ar_v1','ar_ellipsis','ar_l0','ar_l1','ar_ldots','specialEOS','specialBOG']),('diffusion_input_tokens',['in'+str(i) for i in range(9)]),('generated_output_tokens',['out'+str(i) for i in range(9)]),('reasoner_output_tokens',['arout'+str(i) for i in range(3)])]:
+ members=[]
+ for id in ids:
+  t=tok(id);members.append(t);emit(G[-1]['members'])
+ group(name,members)
+for id in ['ar','dm']:module(id+'_subsequence_annotation',[id+'bracket',id+'brleft',id+'brright',id+'heading'])
+for id,role in [('ar','reasoner'),('dm','generator')]:
+ for n,kind in [(1,'input_norm'),(2,'output_norm'),(3,'mlp')]:module(role+'_'+kind,[id+'node'+str(n),id+'label'+str(n)])
+ emit([id+'arrow'+str(i) for i in range(1,6)]+[id+'role'])
+# formula leaves moved beside attention body to create one atomic attention module
+att=['attention','attentiontitle','causal','full'];emit(att)
+f=[]
+for pref,name in [('f1','causal_attention_formula'),('f2','full_attention_formula')]:
+ ids=[k for k in old if k.startswith(pref+'part')];emit(ids);f.append(group(name,ids))
+group('shared_multimodal_attention',att+f)
+emit(['expand1','expand2'])
+# matrix is a semantic panel with a selectable grid, headers, row math and legend entries
+cells=[k for k in old if k.startswith('cell_')];emit(cells+['matrix_border','matrix_v','matrix_h']);grid=group('attention_mask_grid',cells+['matrix_border','matrix_v','matrix_h'])
+mids=[k for k in old if 313<=E[k]['z']<=361];mids.insert(mids.index('rowvsup1')+1,'rowvtilde1');diags=[k for k in old if k.startswith('diag_')];emit(mids+diags)
+sub=[];claimed=set()
+for name,ids in [('ar_key_symbol',['kar','karsub']),('dm_key_symbol',['kdm','kdmsub']),('ar_query_symbol',['qar','qarsub']),('dm_query_symbol',['qdm','qdmsub']),('ar_vision_query',['rowv0','rowvsub0','rowvsup0']),('dm_vision_query',['rowv1','rowvsub1','rowvsup1','rowvtilde1']),('language_query',['row1','rowsub1']),('audio_query',['row6','rowsub6','rowtilde6']),('action_query',['row8','rowsub8','rowtilde8']),('mask_ar_legend',['legend_ar','legend_artxt']),('mask_dm_legend',['legend_dm','legend_dmtxt'])]:sub.append(group(name,ids));claimed.update(ids)
+for prefix in dict.fromkeys(k.rsplit('_',1)[0] for k in diags):
+ ids=[k for k in diags if k.rsplit('_',1)[0]==prefix]
+ if len(ids)>1:sub.append(group(prefix+'_formula',ids));claimed.update(ids)
+group('attention_mask_panel',[grid]+[k for k in mids+diags if k not in claimed]+sub)
+leg=[k for k in old if 362<=E[k]['z']<=377];emit(leg);entries=[]
+for suffix in ['v','l','sp','d','s','a','n']:entries.append(group('legend_entry_'+suffix,['legend_'+suffix,'legend_txt'+suffix]))
+group('token_category_legend',['tokenlegend','tokensheading']+entries)
+assert used==set(E),(set(E)-used)
+changes=[]
+for n,k in enumerate(sequence,1):
+ if E[k]['z']!=n:changes.append({'id':k,'old_z':E[k]['z'],'new_z':n})
+ E[k]['z']=n
+S['elements']=[E[k] for k in sequence];S['groups']=G;(j/'scene.json').write_text(json.dumps(s,indent=2));(q/'z_changes.json').write_text(json.dumps(changes,indent=2))
+flat=json.loads(json.dumps(s));del flat['slides'][0]['groups'];(j/'flat_reordered.json').write_text(json.dumps(flat,indent=2));print(len(G),'groups',len(E),'leaves')

@@ -1,0 +1,489 @@
+[
+  {
+    "old": [
+      {
+        "id": "vision_label_0",
+        "kind": "text",
+        "z": 2,
+        "box": [
+          312,
+          90,
+          180,
+          37
+        ],
+        "text": "Vision",
+        "font_size": 29,
+        "font_family": "Arial",
+        "color": "#000000",
+        "fit": "strict",
+        "align": "center",
+        "container": "vision"
+      },
+      {
+        "id": "vision_label_1",
+        "kind": "text",
+        "z": 3,
+        "box": [
+          312,
+          124,
+          180,
+          37
+        ],
+        "text": "Encoder",
+        "font_size": 29,
+        "font_family": "Arial",
+        "color": "#000000",
+        "fit": "strict",
+        "align": "center",
+        "container": "vision"
+      }
+    ],
+    "new": {
+      "id": "vision_label",
+      "kind": "text",
+      "z": 2,
+      "box": [
+        312,
+        90,
+        180,
+        71
+      ],
+      "text": "Vision\nEncoder",
+      "font_size": 29,
+      "font_family": "Arial",
+      "color": "#000000",
+      "fit": "strict",
+      "align": "center",
+      "container": "vision",
+      "line_height": 1.1724137931034482,
+      "wrap": false
+    }
+  },
+  {
+    "old": [
+      {
+        "id": "tokenizer_label_0",
+        "kind": "text",
+        "z": 5,
+        "box": [
+          312,
+          273,
+          180,
+          37
+        ],
+        "text": "Text",
+        "font_size": 29,
+        "font_family": "Arial",
+        "color": "#000000",
+        "fit": "strict",
+        "align": "center",
+        "container": "tokenizer"
+      },
+      {
+        "id": "tokenizer_label_1",
+        "kind": "text",
+        "z": 6,
+        "box": [
+          312,
+          306,
+          180,
+          37
+        ],
+        "text": "Tokenizer",
+        "font_size": 29,
+        "font_family": "Arial",
+        "color": "#000000",
+        "fit": "strict",
+        "align": "center",
+        "container": "tokenizer"
+      }
+    ],
+    "new": {
+      "id": "tokenizer_label",
+      "kind": "text",
+      "z": 4,
+      "box": [
+        312,
+        273,
+        180,
+        70
+      ],
+      "text": "Text\nTokenizer",
+      "font_size": 29,
+      "font_family": "Arial",
+      "color": "#000000",
+      "fit": "strict",
+      "align": "center",
+      "container": "tokenizer",
+      "line_height": 1.1379310344827587,
+      "wrap": false
+    }
+  },
+  {
+    "old": [
+      {
+        "id": "vlm_label_0",
+        "kind": "text",
+        "z": 8,
+        "box": [
+          571,
+          157,
+          180,
+          37
+        ],
+        "text": "Eagle-2",
+        "font_size": 29,
+        "font_family": "Arial",
+        "color": "#000000",
+        "fit": "strict",
+        "align": "center",
+        "container": "vlm"
+      },
+      {
+        "id": "vlm_label_1",
+        "kind": "text",
+        "z": 9,
+        "box": [
+          571,
+          191,
+          180,
+          37
+        ],
+        "text": "VLM",
+        "font_size": 29,
+        "font_family": "Arial",
+        "color": "#000000",
+        "fit": "strict",
+        "align": "center",
+        "container": "vlm"
+      }
+    ],
+    "new": {
+      "id": "vlm_label",
+      "kind": "text",
+      "z": 6,
+      "box": [
+        571,
+        157,
+        180,
+        71
+      ],
+      "text": "Eagle-2\nVLM",
+      "font_size": 29,
+      "font_family": "Arial",
+      "color": "#000000",
+      "fit": "strict",
+      "align": "center",
+      "container": "vlm",
+      "line_height": 1.1724137931034482,
+      "wrap": false
+    }
+  },
+  {
+    "old": [
+      {
+        "id": "state_encoder_label_0",
+        "kind": "text",
+        "z": 29,
+        "box": [
+          489,
+          421,
+          180,
+          37
+        ],
+        "text": "State",
+        "font_size": 29,
+        "font_family": "Arial",
+        "color": "#000000",
+        "fit": "strict",
+        "align": "center",
+        "container": "state_encoder"
+      },
+      {
+        "id": "state_encoder_label_1",
+        "kind": "text",
+        "z": 30,
+        "box": [
+          489,
+          455,
+          180,
+          37
+        ],
+        "text": "Encoder",
+        "font_size": 29,
+        "font_family": "Arial",
+        "color": "#000000",
+        "fit": "strict",
+        "align": "center",
+        "container": "state_encoder"
+      }
+    ],
+    "new": {
+      "id": "state_encoder_label",
+      "kind": "text",
+      "z": 26,
+      "box": [
+        489,
+        421,
+        180,
+        71
+      ],
+      "text": "State\nEncoder",
+      "font_size": 29,
+      "font_family": "Arial",
+      "color": "#000000",
+      "fit": "strict",
+      "align": "center",
+      "container": "state_encoder",
+      "line_height": 1.1724137931034482,
+      "wrap": false
+    }
+  },
+  {
+    "old": [
+      {
+        "id": "action_encoder_label_0",
+        "kind": "text",
+        "z": 32,
+        "box": [
+          489,
+          646,
+          180,
+          37
+        ],
+        "text": "Action",
+        "font_size": 29,
+        "font_family": "Arial",
+        "color": "#000000",
+        "fit": "strict",
+        "align": "center",
+        "container": "action_encoder"
+      },
+      {
+        "id": "action_encoder_label_1",
+        "kind": "text",
+        "z": 33,
+        "box": [
+          489,
+          680,
+          180,
+          37
+        ],
+        "text": "Encoder",
+        "font_size": 29,
+        "font_family": "Arial",
+        "color": "#000000",
+        "fit": "strict",
+        "align": "center",
+        "container": "action_encoder"
+      }
+    ],
+    "new": {
+      "id": "action_encoder_label",
+      "kind": "text",
+      "z": 28,
+      "box": [
+        489,
+        646,
+        180,
+        71
+      ],
+      "text": "Action\nEncoder",
+      "font_size": 29,
+      "font_family": "Arial",
+      "color": "#000000",
+      "fit": "strict",
+      "align": "center",
+      "container": "action_encoder",
+      "line_height": 1.1724137931034482,
+      "wrap": false
+    }
+  },
+  {
+    "old": [
+      {
+        "id": "decoder_label_0",
+        "kind": "text",
+        "z": 49,
+        "box": [
+          1414,
+          577,
+          180,
+          37
+        ],
+        "text": "Action",
+        "font_size": 29,
+        "font_family": "Arial",
+        "color": "#000000",
+        "fit": "strict",
+        "align": "center",
+        "container": "decoder"
+      },
+      {
+        "id": "decoder_label_1",
+        "kind": "text",
+        "z": 50,
+        "box": [
+          1414,
+          610,
+          180,
+          37
+        ],
+        "text": "Decoder",
+        "font_size": 29,
+        "font_family": "Arial",
+        "color": "#000000",
+        "fit": "strict",
+        "align": "center",
+        "container": "decoder"
+      }
+    ],
+    "new": {
+      "id": "decoder_label",
+      "kind": "text",
+      "z": 44,
+      "box": [
+        1414,
+        577,
+        180,
+        70
+      ],
+      "text": "Action\nDecoder",
+      "font_size": 29,
+      "font_family": "Arial",
+      "color": "#000000",
+      "fit": "strict",
+      "align": "center",
+      "container": "decoder",
+      "line_height": 1.1379310344827587,
+      "wrap": false
+    }
+  },
+  {
+    "old": [
+      {
+        "id": "motor_label_0",
+        "kind": "text",
+        "z": 143,
+        "box": [
+          1791,
+          710,
+          100,
+          38
+        ],
+        "text": "Motor",
+        "font_size": 29,
+        "font_family": "Arial",
+        "color": "#000000",
+        "fit": "strict",
+        "align": "center"
+      },
+      {
+        "id": "motor_label_1",
+        "kind": "text",
+        "z": 144,
+        "box": [
+          1791,
+          744,
+          100,
+          38
+        ],
+        "text": "Action",
+        "font_size": 29,
+        "font_family": "Arial",
+        "color": "#000000",
+        "fit": "strict",
+        "align": "center"
+      }
+    ],
+    "new": {
+      "id": "motor_label",
+      "kind": "text",
+      "z": 137,
+      "box": [
+        1791,
+        710,
+        100,
+        72
+      ],
+      "text": "Motor\nAction",
+      "font_size": 29,
+      "font_family": "Arial",
+      "color": "#000000",
+      "fit": "strict",
+      "align": "center",
+      "line_height": 1.1724137931034482,
+      "wrap": false
+    }
+  },
+  {
+    "old": [
+      {
+        "id": "instruction_0",
+        "kind": "text",
+        "z": 166,
+        "box": [
+          17,
+          259,
+          285,
+          36
+        ],
+        "text": "\u201cPick up the apple",
+        "font_size": 24,
+        "font_family": "Andale Mono",
+        "color": "#000000",
+        "fit": "strict"
+      },
+      {
+        "id": "instruction_1",
+        "kind": "text",
+        "z": 167,
+        "box": [
+          17,
+          288,
+          285,
+          36
+        ],
+        "text": "and place it into",
+        "font_size": 24,
+        "font_family": "Andale Mono",
+        "color": "#000000",
+        "fit": "strict"
+      },
+      {
+        "id": "instruction_2",
+        "kind": "text",
+        "z": 168,
+        "box": [
+          17,
+          317,
+          285,
+          36
+        ],
+        "text": "the bottom shelf\u201d",
+        "font_size": 24,
+        "font_family": "Andale Mono",
+        "color": "#000000",
+        "fit": "strict"
+      }
+    ],
+    "new": {
+      "id": "instruction_text",
+      "kind": "text",
+      "z": 159,
+      "box": [
+        17,
+        259,
+        285,
+        94
+      ],
+      "text": "\u201cPick up the apple\nand place it into\nthe bottom shelf\u201d",
+      "font_size": 24,
+      "font_family": "Andale Mono",
+      "color": "#000000",
+      "fit": "strict",
+      "line_height": 1.2083333333333333,
+      "wrap": false
+    }
+  }
+]

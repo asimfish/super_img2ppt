@@ -1,0 +1,29 @@
+import json
+from pathlib import Path
+R=Path('/tmp/robodream_atomic_20260912');J=R/'full_job';s=json.loads((J/'scene.json').read_text());sl=s['slides'][0];E=sl['elements'];D={e['id']:e for e in E};orig={e['id']:i for i,e in enumerate(E)}
+raw=json.loads((R/'semantic_groups.json').read_text())['groups'];G=[]
+for g in raw:
+ if g['id']=='trajectory_input':g['members']=['trajectory_frame','trajectory_label','trajectory_curve']
+ G.append({'id':'group_'+g['id'],'members':g['members'],'description':g['why']})
+# group IDs cannot collide with leaf prefixes/existing ID.
+ids={g['id'][6:] for g in G}
+for g in G:g['members']=['group_'+m if m in ids and m not in D else m for m in g['members']]
+G.extend([
+ {'id':'group_trajectory_condition','members':['trajectory_token_bg','trajectory_token1','trajectory_token2'],'description':'Trajectory conditioning token row.'},
+ {'id':'group_text_condition','members':['text_token_bg','text_token1','text_token2'],'description':'Text conditioning token row.'},
+ {'id':'group_object_encoded','members':['object_encoded_0','object_encoded_1'],'description':'Object conditioning token pair.'}])
+GD={g['id']:g for g in G};parent={}
+for g in G:
+ for m in g['members']:
+  if m in parent:raise ValueError((m,parent[m],g['id']))
+  parent[m]=g['id']
+def leaves(i):return [j for m in GD[i]['members'] for j in leaves(m)] if i in GD else [i]
+def first(i):return min(orig[x] for x in leaves(i))
+def walk(i):
+ if i in GD:
+  for m in sorted(GD[i]['members'],key=first):yield from walk(m)
+ else:yield i
+roots=[i for i in [*D,*GD] if i not in parent];order=[i for r in sorted(roots,key=first) for i in walk(r)];assert len(order)==len(D)
+sl['elements']=[D[i] for i in order]
+for n,e in enumerate(sl['elements']):e['z']=n+1
+(J/'scene.reordered_flat.json').write_text(json.dumps(s,indent=2));sl['groups']=G;(J/'scene.grouped.json').write_text(json.dumps(s,indent=2));(R/'semantic_groups.final.json').write_text(json.dumps(G,indent=2));print(len(G),len(roots))

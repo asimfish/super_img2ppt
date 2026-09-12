@@ -1,0 +1,10 @@
+import json
+from pathlib import Path
+R=Path('/tmp/robodream_atomic_20260912/full_job')
+for name in ['scene.reordered_flat.json','scene.grouped.json']:
+ p=R/name;s=json.loads(p.read_text())
+ for e in s['slides'][0]['elements']:
+  if e['id'] in ['trajectory_projector_label','text_encoder_label','concat_label','dit_label']:
+   e['line_height']=1.35;e['box'][1]+=2;e['box'][3]+=8
+  if e['id']=='instruction':e['font_size']=29.2;e['line_height']=1.23
+ p.write_text(json.dumps(s,indent=2))

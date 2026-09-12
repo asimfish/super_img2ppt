@@ -50,4 +50,4 @@ PDFium 返回的是轴对齐字形框，不能完全证明字形被斜框包容�
 
 图源只有栅格像素与本地 OCR，未用 PDF 文本/矢量坐标或作者绘图源码。开发期允许观察并修图，因此不是盲测。自动检查通过、可编辑性、复建一致与源图字形保真分别报告。没有新增依赖或字体安装，没有嵌入/分发字体，未验证原生 PowerPoint/WPS。
 
-[十五例完整包](../examples/gallery/paper_gallery.zip) · [逐文件 SHA256](../examples/gallery/SHA256SUMS) · [README 实图](../README.md#2026-具身与世界模型)
+[十五例完整包](https://github.com/asimfish/super_img2ppt/blob/a1ebc92c568750b01fc111db9f4279aacdbce444/examples/gallery/paper_gallery.zip) · [逐文件 SHA256](../examples/gallery/SHA256SUMS) · [README 实图](../README.md#2026-具身与世界模型)

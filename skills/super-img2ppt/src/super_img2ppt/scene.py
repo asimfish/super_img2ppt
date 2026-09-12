@@ -194,6 +194,26 @@ SCHEMA = {
                     "notes": {"type": "string", "maxLength": 100000},
                     "reviewed": {"type": "boolean"},
                     "elements": {"type": "array", "items": ELEMENT, "maxItems": 1500},
+                    "groups": {
+                        "type": "array",
+                        "maxItems": 512,
+                        "items": {
+                            "type": "object",
+                            "required": ["id", "members"],
+                            "properties": {
+                                "id": ID,
+                                "members": {
+                                    "type": "array",
+                                    "items": ID,
+                                    "minItems": 2,
+                                    "maxItems": 1500,
+                                    "uniqueItems": True,
+                                },
+                                "description": {"type": "string", "minLength": 1, "maxLength": 600},
+                            },
+                            "additionalProperties": False,
+                        },
+                    },
                 },
                 "additionalProperties": False,
             },
@@ -201,6 +221,54 @@ SCHEMA = {
     },
     "additionalProperties": False,
 }
+
+
+def group_plan(slide: dict) -> list[dict]:
+    """Return child-first groups without changing the scene's stable paint order."""
+    order = {e["id"]: n for n, e in enumerate(sorted(slide["elements"], key=lambda e: e["z"]))}
+    groups = {g["id"]: g for g in slide.get("groups", [])}
+    if len(groups) != len(slide.get("groups", [])) or groups.keys() & order.keys():
+        raise InputError("Group ids must be unique and distinct from element ids")
+    parents = {}
+    for gid, group in groups.items():
+        for member in group["members"]:
+            if member not in order and member not in groups:
+                raise InputError(f"{gid}: unknown group member {member}")
+            if member in parents:
+                raise InputError(f"{member}: an object may belong to only one edit group")
+            parents[member] = gid
+    visiting, intervals, plan = set(), {}, []
+
+    def visit(gid, depth):
+        if depth > 8:
+            raise InputError("Edit groups may be nested at most eight levels")
+        if gid in visiting:
+            raise InputError("Cyclic edit groups")
+        if gid in intervals:
+            return intervals[gid]
+        visiting.add(gid)
+        spans = []
+        for member in groups[gid]["members"]:
+            span = visit(member, depth + 1) if member in groups else (order[member], order[member])
+            spans.append((*span, member))
+        spans.sort()
+        if any(a[1] + 1 != b[0] for a, b in zip(spans, spans[1:], strict=False)):
+            raise InputError(
+                f"{gid}: group members interleave other objects in paint order; explicitly revise the authored z order and review before grouping"
+            )
+        visiting.remove(gid)
+        intervals[gid] = (spans[0][0], spans[-1][1])
+        plan.append({**groups[gid], "members": [span[2] for span in spans]})
+        return intervals[gid]
+
+    # Start at roots so the depth bound includes every ancestor even with cached children.
+    for gid in groups:
+        if gid not in parents:
+            visit(gid, 1)
+    for gid in groups:
+        if gid not in intervals:
+            visit(gid, 1)
+    return plan
 
 
 def text_content(element: dict) -> str:
@@ -247,6 +315,7 @@ def validate_scene(scene: dict) -> dict:
         elements = {e["id"]: e for e in slide["elements"]}
         if len(elements) != len(slide["elements"]):
             raise InputError(f"Duplicate element id in {slide['id']}")
+        group_plan(slide)
         for element in elements.values():
             fields_by_kind = {
                 "text": {

@@ -143,7 +143,17 @@ def test_cli_success_exports_fragment_and_source_overlay(tmp_path):
     assert report["status"] == "review"
     assert report["source_sha256"]
     assert (out / "overlay.png").is_file()
-    assert isinstance(json.loads((out / "elements.json").read_text()), list)
+    elements = json.loads((out / "elements.json").read_text())
+    groups = json.loads((out / "groups.json").read_text())
+    assert groups[0]["members"] == [e["id"] for e in elements]
+    validate_scene(
+        {
+            "version": 1,
+            "slides": [
+                {"id": "plot", "width": 300, "height": 180, "elements": elements, "groups": groups}
+            ],
+        }
+    )
     assert not (out / "editable.pptx").exists()
 
 

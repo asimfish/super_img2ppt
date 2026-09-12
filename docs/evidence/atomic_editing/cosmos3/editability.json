@@ -1,0 +1,1004 @@
+{
+  "slides": [
+    {
+      "id": "page_001",
+      "native_leaf_objects": 414,
+      "raster_images": 1,
+      "groups": [
+        {
+          "id": "repeated_transformer_annotation",
+          "members": [
+            "repeat_brace",
+            "repeat_times",
+            "repeat_L"
+          ],
+          "description": "repeated transformer annotation"
+        },
+        {
+          "id": "vision_encoder",
+          "members": [
+            "vit",
+            "vit_label"
+          ],
+          "description": "vision encoder"
+        },
+        {
+          "id": "language_tokenizer",
+          "members": [
+            "lang",
+            "lang_label"
+          ],
+          "description": "language tokenizer"
+        },
+        {
+          "id": "vision_vae_encoder",
+          "members": [
+            "vae",
+            "vae_label"
+          ],
+          "description": "vision vae encoder"
+        },
+        {
+          "id": "audio_encoder",
+          "members": [
+            "audio",
+            "audio_label"
+          ],
+          "description": "audio encoder"
+        },
+        {
+          "id": "action_encoder",
+          "members": [
+            "action",
+            "action_label"
+          ],
+          "description": "action encoder"
+        },
+        {
+          "id": "token_ar_v0",
+          "members": [
+            "ar_v0",
+            "ar_v0b",
+            "ar_v0s",
+            "ar_v0u"
+          ],
+          "description": "token ar v0"
+        },
+        {
+          "id": "token_ar_v1",
+          "members": [
+            "ar_v1",
+            "ar_v1b",
+            "ar_v1s",
+            "ar_v1u"
+          ],
+          "description": "token ar v1"
+        },
+        {
+          "id": "token_ar_ellipsis",
+          "members": [
+            "ar_ellipsis",
+            "ar_ellipsisb"
+          ],
+          "description": "token ar ellipsis"
+        },
+        {
+          "id": "token_ar_l0",
+          "members": [
+            "ar_l0",
+            "ar_l0b",
+            "ar_l0s"
+          ],
+          "description": "token ar l0"
+        },
+        {
+          "id": "token_ar_l1",
+          "members": [
+            "ar_l1",
+            "ar_l1b",
+            "ar_l1s"
+          ],
+          "description": "token ar l1"
+        },
+        {
+          "id": "token_ar_ldots",
+          "members": [
+            "ar_ldots",
+            "ar_ldotsb"
+          ],
+          "description": "token ar ldots"
+        },
+        {
+          "id": "token_specialEOS",
+          "members": [
+            "specialEOS",
+            "specialtxtEOS"
+          ],
+          "description": "token specialEOS"
+        },
+        {
+          "id": "token_specialBOG",
+          "members": [
+            "specialBOG",
+            "specialtxtBOG"
+          ],
+          "description": "token specialBOG"
+        },
+        {
+          "id": "autoregressive_input_tokens",
+          "members": [
+            "token_ar_v0",
+            "token_ar_v1",
+            "token_ar_ellipsis",
+            "token_ar_l0",
+            "token_ar_l1",
+            "token_ar_ldots",
+            "token_specialEOS",
+            "token_specialBOG"
+          ],
+          "description": "autoregressive input tokens"
+        },
+        {
+          "id": "token_in0",
+          "members": [
+            "in0",
+            "in0b",
+            "in0s",
+            "in0u",
+            "in0tilde"
+          ],
+          "description": "token in0"
+        },
+        {
+          "id": "token_in1",
+          "members": [
+            "in1",
+            "in1b",
+            "in1s",
+            "in1u",
+            "in1tilde"
+          ],
+          "description": "token in1"
+        },
+        {
+          "id": "token_in2",
+          "members": [
+            "in2",
+            "in2b"
+          ],
+          "description": "token in2"
+        },
+        {
+          "id": "token_in3",
+          "members": [
+            "in3",
+            "in3b",
+            "in3s",
+            "in3tilde"
+          ],
+          "description": "token in3"
+        },
+        {
+          "id": "token_in4",
+          "members": [
+            "in4",
+            "in4b",
+            "in4s",
+            "in4tilde"
+          ],
+          "description": "token in4"
+        },
+        {
+          "id": "token_in5",
+          "members": [
+            "in5",
+            "in5b"
+          ],
+          "description": "token in5"
+        },
+        {
+          "id": "token_in6",
+          "members": [
+            "in6",
+            "in6b",
+            "in6s",
+            "in6tilde"
+          ],
+          "description": "token in6"
+        },
+        {
+          "id": "token_in7",
+          "members": [
+            "in7",
+            "in7b",
+            "in7s",
+            "in7tilde"
+          ],
+          "description": "token in7"
+        },
+        {
+          "id": "token_in8",
+          "members": [
+            "in8",
+            "in8b"
+          ],
+          "description": "token in8"
+        },
+        {
+          "id": "diffusion_input_tokens",
+          "members": [
+            "token_in0",
+            "token_in1",
+            "token_in2",
+            "token_in3",
+            "token_in4",
+            "token_in5",
+            "token_in6",
+            "token_in7",
+            "token_in8"
+          ],
+          "description": "diffusion input tokens"
+        },
+        {
+          "id": "token_out0",
+          "members": [
+            "out0",
+            "out0b",
+            "out0s",
+            "out0u"
+          ],
+          "description": "token out0"
+        },
+        {
+          "id": "token_out1",
+          "members": [
+            "out1",
+            "out1b",
+            "out1s",
+            "out1u"
+          ],
+          "description": "token out1"
+        },
+        {
+          "id": "token_out2",
+          "members": [
+            "out2",
+            "out2b"
+          ],
+          "description": "token out2"
+        },
+        {
+          "id": "token_out3",
+          "members": [
+            "out3",
+            "out3b",
+            "out3s"
+          ],
+          "description": "token out3"
+        },
+        {
+          "id": "token_out4",
+          "members": [
+            "out4",
+            "out4b",
+            "out4s"
+          ],
+          "description": "token out4"
+        },
+        {
+          "id": "token_out5",
+          "members": [
+            "out5",
+            "out5b"
+          ],
+          "description": "token out5"
+        },
+        {
+          "id": "token_out6",
+          "members": [
+            "out6",
+            "out6b",
+            "out6s"
+          ],
+          "description": "token out6"
+        },
+        {
+          "id": "token_out7",
+          "members": [
+            "out7",
+            "out7b",
+            "out7s"
+          ],
+          "description": "token out7"
+        },
+        {
+          "id": "token_out8",
+          "members": [
+            "out8",
+            "out8b"
+          ],
+          "description": "token out8"
+        },
+        {
+          "id": "generated_output_tokens",
+          "members": [
+            "token_out0",
+            "token_out1",
+            "token_out2",
+            "token_out3",
+            "token_out4",
+            "token_out5",
+            "token_out6",
+            "token_out7",
+            "token_out8"
+          ],
+          "description": "generated output tokens"
+        },
+        {
+          "id": "token_arout0",
+          "members": [
+            "arout0",
+            "arout0b",
+            "arout0s"
+          ],
+          "description": "token arout0"
+        },
+        {
+          "id": "token_arout1",
+          "members": [
+            "arout1",
+            "arout1b",
+            "arout1s"
+          ],
+          "description": "token arout1"
+        },
+        {
+          "id": "token_arout2",
+          "members": [
+            "arout2",
+            "arout2b"
+          ],
+          "description": "token arout2"
+        },
+        {
+          "id": "reasoner_output_tokens",
+          "members": [
+            "token_arout0",
+            "token_arout1",
+            "token_arout2"
+          ],
+          "description": "reasoner output tokens"
+        },
+        {
+          "id": "ar_subsequence_annotation",
+          "members": [
+            "arbracket",
+            "arbrleft",
+            "arbrright",
+            "arheading"
+          ],
+          "description": "ar subsequence annotation"
+        },
+        {
+          "id": "dm_subsequence_annotation",
+          "members": [
+            "dmbracket",
+            "dmbrleft",
+            "dmbrright",
+            "dmheading"
+          ],
+          "description": "dm subsequence annotation"
+        },
+        {
+          "id": "reasoner_input_norm",
+          "members": [
+            "arnode1",
+            "arlabel1"
+          ],
+          "description": "reasoner input norm"
+        },
+        {
+          "id": "reasoner_output_norm",
+          "members": [
+            "arnode2",
+            "arlabel2"
+          ],
+          "description": "reasoner output norm"
+        },
+        {
+          "id": "reasoner_mlp",
+          "members": [
+            "arnode3",
+            "arlabel3"
+          ],
+          "description": "reasoner mlp"
+        },
+        {
+          "id": "generator_input_norm",
+          "members": [
+            "dmnode1",
+            "dmlabel1"
+          ],
+          "description": "generator input norm"
+        },
+        {
+          "id": "generator_output_norm",
+          "members": [
+            "dmnode2",
+            "dmlabel2"
+          ],
+          "description": "generator output norm"
+        },
+        {
+          "id": "generator_mlp",
+          "members": [
+            "dmnode3",
+            "dmlabel3"
+          ],
+          "description": "generator mlp"
+        },
+        {
+          "id": "causal_attention_formula",
+          "members": [
+            "f1part0",
+            "f1part1",
+            "f1part2",
+            "f1part3",
+            "f1part4",
+            "f1part5",
+            "f1part6",
+            "f1part7",
+            "f1part8",
+            "f1part9"
+          ],
+          "description": "causal attention formula"
+        },
+        {
+          "id": "full_attention_formula",
+          "members": [
+            "f2part0",
+            "f2part1",
+            "f2part2",
+            "f2part3",
+            "f2part4",
+            "f2part5",
+            "f2part6",
+            "f2part7",
+            "f2part8",
+            "f2part9",
+            "f2part10",
+            "f2part11",
+            "f2part12",
+            "f2part13",
+            "f2part14",
+            "f2part15",
+            "f2part16",
+            "f2part17",
+            "f2part18",
+            "f2part19"
+          ],
+          "description": "full attention formula"
+        },
+        {
+          "id": "shared_multimodal_attention",
+          "members": [
+            "attention",
+            "attentiontitle",
+            "causal",
+            "full",
+            "causal_attention_formula",
+            "full_attention_formula"
+          ],
+          "description": "shared multimodal attention"
+        },
+        {
+          "id": "attention_mask_grid",
+          "members": [
+            "cell_0_0",
+            "cell_0_1",
+            "cell_0_2",
+            "cell_0_3",
+            "cell_0_4",
+            "cell_0_5",
+            "cell_0_6",
+            "cell_0_7",
+            "cell_0_8",
+            "cell_0_9",
+            "cell_0_10",
+            "cell_0_11",
+            "cell_1_0",
+            "cell_1_1",
+            "cell_1_2",
+            "cell_1_3",
+            "cell_1_4",
+            "cell_1_5",
+            "cell_1_6",
+            "cell_1_7",
+            "cell_1_8",
+            "cell_1_9",
+            "cell_1_10",
+            "cell_1_11",
+            "cell_2_0",
+            "cell_2_1",
+            "cell_2_2",
+            "cell_2_3",
+            "cell_2_4",
+            "cell_2_5",
+            "cell_2_6",
+            "cell_2_7",
+            "cell_2_8",
+            "cell_2_9",
+            "cell_2_10",
+            "cell_2_11",
+            "cell_3_0",
+            "cell_3_1",
+            "cell_3_2",
+            "cell_3_3",
+            "cell_3_4",
+            "cell_3_5",
+            "cell_3_6",
+            "cell_3_7",
+            "cell_3_8",
+            "cell_3_9",
+            "cell_3_10",
+            "cell_3_11",
+            "cell_4_0",
+            "cell_4_1",
+            "cell_4_2",
+            "cell_4_3",
+            "cell_4_4",
+            "cell_4_5",
+            "cell_4_6",
+            "cell_4_7",
+            "cell_4_8",
+            "cell_4_9",
+            "cell_4_10",
+            "cell_4_11",
+            "cell_5_0",
+            "cell_5_1",
+            "cell_5_2",
+            "cell_5_3",
+            "cell_5_4",
+            "cell_5_5",
+            "cell_5_6",
+            "cell_5_7",
+            "cell_5_8",
+            "cell_5_9",
+            "cell_5_10",
+            "cell_5_11",
+            "cell_6_0",
+            "cell_6_1",
+            "cell_6_2",
+            "cell_6_3",
+            "cell_6_4",
+            "cell_6_5",
+            "cell_6_6",
+            "cell_6_7",
+            "cell_6_8",
+            "cell_6_9",
+            "cell_6_10",
+            "cell_6_11",
+            "cell_7_0",
+            "cell_7_1",
+            "cell_7_2",
+            "cell_7_3",
+            "cell_7_4",
+            "cell_7_5",
+            "cell_7_6",
+            "cell_7_7",
+            "cell_7_8",
+            "cell_7_9",
+            "cell_7_10",
+            "cell_7_11",
+            "cell_8_0",
+            "cell_8_1",
+            "cell_8_2",
+            "cell_8_3",
+            "cell_8_4",
+            "cell_8_5",
+            "cell_8_6",
+            "cell_8_7",
+            "cell_8_8",
+            "cell_8_9",
+            "cell_8_10",
+            "cell_8_11",
+            "cell_9_0",
+            "cell_9_1",
+            "cell_9_2",
+            "cell_9_3",
+            "cell_9_4",
+            "cell_9_5",
+            "cell_9_6",
+            "cell_9_7",
+            "cell_9_8",
+            "cell_9_9",
+            "cell_9_10",
+            "cell_9_11",
+            "cell_10_0",
+            "cell_10_1",
+            "cell_10_2",
+            "cell_10_3",
+            "cell_10_4",
+            "cell_10_5",
+            "cell_10_6",
+            "cell_10_7",
+            "cell_10_8",
+            "cell_10_9",
+            "cell_10_10",
+            "cell_10_11",
+            "cell_11_0",
+            "cell_11_1",
+            "cell_11_2",
+            "cell_11_3",
+            "cell_11_4",
+            "cell_11_5",
+            "cell_11_6",
+            "cell_11_7",
+            "cell_11_8",
+            "cell_11_9",
+            "cell_11_10",
+            "cell_11_11",
+            "matrix_border",
+            "matrix_v",
+            "matrix_h"
+          ],
+          "description": "attention mask grid"
+        },
+        {
+          "id": "ar_key_symbol",
+          "members": [
+            "kar",
+            "karsub"
+          ],
+          "description": "ar key symbol"
+        },
+        {
+          "id": "dm_key_symbol",
+          "members": [
+            "kdm",
+            "kdmsub"
+          ],
+          "description": "dm key symbol"
+        },
+        {
+          "id": "ar_query_symbol",
+          "members": [
+            "qar",
+            "qarsub"
+          ],
+          "description": "ar query symbol"
+        },
+        {
+          "id": "dm_query_symbol",
+          "members": [
+            "qdm",
+            "qdmsub"
+          ],
+          "description": "dm query symbol"
+        },
+        {
+          "id": "ar_vision_query",
+          "members": [
+            "rowv0",
+            "rowvsub0",
+            "rowvsup0"
+          ],
+          "description": "ar vision query"
+        },
+        {
+          "id": "dm_vision_query",
+          "members": [
+            "rowv1",
+            "rowvsub1",
+            "rowvsup1",
+            "rowvtilde1"
+          ],
+          "description": "dm vision query"
+        },
+        {
+          "id": "language_query",
+          "members": [
+            "row1",
+            "rowsub1"
+          ],
+          "description": "language query"
+        },
+        {
+          "id": "audio_query",
+          "members": [
+            "row6",
+            "rowsub6",
+            "rowtilde6"
+          ],
+          "description": "audio query"
+        },
+        {
+          "id": "action_query",
+          "members": [
+            "row8",
+            "rowsub8",
+            "rowtilde8"
+          ],
+          "description": "action query"
+        },
+        {
+          "id": "mask_ar_legend",
+          "members": [
+            "legend_ar",
+            "legend_artxt"
+          ],
+          "description": "mask ar legend"
+        },
+        {
+          "id": "mask_dm_legend",
+          "members": [
+            "legend_dm",
+            "legend_dmtxt"
+          ],
+          "description": "mask dm legend"
+        },
+        {
+          "id": "diag_v_ar_formula",
+          "members": [
+            "diag_v_ar_0",
+            "diag_v_ar_1",
+            "diag_v_ar_2"
+          ],
+          "description": "diag v ar formula"
+        },
+        {
+          "id": "diag_dots1_formula",
+          "members": [
+            "diag_dots1_0",
+            "diag_dots1_1",
+            "diag_dots1_2"
+          ],
+          "description": "diag dots1 formula"
+        },
+        {
+          "id": "diag_l_formula",
+          "members": [
+            "diag_l_0",
+            "diag_l_1"
+          ],
+          "description": "diag l formula"
+        },
+        {
+          "id": "diag_dots2_formula",
+          "members": [
+            "diag_dots2_0",
+            "diag_dots2_1",
+            "diag_dots2_2"
+          ],
+          "description": "diag dots2 formula"
+        },
+        {
+          "id": "diag_v_dm_formula",
+          "members": [
+            "diag_v_dm_0",
+            "diag_v_dm_1",
+            "diag_v_dm_2",
+            "diag_v_dm_3"
+          ],
+          "description": "diag v dm formula"
+        },
+        {
+          "id": "diag_dots3_formula",
+          "members": [
+            "diag_dots3_0",
+            "diag_dots3_1",
+            "diag_dots3_2"
+          ],
+          "description": "diag dots3 formula"
+        },
+        {
+          "id": "diag_s_formula",
+          "members": [
+            "diag_s_0",
+            "diag_s_1",
+            "diag_s_2"
+          ],
+          "description": "diag s formula"
+        },
+        {
+          "id": "diag_dots4_formula",
+          "members": [
+            "diag_dots4_0",
+            "diag_dots4_1",
+            "diag_dots4_2"
+          ],
+          "description": "diag dots4 formula"
+        },
+        {
+          "id": "diag_a_formula",
+          "members": [
+            "diag_a_0",
+            "diag_a_1",
+            "diag_a_2"
+          ],
+          "description": "diag a formula"
+        },
+        {
+          "id": "diag_dots5_formula",
+          "members": [
+            "diag_dots5_0",
+            "diag_dots5_1",
+            "diag_dots5_2"
+          ],
+          "description": "diag dots5 formula"
+        },
+        {
+          "id": "attention_mask_panel",
+          "members": [
+            "attention_mask_grid",
+            "masktitle",
+            "keys",
+            "ar_key_symbol",
+            "dm_key_symbol",
+            "key_ar",
+            "key_arreverse",
+            "key_dm",
+            "key_dmreverse",
+            "query_ar",
+            "query_arreverse",
+            "query_dm",
+            "query_dmreverse",
+            "queries",
+            "ar_query_symbol",
+            "dm_query_symbol",
+            "ar_vision_query",
+            "dm_vision_query",
+            "row0",
+            "language_query",
+            "row2",
+            "row3",
+            "row4",
+            "row5",
+            "audio_query",
+            "row7",
+            "action_query",
+            "row9",
+            "causalmask",
+            "zero",
+            "fullleft",
+            "fullright",
+            "mask_ar_legend",
+            "mask_dm_legend",
+            "diag_v_ar_formula",
+            "diag_dots1_formula",
+            "diag_l_formula",
+            "diag_dots2_formula",
+            "diag_eos_0",
+            "diag_bog_0",
+            "diag_v_dm_formula",
+            "diag_dots3_formula",
+            "diag_s_formula",
+            "diag_dots4_formula",
+            "diag_a_formula",
+            "diag_dots5_formula"
+          ],
+          "description": "attention mask panel"
+        },
+        {
+          "id": "legend_entry_v",
+          "members": [
+            "legend_v",
+            "legend_txtv"
+          ],
+          "description": "legend entry v"
+        },
+        {
+          "id": "legend_entry_l",
+          "members": [
+            "legend_l",
+            "legend_txtl"
+          ],
+          "description": "legend entry l"
+        },
+        {
+          "id": "legend_entry_sp",
+          "members": [
+            "legend_sp",
+            "legend_txtsp"
+          ],
+          "description": "legend entry sp"
+        },
+        {
+          "id": "legend_entry_d",
+          "members": [
+            "legend_d",
+            "legend_txtd"
+          ],
+          "description": "legend entry d"
+        },
+        {
+          "id": "legend_entry_s",
+          "members": [
+            "legend_s",
+            "legend_txts"
+          ],
+          "description": "legend entry s"
+        },
+        {
+          "id": "legend_entry_a",
+          "members": [
+            "legend_a",
+            "legend_txta"
+          ],
+          "description": "legend entry a"
+        },
+        {
+          "id": "legend_entry_n",
+          "members": [
+            "legend_n",
+            "legend_txtn"
+          ],
+          "description": "legend entry n"
+        },
+        {
+          "id": "token_category_legend",
+          "members": [
+            "tokenlegend",
+            "tokensheading",
+            "legend_entry_v",
+            "legend_entry_l",
+            "legend_entry_sp",
+            "legend_entry_d",
+            "legend_entry_s",
+            "legend_entry_a",
+            "legend_entry_n"
+          ],
+          "description": "token category legend"
+        }
+      ],
+      "root_groups": [
+        "repeated_transformer_annotation",
+        "vision_encoder",
+        "language_tokenizer",
+        "vision_vae_encoder",
+        "audio_encoder",
+        "action_encoder",
+        "autoregressive_input_tokens",
+        "diffusion_input_tokens",
+        "generated_output_tokens",
+        "reasoner_output_tokens",
+        "ar_subsequence_annotation",
+        "dm_subsequence_annotation",
+        "reasoner_input_norm",
+        "reasoner_output_norm",
+        "reasoner_mlp",
+        "generator_input_norm",
+        "generator_output_norm",
+        "generator_mlp",
+        "shared_multimodal_attention",
+        "attention_mask_panel",
+        "token_category_legend"
+      ],
+      "ungrouped_elements": [
+        "ar_bg",
+        "dm_bg",
+        "ararrow1",
+        "ararrow2",
+        "ararrow3",
+        "ararrow4",
+        "ararrow5",
+        "arrole",
+        "dmarrow1",
+        "dmarrow2",
+        "dmarrow3",
+        "dmarrow4",
+        "dmarrow5",
+        "dmrole",
+        "expand1",
+        "expand2"
+      ],
+      "top_level_selectable_objects": 37
+    }
+  ],
+  "limits": [
+    "Groups preserve children; enter or ungroup to edit individual objects.",
+    "Semantic grouping is authored, not automatically inferred or scored.",
+    "Connections remain geometry; moving a module does not reroute external arrows.",
+    "Font availability and target editor affect text after editing."
+  ]
+}

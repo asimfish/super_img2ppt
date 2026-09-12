@@ -1,0 +1,244 @@
+{
+  "raster_recipes": {
+    "actual_source_width": {
+      "page_pt": [
+        960.0094604492188,
+        454.96063232421875
+      ],
+      "scale": 1.9958136653189262,
+      "raw_size": [
+        1916,
+        909
+      ],
+      "final_size": [
+        1916,
+        908
+      ],
+      "white_bottom_row_cropped": true
+    },
+    "flat_source_width": {
+      "page_pt": [
+        960.0094604492188,
+        454.96063232421875
+      ],
+      "scale": 1.9958136653189262,
+      "raw_size": [
+        1916,
+        909
+      ],
+      "final_size": [
+        1916,
+        908
+      ],
+      "white_bottom_row_cropped": true
+    },
+    "original_order_source_width": {
+      "page_pt": [
+        960.0094604492188,
+        454.96063232421875
+      ],
+      "scale": 1.9958136653189262,
+      "raw_size": [
+        1916,
+        909
+      ],
+      "final_size": [
+        1916,
+        908
+      ],
+      "white_bottom_row_cropped": true
+    },
+    "edit_probe/edited_source_width": {
+      "page_pt": [
+        960.0094604492188,
+        454.96063232421875
+      ],
+      "scale": 1.9958136653189262,
+      "raw_size": [
+        1916,
+        909
+      ],
+      "final_size": [
+        1916,
+        908
+      ],
+      "white_bottom_row_cropped": true
+    }
+  },
+  "render_comparisons": {
+    "flat_vs_grouped": {
+      "changed_pixels": 0,
+      "bounds": null
+    },
+    "original_vs_reordered_flat": {
+      "changed_pixels": 0,
+      "bounds": null
+    },
+    "edited_vs_grouped": {
+      "changed_pixels": 3722,
+      "bounds": [
+        123,
+        33,
+        482,
+        544
+      ]
+    },
+    "edit_probe_allowed_ROIs": [
+      [
+        115,
+        25,
+        285,
+        120
+      ],
+      [
+        365,
+        520,
+        500,
+        563
+      ]
+    ],
+    "edit_probe_changed_pixels_outside_ROIs": 0
+  },
+  "source_comparisons": {
+    "projector": {
+      "roi": [
+        774,
+        41,
+        904,
+        105
+      ],
+      "mask": "dark",
+      "source_ink_bounds": [
+        4,
+        5,
+        116,
+        63
+      ],
+      "actual_ink_bounds": [
+        4,
+        3,
+        117,
+        57
+      ],
+      "edge_delta": [
+        0,
+        -2,
+        1,
+        -6
+      ],
+      "iou": 0.22128378378378377
+    },
+    "instruction": {
+      "roi": [
+        1627,
+        39,
+        1884,
+        103
+      ],
+      "mask": "dark",
+      "source_ink_bounds": [
+        8,
+        4,
+        247,
+        58
+      ],
+      "actual_ink_bounds": [
+        15,
+        4,
+        236,
+        52
+      ],
+      "edge_delta": [
+        7,
+        0,
+        -11,
+        -6
+      ],
+      "iou": 0.13972140143520473
+    },
+    "dit_label": {
+      "roi": [
+        1095,
+        488,
+        1248,
+        554
+      ],
+      "mask": "white",
+      "source_ink_bounds": [
+        5,
+        5,
+        137,
+        58
+      ],
+      "actual_ink_bounds": [
+        2,
+        3,
+        140,
+        51
+      ],
+      "edge_delta": [
+        -3,
+        -2,
+        3,
+        -7
+      ],
+      "iou": 0.07964601769911504
+    },
+    "trajectory_curve": {
+      "roi": [
+        120,
+        29,
+        267,
+        116
+      ],
+      "mask": "gray",
+      "source_ink_bounds": [
+        4,
+        4,
+        141,
+        81
+      ],
+      "actual_ink_bounds": [
+        4,
+        4,
+        139,
+        81
+      ],
+      "edge_delta": [
+        0,
+        0,
+        -2,
+        0
+      ],
+      "iou": 0.8782112274024738
+    },
+    "concat": {
+      "roi": [
+        777,
+        412,
+        900,
+        475
+      ],
+      "mask": "dark",
+      "source_ink_bounds": [
+        5,
+        5,
+        110,
+        58
+      ],
+      "actual_ink_bounds": [
+        6,
+        2,
+        109,
+        50
+      ],
+      "edge_delta": [
+        1,
+        -3,
+        -1,
+        -8
+      ],
+      "iou": 0.16201117318435754
+    }
+  }
+}

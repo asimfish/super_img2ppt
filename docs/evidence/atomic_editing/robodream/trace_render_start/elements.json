@@ -1,0 +1,46 @@
+[
+  {
+    "id": "render_start_0",
+    "kind": "line",
+    "z": 4,
+    "points": [
+      [
+        78.5,
+        74.1667
+      ],
+      [
+        81.5,
+        72.0
+      ]
+    ],
+    "stroke": "#808080",
+    "stroke_width": 3.0,
+    "line_cap": "round",
+    "allow_overlap_with": [
+      "render_start_1"
+    ],
+    "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+  },
+  {
+    "id": "render_start_1",
+    "kind": "line",
+    "z": 4,
+    "points": [
+      [
+        81.5,
+        72.0
+      ],
+      [
+        85.5,
+        71.0
+      ]
+    ],
+    "stroke": "#808080",
+    "stroke_width": 3.0,
+    "line_cap": "round",
+    "allow_overlap_with": [
+      "render_start_0"
+    ],
+    "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+  }
+]

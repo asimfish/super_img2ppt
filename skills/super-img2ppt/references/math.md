@@ -74,3 +74,8 @@ relation into ASCII `~`. If no usable single family covers a formula, an explici
 separately composed symbol family is possible, but does not establish uniform source glyphs.
 The delivered Diffuser Actor example retains such a DejaVu Sans relation beside Times New
 Roman text. Remaining differences must stay visible in the source/actual comparison.
+
+For outputs with multiple parts/segments, the helper also writes `groups.json` with one
+semantic edit group (empty for a single object). Merge it into the slide's `groups` along
+with `elements.json`, using unique IDs and keeping its leaves contiguous in paint order.
+See [editing.md](editing.md); helper output remains unverified until full build and review.

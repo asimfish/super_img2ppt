@@ -126,3 +126,24 @@ def test_duplicate_formula_fields_are_rejected_before_composition(tmp_path):
         compose_file(source, out)
     assert json.loads((out / "math.json").read_text())["status"] == "fail"
     assert not (out / "elements.json").exists()
+
+
+def test_composed_formula_emits_one_editable_unit(fonts, tmp_path):
+    source = tmp_path / "spec.json"
+    source.write_text(json.dumps(formula(fonts)))
+    out = tmp_path / "math"
+    compose_file(source, out)
+    elements = json.loads((out / "elements.json").read_text())
+    groups = json.loads((out / "groups.json").read_text())
+    from super_img2ppt.scene import validate_scene
+
+    validate_scene(
+        {
+            "version": 1,
+            "slides": [
+                {"id": "page", "width": 240, "height": 160, "elements": elements, "groups": groups}
+            ],
+        }
+    )
+    assert len(groups) == 1
+    assert groups[0]["members"] == [e["id"] for e in elements]

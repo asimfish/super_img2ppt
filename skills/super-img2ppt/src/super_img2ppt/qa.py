@@ -12,7 +12,7 @@ from PIL import Image, ImageChops, ImageDraw, ImageStat
 
 from .geometry import box_points, convex_hull, line_parts, polygon_points, rotate_points
 from .layout import TextLayout, text_ink_boxes, text_ink_mask
-from .scene import InputError, safe_asset, text_content
+from .scene import InputError, group_plan, safe_asset, text_content
 
 
 def polygon(element: dict) -> list[tuple[float, float]]:
@@ -436,15 +436,39 @@ def compact_text(text: str) -> str:
 
 def inspect_pptx(path: Path, scene: dict) -> dict:
     from pptx import Presentation
+    from pptx.enum.shapes import MSO_SHAPE_TYPE
 
     presentation = Presentation(path)
     problems = []
     if len(presentation.slides) != len(scene["slides"]):
         problems.append({"code": "slide_count_mismatch"})
     for index, (slide, expected) in enumerate(
-        zip(presentation.slides, scene["slides"], strict=True)
+        zip(presentation.slides, scene["slides"], strict=False)
     ):
-        shapes = {shape.name: shape for shape in slide.shapes}
+        shapes, actual_groups, leaves = {}, {}, []
+
+        def walk(
+            collection, shapes=shapes, actual_groups=actual_groups, leaves=leaves, index=index
+        ):
+            for shape in collection:
+                if shape.name in shapes:
+                    problems.append(
+                        {"slide": index + 1, "code": "duplicate_native_name", "element": shape.name}
+                    )
+                shapes[shape.name] = shape
+                if shape.shape_type == MSO_SHAPE_TYPE.GROUP:
+                    actual_groups[shape.name] = [child.name for child in shape.shapes]
+                    walk(shape.shapes)
+                else:
+                    leaves.append(shape.name)
+
+        walk(slide.shapes)
+        expected_groups = {g["id"]: g["members"] for g in group_plan(expected)}
+        if actual_groups != expected_groups:
+            problems.append({"slide": index + 1, "code": "edit_group_membership_mismatch"})
+        expected_order = [e["id"] for e in sorted(expected["elements"], key=lambda e: e["z"])]
+        if leaves != expected_order:
+            problems.append({"slide": index + 1, "code": "native_paint_order_mismatch"})
         for element in expected["elements"]:
             shape = shapes.get(element["id"])
             if shape is None:
@@ -469,6 +493,35 @@ def inspect_pptx(path: Path, scene: dict) -> dict:
         "status": "fail" if problems else "pass",
         "findings": problems,
         "slide_count": len(presentation.slides),
+    }
+
+
+def editability_manifest(scene: dict) -> dict:
+    slides = []
+    for slide in scene["slides"]:
+        groups = group_plan(slide)
+        parents = {member: g["id"] for g in groups for member in g["members"]}
+        roots = [g["id"] for g in groups if g["id"] not in parents]
+        ungrouped = [e["id"] for e in slide["elements"] if e["id"] not in parents]
+        slides.append(
+            {
+                "id": slide["id"],
+                "native_leaf_objects": sum(e["kind"] != "image" for e in slide["elements"]),
+                "raster_images": sum(e["kind"] == "image" for e in slide["elements"]),
+                "groups": groups,
+                "root_groups": roots,
+                "ungrouped_elements": ungrouped,
+                "top_level_selectable_objects": len(roots) + len(ungrouped),
+            }
+        )
+    return {
+        "slides": slides,
+        "limits": [
+            "Groups preserve children; enter or ungroup to edit individual objects.",
+            "Semantic grouping is authored, not automatically inferred or scored.",
+            "Connections remain geometry; moving a module does not reroute external arrows.",
+            "Font availability and target editor affect text after editing.",
+        ],
     }
 
 

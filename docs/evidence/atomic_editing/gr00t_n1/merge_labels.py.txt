@@ -1,0 +1,14 @@
+from pathlib import Path
+import json,copy,sys
+r=Path(__file__).parent;base=json.loads((r/'job/scene.grouped.json').read_text());s=base['slides'][0];es=s['elements'];groups=s['groups'];mode=sys.argv[1];targets=['state_encoder'] if mode=='state' else ['vision','tokenizer','vlm','state_encoder','action_encoder','decoder','motor']
+changes=[]
+for prefix in targets:
+ ids=[prefix+'_label_0',prefix+'_label_1'];olds=[next(e for e in es if e['id']==id) for id in ids];new=copy.deepcopy(olds[0]);new['id']=prefix+'_label';new['text']='\n'.join(e['text'] for e in olds);new['line_height']=(olds[1]['box'][1]-olds[0]['box'][1])/new['font_size'];new['box'][3]=olds[-1]['box'][1]+olds[-1]['box'][3]-olds[0]['box'][1];new['wrap']=False
+ es=[new if e['id']==ids[0] else e for e in es if e['id']!=ids[1]]
+ for g in groups:g['members']=[new['id'] if m==ids[0] else m for m in g['members'] if m!=ids[1]]
+ changes.append({'old':olds,'new':new})
+if mode=='all':
+ ids=['instruction_0','instruction_1','instruction_2'];olds=[next(e for e in es if e['id']==id) for id in ids];new=copy.deepcopy(olds[0]);new['id']='instruction_text';new['text']='\n'.join(e['text'] for e in olds);new['line_height']=29/new['font_size'];new['box'][3]=olds[-1]['box'][1]+olds[-1]['box'][3]-olds[0]['box'][1];new['wrap']=False
+ es=[new if e['id']==ids[0] else e for e in es if e['id'] not in ids[1:]];groups=[g for g in groups if g['id']!='instruction_text'];changes.append({'old':olds,'new':new})
+for i,e in enumerate(es):e['z']=i+1
+s['elements']=es;s['groups']=groups;(r/'job'/f'scene.merged_{mode}.json').write_text(json.dumps(base,indent=2));s.pop('groups');(r/'job'/f'scene.merged_{mode}_flat.json').write_text(json.dumps(base,indent=2));(r/f'merge_{mode}_changes.json').write_text(json.dumps(changes,indent=2))

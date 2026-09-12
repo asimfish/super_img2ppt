@@ -1,0 +1,6076 @@
+{
+  "version": 1,
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 1916,
+      "height": 908,
+      "source": "assets/e196bb00a27670a8fefc.png",
+      "background": "#FFFFFF",
+      "reviewed": true,
+      "notes": "Adapted from Junjie Ye et al., RoboDream: Compositional World Models for Scalable Robot Data Synthesis, arXiv:2606.02577v1, Figure 2 (2026-06-01). CC BY 4.0 https://creativecommons.org/licenses/by/4.0/. Changes: editable reconstruction from raster pixels/local OCR; Arial and Courier New approximate source typography; five independent artwork crops remain raster, token gradients approximate diagonal source blends.",
+      "elements": [
+        {
+          "id": "views_rear",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            72,
+            174,
+            967,
+            535
+          ],
+          "shape": "round_rect",
+          "fill": "#F2F2F2",
+          "radius": 18
+        },
+        {
+          "id": "views_front",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            48,
+            195,
+            970,
+            535
+          ],
+          "shape": "round_rect",
+          "fill": "#F2F2F2",
+          "stroke": "#FFFFFF",
+          "stroke_width": 3,
+          "radius": 18,
+          "allow_overlap_with": [
+            "views_rear"
+          ],
+          "overlap_reason": "Visible overlapping multi-view cards."
+        },
+        {
+          "id": "output_rear",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            1308,
+            174,
+            60,
+            492
+          ],
+          "shape": "round_rect",
+          "fill": "#F2F2F2",
+          "radius": 15
+        },
+        {
+          "id": "output_front",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            1285,
+            195,
+            61,
+            493
+          ],
+          "shape": "round_rect",
+          "fill": "#F2F2F2",
+          "stroke": "#FFFFFF",
+          "stroke_width": 3,
+          "radius": 15,
+          "allow_overlap_with": [
+            "output_rear"
+          ],
+          "overlap_reason": "Visible overlapping multi-view output cards."
+        },
+        {
+          "id": "encoder",
+          "kind": "shape",
+          "z": 5,
+          "box": [
+            359,
+            210,
+            147,
+            650
+          ],
+          "shape": "round_rect",
+          "fill": "#40AF6B",
+          "radius": 14,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "encoder_label",
+          "kind": "text",
+          "z": 6,
+          "box": [
+            365,
+            518.1,
+            135,
+            39.800000000000004
+          ],
+          "font_size": 26,
+          "font_family": "Arial",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "color": "#FFFFFF",
+          "container": "encoder",
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+          "runs": [
+            {
+              "text": "Encoder",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "id": "trajectory_projector",
+          "kind": "shape",
+          "z": 7,
+          "box": [
+            749,
+            31,
+            172,
+            82
+          ],
+          "shape": "round_rect",
+          "fill": "#DCDBB8",
+          "radius": 14
+        },
+        {
+          "id": "trajectory_projector_label",
+          "kind": "text",
+          "z": 8,
+          "box": [
+            755,
+            35.199999999999996,
+            160,
+            81.60000000000001
+          ],
+          "font_size": 26,
+          "font_family": "Arial",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "color": "#000000",
+          "container": "trajectory_projector",
+          "line_height": 1.35,
+          "runs": [
+            {
+              "text": "Trajectory\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            },
+            {
+              "text": "projector",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "text_encoder",
+          "kind": "shape",
+          "z": 9,
+          "box": [
+            1408,
+            31,
+            162,
+            82
+          ],
+          "shape": "round_rect",
+          "fill": "#DCDBB8",
+          "radius": 14
+        },
+        {
+          "id": "text_encoder_label",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            1414,
+            35.199999999999996,
+            150,
+            81.60000000000001
+          ],
+          "font_size": 26,
+          "font_family": "Arial",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "color": "#000000",
+          "container": "text_encoder",
+          "line_height": 1.35,
+          "runs": [
+            {
+              "text": "Text\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            },
+            {
+              "text": "encoder",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "concat",
+          "kind": "shape",
+          "z": 11,
+          "box": [
+            749,
+            406,
+            172,
+            72
+          ],
+          "shape": "round_rect",
+          "fill": "#DCDBB8",
+          "radius": 14,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "concat_label",
+          "kind": "text",
+          "z": 12,
+          "box": [
+            755,
+            405.2,
+            160,
+            81.60000000000001
+          ],
+          "font_size": 26,
+          "font_family": "Arial",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "color": "#000000",
+          "container": "concat",
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+          "line_height": 1.35,
+          "runs": [
+            {
+              "text": "Concat &\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            },
+            {
+              "text": "MLP",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "mlp",
+          "kind": "shape",
+          "z": 13,
+          "box": [
+            749,
+            766,
+            172,
+            72
+          ],
+          "shape": "round_rect",
+          "fill": "#DCDBB8",
+          "radius": 14
+        },
+        {
+          "id": "mlp_label",
+          "kind": "text",
+          "z": 14,
+          "box": [
+            755,
+            785.1,
+            160,
+            39.800000000000004
+          ],
+          "font_size": 26,
+          "font_family": "Arial",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "color": "#000000",
+          "container": "mlp",
+          "runs": [
+            {
+              "text": "MLP",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "dit",
+          "kind": "shape",
+          "z": 15,
+          "box": [
+            1071,
+            177,
+            191,
+            683
+          ],
+          "shape": "round_rect",
+          "fill": "#5D85FF",
+          "radius": 14
+        },
+        {
+          "id": "dit_label",
+          "kind": "text",
+          "z": 16,
+          "box": [
+            1077,
+            481.7,
+            179,
+            81.60000000000001
+          ],
+          "font_size": 26,
+          "font_family": "Arial",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "color": "#FFFFFF",
+          "container": "dit",
+          "line_height": 1.35,
+          "runs": [
+            {
+              "text": "Diffusion\n",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#FFFFFF"
+            },
+            {
+              "text": "Transformer",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "id": "decoder",
+          "kind": "shape",
+          "z": 17,
+          "box": [
+            1415,
+            177,
+            149,
+            513
+          ],
+          "shape": "round_rect",
+          "fill": "#40AF6B",
+          "radius": 14
+        },
+        {
+          "id": "decoder_label",
+          "kind": "text",
+          "z": 18,
+          "box": [
+            1421,
+            416.6,
+            137,
+            39.800000000000004
+          ],
+          "font_size": 26,
+          "font_family": "Arial",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "color": "#FFFFFF",
+          "container": "decoder",
+          "runs": [
+            {
+              "text": "Decoder",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "id": "noise",
+          "kind": "image",
+          "z": 19,
+          "box": [
+            87,
+            211,
+            213,
+            118
+          ],
+          "path": "assets/1df95c70d50a36c9cb7c.png",
+          "contains_text": false,
+          "provenance": "Exact crop of official RoboDream Figure 2, Ye et al. 2026, arXiv:2606.02577v1, CC BY 4.0.",
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "noise_label",
+          "kind": "text",
+          "z": 20,
+          "box": [
+            94,
+            340,
+            208,
+            38
+          ],
+          "font_size": 26,
+          "font_family": "Arial",
+          "fit": "strict",
+          "wrap": false,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+          "runs": [
+            {
+              "text": "Noisy frames",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#111827"
+            }
+          ]
+        },
+        {
+          "id": "motion",
+          "kind": "image",
+          "z": 21,
+          "box": [
+            85,
+            382,
+            215,
+            120
+          ],
+          "path": "assets/f1bce3052e08ac39fd23.png",
+          "contains_text": false,
+          "provenance": "Exact crop of official RoboDream Figure 2, Ye et al. 2026, arXiv:2606.02577v1, CC BY 4.0.",
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "motion_label",
+          "kind": "text",
+          "z": 22,
+          "box": [
+            95,
+            515,
+            224,
+            38
+          ],
+          "font_size": 26,
+          "font_family": "Arial",
+          "fit": "strict",
+          "wrap": false,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+          "runs": [
+            {
+              "text": "Rendered motion",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#111827"
+            }
+          ]
+        },
+        {
+          "id": "scene",
+          "kind": "image",
+          "z": 23,
+          "box": [
+            85,
+            562,
+            215,
+            120
+          ],
+          "path": "assets/4889a636bf88ec70f92c.png",
+          "contains_text": false,
+          "provenance": "Exact crop of official RoboDream Figure 2, Ye et al. 2026, arXiv:2606.02577v1, CC BY 4.0.",
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "scene_label",
+          "kind": "text",
+          "z": 24,
+          "box": [
+            126,
+            694,
+            157,
+            38
+          ],
+          "font_size": 26,
+          "font_family": "Arial",
+          "fit": "strict",
+          "wrap": false,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+          "runs": [
+            {
+              "text": "Scene prior",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#111827"
+            }
+          ]
+        },
+        {
+          "id": "object",
+          "kind": "image",
+          "z": 25,
+          "box": [
+            85,
+            741,
+            215,
+            119
+          ],
+          "path": "assets/c0034479079077899b55.png",
+          "contains_text": false,
+          "provenance": "Exact crop of official RoboDream Figure 2, Ye et al. 2026, arXiv:2606.02577v1, CC BY 4.0."
+        },
+        {
+          "id": "object_label",
+          "kind": "text",
+          "z": 26,
+          "box": [
+            121,
+            871,
+            175,
+            37
+          ],
+          "font_size": 26,
+          "font_family": "Arial",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Object prior",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#111827"
+            }
+          ]
+        },
+        {
+          "id": "generated",
+          "kind": "image",
+          "z": 27,
+          "box": [
+            1622,
+            192,
+            262,
+            293
+          ],
+          "path": "assets/e4a8959cc59077ea891d.png",
+          "contains_text": false,
+          "provenance": "Exact crop of official RoboDream Figure 2, Ye et al. 2026, arXiv:2606.02577v1, CC BY 4.0."
+        },
+        {
+          "id": "generated_label",
+          "kind": "text",
+          "z": 28,
+          "box": [
+            1604,
+            497,
+            309,
+            38
+          ],
+          "font_size": 26,
+          "font_family": "Arial",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Generated demonstration",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#111827"
+            }
+          ]
+        },
+        {
+          "id": "trajectory_frame",
+          "kind": "shape",
+          "z": 29,
+          "box": [
+            87,
+            13,
+            214,
+            118
+          ],
+          "shape": "rect",
+          "fill": "#FFFFFF",
+          "stroke": "#355361",
+          "stroke_width": 1.2
+        },
+        {
+          "id": "trajectory_label",
+          "kind": "text",
+          "z": 30,
+          "box": [
+            99,
+            140,
+            232,
+            38
+          ],
+          "font_size": 26,
+          "font_family": "Arial",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Robot trajectory",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#111827"
+            }
+          ]
+        },
+        {
+          "id": "trajectory_curve_0",
+          "kind": "line",
+          "z": 31,
+          "points": [
+            [
+              125.5,
+              59.8333
+            ],
+            [
+              127.5,
+              58.875
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_1",
+            "trajectory_curve_2"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_1",
+          "kind": "line",
+          "z": 32,
+          "points": [
+            [
+              127.5,
+              58.875
+            ],
+            [
+              128.5,
+              57.875
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_0",
+            "trajectory_curve_2",
+            "trajectory_curve_3"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_2",
+          "kind": "line",
+          "z": 33,
+          "points": [
+            [
+              128.5,
+              57.875
+            ],
+            [
+              135.5,
+              48.125
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_0",
+            "trajectory_curve_1",
+            "trajectory_curve_3",
+            "trajectory_curve_4"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_3",
+          "kind": "line",
+          "z": 34,
+          "points": [
+            [
+              135.5,
+              48.125
+            ],
+            [
+              138.5,
+              45.0
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_1",
+            "trajectory_curve_2",
+            "trajectory_curve_4",
+            "trajectory_curve_5"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_4",
+          "kind": "line",
+          "z": 35,
+          "points": [
+            [
+              138.5,
+              45.0
+            ],
+            [
+              141.5,
+              42.625
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_2",
+            "trajectory_curve_3",
+            "trajectory_curve_5",
+            "trajectory_curve_6"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_5",
+          "kind": "line",
+          "z": 36,
+          "points": [
+            [
+              141.5,
+              42.625
+            ],
+            [
+              143.5,
+              41.5
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_3",
+            "trajectory_curve_4",
+            "trajectory_curve_6",
+            "trajectory_curve_7"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_6",
+          "kind": "line",
+          "z": 37,
+          "points": [
+            [
+              143.5,
+              41.5
+            ],
+            [
+              145.5,
+              41.0
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_4",
+            "trajectory_curve_5",
+            "trajectory_curve_7",
+            "trajectory_curve_8"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_7",
+          "kind": "line",
+          "z": 38,
+          "points": [
+            [
+              145.5,
+              41.0
+            ],
+            [
+              149.5,
+              41.0
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_5",
+            "trajectory_curve_6",
+            "trajectory_curve_8",
+            "trajectory_curve_9"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_8",
+          "kind": "line",
+          "z": 39,
+          "points": [
+            [
+              149.5,
+              41.0
+            ],
+            [
+              151.5,
+              41.625
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_6",
+            "trajectory_curve_7",
+            "trajectory_curve_9",
+            "trajectory_curve_10"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_9",
+          "kind": "line",
+          "z": 40,
+          "points": [
+            [
+              151.5,
+              41.625
+            ],
+            [
+              156.5,
+              46.125
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_7",
+            "trajectory_curve_8",
+            "trajectory_curve_10",
+            "trajectory_curve_11"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_10",
+          "kind": "line",
+          "z": 41,
+          "points": [
+            [
+              156.5,
+              46.125
+            ],
+            [
+              160.5,
+              52.125
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_8",
+            "trajectory_curve_9",
+            "trajectory_curve_11",
+            "trajectory_curve_12"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_11",
+          "kind": "line",
+          "z": 42,
+          "points": [
+            [
+              160.5,
+              52.125
+            ],
+            [
+              179.5,
+              89.5
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_9",
+            "trajectory_curve_10",
+            "trajectory_curve_12",
+            "trajectory_curve_13"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_12",
+          "kind": "line",
+          "z": 43,
+          "points": [
+            [
+              179.5,
+              89.5
+            ],
+            [
+              184.5,
+              98.0
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_10",
+            "trajectory_curve_11",
+            "trajectory_curve_13",
+            "trajectory_curve_14"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_13",
+          "kind": "line",
+          "z": 44,
+          "points": [
+            [
+              184.5,
+              98.0
+            ],
+            [
+              188.5,
+              103.0
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_11",
+            "trajectory_curve_12",
+            "trajectory_curve_14",
+            "trajectory_curve_15"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_14",
+          "kind": "line",
+          "z": 45,
+          "points": [
+            [
+              188.5,
+              103.0
+            ],
+            [
+              192.5,
+              106.875
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_12",
+            "trajectory_curve_13",
+            "trajectory_curve_15",
+            "trajectory_curve_16"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_15",
+          "kind": "line",
+          "z": 46,
+          "points": [
+            [
+              192.5,
+              106.875
+            ],
+            [
+              195.5,
+              108.875
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_13",
+            "trajectory_curve_14",
+            "trajectory_curve_16",
+            "trajectory_curve_17"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_16",
+          "kind": "line",
+          "z": 47,
+          "points": [
+            [
+              195.5,
+              108.875
+            ],
+            [
+              197.5,
+              108.875
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_14",
+            "trajectory_curve_15",
+            "trajectory_curve_17",
+            "trajectory_curve_18"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_17",
+          "kind": "line",
+          "z": 48,
+          "points": [
+            [
+              197.5,
+              108.875
+            ],
+            [
+              201.5,
+              105.875
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_15",
+            "trajectory_curve_16",
+            "trajectory_curve_18",
+            "trajectory_curve_19"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_18",
+          "kind": "line",
+          "z": 49,
+          "points": [
+            [
+              201.5,
+              105.875
+            ],
+            [
+              204.5,
+              101.875
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_16",
+            "trajectory_curve_17",
+            "trajectory_curve_19",
+            "trajectory_curve_20"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_19",
+          "kind": "line",
+          "z": 50,
+          "points": [
+            [
+              204.5,
+              101.875
+            ],
+            [
+              206.5,
+              98.25
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_17",
+            "trajectory_curve_18",
+            "trajectory_curve_20",
+            "trajectory_curve_21"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_20",
+          "kind": "line",
+          "z": 51,
+          "points": [
+            [
+              206.5,
+              98.25
+            ],
+            [
+              212.5,
+              83.75
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_18",
+            "trajectory_curve_19",
+            "trajectory_curve_21",
+            "trajectory_curve_22"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_21",
+          "kind": "line",
+          "z": 52,
+          "points": [
+            [
+              212.5,
+              83.75
+            ],
+            [
+              220.5,
+              61.125
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_19",
+            "trajectory_curve_20",
+            "trajectory_curve_22",
+            "trajectory_curve_23"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_22",
+          "kind": "line",
+          "z": 53,
+          "points": [
+            [
+              220.5,
+              61.125
+            ],
+            [
+              224.5,
+              51.125
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_20",
+            "trajectory_curve_21",
+            "trajectory_curve_23",
+            "trajectory_curve_24"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_23",
+          "kind": "line",
+          "z": 54,
+          "points": [
+            [
+              224.5,
+              51.125
+            ],
+            [
+              228.5,
+              43.5
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_21",
+            "trajectory_curve_22",
+            "trajectory_curve_24",
+            "trajectory_curve_25"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_24",
+          "kind": "line",
+          "z": 55,
+          "points": [
+            [
+              228.5,
+              43.5
+            ],
+            [
+              231.5,
+              39.25
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_22",
+            "trajectory_curve_23",
+            "trajectory_curve_25",
+            "trajectory_curve_26",
+            "trajectory_head"
+          ],
+          "overlap_reason": "Traced curve joins its visible source arrowhead at the end.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_25",
+          "kind": "line",
+          "z": 56,
+          "points": [
+            [
+              231.5,
+              39.25
+            ],
+            [
+              235.5,
+              36.5
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_23",
+            "trajectory_curve_24",
+            "trajectory_curve_26",
+            "trajectory_curve_27",
+            "trajectory_head"
+          ],
+          "overlap_reason": "Traced curve joins its visible source arrowhead at the end.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_26",
+          "kind": "line",
+          "z": 57,
+          "points": [
+            [
+              235.5,
+              36.5
+            ],
+            [
+              239.5,
+              35.125
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_24",
+            "trajectory_curve_25",
+            "trajectory_curve_27",
+            "trajectory_head"
+          ],
+          "overlap_reason": "Traced curve joins its visible source arrowhead at the end.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_curve_27",
+          "kind": "line",
+          "z": 58,
+          "points": [
+            [
+              239.5,
+              35.125
+            ],
+            [
+              245.5,
+              36.8333
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "trajectory_curve_25",
+            "trajectory_curve_26",
+            "trajectory_head"
+          ],
+          "overlap_reason": "Traced curve joins its visible source arrowhead at the end.",
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "trajectory_head",
+          "kind": "line",
+          "z": 59,
+          "points": [
+            [
+              245.5,
+              36.8333
+            ],
+            [
+              260,
+              49
+            ]
+          ],
+          "stroke": "#C0C0C0",
+          "stroke_width": 4,
+          "arrow": true,
+          "arrow_head": {
+            "length": 12,
+            "width": 12
+          },
+          "container": "trajectory_frame"
+        },
+        {
+          "id": "rendering_label",
+          "kind": "text",
+          "z": 60,
+          "box": [
+            -41,
+            239,
+            123,
+            34
+          ],
+          "font_size": 24,
+          "font_family": "Arial",
+          "fit": "strict",
+          "wrap": false,
+          "rotation": -90,
+          "runs": [
+            {
+              "text": "Rendering",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 24,
+              "bold": false,
+              "italic": false,
+              "color": "#111827"
+            }
+          ]
+        },
+        {
+          "id": "trajectory_token_bg",
+          "kind": "shape",
+          "z": 61,
+          "box": [
+            1049,
+            44,
+            110,
+            55
+          ],
+          "shape": "round_rect",
+          "fill": "#EFF3ED",
+          "radius": 12
+        },
+        {
+          "id": "trajectory_token1",
+          "kind": "shape",
+          "z": 62,
+          "box": [
+            1060,
+            52,
+            39,
+            39
+          ],
+          "shape": "round_rect",
+          "fill": "#B5CDA8",
+          "radius": 9,
+          "container": "trajectory_token_bg"
+        },
+        {
+          "id": "trajectory_token2",
+          "kind": "shape",
+          "z": 63,
+          "box": [
+            1109,
+            52,
+            39,
+            39
+          ],
+          "shape": "round_rect",
+          "fill": "#B5CDA8",
+          "radius": 9,
+          "container": "trajectory_token_bg"
+        },
+        {
+          "id": "text_token_bg",
+          "kind": "shape",
+          "z": 64,
+          "box": [
+            1174,
+            44,
+            108,
+            55
+          ],
+          "shape": "round_rect",
+          "fill": "#F9F2EE",
+          "radius": 12
+        },
+        {
+          "id": "text_token1",
+          "kind": "shape",
+          "z": 65,
+          "box": [
+            1183,
+            52,
+            39,
+            39
+          ],
+          "shape": "round_rect",
+          "fill": "#EBC8B0",
+          "radius": 9,
+          "container": "text_token_bg"
+        },
+        {
+          "id": "text_token2",
+          "kind": "shape",
+          "z": 66,
+          "box": [
+            1232,
+            52,
+            39,
+            39
+          ],
+          "shape": "round_rect",
+          "fill": "#EBC8B0",
+          "radius": 9,
+          "container": "text_token_bg"
+        },
+        {
+          "id": "instruction_bg",
+          "kind": "shape",
+          "z": 67,
+          "box": [
+            1614,
+            29,
+            278,
+            86
+          ],
+          "shape": "rect",
+          "fill": "#D9D9D9"
+        },
+        {
+          "id": "instruction",
+          "kind": "text",
+          "z": 68,
+          "box": [
+            1622,
+            31,
+            262,
+            80
+          ],
+          "font_size": 29.2,
+          "font_family": "Courier New",
+          "fit": "strict",
+          "wrap": false,
+          "align": "center",
+          "container": "instruction_bg",
+          "line_height": 1.23,
+          "runs": [
+            {
+              "text": "Put the marker\n",
+              "font_family": "Courier New",
+              "cjk_font_family": "Courier New",
+              "font_size": 29.2,
+              "bold": false,
+              "italic": false,
+              "color": "#111827"
+            },
+            {
+              "text": "in the bowl",
+              "font_family": "Courier New",
+              "cjk_font_family": "Courier New",
+              "font_size": 29.2,
+              "bold": false,
+              "italic": false,
+              "color": "#111827"
+            }
+          ]
+        },
+        {
+          "id": "instruction_label",
+          "kind": "text",
+          "z": 69,
+          "box": [
+            1657,
+            140,
+            221,
+            38
+          ],
+          "font_size": 26,
+          "font_family": "Arial",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Task instruction",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#111827"
+            }
+          ]
+        },
+        {
+          "id": "cross_attention_label",
+          "kind": "text",
+          "z": 70,
+          "box": [
+            1190,
+            137,
+            210,
+            38
+          ],
+          "font_size": 26,
+          "font_family": "Arial",
+          "fit": "strict",
+          "wrap": false,
+          "runs": [
+            {
+              "text": "Cross attention",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 26,
+              "bold": false,
+              "italic": false,
+              "color": "#111827"
+            }
+          ]
+        },
+        {
+          "id": "noise_tokens_0",
+          "kind": "shape",
+          "z": 71,
+          "box": [
+            560,
+            211,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#9BBEA0",
+          "stroke": "#8EA992",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "noise_tokens_1",
+          "kind": "shape",
+          "z": 72,
+          "box": [
+            603,
+            211,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#9BBEA0",
+          "stroke": "#8EA992",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "noise_tokens_2",
+          "kind": "shape",
+          "z": 73,
+          "box": [
+            646,
+            211,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#9BBEA0",
+          "stroke": "#8EA992",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "noise_tokens_3",
+          "kind": "shape",
+          "z": 74,
+          "box": [
+            560,
+            254,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#9BBEA0",
+          "stroke": "#8EA992",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "noise_tokens_4",
+          "kind": "shape",
+          "z": 75,
+          "box": [
+            603,
+            254,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#9BBEA0",
+          "stroke": "#8EA992",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "noise_tokens_5",
+          "kind": "shape",
+          "z": 76,
+          "box": [
+            646,
+            254,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#9BBEA0",
+          "stroke": "#8EA992",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "noise_tokens_6",
+          "kind": "shape",
+          "z": 77,
+          "box": [
+            560,
+            297,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#9BBEA0",
+          "stroke": "#8EA992",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "noise_tokens_7",
+          "kind": "shape",
+          "z": 78,
+          "box": [
+            603,
+            297,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#9BBEA0",
+          "stroke": "#8EA992",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "noise_tokens_8",
+          "kind": "shape",
+          "z": 79,
+          "box": [
+            646,
+            297,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#9BBEA0",
+          "stroke": "#8EA992",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "motion_tokens_0",
+          "kind": "shape",
+          "z": 80,
+          "box": [
+            560,
+            383,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#D4D9B7",
+          "stroke": "#BAC1A7",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "motion_tokens_1",
+          "kind": "shape",
+          "z": 81,
+          "box": [
+            603,
+            383,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#D4D9B7",
+          "stroke": "#BAC1A7",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "motion_tokens_2",
+          "kind": "shape",
+          "z": 82,
+          "box": [
+            646,
+            383,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#D4D9B7",
+          "stroke": "#BAC1A7",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "motion_tokens_3",
+          "kind": "shape",
+          "z": 83,
+          "box": [
+            560,
+            426,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#D4D9B7",
+          "stroke": "#BAC1A7",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "motion_tokens_4",
+          "kind": "shape",
+          "z": 84,
+          "box": [
+            603,
+            426,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#D4D9B7",
+          "stroke": "#BAC1A7",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "motion_tokens_5",
+          "kind": "shape",
+          "z": 85,
+          "box": [
+            646,
+            426,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#D4D9B7",
+          "stroke": "#BAC1A7",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "motion_tokens_6",
+          "kind": "shape",
+          "z": 86,
+          "box": [
+            560,
+            469,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#D4D9B7",
+          "stroke": "#BAC1A7",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "motion_tokens_7",
+          "kind": "shape",
+          "z": 87,
+          "box": [
+            603,
+            469,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#D4D9B7",
+          "stroke": "#BAC1A7",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "motion_tokens_8",
+          "kind": "shape",
+          "z": 88,
+          "box": [
+            646,
+            469,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#D4D9B7",
+          "stroke": "#BAC1A7",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "scene_tokens_0",
+          "kind": "shape",
+          "z": 89,
+          "box": [
+            560,
+            564,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#F8B5A9",
+          "stroke": "#D99890",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "scene_tokens_1",
+          "kind": "shape",
+          "z": 90,
+          "box": [
+            603,
+            564,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#F8B5A9",
+          "stroke": "#D99890",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "scene_tokens_2",
+          "kind": "shape",
+          "z": 91,
+          "box": [
+            646,
+            564,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#F8B5A9",
+          "stroke": "#D99890",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "scene_tokens_3",
+          "kind": "shape",
+          "z": 92,
+          "box": [
+            560,
+            607,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#F8B5A9",
+          "stroke": "#D99890",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "scene_tokens_4",
+          "kind": "shape",
+          "z": 93,
+          "box": [
+            603,
+            607,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#F8B5A9",
+          "stroke": "#D99890",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "scene_tokens_5",
+          "kind": "shape",
+          "z": 94,
+          "box": [
+            646,
+            607,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#F8B5A9",
+          "stroke": "#D99890",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "scene_tokens_6",
+          "kind": "shape",
+          "z": 95,
+          "box": [
+            560,
+            650,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#F8B5A9",
+          "stroke": "#D99890",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "scene_tokens_7",
+          "kind": "shape",
+          "z": 96,
+          "box": [
+            603,
+            650,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#F8B5A9",
+          "stroke": "#D99890",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "scene_tokens_8",
+          "kind": "shape",
+          "z": 97,
+          "box": [
+            646,
+            650,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#F8B5A9",
+          "stroke": "#D99890",
+          "stroke_width": 3,
+          "radius": 5,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "object_tokens_0",
+          "kind": "shape",
+          "z": 98,
+          "box": [
+            560,
+            743,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#FFD06F",
+          "stroke": "#E6A019",
+          "stroke_width": 3,
+          "radius": 5
+        },
+        {
+          "id": "object_tokens_1",
+          "kind": "shape",
+          "z": 99,
+          "box": [
+            603,
+            743,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#FFD06F",
+          "stroke": "#E6A019",
+          "stroke_width": 3,
+          "radius": 5
+        },
+        {
+          "id": "object_tokens_2",
+          "kind": "shape",
+          "z": 100,
+          "box": [
+            646,
+            743,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#FFD06F",
+          "stroke": "#E6A019",
+          "stroke_width": 3,
+          "radius": 5
+        },
+        {
+          "id": "object_tokens_3",
+          "kind": "shape",
+          "z": 101,
+          "box": [
+            560,
+            786,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#FFD06F",
+          "stroke": "#E6A019",
+          "stroke_width": 3,
+          "radius": 5
+        },
+        {
+          "id": "object_tokens_4",
+          "kind": "shape",
+          "z": 102,
+          "box": [
+            603,
+            786,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#FFD06F",
+          "stroke": "#E6A019",
+          "stroke_width": 3,
+          "radius": 5
+        },
+        {
+          "id": "object_tokens_5",
+          "kind": "shape",
+          "z": 103,
+          "box": [
+            646,
+            786,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#FFD06F",
+          "stroke": "#E6A019",
+          "stroke_width": 3,
+          "radius": 5
+        },
+        {
+          "id": "object_tokens_6",
+          "kind": "shape",
+          "z": 104,
+          "box": [
+            560,
+            829,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#FFD06F",
+          "stroke": "#E6A019",
+          "stroke_width": 3,
+          "radius": 5
+        },
+        {
+          "id": "object_tokens_7",
+          "kind": "shape",
+          "z": 105,
+          "box": [
+            603,
+            829,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#FFD06F",
+          "stroke": "#E6A019",
+          "stroke_width": 3,
+          "radius": 5
+        },
+        {
+          "id": "object_tokens_8",
+          "kind": "shape",
+          "z": 106,
+          "box": [
+            646,
+            829,
+            32,
+            32
+          ],
+          "shape": "round_rect",
+          "fill": "#FFD06F",
+          "stroke": "#E6A019",
+          "stroke_width": 3,
+          "radius": 5
+        },
+        {
+          "id": "encoded_token_0",
+          "kind": "shape",
+          "z": 107,
+          "box": [
+            970,
+            212.0,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "encoded_token_1",
+          "kind": "shape",
+          "z": 108,
+          "box": [
+            970,
+            265.5,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "encoded_token_2",
+          "kind": "shape",
+          "z": 109,
+          "box": [
+            970,
+            319.0,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "encoded_token_3",
+          "kind": "shape",
+          "z": 110,
+          "box": [
+            970,
+            372.5,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "encoded_token_4",
+          "kind": "shape",
+          "z": 111,
+          "box": [
+            970,
+            426.0,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "encoded_token_5",
+          "kind": "shape",
+          "z": 112,
+          "box": [
+            970,
+            479.5,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "encoded_token_6",
+          "kind": "shape",
+          "z": 113,
+          "box": [
+            970,
+            533.0,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "encoded_token_7",
+          "kind": "shape",
+          "z": 114,
+          "box": [
+            970,
+            586.5,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "encoded_token_8",
+          "kind": "shape",
+          "z": 115,
+          "box": [
+            970,
+            640.0,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "decoded_token_0",
+          "kind": "shape",
+          "z": 116,
+          "box": [
+            1299,
+            212.0,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "output_front",
+            "output_rear"
+          ],
+          "overlap_reason": "Source output tokens overlay stacked card backgrounds."
+        },
+        {
+          "id": "decoded_token_1",
+          "kind": "shape",
+          "z": 117,
+          "box": [
+            1299,
+            265.5,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "output_front",
+            "output_rear"
+          ],
+          "overlap_reason": "Source output tokens overlay stacked card backgrounds."
+        },
+        {
+          "id": "decoded_token_2",
+          "kind": "shape",
+          "z": 118,
+          "box": [
+            1299,
+            319.0,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "output_front",
+            "output_rear"
+          ],
+          "overlap_reason": "Source output tokens overlay stacked card backgrounds."
+        },
+        {
+          "id": "decoded_token_3",
+          "kind": "shape",
+          "z": 119,
+          "box": [
+            1299,
+            372.5,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "output_front",
+            "output_rear"
+          ],
+          "overlap_reason": "Source output tokens overlay stacked card backgrounds."
+        },
+        {
+          "id": "decoded_token_4",
+          "kind": "shape",
+          "z": 120,
+          "box": [
+            1299,
+            426.0,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "output_front",
+            "output_rear"
+          ],
+          "overlap_reason": "Source output tokens overlay stacked card backgrounds."
+        },
+        {
+          "id": "decoded_token_5",
+          "kind": "shape",
+          "z": 121,
+          "box": [
+            1299,
+            479.5,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "output_front",
+            "output_rear"
+          ],
+          "overlap_reason": "Source output tokens overlay stacked card backgrounds."
+        },
+        {
+          "id": "decoded_token_6",
+          "kind": "shape",
+          "z": 122,
+          "box": [
+            1299,
+            533.0,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "output_front",
+            "output_rear"
+          ],
+          "overlap_reason": "Source output tokens overlay stacked card backgrounds."
+        },
+        {
+          "id": "decoded_token_7",
+          "kind": "shape",
+          "z": 123,
+          "box": [
+            1299,
+            586.5,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "output_front",
+            "output_rear"
+          ],
+          "overlap_reason": "Source output tokens overlay stacked card backgrounds."
+        },
+        {
+          "id": "decoded_token_8",
+          "kind": "shape",
+          "z": 124,
+          "box": [
+            1299,
+            640.0,
+            33,
+            33
+          ],
+          "shape": "round_rect",
+          "gradient": {
+            "direction": "horizontal",
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#A2C399"
+              },
+              {
+                "offset": 0.5,
+                "color": "#D0D8BB"
+              },
+              {
+                "offset": 1,
+                "color": "#FAC1AF"
+              }
+            ]
+          },
+          "radius": 7,
+          "allow_overlap_with": [
+            "output_front",
+            "output_rear"
+          ],
+          "overlap_reason": "Source output tokens overlay stacked card backgrounds."
+        },
+        {
+          "id": "object_encoded_0",
+          "kind": "shape",
+          "z": 125,
+          "box": [
+            967,
+            757,
+            39,
+            39
+          ],
+          "shape": "round_rect",
+          "fill": "#FFD079",
+          "radius": 8
+        },
+        {
+          "id": "object_encoded_1",
+          "kind": "shape",
+          "z": 126,
+          "box": [
+            967,
+            806,
+            39,
+            39
+          ],
+          "shape": "round_rect",
+          "fill": "#FFD079",
+          "radius": 8
+        },
+        {
+          "id": "views_label",
+          "kind": "text",
+          "z": 127,
+          "box": [
+            922,
+            700,
+            94,
+            32
+          ],
+          "font_size": 23,
+          "font_family": "Arial",
+          "fit": "strict",
+          "wrap": false,
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained.",
+          "runs": [
+            {
+              "text": "n views",
+              "font_family": "Arial",
+              "cjk_font_family": "Arial",
+              "font_size": 23,
+              "bold": false,
+              "italic": false,
+              "color": "#111827"
+            }
+          ]
+        },
+        {
+          "id": "views_dots_0",
+          "kind": "shape",
+          "z": 128,
+          "box": [
+            1025,
+            722,
+            2.5,
+            2.5
+          ],
+          "shape": "ellipse",
+          "fill": "#000000"
+        },
+        {
+          "id": "views_dots_1",
+          "kind": "shape",
+          "z": 129,
+          "box": [
+            1031,
+            717,
+            2.5,
+            2.5
+          ],
+          "shape": "ellipse",
+          "fill": "#000000"
+        },
+        {
+          "id": "views_dots_2",
+          "kind": "shape",
+          "z": 130,
+          "box": [
+            1037,
+            712,
+            2.5,
+            2.5
+          ],
+          "shape": "ellipse",
+          "fill": "#000000"
+        },
+        {
+          "id": "decoded_dots_0",
+          "kind": "shape",
+          "z": 131,
+          "box": [
+            1355,
+            678,
+            2.5,
+            2.5
+          ],
+          "shape": "ellipse",
+          "fill": "#000000"
+        },
+        {
+          "id": "decoded_dots_1",
+          "kind": "shape",
+          "z": 132,
+          "box": [
+            1361,
+            673,
+            2.5,
+            2.5
+          ],
+          "shape": "ellipse",
+          "fill": "#000000"
+        },
+        {
+          "id": "decoded_dots_2",
+          "kind": "shape",
+          "z": 133,
+          "box": [
+            1367,
+            668,
+            2.5,
+            2.5
+          ],
+          "shape": "ellipse",
+          "fill": "#000000"
+        },
+        {
+          "id": "trajectory_to_projector",
+          "kind": "line",
+          "z": 134,
+          "points": [
+            [
+              301,
+              71
+            ],
+            [
+              749,
+              71
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 12,
+            "width": 12
+          }
+        },
+        {
+          "id": "projector_to_tokens",
+          "kind": "line",
+          "z": 135,
+          "points": [
+            [
+              921,
+              71
+            ],
+            [
+              1049,
+              71
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 12,
+            "width": 12
+          }
+        },
+        {
+          "id": "instruction_to_encoder",
+          "kind": "line",
+          "z": 136,
+          "points": [
+            [
+              1614,
+              71
+            ],
+            [
+              1570,
+              71
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 12,
+            "width": 12
+          }
+        },
+        {
+          "id": "text_encoder_to_tokens",
+          "kind": "line",
+          "z": 137,
+          "points": [
+            [
+              1408,
+              71
+            ],
+            [
+              1282,
+              71
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 12,
+            "width": 12
+          }
+        },
+        {
+          "id": "conditioning_to_dit",
+          "kind": "line",
+          "z": 138,
+          "points": [
+            [
+              1166,
+              102
+            ],
+            [
+              1166,
+              177
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 12,
+            "width": 12
+          }
+        },
+        {
+          "id": "motion_to_concat",
+          "kind": "line",
+          "z": 139,
+          "points": [
+            [
+              679,
+              442
+            ],
+            [
+              749,
+              442
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 12,
+            "width": 12
+          },
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "concat_to_encoded",
+          "kind": "line",
+          "z": 140,
+          "points": [
+            [
+              921,
+              442
+            ],
+            [
+              961,
+              442
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 12,
+            "width": 12
+          },
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "object_to_mlp",
+          "kind": "line",
+          "z": 141,
+          "points": [
+            [
+              678,
+              801
+            ],
+            [
+              749,
+              801
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 12,
+            "width": 12
+          }
+        },
+        {
+          "id": "mlp_to_object",
+          "kind": "line",
+          "z": 142,
+          "points": [
+            [
+              921,
+              801
+            ],
+            [
+              961,
+              801
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 12,
+            "width": 12
+          }
+        },
+        {
+          "id": "render_start_0",
+          "kind": "line",
+          "z": 143,
+          "points": [
+            [
+              78.5,
+              74.1667
+            ],
+            [
+              81.5,
+              72.0
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_start_1",
+            "render_curve_0"
+          ],
+          "overlap_reason": "Visible traced short upper endpoint meets the independently traced curve body at the same source stroke."
+        },
+        {
+          "id": "render_start_1",
+          "kind": "line",
+          "z": 144,
+          "points": [
+            [
+              81.5,
+              72.0
+            ],
+            [
+              85.5,
+              71.0
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_start_0",
+            "trajectory_frame"
+          ],
+          "overlap_reason": "Visible source curve stroke meets the trajectory frame left edge at (86,71); round cap reaches the source join."
+        },
+        {
+          "id": "render_curve_0",
+          "kind": "line",
+          "z": 145,
+          "points": [
+            [
+              78.1667,
+              74.5
+            ],
+            [
+              73.625,
+              79.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_1",
+            "render_curve_2"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_1",
+          "kind": "line",
+          "z": 146,
+          "points": [
+            [
+              73.625,
+              79.5
+            ],
+            [
+              71.0,
+              83.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_0",
+            "render_curve_2",
+            "render_curve_3"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_2",
+          "kind": "line",
+          "z": 147,
+          "points": [
+            [
+              71.0,
+              83.5
+            ],
+            [
+              64.0,
+              97.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_0",
+            "render_curve_1",
+            "render_curve_3",
+            "render_curve_4"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_3",
+          "kind": "line",
+          "z": 148,
+          "points": [
+            [
+              64.0,
+              97.5
+            ],
+            [
+              57.125,
+              117.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_1",
+            "render_curve_2",
+            "render_curve_4",
+            "render_curve_5"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_4",
+          "kind": "line",
+          "z": 149,
+          "points": [
+            [
+              57.125,
+              117.5
+            ],
+            [
+              51.125,
+              140.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_2",
+            "render_curve_3",
+            "render_curve_5",
+            "render_curve_6"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_5",
+          "kind": "line",
+          "z": 150,
+          "points": [
+            [
+              51.125,
+              140.5
+            ],
+            [
+              50.875,
+              143.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_3",
+            "render_curve_4",
+            "render_curve_6",
+            "render_curve_7"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_6",
+          "kind": "line",
+          "z": 151,
+          "points": [
+            [
+              50.875,
+              143.5
+            ],
+            [
+              50.125,
+              145.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_4",
+            "render_curve_5",
+            "render_curve_7",
+            "render_curve_8"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_7",
+          "kind": "line",
+          "z": 152,
+          "points": [
+            [
+              50.125,
+              145.5
+            ],
+            [
+              48.875,
+              153.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_5",
+            "render_curve_6",
+            "render_curve_8",
+            "render_curve_9"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_8",
+          "kind": "line",
+          "z": 153,
+          "points": [
+            [
+              48.875,
+              153.5
+            ],
+            [
+              48.125,
+              155.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_6",
+            "render_curve_7",
+            "render_curve_9",
+            "render_curve_10"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_9",
+          "kind": "line",
+          "z": 154,
+          "points": [
+            [
+              48.125,
+              155.5
+            ],
+            [
+              46.125,
+              167.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_7",
+            "render_curve_8",
+            "render_curve_10",
+            "render_curve_11"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_10",
+          "kind": "line",
+          "z": 155,
+          "points": [
+            [
+              46.125,
+              167.5
+            ],
+            [
+              45.875,
+              171.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_8",
+            "render_curve_9",
+            "render_curve_11",
+            "render_curve_12"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_11",
+          "kind": "line",
+          "z": 156,
+          "points": [
+            [
+              45.875,
+              171.5
+            ],
+            [
+              44.125,
+              181.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_9",
+            "render_curve_10",
+            "render_curve_12",
+            "render_curve_13"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_12",
+          "kind": "line",
+          "z": 157,
+          "points": [
+            [
+              44.125,
+              181.5
+            ],
+            [
+              44.0,
+              185.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_10",
+            "render_curve_11",
+            "render_curve_13",
+            "render_curve_14"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_13",
+          "kind": "line",
+          "z": 158,
+          "points": [
+            [
+              44.0,
+              185.5
+            ],
+            [
+              43.125,
+              189.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_11",
+            "render_curve_12",
+            "render_curve_14",
+            "render_curve_15"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_14",
+          "kind": "line",
+          "z": 159,
+          "points": [
+            [
+              43.125,
+              189.5
+            ],
+            [
+              43.0,
+              193.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_12",
+            "render_curve_13",
+            "render_curve_15",
+            "render_curve_16"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_15",
+          "kind": "line",
+          "z": 160,
+          "points": [
+            [
+              43.0,
+              193.5
+            ],
+            [
+              42.0,
+              199.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_13",
+            "render_curve_14",
+            "render_curve_16",
+            "render_curve_17"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_16",
+          "kind": "line",
+          "z": 161,
+          "points": [
+            [
+              42.0,
+              199.5
+            ],
+            [
+              42.0,
+              204.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_14",
+            "render_curve_15",
+            "render_curve_17",
+            "render_curve_18"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_17",
+          "kind": "line",
+          "z": 162,
+          "points": [
+            [
+              42.0,
+              204.5
+            ],
+            [
+              41.0,
+              210.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_15",
+            "render_curve_16",
+            "render_curve_18",
+            "render_curve_19"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_18",
+          "kind": "line",
+          "z": 163,
+          "points": [
+            [
+              41.0,
+              210.5
+            ],
+            [
+              41.0,
+              217.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_16",
+            "render_curve_17",
+            "render_curve_19",
+            "render_curve_20"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_19",
+          "kind": "line",
+          "z": 164,
+          "points": [
+            [
+              41.0,
+              217.5
+            ],
+            [
+              40.0,
+              224.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_17",
+            "render_curve_18",
+            "render_curve_20",
+            "render_curve_21"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_20",
+          "kind": "line",
+          "z": 165,
+          "points": [
+            [
+              40.0,
+              224.5
+            ],
+            [
+              40.0,
+              238.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_18",
+            "render_curve_19",
+            "render_curve_21",
+            "render_curve_22"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_21",
+          "kind": "line",
+          "z": 166,
+          "points": [
+            [
+              40.0,
+              238.5
+            ],
+            [
+              39.5,
+              241.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_19",
+            "render_curve_20",
+            "render_curve_22",
+            "render_curve_23"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_22",
+          "kind": "line",
+          "z": 167,
+          "points": [
+            [
+              39.5,
+              241.5
+            ],
+            [
+              39.5,
+              253.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_20",
+            "render_curve_21",
+            "render_curve_23",
+            "render_curve_24"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_23",
+          "kind": "line",
+          "z": 168,
+          "points": [
+            [
+              39.5,
+              253.5
+            ],
+            [
+              39.125,
+              255.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_21",
+            "render_curve_22",
+            "render_curve_24",
+            "render_curve_25"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_24",
+          "kind": "line",
+          "z": 169,
+          "points": [
+            [
+              39.125,
+              255.5
+            ],
+            [
+              39.5,
+              258.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_22",
+            "render_curve_23",
+            "render_curve_25",
+            "render_curve_26"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_25",
+          "kind": "line",
+          "z": 170,
+          "points": [
+            [
+              39.5,
+              258.5
+            ],
+            [
+              39.5,
+              268.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_23",
+            "render_curve_24",
+            "render_curve_26",
+            "render_curve_27"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_26",
+          "kind": "line",
+          "z": 171,
+          "points": [
+            [
+              39.5,
+              268.5
+            ],
+            [
+              40.0,
+              271.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_24",
+            "render_curve_25",
+            "render_curve_27",
+            "render_curve_28"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_27",
+          "kind": "line",
+          "z": 172,
+          "points": [
+            [
+              40.0,
+              271.5
+            ],
+            [
+              40.0,
+              287.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_25",
+            "render_curve_26",
+            "render_curve_28",
+            "render_curve_29"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_28",
+          "kind": "line",
+          "z": 173,
+          "points": [
+            [
+              40.0,
+              287.5
+            ],
+            [
+              41.0,
+              294.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_26",
+            "render_curve_27",
+            "render_curve_29",
+            "render_curve_30"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_29",
+          "kind": "line",
+          "z": 174,
+          "points": [
+            [
+              41.0,
+              294.5
+            ],
+            [
+              41.0,
+              301.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_27",
+            "render_curve_28",
+            "render_curve_30",
+            "render_curve_31"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_30",
+          "kind": "line",
+          "z": 175,
+          "points": [
+            [
+              41.0,
+              301.5
+            ],
+            [
+              42.0,
+              307.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_28",
+            "render_curve_29",
+            "render_curve_31",
+            "render_curve_32"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_31",
+          "kind": "line",
+          "z": 176,
+          "points": [
+            [
+              42.0,
+              307.5
+            ],
+            [
+              42.0,
+              312.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_29",
+            "render_curve_30",
+            "render_curve_32",
+            "render_curve_33"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_32",
+          "kind": "line",
+          "z": 177,
+          "points": [
+            [
+              42.0,
+              312.5
+            ],
+            [
+              43.0,
+              317.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_30",
+            "render_curve_31",
+            "render_curve_33",
+            "render_curve_34"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_33",
+          "kind": "line",
+          "z": 178,
+          "points": [
+            [
+              43.0,
+              317.5
+            ],
+            [
+              43.0,
+              321.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_31",
+            "render_curve_32",
+            "render_curve_34",
+            "render_curve_35"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_34",
+          "kind": "line",
+          "z": 179,
+          "points": [
+            [
+              43.0,
+              321.5
+            ],
+            [
+              43.875,
+              325.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_32",
+            "render_curve_33",
+            "render_curve_35",
+            "render_curve_36"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_35",
+          "kind": "line",
+          "z": 180,
+          "points": [
+            [
+              43.875,
+              325.5
+            ],
+            [
+              44.125,
+              330.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_33",
+            "render_curve_34",
+            "render_curve_36",
+            "render_curve_37"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_36",
+          "kind": "line",
+          "z": 181,
+          "points": [
+            [
+              44.125,
+              330.5
+            ],
+            [
+              44.875,
+              333.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_34",
+            "render_curve_35",
+            "render_curve_37",
+            "render_curve_38"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_37",
+          "kind": "line",
+          "z": 182,
+          "points": [
+            [
+              44.875,
+              333.5
+            ],
+            [
+              45.125,
+              337.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_35",
+            "render_curve_36",
+            "render_curve_38",
+            "render_curve_39"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_38",
+          "kind": "line",
+          "z": 183,
+          "points": [
+            [
+              45.125,
+              337.5
+            ],
+            [
+              45.875,
+              340.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_36",
+            "render_curve_37",
+            "render_curve_39",
+            "render_curve_40"
+          ],
+          "overlap_reason": "Neighboring segments form the same inspected source curve; other objects are not exempted."
+        },
+        {
+          "id": "render_curve_39",
+          "kind": "line",
+          "z": 184,
+          "points": [
+            [
+              45.875,
+              340.5
+            ],
+            [
+              47.125,
+              350.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_37",
+            "render_curve_38",
+            "render_curve_40",
+            "render_curve_41",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background."
+        },
+        {
+          "id": "render_curve_40",
+          "kind": "line",
+          "z": 185,
+          "points": [
+            [
+              47.125,
+              350.5
+            ],
+            [
+              47.875,
+              352.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_38",
+            "render_curve_39",
+            "render_curve_41",
+            "render_curve_42",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background."
+        },
+        {
+          "id": "render_curve_41",
+          "kind": "line",
+          "z": 186,
+          "points": [
+            [
+              47.875,
+              352.5
+            ],
+            [
+              49.125,
+              361.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_39",
+            "render_curve_40",
+            "render_curve_42",
+            "render_curve_43",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background."
+        },
+        {
+          "id": "render_curve_42",
+          "kind": "line",
+          "z": 187,
+          "points": [
+            [
+              49.125,
+              361.5
+            ],
+            [
+              49.875,
+              363.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_40",
+            "render_curve_41",
+            "render_curve_43",
+            "render_curve_44",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background."
+        },
+        {
+          "id": "render_curve_43",
+          "kind": "line",
+          "z": 188,
+          "points": [
+            [
+              49.875,
+              363.5
+            ],
+            [
+              50.125,
+              366.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_41",
+            "render_curve_42",
+            "render_curve_44",
+            "render_curve_45",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background."
+        },
+        {
+          "id": "render_curve_44",
+          "kind": "line",
+          "z": 189,
+          "points": [
+            [
+              50.125,
+              366.5
+            ],
+            [
+              50.875,
+              368.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_42",
+            "render_curve_43",
+            "render_curve_45",
+            "render_curve_46",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background."
+        },
+        {
+          "id": "render_curve_45",
+          "kind": "line",
+          "z": 190,
+          "points": [
+            [
+              50.875,
+              368.5
+            ],
+            [
+              52.125,
+              375.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_43",
+            "render_curve_44",
+            "render_curve_46",
+            "render_curve_47",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background."
+        },
+        {
+          "id": "render_curve_46",
+          "kind": "line",
+          "z": 191,
+          "points": [
+            [
+              52.125,
+              375.5
+            ],
+            [
+              57.125,
+              394.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_44",
+            "render_curve_45",
+            "render_curve_47",
+            "render_curve_48",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background."
+        },
+        {
+          "id": "render_curve_47",
+          "kind": "line",
+          "z": 192,
+          "points": [
+            [
+              57.125,
+              394.5
+            ],
+            [
+              62.125,
+              409.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_45",
+            "render_curve_46",
+            "render_curve_48",
+            "render_curve_49",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background."
+        },
+        {
+          "id": "render_curve_48",
+          "kind": "line",
+          "z": 193,
+          "points": [
+            [
+              62.125,
+              409.5
+            ],
+            [
+              64.5,
+              415.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_46",
+            "render_curve_47",
+            "render_curve_49",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background."
+        },
+        {
+          "id": "render_curve_49",
+          "kind": "line",
+          "z": 194,
+          "points": [
+            [
+              64.5,
+              415.5
+            ],
+            [
+              70.3333,
+              427.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "render_curve_47",
+            "render_curve_48",
+            "render_head",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background."
+        },
+        {
+          "id": "render_head",
+          "kind": "line",
+          "z": 195,
+          "points": [
+            [
+              70.3333,
+              427.5
+            ],
+            [
+              85,
+              440
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 12,
+            "width": 12
+          },
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source rendering curve enters the multi-view card at the rendered-motion input, above the card background."
+        },
+        {
+          "id": "merge_top_0",
+          "kind": "line",
+          "z": 196,
+          "points": [
+            [
+              679.6667,
+              268.5
+            ],
+            [
+              680.75,
+              269.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_top_1",
+            "merge_top_2",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_top_1",
+          "kind": "line",
+          "z": 197,
+          "points": [
+            [
+              680.75,
+              269.5
+            ],
+            [
+              688.75,
+              273.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_top_0",
+            "merge_top_2",
+            "merge_top_3",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_top_2",
+          "kind": "line",
+          "z": 198,
+          "points": [
+            [
+              688.75,
+              273.5
+            ],
+            [
+              692.0,
+              276.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_top_0",
+            "merge_top_1",
+            "merge_top_3",
+            "merge_top_4",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_top_3",
+          "kind": "line",
+          "z": 199,
+          "points": [
+            [
+              692.0,
+              276.5
+            ],
+            [
+              696.375,
+              281.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_top_1",
+            "merge_top_2",
+            "merge_top_4",
+            "merge_top_5",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_top_4",
+          "kind": "line",
+          "z": 200,
+          "points": [
+            [
+              696.375,
+              281.5
+            ],
+            [
+              702.0,
+              290.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_top_2",
+            "merge_top_3",
+            "merge_top_5",
+            "merge_top_6",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_top_5",
+          "kind": "line",
+          "z": 201,
+          "points": [
+            [
+              702.0,
+              290.5
+            ],
+            [
+              706.5,
+              300.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_top_3",
+            "merge_top_4",
+            "merge_top_6",
+            "merge_top_7",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_top_6",
+          "kind": "line",
+          "z": 202,
+          "points": [
+            [
+              706.5,
+              300.5
+            ],
+            [
+              708.875,
+              307.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_top_4",
+            "merge_top_5",
+            "merge_top_7",
+            "merge_top_8",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_top_7",
+          "kind": "line",
+          "z": 203,
+          "points": [
+            [
+              708.875,
+              307.5
+            ],
+            [
+              712.875,
+              324.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_top_5",
+            "merge_top_6",
+            "merge_top_8",
+            "merge_top_9",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_top_8",
+          "kind": "line",
+          "z": 204,
+          "points": [
+            [
+              712.875,
+              324.5
+            ],
+            [
+              713.0,
+              328.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_top_6",
+            "merge_top_7",
+            "merge_top_9",
+            "merge_top_10",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_top_9",
+          "kind": "line",
+          "z": 205,
+          "points": [
+            [
+              713.0,
+              328.5
+            ],
+            [
+              714.0,
+              333.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_top_7",
+            "merge_top_8",
+            "merge_top_10",
+            "merge_top_11",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_top_10",
+          "kind": "line",
+          "z": 206,
+          "points": [
+            [
+              714.0,
+              333.5
+            ],
+            [
+              714.0,
+              348.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_top_8",
+            "merge_top_9",
+            "merge_top_11",
+            "merge_top_12",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_top_11",
+          "kind": "line",
+          "z": 207,
+          "points": [
+            [
+              714.0,
+              348.5
+            ],
+            [
+              715.0,
+              355.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_top_9",
+            "merge_top_10",
+            "merge_top_12",
+            "merge_top_13",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_top_12",
+          "kind": "line",
+          "z": 208,
+          "points": [
+            [
+              715.0,
+              355.5
+            ],
+            [
+              715.125,
+              359.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_top_10",
+            "merge_top_11",
+            "merge_top_13",
+            "merge_top_14",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_top_13",
+          "kind": "line",
+          "z": 209,
+          "points": [
+            [
+              715.125,
+              359.5
+            ],
+            [
+              717.125,
+              369.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_top_11",
+            "merge_top_12",
+            "merge_top_14",
+            "merge_top_15",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_top_14",
+          "kind": "line",
+          "z": 210,
+          "points": [
+            [
+              717.125,
+              369.5
+            ],
+            [
+              722.0,
+              385.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_top_12",
+            "merge_top_13",
+            "merge_top_15",
+            "merge_top_16",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_top_15",
+          "kind": "line",
+          "z": 211,
+          "points": [
+            [
+              722.0,
+              385.5
+            ],
+            [
+              726.0,
+              394.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_top_13",
+            "merge_top_14",
+            "merge_top_16",
+            "views_front",
+            "views_rear",
+            "merge_top_head"
+          ],
+          "overlap_reason": "Traced curve joins its visible source arrowhead at the end."
+        },
+        {
+          "id": "merge_top_16",
+          "kind": "line",
+          "z": 212,
+          "points": [
+            [
+              726.0,
+              394.5
+            ],
+            [
+              731.3333,
+              403.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_top_14",
+            "merge_top_15",
+            "views_front",
+            "views_rear",
+            "merge_top_head"
+          ],
+          "overlap_reason": "Traced curve joins its visible source arrowhead at the end."
+        },
+        {
+          "id": "merge_top_head",
+          "kind": "line",
+          "z": 213,
+          "points": [
+            [
+              731.3333,
+              403.5
+            ],
+            [
+              749,
+              416
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 12,
+            "width": 12
+          },
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_bottom_0",
+          "kind": "line",
+          "z": 214,
+          "points": [
+            [
+              729.1667,
+              483.5
+            ],
+            [
+              726.75,
+              487.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_1",
+            "merge_bottom_2",
+            "views_front",
+            "views_rear",
+            "merge_bottom_head"
+          ],
+          "overlap_reason": "Traced curve joins its visible source arrowhead at the end."
+        },
+        {
+          "id": "merge_bottom_1",
+          "kind": "line",
+          "z": 215,
+          "points": [
+            [
+              726.75,
+              487.5
+            ],
+            [
+              722.0,
+              497.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_0",
+            "merge_bottom_2",
+            "merge_bottom_3",
+            "views_front",
+            "views_rear",
+            "merge_bottom_head"
+          ],
+          "overlap_reason": "Traced curve joins its visible source arrowhead at the end."
+        },
+        {
+          "id": "merge_bottom_2",
+          "kind": "line",
+          "z": 216,
+          "points": [
+            [
+              722.0,
+              497.5
+            ],
+            [
+              719.125,
+              505.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_0",
+            "merge_bottom_1",
+            "merge_bottom_3",
+            "merge_bottom_4",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_bottom_3",
+          "kind": "line",
+          "z": 217,
+          "points": [
+            [
+              719.125,
+              505.5
+            ],
+            [
+              716.125,
+              516.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_1",
+            "merge_bottom_2",
+            "merge_bottom_4",
+            "merge_bottom_5",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_bottom_4",
+          "kind": "line",
+          "z": 218,
+          "points": [
+            [
+              716.125,
+              516.5
+            ],
+            [
+              714.125,
+              527.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_2",
+            "merge_bottom_3",
+            "merge_bottom_5",
+            "merge_bottom_6",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_bottom_5",
+          "kind": "line",
+          "z": 219,
+          "points": [
+            [
+              714.125,
+              527.5
+            ],
+            [
+              714.0,
+              531.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_3",
+            "merge_bottom_4",
+            "merge_bottom_6",
+            "merge_bottom_7",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_bottom_6",
+          "kind": "line",
+          "z": 220,
+          "points": [
+            [
+              714.0,
+              531.5
+            ],
+            [
+              713.0,
+              537.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_4",
+            "merge_bottom_5",
+            "merge_bottom_7",
+            "merge_bottom_8",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_bottom_7",
+          "kind": "line",
+          "z": 221,
+          "points": [
+            [
+              713.0,
+              537.5
+            ],
+            [
+              713.0,
+              553.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_5",
+            "merge_bottom_6",
+            "merge_bottom_8",
+            "merge_bottom_9",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_bottom_8",
+          "kind": "line",
+          "z": 222,
+          "points": [
+            [
+              713.0,
+              553.5
+            ],
+            [
+              712.0,
+              559.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_6",
+            "merge_bottom_7",
+            "merge_bottom_9",
+            "merge_bottom_10",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_bottom_9",
+          "kind": "line",
+          "z": 223,
+          "points": [
+            [
+              712.0,
+              559.5
+            ],
+            [
+              711.875,
+              563.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_7",
+            "merge_bottom_8",
+            "merge_bottom_10",
+            "merge_bottom_11",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_bottom_10",
+          "kind": "line",
+          "z": 224,
+          "points": [
+            [
+              711.875,
+              563.5
+            ],
+            [
+              708.875,
+              578.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_8",
+            "merge_bottom_9",
+            "merge_bottom_11",
+            "merge_bottom_12",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_bottom_11",
+          "kind": "line",
+          "z": 225,
+          "points": [
+            [
+              708.875,
+              578.5
+            ],
+            [
+              705.375,
+              589.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_9",
+            "merge_bottom_10",
+            "merge_bottom_12",
+            "merge_bottom_13",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_bottom_12",
+          "kind": "line",
+          "z": 226,
+          "points": [
+            [
+              705.375,
+              589.5
+            ],
+            [
+              703.5,
+              594.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_10",
+            "merge_bottom_11",
+            "merge_bottom_13",
+            "merge_bottom_14",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_bottom_13",
+          "kind": "line",
+          "z": 227,
+          "points": [
+            [
+              703.5,
+              594.5
+            ],
+            [
+              698.0,
+              605.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_11",
+            "merge_bottom_12",
+            "merge_bottom_14",
+            "merge_bottom_15",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_bottom_14",
+          "kind": "line",
+          "z": 228,
+          "points": [
+            [
+              698.0,
+              605.5
+            ],
+            [
+              692.5,
+              613.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_12",
+            "merge_bottom_13",
+            "merge_bottom_15",
+            "merge_bottom_16",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_bottom_15",
+          "kind": "line",
+          "z": 229,
+          "points": [
+            [
+              692.5,
+              613.5
+            ],
+            [
+              686.875,
+              618.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_13",
+            "merge_bottom_14",
+            "merge_bottom_16",
+            "merge_bottom_17",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_bottom_16",
+          "kind": "line",
+          "z": 230,
+          "points": [
+            [
+              686.875,
+              618.5
+            ],
+            [
+              681.375,
+              621.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_14",
+            "merge_bottom_15",
+            "merge_bottom_17",
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        },
+        {
+          "id": "merge_bottom_17",
+          "kind": "line",
+          "z": 231,
+          "points": [
+            [
+              681.375,
+              621.5
+            ],
+            [
+              678.6667,
+              623.5
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3.0,
+          "line_cap": "round",
+          "allow_overlap_with": [
+            "merge_bottom_15",
+            "merge_bottom_16",
+            "views_front",
+            "views_rear",
+            "scene_tokens_5"
+          ],
+          "overlap_reason": "Source curve starts at middle-right token edge; expanded round cap touches that specific token."
+        },
+        {
+          "id": "merge_bottom_head",
+          "kind": "line",
+          "z": 232,
+          "points": [
+            [
+              729.1667,
+              483.5
+            ],
+            [
+              749,
+              468
+            ]
+          ],
+          "stroke": "#808080",
+          "stroke_width": 3,
+          "arrow": true,
+          "arrow_head": {
+            "length": 12,
+            "width": 12
+          },
+          "allow_overlap_with": [
+            "views_front",
+            "views_rear"
+          ],
+          "overlap_reason": "Source content sits on or spans the two visible multi-view cards; source coordinates and z-order retained."
+        }
+      ],
+      "groups": [
+        {
+          "id": "group_encoder_group",
+          "members": [
+            "encoder",
+            "encoder_label"
+          ],
+          "description": "Keep the module background and its complete label together when moving/resizing."
+        },
+        {
+          "id": "group_trajectory_projector_group",
+          "members": [
+            "trajectory_projector",
+            "trajectory_projector_label"
+          ],
+          "description": "Keep the module background and its complete label together when moving/resizing."
+        },
+        {
+          "id": "group_text_encoder_group",
+          "members": [
+            "text_encoder",
+            "text_encoder_label"
+          ],
+          "description": "Keep the module background and its complete label together when moving/resizing."
+        },
+        {
+          "id": "group_concat_group",
+          "members": [
+            "concat",
+            "concat_label"
+          ],
+          "description": "Keep the module background and its complete label together when moving/resizing."
+        },
+        {
+          "id": "group_mlp_group",
+          "members": [
+            "mlp",
+            "mlp_label"
+          ],
+          "description": "Keep the module background and its complete label together when moving/resizing."
+        },
+        {
+          "id": "group_dit_group",
+          "members": [
+            "dit",
+            "dit_label"
+          ],
+          "description": "Keep the module background and its complete label together when moving/resizing."
+        },
+        {
+          "id": "group_decoder_group",
+          "members": [
+            "decoder",
+            "decoder_label"
+          ],
+          "description": "Keep the module background and its complete label together when moving/resizing."
+        },
+        {
+          "id": "group_noise_input",
+          "members": [
+            "noise",
+            "noise_label"
+          ],
+          "description": "Photo/illustration and complete readable label form one input/output unit."
+        },
+        {
+          "id": "group_motion_input",
+          "members": [
+            "motion",
+            "motion_label"
+          ],
+          "description": "Photo/illustration and complete readable label form one input/output unit."
+        },
+        {
+          "id": "group_scene_input",
+          "members": [
+            "scene",
+            "scene_label"
+          ],
+          "description": "Photo/illustration and complete readable label form one input/output unit."
+        },
+        {
+          "id": "group_object_input",
+          "members": [
+            "object",
+            "object_label"
+          ],
+          "description": "Photo/illustration and complete readable label form one input/output unit."
+        },
+        {
+          "id": "group_generated_input",
+          "members": [
+            "generated",
+            "generated_label"
+          ],
+          "description": "Photo/illustration and complete readable label form one input/output unit."
+        },
+        {
+          "id": "group_noise_tokens",
+          "members": [
+            "noise_tokens_0",
+            "noise_tokens_1",
+            "noise_tokens_2",
+            "noise_tokens_3",
+            "noise_tokens_4",
+            "noise_tokens_5",
+            "noise_tokens_6",
+            "noise_tokens_7",
+            "noise_tokens_8"
+          ],
+          "description": "One 3×3 token grid: move/recolor as a semantic tensor while retaining editable cells."
+        },
+        {
+          "id": "group_motion_tokens",
+          "members": [
+            "motion_tokens_0",
+            "motion_tokens_1",
+            "motion_tokens_2",
+            "motion_tokens_3",
+            "motion_tokens_4",
+            "motion_tokens_5",
+            "motion_tokens_6",
+            "motion_tokens_7",
+            "motion_tokens_8"
+          ],
+          "description": "One 3×3 token grid: move/recolor as a semantic tensor while retaining editable cells."
+        },
+        {
+          "id": "group_scene_tokens",
+          "members": [
+            "scene_tokens_0",
+            "scene_tokens_1",
+            "scene_tokens_2",
+            "scene_tokens_3",
+            "scene_tokens_4",
+            "scene_tokens_5",
+            "scene_tokens_6",
+            "scene_tokens_7",
+            "scene_tokens_8"
+          ],
+          "description": "One 3×3 token grid: move/recolor as a semantic tensor while retaining editable cells."
+        },
+        {
+          "id": "group_object_tokens",
+          "members": [
+            "object_tokens_0",
+            "object_tokens_1",
+            "object_tokens_2",
+            "object_tokens_3",
+            "object_tokens_4",
+            "object_tokens_5",
+            "object_tokens_6",
+            "object_tokens_7",
+            "object_tokens_8"
+          ],
+          "description": "One 3×3 token grid: move/recolor as a semantic tensor while retaining editable cells."
+        },
+        {
+          "id": "group_encoded_tokens",
+          "members": [
+            "encoded_token_0",
+            "encoded_token_1",
+            "encoded_token_2",
+            "encoded_token_3",
+            "encoded_token_4",
+            "encoded_token_5",
+            "encoded_token_6",
+            "encoded_token_7",
+            "encoded_token_8"
+          ],
+          "description": "Whole token column should be moved together; each gradient token remains individually editable."
+        },
+        {
+          "id": "group_decoded_tokens",
+          "members": [
+            "decoded_token_0",
+            "decoded_token_1",
+            "decoded_token_2",
+            "decoded_token_3",
+            "decoded_token_4",
+            "decoded_token_5",
+            "decoded_token_6",
+            "decoded_token_7",
+            "decoded_token_8"
+          ],
+          "description": "Whole token column should be moved together; each gradient token remains individually editable."
+        },
+        {
+          "id": "group_trajectory_curve",
+          "members": [
+            "trajectory_curve_0",
+            "trajectory_curve_1",
+            "trajectory_curve_2",
+            "trajectory_curve_3",
+            "trajectory_curve_4",
+            "trajectory_curve_5",
+            "trajectory_curve_6",
+            "trajectory_curve_7",
+            "trajectory_curve_8",
+            "trajectory_curve_9",
+            "trajectory_curve_10",
+            "trajectory_curve_11",
+            "trajectory_curve_12",
+            "trajectory_curve_13",
+            "trajectory_curve_14",
+            "trajectory_curve_15",
+            "trajectory_curve_16",
+            "trajectory_curve_17",
+            "trajectory_curve_18",
+            "trajectory_curve_19",
+            "trajectory_curve_20",
+            "trajectory_curve_21",
+            "trajectory_curve_22",
+            "trajectory_curve_23",
+            "trajectory_curve_24",
+            "trajectory_curve_25",
+            "trajectory_curve_26",
+            "trajectory_curve_27",
+            "trajectory_head"
+          ],
+          "description": "Traced single continuous curve is fragmented into native line segments; group is essential for practical editing."
+        },
+        {
+          "id": "group_render_curve",
+          "members": [
+            "render_curve_0",
+            "render_curve_1",
+            "render_curve_2",
+            "render_curve_3",
+            "render_curve_4",
+            "render_curve_5",
+            "render_curve_6",
+            "render_curve_7",
+            "render_curve_8",
+            "render_curve_9",
+            "render_curve_10",
+            "render_curve_11",
+            "render_curve_12",
+            "render_curve_13",
+            "render_curve_14",
+            "render_curve_15",
+            "render_curve_16",
+            "render_curve_17",
+            "render_curve_18",
+            "render_curve_19",
+            "render_curve_20",
+            "render_curve_21",
+            "render_curve_22",
+            "render_curve_23",
+            "render_curve_24",
+            "render_curve_25",
+            "render_curve_26",
+            "render_curve_27",
+            "render_curve_28",
+            "render_curve_29",
+            "render_curve_30",
+            "render_curve_31",
+            "render_curve_32",
+            "render_curve_33",
+            "render_curve_34",
+            "render_curve_35",
+            "render_curve_36",
+            "render_curve_37",
+            "render_curve_38",
+            "render_curve_39",
+            "render_curve_40",
+            "render_curve_41",
+            "render_curve_42",
+            "render_curve_43",
+            "render_curve_44",
+            "render_curve_45",
+            "render_curve_46",
+            "render_curve_47",
+            "render_curve_48",
+            "render_curve_49",
+            "render_head",
+            "render_start_0",
+            "render_start_1"
+          ],
+          "description": "Traced single continuous curve is fragmented into native line segments; group is essential for practical editing."
+        },
+        {
+          "id": "group_merge_top_curve",
+          "members": [
+            "merge_top_0",
+            "merge_top_1",
+            "merge_top_2",
+            "merge_top_3",
+            "merge_top_4",
+            "merge_top_5",
+            "merge_top_6",
+            "merge_top_7",
+            "merge_top_8",
+            "merge_top_9",
+            "merge_top_10",
+            "merge_top_11",
+            "merge_top_12",
+            "merge_top_13",
+            "merge_top_14",
+            "merge_top_15",
+            "merge_top_16",
+            "merge_top_head"
+          ],
+          "description": "Traced single continuous curve is fragmented into native line segments; group is essential for practical editing."
+        },
+        {
+          "id": "group_merge_bottom_curve",
+          "members": [
+            "merge_bottom_0",
+            "merge_bottom_1",
+            "merge_bottom_2",
+            "merge_bottom_3",
+            "merge_bottom_4",
+            "merge_bottom_5",
+            "merge_bottom_6",
+            "merge_bottom_7",
+            "merge_bottom_8",
+            "merge_bottom_9",
+            "merge_bottom_10",
+            "merge_bottom_11",
+            "merge_bottom_12",
+            "merge_bottom_13",
+            "merge_bottom_14",
+            "merge_bottom_15",
+            "merge_bottom_16",
+            "merge_bottom_17",
+            "merge_bottom_head"
+          ],
+          "description": "Traced single continuous curve is fragmented into native line segments; group is essential for practical editing."
+        },
+        {
+          "id": "group_instruction_unit",
+          "members": [
+            "instruction_bg",
+            "instruction",
+            "instruction_label"
+          ],
+          "description": "Move task prompt and caption as one unit; prompt remains two semantic lines in one textbox."
+        },
+        {
+          "id": "group_trajectory_input",
+          "members": [
+            "trajectory_frame",
+            "trajectory_label",
+            "group_trajectory_curve"
+          ],
+          "description": "Robot trajectory icon combines frame, curve and label; use parent group with nested curve group when supported."
+        },
+        {
+          "id": "group_trajectory_condition",
+          "members": [
+            "trajectory_token_bg",
+            "trajectory_token1",
+            "trajectory_token2"
+          ],
+          "description": "Trajectory conditioning token row."
+        },
+        {
+          "id": "group_text_condition",
+          "members": [
+            "text_token_bg",
+            "text_token1",
+            "text_token2"
+          ],
+          "description": "Text conditioning token row."
+        },
+        {
+          "id": "group_object_encoded",
+          "members": [
+            "object_encoded_0",
+            "object_encoded_1"
+          ],
+          "description": "Object conditioning token pair."
+        }
+      ]
+    }
+  ]
+}

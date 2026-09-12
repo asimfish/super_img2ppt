@@ -1,0 +1,14 @@
+import json,os,re,subprocess,shutil
+from pathlib import Path
+root=Path.cwd();work=Path('output/atomic_gallery_20260912/smoke_root.txt').read_text();work=Path(work)
+env=dict(os.environ,PATH='/opt/homebrew/bin:'+os.environ['PATH'],PYTHONPATH=str(work/'super-img2ppt/src'));python=str(root/'.venv/bin/python');logs=[]
+def run(args):
+ p=subprocess.run([python,'-m','super_img2ppt',*args],cwd=work,env=env,capture_output=True,text=True);logs.append({'args':args,'exit':p.returncode,'stdout':p.stdout,'stderr':p.stderr});assert p.returncode==0,logs[-1]
+spec=json.loads(re.search(r'```json\n(.*?)\n```',(work/'super-img2ppt/references/diagonal_text.md').read_text(),re.S).group(1));spec['z']=2;spec['container']='encoder_body'
+(work/'formula.json').write_text(json.dumps(spec));run(['compose-math','formula.json','--out','formula','--font-dir','/System/Library/Fonts/Supplemental'])
+elements=[{'id':'encoder_body','kind':'shape','z':0,'box':[990,45,220,155],'shape':'rect','fill':'#DBEAFE'},{'id':'encoder_label','kind':'text','z':1,'box':[1000,55,190,35],'font_size':20,'font_family':'Arial','text':'Encoder','container':'encoder_body'}]+json.loads((work/'formula/elements.json').read_text());groups=json.loads((work/'formula/groups.json').read_text());groups.append({'id':'encoder','members':['encoder_body','encoder_label',groups[0]['id']]})
+scene={'version':1,'slides':[{'id':'page_001','width':1400,'height':625,'reviewed':True,'elements':elements,'groups':groups}]};(work/'scene.json').write_text(json.dumps(scene));run(['build','scene.json','--out','build','--font-dir','/System/Library/Fonts/Supplemental'])
+validation=json.loads((work/'build/validation.json').read_text());manifest=json.loads((work/'build/editability.json').read_text());assert validation['automated_checks']['native_objects']['status']=='pass';assert manifest['slides'][0]['top_level_selectable_objects']==1;assert len(manifest['slides'][0]['groups'])==2
+out=root/'docs/evidence/atomic_editing/package_smoke';out.mkdir(parents=True,exist_ok=True)
+for f in ['editability.json','validation.json','editable.pptx']:shutil.copy2(work/'build'/f,out/f)
+shutil.copy2(work/'import.txt',out/'import.txt');(out/'commands.json').write_text(json.dumps(logs,indent=2)+'\n');(out/'result.json').write_text(json.dumps({'status':'pass','version':'0.3.7','isolated_import_verified':True,'group_count':2,'top_level_selectable_objects':1,'validation':validation['status']},indent=2)+'\n');print('PASS',validation['status'])

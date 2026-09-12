@@ -1,0 +1,13 @@
+import json,pypdfium2 as pdf
+from pathlib import Path
+r=Path(__file__).parent;result={};pages={b:pdf.PdfDocument(r/b/'render/editable.pdf')[0] for b in ['build_05_grouped','build_08_all_merged']}
+for c in json.loads((r/'merge_all_changes.json').read_text()):
+ name=c['new']['id'];texts=c['new']['text'].split('\n');vals=[]
+ for b,p in pages.items():
+  tp=p.get_textpage();st=tp.get_text_range();needle='\r\n'.join(texts);i=st.find(needle);assert i>=0,(name,needle,st)
+  boxes=[];k=i
+  for t in texts:boxes.append(list(tp.get_charbox(k)));k+=len(t)+2
+  vals.append(boxes)
+ scale=1891/pages['build_05_grouped'].get_width();ds=[(old[3]-new[3])*scale for old,new in zip(*vals)]
+ result[name]={'first_char_boxes_old_actual_pdf':vals[0],'first_char_boxes_merged_actual_pdf':vals[1],'line_y_delta_source_px':ds,'proposed_box_y_correction':-ds[0],'all_lines_same_shift':max(ds)-min(ds)<.03}
+(r/'merge_all_baseline_audit.json').write_text(json.dumps(result,indent=2));print(json.dumps({n:{k:v for k,v in d.items() if k not in ['first_char_boxes_old_actual_pdf','first_char_boxes_merged_actual_pdf']} for n,d in result.items()},indent=2))

@@ -61,6 +61,11 @@ installed working tool with a command-local PATH; do not alter global settings o
    For formulas, read [math.md](references/math.md): preserve per-symbol styles and script
    baselines; `compose-math` emits measured native parts from explicit source offsets.
    For angled table headers and formulas, see [diagonal_text.md](references/diagonal_text.md).
+   For later editing, read [editing.md](references/editing.md): keep full labels in one text
+   box/runs where possible; group formula parts, each curve and each semantic module in
+   native slide `groups`. `container` alone does not create an editable group. Helpers emit
+   `groups.json` beside elements; merge both and preserve paint order. Do not split ordinary
+   words into glyph objects or combine an entire complex page into one top-level group.
    Split independent assets out of the source using exact crops when appropriate.
    Store approved assets under the job directory. Do not regenerate logos, invent chart data,
    or put editable text over baked text. Never reuse the entire source as a fake reconstruction.
@@ -146,7 +151,9 @@ evidence alone must not be presented as native PowerPoint/WPS verification.
 ## Deliver
 
 Return links to `editable.pptx`, `svg/`, `scene.resolved.json`, `fonts.json`, and
-`validation.json`, plus representative real previews. State which regions remain raster,
-which fonts changed, and what was actually checked. `scene.resolved.json` plus `assets/` can be
+`validation.json`, and `editability.json`, plus representative real previews. State which regions remain raster,
+which fonts changed, and what was actually checked. On a duplicate of a complex result,
+move a representative group and edit a child label; check that the intended children move
+and neighboring objects stay unchanged. Explain that external arrows do not reroute. `scene.resolved.json` plus `assets/` can be
 rebuilt or edited; `scene.original.json` is an audit copy with the original relative paths.
 Never upload source images to an external OCR or image service without existing authorization.

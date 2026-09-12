@@ -1,0 +1,28 @@
+[
+  {
+    "args": [
+      "compose-math",
+      "formula.json",
+      "--out",
+      "formula",
+      "--font-dir",
+      "/System/Library/Fonts/Supplemental"
+    ],
+    "exit": 0,
+    "stdout": "{\"status\": \"unverified\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt037-smoke-complete-auqt3j9t/formula\"}\n",
+    "stderr": "'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n"
+  },
+  {
+    "args": [
+      "build",
+      "scene.json",
+      "--out",
+      "build",
+      "--font-dir",
+      "/System/Library/Fonts/Supplemental"
+    ],
+    "exit": 0,
+    "stdout": "{\"status\": \"review\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt037-smoke-complete-auqt3j9t/build\"}\n",
+    "stderr": "'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n"
+  }
+]

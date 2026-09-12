@@ -7,7 +7,7 @@
 **Image → Editable PPTX · SVG · Scene JSON**
 
 [![Verify](https://github.com/asimfish/super_img2ppt/actions/workflows/verify.yml/badge.svg)](https://github.com/asimfish/super_img2ppt/actions/workflows/verify.yml)
-![Version](https://img.shields.io/badge/version-0.3.6-2563eb)
+![Version](https://img.shields.io/badge/version-0.3.7-2563eb)
 ![Python](https://img.shields.io/badge/python-3.11%2B-3776AB)
 [![License](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 
@@ -17,14 +17,46 @@
 
 一个 **Agent Skill + 本地 Python 运行时**：Agent 看图、纠正 OCR、理解结构；运行时测量真实字体、检查重叠、导出原生对象，再渲染 **实际 PPTX** 验收。适合论文架构图、流程图、训练曲线和图片版幻灯片。
 
-**新增 2026 年 DreamZero、Cosmos Policy、Cosmos 3 三张完整图，论文画廊共十五例。**
-覆盖世界动作模型、视频模型控制与多模态世界模型；提供原图、实际 PPTX 渲染、可编辑文件和复建记录。
-v0.3.6 将斜排公式表头改为原生文字，并新增同坐标局部墨迹诊断，明确区分对齐与字形保真。
+**新增 GR00T N1、RoboDream 两张完整图，论文画廊共十七例。**
+v0.3.7 重点改善后续编辑：模块、公式、token 和每条曲线使用原生语义组合，内部文字与形状仍可单独编辑。另提供 Cosmos 3 的分组版本。
+所有预览来自实际 PPTX；完整图对照、组合前后验证和真实移动/改字操作分别记录。
 
 ## 真实复杂图效果
 
 所有对照均为 **左：论文原图；右：实际 PPTX 经 LibreOffice 渲染**。点击图片查看原尺寸。
 保留完整图面板，没有只挑容易的局部。原生对象数量说明编辑边界；区域对比记录对齐和字形差异，两者分别报告。
+
+### 便于后续编辑的新案例
+
+下面两张新增图已带原生语义组合，另有 Cosmos 3 分组编辑版；历史案例按各自原始版本记录。
+
+#### GR00T N1 · 双系统架构、动作公式与嵌套模块
+
+[![GR00T N1 完整原图与分组 PPTX 实际渲染](docs/previews/gallery/gr00t_n1.png)](docs/previews/gallery/gr00t_n1.png)
+
+**159 个原生对象，2 张局部图片；34 个含嵌套的语义组，41 个顶层选择单元。** 完整保留 VLM、状态/动作编码器、DiT 注意力子层、动作序列和反馈回路。八处多行模块名/指令合成单个文本框，减少 9 个文本对象，实际渲染与合并前完全一致；公式变量与脚标、token 条带和雪花图标分别组合。照片和机器人插画保留为图片。
+
+已实际验证整组移动 State Encoder 和将完整标签改为 Joint Encoder，邻居不变。保留一项 tokenizer 字宽复核提示；长下标字形、圆角和细线仍有近似。
+
+[分组 PPTX](examples/gallery/gr00t_n1/editable.pptx) · [SVG](examples/gallery/gr00t_n1/svg/page_001.svg) · [编辑分组清单](examples/gallery/gr00t_n1/editability.json) · [细节](docs/previews/gallery/gr00t_n1_detail.png) · [完整报告](examples/gallery/gr00t_n1/REPORT.md)
+
+<sub>NVIDIA / Bjorck et al., “GR00T N1: An Open Foundation Model for Generalist Humanoid Robots”, Figure 3，[arXiv 2503.14734v2](https://arxiv.org/abs/2503.14734v2)，2025-03-27。[CC BY 4.0 / 归属](examples/gallery/gr00t_n1/ATTRIBUTION.md)。</sub>
+
+#### RoboDream · 多视角世界模型与可整体编辑的曲线
+
+[![RoboDream 完整原图与分组 PPTX 实际渲染](docs/previews/gallery/robodream.png)](docs/previews/gallery/robodream.png)
+
+**227 个原生对象，5 张局部图片；27 个语义组，48 个顶层选择单元。** 完整四路视觉输入、轨迹/文本条件、多视角 token、DiT 与生成结果均保留。18 个可读标签保持完整文本框，每条曲线的原生线段和箭头组成独立组，模块与 tensor 网格也可整体选中。
+
+已实际验证曲线组移动 12 px 和单独修改 Encoder，编辑区域外像素不变。自动检查通过；Arial 字形、圆角和渐变方向仍与源图有差异。完整图复核修正了一处局部追踪漏掉的可见曲线端部。
+
+[分组 PPTX](examples/gallery/robodream/editable.pptx) · [SVG](examples/gallery/robodream/svg/page_001.svg) · [编辑分组清单](examples/gallery/robodream/editability.json) · [曲线细节](docs/previews/gallery/robodream_detail.png) · [完整报告](examples/gallery/robodream/REPORT.md)
+
+<sub>Ye et al., “RoboDream: Compositional World Models for Scalable Robot Data Synthesis”, Figure 2，[arXiv 2606.02577v1](https://arxiv.org/abs/2606.02577v1)，2026-06-01。[CC BY 4.0 / 归属](examples/gallery/robodream/ATTRIBUTION.md)。</sub>
+
+**Cosmos 3 编辑版**另外保留全部 415 个子对象，组织为 81 个嵌套组、37 个顶层选择单元。分组前后画面逐像素一致；整体移动模块/公式和修改组内文字也已验证。箭头不会自动重连。
+
+[Cosmos 3 分组 PPTX](examples/editing/cosmos3/editable.pptx) · [三份分组编辑案例完整包](examples/editing/editing_examples.zip) · [实际编辑操作与限制](docs/atomic_editing.md) · [全部十七例文件包](examples/gallery/paper_gallery.zip)
 
 ### 2026 具身与世界模型
 
@@ -60,7 +92,7 @@ v0.3.6 将斜排公式表头改为原生文字，并新增同坐标局部墨迹�
 
 <sub>NVIDIA et al., “Cosmos 3: Omnimodal World Models for Physical AI”, Figure 5，arXiv 2606.02800v4，2026-06-23（PDF 封面印 06-24）。[论文与作者](https://arxiv.org/abs/2606.02800v4) · [官方项目](https://research.nvidia.com/labs/cosmos-lab/cosmos3/) · [CC BY 4.0 / 归属](examples/gallery/cosmos3/ATTRIBUTION.md)。</sub>
 
-[本轮实测、改进与限制](docs/world_models.md) · [下载十五例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
+[本轮实测、改进与限制](docs/world_models.md) · [下载十七例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
 
 ### 具身智能与机器人
 
@@ -96,7 +128,7 @@ v0.3.6 将斜排公式表头改为原生文字，并新增同坐标局部墨迹�
 
 <sub>Wen et al., “DexVLA: Vision-Language Model with Plug-In Diffusion Expert for General Robot Control”, CoRL 2025, Figure 2。[论文与作者](https://proceedings.mlr.press/v305/wen25b.html) · [CC BY 4.0 / 归属](examples/gallery/dexvla/ATTRIBUTION.md)。</sub>
 
-[新增三例与公式实测](docs/formula_gallery.md) · [下载十五例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
+[新增三例与公式实测](docs/formula_gallery.md) · [下载十七例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
 
 #### RT-2 · 视觉—语言—动作模型
 
@@ -134,7 +166,7 @@ v0.3.6 将斜排公式表头改为原生文字，并新增同坐标局部墨迹�
 
 <sub>改编自 Shah et al., “ViNT: A Foundation Model for Visual Navigation”, CoRL 2023, Figure 2。[论文与作者](https://proceedings.mlr.press/v229/shah23a.html) · [CC BY 4.0 / 归属](examples/gallery/vint/ATTRIBUTION.md)。</sub>
 
-[具身案例测试与复建记录](docs/embodied_figures.md) · [下载十五例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
+[具身案例测试与复建记录](docs/embodied_figures.md) · [下载十七例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
 
 ### Griffin · 数据库表格到图模型
 
@@ -172,7 +204,7 @@ v0.3.6 将斜排公式表头改为原生文字，并新增同坐标局部墨迹�
 
 <sub>改编自 Poli et al., “Hyena Hierarchy: Towards Larger Convolutional Language Models”, ICML 2023, Figure 1。[论文与作者](https://proceedings.mlr.press/v202/poli23a.html) · [CC BY 4.0 / 归属](examples/gallery/hyena/ATTRIBUTION.md)。</sub>
 
-[本轮完整测量、失败与修复证据](docs/gallery_extension.md) · [下载当前十五例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
+[本轮完整测量、失败与修复证据](docs/gallery_extension.md) · [下载当前十七例完整文件包](examples/gallery/paper_gallery.zip) · [SHA256](examples/gallery/SHA256SUMS)
 
 ### GaLore · 四面板训练曲线
 
@@ -215,6 +247,18 @@ v0.3.6 将斜排公式表头改为原生文字，并新增同坐标局部墨迹�
 GaLore 和 Mamba-2 的部分原保留区域曾在调整期间被查看，因此不能作为盲测；Mamba-2 还记录了一处超过三次修复预算的偏差。原始记录和失败结果均保留。不同案例的掩码与区域不同，不合并成“转换准确率”。
 
 ## 把案例反馈变成系统能力
+
+### 按后续编辑任务组织对象
+
+`container` 负责布局检查；新增的 slide `groups` 才会导出 **PowerPoint 原生组合与 SVG 分组**。一个模块可以整体移动，进入组合后仍能修改标题、公式或底板；每条曲线的线段放在自己的组合里。普通标签尽量是完整文本框，混合样式用 runs，公式仅按必要的上下标/样式拆分。
+
+- 分组保留子对象、坐标和前后层级；会改变遮挡顺序的交错分组明确失败。
+- `compose-math`、`trace-curve` 同时输出 `groups.json`，可与 `elements.json` 一起合入场景。
+- `editability.json` 列出分组、成员和未组合对象；对象数量不作为易用性评分。
+- 已实际测试“移动整组”和“修改组内标签”，同时核对相邻对象。外部箭头不会自动重连，复杂公式仍是文字部件组合。
+
+[分组规则与编辑用法](skills/super-img2ppt/references/editing.md) · [完整实测及编辑文件](docs/atomic_editing.md)
+
 
 ### 斜排公式保持共同旋转中心；局部对比同时检查墨迹
 

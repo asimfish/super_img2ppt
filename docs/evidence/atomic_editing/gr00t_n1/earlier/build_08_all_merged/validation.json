@@ -1,0 +1,2039 @@
+{
+  "status": "review",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "pass",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "vision_label",
+            "vision"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "tokenizer_label",
+            "tokenizer"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "vision_label",
+            "vision_stub"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "vision_label",
+            "vision_out"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "tokenizer_label",
+            "text_stub"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "tokenizer_label",
+            "text_out"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "dit",
+            "repeat_count"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "input_a0_0",
+            "input_a0_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "input_a1_0",
+            "input_a1_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "input_aH_0",
+            "input_aH_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "input_aH_3",
+            "input_aH_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "output_a0_0",
+            "output_a0_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "output_a1_0",
+            "output_a1_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "output_aH_0",
+            "output_aH_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "output_aH_3",
+            "output_aH_4"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "text_stub",
+            "instruction_text"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "state_q_0",
+            "state_q_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "shape": 59,
+            "text": 43,
+            "line": 57,
+            "image": 2
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_0",
+                "vlm_frozen_icon_twig_0_0"
+              ],
+              "reason": "Source snowflake fork joins its arm and paired fork at the same point.",
+              "area_px2": 9.107
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_0",
+                "vlm_frozen_icon_twig_0_1"
+              ],
+              "reason": "Source snowflake fork joins its arm and paired fork at the same point.",
+              "area_px2": 9.107
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_0",
+                "vlm_frozen_icon_arm_1"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 12.017
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_0",
+                "vlm_frozen_icon_arm_2"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 10.354
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_0",
+                "vlm_frozen_icon_arm_3"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 9.543
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_0",
+                "vlm_frozen_icon_arm_4"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 10.354
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_0",
+                "vlm_frozen_icon_arm_5"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 12.017
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_twig_0_0",
+                "vlm_frozen_icon_twig_0_1"
+              ],
+              "reason": "Source snowflake fork joins its arm and paired fork at the same point.",
+              "area_px2": 11.15
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_1",
+                "vlm_frozen_icon_twig_1_0"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 9.065
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_1",
+                "vlm_frozen_icon_twig_1_1"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 9.065
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_1",
+                "vlm_frozen_icon_arm_2"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 11.996
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_1",
+                "vlm_frozen_icon_arm_3"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 10.354
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_1",
+                "vlm_frozen_icon_arm_4"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 9.501
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_1",
+                "vlm_frozen_icon_arm_5"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 10.333
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_twig_1_0",
+                "vlm_frozen_icon_twig_1_1"
+              ],
+              "reason": "Source snowflake fork joins its arm and paired fork at the same point.",
+              "area_px2": 11.122
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_2",
+                "vlm_frozen_icon_twig_2_0"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 9.065
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_2",
+                "vlm_frozen_icon_twig_2_1"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 9.065
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_2",
+                "vlm_frozen_icon_arm_3"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 12.017
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_2",
+                "vlm_frozen_icon_arm_4"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 10.333
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_2",
+                "vlm_frozen_icon_arm_5"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 9.501
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_twig_2_0",
+                "vlm_frozen_icon_twig_2_1"
+              ],
+              "reason": "Source snowflake fork joins its arm and paired fork at the same point.",
+              "area_px2": 11.122
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_3",
+                "vlm_frozen_icon_twig_3_0"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 9.107
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_3",
+                "vlm_frozen_icon_twig_3_1"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 9.107
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_3",
+                "vlm_frozen_icon_arm_4"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 12.017
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_3",
+                "vlm_frozen_icon_arm_5"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 10.354
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_twig_3_0",
+                "vlm_frozen_icon_twig_3_1"
+              ],
+              "reason": "Source snowflake fork joins its arm and paired fork at the same point.",
+              "area_px2": 11.15
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_4",
+                "vlm_frozen_icon_twig_4_0"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 9.065
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_4",
+                "vlm_frozen_icon_twig_4_1"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 9.065
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_4",
+                "vlm_frozen_icon_arm_5"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 11.996
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_twig_4_0",
+                "vlm_frozen_icon_twig_4_1"
+              ],
+              "reason": "Source snowflake fork joins its arm and paired fork at the same point.",
+              "area_px2": 11.122
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_5",
+                "vlm_frozen_icon_twig_5_0"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 9.065
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_arm_5",
+                "vlm_frozen_icon_twig_5_1"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 9.065
+            },
+            {
+              "elements": [
+                "vlm_frozen_icon_twig_5_0",
+                "vlm_frozen_icon_twig_5_1"
+              ],
+              "reason": "Source snowflake fork joins its arm and paired fork at the same point.",
+              "area_px2": 11.122
+            },
+            {
+              "elements": [
+                "dit",
+                "vlm_cross_1"
+              ],
+              "reason": "Source connector terminates on this named module/line boundary; preserves source topology.",
+              "area_px2": 81.0
+            },
+            {
+              "elements": [
+                "dit",
+                "vlm_cross_2"
+              ],
+              "reason": "Source connector terminates on this named module/line boundary; preserves source topology.",
+              "area_px2": 81.0
+            },
+            {
+              "elements": [
+                "vlm_bus",
+                "vlm_cross_1"
+              ],
+              "reason": "Source connector terminates on this named module/line boundary; preserves source topology.",
+              "area_px2": 4.5
+            },
+            {
+              "elements": [
+                "vlm_bus",
+                "vlm_cross_2"
+              ],
+              "reason": "Source connector terminates on this named module/line boundary; preserves source topology.",
+              "area_px2": 2.25
+            },
+            {
+              "elements": [
+                "feedback_right",
+                "feedback_bottom"
+              ],
+              "reason": "Source connector terminates on this named module/line boundary; preserves source topology.",
+              "area_px2": 2.25
+            },
+            {
+              "elements": [
+                "feedback_bottom",
+                "feedback_left"
+              ],
+              "reason": "Source feedback path turns at the lower-right corner.",
+              "area_px2": 2.25
+            },
+            {
+              "elements": [
+                "feedback_left",
+                "feedback_head"
+              ],
+              "reason": "Source connector terminates on this named module/line boundary; preserves source topology.",
+              "area_px2": 28.05
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_0",
+                "legend_frozen_icon_twig_0_0"
+              ],
+              "reason": "Source snowflake fork joins its arm and paired fork at the same point.",
+              "area_px2": 15.194
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_0",
+                "legend_frozen_icon_twig_0_1"
+              ],
+              "reason": "Source snowflake fork joins its arm and paired fork at the same point.",
+              "area_px2": 15.194
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_0",
+                "legend_frozen_icon_arm_1"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 20.049
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_0",
+                "legend_frozen_icon_arm_2"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 17.274
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_0",
+                "legend_frozen_icon_arm_3"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 15.922
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_0",
+                "legend_frozen_icon_arm_4"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 17.274
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_0",
+                "legend_frozen_icon_arm_5"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 20.049
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_twig_0_0",
+                "legend_frozen_icon_twig_0_1"
+              ],
+              "reason": "Source snowflake fork joins its arm and paired fork at the same point.",
+              "area_px2": 18.603
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_1",
+                "legend_frozen_icon_twig_1_0"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 15.123
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_1",
+                "legend_frozen_icon_twig_1_1"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 15.123
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_1",
+                "legend_frozen_icon_arm_2"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 20.013
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_1",
+                "legend_frozen_icon_arm_3"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 17.274
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_1",
+                "legend_frozen_icon_arm_4"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 15.852
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_1",
+                "legend_frozen_icon_arm_5"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 17.239
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_twig_1_0",
+                "legend_frozen_icon_twig_1_1"
+              ],
+              "reason": "Source snowflake fork joins its arm and paired fork at the same point.",
+              "area_px2": 18.557
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_2",
+                "legend_frozen_icon_twig_2_0"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 15.123
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_2",
+                "legend_frozen_icon_twig_2_1"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 15.123
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_2",
+                "legend_frozen_icon_arm_3"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 20.049
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_2",
+                "legend_frozen_icon_arm_4"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 17.239
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_2",
+                "legend_frozen_icon_arm_5"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 15.852
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_twig_2_0",
+                "legend_frozen_icon_twig_2_1"
+              ],
+              "reason": "Source snowflake fork joins its arm and paired fork at the same point.",
+              "area_px2": 18.557
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_3",
+                "legend_frozen_icon_twig_3_0"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 15.194
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_3",
+                "legend_frozen_icon_twig_3_1"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 15.194
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_3",
+                "legend_frozen_icon_arm_4"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 20.049
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_3",
+                "legend_frozen_icon_arm_5"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 17.274
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_twig_3_0",
+                "legend_frozen_icon_twig_3_1"
+              ],
+              "reason": "Source snowflake fork joins its arm and paired fork at the same point.",
+              "area_px2": 18.603
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_4",
+                "legend_frozen_icon_twig_4_0"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 15.123
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_4",
+                "legend_frozen_icon_twig_4_1"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 15.123
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_4",
+                "legend_frozen_icon_arm_5"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 20.013
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_twig_4_0",
+                "legend_frozen_icon_twig_4_1"
+              ],
+              "reason": "Source snowflake fork joins its arm and paired fork at the same point.",
+              "area_px2": 18.557
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_5",
+                "legend_frozen_icon_twig_5_0"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 15.123
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_arm_5",
+                "legend_frozen_icon_twig_5_1"
+              ],
+              "reason": "The six source snowflake arms meet at one center.",
+              "area_px2": 15.123
+            },
+            {
+              "elements": [
+                "legend_frozen_icon_twig_5_0",
+                "legend_frozen_icon_twig_5_1"
+              ],
+              "reason": "Source snowflake fork joins its arm and paired fork at the same point.",
+              "area_px2": 18.557
+            }
+          ],
+          "text_layouts": {
+            "vision_label": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 109.0,
+              "height_px": 68.0,
+              "available_width_px": 180,
+              "available_height_px": 71,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 109.5,
+              "required_height_px": 68.5,
+              "fits": true,
+              "lines": [
+                "Vision",
+                "Encoder"
+              ]
+            },
+            "tokenizer_label": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 128.5,
+              "height_px": 66.0,
+              "available_width_px": 180,
+              "available_height_px": 70,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 129.0,
+              "required_height_px": 66.5,
+              "fits": true,
+              "lines": [
+                "Text",
+                "Tokenizer"
+              ]
+            },
+            "vlm_label": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 100.5,
+              "height_px": 68.0,
+              "available_width_px": 180,
+              "available_height_px": 71,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 101.0,
+              "required_height_px": 68.5,
+              "fits": true,
+              "lines": [
+                "Eagle-2",
+                "VLM"
+              ]
+            },
+            "state_encoder_label": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 109.0,
+              "height_px": 68.0,
+              "available_width_px": 180,
+              "available_height_px": 71,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 109.5,
+              "required_height_px": 68.5,
+              "fits": true,
+              "lines": [
+                "State",
+                "Encoder"
+              ]
+            },
+            "action_encoder_label": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 109.0,
+              "height_px": 68.0,
+              "available_width_px": 180,
+              "available_height_px": 71,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 109.5,
+              "required_height_px": 68.5,
+              "fits": true,
+              "lines": [
+                "Action",
+                "Encoder"
+              ]
+            },
+            "cross_1_label": {
+              "scale": 1,
+              "effective_font_size_px": 28,
+              "width_px": 192.5,
+              "height_px": 32.2,
+              "available_width_px": 330,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 193.0,
+              "required_height_px": 32.7,
+              "fits": true,
+              "lines": [
+                "Cross-Attention"
+              ]
+            },
+            "self_1_label": {
+              "scale": 1,
+              "effective_font_size_px": 28,
+              "width_px": 167.75,
+              "height_px": 32.2,
+              "available_width_px": 330,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 168.25,
+              "required_height_px": 32.7,
+              "fits": true,
+              "lines": [
+                "Self-Attention"
+              ]
+            },
+            "cross_2_label": {
+              "scale": 1,
+              "effective_font_size_px": 28,
+              "width_px": 192.5,
+              "height_px": 32.2,
+              "available_width_px": 330,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 193.0,
+              "required_height_px": 32.7,
+              "fits": true,
+              "lines": [
+                "Cross-Attention"
+              ]
+            },
+            "self_2_label": {
+              "scale": 1,
+              "effective_font_size_px": 28,
+              "width_px": 167.75,
+              "height_px": 32.2,
+              "available_width_px": 330,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 168.25,
+              "required_height_px": 32.7,
+              "fits": true,
+              "lines": [
+                "Self-Attention"
+              ]
+            },
+            "repeat_count": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 36.0,
+              "height_px": 27.6,
+              "available_width_px": 78,
+              "available_height_px": 34,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 36.5,
+              "required_height_px": 28.1,
+              "fits": true,
+              "lines": [
+                "x N"
+              ]
+            },
+            "dit_label": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 138.75,
+              "height_px": 33.35,
+              "available_width_px": 195,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 139.25,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "DiT Blocks"
+              ]
+            },
+            "decoder_label": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 110.75,
+              "height_px": 66.0,
+              "available_width_px": 180,
+              "available_height_px": 70,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 111.25,
+              "required_height_px": 66.5,
+              "fits": true,
+              "lines": [
+                "Action",
+                "Decoder"
+              ]
+            },
+            "input_a0_0": {
+              "scale": 1,
+              "effective_font_size_px": 36,
+              "width_px": 18.0,
+              "height_px": 41.4,
+              "available_width_px": 19.0,
+              "available_height_px": 42.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "a"
+              ]
+            },
+            "input_a0_1": {
+              "scale": 1,
+              "effective_font_size_px": 25.92,
+              "width_px": 8.0,
+              "height_px": 29.808,
+              "available_width_px": 9.0,
+              "available_height_px": 30.807999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 30.308,
+              "fits": true,
+              "lines": [
+                "t"
+              ]
+            },
+            "input_a1_0": {
+              "scale": 1,
+              "effective_font_size_px": 36,
+              "width_px": 18.0,
+              "height_px": 41.4,
+              "available_width_px": 19.0,
+              "available_height_px": 42.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "a"
+              ]
+            },
+            "input_a1_1": {
+              "scale": 1,
+              "effective_font_size_px": 25.92,
+              "width_px": 8.0,
+              "height_px": 29.808,
+              "available_width_px": 9.0,
+              "available_height_px": 30.807999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 30.308,
+              "fits": true,
+              "lines": [
+                "t"
+              ]
+            },
+            "input_a1_2": {
+              "scale": 1,
+              "effective_font_size_px": 25.92,
+              "width_px": 27.75,
+              "height_px": 29.808,
+              "available_width_px": 28.75,
+              "available_height_px": 30.807999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 28.25,
+              "required_height_px": 30.308,
+              "fits": true,
+              "lines": [
+                "+1"
+              ]
+            },
+            "input_aH_0": {
+              "scale": 1,
+              "effective_font_size_px": 36,
+              "width_px": 18.0,
+              "height_px": 41.4,
+              "available_width_px": 19.0,
+              "available_height_px": 42.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "a"
+              ]
+            },
+            "input_aH_1": {
+              "scale": 1,
+              "effective_font_size_px": 25.92,
+              "width_px": 8.0,
+              "height_px": 29.808,
+              "available_width_px": 9.0,
+              "available_height_px": 30.807999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 30.308,
+              "fits": true,
+              "lines": [
+                "t"
+              ]
+            },
+            "input_aH_2": {
+              "scale": 1,
+              "effective_font_size_px": 25.92,
+              "width_px": 14.75,
+              "height_px": 29.808,
+              "available_width_px": 15.75,
+              "available_height_px": 30.807999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 15.25,
+              "required_height_px": 30.308,
+              "fits": true,
+              "lines": [
+                "+"
+              ]
+            },
+            "input_aH_3": {
+              "scale": 1,
+              "effective_font_size_px": 25.92,
+              "width_px": 22.0,
+              "height_px": 29.808,
+              "available_width_px": 23.0,
+              "available_height_px": 30.807999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 22.5,
+              "required_height_px": 30.308,
+              "fits": true,
+              "lines": [
+                "H"
+              ]
+            },
+            "input_aH_4": {
+              "scale": 1,
+              "effective_font_size_px": 25.92,
+              "width_px": 27.75,
+              "height_px": 29.808,
+              "available_width_px": 28.75,
+              "available_height_px": 30.807999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 28.25,
+              "required_height_px": 30.308,
+              "fits": true,
+              "lines": [
+                "−1"
+              ]
+            },
+            "input_ellipsis": {
+              "scale": 1,
+              "effective_font_size_px": 33,
+              "width_px": 33.0,
+              "height_px": 38.75,
+              "available_width_px": 40,
+              "available_height_px": 49,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 33.5,
+              "required_height_px": 39.25,
+              "fits": true,
+              "lines": [
+                "⋮"
+              ]
+            },
+            "output_a0_0": {
+              "scale": 1,
+              "effective_font_size_px": 36,
+              "width_px": 18.0,
+              "height_px": 41.4,
+              "available_width_px": 19.0,
+              "available_height_px": 42.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "a"
+              ]
+            },
+            "output_a0_1": {
+              "scale": 1,
+              "effective_font_size_px": 25.92,
+              "width_px": 8.0,
+              "height_px": 29.808,
+              "available_width_px": 9.0,
+              "available_height_px": 30.807999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 30.308,
+              "fits": true,
+              "lines": [
+                "t"
+              ]
+            },
+            "output_a1_0": {
+              "scale": 1,
+              "effective_font_size_px": 36,
+              "width_px": 18.0,
+              "height_px": 41.4,
+              "available_width_px": 19.0,
+              "available_height_px": 42.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "a"
+              ]
+            },
+            "output_a1_1": {
+              "scale": 1,
+              "effective_font_size_px": 25.92,
+              "width_px": 8.0,
+              "height_px": 29.808,
+              "available_width_px": 9.0,
+              "available_height_px": 30.807999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 30.308,
+              "fits": true,
+              "lines": [
+                "t"
+              ]
+            },
+            "output_a1_2": {
+              "scale": 1,
+              "effective_font_size_px": 25.92,
+              "width_px": 27.75,
+              "height_px": 29.808,
+              "available_width_px": 28.75,
+              "available_height_px": 30.807999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 28.25,
+              "required_height_px": 30.308,
+              "fits": true,
+              "lines": [
+                "+1"
+              ]
+            },
+            "output_aH_0": {
+              "scale": 1,
+              "effective_font_size_px": 36,
+              "width_px": 18.0,
+              "height_px": 41.4,
+              "available_width_px": 19.0,
+              "available_height_px": 42.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "a"
+              ]
+            },
+            "output_aH_1": {
+              "scale": 1,
+              "effective_font_size_px": 25.92,
+              "width_px": 8.0,
+              "height_px": 29.808,
+              "available_width_px": 9.0,
+              "available_height_px": 30.807999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 30.308,
+              "fits": true,
+              "lines": [
+                "t"
+              ]
+            },
+            "output_aH_2": {
+              "scale": 1,
+              "effective_font_size_px": 25.92,
+              "width_px": 14.75,
+              "height_px": 29.808,
+              "available_width_px": 15.75,
+              "available_height_px": 30.807999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 15.25,
+              "required_height_px": 30.308,
+              "fits": true,
+              "lines": [
+                "+"
+              ]
+            },
+            "output_aH_3": {
+              "scale": 1,
+              "effective_font_size_px": 25.92,
+              "width_px": 22.0,
+              "height_px": 29.808,
+              "available_width_px": 23.0,
+              "available_height_px": 30.807999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 22.5,
+              "required_height_px": 30.308,
+              "fits": true,
+              "lines": [
+                "H"
+              ]
+            },
+            "output_aH_4": {
+              "scale": 1,
+              "effective_font_size_px": 25.92,
+              "width_px": 27.75,
+              "height_px": 29.808,
+              "available_width_px": 28.75,
+              "available_height_px": 30.807999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 28.25,
+              "required_height_px": 30.308,
+              "fits": true,
+              "lines": [
+                "−1"
+              ]
+            },
+            "output_ellipsis": {
+              "scale": 1,
+              "effective_font_size_px": 33,
+              "width_px": 33.0,
+              "height_px": 38.75,
+              "available_width_px": 40,
+              "available_height_px": 49,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 33.5,
+              "required_height_px": 39.25,
+              "fits": true,
+              "lines": [
+                "⋮"
+              ]
+            },
+            "legend_module_label": {
+              "scale": 1,
+              "effective_font_size_px": 28.3,
+              "width_px": 367.5,
+              "height_px": 32.545,
+              "available_width_px": 508,
+              "available_height_px": 39,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 368.0,
+              "required_height_px": 33.045,
+              "fits": true,
+              "lines": [
+                "Embodiment-Specific Module"
+              ]
+            },
+            "iteration_label": {
+              "scale": 1,
+              "effective_font_size_px": 28,
+              "width_px": 139.75,
+              "height_px": 32.2,
+              "available_width_px": 190,
+              "available_height_px": 40,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 140.25,
+              "required_height_px": 32.7,
+              "fits": true,
+              "lines": [
+                "K iterations"
+              ]
+            },
+            "motor_label": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 81.0,
+              "height_px": 68.0,
+              "available_width_px": 100,
+              "available_height_px": 72,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 81.5,
+              "required_height_px": 68.5,
+              "fits": true,
+              "lines": [
+                "Motor",
+                "Action"
+              ]
+            },
+            "robot_state_label": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 153.5,
+              "height_px": 33.35,
+              "available_width_px": 175,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 154.0,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "Robot State"
+              ]
+            },
+            "noised_action_label": {
+              "scale": 1,
+              "effective_font_size_px": 29,
+              "width_px": 179.5,
+              "height_px": 33.35,
+              "available_width_px": 195,
+              "available_height_px": 38,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 180.0,
+              "required_height_px": 33.85,
+              "fits": true,
+              "lines": [
+                "Noised Action"
+              ]
+            },
+            "legend_frozen_label": {
+              "scale": 1,
+              "effective_font_size_px": 28.3,
+              "width_px": 291.0,
+              "height_px": 32.545,
+              "available_width_px": 465,
+              "available_height_px": 39,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 291.5,
+              "required_height_px": 33.045,
+              "fits": true,
+              "lines": [
+                "Pre-trained and Frozen"
+              ]
+            },
+            "instruction_text": {
+              "scale": 1,
+              "effective_font_size_px": 24,
+              "width_px": 261.0,
+              "height_px": 87.0,
+              "available_width_px": 285,
+              "available_height_px": 94,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 261.5,
+              "required_height_px": 87.5,
+              "fits": true,
+              "lines": [
+                "“Pick up the apple",
+                "and place it into",
+                "the bottom shelf”"
+              ]
+            },
+            "state_q_0": {
+              "scale": 1,
+              "effective_font_size_px": 36,
+              "width_px": 18.0,
+              "height_px": 41.4,
+              "available_width_px": 19.0,
+              "available_height_px": 42.4,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.5,
+              "required_height_px": 41.9,
+              "fits": true,
+              "lines": [
+                "q"
+              ]
+            },
+            "state_q_1": {
+              "scale": 1,
+              "effective_font_size_px": 25.92,
+              "width_px": 8.0,
+              "height_px": 29.808,
+              "available_width_px": 9.0,
+              "available_height_px": 30.807999999999996,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 30.308,
+              "fits": true,
+              "lines": [
+                "t"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "review",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [
+        {
+          "code": "rendered_ink_width_drift",
+          "severity": "warning",
+          "slide": "page_001",
+          "element": "tokenizer_label",
+          "measured_ink_width_px": 128.0,
+          "rendered_ink_width_px": 123.975,
+          "message": "Visible text width differs from the measured font by over 3% and 2 px; inspect mixed-script spacing and compare the source"
+        }
+      ],
+      "text_boxes": [
+        {
+          "slide": "page_001",
+          "element": "vision_label",
+          "expected": "Vision\nEncoder",
+          "rendered": "Vision\r\nEncoder",
+          "rendered_normalized": "Vision\r\nEncoder",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 106.75,
+          "rendered_ink_width_px": 106.239
+        },
+        {
+          "slide": "page_001",
+          "element": "tokenizer_label",
+          "expected": "Text\nTokenizer",
+          "rendered": "Text\r\nTokenizer",
+          "rendered_normalized": "Text\r\nTokenizer",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 128.0,
+          "rendered_ink_width_px": 123.975
+        },
+        {
+          "slide": "page_001",
+          "element": "vlm_label",
+          "expected": "Eagle-2\nVLM",
+          "rendered": "Eagle-2\r\nVLM",
+          "rendered_normalized": "Eagle-2\r\nVLM",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 96.75,
+          "rendered_ink_width_px": 96.212
+        },
+        {
+          "slide": "page_001",
+          "element": "state_encoder_label",
+          "expected": "State\nEncoder",
+          "rendered": "State\r\nEncoder",
+          "rendered_normalized": "State\r\nEncoder",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 106.75,
+          "rendered_ink_width_px": 106.239
+        },
+        {
+          "slide": "page_001",
+          "element": "action_encoder_label",
+          "expected": "Action\nEncoder",
+          "rendered": "Action\r\nEncoder",
+          "rendered_normalized": "Action\r\nEncoder",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 106.75,
+          "rendered_ink_width_px": 106.239
+        },
+        {
+          "slide": "page_001",
+          "element": "cross_1_label",
+          "expected": "Cross-Attention",
+          "rendered": "Cro\r\ns\r\ns-Atte\r\nntio\r\nn",
+          "rendered_normalized": "Cro\r\ns\r\ns-Atte\r\nntio\r\nn",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 189.5,
+          "rendered_ink_width_px": 188.892
+        },
+        {
+          "slide": "page_001",
+          "element": "self_1_label",
+          "expected": "Self-Attention",
+          "rendered": "S\r\nelf-Atte\r\nntio\r\nn",
+          "rendered_normalized": "S\r\nelf-Atte\r\nntio\r\nn",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 164.75,
+          "rendered_ink_width_px": 164.295
+        },
+        {
+          "slide": "page_001",
+          "element": "cross_2_label",
+          "expected": "Cross-Attention",
+          "rendered": "Cro\r\ns\r\ns-Atte\r\nntio\r\nn",
+          "rendered_normalized": "Cro\r\ns\r\ns-Atte\r\nntio\r\nn",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 189.5,
+          "rendered_ink_width_px": 188.892
+        },
+        {
+          "slide": "page_001",
+          "element": "self_2_label",
+          "expected": "Self-Attention",
+          "rendered": "S\r\nelf-Atte\r\nntio\r\nn",
+          "rendered_normalized": "S\r\nelf-Atte\r\nntio\r\nn",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 164.75,
+          "rendered_ink_width_px": 164.295
+        },
+        {
+          "slide": "page_001",
+          "element": "repeat_count",
+          "expected": "x N",
+          "rendered": "x N",
+          "rendered_normalized": "x N",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 34.25,
+          "rendered_ink_width_px": 33.878
+        },
+        {
+          "slide": "page_001",
+          "element": "dit_label",
+          "expected": "DiT Blocks",
+          "rendered": "DiT Blocks",
+          "rendered_normalized": "DiT Blocks",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 135.75,
+          "rendered_ink_width_px": 134.871
+        },
+        {
+          "slide": "page_001",
+          "element": "decoder_label",
+          "expected": "Action\nDecoder",
+          "rendered": "Action\r\nDecoder",
+          "rendered_normalized": "Action\r\nDecoder",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 108.75,
+          "rendered_ink_width_px": 107.862
+        },
+        {
+          "slide": "page_001",
+          "element": "input_a0_0",
+          "expected": "a",
+          "rendered": "a",
+          "rendered_normalized": "a",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 16.25,
+          "rendered_ink_width_px": 16.088
+        },
+        {
+          "slide": "page_001",
+          "element": "input_a0_1",
+          "expected": "t",
+          "rendered": "t",
+          "rendered_normalized": "t",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 6.75,
+          "rendered_ink_width_px": 6.687
+        },
+        {
+          "slide": "page_001",
+          "element": "input_a1_0",
+          "expected": "a",
+          "rendered": "a",
+          "rendered_normalized": "a",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 16.25,
+          "rendered_ink_width_px": 16.088
+        },
+        {
+          "slide": "page_001",
+          "element": "input_a1_1",
+          "expected": "t",
+          "rendered": "t ",
+          "rendered_normalized": "t ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 6.75,
+          "rendered_ink_width_px": 6.687
+        },
+        {
+          "slide": "page_001",
+          "element": "input_a1_2",
+          "expected": "+1",
+          "rendered": "+1",
+          "rendered_normalized": "+1",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 24.5,
+          "rendered_ink_width_px": 24.016
+        },
+        {
+          "slide": "page_001",
+          "element": "input_aH_0",
+          "expected": "a",
+          "rendered": "a",
+          "rendered_normalized": "a",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 16.25,
+          "rendered_ink_width_px": 16.088
+        },
+        {
+          "slide": "page_001",
+          "element": "input_aH_1",
+          "expected": "t",
+          "rendered": "t ",
+          "rendered_normalized": "t ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 6.75,
+          "rendered_ink_width_px": 6.687
+        },
+        {
+          "slide": "page_001",
+          "element": "input_aH_2",
+          "expected": "+",
+          "rendered": "+",
+          "rendered_normalized": "+",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 14.0,
+          "rendered_ink_width_px": 13.686
+        },
+        {
+          "slide": "page_001",
+          "element": "input_aH_3",
+          "expected": "H",
+          "rendered": "H−",
+          "rendered_normalized": "H−",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 22.0,
+          "rendered_ink_width_px": 21.752
+        },
+        {
+          "slide": "page_001",
+          "element": "input_aH_4",
+          "expected": "−1",
+          "rendered": "H−1",
+          "rendered_normalized": "H−1",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 24.5,
+          "rendered_ink_width_px": 24.016
+        },
+        {
+          "slide": "page_001",
+          "element": "input_ellipsis",
+          "expected": "⋮",
+          "rendered": "⋮",
+          "rendered_normalized": "⋮",
+          "matches": true,
+          "actual_fonts": [
+            "DejaVuSans"
+          ],
+          "measured_ink_width_px": 3.5,
+          "rendered_ink_width_px": 3.41
+        },
+        {
+          "slide": "page_001",
+          "element": "output_a0_0",
+          "expected": "a",
+          "rendered": "a",
+          "rendered_normalized": "a",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 16.25,
+          "rendered_ink_width_px": 16.088
+        },
+        {
+          "slide": "page_001",
+          "element": "output_a0_1",
+          "expected": "t",
+          "rendered": "t",
+          "rendered_normalized": "t",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 6.75,
+          "rendered_ink_width_px": 6.687
+        },
+        {
+          "slide": "page_001",
+          "element": "output_a1_0",
+          "expected": "a",
+          "rendered": "at ",
+          "rendered_normalized": "at ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 16.25,
+          "rendered_ink_width_px": 16.088
+        },
+        {
+          "slide": "page_001",
+          "element": "output_a1_1",
+          "expected": "t",
+          "rendered": "t ",
+          "rendered_normalized": "t ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 6.75,
+          "rendered_ink_width_px": 6.687
+        },
+        {
+          "slide": "page_001",
+          "element": "output_a1_2",
+          "expected": "+1",
+          "rendered": "+1",
+          "rendered_normalized": "+1",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 24.5,
+          "rendered_ink_width_px": 24.016
+        },
+        {
+          "slide": "page_001",
+          "element": "output_aH_0",
+          "expected": "a",
+          "rendered": "a",
+          "rendered_normalized": "a",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 16.25,
+          "rendered_ink_width_px": 16.088
+        },
+        {
+          "slide": "page_001",
+          "element": "output_aH_1",
+          "expected": "t",
+          "rendered": "t ",
+          "rendered_normalized": "t ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 6.75,
+          "rendered_ink_width_px": 6.687
+        },
+        {
+          "slide": "page_001",
+          "element": "output_aH_2",
+          "expected": "+",
+          "rendered": "+",
+          "rendered_normalized": "+",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 14.0,
+          "rendered_ink_width_px": 13.686
+        },
+        {
+          "slide": "page_001",
+          "element": "output_aH_3",
+          "expected": "H",
+          "rendered": "H−",
+          "rendered_normalized": "H−",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 22.0,
+          "rendered_ink_width_px": 21.752
+        },
+        {
+          "slide": "page_001",
+          "element": "output_aH_4",
+          "expected": "−1",
+          "rendered": "H−1",
+          "rendered_normalized": "H−1",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 24.5,
+          "rendered_ink_width_px": 24.016
+        },
+        {
+          "slide": "page_001",
+          "element": "output_ellipsis",
+          "expected": "⋮",
+          "rendered": "⋮",
+          "rendered_normalized": "⋮",
+          "matches": true,
+          "actual_fonts": [
+            "DejaVuSans"
+          ],
+          "measured_ink_width_px": 3.5,
+          "rendered_ink_width_px": 3.41
+        },
+        {
+          "slide": "page_001",
+          "element": "legend_module_label",
+          "expected": "Embodiment-Specific Module",
+          "rendered": "Embodiment-Specific Module",
+          "rendered_normalized": "Embodiment-Specific Module",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 364.5,
+          "rendered_ink_width_px": 364.36
+        },
+        {
+          "slide": "page_001",
+          "element": "iteration_label",
+          "expected": "K iterations",
+          "rendered": "K iterations",
+          "rendered_normalized": "K iterations",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 136.75,
+          "rendered_ink_width_px": 136.434
+        },
+        {
+          "slide": "page_001",
+          "element": "motor_label",
+          "expected": "Motor\nAction",
+          "rendered": "Motor\r\nAction",
+          "rendered_normalized": "Motor\r\nAction",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 79.0,
+          "rendered_ink_width_px": 78.622
+        },
+        {
+          "slide": "page_001",
+          "element": "robot_state_label",
+          "expected": "Robot State",
+          "rendered": "Robot State",
+          "rendered_normalized": "Robot State",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 150.0,
+          "rendered_ink_width_px": 149.824
+        },
+        {
+          "slide": "page_001",
+          "element": "noised_action_label",
+          "expected": "Noised Action",
+          "rendered": "Noised Action",
+          "rendered_normalized": "Noised Action",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 175.5,
+          "rendered_ink_width_px": 173.327
+        },
+        {
+          "slide": "page_001",
+          "element": "legend_frozen_label",
+          "expected": "Pre-trained and Frozen",
+          "rendered": "Pre-trained and Frozen",
+          "rendered_normalized": "Pre-trained and Frozen",
+          "matches": true,
+          "actual_fonts": [
+            "ArialMT"
+          ],
+          "measured_ink_width_px": 287.25,
+          "rendered_ink_width_px": 286.574
+        },
+        {
+          "slide": "page_001",
+          "element": "instruction_text",
+          "expected": "“Pick up the apple\nand place it into\nthe bottom shelf”",
+          "rendered": "“Pick up the apple\r\nand place it into\r\nthe bottom shelf”",
+          "rendered_normalized": "“Pick up the apple\r\nand place it into\r\nthe bottom shelf”",
+          "matches": true,
+          "actual_fonts": [
+            "AndaleMono"
+          ],
+          "measured_ink_width_px": 256.5,
+          "rendered_ink_width_px": 255.176
+        },
+        {
+          "slide": "page_001",
+          "element": "state_q_0",
+          "expected": "q",
+          "rendered": "qt",
+          "rendered_normalized": "qt",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 16.5,
+          "rendered_ink_width_px": 16.304
+        },
+        {
+          "slide": "page_001",
+          "element": "state_q_1",
+          "expected": "t",
+          "rendered": "t",
+          "rendered_normalized": "t",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 6.75,
+          "rendered_ink_width_px": 6.687
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "5ca6bb36d3ca53d42718566898ea31dd53f5e3ed6f966fb69362419683519799",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "editability": "editability.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "page_001",
+      "mean_absolute_pixel_error": 0.017074,
+      "comparison": "page_001_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

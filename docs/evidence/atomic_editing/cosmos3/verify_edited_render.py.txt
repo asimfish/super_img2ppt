@@ -1,0 +1,10 @@
+from pathlib import Path
+from PIL import Image,ImageChops,ImageDraw
+import pypdfium2 as pdf,json
+q=Path('/tmp/cosmos3-edit-uBlGYq');d=pdf.PdfDocument(q/'edited_render/edited_operation.pdf');p=d[0];a=p.render(scale=1400/p.get_width()).to_pil().convert('RGB');a.save(q/'edited_actualsourcewidth.png');b=Image.open(q/'grouped_actualsourcewidth.png').convert('RGB');diff=ImageChops.difference(a,b)
+regions={'module_old_new_union':[152,167,335,207],'formula_old_new_union':[503,276,769,308]};outside=diff.copy();dr=ImageDraw.Draw(outside)
+for box in regions.values():dr.rectangle(box,fill=(0,0,0))
+res={'actual_size':a.size,'changed_pixels':sum(px!=(0,0,0) for px in diff.get_flattened_data()),'change_bbox':diff.getbbox(),'allowed_change_rois':regions,'changed_pixels_outside_edit_regions':sum(px!=(0,0,0) for px in outside.get_flattened_data()),'outside_diff_bbox':outside.getbbox()};(q/'edited_render_verification.json').write_text(json.dumps(res,indent=2));print(res)
+for name,box in regions.items():
+ x0,y0,x1,y1=box;out=Image.new('RGB',(x1-x0,(y1-y0)*2+8),'white');out.paste(b.crop(box),(0,0));out.paste(a.crop(box),(0,y1-y0+8));out.resize((out.width*3,out.height*3)).save(q/(name+'_operation_detail.png'))
+out=Image.new('RGB',(1400,1250));out.paste(b,(0,0));out.paste(a,(0,625));out.save(q/'before_after_edit.png')

@@ -1,0 +1,96 @@
+{
+  "status": "fail",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "review",
+      "findings": [
+        {
+          "slide": "font_probe",
+          "code": "unreviewed_scene",
+          "severity": "warning",
+          "elements": [],
+          "message": "Confirm OCR and geometry against the source, then set reviewed=true"
+        }
+      ],
+      "slides": [
+        {
+          "id": "font_probe",
+          "counts": {
+            "text": 1
+          },
+          "intentional_overlaps": [],
+          "text_layouts": {
+            "label": {
+              "scale": 1,
+              "effective_font_size_px": 26,
+              "width_px": 97.5,
+              "height_px": 35.75,
+              "available_width_px": 280,
+              "available_height_px": 55,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 98.0,
+              "required_height_px": 36.25,
+              "fits": true,
+              "lines": [
+                "Encoder"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "fail",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [
+        {
+          "code": "renderer_font_substitution",
+          "slide": "font_probe",
+          "element": "label",
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "message": "The renderer used a different font from the measured face; choose a supported family and rebuild"
+        }
+      ],
+      "text_boxes": [
+        {
+          "slide": "font_probe",
+          "element": "label",
+          "expected": "Encoder",
+          "rendered": "Encoder",
+          "rendered_normalized": "Encoder",
+          "matches": true,
+          "actual_fonts": [
+            "Avenir-Roman"
+          ],
+          "measured_ink_width_px": 95.25,
+          "rendered_ink_width_px": 94.651
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "d2c6dc1dfbc98d90786d576c03d36c5dbf655a17fb06c0b1c69dd65d3c1be5c7",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "editability": "editability.json",
+    "render": "render/"
+  },
+  "comparisons": []
+}

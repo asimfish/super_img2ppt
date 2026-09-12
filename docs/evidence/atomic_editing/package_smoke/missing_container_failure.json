@@ -1,0 +1,164 @@
+{
+  "status": "fail",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "fail",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "encoder_body",
+            "encoder_label"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 6650.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "encoder_body",
+            "key_label_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 119.262
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "encoder_body",
+            "key_label_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 64.688
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "encoder_body",
+            "key_label_2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 151.875
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "key_label_0",
+            "key_label_1"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "key_label_0",
+            "key_label_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "key_label_1",
+            "key_label_2"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "shape": 1,
+            "text": 4
+          },
+          "intentional_overlaps": [],
+          "text_layouts": {
+            "encoder_label": {
+              "scale": 1,
+              "effective_font_size_px": 20,
+              "width_px": 75.25,
+              "height_px": 23.0,
+              "available_width_px": 190,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 75.75,
+              "required_height_px": 23.5,
+              "fits": true,
+              "lines": [
+                "Encoder"
+              ]
+            },
+            "key_label_0": {
+              "scale": 1,
+              "effective_font_size_px": 13,
+              "width_px": 5.75,
+              "height_px": 14.95,
+              "available_width_px": 6.75,
+              "available_height_px": 15.95,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.25,
+              "required_height_px": 15.45,
+              "fits": true,
+              "lines": [
+                "v"
+              ]
+            },
+            "key_label_1": {
+              "scale": 1,
+              "effective_font_size_px": 8.45,
+              "width_px": 4.25,
+              "height_px": 9.75,
+              "available_width_px": 5.25,
+              "available_height_px": 10.75,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 4.75,
+              "required_height_px": 10.25,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "key_label_2": {
+              "scale": 1,
+              "effective_font_size_px": 8.45,
+              "width_px": 12.0,
+              "height_px": 9.75,
+              "available_width_px": 13.0,
+              "available_height_px": 10.75,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 12.5,
+              "required_height_px": 10.25,
+              "fits": true,
+              "lines": [
+                "AR"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "c1694943a238b8e85e04bd62af7fd987361d3ffb9d74d770aa8ebeff4323ecd9",
+  "font_substitutions": []
+}

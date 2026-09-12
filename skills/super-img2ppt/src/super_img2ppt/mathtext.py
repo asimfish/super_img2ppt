@@ -210,7 +210,20 @@ def compose_file(source: Path, out: Path, font_dirs: tuple[Path, ...] = ()) -> d
         spec = json.loads(raw, object_pairs_hook=_unique_pairs)
         catalog = FontCatalog(extra_dirs=font_dirs)
         result = compose_math(spec, catalog)
-        json_write(out / "elements.json", result.pop("elements"))
+        elements = result.pop("elements")
+        json_write(out / "elements.json", elements)
+        json_write(
+            out / "groups.json",
+            [
+                {
+                    "id": spec["id"],
+                    "members": [e["id"] for e in elements],
+                    "description": "Formula parts: move together; enter the group to edit individual styles",
+                }
+            ]
+            if len(elements) > 1
+            else [],
+        )
         json_write(out / "fonts.json", catalog.manifest())
         report = result
         return report

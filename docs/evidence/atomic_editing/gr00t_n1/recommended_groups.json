@@ -1,0 +1,295 @@
+{
+  "schema_note": "Recommendations only: containers are not native PowerPoint groups in current schema.",
+  "groups": [
+    {
+      "id": "input_vision_tokens",
+      "member_ids": [
+        "input_vision_token_0",
+        "input_vision_token_1",
+        "input_vision_token_2",
+        "input_vision_token_3",
+        "input_vision_token_4",
+        "input_vision_token_5",
+        "input_vision_token_6"
+      ],
+      "reason": "Move one semantic token sequence as a strip; preserve per-token native rectangles for optional count/color editing."
+    },
+    {
+      "id": "input_language_tokens",
+      "member_ids": [
+        "input_language_token_0",
+        "input_language_token_1",
+        "input_language_token_2",
+        "input_language_token_3"
+      ],
+      "reason": "Move one semantic token sequence as a strip; preserve per-token native rectangles for optional count/color editing."
+    },
+    {
+      "id": "output_vision_tokens",
+      "member_ids": [
+        "output_vision_token_0",
+        "output_vision_token_1",
+        "output_vision_token_2",
+        "output_vision_token_3",
+        "output_vision_token_4",
+        "output_vision_token_5",
+        "output_vision_token_6"
+      ],
+      "reason": "Move one semantic token sequence as a strip; preserve per-token native rectangles for optional count/color editing."
+    },
+    {
+      "id": "output_language_tokens",
+      "member_ids": [
+        "output_language_token_0",
+        "output_language_token_1",
+        "output_language_token_2",
+        "output_language_token_3"
+      ],
+      "reason": "Move one semantic token sequence as a strip; preserve per-token native rectangles for optional count/color editing."
+    },
+    {
+      "id": "dit_input_state_tokens",
+      "member_ids": [
+        "dit_input_state_0",
+        "dit_input_state_1"
+      ],
+      "reason": "A semantically single state/action token strip; moving individual cells is rarely the intended edit."
+    },
+    {
+      "id": "dit_input_action_tokens",
+      "member_ids": [
+        "dit_input_action_0",
+        "dit_input_action_1",
+        "dit_input_action_2",
+        "dit_input_action_3",
+        "dit_input_action_4",
+        "dit_input_action_5",
+        "dit_input_action_6",
+        "dit_input_action_7",
+        "dit_input_action_8"
+      ],
+      "reason": "A semantically single state/action token strip; moving individual cells is rarely the intended edit."
+    },
+    {
+      "id": "dit_output_state_tokens",
+      "member_ids": [
+        "dit_output_state_0",
+        "dit_output_state_1"
+      ],
+      "reason": "A semantically single state/action token strip; moving individual cells is rarely the intended edit."
+    },
+    {
+      "id": "dit_output_action_tokens",
+      "member_ids": [
+        "dit_output_action_0",
+        "dit_output_action_1",
+        "dit_output_action_2",
+        "dit_output_action_3",
+        "dit_output_action_4",
+        "dit_output_action_5",
+        "dit_output_action_6",
+        "dit_output_action_7",
+        "dit_output_action_8"
+      ],
+      "reason": "A semantically single state/action token strip; moving individual cells is rarely the intended edit."
+    },
+    {
+      "id": "vision_module",
+      "member_ids": [
+        "vision",
+        "vision_label_0",
+        "vision_label_1"
+      ],
+      "reason": "Move the module body and its complete editable label together; each label line stays one text object."
+    },
+    {
+      "id": "tokenizer_module",
+      "member_ids": [
+        "tokenizer",
+        "tokenizer_label_0",
+        "tokenizer_label_1"
+      ],
+      "reason": "Move the module body and its complete editable label together; each label line stays one text object."
+    },
+    {
+      "id": "vlm_module",
+      "member_ids": [
+        "vlm",
+        "vlm_label_0",
+        "vlm_label_1"
+      ],
+      "reason": "Move the module body and its complete editable label together; each label line stays one text object."
+    },
+    {
+      "id": "state_encoder_module",
+      "member_ids": [
+        "state_encoder",
+        "state_encoder_label_0",
+        "state_encoder_label_1"
+      ],
+      "reason": "Move the module body and its complete editable label together; each label line stays one text object."
+    },
+    {
+      "id": "action_encoder_module",
+      "member_ids": [
+        "action_encoder",
+        "action_encoder_label_0",
+        "action_encoder_label_1"
+      ],
+      "reason": "Move the module body and its complete editable label together; each label line stays one text object."
+    },
+    {
+      "id": "decoder_module",
+      "member_ids": [
+        "decoder",
+        "decoder_label_0",
+        "decoder_label_1"
+      ],
+      "reason": "Move the module body and its complete editable label together; each label line stays one text object."
+    },
+    {
+      "id": "cross_1_module",
+      "member_ids": [
+        "cross_1",
+        "cross_1_label"
+      ],
+      "reason": "Move one attention sublayer as a unit; its whole rotated word remains one native editable text box."
+    },
+    {
+      "id": "self_1_module",
+      "member_ids": [
+        "self_1",
+        "self_1_label"
+      ],
+      "reason": "Move one attention sublayer as a unit; its whole rotated word remains one native editable text box."
+    },
+    {
+      "id": "cross_2_module",
+      "member_ids": [
+        "cross_2",
+        "cross_2_label"
+      ],
+      "reason": "Move one attention sublayer as a unit; its whole rotated word remains one native editable text box."
+    },
+    {
+      "id": "self_2_module",
+      "member_ids": [
+        "self_2",
+        "self_2_label"
+      ],
+      "reason": "Move one attention sublayer as a unit; its whole rotated word remains one native editable text box."
+    },
+    {
+      "id": "vlm_frozen_icon",
+      "member_ids": [
+        "vlm_frozen_icon_arm_0",
+        "vlm_frozen_icon_twig_0_0",
+        "vlm_frozen_icon_twig_0_1",
+        "vlm_frozen_icon_arm_1",
+        "vlm_frozen_icon_twig_1_0",
+        "vlm_frozen_icon_twig_1_1",
+        "vlm_frozen_icon_arm_2",
+        "vlm_frozen_icon_twig_2_0",
+        "vlm_frozen_icon_twig_2_1",
+        "vlm_frozen_icon_arm_3",
+        "vlm_frozen_icon_twig_3_0",
+        "vlm_frozen_icon_twig_3_1",
+        "vlm_frozen_icon_arm_4",
+        "vlm_frozen_icon_twig_4_0",
+        "vlm_frozen_icon_twig_4_1",
+        "vlm_frozen_icon_arm_5",
+        "vlm_frozen_icon_twig_5_0",
+        "vlm_frozen_icon_twig_5_1"
+      ],
+      "reason": "Snowflake is one freeze-status symbol; all native strokes should move together, never as individual editing targets."
+    },
+    {
+      "id": "legend_frozen_icon",
+      "member_ids": [
+        "legend_frozen_icon_arm_0",
+        "legend_frozen_icon_twig_0_0",
+        "legend_frozen_icon_twig_0_1",
+        "legend_frozen_icon_arm_1",
+        "legend_frozen_icon_twig_1_0",
+        "legend_frozen_icon_twig_1_1",
+        "legend_frozen_icon_arm_2",
+        "legend_frozen_icon_twig_2_0",
+        "legend_frozen_icon_twig_2_1",
+        "legend_frozen_icon_arm_3",
+        "legend_frozen_icon_twig_3_0",
+        "legend_frozen_icon_twig_3_1",
+        "legend_frozen_icon_arm_4",
+        "legend_frozen_icon_twig_4_0",
+        "legend_frozen_icon_twig_4_1",
+        "legend_frozen_icon_arm_5",
+        "legend_frozen_icon_twig_5_0",
+        "legend_frozen_icon_twig_5_1"
+      ],
+      "reason": "Snowflake is one freeze-status symbol; all native strokes should move together, never as individual editing targets."
+    },
+    {
+      "id": "state_q",
+      "member_ids": [
+        "state_q_0",
+        "state_q_1"
+      ],
+      "reason": "One mathematical quantity: baseline and subscript must move together. Components preserve math style; grouping must not flatten editable text."
+    },
+    {
+      "id": "input_a0",
+      "member_ids": [
+        "input_a0_0",
+        "input_a0_1"
+      ],
+      "reason": "One mathematical quantity: baseline and subscript must move together. Components preserve math style; grouping must not flatten editable text."
+    },
+    {
+      "id": "input_a1",
+      "member_ids": [
+        "input_a1_0",
+        "input_a1_1",
+        "input_a1_2"
+      ],
+      "reason": "One mathematical quantity: baseline and subscript must move together. Components preserve math style; grouping must not flatten editable text."
+    },
+    {
+      "id": "input_aH",
+      "member_ids": [
+        "input_aH_0",
+        "input_aH_1",
+        "input_aH_2",
+        "input_aH_3",
+        "input_aH_4"
+      ],
+      "reason": "One mathematical quantity: baseline and subscript must move together. Components preserve math style; grouping must not flatten editable text."
+    },
+    {
+      "id": "output_a0",
+      "member_ids": [
+        "output_a0_0",
+        "output_a0_1"
+      ],
+      "reason": "One mathematical quantity: baseline and subscript must move together. Components preserve math style; grouping must not flatten editable text."
+    },
+    {
+      "id": "output_a1",
+      "member_ids": [
+        "output_a1_0",
+        "output_a1_1",
+        "output_a1_2"
+      ],
+      "reason": "One mathematical quantity: baseline and subscript must move together. Components preserve math style; grouping must not flatten editable text."
+    },
+    {
+      "id": "output_aH",
+      "member_ids": [
+        "output_aH_0",
+        "output_aH_1",
+        "output_aH_2",
+        "output_aH_3",
+        "output_aH_4"
+      ],
+      "reason": "One mathematical quantity: baseline and subscript must move together. Components preserve math style; grouping must not flatten editable text."
+    }
+  ]
+}

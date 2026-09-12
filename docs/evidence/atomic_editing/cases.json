@@ -1,0 +1,119 @@
+[
+  {
+    "id": "cosmos3",
+    "base": "/tmp/cosmos3-edit-uBlGYq",
+    "build": "/tmp/cosmos3-edit-uBlGYq/grouped_01",
+    "source": "examples/gallery/cosmos3/source.png",
+    "actual": "/tmp/cosmos3-edit-uBlGYq/actualsourcewidth.png",
+    "attribution": "examples/gallery/cosmos3/ATTRIBUTION.md",
+    "paper": "Cosmos 3 / arXiv 2606.02800v4 / grouped editing edition",
+    "figure": 5,
+    "destination": "examples/editing/cosmos3",
+    "rasterization": {
+      "engine": "pdfium",
+      "crop_to_source_size": false
+    },
+    "evidence_folders": [
+      "edited_render"
+    ],
+    "extra_evidence": [
+      [
+        "edited_operation.pptx",
+        "edited_operation.pptx"
+      ],
+      [
+        "edited_actualsourcewidth.png",
+        "edited_actual.png"
+      ],
+      [
+        "published_actualsourcewidth.png",
+        "before_actual.png"
+      ],
+      [
+        "before_after_edit.png",
+        "before_after_edit.png"
+      ],
+      [
+        "module_old_new_union_operation_detail.png",
+        "module_edit.png"
+      ],
+      [
+        "formula_old_new_union_operation_detail.png",
+        "formula_edit.png"
+      ]
+    ]
+  },
+  {
+    "id": "robodream",
+    "base": "/tmp/robodream_atomic_20260912",
+    "build": "/tmp/robodream_atomic_20260912/full_job/build_13_grouped",
+    "source": "/tmp/robodream_atomic_20260912/source.png",
+    "actual": "/tmp/robodream_atomic_20260912/actual_source_width.png",
+    "attribution": "output/atomic_gallery_20260912/robodream_attribution.md",
+    "paper": "RoboDream / arXiv 2606.02577v1 / June 2026",
+    "figure": 2,
+    "rasterization": {
+      "engine": "pdfium",
+      "crop_to_source_size": true
+    },
+    "evidence_folders": [
+      "edit_probe_final3",
+      "trace_render",
+      "trace_render_02",
+      "trace_render_start",
+      "font_subfamily_repro_build",
+      "trace_trajectory",
+      "trace_trajectory_02",
+      "trace_merge_top",
+      "trace_merge_top_02",
+      "trace_merge_bottom",
+      "trace_merge_bottom_02"
+    ],
+    "extra_evidence": [
+      [
+        "render_start_comparison.png",
+        "render_start_comparison.png"
+      ],
+      [
+        "flat_source_width.png",
+        "flat_actual.png"
+      ],
+      [
+        "full_job/build_14_flat/editable.pptx",
+        "before_grouping.pptx"
+      ]
+    ]
+  },
+  {
+    "id": "gr00t_n1",
+    "base": "/tmp/gr00t-n1-JvpkoE",
+    "build": "/tmp/gr00t-n1-JvpkoE/build_09_merged_grouped",
+    "source": "/tmp/gr00t-n1-JvpkoE/source.png",
+    "actual": "/tmp/gr00t-n1-JvpkoE/build_09_merged_grouped/actual_sourcecanvas.png",
+    "attribution": "output/atomic_gallery_20260912/gr00t_n1_attribution.md",
+    "paper": "GR00T N1 / arXiv 2503.14734v2 / March 2025",
+    "figure": 3,
+    "rasterization": {
+      "engine": "pdfium",
+      "crop_to_source_size": true
+    },
+    "evidence_folders": [
+      "edit_test_merged",
+      "edit_test"
+    ],
+    "extra_evidence": [
+      [
+        "build_05_grouped/editable.pptx",
+        "before_label_merge.pptx"
+      ],
+      [
+        "build_05_grouped/actual_sourcecanvas.png",
+        "before_label_merge.png"
+      ],
+      [
+        "build_10_merged_flat/editable.pptx",
+        "before_grouping.pptx"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,125 @@
+{
+  "previous_cases": {
+    "count": 15,
+    "files_checked": 320,
+    "changed_files": 0,
+    "baseline": "a1ebc92c568750b01fc111db9f4279aacdbce444"
+  },
+  "editing_cases": [
+    {
+      "id": "cosmos3",
+      "native_check": "pass",
+      "groups": 81,
+      "native_leaves": 414,
+      "images": 1,
+      "root_selectable_objects": 37
+    },
+    {
+      "id": "robodream",
+      "native_check": "pass",
+      "groups": 27,
+      "native_leaves": 227,
+      "images": 5,
+      "root_selectable_objects": 48
+    },
+    {
+      "id": "gr00t_n1",
+      "native_check": "pass",
+      "groups": 34,
+      "native_leaves": 159,
+      "images": 2,
+      "root_selectable_objects": 41
+    }
+  ],
+  "archives": [
+    {
+      "path": "examples/gallery/paper_gallery.zip",
+      "bytes": 24430750,
+      "sha256": "6ca03dc95ff6a7dac83a8443aca183fa1598929edd60daad51073dd424358e13",
+      "all_member_checksums_verified": true,
+      "deterministic_rebuild": true
+    },
+    {
+      "path": "examples/editing/editing_examples.zip",
+      "bytes": 3593936,
+      "sha256": "8fc128353e6619936cb8b1f1689c5c687e867f331d274ac83a12966b707fa65b",
+      "all_member_checksums_verified": true,
+      "deterministic_rebuild": true
+    }
+  ],
+  "package": {
+    "version": "0.3.7",
+    "sha256": "c318e734604b32ee39dce743997564884c035ae72304fd4c152cf99372be7229",
+    "actual_smoke": "package_smoke/result.json",
+    "all_executable_and_config_bytes_identical_to_isolated_smoke": true,
+    "subsequent_reference_only_changes": [
+      "references/curves.md",
+      "references/editing.md"
+    ],
+    "reference_changes": "Document visible curve endpoint checks and prefer one multiline same-style label; runtime unchanged."
+  },
+  "checks": [
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "exit": 0,
+      "output": "All checks passed!\n"
+    },
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "exit": 0,
+      "output": "181 files already formatted\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/verify_skill.py"
+      ],
+      "exit": 0,
+      "output": "{\n  \"status\": \"pass\",\n  \"activation_cases\": 8,\n  \"problems\": [],\n  \"scope\": \"Static package checks; semantic review and forward tests are separate evidence\"\n}\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/build_capability_registry.py",
+        "--check"
+      ],
+      "exit": 0,
+      "output": "Capability registry is current\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "/Users/liyufeng/Code/cursur/skills/agent_meta/skill-quality-gate/scripts/audit_skill_governance.py",
+        "--repo",
+        "/Users/liyufeng/code/super_img2ppt",
+        "--json"
+      ],
+      "exit": 0,
+      "output": "{\n  \"verdict\": \"PASS\",\n  \"skills_checked\": [\n    \"super-img2ppt\"\n  ],\n  \"findings\": [],\n  \"semantic_review\": \"REQUIRED \u2014 deterministic checks do not prove behavior-description alignment\"\n}\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "/Users/liyufeng/Code/cursur/skills/agent_meta/skill-creator/scripts/quick_validate.py",
+        "skills/super-img2ppt"
+      ],
+      "exit": 0,
+      "output": "Skill is valid!\n"
+    }
+  ],
+  "tests": "132 passed; full_tests.log",
+  "semantic_review": {
+    "status": "pass_with_explicit_limits",
+    "scope": "Explicit groups preserve nested native leaves, paint order and source geometry; recursive native QA checks membership and every leaf. Multi-parent/cycle/depth/count constraints bound grouping input. No added external process or network capability; existing paths and render boundaries unchanged. Flat/grouped actual pixels and saved-document edits independently verified on two new raster-source figures and one existing complex figure. User-edit granularity uses whole labels, necessary formula parts, per-curve groups and nested modules. No automatic semantic grouping, external-arrow routing, original chart-data recovery or Office equations. Native PowerPoint/WPS UI not tested. Source typography remains approximate; Avenir subfamily failure preserved, blocking check not weakened."
+  },
+  "status": "pass"
+}

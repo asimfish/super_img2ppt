@@ -1,0 +1,31 @@
+import json
+from pathlib import Path
+from PIL import Image,ImageChops
+import pypdfium2 as pdf
+R=Path('/tmp/robodream_atomic_20260912');J=R/'full_job';src=Image.open(R/'source.png').convert('RGB');recipes={}
+def raster(name,path):
+ d=pdf.PdfDocument(path);p=d[0];scale=1916/p.get_width();im=p.render(scale=scale).to_pil().convert('RGB');raw=im.size;crop=False
+ if im.height==909 and im.crop((0,908,1916,909)).getextrema()==((255,255),(255,255),(255,255)):im=im.crop((0,0,1916,908));crop=True
+ recipes[name]={'page_pt':[p.get_width(),p.get_height()],'scale':scale,'raw_size':raw,'final_size':im.size,'white_bottom_row_cropped':crop};im.save(R/f'{name}.png');return im
+base=raster('actual_source_width',J/'build_13_grouped/render/editable.pdf');flat=raster('flat_source_width',J/'build_14_flat/render/editable.pdf');orig=raster('original_order_source_width',J/'build_06/render/editable.pdf');edit=raster('edit_probe_final3/edited_source_width',R/'edit_probe_final3/edited.pdf')
+def diff(a,b):
+ d=ImageChops.difference(a,b);return {'changed_pixels':sum(max(v)>0 for v in d.getdata()),'bounds':d.getbbox()}
+comparisons={'flat_vs_grouped':diff(flat,base),'pre_lineheight_vs_final_flat':diff(orig,flat),'edited_vs_grouped':diff(edit,base)}
+# Fixed ROIs and masks, no registration or threshold relaxation.
+rois={'projector':([774,41,904,105],'dark'),'instruction':([1627,39,1884,103],'dark'),'dit_label':([1095,488,1248,554],'white'),'trajectory_curve':([120,29,267,116],'gray'),'concat':([777,412,900,475],'dark')};results={}
+for n,(b,kind) in rois.items():
+ a=src.crop(b);z=base.crop(b);c=Image.new('RGB',(a.width*2,a.height),'white');c.paste(a);c.paste(z,(a.width,0));c.resize((c.width*3,c.height*3)).save(R/f'detail_{n}.png')
+ def mask(im):
+  px=im.getdata();return {i for i,v in enumerate(px) if (max(v)<145 if kind=='dark' else min(v)>235 if kind=='white' else 100<min(v) and max(v)<220)}
+ aa=mask(a);bb=mask(z)
+ def bounds(m,w):
+  if not m:return None
+  xs=[v%w for v in m];ys=[v//w for v in m];return [min(xs),min(ys),max(xs),max(ys)]
+ ba=bounds(aa,a.width);bz=bounds(bb,z.width);results[n]={'roi':b,'mask':kind,'source_ink_bounds':ba,'actual_ink_bounds':bz,'edge_delta':[q-p for p,q in zip(ba,bz)] if ba and bz else None,'iou':len(aa&bb)/max(1,len(aa|bb))}
+# Editing difference must remain inside intended group/label regions. Confirm pixels outside are identical.
+allowed=[(115,25,285,120),(365,520,500,563)]
+changed=[(i%1916,i//1916)for i,v in enumerate(ImageChops.difference(edit,base).getdata()) if max(v)>0]
+outside=[(x,y)for x,y in changed if not any(l<=x<r and t<=y<b for l,t,r,b in allowed)]
+comparisons['edit_probe_allowed_ROIs']=allowed;comparisons['edit_probe_changed_pixels_outside_ROIs']=len(outside)
+c=Image.new('RGB',(1916,1816),'white');c.paste(src);c.paste(base,(0,908));c.save(R/'source_comparison.png')
+(R/'measurements.json').write_text(json.dumps({'raster_recipes':recipes,'render_comparisons':comparisons,'source_comparisons':results},indent=2));print(json.dumps(comparisons));print(results)

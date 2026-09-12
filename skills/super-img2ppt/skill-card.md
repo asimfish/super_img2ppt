@@ -1,6 +1,6 @@
 # Super Img2PPT capability card
 
-Owner: super_img2ppt contributors. Version: 0.3.6. Risk: scoped_change.
+Owner: super_img2ppt contributors. Version: 0.3.7. Risk: scoped_change.
 Canonical owner: this repository's `skills/super-img2ppt`.
 
 Reads: user-selected image/PDF/PPTX files; scene JSON and relative local assets; installed font
@@ -70,3 +70,12 @@ Diagonal native text extends the bounded rotation field and formula common-pivot
 Actual PDF glyph-center ownership uses the rotated frame; width comparison uses common page
 axes. PDF glyph rectangles do not prove exact slanted-edge containment, so diagonal text
 always retains a visual-review warning; missing text/font substitution still block.
+
+## v0.3.7 editability boundary
+
+Optional semantic groups become native nested PPTX/SVG groups; formula and curve helpers
+emit matching group definitions. Group ids appear in the Selection Pane, and editability.json
+lists child membership and remaining ungrouped objects. Grouping preserves children and stable
+paint order; interleaving groups, repeated parents, cycles and depth above eight are rejected.
+No automatic semantic grouping, chart-data recovery, Office equation objects, external-arrow
+rerouting or native PowerPoint/WPS UI verification is claimed.

@@ -1,0 +1,77 @@
+[
+  {
+    "case": "cosmos3",
+    "command": [
+      ".venv/bin/super-img2ppt",
+      "build",
+      "examples/editing/cosmos3/scene.resolved.json",
+      "--out",
+      "output/atomic_gallery_20260912/replay_cosmos3",
+      "--font-dir",
+      "/System/Library/Fonts/Supplemental",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+    ],
+    "status": "review",
+    "raw_size": [
+      1400,
+      625
+    ],
+    "actual_size": [
+      1400,
+      625
+    ],
+    "changed_pixels": 0,
+    "actual_sha256": "cadbeee3ecce248fc0d443244b4bbd5b3dd3c5d852d53a9f6ad7a1c47f9f4768"
+  },
+  {
+    "case": "robodream",
+    "command": [
+      ".venv/bin/super-img2ppt",
+      "build",
+      "examples/gallery/robodream/scene.resolved.json",
+      "--out",
+      "output/atomic_gallery_20260912/replay_robodream",
+      "--font-dir",
+      "/System/Library/Fonts/Supplemental",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+    ],
+    "status": "pass",
+    "raw_size": [
+      1916,
+      909
+    ],
+    "actual_size": [
+      1916,
+      908
+    ],
+    "changed_pixels": 0,
+    "actual_sha256": "2697e39044c5576df2ac7e2bbc8d4767364755300c6f5e2323416567a3f917c1"
+  },
+  {
+    "case": "gr00t_n1",
+    "command": [
+      ".venv/bin/super-img2ppt",
+      "build",
+      "examples/gallery/gr00t_n1/scene.resolved.json",
+      "--out",
+      "output/atomic_gallery_20260912/replay_gr00t_n1",
+      "--font-dir",
+      "/System/Library/Fonts/Supplemental",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype"
+    ],
+    "status": "review",
+    "raw_size": [
+      1891,
+      987
+    ],
+    "actual_size": [
+      1891,
+      986
+    ],
+    "changed_pixels": 0,
+    "actual_sha256": "704fe79c0cd0ebe072ed7663b4cd8a4afdd4b08a3e6f0b6d05e5e0eab20c4f45"
+  }
+]
