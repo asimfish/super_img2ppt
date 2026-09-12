@@ -1,0 +1,40 @@
+import json,pathlib
+p=pathlib.Path(__file__).parent; E=[]
+def sh(i,b,fill=None,stroke='#808080',kind='rect',z=2,**kw): E.append(dict(id=i,kind='shape',z=z,box=b,shape=kind,fill=fill,stroke=stroke,stroke_width=.9,**kw))
+def tx(i,s,b,size=15,**kw): E.append(dict(id=i,kind='text',z=10,box=b,text=s,font_family='Times New Roman',font_size=size,color='#000000',wrap=False,fit='strict',**kw))
+def ln(i,a,b,arrow=False,z=3,**kw): E.append(dict(id=i,kind='line',z=z,points=[a,b],stroke='#000000',stroke_width=.9,arrow=arrow,**({'arrow_head':{'length':4,'width':4}} if arrow else {}),**kw))
+def box(i,b,s,fill='#F6F6F6',size=15):
+ sh(i,b,fill,kind='round_rect',radius=5); tx(i+'_text',s,[b[0]+3,b[1],b[2]-6,b[3]],size,align='center',valign='middle',container=i)
+sh('legend',[15,14,120,120],None,'#000000',z=1,dash=[5,4],kind='round_rect',radius=4)
+for n,y,c,t in [('projection',22,'#DFD3E2','Projection Layer'),('patch',51,'#FBE2E2','Patch Tokens'),('position',79,'#EEEEEE','Position Embed.'),('class',106,'#DFDDE8','Class Token')]:
+ sh('legend_'+n,[22,y,19 if n=='projection' else 10,17],c,stroke='#888888' if n=='projection' else None);tx('legend_'+n+'_label',t,[47,y-2,87,20],12)
+sh('legend_patch2',[32,51,9,17],'#FBE2E2',None);sh('legend_pos2',[32,79,9,17],'#EEEEEE',None);tx('legend_num','0 1',[23,77,20,20],11);tx('legend_star','*',[23,106,9,15],12,color='#9993AB') if False else None
+tx('legend_star','*',[23,106,9,15],12)
+box('mlp',[158,11,208,30],'MLP & Prediction');box('vision',[158,64,208,44],'Vision Mamba Encoder');box('flatten',[158,156,208,30],'Flatten & Linear Projection')
+ln('to_mlp',[276,64],[276,41],True)
+for i,x in enumerate([163,183,203,223,243,263,283,303,323,343]):
+ sh('token_'+str(i),[x,124,18,17],'#EEEEEE',None);sh('patch_token_'+str(i),[x+10,124,8,17],'#FBE2E2',None)
+ tx('num_'+str(i),str(i),[x+1,122,9,20],12)
+ ln('token_arrow_'+str(i),[x+15,124],[x+15,109],True);ln('token_proj_'+str(i),[x+14,156],[x+14,141])
+sh('class_token',[273,124,10,17],'#DFDDE8',None);tx('class_star','*',[274,123,9,18],12)
+for i,x in enumerate([175,195,215,235,255,294,314,334,354]): ln('patch_proj_'+str(i),[x,201],[x,186])
+for n,b in [('input_image',[23,174,104,73]),('patch_left',[168,201,97,20]),('patch_right',[286,201,78,20])]: E.append(dict(id=n,kind='image',z=4,box=b,path='assets/'+n+'.png',contains_text=False,provenance='Exact image-only crop from official PMLR Figure 2 PDF raster; CC BY 4.0.'))
+tx('input_label','Input Image',[20,151,110,23],15,align='center');tx('vim_title','Vision Mamba (Vim)',[172,232,206,24],15,bold=True,align='center')
+ln('image_to_patch',[127,210],[167,210],True)
+E.append(dict(id='divider',kind='line',z=3,points=[[381,4],[381,254]],stroke='#888888',stroke_width=2,dash=[8,7]))
+sh('encoder_panel',[436,11,525,218],'#F5F5F5',kind='round_rect',radius=8,z=0,role='background')
+sh('embedded',[394,45,30,145],'#FBE2E2','#D7CCCC',kind='round_rect',radius=5)
+tx('embedded_text','Embedded Patches',[332,103,155,29],15,rotation=90,align='center',valign='middle',container='embedded')
+box('norm',[464,106,57,23],'Norm')
+for i,b in [('proj_x',[546,24,28,66]),('proj_z',[546,145,28,66]),('proj_y',[896,85,28,66])]:sh(i,b,'#DFD3E2',kind='polygon',vertices=[[0,.1],[1,0],[1,1],[0,.9]])
+box('forward_conv',[621,40,84,35],'Forward\nConv1d','#F8EDDA');box('backward_conv',[621,100,84,35],'Backward\nConv1d','#E7EDF5');box('forward_ssm',[725,40,71,35],'Forward\nSSM','#FCE5BF');box('backward_ssm',[725,100,71,35],'Backward\nSSM','#D9E7FD');box('activation',[621,165,83,25],'Activation')
+for i,a,b,arr in [('embedded_norm',[424,117],[464,117],1),('norm_split',[521,117],[533,117],0),('split_top',[533,117],[533,58],0),('split_top_proj',[533,58],[546,58],1),('split_bottom',[533,117],[533,178],0),('split_bottom_proj',[533,178],[546,178],1),('proj_x_label',[574,58],[591,58],1),('x_forward',[606,58],[621,58],1),('x_down',[597,66],[597,118],0),('x_back',[597,118],[621,118],1),('proj_z_label',[574,178],[594,178],1),('z_activation',[606,178],[621,178],1),('fc_fs',[705,58],[725,58],1),('bc_bs',[705,118],[725,118],1),('fs_mul',[796,58],[831,58],1),('bs_mul',[796,118],[814,118],1),('activation_branch',[704,178],[836,178],0),('branch_up',[836,178],[836,64],1),('branch2',[819,178],[819,124],1),('mul_f_right',[842,58],[857,58],0),('f_merge',[857,58],[857,111],1),('mul_b_right',[825,118],[851,118],1),('merge_y',[863,118],[874,118],1),('y_proj',[884,118],[896,118],1),('proj_residual',[924,118],[935,118],1),('out',[946,118],[972,118],1),('residual_down',[450,117],[450,220],0),('residual_base',[450,220],[940,220],0),('residual_up',[940,220],[940,124],1),('h_f_1',[760,40],[760,31],0),('h_f_2',[760,31],[806,31],0),('h_f_3',[806,31],[806,83],0),('h_f_4',[806,83],[760,83],0),('h_f_5',[760,83],[760,76],1),('h_b_1',[760,135],[760,143],0),('h_b_2',[760,143],[806,143],0),('h_b_3',[806,143],[806,91],0),('h_b_4',[806,91],[760,91],0),('h_b_5',[760,91],[760,100],1)]: ln(i,a,b,bool(arr))
+for i,x,y,s in [('multiply_forward',836,58,'×'),('multiply_backward',819,118,'×'),('merge',857,118,'+'),('residual',940,118,'+')]:
+ sh(i,[x-5.5,y-5.5,11,11],'#F5F5F5','#000000',kind='ellipse',z=6); tx(i+'_symbol',s,[x-5,y-10,11,20],14,align='center',valign='middle',allow_overlap_with=[i],overlap_reason='Symbol inside source merge circle')
+for n,s,b in [('x','x',[592,46,13,22]),('z','z',[596,166,13,22]),('y','y',[874,106,13,22]),('hf','h',[762,12,10,20]),('hb','h',[761,141,10,20])]:tx(n,s,b,15,italic=True)
+tx('hf_sub','forward',[772,19,44,14],10);tx('hb_sub','backward',[772,149,48,14],10);tx('repeat','L×',[925,19,28,20],15);tx('encoder_title','Vision Mamba Encoder',[586,231,216,25],15,bold=True,align='center')
+# Declare only pairs whose intended intersections are verified in the source: lines at junctions,
+# shapes enclosing their labels, and layered token strips. Runtime still checks distinct text pairs.
+from super_img2ppt.scene import load_scene
+scene={'version':1,'slides':[{'id':'page_001','width':980,'height':258,'source':'source.png','background':'#FFFFFF','reviewed':True,'notes':'Complete published Figure 2; attribution in ATTRIBUTION.md. Image-only crops retained.','elements':E}]}
+(p/'scene.json').write_text(json.dumps(scene,indent=2))

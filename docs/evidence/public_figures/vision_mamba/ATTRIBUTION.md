@@ -1,0 +1,3 @@
+Figure 2 adapted from Lianghui Zhu, Bencheng Liao, Qian Zhang, Xinlong Wang, Wenyu Liu and Xinggang Wang, “Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model,” ICML 2024, PMLR 235:62429–62442. https://proceedings.mlr.press/v235/zhu24f.html
+
+CC BY 4.0: https://creativecommons.org/licenses/by/4.0/ . Publisher grant: https://proceedings.mlr.press/pmlr-license-agreement.html paragraphs 2–3. Changes: figure cropped from rasterized official PDF, labels and geometry reconstructed as editable native objects; three image-only crops retained. No endorsement implied.

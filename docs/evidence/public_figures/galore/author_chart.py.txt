@@ -1,0 +1,37 @@
+import json,pathlib
+p=pathlib.Path('/tmp/galore-forward-uEPOph/chart');els=[]
+def add(e):e['z']=len(els)+1;els.append(e);return e
+def text(id,t,x,y,w,h=32,size=24.5,align='left',**kw):return add(dict(id=id,kind='text',box=[x,y,w,h],text=t,font_size=size,font_family='Times New Roman',color='#000000',align=align,fit='strict',wrap=False,**kw))
+def line(id,x1,y1,x2,y2,color='#000000',sw=1,**kw):return add(dict(id=id,kind='line',points=[[x1,y1],[x2,y2]],stroke=color,stroke_width=sw,**kw))
+configs=[('130',79,34,576,358,[50,45,40,35,30,25,20],[34,88,142,196,250,304,358],['0.5','1.0','1.5','2.0'],[186,294,402,510],'LLaMA-130M'),('350',659,34,1157,358,[40,35,30,25,20,15],[34,98.8,163.6,228.4,293.2,358],['0','2','4','6','8'],[674,792,910,1028,1145],'LLaMA-350M'),('1b',79,468,576,792,[30,25,20,15],[468,563.3,658.7,754],['0.0','2.5','5.0','7.5','10.0','12.5'],[97,184.7,272.4,360.1,447.8,535.5],'LLaMA-1B'),('7b',659,468,1157,792,[24,22,20,18,16,14],[495,549,603,657,711,765],['0','5','10','15','20'],[679,795.4,911.8,1028.2,1144.6],'LLaMA-7B')]
+for name,l,t,r,b,yt,yp,xt,xp,title in configs:
+ text(name+'title',title,l,max(.5,t-34.5),r-l,32,24.7,'center')
+ text(name+'xlabel1','Token',l+140,b+34,75,34,25)
+ text(name+'xlabel2','Seen',l+210,b+34,53,34,25)
+ text(name+'xlabel3','(Billions)',l+263,b+34,103,34,25)
+ cy=(t+b)/2;text(name+'ylabel','Perplexity',l-111,cy-16,116,33,25,'center',rotation=-90)
+ for k,(v,y) in enumerate(zip(yt,yp)):
+  text(name+'yt'+str(k),str(v),l-52,y-15,41,32,25,'right');line(name+'yg'+str(k),l,y,r,y,'#ACACAC',.9,dash=[3,2]);line(name+'ytick'+str(k),l-6,y,l,y,sw=.9)
+ for k,(v,x) in enumerate(zip(xt,xp)):
+  text(name+'xt'+str(k),v,x-24,b+4,48,32,24.7,'center');line(name+'xg'+str(k),x,t,x,b,'#ACACAC',.9,dash=[3,2]);line(name+'xtick'+str(k),x,b,x,b+6,sw=.9)
+ for side,pts in [('top',(l,t,r,t)),('bottom',(l,b,r,b)),('left',(l,t,l,b)),('right',(r,t,r,b))]:line(name+side,*pts,sw=1.1)
+ lx=390 if name in ['130','1b'] else 970 if name=='350' else 920;ly=t+12;lw=174 if name!='7b' else 224;lh=112 if name!='7b' else 77
+ panel=add(dict(id=name+'legendbox',kind='shape',box=[lx,ly,lw,lh],shape='round_rect',radius=4,fill='#FFFFFF',stroke='#D3D3D3',stroke_width=1.5))
+ vals=['Baseline','LoRA','GaLore'] if name!='7b' else ['8-bit AdamW','8-bit GaLore']; colors=['#A1C9F4','#ADC477','#6C584B'] if name!='7b' else ['#A1C9F4','#6C584B']
+ for j,(label,col) in enumerate(zip(vals,colors)):
+  y=ly+19+j*35;line(name+'legendline'+str(j),lx+8,y,lx+62,y,col,4.7,container=panel['id']);text(name+'legendtext'+str(j),label,lx+78,y-15.5,lw-82,32,25,container=panel['id'])
+# Specific graph-grid/axis/legend intersections derive from source visible plotted construction. Enumerate intersecting pairs only.
+def bounds(e):
+ if 'box'in e:return e['box']
+ (x,y),(a,b)=e['points'];return [min(x,a)-e['stroke_width']/2,min(y,b)-e['stroke_width']/2,abs(a-x)+e['stroke_width'],abs(b-y)+e['stroke_width']]
+for i,a in enumerate(els):
+ for b in els[i+1:]:
+  if a['kind']=='text' or b['kind']=='text':
+   tx=a if a['kind']=='text' else b; other=b if tx is a else a
+   if not ('legendtext' in tx['id'] and other['kind']=='line' and ('xg' in other['id'] or 'yg' in other['id'])):continue
+  if a.get('container')==b['id'] or b.get('container')==a['id']:continue
+  x,y,w,h=bounds(a);xx,yy,ww,hh=bounds(b)
+  if min(x+w,xx+ww)>max(x,xx) and min(y+h,yy+hh)>max(y,yy):
+   a.setdefault('allow_overlap_with',[]).append(b['id']);a['overlap_reason']='Source-visible axis/grid joins or legend occlusion of grid.'
+s={'version':1,'slides':[dict(id='page_001',width=1170,height=860,source='pages/page_001/source.png',background='#FFFFFF',reviewed=True,notes='Complete GaLore Figure 6; image-only reconstruction. Chart curves describe visual stroke geometry, not recovered numeric data.',elements=els)]}
+(p/'scene.json').write_text(json.dumps(s,indent=2))

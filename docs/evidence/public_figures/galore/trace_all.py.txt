@@ -1,0 +1,15 @@
+import json,pathlib,hashlib
+from PIL import Image
+from super_img2ppt.curves import trace_curve
+p=pathlib.Path('/tmp/galore-forward-uEPOph'); im=Image.open(p/'figure6.png');out=p/'traces';out.mkdir(exist_ok=True)
+# Split each chart before legend left edge, then below legend. Bounds are raster-observed visible curve extents.
+specs=[('130blue','#A1C9F4',[123,35,266,321],[390,161,165,192]),('130green','#ADC477',[187,35,202,321],[390,161,165,192]),('130brown','#6C584B',[118,35,271,321],[390,161,165,192]),('350blue','#A1C9F4',[702,35,267,321],[970,161,166,192]),('350green','#ADC477',[740,35,229,321],[970,161,166,192]),('350brown','#6C584B',[693,35,276,321],[970,161,166,192]),('1bblue','#A1C9F4',[132,469,257,321],[390,596,165,192]),('1bgreen','#ADC477',[162,469,227,321],[390,596,165,192]),('1bbrown','#6C584B',[123,469,266,321],[390,596,165,192]),('7bblue','#A1C9F4',[726,469,193,321],[920,560,216,227]),('7bbrown','#6C584B',[731,469,188,321],[920,560,216,227])]
+results=[];elements=[]
+for name,color,*rois in specs:
+ for j,roi in enumerate(rois):
+  prefix='c'+name+'part'+str(j)
+  try:
+   r=trace_curve(im,roi,color,tolerance=35,stroke_width=4.7,prefix=prefix);els=r.pop('elements');elements+=els;r['status']='pass';(out/(prefix+'-elements.json')).write_text(json.dumps(els,indent=2))
+  except Exception as e:r={'status':'fail','error':str(e)}
+  r.update(name=prefix,roi=roi,color=color,tolerance=35);results.append(r);print(prefix,r['status'],r.get('error',''))
+(out/'trace-results.json').write_text(json.dumps(results,indent=2));(out/'elements.json').write_text(json.dumps(elements,indent=2));(out/'curves-sha256.txt').write_text(hashlib.sha256(pathlib.Path('/Users/liyufeng/Code/super_img2ppt/skills/super-img2ppt/src/super_img2ppt/curves.py').read_bytes()).hexdigest())

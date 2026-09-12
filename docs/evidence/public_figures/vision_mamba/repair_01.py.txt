@@ -1,0 +1,11 @@
+import json,pathlib
+p=pathlib.Path(__file__).parent;s=json.loads((p/'scene.json').read_text());d={e['id']:e for e in s['slides'][0]['elements']}
+d['proj_y']['vertices']=[[0,0],[1,.1],[1,.9],[0,1]]
+d['y']['box']=[872,106,15,22];d['y']['padding']=[0,0,0,2]
+for n in ['mlp_text','vision_text']:
+ d[n]['font_size']=15.2;d[n]['box'][1]-=1
+for n in ['forward_conv_text','backward_conv_text','forward_ssm_text','backward_ssm_text']:
+ d[n]['font_size']=15.2;d[n]['box'][1]-=.5;d[n]['box'][3]=36
+for n in ['activation_text']: d[n]['font_size']=15.2;d[n]['box'][1]-=.5
+d['encoder_title']['font_size']=15.2;d['encoder_title']['box'][1]+=2;d['vim_title']['box'][1]+=1
+(p/'scene.json').write_text(json.dumps(s,indent=2))

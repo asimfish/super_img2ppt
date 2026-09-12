@@ -1,0 +1,1645 @@
+{
+  "status": "pass",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "pass",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "mlp_text",
+            "mlp"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "vision_text",
+            "vision"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "num_0",
+            "token_0"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "num_1",
+            "token_1"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "num_2",
+            "token_2"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "num_3",
+            "token_3"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "num_4",
+            "token_4"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "num_5",
+            "token_5"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "num_6",
+            "token_6"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "num_7",
+            "token_7"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "num_8",
+            "token_8"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "num_9",
+            "token_9"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "class_star",
+            "class_token"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "embedded_text",
+            "embedded"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "forward_conv_text",
+            "forward_conv"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "backward_conv_text",
+            "backward_conv"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "forward_ssm_text",
+            "forward_ssm"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "backward_ssm_text",
+            "backward_ssm"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "activation_text",
+            "activation"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "to_mlp",
+            "vision_text"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "token_arrow_5",
+            "class_star"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "x_down",
+            "x"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "z_activation",
+            "z"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "branch_up",
+            "multiply_forward_symbol"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "branch2",
+            "multiply_backward_symbol"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "branch2",
+            "hb_sub"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "f_merge",
+            "merge_symbol"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "merge_y",
+            "y"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "y_proj",
+            "y"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "residual_up",
+            "residual_symbol"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "h_f_1",
+            "forward_ssm_text"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "h_f_2",
+            "hf"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "h_f_2",
+            "hf_sub"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "h_f_3",
+            "hf_sub"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "h_b_2",
+            "hb"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "shape": 45,
+            "text": 42,
+            "line": 71,
+            "image": 3
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "legend_position",
+                "legend_num"
+              ],
+              "reason": "Source-verified legend symbol layering or encoder branch crossing at the same coordinates.",
+              "area_px2": 153.0
+            },
+            {
+              "elements": [
+                "legend_class",
+                "legend_star"
+              ],
+              "reason": "Source-verified legend symbol layering or encoder branch crossing at the same coordinates.",
+              "area_px2": 135.0
+            },
+            {
+              "elements": [
+                "legend_pos2",
+                "legend_num"
+              ],
+              "reason": "Source-verified legend symbol layering or encoder branch crossing at the same coordinates.",
+              "area_px2": 153.0
+            },
+            {
+              "elements": [
+                "token_5",
+                "class_token"
+              ],
+              "reason": "Source-verified legend symbol layering or encoder branch crossing at the same coordinates.",
+              "area_px2": 136.0
+            },
+            {
+              "elements": [
+                "token_5",
+                "class_star"
+              ],
+              "reason": "Source-verified legend symbol layering or encoder branch crossing at the same coordinates.",
+              "area_px2": 119.0
+            },
+            {
+              "elements": [
+                "fs_mul",
+                "h_f_3"
+              ],
+              "reason": "Source-verified legend symbol layering or encoder branch crossing at the same coordinates.",
+              "area_px2": 0.81
+            },
+            {
+              "elements": [
+                "bs_mul",
+                "h_b_3"
+              ],
+              "reason": "Source-verified legend symbol layering or encoder branch crossing at the same coordinates.",
+              "area_px2": 0.81
+            },
+            {
+              "elements": [
+                "branch_up",
+                "mul_b_right"
+              ],
+              "reason": "Source-verified legend symbol layering or encoder branch crossing at the same coordinates.",
+              "area_px2": 0.81
+            },
+            {
+              "elements": [
+                "multiply_forward",
+                "multiply_forward_symbol"
+              ],
+              "reason": "Symbol inside source merge circle",
+              "area_px2": 93.256
+            },
+            {
+              "elements": [
+                "multiply_backward",
+                "multiply_backward_symbol"
+              ],
+              "reason": "Symbol inside source merge circle",
+              "area_px2": 93.256
+            },
+            {
+              "elements": [
+                "merge",
+                "merge_symbol"
+              ],
+              "reason": "Symbol inside source merge circle",
+              "area_px2": 93.256
+            },
+            {
+              "elements": [
+                "residual",
+                "residual_symbol"
+              ],
+              "reason": "Symbol inside source merge circle",
+              "area_px2": 93.256
+            }
+          ],
+          "text_layouts": {
+            "legend_projection_label": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 80.0,
+              "height_px": 13.8,
+              "available_width_px": 87,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 80.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Projection Layer"
+              ]
+            },
+            "legend_patch_label": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 64.75,
+              "height_px": 13.8,
+              "available_width_px": 87,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 65.25,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Patch Tokens"
+              ]
+            },
+            "legend_position_label": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 79.0,
+              "height_px": 13.8,
+              "available_width_px": 87,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 79.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Position Embed."
+              ]
+            },
+            "legend_class_label": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 59.5,
+              "height_px": 13.8,
+              "available_width_px": 87,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 60.0,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Class Token"
+              ]
+            },
+            "legend_num": {
+              "scale": 1,
+              "effective_font_size_px": 11,
+              "width_px": 13.75,
+              "height_px": 12.65,
+              "available_width_px": 20,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.25,
+              "required_height_px": 13.15,
+              "fits": true,
+              "lines": [
+                "0 1"
+              ]
+            },
+            "legend_star": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 15,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "*"
+              ]
+            },
+            "mlp_text": {
+              "scale": 1,
+              "effective_font_size_px": 15.4,
+              "width_px": 115.5,
+              "height_px": 17.71,
+              "available_width_px": 202,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 116.0,
+              "required_height_px": 18.21,
+              "fits": true,
+              "lines": [
+                "MLP & Prediction"
+              ]
+            },
+            "vision_text": {
+              "scale": 1,
+              "effective_font_size_px": 15.4,
+              "width_px": 149.0,
+              "height_px": 17.71,
+              "available_width_px": 202,
+              "available_height_px": 44,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 149.5,
+              "required_height_px": 18.21,
+              "fits": true,
+              "lines": [
+                "Vision Mamba Encoder"
+              ]
+            },
+            "flatten_text": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 166.5,
+              "height_px": 17.25,
+              "available_width_px": 202,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 167.0,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "Flatten & Linear Projection"
+              ]
+            },
+            "num_0": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "0"
+              ]
+            },
+            "num_1": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "num_2": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "num_3": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "3"
+              ]
+            },
+            "num_4": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "4"
+              ]
+            },
+            "num_5": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "5"
+              ]
+            },
+            "num_6": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "6"
+              ]
+            },
+            "num_7": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "7"
+              ]
+            },
+            "num_8": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "8"
+              ]
+            },
+            "num_9": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "9"
+              ]
+            },
+            "class_star": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 18,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "*"
+              ]
+            },
+            "input_label": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 73.25,
+              "height_px": 17.25,
+              "available_width_px": 110,
+              "available_height_px": 23,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 73.75,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "Input Image"
+              ]
+            },
+            "vim_title": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 135.75,
+              "height_px": 17.25,
+              "available_width_px": 206,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 136.25,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "Vision Mamba (Vim)"
+              ]
+            },
+            "embedded_text": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 114.25,
+              "height_px": 17.25,
+              "available_width_px": 155,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 114.75,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "Embedded Patches"
+              ]
+            },
+            "norm_text": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 35.25,
+              "height_px": 17.25,
+              "available_width_px": 51,
+              "available_height_px": 23,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 35.75,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "Norm"
+              ]
+            },
+            "forward_conv_text": {
+              "scale": 1,
+              "effective_font_size_px": 15.4,
+              "width_px": 53.0,
+              "height_px": 35.42,
+              "available_width_px": 78,
+              "available_height_px": 36,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 53.5,
+              "required_height_px": 35.92,
+              "fits": true,
+              "lines": [
+                "Forward",
+                "Conv1d"
+              ]
+            },
+            "backward_conv_text": {
+              "scale": 1,
+              "effective_font_size_px": 15.4,
+              "width_px": 63.5,
+              "height_px": 35.42,
+              "available_width_px": 78,
+              "available_height_px": 36,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 64.0,
+              "required_height_px": 35.92,
+              "fits": true,
+              "lines": [
+                "Backward",
+                "Conv1d"
+              ]
+            },
+            "forward_ssm_text": {
+              "scale": 1,
+              "effective_font_size_px": 15.4,
+              "width_px": 53.0,
+              "height_px": 35.42,
+              "available_width_px": 65,
+              "available_height_px": 36,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 53.5,
+              "required_height_px": 35.92,
+              "fits": true,
+              "lines": [
+                "Forward",
+                "SSM"
+              ]
+            },
+            "backward_ssm_text": {
+              "scale": 1,
+              "effective_font_size_px": 15.4,
+              "width_px": 63.5,
+              "height_px": 35.42,
+              "available_width_px": 65,
+              "available_height_px": 36,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 64.0,
+              "required_height_px": 35.92,
+              "fits": true,
+              "lines": [
+                "Backward",
+                "SSM"
+              ]
+            },
+            "activation_text": {
+              "scale": 1,
+              "effective_font_size_px": 15.4,
+              "width_px": 65.5,
+              "height_px": 17.71,
+              "available_width_px": 77,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 66.0,
+              "required_height_px": 18.21,
+              "fits": true,
+              "lines": [
+                "Activation"
+              ]
+            },
+            "multiply_forward_symbol": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 8.0,
+              "height_px": 16.1,
+              "available_width_px": 11,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "×"
+              ]
+            },
+            "multiply_backward_symbol": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 8.0,
+              "height_px": 16.1,
+              "available_width_px": 11,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "×"
+              ]
+            },
+            "merge_symbol": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 8.0,
+              "height_px": 16.1,
+              "available_width_px": 11,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "+"
+              ]
+            },
+            "residual_symbol": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 8.0,
+              "height_px": 16.1,
+              "available_width_px": 11,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "+"
+              ]
+            },
+            "x": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 7.5,
+              "height_px": 17.25,
+              "available_width_px": 13,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.0,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "x"
+              ]
+            },
+            "z": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 6.5,
+              "height_px": 17.25,
+              "available_width_px": 13,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 7.0,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "z"
+              ]
+            },
+            "y": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 8.0,
+              "height_px": 17.25,
+              "available_width_px": 13,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "y"
+              ]
+            },
+            "hf": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 7.5,
+              "height_px": 17.25,
+              "available_width_px": 10,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.0,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "h"
+              ]
+            },
+            "hb": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 7.5,
+              "height_px": 17.25,
+              "available_width_px": 10,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.0,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "h"
+              ]
+            },
+            "hf_sub": {
+              "scale": 1,
+              "effective_font_size_px": 10,
+              "width_px": 31.75,
+              "height_px": 11.5,
+              "available_width_px": 44,
+              "available_height_px": 14,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 32.25,
+              "required_height_px": 12.0,
+              "fits": true,
+              "lines": [
+                "forward"
+              ]
+            },
+            "hb_sub": {
+              "scale": 1,
+              "effective_font_size_px": 10,
+              "width_px": 39.5,
+              "height_px": 11.5,
+              "available_width_px": 48,
+              "available_height_px": 14,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 40.0,
+              "required_height_px": 12.0,
+              "fits": true,
+              "lines": [
+                "backward"
+              ]
+            },
+            "repeat": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 17.75,
+              "height_px": 17.25,
+              "available_width_px": 28,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.25,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "L×"
+              ]
+            },
+            "encoder_title": {
+              "scale": 1,
+              "effective_font_size_px": 15.5,
+              "width_px": 157.75,
+              "height_px": 17.825,
+              "available_width_px": 216,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 158.25,
+              "required_height_px": 18.325,
+              "fits": true,
+              "lines": [
+                "Vision Mamba Encoder"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "native_objects": {
+      "status": "pass",
+      "findings": [],
+      "slide_count": 1
+    },
+    "rendered_text": {
+      "status": "pass",
+      "renderer": "LibreOffice/PDFium",
+      "findings": [],
+      "text_boxes": [
+        {
+          "slide": "page_001",
+          "element": "legend_projection_label",
+          "expected": "Projection Layer",
+          "rendered": "Projection Layer",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 80.0,
+          "rendered_ink_width_px": 80.135
+        },
+        {
+          "slide": "page_001",
+          "element": "legend_patch_label",
+          "expected": "Patch Tokens",
+          "rendered": "Patch Tokens",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 64.25,
+          "rendered_ink_width_px": 63.27
+        },
+        {
+          "slide": "page_001",
+          "element": "legend_position_label",
+          "expected": "Position Embed.",
+          "rendered": "Position Embed.",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 78.25,
+          "rendered_ink_width_px": 78.257
+        },
+        {
+          "slide": "page_001",
+          "element": "legend_class_label",
+          "expected": "Class Token",
+          "rendered": "Class Token",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 59.25,
+          "rendered_ink_width_px": 58.082
+        },
+        {
+          "slide": "page_001",
+          "element": "legend_num",
+          "expected": "0 1",
+          "rendered": "0 1 ",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 12.25,
+          "rendered_ink_width_px": 11.946
+        },
+        {
+          "slide": "page_001",
+          "element": "legend_star",
+          "expected": "*",
+          "rendered": "*",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 4.5,
+          "rendered_ink_width_px": 4.322
+        },
+        {
+          "slide": "page_001",
+          "element": "mlp_text",
+          "expected": "MLP & Prediction",
+          "rendered": "MLP & Prediction",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 115.25,
+          "rendered_ink_width_px": 113.874
+        },
+        {
+          "slide": "page_001",
+          "element": "vision_text",
+          "expected": "Vision Mamba Encoder",
+          "rendered": "Vision Mamba Encoder",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 149.0,
+          "rendered_ink_width_px": 146.387
+        },
+        {
+          "slide": "page_001",
+          "element": "flatten_text",
+          "expected": "Flatten & Linear Projection",
+          "rendered": "Flatten & Linear Projection",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 166.5,
+          "rendered_ink_width_px": 165.519
+        },
+        {
+          "slide": "page_001",
+          "element": "num_0",
+          "expected": "0",
+          "rendered": "0",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 5.5,
+          "rendered_ink_width_px": 5.152
+        },
+        {
+          "slide": "page_001",
+          "element": "num_1",
+          "expected": "1",
+          "rendered": "1",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 3.5,
+          "rendered_ink_width_px": 3.142
+        },
+        {
+          "slide": "page_001",
+          "element": "num_2",
+          "expected": "2",
+          "rendered": "2",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 5.25,
+          "rendered_ink_width_px": 5.26
+        },
+        {
+          "slide": "page_001",
+          "element": "num_3",
+          "expected": "3",
+          "rendered": "3",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 4.75,
+          "rendered_ink_width_px": 4.526
+        },
+        {
+          "slide": "page_001",
+          "element": "num_4",
+          "expected": "4",
+          "rendered": "4",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 5.75,
+          "rendered_ink_width_px": 5.405
+        },
+        {
+          "slide": "page_001",
+          "element": "num_5",
+          "expected": "5",
+          "rendered": "5",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 4.75,
+          "rendered_ink_width_px": 4.647
+        },
+        {
+          "slide": "page_001",
+          "element": "num_6",
+          "expected": "6",
+          "rendered": "6",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 5.25,
+          "rendered_ink_width_px": 5.032
+        },
+        {
+          "slide": "page_001",
+          "element": "num_7",
+          "expected": "7",
+          "rendered": "7",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 5.25,
+          "rendered_ink_width_px": 5.044
+        },
+        {
+          "slide": "page_001",
+          "element": "num_8",
+          "expected": "8",
+          "rendered": "8",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 5.0,
+          "rendered_ink_width_px": 4.586
+        },
+        {
+          "slide": "page_001",
+          "element": "num_9",
+          "expected": "9",
+          "rendered": "9",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 5.25,
+          "rendered_ink_width_px": 5.02
+        },
+        {
+          "slide": "page_001",
+          "element": "class_star",
+          "expected": "*",
+          "rendered": "*",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 4.5,
+          "rendered_ink_width_px": 4.322
+        },
+        {
+          "slide": "page_001",
+          "element": "input_label",
+          "expected": "Input Image",
+          "rendered": "Input Image",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 72.5,
+          "rendered_ink_width_px": 72.299
+        },
+        {
+          "slide": "page_001",
+          "element": "vim_title",
+          "expected": "Vision Mamba (Vim)",
+          "rendered": "Vision Mamba (Vim)",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-BoldMT"
+          ],
+          "measured_ink_width_px": 135.25,
+          "rendered_ink_width_px": 134.431
+        },
+        {
+          "slide": "page_001",
+          "element": "embedded_text",
+          "expected": "Embedded Patches",
+          "rendered": "Embedded Patches",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 113.75,
+          "rendered_ink_width_px": 113.341
+        },
+        {
+          "slide": "page_001",
+          "element": "norm_text",
+          "expected": "Norm",
+          "rendered": "Norm",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 35.25,
+          "rendered_ink_width_px": 35.173
+        },
+        {
+          "slide": "page_001",
+          "element": "forward_conv_text",
+          "expected": "Forward\nConv1d",
+          "rendered": "Forward\r\nConv1d",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 52.75,
+          "rendered_ink_width_px": 52.04
+        },
+        {
+          "slide": "page_001",
+          "element": "backward_conv_text",
+          "expected": "Backward\nConv1d",
+          "rendered": "Backward\r\nConv1d",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 63.25,
+          "rendered_ink_width_px": 62.281
+        },
+        {
+          "slide": "page_001",
+          "element": "forward_ssm_text",
+          "expected": "Forward\nSSM",
+          "rendered": "Forward\r\nSSM",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 52.75,
+          "rendered_ink_width_px": 52.04
+        },
+        {
+          "slide": "page_001",
+          "element": "backward_ssm_text",
+          "expected": "Backward\nSSM",
+          "rendered": "Backward\r\nSSM",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 63.25,
+          "rendered_ink_width_px": 62.281
+        },
+        {
+          "slide": "page_001",
+          "element": "activation_text",
+          "expected": "Activation",
+          "rendered": "Activation",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 65.5,
+          "rendered_ink_width_px": 64.888
+        },
+        {
+          "slide": "page_001",
+          "element": "multiply_forward_symbol",
+          "expected": "×",
+          "rendered": "×",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 5.75,
+          "rendered_ink_width_px": 5.591
+        },
+        {
+          "slide": "page_001",
+          "element": "multiply_backward_symbol",
+          "expected": "×",
+          "rendered": "×",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 5.75,
+          "rendered_ink_width_px": 5.591
+        },
+        {
+          "slide": "page_001",
+          "element": "merge_symbol",
+          "expected": "+",
+          "rendered": "+",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 7.5,
+          "rendered_ink_width_px": 7.351
+        },
+        {
+          "slide": "page_001",
+          "element": "residual_symbol",
+          "expected": "+",
+          "rendered": "+",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 7.5,
+          "rendered_ink_width_px": 7.351
+        },
+        {
+          "slide": "page_001",
+          "element": "x",
+          "expected": "x",
+          "rendered": "x",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 7.5,
+          "rendered_ink_width_px": 7.089
+        },
+        {
+          "slide": "page_001",
+          "element": "z",
+          "expected": "z",
+          "rendered": "z",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 6.5,
+          "rendered_ink_width_px": 6.323
+        },
+        {
+          "slide": "page_001",
+          "element": "y",
+          "expected": "y",
+          "rendered": "y",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 8.0,
+          "rendered_ink_width_px": 7.765
+        },
+        {
+          "slide": "page_001",
+          "element": "hf",
+          "expected": "h",
+          "rendered": "h",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 6.75,
+          "rendered_ink_width_px": 6.593
+        },
+        {
+          "slide": "page_001",
+          "element": "hb",
+          "expected": "h",
+          "rendered": "h",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-ItalicMT"
+          ],
+          "measured_ink_width_px": 6.75,
+          "rendered_ink_width_px": 6.593
+        },
+        {
+          "slide": "page_001",
+          "element": "hf_sub",
+          "expected": "forward",
+          "rendered": "forward",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 31.5,
+          "rendered_ink_width_px": 31.389
+        },
+        {
+          "slide": "page_001",
+          "element": "hb_sub",
+          "expected": "backward",
+          "rendered": "backward",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 39.5,
+          "rendered_ink_width_px": 38.998
+        },
+        {
+          "slide": "page_001",
+          "element": "repeat",
+          "expected": "L×",
+          "rendered": "L×",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPSMT"
+          ],
+          "measured_ink_width_px": 16.25,
+          "rendered_ink_width_px": 16.115
+        },
+        {
+          "slide": "page_001",
+          "element": "encoder_title",
+          "expected": "Vision Mamba Encoder",
+          "rendered": "Vision Mamba Encoder",
+          "matches": true,
+          "actual_fonts": [
+            "TimesNewRomanPS-BoldMT"
+          ],
+          "measured_ink_width_px": 157.5,
+          "rendered_ink_width_px": 156.967
+        }
+      ],
+      "limitations": "This checks renderer output and glyph bounds; source recognition and target PowerPoint/WPS appearance still need visual review."
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "112fa1ac67a9e1f74d66b3216c3ad5c1bd3cf71ed7bc03f0dfad9c7a005c6ea7",
+  "font_substitutions": [],
+  "artifacts": {
+    "pptx": "editable.pptx",
+    "svg": "svg/",
+    "scene": "scene.resolved.json",
+    "fonts": "fonts.json",
+    "render": "render/"
+  },
+  "comparisons": [
+    {
+      "slide": "page_001",
+      "mean_absolute_pixel_error": 0.040956,
+      "comparison": "page_001_comparison.png",
+      "interpretation": "Diagnostic only; antialiasing and renderer differences affect this number. It is not an acceptance score."
+    }
+  ]
+}

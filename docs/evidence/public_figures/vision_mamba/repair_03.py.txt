@@ -1,0 +1,7 @@
+import json,pathlib
+p=pathlib.Path(__file__).parent;s=json.loads((p/'scene.json').read_text());d={e['id']:e for e in s['slides'][0]['elements']}
+for n in ['mlp_text','vision_text']:d[n]['box'][0]+=.6
+d['encoder_title']['box'][0]+=1.5
+# Restore activation typography to the stronger preceding candidate; shape remains source-centered.
+d['activation_text']['font_size']=15.2;d['activation_text']['box'][1]+=.5
+(p/'scene.json').write_text(json.dumps(s,indent=2))

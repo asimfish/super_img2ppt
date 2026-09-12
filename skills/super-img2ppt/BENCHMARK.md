@@ -1,5 +1,28 @@
 # Bounded reconstruction evidence
 
+## v0.3.3 reusable curve tracing and public ICML figures
+
+Three independent pixel-only reconstructions retain complete GaLore Figure 6 (753 native
+objects, one 1.8058% image-only crossing crop), Vision Mamba Figure 2 (158 native, three
+image-only crops), and Mamba-2 Figure 7 (475 native, no visible rasters). All have actual
+PPTX renders and portable scenes; parent replays pass. Original Mamba-2 font substitution
+remains review. Source-fidelity failures are retained: GaLore 4/10 recorded regions pass,
+Vision Mamba 5/12, Mamba-2 2/9. Do not pool these different masks or call overall fidelity
+a pass. Vision Mamba holdout is 0/4; the other two have disclosed inspected-holdout
+contamination, and Mamba-2 exceeded the three-repair cap in one formula region.
+
+Runtime changes have causal regressions: TTC italic face misclassification, directional
+glyph-overflow reports, and round line caps with conservative endpoint collision checks.
+GaLore exposed steep-stroke ambiguity, prompting axis-y tracing; same-color crossings
+and long occlusions still fail rather than inventing trajectories. The 558 changed GaLore
+segments differ only in cap metadata; actual rendering removes join seams. A frozen
+extra green-curve diagnostic has IoU 0.949 and zero-pixel edge error, only for that ROI.
+
+The owning repository docs/public_figures.md and docs/evidence/public_figures retain
+original failures, frozen contracts, license evidence, package and regression results.
+README previews are actual source-width PPTX renders. No source-private manuscript
+artwork or font files are published. Native PowerPoint/WPS remain unverified.
+
 ## v0.3.2 complete published main figures
 
 On 2026-09-11, independent image-only evaluations reconstructed the full Grounding DINO

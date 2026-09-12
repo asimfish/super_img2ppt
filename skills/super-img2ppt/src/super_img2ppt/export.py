@@ -145,6 +145,10 @@ def write_pptx(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pa
                     shape.line.color.rgb = _color(element.get("stroke", "#111827"))
                     shape.line.width = Pt(element.get("stroke_width", 1) * point_scale)
                     _dash(shape, element)
+                    if "line_cap" in element:
+                        shape.line._get_or_add_ln().set(
+                            "cap", {"round": "rnd", "butt": "flat"}[element["line_cap"]]
+                        )
                     if element.get("arrow", False):
                         arrow = OxmlElement("a:tailEnd")
                         arrow.set("type", "triangle")
@@ -302,6 +306,8 @@ def write_svg(slide: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                 "stroke": element.get("stroke", "#111827"),
                 "stroke-width": str(element.get("stroke_width", 1)),
             }
+            if "line_cap" in element:
+                attrs["stroke-linecap"] = element["line_cap"]
             if "dash" in element:
                 attrs["stroke-dasharray"] = " ".join(map(str, element["dash"]))
             if element.get("arrow", False):

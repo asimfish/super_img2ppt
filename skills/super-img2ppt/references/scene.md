@@ -92,3 +92,11 @@ to it even after resolving symlinks. URLs and absolute paths are rejected.
 are a hard error. `--font-dir` adds user-selected font search directories without installing or
 copying fonts. Inspect `fonts.json` to see resolved family, face index, hash and embedding rights;
 the runtime does not embed fonts or infer permission to redistribute them.
+
+## Plain line end caps
+
+Optional `line_cap: "round" | "butt"` controls native PPTX and SVG line ends. Omission
+preserves existing behavior. Explicit caps require a plain line without `arrow: true`.
+Rounded caps extend half the stroke width beyond both endpoints; bounds and collisions
+include that footprint. Adjacent traced segments need specific, source-verified overlap
+declarations; a cap does not exempt unrelated objects.

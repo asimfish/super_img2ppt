@@ -1,0 +1,64 @@
+FF.F                                                                     [100%]
+=================================== FAILURES ===================================
+______________ test_round_caps_export_to_both_native_pptx_and_svg ______________
+
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-218/test_round_caps_export_to_both0')
+
+    def test_round_caps_export_to_both_native_pptx_and_svg(tmp_path):
+        scene = specimen()
+>       validate_scene(scene)
+
+tests/test_line_caps.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+scene = {'version': 1, 'slides': [{'id': 'curve', 'width': 200, 'height': 100, 'elements': [{'id': 'stroke', 'kind': 'line', 'z': 1, 'points': [[...], [...]], ...}]}]}
+
+    def validate_scene(scene: dict) -> dict:
+        _validate_finite(scene)
+        errors = sorted(Draft202012Validator(SCHEMA).iter_errors(scene), key=lambda e: str(e.path))
+        if errors:
+>           raise InputError(
+                "; ".join(f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5])
+            )
+E           super_img2ppt.scene.InputError: slides/0/elements/0: Additional properties are not allowed ('line_cap' was unexpected)
+
+skills/super-img2ppt/src/super_img2ppt/scene.py:236: InputError
+_____________ test_caps_participate_in_bounds_and_collision_checks _____________
+
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-218/test_caps_participate_in_bound0')
+
+    def test_caps_participate_in_bounds_and_collision_checks(tmp_path):
+        scene = specimen()
+        line = scene["slides"][0]["elements"][0]
+        line["points"] = [[1, 30], [90, 30]]
+>       assert any(f["code"] == "out_of_bounds" for f in preflight(scene, {}, tmp_path)["findings"])
+E       assert False
+E        +  where False = any(<generator object test_caps_participate_in_bounds_and_collision_checks.<locals>.<genexpr> at 0x10bd471d0>)
+
+tests/test_line_caps.py:32: AssertionError
+_________________________ test_cap_schema_is_portable __________________________
+
+    def test_cap_schema_is_portable():
+        scene = json.loads(json.dumps(specimen()))
+>       validate_scene(scene)
+
+tests/test_line_caps.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+scene = {'version': 1, 'slides': [{'id': 'curve', 'width': 200, 'height': 100, 'elements': [{'id': 'stroke', 'kind': 'line', 'z': 1, 'points': [[...], [...]], ...}]}]}
+
+    def validate_scene(scene: dict) -> dict:
+        _validate_finite(scene)
+        errors = sorted(Draft202012Validator(SCHEMA).iter_errors(scene), key=lambda e: str(e.path))
+        if errors:
+>           raise InputError(
+                "; ".join(f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5])
+            )
+E           super_img2ppt.scene.InputError: slides/0/elements/0: Additional properties are not allowed ('line_cap' was unexpected)
+
+skills/super-img2ppt/src/super_img2ppt/scene.py:236: InputError
+=========================== short test summary info ============================
+FAILED tests/test_line_caps.py::test_round_caps_export_to_both_native_pptx_and_svg
+FAILED tests/test_line_caps.py::test_caps_participate_in_bounds_and_collision_checks
+FAILED tests/test_line_caps.py::test_cap_schema_is_portable - super_img2ppt.s...
+3 failed, 1 passed in 0.12s

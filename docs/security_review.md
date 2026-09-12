@@ -94,3 +94,19 @@ baked-text overlays are checked, and visual comparison remains required.
 
 No known-vulnerability database scan was run in this session; dependency hashes are reproducibility
 evidence, not vulnerability evidence. Native target-application verification is tracked separately.
+
+## v0.3.3 changed-boundary review
+
+`trace-curve` uses the existing local Pillow normalization path; a regular image must be
+below 64 MB and 40 million pixels. ROI is bounded to four million pixels / 6000 tracing
+steps; bands, gap length, segment count and simplification work are bounded. No network,
+credentials, subprocess or dependency is added. Output is a fresh directory; failed masks
+produce diagnostics without fabricated segments. Source content remains data. Numeric,
+ambiguity, gap and existing-directory regression tests exercise these boundaries.
+
+Rounded caps use an enum and XML attribute APIs; explicit cap + arrow is rejected rather
+than silently exporting unsupported geometry. Conservative endpoint disks enter the same
+bounds/collision checks. Font metadata reads add `head.macStyle` only; no new file access.
+Directional overflow fields are measured diagnostics and do not auto-mutate user scenes.
+No new high/critical issue was found in this bounded semantic diff review; native parser
+residual risks above remain. No vulnerability-database claim is made.

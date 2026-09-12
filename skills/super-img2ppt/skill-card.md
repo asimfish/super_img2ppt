@@ -1,6 +1,6 @@
 # Super Img2PPT capability card
 
-Owner: super_img2ppt contributors. Version: 0.3.2. Risk: scoped_change.
+Owner: super_img2ppt contributors. Version: 0.3.3. Risk: scoped_change.
 Canonical owner: this repository's `skills/super-img2ppt`.
 
 Reads: user-selected image/PDF/PPTX files; scene JSON and relative local assets; installed font
@@ -42,3 +42,9 @@ evidence. Complex artwork remains raster; the skill cannot promise pixel-identic
 Output contract: PPTX text/geometry as native objects, separately movable raster assets, SVG with
 text/vector elements, portable resolved scene plus assets, font manifest, actual-PPTX preview,
 machine validation and a separate visual-review statement.
+
+Curve helper: reads one bounded local image and explicit ROI/color; writes native line
+fragments, source hashes, interpolation/exclusion diagnostics and an overlay. No model,
+network or new executable dependency. Rejects ambiguous branches and long gaps; output
+always requests review and does not claim recovered chart data. Explicit rounded caps
+participate in collision/bounds checks.

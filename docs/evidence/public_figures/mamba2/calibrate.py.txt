@@ -1,0 +1,13 @@
+import subprocess
+from PIL import Image,ImageFont,ImageDraw,ImageChops
+src=Image.open('/tmp/mamba-complex-Sox4Lz/source.png').convert('L')
+def mask(im):
+ m=im.point(lambda p:255 if p<170 else 0);return m.crop(m.getbbox())
+for phrase,roi,styles in [('Semiseparable Matrix',(843,97,1060,128),['DIN Condensed:style=Bold','Arial Narrow:style=Bold','Avenir Next Condensed:style=Demi Bold','PT Sans Narrow:style=Bold']),('Block Decomposition',(843,130,1012,152),['Arial Narrow','Avenir Next Condensed:style=Ultra Light','Avenir Next Condensed','PT Sans Narrow'])]:
+ target=mask(src.crop(roi));results=[]
+ for fam in styles:
+  path=subprocess.check_output(['/opt/homebrew/bin/fc-match',fam,'-f','%{file}|%{index}']).decode()
+  path,idx=path.split('|')
+  for n in range(80,128):
+   fs=n/4;f=ImageFont.truetype(path,n,index=int(idx or 0));b=f.getbbox(phrase);im=Image.new('L',(b[2]-b[0]+8,b[3]-b[1]+8),255);ImageDraw.Draw(im).text((4-b[0],4-b[1]),phrase,font=f,fill=0);im=im.resize((round(im.width/4),round(im.height/4)));m=mask(im);size=(max(target.width,m.width),max(target.height,m.height));a=Image.new('L',size);c=a.copy();a.paste(target);c.paste(m);inter=sum(ImageChops.darker(a,c).getdata())/255;union=sum(ImageChops.lighter(a,c).getdata())/255;results.append((inter/union,fam,fs,m.size,path))
+ print(phrase,sorted(results,reverse=True)[:5])

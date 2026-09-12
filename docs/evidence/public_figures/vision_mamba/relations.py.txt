@@ -1,0 +1,13 @@
+import json,pathlib
+p=pathlib.Path(__file__).parent;s=json.loads((p/'scene.json').read_text());es=s['slides'][0]['elements']; d={e['id']:e for e in es}
+for e in es:
+ if e['id'].startswith('legend_'): e['container']='legend'
+for i in range(10):
+ d[f'patch_token_{i}']['z']=3; d[f'patch_token_{i}']['container']=f'token_{i}';d[f'num_{i}']['container']=f'token_{i}'
+d['class_token']['z']=4;d['class_token']['container']='token_5';d['class_star']['container']='class_token'
+# Source class token occupies the second half of position 5, replacing its ordinary patch color.
+es.remove(d['patch_token_5'])
+pairs=[('legend_position','legend_num'),('legend_pos2','legend_num'),('legend_class','legend_star'),('token_5','class_star'),('fs_mul','h_f_3'),('bs_mul','h_b_3'),('branch_up','mul_b_right')]
+for a,b in pairs:
+ d[a].setdefault('allow_overlap_with',[]).append(b); d[a]['overlap_reason']='Source-verified legend symbol layering or encoder branch crossing at the same coordinates.'
+(p/'scene.json').write_text(json.dumps(s,indent=2))

@@ -1,0 +1,3530 @@
+{
+  "version": 1,
+  "slides": [
+    {
+      "id": "page_001",
+      "width": 980,
+      "height": 258,
+      "source": "assets/b5188cd51a3878c17945.png",
+      "background": "#FFFFFF",
+      "reviewed": true,
+      "notes": "Complete published Figure 2; attribution in ATTRIBUTION.md. Image-only crops retained.",
+      "elements": [
+        {
+          "id": "legend",
+          "kind": "shape",
+          "z": 1,
+          "box": [
+            15,
+            14,
+            120,
+            120
+          ],
+          "shape": "round_rect",
+          "fill": null,
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "dash": [
+            5,
+            4
+          ],
+          "radius": 4
+        },
+        {
+          "id": "legend_projection",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            22,
+            22,
+            19,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#DFD3E2",
+          "stroke": "#888888",
+          "stroke_width": 0.9,
+          "container": "legend"
+        },
+        {
+          "id": "legend_projection_label",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            47,
+            20,
+            87,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 12,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "container": "legend",
+          "runs": [
+            {
+              "text": "Projection Layer",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "legend_patch",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            22,
+            51,
+            10,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#FBE2E2",
+          "stroke": null,
+          "stroke_width": 0.9,
+          "container": "legend"
+        },
+        {
+          "id": "legend_patch_label",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            47,
+            49,
+            87,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 12,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "container": "legend",
+          "runs": [
+            {
+              "text": "Patch Tokens",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "legend_position",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            22,
+            79,
+            10,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#EEEEEE",
+          "stroke": null,
+          "stroke_width": 0.9,
+          "container": "legend",
+          "allow_overlap_with": [
+            "legend_num"
+          ],
+          "overlap_reason": "Source-verified legend symbol layering or encoder branch crossing at the same coordinates."
+        },
+        {
+          "id": "legend_position_label",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            47,
+            77,
+            87,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 12,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "container": "legend",
+          "runs": [
+            {
+              "text": "Position Embed.",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "legend_class",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            22,
+            106,
+            10,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#DFDDE8",
+          "stroke": null,
+          "stroke_width": 0.9,
+          "container": "legend",
+          "allow_overlap_with": [
+            "legend_star"
+          ],
+          "overlap_reason": "Source-verified legend symbol layering or encoder branch crossing at the same coordinates."
+        },
+        {
+          "id": "legend_class_label",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            47,
+            104,
+            87,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 12,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "container": "legend",
+          "runs": [
+            {
+              "text": "Class Token",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "legend_patch2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            32,
+            51,
+            9,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#FBE2E2",
+          "stroke": null,
+          "stroke_width": 0.9,
+          "container": "legend"
+        },
+        {
+          "id": "legend_pos2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            32,
+            79,
+            9,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#EEEEEE",
+          "stroke": null,
+          "stroke_width": 0.9,
+          "container": "legend",
+          "allow_overlap_with": [
+            "legend_num"
+          ],
+          "overlap_reason": "Source-verified legend symbol layering or encoder branch crossing at the same coordinates."
+        },
+        {
+          "id": "legend_num",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            23,
+            77,
+            20,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 11,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "container": "legend",
+          "runs": [
+            {
+              "text": "0 1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 11,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "legend_star",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            23,
+            106,
+            9,
+            15
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 12,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "container": "legend",
+          "runs": [
+            {
+              "text": "*",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "mlp",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            158,
+            11,
+            208,
+            30
+          ],
+          "shape": "round_rect",
+          "fill": "#F6F6F6",
+          "stroke": "#808080",
+          "stroke_width": 0.9,
+          "radius": 5
+        },
+        {
+          "id": "mlp_text",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            161.29999999999998,
+            10,
+            202,
+            30
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15.4,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "align": "center",
+          "valign": "middle",
+          "container": "mlp",
+          "runs": [
+            {
+              "text": "MLP & Prediction",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15.4,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "vision",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            158,
+            64,
+            208,
+            44
+          ],
+          "shape": "round_rect",
+          "fill": "#F6F6F6",
+          "stroke": "#808080",
+          "stroke_width": 0.9,
+          "radius": 5
+        },
+        {
+          "id": "vision_text",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            161.29999999999998,
+            63,
+            202,
+            44
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15.4,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "align": "center",
+          "valign": "middle",
+          "container": "vision",
+          "runs": [
+            {
+              "text": "Vision Mamba Encoder",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15.4,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "flatten",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            158,
+            156,
+            208,
+            30
+          ],
+          "shape": "round_rect",
+          "fill": "#F6F6F6",
+          "stroke": "#808080",
+          "stroke_width": 0.9,
+          "radius": 5
+        },
+        {
+          "id": "flatten_text",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            161,
+            156,
+            202,
+            30
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "align": "center",
+          "valign": "middle",
+          "container": "flatten",
+          "runs": [
+            {
+              "text": "Flatten & Linear Projection",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "to_mlp",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              276,
+              64
+            ],
+            [
+              276,
+              41
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "token_0",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            163,
+            124,
+            18,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#EEEEEE",
+          "stroke": null,
+          "stroke_width": 0.9
+        },
+        {
+          "id": "patch_token_0",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            173,
+            124,
+            8,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#FBE2E2",
+          "stroke": null,
+          "stroke_width": 0.9,
+          "container": "token_0"
+        },
+        {
+          "id": "num_0",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            164,
+            122,
+            9,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 12,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "container": "token_0",
+          "runs": [
+            {
+              "text": "0",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_arrow_0",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              178,
+              124
+            ],
+            [
+              178,
+              109
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "token_proj_0",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              177,
+              156
+            ],
+            [
+              177,
+              141
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "token_1",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            183,
+            124,
+            18,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#EEEEEE",
+          "stroke": null,
+          "stroke_width": 0.9
+        },
+        {
+          "id": "patch_token_1",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            193,
+            124,
+            8,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#FBE2E2",
+          "stroke": null,
+          "stroke_width": 0.9,
+          "container": "token_1"
+        },
+        {
+          "id": "num_1",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            184,
+            122,
+            9,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 12,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "container": "token_1",
+          "runs": [
+            {
+              "text": "1",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_arrow_1",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              198,
+              124
+            ],
+            [
+              198,
+              109
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "token_proj_1",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              197,
+              156
+            ],
+            [
+              197,
+              141
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "token_2",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            203,
+            124,
+            18,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#EEEEEE",
+          "stroke": null,
+          "stroke_width": 0.9
+        },
+        {
+          "id": "patch_token_2",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            213,
+            124,
+            8,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#FBE2E2",
+          "stroke": null,
+          "stroke_width": 0.9,
+          "container": "token_2"
+        },
+        {
+          "id": "num_2",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            204,
+            122,
+            9,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 12,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "container": "token_2",
+          "runs": [
+            {
+              "text": "2",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_arrow_2",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              218,
+              124
+            ],
+            [
+              218,
+              109
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "token_proj_2",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              217,
+              156
+            ],
+            [
+              217,
+              141
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "token_3",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            223,
+            124,
+            18,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#EEEEEE",
+          "stroke": null,
+          "stroke_width": 0.9
+        },
+        {
+          "id": "patch_token_3",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            233,
+            124,
+            8,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#FBE2E2",
+          "stroke": null,
+          "stroke_width": 0.9,
+          "container": "token_3"
+        },
+        {
+          "id": "num_3",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            224,
+            122,
+            9,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 12,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "container": "token_3",
+          "runs": [
+            {
+              "text": "3",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_arrow_3",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              238,
+              124
+            ],
+            [
+              238,
+              109
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "token_proj_3",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              237,
+              156
+            ],
+            [
+              237,
+              141
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "token_4",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            243,
+            124,
+            18,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#EEEEEE",
+          "stroke": null,
+          "stroke_width": 0.9
+        },
+        {
+          "id": "patch_token_4",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            253,
+            124,
+            8,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#FBE2E2",
+          "stroke": null,
+          "stroke_width": 0.9,
+          "container": "token_4"
+        },
+        {
+          "id": "num_4",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            244,
+            122,
+            9,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 12,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "container": "token_4",
+          "runs": [
+            {
+              "text": "4",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_arrow_4",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              258,
+              124
+            ],
+            [
+              258,
+              109
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "token_proj_4",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              257,
+              156
+            ],
+            [
+              257,
+              141
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "token_5",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            263,
+            124,
+            18,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#EEEEEE",
+          "stroke": null,
+          "stroke_width": 0.9,
+          "allow_overlap_with": [
+            "class_star"
+          ],
+          "overlap_reason": "Source-verified legend symbol layering or encoder branch crossing at the same coordinates."
+        },
+        {
+          "id": "num_5",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            264,
+            122,
+            9,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 12,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "container": "token_5",
+          "runs": [
+            {
+              "text": "5",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_arrow_5",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              278,
+              124
+            ],
+            [
+              278,
+              109
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "token_proj_5",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              277,
+              156
+            ],
+            [
+              277,
+              141
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "token_6",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            283,
+            124,
+            18,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#EEEEEE",
+          "stroke": null,
+          "stroke_width": 0.9
+        },
+        {
+          "id": "patch_token_6",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            293,
+            124,
+            8,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#FBE2E2",
+          "stroke": null,
+          "stroke_width": 0.9,
+          "container": "token_6"
+        },
+        {
+          "id": "num_6",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            284,
+            122,
+            9,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 12,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "container": "token_6",
+          "runs": [
+            {
+              "text": "6",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_arrow_6",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              298,
+              124
+            ],
+            [
+              298,
+              109
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "token_proj_6",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              297,
+              156
+            ],
+            [
+              297,
+              141
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "token_7",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            303,
+            124,
+            18,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#EEEEEE",
+          "stroke": null,
+          "stroke_width": 0.9
+        },
+        {
+          "id": "patch_token_7",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            313,
+            124,
+            8,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#FBE2E2",
+          "stroke": null,
+          "stroke_width": 0.9,
+          "container": "token_7"
+        },
+        {
+          "id": "num_7",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            304,
+            122,
+            9,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 12,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "container": "token_7",
+          "runs": [
+            {
+              "text": "7",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_arrow_7",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              318,
+              124
+            ],
+            [
+              318,
+              109
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "token_proj_7",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              317,
+              156
+            ],
+            [
+              317,
+              141
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "token_8",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            323,
+            124,
+            18,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#EEEEEE",
+          "stroke": null,
+          "stroke_width": 0.9
+        },
+        {
+          "id": "patch_token_8",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            333,
+            124,
+            8,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#FBE2E2",
+          "stroke": null,
+          "stroke_width": 0.9,
+          "container": "token_8"
+        },
+        {
+          "id": "num_8",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            324,
+            122,
+            9,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 12,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "container": "token_8",
+          "runs": [
+            {
+              "text": "8",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_arrow_8",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              338,
+              124
+            ],
+            [
+              338,
+              109
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "token_proj_8",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              337,
+              156
+            ],
+            [
+              337,
+              141
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "token_9",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            343,
+            124,
+            18,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#EEEEEE",
+          "stroke": null,
+          "stroke_width": 0.9
+        },
+        {
+          "id": "patch_token_9",
+          "kind": "shape",
+          "z": 3,
+          "box": [
+            353,
+            124,
+            8,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#FBE2E2",
+          "stroke": null,
+          "stroke_width": 0.9,
+          "container": "token_9"
+        },
+        {
+          "id": "num_9",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            344,
+            122,
+            9,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 12,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "container": "token_9",
+          "runs": [
+            {
+              "text": "9",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "token_arrow_9",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              358,
+              124
+            ],
+            [
+              358,
+              109
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "token_proj_9",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              357,
+              156
+            ],
+            [
+              357,
+              141
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "class_token",
+          "kind": "shape",
+          "z": 4,
+          "box": [
+            273,
+            124,
+            10,
+            17
+          ],
+          "shape": "rect",
+          "fill": "#DFDDE8",
+          "stroke": null,
+          "stroke_width": 0.9,
+          "allow_overlap_with": [
+            "token_5"
+          ],
+          "overlap_reason": "Source class token shares the last position-5 patch area."
+        },
+        {
+          "id": "class_star",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            274,
+            123,
+            9,
+            18
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 12,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "container": "class_token",
+          "runs": [
+            {
+              "text": "*",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 12,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "patch_proj_0",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              175,
+              201
+            ],
+            [
+              175,
+              186
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "patch_proj_1",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              195,
+              201
+            ],
+            [
+              195,
+              186
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "patch_proj_2",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              215,
+              201
+            ],
+            [
+              215,
+              186
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "patch_proj_3",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              235,
+              201
+            ],
+            [
+              235,
+              186
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "patch_proj_4",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              255,
+              201
+            ],
+            [
+              255,
+              186
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "patch_proj_5",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              294,
+              201
+            ],
+            [
+              294,
+              186
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "patch_proj_6",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              314,
+              201
+            ],
+            [
+              314,
+              186
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "patch_proj_7",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              334,
+              201
+            ],
+            [
+              334,
+              186
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "patch_proj_8",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              354,
+              201
+            ],
+            [
+              354,
+              186
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "input_image",
+          "kind": "image",
+          "z": 4,
+          "box": [
+            23,
+            174,
+            104,
+            73
+          ],
+          "path": "assets/10e38a88ff8d1f1670b9.png",
+          "contains_text": false,
+          "provenance": "Exact image-only crop from official PMLR Figure 2 PDF raster; CC BY 4.0."
+        },
+        {
+          "id": "patch_left",
+          "kind": "image",
+          "z": 4,
+          "box": [
+            168,
+            201,
+            97,
+            20
+          ],
+          "path": "assets/a42541de00ad94cff037.png",
+          "contains_text": false,
+          "provenance": "Exact image-only crop from official PMLR Figure 2 PDF raster; CC BY 4.0."
+        },
+        {
+          "id": "patch_right",
+          "kind": "image",
+          "z": 4,
+          "box": [
+            286,
+            201,
+            78,
+            20
+          ],
+          "path": "assets/32fc4f6460b5e3eccd8d.png",
+          "contains_text": false,
+          "provenance": "Exact image-only crop from official PMLR Figure 2 PDF raster; CC BY 4.0."
+        },
+        {
+          "id": "input_label",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            20,
+            151,
+            110,
+            23
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "align": "center",
+          "runs": [
+            {
+              "text": "Input Image",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "vim_title",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            172,
+            233,
+            206,
+            24
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "bold": true,
+          "align": "center",
+          "runs": [
+            {
+              "text": "Vision Mamba (Vim)",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "image_to_patch",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              127,
+              210
+            ],
+            [
+              167,
+              210
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "divider",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              381,
+              4
+            ],
+            [
+              381,
+              254
+            ]
+          ],
+          "stroke": "#888888",
+          "stroke_width": 2,
+          "dash": [
+            8,
+            7
+          ]
+        },
+        {
+          "id": "encoder_panel",
+          "kind": "shape",
+          "z": 0,
+          "box": [
+            436,
+            11,
+            525,
+            218
+          ],
+          "shape": "round_rect",
+          "fill": "#F5F5F5",
+          "stroke": "#808080",
+          "stroke_width": 0.9,
+          "radius": 8,
+          "role": "background"
+        },
+        {
+          "id": "embedded",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            394,
+            45,
+            30,
+            145
+          ],
+          "shape": "round_rect",
+          "fill": "#FBE2E2",
+          "stroke": "#D7CCCC",
+          "stroke_width": 0.9,
+          "radius": 5
+        },
+        {
+          "id": "embedded_text",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            332,
+            103,
+            155,
+            29
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "rotation": 90,
+          "align": "center",
+          "valign": "middle",
+          "container": "embedded",
+          "runs": [
+            {
+              "text": "Embedded Patches",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "norm",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            464,
+            106,
+            57,
+            23
+          ],
+          "shape": "round_rect",
+          "fill": "#F6F6F6",
+          "stroke": "#808080",
+          "stroke_width": 0.9,
+          "radius": 5
+        },
+        {
+          "id": "norm_text",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            467,
+            106,
+            51,
+            23
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "align": "center",
+          "valign": "middle",
+          "container": "norm",
+          "runs": [
+            {
+              "text": "Norm",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "proj_x",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            546,
+            24,
+            28,
+            66
+          ],
+          "shape": "polygon",
+          "fill": "#DFD3E2",
+          "stroke": "#808080",
+          "stroke_width": 0.9,
+          "vertices": [
+            [
+              0,
+              0.1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0.9
+            ]
+          ]
+        },
+        {
+          "id": "proj_z",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            546,
+            145,
+            28,
+            66
+          ],
+          "shape": "polygon",
+          "fill": "#DFD3E2",
+          "stroke": "#808080",
+          "stroke_width": 0.9,
+          "vertices": [
+            [
+              0,
+              0.1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0.9
+            ]
+          ]
+        },
+        {
+          "id": "proj_y",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            896,
+            85,
+            28,
+            66
+          ],
+          "shape": "polygon",
+          "fill": "#DFD3E2",
+          "stroke": "#808080",
+          "stroke_width": 0.9,
+          "vertices": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0.1
+            ],
+            [
+              1,
+              0.9
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "id": "forward_conv",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            621.5,
+            40.2,
+            84,
+            35
+          ],
+          "shape": "round_rect",
+          "fill": "#F8EDDA",
+          "stroke": "#808080",
+          "stroke_width": 0.9,
+          "radius": 5
+        },
+        {
+          "id": "forward_conv_text",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            624,
+            39.3,
+            78,
+            36
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15.4,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "align": "center",
+          "valign": "middle",
+          "container": "forward_conv",
+          "runs": [
+            {
+              "text": "Forward\n",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15.4,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            },
+            {
+              "text": "Conv1d",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15.4,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "backward_conv",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            621.5,
+            100.2,
+            84,
+            35
+          ],
+          "shape": "round_rect",
+          "fill": "#E7EDF5",
+          "stroke": "#808080",
+          "stroke_width": 0.9,
+          "radius": 5
+        },
+        {
+          "id": "backward_conv_text",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            624,
+            99.3,
+            78,
+            36
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15.4,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "align": "center",
+          "valign": "middle",
+          "container": "backward_conv",
+          "runs": [
+            {
+              "text": "Backward\n",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15.4,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            },
+            {
+              "text": "Conv1d",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15.4,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "forward_ssm",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            725.5,
+            40.2,
+            71,
+            35
+          ],
+          "shape": "round_rect",
+          "fill": "#FCE5BF",
+          "stroke": "#808080",
+          "stroke_width": 0.9,
+          "radius": 5
+        },
+        {
+          "id": "forward_ssm_text",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            728,
+            39.3,
+            65,
+            36
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15.4,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "align": "center",
+          "valign": "middle",
+          "container": "forward_ssm",
+          "runs": [
+            {
+              "text": "Forward\n",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15.4,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            },
+            {
+              "text": "SSM",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15.4,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "backward_ssm",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            725.5,
+            100.2,
+            71,
+            35
+          ],
+          "shape": "round_rect",
+          "fill": "#D9E7FD",
+          "stroke": "#808080",
+          "stroke_width": 0.9,
+          "radius": 5
+        },
+        {
+          "id": "backward_ssm_text",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            728,
+            99.3,
+            65,
+            36
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15.4,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "align": "center",
+          "valign": "middle",
+          "container": "backward_ssm",
+          "runs": [
+            {
+              "text": "Backward\n",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15.4,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            },
+            {
+              "text": "SSM",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15.4,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "activation",
+          "kind": "shape",
+          "z": 2,
+          "box": [
+            621.5,
+            165.2,
+            83,
+            25
+          ],
+          "shape": "round_rect",
+          "fill": "#F6F6F6",
+          "stroke": "#808080",
+          "stroke_width": 0.9,
+          "radius": 5
+        },
+        {
+          "id": "activation_text",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            624,
+            165.0,
+            77,
+            25
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15.2,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "align": "center",
+          "valign": "middle",
+          "container": "activation",
+          "runs": [
+            {
+              "text": "Activation",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15.2,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "embedded_norm",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              424,
+              117
+            ],
+            [
+              464,
+              117
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "norm_split",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              521,
+              117
+            ],
+            [
+              533,
+              117
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "split_top",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              533,
+              117
+            ],
+            [
+              533,
+              58
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "split_top_proj",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              533,
+              58
+            ],
+            [
+              546,
+              58
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "split_bottom",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              533,
+              117
+            ],
+            [
+              533,
+              178
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "split_bottom_proj",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              533,
+              178
+            ],
+            [
+              546,
+              178
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "proj_x_label",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              574,
+              58
+            ],
+            [
+              591,
+              58
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "x_forward",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              606,
+              58
+            ],
+            [
+              621,
+              58
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "x_down",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              597,
+              66
+            ],
+            [
+              597,
+              118
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "x_back",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              597,
+              118
+            ],
+            [
+              621,
+              118
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "proj_z_label",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              574,
+              178
+            ],
+            [
+              594,
+              178
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "z_activation",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              606,
+              178
+            ],
+            [
+              621,
+              178
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "fc_fs",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              705,
+              58
+            ],
+            [
+              725,
+              58
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "bc_bs",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              705,
+              118
+            ],
+            [
+              725,
+              118
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "fs_mul",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              796,
+              58
+            ],
+            [
+              831,
+              58
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          },
+          "allow_overlap_with": [
+            "h_f_3"
+          ],
+          "overlap_reason": "Source-verified legend symbol layering or encoder branch crossing at the same coordinates."
+        },
+        {
+          "id": "bs_mul",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              796,
+              118
+            ],
+            [
+              814,
+              118
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          },
+          "allow_overlap_with": [
+            "h_b_3"
+          ],
+          "overlap_reason": "Source-verified legend symbol layering or encoder branch crossing at the same coordinates."
+        },
+        {
+          "id": "activation_branch",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              704,
+              178
+            ],
+            [
+              836,
+              178
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "branch_up",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              836,
+              178
+            ],
+            [
+              836,
+              64
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          },
+          "allow_overlap_with": [
+            "mul_b_right"
+          ],
+          "overlap_reason": "Source-verified legend symbol layering or encoder branch crossing at the same coordinates."
+        },
+        {
+          "id": "branch2",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              819,
+              178
+            ],
+            [
+              819,
+              124
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "mul_f_right",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              842,
+              58
+            ],
+            [
+              857,
+              58
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "f_merge",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              857,
+              58
+            ],
+            [
+              857,
+              111
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "mul_b_right",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              825,
+              118
+            ],
+            [
+              851,
+              118
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "merge_y",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              863,
+              118
+            ],
+            [
+              874,
+              118
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "y_proj",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              884,
+              118
+            ],
+            [
+              896,
+              118
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "proj_residual",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              924,
+              118
+            ],
+            [
+              935,
+              118
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "out",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              946,
+              118
+            ],
+            [
+              972,
+              118
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "residual_down",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              450,
+              117
+            ],
+            [
+              450,
+              220
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "residual_base",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              450,
+              220
+            ],
+            [
+              940,
+              220
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "residual_up",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              940,
+              220
+            ],
+            [
+              940,
+              124
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "h_f_1",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              760,
+              40
+            ],
+            [
+              760,
+              31
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "h_f_2",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              760,
+              31
+            ],
+            [
+              806,
+              31
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "h_f_3",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              806,
+              31
+            ],
+            [
+              806,
+              83
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "h_f_4",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              806,
+              83
+            ],
+            [
+              760,
+              83
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "h_f_5",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              760,
+              83
+            ],
+            [
+              760,
+              76
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "h_b_1",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              760,
+              135
+            ],
+            [
+              760,
+              143
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "h_b_2",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              760,
+              143
+            ],
+            [
+              806,
+              143
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "h_b_3",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              806,
+              143
+            ],
+            [
+              806,
+              91
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "h_b_4",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              806,
+              91
+            ],
+            [
+              760,
+              91
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": false
+        },
+        {
+          "id": "h_b_5",
+          "kind": "line",
+          "z": 3,
+          "points": [
+            [
+              760,
+              91
+            ],
+            [
+              760,
+              100
+            ]
+          ],
+          "stroke": "#000000",
+          "stroke_width": 0.9,
+          "arrow": true,
+          "arrow_head": {
+            "length": 4,
+            "width": 4
+          }
+        },
+        {
+          "id": "multiply_forward",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            830.5,
+            52.5,
+            11,
+            11
+          ],
+          "shape": "ellipse",
+          "fill": "#F5F5F5",
+          "stroke": "#000000",
+          "stroke_width": 0.9
+        },
+        {
+          "id": "multiply_forward_symbol",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            831,
+            48,
+            11,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 14,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "align": "center",
+          "valign": "middle",
+          "allow_overlap_with": [
+            "multiply_forward"
+          ],
+          "overlap_reason": "Symbol inside source merge circle",
+          "runs": [
+            {
+              "text": "×",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 14,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "multiply_backward",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            813.5,
+            112.5,
+            11,
+            11
+          ],
+          "shape": "ellipse",
+          "fill": "#F5F5F5",
+          "stroke": "#000000",
+          "stroke_width": 0.9
+        },
+        {
+          "id": "multiply_backward_symbol",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            814,
+            108,
+            11,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 14,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "align": "center",
+          "valign": "middle",
+          "allow_overlap_with": [
+            "multiply_backward"
+          ],
+          "overlap_reason": "Symbol inside source merge circle",
+          "runs": [
+            {
+              "text": "×",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 14,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "merge",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            851.5,
+            112.5,
+            11,
+            11
+          ],
+          "shape": "ellipse",
+          "fill": "#F5F5F5",
+          "stroke": "#000000",
+          "stroke_width": 0.9
+        },
+        {
+          "id": "merge_symbol",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            852,
+            108,
+            11,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 14,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "align": "center",
+          "valign": "middle",
+          "allow_overlap_with": [
+            "merge"
+          ],
+          "overlap_reason": "Symbol inside source merge circle",
+          "runs": [
+            {
+              "text": "+",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 14,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "residual",
+          "kind": "shape",
+          "z": 6,
+          "box": [
+            934.5,
+            112.5,
+            11,
+            11
+          ],
+          "shape": "ellipse",
+          "fill": "#F5F5F5",
+          "stroke": "#000000",
+          "stroke_width": 0.9
+        },
+        {
+          "id": "residual_symbol",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            935,
+            108,
+            11,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 14,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "align": "center",
+          "valign": "middle",
+          "allow_overlap_with": [
+            "residual"
+          ],
+          "overlap_reason": "Symbol inside source merge circle",
+          "runs": [
+            {
+              "text": "+",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 14,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "x",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            592,
+            46,
+            13,
+            22
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "italic": true,
+          "runs": [
+            {
+              "text": "x",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15,
+              "bold": false,
+              "italic": true,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "z",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            596,
+            166,
+            13,
+            22
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "italic": true,
+          "runs": [
+            {
+              "text": "z",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15,
+              "bold": false,
+              "italic": true,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "y",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            872,
+            106,
+            15,
+            22
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "italic": true,
+          "padding": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "runs": [
+            {
+              "text": "y",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15,
+              "bold": false,
+              "italic": true,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "hf",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            762,
+            12,
+            10,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "italic": true,
+          "runs": [
+            {
+              "text": "h",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15,
+              "bold": false,
+              "italic": true,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "hb",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            761,
+            141,
+            10,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "italic": true,
+          "runs": [
+            {
+              "text": "h",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15,
+              "bold": false,
+              "italic": true,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "hf_sub",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            772,
+            19,
+            44,
+            14
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 10,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "runs": [
+            {
+              "text": "forward",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 10,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "hb_sub",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            772,
+            149,
+            48,
+            14
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 10,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "runs": [
+            {
+              "text": "backward",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 10,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "repeat",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            925,
+            19,
+            28,
+            20
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "runs": [
+            {
+              "text": "L×",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15,
+              "bold": false,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "id": "encoder_title",
+          "kind": "text",
+          "z": 10,
+          "box": [
+            587.5,
+            233.5,
+            216,
+            25
+          ],
+          "font_family": "Times New Roman",
+          "font_size": 15.5,
+          "color": "#000000",
+          "wrap": false,
+          "fit": "strict",
+          "bold": true,
+          "align": "center",
+          "runs": [
+            {
+              "text": "Vision Mamba Encoder",
+              "font_family": "Times New Roman",
+              "cjk_font_family": "Times New Roman",
+              "font_size": 15.5,
+              "bold": true,
+              "italic": false,
+              "color": "#000000"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1312 @@
+{
+  "status": "fail",
+  "visual_review": "required",
+  "automated_checks": {
+    "preflight": {
+      "status": "fail",
+      "findings": [
+        {
+          "slide": "page_001",
+          "code": "text_frame_outside_container_only",
+          "severity": "info",
+          "elements": [
+            "embedded_text",
+            "embedded"
+          ],
+          "message": "Transparent frame corners extend beyond the container; measured visible ink remains inside"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "legend",
+            "legend_projection"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 323.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "legend",
+            "legend_patch"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 170.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "legend",
+            "legend_position"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 170.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "legend",
+            "legend_class"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 170.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "legend",
+            "legend_patch2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 153.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "legend",
+            "legend_pos2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 153.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "legend",
+            "legend_projection_label"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 1740.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "legend",
+            "legend_patch_label"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 1740.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "legend",
+            "legend_position_label"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 1740.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "legend",
+            "legend_class_label"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 1740.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "legend",
+            "legend_num"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 400.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "legend",
+            "legend_star"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 135.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "legend_position",
+            "legend_num"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 153.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "legend_class",
+            "legend_star"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 135.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "legend_pos2",
+            "legend_num"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 153.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_0",
+            "patch_token_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 136.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_0",
+            "num_0"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 153.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_1",
+            "patch_token_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 136.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_1",
+            "num_1"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 153.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_2",
+            "patch_token_2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 136.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_2",
+            "num_2"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 153.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_3",
+            "patch_token_3"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 136.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_3",
+            "num_3"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 153.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_4",
+            "patch_token_4"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 136.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_4",
+            "num_4"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 153.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_5",
+            "patch_token_5"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 136.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_5",
+            "class_token"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 136.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_5",
+            "num_5"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 153.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_5",
+            "class_star"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 119.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "patch_token_5",
+            "class_token"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 136.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "patch_token_5",
+            "class_star"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 119.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_6",
+            "patch_token_6"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 136.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_6",
+            "num_6"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 153.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_7",
+            "patch_token_7"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 136.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_7",
+            "num_7"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 153.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_8",
+            "patch_token_8"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 136.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_8",
+            "num_8"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 153.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_9",
+            "patch_token_9"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 136.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "token_9",
+            "num_9"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 153.0
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "class_token",
+            "class_star"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 153.0
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "token_arrow_5",
+            "class_star"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "x_down",
+            "x"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "z_activation",
+            "z"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "fs_mul",
+            "h_f_3"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 0.81
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "bs_mul",
+            "h_b_3"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 0.81
+        },
+        {
+          "slide": "page_001",
+          "code": "unintended_overlap",
+          "severity": "error",
+          "elements": [
+            "branch_up",
+            "mul_b_right"
+          ],
+          "message": "Objects overlap without a verified container or named exemption",
+          "area_px2": 0.81
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "branch_up",
+            "multiply_forward_symbol"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "branch2",
+            "multiply_backward_symbol"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "branch2",
+            "hb_sub"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "f_merge",
+            "merge_symbol"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "y_proj",
+            "y"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "residual_up",
+            "residual_symbol"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "h_f_2",
+            "hf"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "h_f_2",
+            "hf_sub"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "h_f_3",
+            "hf_sub"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        },
+        {
+          "slide": "page_001",
+          "code": "text_frame_overlap_only",
+          "severity": "info",
+          "elements": [
+            "h_b_2",
+            "hb"
+          ],
+          "message": "Text-frame overlap is confined to blank space; measured visible ink remains separate"
+        }
+      ],
+      "slides": [
+        {
+          "id": "page_001",
+          "counts": {
+            "shape": 46,
+            "text": 42,
+            "line": 71,
+            "image": 3
+          },
+          "intentional_overlaps": [
+            {
+              "elements": [
+                "multiply_forward",
+                "multiply_forward_symbol"
+              ],
+              "reason": "Symbol inside source merge circle",
+              "area_px2": 93.256
+            },
+            {
+              "elements": [
+                "multiply_backward",
+                "multiply_backward_symbol"
+              ],
+              "reason": "Symbol inside source merge circle",
+              "area_px2": 93.256
+            },
+            {
+              "elements": [
+                "merge",
+                "merge_symbol"
+              ],
+              "reason": "Symbol inside source merge circle",
+              "area_px2": 93.256
+            },
+            {
+              "elements": [
+                "residual",
+                "residual_symbol"
+              ],
+              "reason": "Symbol inside source merge circle",
+              "area_px2": 93.256
+            }
+          ],
+          "text_layouts": {
+            "legend_projection_label": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 80.0,
+              "height_px": 13.8,
+              "available_width_px": 87,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 80.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Projection Layer"
+              ]
+            },
+            "legend_patch_label": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 64.75,
+              "height_px": 13.8,
+              "available_width_px": 87,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 65.25,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Patch Tokens"
+              ]
+            },
+            "legend_position_label": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 79.0,
+              "height_px": 13.8,
+              "available_width_px": 87,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 79.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Position Embed."
+              ]
+            },
+            "legend_class_label": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 59.5,
+              "height_px": 13.8,
+              "available_width_px": 87,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 60.0,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "Class Token"
+              ]
+            },
+            "legend_num": {
+              "scale": 1,
+              "effective_font_size_px": 11,
+              "width_px": 13.75,
+              "height_px": 12.65,
+              "available_width_px": 20,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 14.25,
+              "required_height_px": 13.15,
+              "fits": true,
+              "lines": [
+                "0 1"
+              ]
+            },
+            "legend_star": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 15,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "*"
+              ]
+            },
+            "mlp_text": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 112.0,
+              "height_px": 17.25,
+              "available_width_px": 202,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 112.5,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "MLP & Prediction"
+              ]
+            },
+            "vision_text": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 144.0,
+              "height_px": 17.25,
+              "available_width_px": 202,
+              "available_height_px": 44,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 144.5,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "Vision Mamba Encoder"
+              ]
+            },
+            "flatten_text": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 166.5,
+              "height_px": 17.25,
+              "available_width_px": 202,
+              "available_height_px": 30,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 167.0,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "Flatten & Linear Projection"
+              ]
+            },
+            "num_0": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "0"
+              ]
+            },
+            "num_1": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "1"
+              ]
+            },
+            "num_2": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "2"
+              ]
+            },
+            "num_3": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "3"
+              ]
+            },
+            "num_4": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "4"
+              ]
+            },
+            "num_5": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "5"
+              ]
+            },
+            "num_6": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "6"
+              ]
+            },
+            "num_7": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "7"
+              ]
+            },
+            "num_8": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "8"
+              ]
+            },
+            "num_9": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "9"
+              ]
+            },
+            "class_star": {
+              "scale": 1,
+              "effective_font_size_px": 12,
+              "width_px": 6.0,
+              "height_px": 13.8,
+              "available_width_px": 9,
+              "available_height_px": 18,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 6.5,
+              "required_height_px": 14.3,
+              "fits": true,
+              "lines": [
+                "*"
+              ]
+            },
+            "input_label": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 73.25,
+              "height_px": 17.25,
+              "available_width_px": 110,
+              "available_height_px": 23,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 73.75,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "Input Image"
+              ]
+            },
+            "vim_title": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 135.75,
+              "height_px": 17.25,
+              "available_width_px": 206,
+              "available_height_px": 24,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 136.25,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "Vision Mamba (Vim)"
+              ]
+            },
+            "embedded_text": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 114.25,
+              "height_px": 17.25,
+              "available_width_px": 155,
+              "available_height_px": 29,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 114.75,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "Embedded Patches"
+              ]
+            },
+            "norm_text": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 35.25,
+              "height_px": 17.25,
+              "available_width_px": 51,
+              "available_height_px": 23,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 35.75,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "Norm"
+              ]
+            },
+            "forward_conv_text": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 51.0,
+              "height_px": 34.5,
+              "available_width_px": 78,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 51.5,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "Forward",
+                "Conv1d"
+              ]
+            },
+            "backward_conv_text": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 61.25,
+              "height_px": 34.5,
+              "available_width_px": 78,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 61.75,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "Backward",
+                "Conv1d"
+              ]
+            },
+            "forward_ssm_text": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 51.0,
+              "height_px": 34.5,
+              "available_width_px": 65,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 51.5,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "Forward",
+                "SSM"
+              ]
+            },
+            "backward_ssm_text": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 61.25,
+              "height_px": 34.5,
+              "available_width_px": 65,
+              "available_height_px": 35,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 61.75,
+              "required_height_px": 35.0,
+              "fits": true,
+              "lines": [
+                "Backward",
+                "SSM"
+              ]
+            },
+            "activation_text": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 63.75,
+              "height_px": 17.25,
+              "available_width_px": 77,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 64.25,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "Activation"
+              ]
+            },
+            "multiply_forward_symbol": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 8.0,
+              "height_px": 16.1,
+              "available_width_px": 11,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "×"
+              ]
+            },
+            "multiply_backward_symbol": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 8.0,
+              "height_px": 16.1,
+              "available_width_px": 11,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "×"
+              ]
+            },
+            "merge_symbol": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 8.0,
+              "height_px": 16.1,
+              "available_width_px": 11,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "+"
+              ]
+            },
+            "residual_symbol": {
+              "scale": 1,
+              "effective_font_size_px": 14,
+              "width_px": 8.0,
+              "height_px": 16.1,
+              "available_width_px": 11,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 16.6,
+              "fits": true,
+              "lines": [
+                "+"
+              ]
+            },
+            "x": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 7.5,
+              "height_px": 17.25,
+              "available_width_px": 13,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.0,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "x"
+              ]
+            },
+            "z": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 6.5,
+              "height_px": 17.25,
+              "available_width_px": 13,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 7.0,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "z"
+              ]
+            },
+            "y": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 8.0,
+              "height_px": 17.25,
+              "available_width_px": 13,
+              "available_height_px": 22,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.5,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "y"
+              ]
+            },
+            "hf": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 7.5,
+              "height_px": 17.25,
+              "available_width_px": 10,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.0,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "h"
+              ]
+            },
+            "hb": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 7.5,
+              "height_px": 17.25,
+              "available_width_px": 10,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 8.0,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "h"
+              ]
+            },
+            "hf_sub": {
+              "scale": 1,
+              "effective_font_size_px": 10,
+              "width_px": 31.75,
+              "height_px": 11.5,
+              "available_width_px": 44,
+              "available_height_px": 14,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 32.25,
+              "required_height_px": 12.0,
+              "fits": true,
+              "lines": [
+                "forward"
+              ]
+            },
+            "hb_sub": {
+              "scale": 1,
+              "effective_font_size_px": 10,
+              "width_px": 39.5,
+              "height_px": 11.5,
+              "available_width_px": 48,
+              "available_height_px": 14,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 40.0,
+              "required_height_px": 12.0,
+              "fits": true,
+              "lines": [
+                "backward"
+              ]
+            },
+            "repeat": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 17.75,
+              "height_px": 17.25,
+              "available_width_px": 28,
+              "available_height_px": 20,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 18.25,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "L×"
+              ]
+            },
+            "encoder_title": {
+              "scale": 1,
+              "effective_font_size_px": 15,
+              "width_px": 152.5,
+              "height_px": 17.25,
+              "available_width_px": 216,
+              "available_height_px": 25,
+              "safety_reserve_px": 0.5,
+              "required_width_px": 153.0,
+              "required_height_px": 17.75,
+              "fits": true,
+              "lines": [
+                "Vision Mamba Encoder"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "No claim of exact font identification from pixels.",
+    "Photographs and complex artwork remain independent raster assets.",
+    "PowerPoint/WPS must be checked separately from LibreOffice."
+  ],
+  "source_scene_sha256": "426ca2b737ca3ce6c2ff7fb8a549aba8e6a25a60e579dd9ed77628d4504e7c2d",
+  "font_substitutions": []
+}

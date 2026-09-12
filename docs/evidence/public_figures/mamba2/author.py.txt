@@ -1,0 +1,96 @@
+from pathlib import Path
+import json,subprocess
+from PIL import ImageFont
+P=Path('/tmp/mamba-complex-Sox4Lz');E=[]
+def add(kind,id,**kw):
+ e=dict(id=id,kind=kind,z=len(E)+1,**kw);E.append(e);return e
+fonts={}
+def txt(id,s,x,baseline,size=16.5,family='Times New Roman',italic=False,bold=False,color='#000000',**kw):
+ key=(family,italic,bold,size)
+ if key not in fonts:
+  pat=family+(':style=Bold Italic' if bold and italic else ':style=Bold' if bold else ':style=Italic' if italic else '')
+  vals=subprocess.check_output(['/opt/homebrew/bin/fc-match',pat,'-f','%{file}|%{index}']).decode().split('|');fonts[key]=ImageFont.truetype(vals[0],round(size*4),index=int(vals[1] or 0))
+ f=fonts[key];a,d=f.getmetrics();w=f.getlength(s)/4
+ return add('text',id,box=[x,max(0,baseline-a/4),w+7,max((a+d)/4+2,size*1.15+1)],text=s,font_size=size,font_family=family,italic=italic,bold=bold,color=color,**kw)
+def rect(id,x,y,w,h,fill=None,stroke=None,sw=1,**kw):return add('shape',id,shape='rect',box=[x,y,w,h],fill=fill,stroke=stroke,stroke_width=sw,**kw)
+def line(id,x1,y1,x2,y2,c='#000000',w=1,**kw):return add('line',id,points=[[x1,y1],[x2,y2]],stroke=c,stroke_width=w,**kw)
+def bracket(id,x,y,w,h):
+ for suff,a,b,c,d in [('l',x,y,x,y+h),('lt',x,y,x+4,y),('lb',x,y+h,x+4,y+h),('r',x+w,y,x+w,y+h),('rt',x+w-4,y,x+w,y),('rb',x+w-4,y+h,x+w,y+h)]:line(id+suff,a,b,c,d,'#444444',.9)
+def term(id,letter,sub,x,base,trans=False,container=None):
+ base-=1.5
+ kw={'container':container} if container else {};txt(id+'v',letter,x,base,16.5,italic=True,**kw);txt(id+'s',str(sub),x+10,base+2,11,**kw)
+ if trans:
+  line(id+'ttop',x+10,base-15,x+17,base-15,'#000000',.75)
+  line(id+'tstem',x+13.5,base-15,x+13.5,base-9,'#000000',.75)
+def formula(id,x,base,i,j,container):
+ term(id+'C','C',i,x,base,True,container);term(id+'A','A',f'{i}:{j}',x+22,base,False,container);term(id+'B','B',j,x+50,base,False,container)
+# Diagonal blocks; whole matrix triangular layout.
+for bi,(x,y) in enumerate([(7,7),(248,70),(492,137)]):
+ bg=rect(f'diag{bi}',x,y,239 if bi<2 else 238,60 if bi==0 else 65,'#FAE5D7',role='background')
+ for r in range(3):
+  for c in range(r+1):formula(f'd{bi}_{r}_{c}',x+2+c*81,y+(14 if bi==0 else 16)+r*(20 if bi==0 else 22),bi*3+r,bi*3+c,bg['id'])
+for id,x,y,w,h in [('whole',6,5,725,195)]:bracket(id,x,y,w,h)
+for n,x in enumerate([247,491]):line(f'gridv{n}',x,3,x,203,'#808080',1.1)
+for n,y in enumerate([68.5,135.5]):line(f'gridh{n}',3,y,733,y,'#808080',1.1)
+# Three factorizations, each with C-vector, A scalar, B-vector transpose.
+for k,(x,y,rs,cs,aindex) in enumerate([(39,77,3,0,'2:2'),(39,144,6,0,'5:2'),(283,144,6,3,'5:5')]):
+ for side,sx,fill,letter,values in [('C',x,'#DFE6F2','C',range(rs,rs+3)),('B',x+100,'#E3EDD9','B',range(cs,cs+3))]:
+  bg=rect(f'factor{k}{side}bg',sx-1,y-3,63,60,fill,role='background');bracket(f'factor{k}{side}br',sx+2,y,56,54)
+  for n,v in enumerate(values):
+   base=y+12+n*19.5
+   term(f'factor{k}{side}{n}{letter}',letter,v,sx+7,base,True,bg['id'])
+   term(f'factor{k}{side}{n}A','A',f'{v}:{rs-1}' if side=='C' else f'{cs+2}:{v}',sx+29,base,False,bg['id'])
+  if side=='B':txt(f'factor{k}outert','⊤',sx+64,y+2,10,family='Apple Symbols')
+ bg=rect(f'factor{k}Abg',x+66,y+12,28,27,'#FFF2CC',role='background');term(f'factor{k}A','A',aindex,x+67,y+31,False,bg['id'])
+# Legend and mathematical title.
+txt('legendtitle','Semiseparable Matrix',846,120,27.1,'PT Sans Narrow',bold=True)
+txt('legendM','M',1066,123,27,italic=True)
+txt('subtitle','Block Decomposition',845,151,22.25,'Avenir Next Condensed');line('underline',845,154,1010,154,w=1,allow_overlap_with=['subtitle'],overlap_reason='Source-visible underline belongs to this label.')
+colors=['#F6CFB3','#C7DEB3','#FFE69A','#B5C9E4']
+labels=['Diagonal Block: Input → Output','Low-Rank Block: Input → State','Low-Rank Block: State → State','Low-Rank Block: State → Output']
+for n,(color,s) in enumerate(zip(colors,labels)):
+ rect(f'legendkey{n}',775,185.5+44*n,44,22,color,'#000000',1.5)
+ txt(f'legendtext{n}',s,845,205+44*n,22.25,'Avenir Next Condensed')
+# Lower flow; all cells and state blocks native.
+for n,(s,sy,letter,color) in enumerate([('Outputs',298,'Y','#000000'),('States',362,'H','#BEBEBE'),('Inputs',424,'X','#000000')]):
+ txt(f'rowlabel{n}',s,23 if n==0 else 30,sy,29.5,'PT Sans Narrow',bold=True,color=color)
+ txt(f'rowmath{n}',letter,138,sy,27,italic=True,color=color)
+for n,x in enumerate([207,386.5,567.5]):
+ for row,y in [('out',270.5),('in',402.5)]:
+  rect(f'{row}{n}',x,y,98 if n==0 else 98.5,33,stroke='#000000',sw=2.3)
+  for j in [1,2]:line(f'{row}{n}div{j}',x+j*32.7-.2,y,x+j*32.7-.2,y+33,w=2.3)
+ line(f'up{n}',x+49,391,x+49,320,'#FF7F32',2)
+ for side in [-1,1]:line(f'up{n}head{side}',x+49+side*5,330,x+49,320,'#FF7F32',2)
+ rect(f'state{n}',336+181*n,322,22,63,'#D5D5D5','#000000',2,dash=[8,6])
+# Curves sampled from visually inferred control points, not paper drawing data.
+def curve(id,p,c):
+ pts=[]
+ for i in range(17):
+  t=i/16;u=1-t;pts.append([u**3*p[0][j]+3*u*u*t*p[1][j]+3*u*t*t*p[2][j]+t**3*p[3][j] for j in [0,1]])
+ for i,(a,b) in enumerate(zip(pts,pts[1:])):line(f'{id}s{i}',*a,*b,c,2)
+ # Open arrowhead, as visible in the source.
+ x,y=pts[-1];a,b=pts[-3];dx,dy=x-a,y-b;norm=(dx*dx+dy*dy)**.5;dx/=norm;dy/=norm
+ for sign in [-1,1]:line(f'{id}head{sign}',x-dx*10+sign*dy*5,y-dy*10-sign*dx*5,x,y,c,2)
+for n,dx in enumerate([0,179]):
+ curve(f'inputstate{n}',[(319+dx,418),(338+dx,419),(344+dx,401),(347+dx,393)],'#70AD47')
+ curve(f'stateoutput{n}',[(348+dx,314),(349+dx,298),(360+dx,288),(373+dx,287)],'#4472C4')
+ curve(f'statechain{n}',[(374+dx,389),(418+dx,401),(461+dx,400),(502+dx,388)],'#FFC000')
+# Only source-verified geometric joins get explicit named exemptions.
+for i,a in enumerate(E):
+ if a['kind'] not in ('line','shape') or a.get('role')=='background':continue
+ def box(e):
+  if e['kind']=='shape':x,y,w,h=e['box'];return x,y,x+w,y+h
+  p,q=e['points'];sw=e.get('stroke_width',1)/2;return min(p[0],q[0])-sw,min(p[1],q[1])-sw,max(p[0],q[0])+sw,max(p[1],q[1])+sw
+ ab=box(a)
+ for b in E[i+1:]:
+  if b['kind'] not in ('line','shape') or b.get('role')=='background':continue
+  bb=box(b)
+  if min(ab[2],bb[2])>max(ab[0],bb[0]) and min(ab[3],bb[3])>max(ab[1],bb[1]):
+   a.setdefault('allow_overlap_with',[]).append(b['id']);a['overlap_reason']='Source-visible grid/bracket intersection or adjacent segments of one continuous curved connector.'
+for e in E:
+ if e['id'].startswith('legendtext'):e['box'][2]+=5
+ if e['id']=='rowmath2':
+  e['box'][0]-=3;e['box'][2]+=3;e['padding']=[0,0,0,3]
+scene={'version':1,'slides':[{'id':'page_001','width':1236,'height':440,'source':'pages/page_001/source.png','background':'#FFFFFF','reviewed':True,'notes':'Reconstruction of Dao and Gu (ICML 2024), Figure 7. CC BY 4.0; https://proceedings.mlr.press/v235/dao24a.html. All text and geometry native; curves approximated by native line segments. No source PDF geometry or drawing code used.','elements':E}]}
+(P/'job/scene.json').write_text(json.dumps(scene,indent=2))
+print(len(E),'elements')

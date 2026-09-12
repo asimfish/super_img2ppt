@@ -1,0 +1,28 @@
+import pathlib,json,hashlib
+from PIL import Image
+from super_img2ppt.curves import trace_curve
+p=pathlib.Path('/tmp/galore-forward-uEPOph'); im=Image.open(p/'figure6.png').convert('RGB'); trans=im.transpose(Image.Transpose.TRANSPOSE);out=p/'traces-visible';out.mkdir(exist_ok=True);elements=[];reports=[]
+# Raster-observed masks only; split source into pre-legend/post-legend regions, steep parts use transposed pixels.
+# ROI excludes entire legend and neighboring panels. No hidden pixels or experiment data recovered.
+panels=[('130',82,35,389,556,161,357,180),('350',662,35,969,1136,161,357,768),('1b',82,469,389,556,596,791,190),('7b',662,469,919,1136,560,791,790)]
+for name,l,t,mid,r,ly,b,steep_end in panels:
+ for cname,color in [('blue','#A1C9F4'),('green','#ADC477'),('brown','#6C584B')]:
+  if name=='7b'and cname=='green':continue
+  target=tuple(int(color[i:i+2],16)for i in [1,3,5]); regions=[(l,t,steep_end-l,b-t,'y'),(steep_end,t,mid-steep_end,b-t,'x'),(mid,t if ly<t else ly,r-mid,b-ly,'x')]
+  for part,(xx,yy,ww,hh,axis) in enumerate(regions):
+   image=trans if axis=='y' else im;roi=[yy,xx,hh,ww] if axis=='y' else [xx,yy,ww,hh];x0,y0,w,h=roi
+   observed=[x for x in range(x0,x0+w)if any(sum((a-bb)**2 for a,bb in zip(image.getpixel((x,y)),target))<=35**2 for y in range(y0,y0+h))]
+   groups=[]
+   for x in observed:
+    if not groups or x-groups[-1][-1]>5:groups.append([])
+    groups[-1].append(x)
+   for j,g in enumerate(groups):
+    rr=[g[0],y0,g[-1]-g[0]+1,h];prefix=f'c{name}{cname}p{part}g{j}'
+    try:
+     result=trace_curve(image,rr,color,tolerance=35,stroke_width=4.7,prefix=prefix);ee=result.pop('elements')
+     if axis=='y':
+      for el in ee:el['points']=[[v[1],v[0]]for v in el['points']]
+     elements+=ee;result['status']='pass'
+    except Exception as e:result={'status':'fail','error':str(e)}
+    result.update(name=prefix,axis=axis,roi=rr,color=color);reports.append(result);print(prefix,result['status'],result.get('error',''))
+(out/'elements.json').write_text(json.dumps(elements,indent=2));(out/'trace.json').write_text(json.dumps(reports,indent=2))

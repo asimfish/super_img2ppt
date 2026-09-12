@@ -1,0 +1,14 @@
+import json,pathlib,sys,pypdfium2 as pdfium
+from PIL import Image
+p=pathlib.Path('/tmp/galore-forward-uEPOph');b=p/'chart'/sys.argv[1]
+d=pdfium.PdfDocument(b/'render/editable.pdf');im=d[0].render(scale=1170/d[0].get_width()).to_pil().convert('RGB');im.save(b/'actual-sourcewidth.png');src=Image.open(p/'figure6.png').convert('RGB')
+c=json.loads((p/'contract.json').read_text());res=[]
+for r in c['development']+c['heldout']:
+ x,y,w,h=r['box']; aa=[]
+ for z in [src,im]:
+  a=z.crop((x,y,x+w,y+h));aa.append({(k%w,k//w) for k,px in enumerate(a.getdata()) if max(px)-min(px)<35 and sum(px)/3<180})
+ a,bm=aa
+ def box(m):
+  return [min(v[0] for v in m),min(v[1] for v in m),max(v[0] for v in m),max(v[1] for v in m)] if m else [0]*4
+ ba,bb=box(a),box(bm);edge=max(abs(v-u) for v,u in zip(ba,bb));iou=float(len(a&bm)/max(1,len(a|bm)));res.append(dict(id=r['id'],source_bbox=ba,actual_bbox=bb,edge=edge,iou=iou,pass_=edge<=4 and iou>=.70))
+print(json.dumps(res,indent=2));(b/'roi-metrics.json').write_text(json.dumps(res,indent=2))

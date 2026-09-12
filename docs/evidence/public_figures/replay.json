@@ -1,0 +1,53 @@
+[
+  {
+    "case": "galore",
+    "command": [
+      "/Users/liyufeng/Code/super_img2ppt/.venv/bin/super-img2ppt",
+      "build",
+      "/Users/liyufeng/Code/super_img2ppt/examples/gallery/galore/scene.resolved.json",
+      "--out",
+      "/Users/liyufeng/Code/super_img2ppt/output/system_upgrade_20260912/replay_galore",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "--font-dir",
+      "/System/Library/Fonts/Supplemental"
+    ],
+    "exit_code": 0,
+    "seconds": 5.58,
+    "status": "pass"
+  },
+  {
+    "case": "vision_mamba",
+    "command": [
+      "/Users/liyufeng/Code/super_img2ppt/.venv/bin/super-img2ppt",
+      "build",
+      "/Users/liyufeng/Code/super_img2ppt/examples/gallery/vision_mamba/scene.resolved.json",
+      "--out",
+      "/Users/liyufeng/Code/super_img2ppt/output/system_upgrade_20260912/replay_vision_mamba",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "--font-dir",
+      "/System/Library/Fonts/Supplemental"
+    ],
+    "exit_code": 0,
+    "seconds": 3.56,
+    "status": "pass"
+  },
+  {
+    "case": "mamba2",
+    "command": [
+      "/Users/liyufeng/Code/super_img2ppt/.venv/bin/super-img2ppt",
+      "build",
+      "/Users/liyufeng/Code/super_img2ppt/examples/gallery/mamba2/scene.resolved.json",
+      "--out",
+      "/Users/liyufeng/Code/super_img2ppt/output/system_upgrade_20260912/replay_mamba2",
+      "--font-dir",
+      "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+      "--font-dir",
+      "/System/Library/Fonts/Supplemental"
+    ],
+    "exit_code": 0,
+    "seconds": 5.15,
+    "status": "pass"
+  }
+]

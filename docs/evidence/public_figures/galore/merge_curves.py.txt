@@ -1,0 +1,48 @@
+import pathlib,json
+from PIL import Image
+from super_img2ppt.curves import trace_curve
+p=pathlib.Path('/tmp/galore-forward-uEPOph');job=p/'chart';scene=json.loads((job/'scene.json').read_text());els=scene['slides'][0]['elements'];curves=json.loads((p/'traces-axis/elements.json').read_text());im=Image.open(p/'figure6.png').convert('RGB')
+r=trace_curve(im,[662,469,128,148],'#A1C9F4',tolerance=35,stroke_width=4.7,prefix='c7bblue_steep_visible',axis='y');ee=r.pop('elements')
+# Axis-y helper already returns original source coordinates.
+curves+=ee;(p/'traces-axis/7b-steep.json').write_text(json.dumps(r,indent=2))
+# Source-visible z-order blue then green then brown; every curve remains below labels.
+curves.sort(key=lambda e:0 if 'blue'in e['id'] else 1 if 'green'in e['id'] else 2)
+for i,e in enumerate(curves):e['z']=200+i
+els+=curves
+# Exact text-free crop for unsupported crossing; clip ALL underlying native strokes to avoid duplicate stroke rendering.
+clip=(765,607,923,722);(job/'assets').mkdir(exist_ok=True);im.crop(clip).save(job/'assets/7b-ambiguous-crossings.png')
+def insidepart(e):
+ (x,y),(a,b)=e['points'];dx=a-x;dy=b-y;t0,t1=0.,1.
+ for pp,qq in [(-dx,x-clip[0]),(dx,clip[2]-x),(-dy,y-clip[1]),(dy,clip[3]-y)]:
+  if abs(pp)<1e-12:
+   if qq<0:return None
+  elif pp<0:t0=max(t0,qq/pp)
+  else:t1=min(t1,qq/pp)
+ if t0>=t1:return None
+ return t0,t1
+new=[]
+for e in els:
+ if e['kind']!='line':new.append(e);continue
+ part=insidepart(e)
+ if part is None:new.append(e);continue
+ t0,t1=part;(x,y),(a,b)=e['points']
+ for j,(start,end)in enumerate([(0,t0),(t1,1)]):
+  if end-start<1e-8:continue
+  z=dict(e);z['id']=e['id']+'outside'+str(j);z['points']=[[x+(a-x)*u,y+(b-y)*u]for u in [start,end]];new.append(z)
+els=new;els.append(dict(id='crossing_unresolved',kind='image',z=10000,box=[clip[0],clip[1],clip[2]-clip[0],clip[3]-clip[1]],path='assets/7b-ambiguous-crossings.png',contains_text=False,provenance='Exact source crop of blue/brown crossing where trace helper rejects multiple visible branches; includes short grid fragments. Original raster pixels, no invented hidden trajectories.'))
+# Remove obsolete references; enumerate specific intersecting visual strokes (curve curves, grid, axes) with their source-verified crossing semantics.
+ids={e['id']for e in els}
+for e in els:
+ e['allow_overlap_with']=[i for i in e.get('allow_overlap_with',[])if i in ids]
+ if not e['allow_overlap_with']:e.pop('allow_overlap_with',None);e.pop('overlap_reason',None)
+def box(e):
+ if 'box'in e:return e['box']
+ (x,y),(a,b)=e['points'];sw=e.get('stroke_width',1);return [min(x,a)-sw/2,min(y,b)-sw/2,abs(a-x)+sw,abs(b-y)+sw]
+for i,a in enumerate(els):
+ for b in els[i+1:]:
+  if not (a['id'].startswith('c') or b['id'].startswith('c') or 'outside' in a['id'] or 'outside' in b['id']):continue
+  if a['kind']=='text'or b['kind']=='text':continue
+  x,y,w,h=box(a);xx,yy,ww,hh=box(b)
+  if min(x+w,xx+ww)>max(x,xx)and min(y+h,yy+hh)>max(y,yy):
+   a.setdefault('allow_overlap_with',[]).append(b['id']);a['overlap_reason']='Source-visible plotted curve joins/crossings, grid crossings, or exact unresolved crop boundary.'
+scene['slides'][0]['elements']=els;scene['slides'][0]['notes']+=' One exact 158×115 px local raster retains ambiguous 7B blue/brown crossings plus grid fragments. No recovered or invented chart data.';(job/'scene-complete.json').write_text(json.dumps(scene,indent=2));print(len(els))

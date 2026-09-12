@@ -1,0 +1,58 @@
+F.                                                                       [100%]
+=================================== FAILURES ===================================
+_________ test_neighbor_pdf_text_object_does_not_pollute_ink_checks[0] _________
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 300, 'height': 200, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10d5525a0>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-214/test_neighbor_pdf_text_object_0')
+rotation = 0
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10d785700>
+
+    @pytest.mark.render
+    @pytest.mark.skipif(shutil.which("soffice") is None, reason="LibreOffice not installed")
+    @pytest.mark.parametrize("rotation", [0, 90])
+    def test_neighbor_pdf_text_object_does_not_pollute_ink_checks(
+        scene, fonts, tmp_path, rotation, monkeypatch
+    ):
+        spec = adjacent_labels(scene)
+        if rotation:
+            spec["slides"][0].update(width=300, height=300)
+            for element in spec["slides"][0]["elements"]:
+                x, y, w, h = element["box"]
+                cx, cy = 200 - y - h / 2, x + w / 2
+                element["box"] = [cx - w / 2, cy - h / 2, w, h]
+                element["rotation"] = rotation
+        layouts = layout_scene(spec, fonts)
+        pptx = tmp_path / "adjacent.pptx"
+        write_pptx(spec, layouts, tmp_path, pptx)
+        pdf = make_renderer().render(pptx, tmp_path / "render")
+        report = verify_rendered_text(pdf, spec, layouts)
+        assert not [f for f in report["findings"] if f["element"] == "flow"], report
+        assert all(b["matches"] for b in report["text_boxes"])
+    
+        # The same actual PDF must still reveal missing content and real ink overflow.
+        missing = copy.deepcopy(spec)
+        missing["slides"][0]["elements"][0]["text"] = "Absent label"
+        result = verify_rendered_text(pdf, missing, layout_scene(missing, fonts))
+        assert any(f["code"] == "rendered_text_mismatch" for f in result["findings"])
+        if not rotation:
+            narrow = copy.deepcopy(spec)
+            narrow["slides"][0]["elements"][1]["box"][2] = 29
+            result = verify_rendered_text(pdf, narrow, layout_scene(narrow, fonts))
+            assert any(
+                f["code"] == "rendered_glyph_overflow" and f["element"] == "action"
+                for f in result["findings"]
+            ), result
+    
+            overflow = next(
+>               f
+                  
+                for f in result["findings"]
+                if f["code"] == "rendered_glyph_overflow" and f["element"] == "action"
+            )
+E           KeyError: 'overflow_pt'
+
+tests/test_pdf_glyph_ownership.py:75: KeyError
+=========================== short test summary info ============================
+FAILED tests/test_pdf_glyph_ownership.py::test_neighbor_pdf_text_object_does_not_pollute_ink_checks[0]
+1 failed, 1 passed in 6.16s

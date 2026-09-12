@@ -1,0 +1,7 @@
+import json,pathlib,hashlib,sys,datetime
+from PIL import Image,ImageDraw
+p=pathlib.Path('/tmp/galore-forward-uEPOph');b=p/'chart'/sys.argv[1];files=[b/'editable.pptx',b/'scene.resolved.json',b/'svg/page_001.svg',b/'render/editable.pdf',b/'actual-sourcewidth.png',p/'chart/scene-complete.json',p/'trace_axis.py',p/'merge_curves.py']
+meta={'frozen_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'candidate':sys.argv[1],'hashes':{str(f.relative_to(p)):hashlib.sha256(f.read_bytes()).hexdigest()for f in files},'runtime_curves_sha256':hashlib.sha256(pathlib.Path('/Users/liyufeng/Code/super_img2ppt/skills/super-img2ppt/src/super_img2ppt/curves.py').read_bytes()).hexdigest()}
+(p/'candidate-freeze.json').write_text(json.dumps(meta,indent=2))
+out=Image.new('RGB',(2340,900),'white');out.paste(Image.open(p/'figure6.png'),(0,40));out.paste(Image.open(b/'actual-sourcewidth.png'),(1170,40));d=ImageDraw.Draw(out);d.text((12,12),'SOURCE: GaLore, Figure 6 (Zhao et al., ICML 2024, CC BY 4.0)',fill='black');d.text((1182,12),'EDITABLE RECONSTRUCTION: actual PPTX -> LibreOffice PDF -> source-width raster',fill='black');out.save(p/'source-vs-actual.png')
+print(json.dumps(meta,indent=2))

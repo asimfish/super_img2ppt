@@ -113,7 +113,11 @@ def discover_fonts(extra_dirs: tuple[Path, ...] = ()) -> tuple[FontFace, ...]:
                     continue
                 aliases = tuple(sorted({n.toUnicode() for n in names.names if n.nameID in {1, 16}}))
                 weight = int(font["OS/2"].usWeightClass) if "OS/2" in font else 400
-                italic = bool(font["OS/2"].fsSelection & 1) if "OS/2" in font else False
+                # Some TTC faces identify italic only in head.macStyle (for example Avenir).
+                italic = bool(
+                    (font["OS/2"].fsSelection & 1 if "OS/2" in font else 0)
+                    or (font["head"].macStyle & 2 if "head" in font else 0)
+                )
                 faces.append(FontFace(path, index, family, aliases, weight, italic))
         except (OSError, TTLibError, KeyError, UnicodeError):
             continue

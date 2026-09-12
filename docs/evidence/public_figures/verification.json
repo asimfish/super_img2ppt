@@ -1,0 +1,104 @@
+{
+  "version": "0.3.3",
+  "steps": [
+    {
+      "command": [
+        "uv",
+        "run",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "seconds": 0.05,
+      "log": "gate_00.txt"
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "exit_code": 0,
+      "seconds": 0.039,
+      "log": "gate_01.txt"
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "seconds": 37.196,
+      "log": "gate_02.txt"
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/verify_skill.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.188,
+      "log": "gate_03.txt"
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/build_capability_registry.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.056,
+      "log": "gate_04.txt"
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "/Users/liyufeng/.whalent-agent/profiles/acct-63aacf96110c0e9595f3/agents/rjguoiuibvgcfiv8w56gq7bu5/codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "skills/super-img2ppt"
+      ],
+      "exit_code": 0,
+      "seconds": 0.05,
+      "log": "gate_05.txt"
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "/Users/liyufeng/.agents/skills/skill-quality-gate/scripts/audit_skill_governance.py",
+        "--repo",
+        "/Users/liyufeng/code/super_img2ppt",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.052,
+      "log": "gate_06.txt"
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/build_package.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.055,
+      "log": "gate_07.txt"
+    }
+  ],
+  "native_powerpoint_wps": "unverified",
+  "visual_fidelity": "not all regions pass; see case reports",
+  "verdict": "CONDITIONAL"
+}

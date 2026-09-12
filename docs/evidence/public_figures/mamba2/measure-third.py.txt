@@ -1,0 +1,9 @@
+from pathlib import Path
+from PIL import Image,ImageChops
+import json,hashlib
+P=Path('/tmp/mamba-complex-Sox4Lz');c=json.loads((P/'candidate-freeze.json').read_text());assert hashlib.sha256((P/'job/scene.json').read_bytes()).hexdigest()==c['candidate_scene_sha256'];src=Image.open(P/'source.png').convert('L');dst=Image.open(P/'job/build06/render/sourcewidth.png').convert('L');results={}
+for name,b in c['third_heldout'].items():
+ a=src.crop(b).point(lambda p:255 if p<170 else 0);d=dst.crop(b).point(lambda p:255 if p<170 else 0);inter=sum(ImageChops.darker(a,d).getdata())/255;union=sum(ImageChops.lighter(a,d).getdata())/255;ab=a.getbbox();db=d.getbbox();edge=max(abs(x-y) for x,y in zip(ab,db)) if ab and db else None;iou=inter/union if union else 1
+ results[name]={'roi':b,'source_ink_bbox':ab,'render_ink_bbox':db,'edge_max_px':edge,'iou':round(iou,4),'pass':edge is not None and edge<=4 and iou>=.7}
+ a=src.crop(b).convert('RGB');d=dst.crop(b).convert('RGB');pair=Image.new('RGB',(a.width*2,a.height),'white');pair.paste(a);pair.paste(d,(a.width,0));pair.save(P/'job/build06'/f'third-{name}.png')
+(P/'job/build06/third-results.json').write_text(json.dumps({'candidate_sha256':c['candidate_scene_sha256'],'regions':results,'claim':'Post-freeze third-region inspection only; earlier heldout regions were already inspected and cannot be called blind.'},indent=2));print(results)

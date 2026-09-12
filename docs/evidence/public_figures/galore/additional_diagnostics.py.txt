@@ -1,0 +1,17 @@
+import pathlib,json,hashlib,datetime
+from PIL import Image
+p=pathlib.Path('/tmp/galore-forward-uEPOph');f=json.loads((p/'candidate-freeze.json').read_text());b=p/'chart'/f['candidate'];assert hashlib.sha256((b/'editable.pptx').read_bytes()).hexdigest()==f['hashes'][str((b/'editable.pptx').relative_to(p))]
+specs=[dict(id='title1b',box=[258,432,145,33],mask='neutral'),dict(id='ylabel7b',box=[588,572,34,116],mask='neutral'),dict(id='green130',box=[220,75,160,107],mask='#ADC477')]
+contract=dict(selected_at_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),candidate_freeze_sha256=hashlib.sha256((p/'candidate-freeze.json').read_bytes()).hexdigest(),regions=specs,interpretation='Additional post-freeze diagnostics only, no repairs; earlier heldout was already exposed, so no overall blind-validation claim.')
+(p/'additional-contract.json').write_text(json.dumps(contract,indent=2));images=[Image.open(p/'figure6.png').convert('RGB'),Image.open(b/'actual-sourcewidth.png').convert('RGB')];out=[]
+for r in specs:
+ x,y,w,h=r['box'];sets=[]
+ for im in images:
+  def keep(px):
+   if r['mask']=='neutral':return max(px)-min(px)<35 and sum(px)/3<180
+   tar=tuple(int(r['mask'][i:i+2],16)for i in [1,3,5]);return sum((a-b)**2 for a,b in zip(px,tar))<=35**2
+  sets.append({(k%w,k//w)for k,px in enumerate(im.crop((x,y,x+w,y+h)).getdata())if keep(px)})
+ a,bm=sets
+ def bb(m):return [min(x for x,y in m),min(y for x,y in m),max(x for x,y in m),max(y for x,y in m)]
+ aa,bbm=bb(a),bb(bm);edge=max(abs(a-b)for a,b in zip(aa,bbm));iou=len(a&bm)/len(a|bm);out.append(dict(**r,source_bbox=aa,actual_bbox=bbm,edge_px=edge,iou=iou,passed=edge<=4 and iou>=.70))
+(p/'additional-metrics.json').write_text(json.dumps(out,indent=2));print(json.dumps(out,indent=2))

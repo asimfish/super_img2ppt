@@ -1,0 +1,25 @@
+#!/bin/sh
+# Rebuild commands. Use a NEW --out directory on each run.
+# No dependency/font installs. Existing repository virtual environment.
+set -eu
+export PATH=/opt/homebrew/bin:$PATH
+PY=/Users/liyufeng/Code/super_img2ppt/.venv/bin/python
+CLI=/Users/liyufeng/Code/super_img2ppt/.venv/bin/super-img2ppt
+JOB=/tmp/mamba-complex-Sox4Lz
+# The source PDF was downloaded from this official paper-page link:
+# curl -L https://raw.githubusercontent.com/mlresearch/v235/main/assets/dao24a/dao24a.pdf -o "$JOB/paper.pdf"
+# pdftoppm -f 22 -l 22 -scale-to 1800 -png -singlefile "$JOB/paper.pdf" "$JOB/p22"
+# Pillow raster crop only: (124,150,1360,590), yielding 1236x440.
+# Initial prepare: "$CLI" prepare "$JOB/source.png" --out "$JOB/job"
+# Authoring script encodes manual raster observations, not author drawing code.
+"$PY" "$JOB/author.py"
+"$CLI" build "$JOB/job/scene.json" --out "$JOB/job/rebuild_new" \
+  --font-dir /Applications/LibreOffice.app/Contents/Resources/fonts/truetype \
+  --font-dir /System/Library/Fonts/Supplemental
+pdftoppm -png -singlefile -scale-to-x 1236 -scale-to-y -1 \
+  "$JOB/job/rebuild_new/render/editable.pdf" "$JOB/job/rebuild_new/render/sourcewidth"
+"$PY" "$JOB/measure.py" rebuild_new
+# Original final comparison commands (already executed):
+# "$PY" "$JOB/measure.py" build05
+# "$PY" "$JOB/measure.py" build06
+# "$PY" "$JOB/measure-third.py"

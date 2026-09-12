@@ -1,0 +1,14 @@
+import json,pathlib,sys
+from PIL import Image
+import pypdfium2 as pdf
+p=pathlib.Path(__file__).parent;build=p/sys.argv[1];mode=sys.argv[2]
+doc=pdf.PdfDocument(build/'render/editable.pdf');pg=doc[0];im=pg.render(scale=980/pg.get_width()).to_pil().convert('RGB');im=im.crop((0,0,980,258));im.save(build/'render/actual_source_width.png');src=Image.open(p/'source.png').convert('RGB');res=[]
+for r in json.loads((p/'roi_contract.json').read_text())['regions']:
+ if mode=='dev' and r['split']!='dev':continue
+ x,y,w,h=r['box_xywh']
+ def mask(img):return {(i%w,i//w) for i,v in enumerate(img.crop((x,y,x+w,y+h)).getdata()) if max(v)<140}
+ a,b=mask(src),mask(im)
+ def edges(m):return [min(v[0] for v in m),min(v[1] for v in m),max(v[0] for v in m),max(v[1] for v in m)] if m else None
+ ea,eb=edges(a),edges(b);dif=[abs(i-j) for i,j in zip(ea,eb)] if ea and eb else [999]*4;iou=len(a&b)/max(1,len(a|b))
+ res.append(dict(**r,source_edges=ea,render_edges=eb,edge_errors=dif,max_edge=max(dif),iou=iou,pass_joint=max(dif)<=4 and iou>=.7))
+(build/f'metrics_{mode}.json').write_text(json.dumps(res,indent=2));print(json.dumps([{k:r[k] for k in ['id','max_edge','iou','pass_joint','source_edges','render_edges']} for r in res],indent=2))

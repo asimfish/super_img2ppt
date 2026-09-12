@@ -1,0 +1,11 @@
+from pathlib import Path
+from PIL import Image,ImageChops
+import json,sys
+P=Path('/tmp/mamba-complex-Sox4Lz');build=sys.argv[1];c=json.loads((P/'roi-contract.json').read_text());src=Image.open(P/'source.png').convert('L');dst=Image.open(P/'job'/build/'render/sourcewidth.png').convert('L');results={}
+for suite in ['dev','heldout']:
+ results[suite]={}
+ for name,b in c[suite].items():
+  a=src.crop(b).point(lambda p:255 if p<170 else 0);d=dst.crop(b).point(lambda p:255 if p<170 else 0);inter=sum(ImageChops.darker(a,d).getdata())/255;union=sum(ImageChops.lighter(a,d).getdata())/255;ab=a.getbbox();db=d.getbbox();edge=max(abs(x-y) for x,y in zip(ab,db)) if ab and db else None;iou=inter/union if union else 1
+  results[suite][name]={'roi':b,'source_ink_bbox':ab,'render_ink_bbox':db,'edge_max_px':edge,'iou':round(iou,4),'pass':edge is not None and edge<=4 and iou>=.7}
+  a=src.crop(b).convert('RGB');d=dst.crop(b).convert('RGB');pair=Image.new('RGB',(a.width*2,a.height),'white');pair.paste(a);pair.paste(d,(a.width,0));pair.save(P/'job'/build/f'{suite}-{name}.png')
+results['source_size']=src.size;results['actual_render_size']=dst.size;(P/'job'/build/'roi-results.json').write_text(json.dumps(results,indent=2));print(json.dumps(results,indent=2))

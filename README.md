@@ -1,59 +1,99 @@
+<div align="center">
+
 # super_img2ppt
 
-把已有图片、扫描 PDF、图片版 PPT 重建为可编辑的 **PPTX、SVG 和场景 JSON**。
-重点解决字体替换、文字挤压、换行漂移、图层遮挡，以及“预览正常、打开 PPT 变样”的问题。
+### 把图里的文字、形状和曲线，变回可以修改的对象。
 
-这是一个 **Agent Skill + 本地 Python 运行时**。Agent 负责看图、纠正 OCR 和理解结构；
-程序负责实际字体测量、布局检查、原生对象导出和真实 PPTX 渲染验收。
-`prepare` 只产生待重建场景，复杂图片仍需要 Agent 理解，不能把它当成无人参与的万能转换器。
+**Image → Editable PPTX · SVG · Scene JSON**
 
-![原图、实际 PPTX 渲染与差异图](docs/previews/comparison.png)
+[![Verify](https://github.com/asimfish/super_img2ppt/actions/workflows/verify.yml/badge.svg)](https://github.com/asimfish/super_img2ppt/actions/workflows/verify.yml)
+![Version](https://img.shields.io/badge/version-0.3.3-2563eb)
+![Python](https://img.shields.io/badge/python-3.11%2B-3776AB)
+[![License](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 
-左侧是项目自制输入样例，中间是实际 PPTX 经 LibreOffice 渲染的结果，右侧是差异图。
-图示不代表所有真实图片的效果；基线和抗锯齿仍有差异。[查看验收记录](docs/verification.md)。
-可直接下载仓库中的 [可编辑样例](examples/editable_demo.pptx)，对照
-[原图](examples/source_02.png) 和 [重建场景](examples/flow_reconstruction.json)。
+[看真实效果](#真实复杂图效果) · [开始使用](#开始使用) · [曲线修复](#把案例反馈变成系统能力) · [工作流程](#工作流程) · [质量与边界](#质量与边界)
 
-**v0.3.2 新测正式顶会的三张完整主架构图：Grounding DINO、GLaMM、UniAD。**
-保留完整面板与复杂连线；Grounding DINO 包含725个原生对象，另有4处局部图片。
-三例均完成实际PPTX渲染，但严格区域保真仅11/35、3/39、8/36达标，**当前仍不能可靠实现复杂主图高保真转换**。
-本轮改进源图版本核验、字体校准与重建指南，未宣称新的运行时算法修复。
-完整来源、转换文件和失败明细见 [正式主图压力测试](docs/main_figures.md)。
-另新增 [BEVFormer、InternImage、DUSt3R 复杂图测试](docs/complex_figures.md)：完整主图加三维示例，实际渲染并复跑；保留区域分别仅 1/11（另 1 项无效）、2/14、1/8 达标，失败证据一并保留。
-此前的 [super_teaser](docs/teaser_cases.md)、[CLIP/Swin等案例](docs/diverse_cases.md)、
-[ICLR论文图](docs/conference_cases.md) 和 [通用案例](docs/real_cases.md) 保留独立记录。
+</div>
 
-## 有哪些实际改进
+一个 **Agent Skill + 本地 Python 运行时**：Agent 看图、纠正 OCR、理解结构；运行时测量真实字体、检查重叠、导出原生对象，再渲染 **实际 PPTX** 验收。适合论文架构图、流程图、训练曲线和图片版幻灯片。
 
-| 问题 | 本版处理 |
+**v0.3.3：新增像素曲线提取、圆端点导出、TTC 斜体识别修复和四方向文字越界诊断。**
+三张新增 ICML 2024 完整复杂图均已转换并独立复跑。下面直接展示原图和实际输出；复杂文字的高保真仍未全部达标。
+
+## 真实复杂图效果
+
+所有对照均为 **左：论文原图；右：实际 PPTX 经 LibreOffice 渲染**。点击图片查看原尺寸。
+保留完整图面板，没有只挑容易的局部。原生对象数量说明编辑边界；区域对比记录对齐和字形差异，两者分别报告。
+
+### GaLore · 四面板训练曲线
+
+[![GaLore 完整原图与实际 PPTX 对照](docs/previews/gallery/galore.png)](docs/previews/gallery/galore.png)
+
+**4 个面板、11 条可见曲线，753 个原生对象。** 文字、坐标轴、图例与可辨认曲线可编辑；右下角交叉处保留一块不含文字的原图，面积占 1.81%。不推测被遮挡的实验数据。
+
+[下载 PPTX](examples/gallery/galore/editable.pptx) · [SVG](examples/gallery/galore/svg/page_001.svg) · [原图](examples/gallery/galore/source.png) · [实际渲染](examples/gallery/galore/actual.png) · [可复建场景与资产](examples/gallery/galore) · [测试报告](docs/evidence/public_figures/galore/REPORT.md)
+
+自动检查通过；10 个记录区域中 4 个满足各自严格边界/掩码阈值，若干图例与标签仍不达标。冻结后的独立绿色曲线诊断 IoU 为 0.949、边界误差 0 px，**仅代表该区域**。
+
+<sub>改编自 Zhao et al., “GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection”, ICML 2024, Figure 6。[论文与作者](https://proceedings.mlr.press/v235/zhao24s.html) · [CC BY 4.0 / 归属与修改说明](examples/gallery/galore/SOURCE_LICENSE.md)。</sub>
+
+### Vision Mamba · 双向编码器完整架构
+
+[![Vision Mamba 完整原图与实际 PPTX 对照](docs/previews/gallery/vision_mamba.png)](docs/previews/gallery/vision_mamba.png)
+
+**158 个原生对象，3 处图片资产。** 包括两侧完整面板、0–9 token、双向 Conv/SSM、门控、状态回路、投影梯形和残差线；标签与连线可编辑。
+
+[下载 PPTX](examples/gallery/vision_mamba/editable.pptx) · [SVG](examples/gallery/vision_mamba/svg/page_001.svg) · [原图](examples/gallery/vision_mamba/source.png) · [实际渲染](examples/gallery/vision_mamba/actual.png) · [场景与资产](examples/gallery/vision_mamba) · [测试报告](docs/evidence/public_figures/vision_mamba/REPORT.md)
+
+自动检查通过；严格区域对比 5/12 达标，保留区域 0/4。小字、token 编号和部分箭头仍有差异；未在揭示保留区域结果后继续调整。
+
+<sub>改编自 Zhu et al., “Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model”, ICML 2024, Figure 2。[论文与作者](https://proceedings.mlr.press/v235/zhu24f.html) · [CC BY 4.0 / 归属与修改说明](examples/gallery/vision_mamba/ATTRIBUTION.md)。</sub>
+
+### Mamba-2 · 矩阵分块与状态流
+
+[![Mamba-2 完整原图与实际 PPTX 对照](docs/previews/gallery/mamba2.png)](docs/previews/gallery/mamba2.png)
+
+**475 个原生对象，零可见栅格图片。** 完整矩阵、因式分解、上下标、状态流和图例均拆为可编辑文字、形状或线条；公式转置符部分由原生短线组成。
+
+[下载 PPTX](examples/gallery/mamba2/editable.pptx) · [SVG](examples/gallery/mamba2/svg/page_001.svg) · [原图](examples/gallery/mamba2/source.png) · [实际渲染](examples/gallery/mamba2/actual.png) · [场景与资产](examples/gallery/mamba2) · [测试报告](docs/evidence/public_figures/mamba2/REPORT.md)
+
+结构和实际文字检查通过，原始构建保留字体替代 `review`。严格区域对比仅 2/9 达标；标题字形、公式和虚线仍不同。这是复杂可编辑重建案例，尚未达到高保真目标。
+
+<sub>改编自 Tri Dao & Albert Gu, “Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality”, ICML 2024, Figure 7。[论文](https://proceedings.mlr.press/v235/dao24a.html) · [CC BY 4.0 / 来源与修改说明](examples/gallery/mamba2/provenance.json)。</sub>
+
+[完整方法、阈值与评测限制](docs/public_figures.md) · [下载三例完整文件包](examples/gallery/complex_figures.zip) · [SHA256](examples/gallery/SHA256SUMS)
+
+GaLore 和 Mamba-2 的部分原保留区域曾在调整期间被查看，因此不能作为盲测；Mamba-2 还记录了一处超过三次修复预算的偏差。原始记录和失败结果均保留。不同案例的掩码与区域不同，不合并成“转换准确率”。
+
+## 把案例反馈变成系统能力
+
+### 曲线按像素提取，实际 PPTX 消除分段白缝
+
+[![同一曲线在圆端点修复前后的实际 PPTX 放大对照](docs/previews/gallery/curve_caps.png)](docs/previews/gallery/curve_caps.png)
+
+上图两边都是 **实际 PPTX**，同一位置放大 4 倍；558 条线段仅增加 `line_cap: round`，路径和字体保持一致。[修复前文件](examples/gallery/galore/before_caps.pptx) · [场景差异证据](docs/evidence/public_figures/galore/cap_scene_diff.json)。细小像素阶梯仍然存在。
+
+| 实际遇到的问题 | 进入系统的处理 |
 | --- | --- |
-| 用字符数估计字号，宽字挤出去 | 读取实际字体文件、字形覆盖和字重，测量文字宽度与行高 |
-| 中文字体与预览字体不一致 | 显式写入各文字脚本的字体，使用字体自带的本地化族名，检查 PDF 实际字体 |
-| 标题各自缩小，字号失去层级 | 默认固定字号；显式允许时有下限，同组文字统一缩放 |
-| 文本框默认边距和自动换行漂移 | 显式边距、行距和测量后的换行；禁用 Office 自动适配 |
-| 字体正确，混排间距仍然变宽 | 比较实际字形墨迹宽度，标记异常；按语义短语拆框保留可编辑性 |
-| 模板自带阴影和样式污染 | 清除形状的效果继承和主题效果引用 |
-| 形状、正文相互遮挡 | 检查边界、容器、z-order 和实际文字范围；区分留白相交与文字重叠 |
-| 菱形/密集表格中空白边距误报 | 以可见墨迹判断，斜边和字形角落使用有限大小的字形遮罩；保留真实笔画碰撞 |
-| 旋转标签只能变成图片 | 支持 90° 倍数旋转的原生文字，检查旋转后的字形位置与实际 PDF |
-| 箭头头部与原图差得很远 | 可指定头部长宽，生成可编辑 freeform，头部也参与碰撞检查 |
-| 虚线拆成数百个小对象 | 线条和形状描边支持按源像素指定实线/间隙长度 |
-| 透明张量图片角落挡住文字的误报 | 按实际 alpha 和图片缩放方式检查；不透明交叠仍阻断 |
-| 主字符与下标的字框相交被误报 | 比较两边的实际字形遮罩，真正重叠的文字仍阻断 |
-| 梯形编码器只能用图片填充 | 原生凸多边形同时保留顶点、填充、轮廓与斜边碰撞检查 |
-| 数百条色带在实际 PPTX 中出现黑缝 | 使用原生线性渐变，支持水平/垂直方向及 2–16 个色标 |
-| 字体检测挂起，失败没有报告 | 记录具体字体工具路径及超时/非零退出；check/build 都生成失败诊断 |
-| 原图文字与新增文字重影 | 禁止把整张源图当成重建背景，阻止烘焙文字与可编辑文字叠加 |
-| 程序说成功，但文件有问题 | 复查 PPTX 原生对象，再渲染真实文件，检查文字、字形范围和字体 |
+| 手绘趋势或猜正弦，峰谷偏离原图 | `trace-curve` 从指定颜色和区域提取可见笔画，输出可编辑线段 |
+| 同色预算虚线混入曲线 | 显式排除已确认的参考线带；不自动删除真实水平平台 |
+| 陡峭线段或遮挡无法可靠追踪 | 可切换 `--axis y`；歧义分支和长缺口明确失败，记录短插值 |
+| 原生分段在 Office 渲染中露出白缝 | PPTX/SVG 同时支持圆端点，端点范围参与越界与碰撞检查 |
+| TTC 中斜体被误当常规字体 | 同时读取 OS/2 和 `head.macStyle` 样式标志，回归覆盖缺失标志情况 |
+| 左侧斜体越界，只扩右边仍修不好 | 报告四方向越界距离和源像素值，指南说明保持字形原点的修框方法 |
 
-参考了 [ningzimu/image-to-editable-ppt-skill](https://github.com/ningzimu/image-to-editable-ppt-skill)
-的工作流并独立实现，未直接复制其运行时代码。来源、固定提交和差异见
-[UPSTREAM.md](skills/super-img2ppt/UPSTREAM.md)。
+```bash
+uv run super-img2ppt trace-curve chart.png \
+  --roi 100 80 300 160 --color '#1F77B4' \
+  --stroke-width 1.5 --prefix loss_blue --out output/trace_01
+```
+
+检查 `overlay.png` 和 `trace.json` 后，将 `elements.json` 合入对应场景，再执行 `build`。
+这一步只输出待复核的曲线片段，不生成数据驱动图表。[完整用法与失败边界](skills/super-img2ppt/references/curves.md)。
 
 ## 开始使用
 
-Python 3.11+。开发环境使用 `uv`，真实渲染需要 LibreOffice 的 `soffice`。
-中文需要本机安装可用的中文字体；`fonts.json` 会列出实际选择和替代情况。
+Python 3.11+，本地 LibreOffice，所需字体。开发环境使用 `uv`：
 
 ```bash
 uv sync --frozen
@@ -61,66 +101,67 @@ uv run super-img2ppt doctor
 uv run super-img2ppt build examples/flow_reconstruction.json --out output/demo
 ```
 
-作为 skill，安装或将 `skills/super-img2ppt` 目录接入你的 Agent 的技能目录，然后调用：
+把 `skills/super-img2ppt` 接入 Agent 的技能目录，然后直接说：
 
 ```text
-$super-img2ppt 把这张图片重建为可编辑 PPTX 和 SVG，保留排版，检查字体和重叠。
+$super-img2ppt 把这张图片重建为可编辑 PPTX 和 SVG，保留布局，检查字体、曲线和重叠。
 ```
 
-独立安装包包含自己的运行时，不依赖本仓库的其他目录。安装和调用说明在
-[SKILL.md](skills/super-img2ppt/SKILL.md)。仓库名使用 `super_img2ppt`；skill ID 和命令名使用 `super-img2ppt`。
-运行 `uv run python scripts/build_package.py` 可生成 `dist/super-img2ppt.skill` 和 SHA256 校验文件。
+[自制入门样例 PPTX](examples/editable_demo.pptx) · [安装与调用说明](skills/super-img2ppt/SKILL.md) · [Releases](https://github.com/asimfish/super_img2ppt/releases)
 
-## 转换过程
+仓库名是 `super_img2ppt`，skill ID 和命令名是 `super-img2ppt`。独立 skill 包包含运行时；
+`uv run python scripts/build_package.py` 生成 `dist/super-img2ppt.skill` 与校验文件。
+
+## 工作流程
+
+```mermaid
+flowchart LR
+    A[图片 / PDF / 图片版 PPTX] --> B[归一化与本地 OCR 提示]
+    B --> C[Agent 看图重建 scene JSON]
+    C --> D[真实字体测量与几何检查]
+    D --> E[原生 PPTX / SVG]
+    E --> F[实际渲染与区域比较]
+    F --> G[交付文件和未解决项]
+    F -->|定点修复，最多三次| C
+```
 
 ```bash
-# 1. 归一化输入并生成 OCR 提示；目录必须是新目录
 uv run super-img2ppt prepare page1.png page2.png --out output/job
-
-# 2. Agent 看原图和 OCR 提示，补全 output/job/scene.json 的文字、形状和资产
-#    scene.json 的空场景不能通过验收
-
-# 3. 测量并检查场景
+# Agent 查看 source.png，纠正 OCR，补全 scene.json 的文字、形状与独立资产
 uv run super-img2ppt check output/job/scene.json --out output/job/check_01
-
-# 4. 导出、实际渲染并复查
 uv run super-img2ppt build output/job/scene.json --out output/job/build_01
 ```
 
-支持多张图片、多页 PDF、图片版 PPTX 混合输入，保持提供顺序和 PPTX 原备注。
-多种宽高比会等比适配到以第一页确定的幻灯片尺寸，不拉伸。
-macOS 默认尝试本地 Vision OCR；其他系统尝试本地 Tesseract。没有识别器时仍可看图重建。
-Tesseract 的中文需要本地语言包，可使用 `--ocr tesseract --languages eng+chi_sim`。
+`prepare` 生成待重建场景；复杂图需要 Agent 理解和复核。支持多页混合输入，保持顺序、宽高比和原备注。
+运行时使用本地 OCR、字体和渲染工具，不上传图片，不读取 API 凭据，不自动安装依赖。
 
-运行时不上传图片、不读取 OAuth/API 凭据、不自动安装依赖。离线转换前需先准备依赖和字体。
-复杂图片资产可使用已有的本地裁剪或另行授权的图像编辑流程处理。
+## 质量与边界
 
-## 交付文件
-
-| 文件 | 用途 |
+| 交付物 | 可以检查什么 |
 | --- | --- |
-| `editable.pptx` | 原生文字、形状、线条与独立图片 |
-| `svg/*.svg` | 可编辑的文字/矢量对象，图片以内嵌资产保留 |
-| `scene.resolved.json` + `assets/` | 包含已选择字体和换行的可重建源文件 |
-| `fonts.json` | 实际字体、文件哈希、替代情况和嵌入标志 |
-| `render/` | 实际 PPTX 转出的 PDF、PNG 及源图对比 |
-| `validation.json` | 结构、字体、溢出、遮挡和渲染检查结果 |
+| `editable.pptx`、`svg/` | 原生文字、形状、线条，以及明确保留的图片 |
+| `scene.resolved.json`、`assets/` | 可修改、复建的场景与相对路径资产 |
+| `fonts.json` | 实际字体文件、字重、替代情况与哈希 |
+| `render/`、`validation.json` | 实际 PPTX 的 PDF/PNG，以及溢出、遮挡和字体检查 |
 
-`fail` 表示存在阻断问题，命令退出码为 2；`review` 表示仍有替代字体、间距漂移、低置信度等项目待复核；
-`pass` 表示自动检查通过，仍需视觉比较；`--no-render` 只生成标记为 `unverified` 的草稿。
-程序不会凭差异像素计算一个“还原度百分比”。
+- `fail` 为阻断问题；`review` 为字体替代等待复核项；`pass` 只表示自动检查通过。源图保真另行比较。
+- `--no-render` 只能生成 `unverified` 草稿，不能代替实际文件验收。
+- 照片、复杂插画、无法可靠分离的交叉区域可能保留为局部图片，并明确标注。
+- 字体不能从像素唯一确定，也不会嵌入文件；另一台电脑需要对应字体。复杂数学排版仍有限制。
+- 曲线是原生线段；不恢复实验数值、不生成 Excel 数据图表，移动节点也不会自动重连。
+- 已验证 LibreOffice 渲染；原生 PowerPoint、WPS 尚未单独验证。
 
-## 当前边界
+<details>
+<summary><strong>历史复杂案例与失败记录</strong></summary>
 
-- 图片无法唯一确定原字体；字体不嵌入文件，另一台电脑需要安装清单中的字体。
-- 照片、复杂插画保留为独立图片，其内部内容不自动变成可编辑对象。
-- 表格/图表可重建为形状和文字，尚不生成 Excel 数据驱动的原生图表；连线移动后不会自动重连。
-- 支持 90° 倍数的旋转文字、凸多边形和水平/垂直线性渐变；任意角度文字、竖排、
-  自由曲线、凹多边形、径向渐变和复杂数学排版仍有限制。
-  未指定尺寸的标准 Office 箭头头部仍可能与原图不同。
-- 自动验收以 LibreOffice/PDFium 为依据；原生 PowerPoint、WPS 兼容性需单独核验。
-- 已覆盖 13 张真实图片，仍缺用户自己的失败样本；密集表格保留了一例未通过。
-  热力图斜排标签仍为图片，DDPM 数学字宽仍有差异，Swin 的相邻帽号需要原生线条绕开 PDF 归属误报。
+- [Grounding DINO、GLaMM、UniAD 完整主图](docs/main_figures.md)：严格区域分别 11/35、3/39、8/36 达标。
+- [BEVFormer、InternImage、DUSt3R](docs/complex_figures.md)：密集架构与三维示例。
+- [super_teaser 概念图](docs/teaser_cases.md)：明确区别于原始论文实验图。
+- [CLIP、Swin 等](docs/diverse_cases.md) · [ICLR 论文图](docs/conference_cases.md) · [通用案例](docs/real_cases.md)。
+
+保留完整面板、原始失败与区域指标，不能据此保证任意复杂图片都对齐。
+
+</details>
 
 ## 开发与验证
 
@@ -129,15 +170,12 @@ uv run ruff check .
 uv run ruff format --check .
 uv run pytest -q
 uv run python scripts/verify_skill.py
+uv run python scripts/build_capability_registry.py --check
 uv run python scripts/build_package.py
 ```
 
-见 [架构决策](docs/architecture.md)、[场景协议](skills/super-img2ppt/references/scene.md)
-和 [验证记录](docs/verification.md)。核心依赖以 `uv.lock` 锁定，独立 skill 另附带哈希的
-`requirements.lock`。原有样例图片由本仓库脚本绘制；新增公开真实案例的来源及单独许可证见
-[通用案例 NOTICE](examples/real_cases/NOTICE.md)、[ICLR 案例 NOTICE](examples/conference_cases/NOTICE.md)
-及 [新增案例 NOTICE](examples/diverse_cases/NOTICE.md)，不包含外部私有素材。
-`examples/reconstruction.json` 另覆盖两页不同宽高比；`flow_before_spacing_fix.json` 保留混排间距
-问题的复现输入。后者在本次验证环境中会返回 `review`，用来证明诊断能识别旧问题。
+[本轮验证与改进证据](docs/public_figures.md) · [场景协议](skills/super-img2ppt/references/scene.md) · [架构](docs/architecture.md) · [历史验证](docs/verification.md)
 
-项目代码采用 MIT License；第三方案例按各自声明的许可证使用。
+工作流参考 [ningzimu/image-to-editable-ppt-skill](https://github.com/ningzimu/image-to-editable-ppt-skill)，运行时独立实现；[来源与差异](skills/super-img2ppt/UPSTREAM.md)。README 的实图展示、快捷入口与证据链接组织参考 [super_translate](https://github.com/asimfish/super_translate) 和 [ARIS](https://github.com/wanshuiyin/auto-claude-code-research-in-sleep)，[固定版本与参考边界](docs/evidence/public_figures/design_reference.json)。
+
+项目代码采用 **MIT**；第三方图示按[各自来源和许可证](examples/gallery/NOTICE.md)使用，图示作者未背书本项目。

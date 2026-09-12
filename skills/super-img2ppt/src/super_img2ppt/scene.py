@@ -110,6 +110,7 @@ ELEMENT = {
         },
         "stroke": {"anyOf": [COLOR, {"type": "null"}]},
         "stroke_width": {"type": "number", "minimum": 0, "maximum": 100},
+        "line_cap": {"enum": ["round", "butt"]},
         "radius": {"type": "number", "minimum": 0, "maximum": 10000},
         "points": {"type": "array", "items": POINT, "minItems": 2, "maxItems": 2},
         "arrow": {"type": "boolean"},
@@ -275,7 +276,15 @@ def validate_scene(scene: dict) -> dict:
                     "gradient",
                 },
                 "image": {"box", "path", "image_fit", "provenance", "contains_text"},
-                "line": {"points", "stroke", "stroke_width", "arrow", "arrow_head", "dash"},
+                "line": {
+                    "points",
+                    "stroke",
+                    "stroke_width",
+                    "arrow",
+                    "arrow_head",
+                    "dash",
+                    "line_cap",
+                },
             }
             unexpected = set(element) - set(COMMON) - fields_by_kind[element["kind"]]
             if unexpected:
@@ -343,6 +352,8 @@ def validate_scene(scene: dict) -> dict:
                 raise InputError(
                     f"{element['id']}: dash/stroke ratio exceeds the Office integer range"
                 )
+            if "line_cap" in element and element.get("arrow"):
+                raise InputError(f"{element['id']}: explicit line cap requires a plain line")
             if "arrow_head" in element:
                 head = element["arrow_head"]
                 length = math.dist(*element["points"])

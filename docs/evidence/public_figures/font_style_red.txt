@@ -1,0 +1,28 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____ test_mac_style_italic_is_not_misclassified_when_os2_flag_is_missing ______
+
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x10c044f20>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-216/test_mac_style_italic_is_not_m0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10c279e80>
+
+    def test_mac_style_italic_is_not_misclassified_when_os2_flag_is_missing(fonts, tmp_path, monkeypatch):
+        face = fonts.faces[0]
+        path = tmp_path / "italic.ttf"
+        with TTFont(face.path, fontNumber=face.index) as font:
+            font["OS/2"].fsSelection &= ~1
+            font["head"].macStyle |= 2
+            font.save(path)
+        monkeypatch.setattr(font_module, "font_candidates", lambda extra_dirs=(): [(str(path), 0)])
+        font_module.discover_fonts.cache_clear()
+        try:
+            discovered = font_module.discover_fonts()
+            assert len(discovered) == 1
+>           assert discovered[0].italic is True
+E           AssertionError: assert False is True
+E            +  where False = FontFace(path='/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-216/test_mac_style_italic_is_not_m0/italic.ttf', index=0, family='Arial Unicode MS', aliases=('Arial Unicode MS',), weight=400, italic=False).italic
+
+tests/test_font_style_metadata.py:17: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_font_style_metadata.py::test_mac_style_italic_is_not_misclassified_when_os2_flag_is_missing
+1 failed in 0.75s

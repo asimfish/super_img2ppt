@@ -55,6 +55,9 @@ installed working tool with a command-local PATH; do not alter global settings o
 4. Rebuild readable text as `text`/`runs`, simple geometry as native `shape`, and connectors
    as `line`. Slanted convex nodes can use `shape: "polygon"` and normalized `vertices`
    (see scene reference); continuous colorbars can use sampled `gradient` stops on one shape.
+   For visible chart curves, use [curves.md](references/curves.md) and `trace-curve` on an
+   inspected ROI/color instead of guessing a sine, trend or sparse vertices. Explicit guide
+   exclusions and short interpolated gaps require visual review; ambiguous crossings fail.
    Split independent assets out of the source using exact crops when appropriate.
    Store approved assets under the job directory. Do not regenerate logos, invent chart data,
    or put editable text over baked text. Never reuse the entire source as a fake reconstruction.
@@ -123,6 +126,11 @@ final visible position instead of fitting horizontal text into a narrow vertical
   separate evidence, represented by `visual_review: required`; do not call this perfect fidelity.
 - `unverified`: `--no-render` was explicitly selected; label the file as a draft and explain
   which actual-render checks could not run. Do not invent successful previews.
+
+Rendered glyph overflow includes directional `overflow_pt` and `overflow_source_px`.
+For a left italic overhang, move the frame left, widen it and increase left padding by the
+same amount to preserve the visible glyph origin; widening only the right edge cannot fix it.
+Use the reported visible-page axes for rotated text. Review the actual image after the repair.
 
 Use [qa.md](references/qa.md) to interpret reports. Apply targeted scene repairs, then rebuild
 in a fresh directory. After three unresolved attempts at the same region, retain the best

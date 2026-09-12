@@ -13,6 +13,7 @@ from pathlib import Path
 
 from PIL import Image
 
+from .curves import trace_file
 from .export import write_pptx, write_svg
 from .fonts import FontCatalog
 from .layout import layout_scene
@@ -226,6 +227,22 @@ def main(argv: list[str] | None = None) -> int:
         "--languages",
         help="Vision: zh-Hans,en-US; Tesseract: eng+chi_sim (installed data required)",
     )
+    trace = commands.add_parser(
+        "trace-curve", help="Trace one isolated chart stroke into editable line fragments"
+    )
+    trace.add_argument("image", type=Path)
+    trace.add_argument("--roi", nargs=4, type=int, required=True, metavar=("X", "Y", "W", "H"))
+    trace.add_argument("--color", required=True, help="Source stroke color as #RRGGBB")
+    trace.add_argument("--out", type=Path, required=True)
+    trace.add_argument("--tolerance", type=float, default=80)
+    trace.add_argument(
+        "--exclude-band", nargs=2, type=int, action="append", default=[], metavar=("TOP", "BOTTOM")
+    )
+    trace.add_argument("--max-gap", type=int, default=4)
+    trace.add_argument("--simplify-px", type=float, default=0.25)
+    trace.add_argument("--stroke-width", type=float, default=1.5)
+    trace.add_argument("--prefix", default="curve")
+    trace.add_argument("--axis", choices=["x", "y"], default="x")
     for name in ["build", "check"]:
         cmd = commands.add_parser(
             name,
@@ -248,11 +265,25 @@ def main(argv: list[str] | None = None) -> int:
             result = SCHEMA
         elif args.command == "prepare":
             result = prepare(args.inputs, args.out, args.ocr, args.languages)
+        elif args.command == "trace-curve":
+            result = trace_file(
+                args.image,
+                args.out,
+                roi=args.roi,
+                color=args.color,
+                tolerance=args.tolerance,
+                exclude_bands=args.exclude_band,
+                max_gap=args.max_gap,
+                simplify_px=args.simplify_px,
+                stroke_width=args.stroke_width,
+                prefix=args.prefix,
+                axis=args.axis,
+            )
         elif args.command == "build":
             result = build(args.scene, args.out, not args.no_render, tuple(args.font_dir))
         else:
             result = check(args.scene, args.out, tuple(args.font_dir))
-        if args.command in {"build", "prepare", "check"}:
+        if args.command in {"build", "prepare", "check", "trace-curve"}:
             print(
                 json.dumps(
                     {"status": result["status"], "output": str(args.out.resolve())},

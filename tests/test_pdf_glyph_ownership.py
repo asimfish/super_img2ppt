@@ -71,6 +71,15 @@ def test_neighbor_pdf_text_object_does_not_pollute_ink_checks(
             for f in result["findings"]
         ), result
 
+        overflow = next(
+            f
+            for f in result["findings"]
+            if f["code"] == "rendered_glyph_overflow" and f["element"] == "action"
+        )
+        assert overflow["overflow_pt"]["right"] > 0.75
+        assert overflow["overflow_source_px"]["right"] > 0
+        assert all(value >= 0 for value in overflow["overflow_pt"].values())
+
         # Duplicate plausible owners must preserve conservative bounds, not hide ink.
         ambiguous = copy.deepcopy(spec)
         duplicate = copy.deepcopy(ambiguous["slides"][0]["elements"][1])

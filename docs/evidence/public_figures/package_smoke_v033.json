@@ -1,0 +1,109 @@
+{
+  "package_sha256": "fefd8ceb0ed602822db3efae310e54c502dcec70337fa80c13006e1974d02305",
+  "method": "Unpacked standalone skill in external working directory, PYTHONPATH only unpacked source; existing dependencies reused. Not a fresh-install test. No fonts or third-party dependencies installed.",
+  "steps": [
+    {
+      "command": [
+        "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+        "-c",
+        "import super_img2ppt; print(super_img2ppt.__file__); print(super_img2ppt.__version__)"
+      ],
+      "exit_code": 0,
+      "seconds": 0.017,
+      "stdout": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v033-package-bwvxeal4/super-img2ppt/src/super_img2ppt/__init__.py\n0.3.3\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+        "-m",
+        "super_img2ppt",
+        "build",
+        "/Users/liyufeng/code/super_img2ppt/examples/gallery/galore/scene.resolved.json",
+        "--out",
+        "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v033-package-bwvxeal4/galore",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+        "--font-dir",
+        "/System/Library/Fonts/Supplemental"
+      ],
+      "exit_code": 0,
+      "seconds": 5.93,
+      "stdout": "{\"status\": \"pass\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v033-package-bwvxeal4/galore\"}\n",
+      "stderr": "'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n"
+    },
+    {
+      "command": [
+        "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+        "-m",
+        "super_img2ppt",
+        "build",
+        "/Users/liyufeng/code/super_img2ppt/examples/gallery/vision_mamba/scene.resolved.json",
+        "--out",
+        "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v033-package-bwvxeal4/vision_mamba",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+        "--font-dir",
+        "/System/Library/Fonts/Supplemental"
+      ],
+      "exit_code": 0,
+      "seconds": 3.578,
+      "stdout": "{\"status\": \"pass\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v033-package-bwvxeal4/vision_mamba\"}\n",
+      "stderr": "'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n"
+    },
+    {
+      "command": [
+        "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+        "-m",
+        "super_img2ppt",
+        "build",
+        "/Users/liyufeng/code/super_img2ppt/examples/gallery/mamba2/scene.resolved.json",
+        "--out",
+        "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v033-package-bwvxeal4/mamba2",
+        "--font-dir",
+        "/Applications/LibreOffice.app/Contents/Resources/fonts/truetype",
+        "--font-dir",
+        "/System/Library/Fonts/Supplemental"
+      ],
+      "exit_code": 0,
+      "seconds": 3.885,
+      "stdout": "{\"status\": \"pass\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v033-package-bwvxeal4/mamba2\"}\n",
+      "stderr": "'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp seems very low; regarding as unix timestamp\n'created' timestamp out of range; ignoring top bytes\n'created' timestamp seems very low; regarding as unix timestamp\n"
+    },
+    {
+      "command": [
+        "/Users/liyufeng/code/super_img2ppt/.venv/bin/python",
+        "-m",
+        "super_img2ppt",
+        "trace-curve",
+        "/Users/liyufeng/code/super_img2ppt/examples/gallery/galore/source.png",
+        "--roi",
+        "220",
+        "75",
+        "160",
+        "107",
+        "--color",
+        "#ADC477",
+        "--tolerance",
+        "35",
+        "--stroke-width",
+        "4.7",
+        "--prefix",
+        "green130",
+        "--out",
+        "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v033-package-bwvxeal4/trace"
+      ],
+      "exit_code": 0,
+      "seconds": 0.197,
+      "stdout": "{\"status\": \"review\", \"output\": \"/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v033-package-bwvxeal4/trace\"}\n",
+      "stderr": ""
+    }
+  ],
+  "statuses": {
+    "galore": "pass",
+    "vision_mamba": "pass",
+    "mamba2": "pass"
+  },
+  "trace_status": "review",
+  "root": "/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/img2ppt-v033-package-bwvxeal4"
+}

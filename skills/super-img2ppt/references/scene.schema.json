@@ -389,6 +389,12 @@
                   "minimum": 0,
                   "maximum": 100
                 },
+                "line_cap": {
+                  "enum": [
+                    "round",
+                    "butt"
+                  ]
+                },
                 "radius": {
                   "type": "number",
                   "minimum": 0,

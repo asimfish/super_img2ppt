@@ -1,0 +1,75 @@
+{
+  "candidate_sha256": "69652b939d6e11939479d46684baf6db3d92592eef7f2cec337016b665f2e340",
+  "regions": {
+    "legend_four_keys": {
+      "roi": [
+        770,
+        179,
+        825,
+        344
+      ],
+      "source_ink_bbox": [
+        4,
+        6,
+        50,
+        160
+      ],
+      "render_ink_bbox": [
+        4,
+        6,
+        50,
+        161
+      ],
+      "edge_max_px": 1,
+      "iou": 0.4685,
+      "pass": false
+    },
+    "rightmost_state": {
+      "roi": [
+        691,
+        315,
+        727,
+        391
+      ],
+      "source_ink_bbox": [
+        6,
+        6,
+        31,
+        71
+      ],
+      "render_ink_bbox": [
+        6,
+        6,
+        30,
+        71
+      ],
+      "edge_max_px": 1,
+      "iou": 0.2606,
+      "pass": false
+    },
+    "factor_middle_scalar": {
+      "roi": [
+        346,
+        156,
+        379,
+        186
+      ],
+      "source_ink_bbox": [
+        5,
+        8,
+        30,
+        22
+      ],
+      "render_ink_bbox": [
+        3,
+        7,
+        27,
+        19
+      ],
+      "edge_max_px": 3,
+      "iou": 0.1221,
+      "pass": false
+    }
+  },
+  "claim": "Post-freeze third-region inspection only; earlier heldout regions were already inspected and cannot be called blind."
+}

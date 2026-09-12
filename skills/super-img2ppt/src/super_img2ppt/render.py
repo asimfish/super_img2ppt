@@ -191,6 +191,7 @@ def verify_rendered_text(pdf: Path, scene: dict, layouts: dict | None = None) ->
                         )
                     # Bounded extraction selects character centers; check visible glyph extents too.
                     overflow = []
+                    overflow_sides = dict.fromkeys(["left", "top", "right", "bottom"], 0.0)
                     expected_fonts: dict[str, set[str]] = {}
                     if layouts is not None:
                         for line in layouts[slide["id"], element["id"]].lines:
@@ -240,6 +241,13 @@ def verify_rendered_text(pdf: Path, scene: dict, layouts: dict | None = None) ->
                             )
                         ):
                             overflow.append(char)
+                            for side, distance in {
+                                "left": left - x0,
+                                "top": y1 - top,
+                                "right": x1 - right,
+                                "bottom": bottom - y0,
+                            }.items():
+                                overflow_sides[side] = max(overflow_sides[side], distance)
                     if overflow:
                         findings.append(
                             {
@@ -247,6 +255,12 @@ def verify_rendered_text(pdf: Path, scene: dict, layouts: dict | None = None) ->
                                 "slide": slide["id"],
                                 "element": element["id"],
                                 "glyphs": "".join(overflow),
+                                "overflow_pt": {k: round(v, 4) for k, v in overflow_sides.items()},
+                                "overflow_source_px": {
+                                    k: round(v / (tx.scale * 72), 4)
+                                    for k, v in overflow_sides.items()
+                                },
+                                "coordinate_axes": "Visible page axes, including rotated text",
                                 "message": "Rendered glyph ink crosses the text box by more than 0.75 pt",
                             }
                         )

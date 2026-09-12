@@ -67,6 +67,19 @@ def line_parts(element):
     if head:
         hw = head["width"] / 2
         parts.append([(bx - vx * hw, by - vy * hw), (x2, y2), (bx + vx * hw, by + vy * hw)])
+    if element.get("line_cap") == "round":
+        # Circumscribed octagons conservatively cover the visible endpoint disks.
+        radius = half / math.cos(math.pi / 8)
+        for x, y in ((x1, y1), (x2, y2)):
+            parts.append(
+                [
+                    (
+                        x + radius * math.cos(math.pi / 8 + k * math.pi / 4),
+                        y + radius * math.sin(math.pi / 8 + k * math.pi / 4),
+                    )
+                    for k in range(8)
+                ]
+            )
     return parts
 
 

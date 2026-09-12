@@ -1,0 +1,8 @@
+import json,pathlib
+p=pathlib.Path(__file__).parent;s=json.loads((p/'scene.json').read_text());d={e['id']:e for e in s['slides'][0]['elements']}
+for n in ['mlp_text','vision_text','forward_conv_text','backward_conv_text','forward_ssm_text','backward_ssm_text','activation_text']:d[n]['font_size']=15.4
+for n in ['forward_conv','backward_conv','forward_ssm','backward_ssm','activation']: d[n]['box'][0]+=.5;d[n]['box'][1]+=.2
+for n in ['forward_conv_text','backward_conv_text','forward_ssm_text','backward_ssm_text']: d[n]['box'][1]-=.2
+for n in ['mlp_text','vision_text']:d[n]['box'][0]-=.3
+d['encoder_title']['font_size']=15.5;d['encoder_title']['box'][1]+=.5
+(p/'scene.json').write_text(json.dumps(s,indent=2))
