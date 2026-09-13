@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import colorsys
 import hashlib
 import json
 import math
@@ -10,8 +11,9 @@ from contextlib import closing
 
 import pypdfium2 as pdfium
 from jsonschema import Draft202012Validator
-from PIL import Image, ImageOps
+from PIL import Image
 
+from .color_management import to_srgb
 from .prepare import json_write
 from .scene import COLOR, ID, InputError, _unique_pairs, safe_asset, slide_transform
 
@@ -182,6 +184,8 @@ def sample(image, roi, kind, background="#FFFFFF", min_contrast=16):
     return {
         "status": "measured",
         "rgb": list(color),
+        "hsv_saturation": colorsys.rgb_to_hsv(*(v / 255 for v in color))[1],
+        "hsv_value": colorsys.rgb_to_hsv(*(v / 255 for v in color))[2],
         "hex": "#" + "".join(f"{c:02X}" for c in color),
         "ink_mass": mass,
         "core_agreement": agreement,
@@ -254,14 +258,7 @@ def _source_image(path):
     with Image.open(path) as original:
         if original.width * original.height > 40_000_000:
             raise InputError("Appearance reference exceeds 40 MP")
-        if original.info.get("icc_profile"):
-            raise InputError(
-                "Normalize reference ICC profile to sRGB before appearance measurement"
-            )
-        image = ImageOps.exif_transpose(original).convert("RGBA")
-        base = Image.new("RGBA", image.size, "white")
-        base.alpha_composite(image)
-        return base.convert("RGB")
+        return to_srgb(original)[0]
 
 
 def verify_pdf(scene, root, pdf, plan, out):
@@ -333,3 +330,44 @@ def verify_pdf(scene, root, pdf, plan, out):
         raise
     finally:
         json_write(out / "appearance.json", report)
+
+
+def automatic_plan(scene, root):
+    """Sample a bounded fixed grid of flat nonwhite source patches; never use output colors."""
+    regions = []
+    eligible = []
+    for slide in scene["slides"]:
+        if "source" not in slide:
+            continue
+        image = _source_image(safe_asset(root, slide["source"]))
+        if image.size != (slide["width"], slide["height"]):
+            raise InputError("Appearance reference size differs from source-coordinate scene")
+        found = []
+        for row in range(8):
+            for col in range(16):
+                x = max(0, min(image.width - 5, round((col + 0.5) * image.width / 16) - 2))
+                y = max(0, min(image.height - 5, round((row + 0.5) * image.height / 8) - 2))
+                box = [x, y, 5, 5]
+                patch = image.crop((x, y, x + 5, y + 5))
+                extrema = patch.getextrema()
+                if max(hi - lo for lo, hi in extrema) > 6:
+                    continue
+                color = patch.getpixel((2, 2))
+                if max(255 - v for v in color) < 24:
+                    continue
+                found.append(
+                    {
+                        "id": f"auto_{len(eligible)}_{row}_{col}",
+                        "slide": slide["id"],
+                        "roi": box,
+                        "kind": "solid",
+                        "mode": "faithful",
+                    }
+                )
+        eligible.append(found)
+    # Round robin gives multi-page documents coverage without exceeding the plan budget.
+    for index in range(128):
+        for found in eligible:
+            if index < len(found) and len(regions) < 128:
+                regions.append(found[index])
+    return {"version": 1, "regions": regions} if regions else None

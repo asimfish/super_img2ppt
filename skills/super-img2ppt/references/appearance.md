@@ -63,15 +63,24 @@ JSON keys, unbounded/nonfinite tolerances, missing slides and invalid ROIs fail.
 
 The runtime renders the actual Office-exported PDF directly at source scale, removes known
 letterboxing, and never registers or resizes an existing preview to manufacture a match.
-Source EXIF orientation and alpha-on-white are normalized; tagged ICC references must first
-be deliberately normalized to sRGB. Non-sRGB PDF behavior is not calibrated by this check.
+Source EXIF orientation and alpha-on-white are normalized. Embedded ICC profiles are converted
+to sRGB with relative-colorimetric intent before sampling; prepare writes a `.color.json` sidecar.
+PPTX/SVG raster assets use the same conversion but preserve alpha for their actual backgrounds.
+Untagged RGB is assumed sRGB; malformed ICC and untagged CMYK/LAB fail explicitly. Out-of-gamut
+colors can clip. Non-sRGB PDF behavior and physical display calibration are not certified.
 
 ## Interpret and deliver
 
 `appearance/` contains the exact plan, reference/PDF hashes, source and actual ROI crops, and
 `appearance.json` with separate color and density findings. Region failures block the build.
-Uncovered source slides yield `review`. Without a plan, source-backed builds now yield `review`
-and `appearance: not_run`; `--no-render` remains `unverified`. Existing scenes still build,
+Uncovered source slides yield `review`. Without a plan, faithful rendered builds select flat 5×5 source patches on an 8×16 grid,
+excluding near-white patches and capping the total at 128 across slides. Color failures block
+the build. Automatic regions that cannot be measured reliably remain `review`, with the
+invalid-sampling evidence retained; manually specified regions still fail on invalid sampling.
+Successful automatic screening stays `review` because coverage is sparse; no eligible
+patches means `not_run`. Gradients, small curves, and text still need explicit plans.
+`--appearance-mode redesign` disables source-color auto-selection for intentional recoloring;
+use a target plan to verify it. `--no-render` remains `unverified`. Existing scenes still build,
 but old geometry-only evidence must not be described as color-verified.
 
 Inspect every failed crop. Fix wrong source sampling, scene colors, stroke width or typography
@@ -84,3 +93,6 @@ For a hosted gallery, check the deployed source selection, embedded preview, dow
 PPTX/SVG/PDF and cache freshness together. An updated SVG alone does not prove that the page
 shows the latest actual-PPTX preview. Identify intentional redesigns separately from faithful
 reconstructions and keep their reference/target record with the deliverables.
+
+Color samples also record HSV saturation and value as diagnostics. These are not perceptual
+ΔE measurements and do not replace the RGB tolerance or ink-density checks.

@@ -123,6 +123,13 @@ Use parallel page work only if it is separately authorized and supported by the 
 
 ## Render, inspect, repair
 
+Tagged input and raster asset colors are converted to sRGB; never copy wide-gamut channel
+values as sRGB or compensate with a global saturation boost. Untagged RGB assumes sRGB.
+Default faithful builds automatically screen flat source patches; this sparse check is not
+whole-figure acceptance. Add explicit plans for semantic colors, curves, text and gradients.
+Use `--appearance-mode redesign` only when the user requested recoloring, with documented
+target colors; it is not a workaround for faithful color failures.
+
 Run `super-img2ppt build JOB/scene.json --appearance-plan JOB/appearance-plan.json --out JOB/build_01`. Every output directory must be
 new so a failed retry cannot leave stale “successful” evidence. `validation.json` always records
 the checks reached; errors exit with code 2.

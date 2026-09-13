@@ -333,7 +333,9 @@ GaLore 和 Mamba-2 的部分原保留区域曾在调整期间被查看，因此�
 super-img2ppt build scene.json --appearance-plan appearance-plan.json --out build_01
 ```
 
-超限会阻断构建；未配置检查的源图重建标为 `review / not_run`。明确要求重新配色时，记录目标色值与理由，再按目标验收。检查覆盖所选区域，仍需看图复核整体效果。[方案格式与边界](skills/super-img2ppt/references/appearance.md) · [真实导出与失败回归证据](docs/evidence/appearance/README.md)
+超限会阻断构建。默认忠实构建即使没有手动方案，也会从源图自动抽查平坦色块，对照实际 PPTX 渲染；抽查通过仍标为 `review`，没有可用色块则标为 `not_run`。关键曲线、文字和渐变仍需要手动区域检查。明确要求重新配色时，使用 `--appearance-mode redesign`，记录目标色值与理由，再按目标验收。检查覆盖所选区域，仍需看图复核整体效果。[方案格式与边界](skills/super-img2ppt/references/appearance.md) · [真实导出与失败回归证据](docs/evidence/appearance/README.md)
+
+输入与嵌入素材的 ICC 色彩配置现在统一转换为 sRGB，避免宽色域数值被直接当作 sRGB 而变淡或偏色；素材透明度保留。未标记的 RGB 按 sRGB 解释，不做全局饱和度增强。损坏的 ICC 和缺少配置的 CMYK/LAB 会报错。[色彩管理回归证据](docs/evidence/color-management/README.md)
 
 ## 可选：语义重绘与样式美化
 

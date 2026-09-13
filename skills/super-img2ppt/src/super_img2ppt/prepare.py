@@ -14,6 +14,7 @@ from xml.etree import ElementTree as ET
 from PIL import Image, ImageOps
 from pptx import Presentation
 
+from .color_management import to_srgb
 from .ocr import choose_backend
 from .render import make_renderer, rasterize_pdf
 from .scene import InputError
@@ -74,10 +75,9 @@ def _normalize_image(source: Path, dest: Path):
         im = ImageOps.exif_transpose(raw)
         if im.width < 16 or im.height < 16 or max(im.size) > 16384:
             raise InputError("Source dimensions must be between 16 and 16384 pixels")
-        rgba = im.convert("RGBA")
-        background = Image.new("RGBA", im.size, "white")
-        background.alpha_composite(rgba)
-        background.convert("RGB").save(dest)
+        rgb, color_report = to_srgb(im)
+        rgb.save(dest)
+        json_write(dest.with_suffix(".color.json"), color_report)
 
 
 def _inputs(paths: list[Path]) -> list[Path]:

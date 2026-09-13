@@ -13,7 +13,7 @@ from pathlib import Path
 
 from PIL import Image
 
-from .appearance import load_plan, verify_pdf
+from .appearance import automatic_plan, load_plan, verify_pdf
 from .curves import trace_file
 from .export import write_pptx, write_svg
 from .fonts import FontCatalog
@@ -81,6 +81,7 @@ def build(
     render: bool = True,
     font_dirs: tuple[Path, ...] = (),
     appearance_plan: Path | None = None,
+    appearance_mode: str = "faithful",
 ) -> dict:
     fresh_directory(out)
     report = {
@@ -95,11 +96,19 @@ def build(
     }
     try:
         scene = load_scene(scene_path)
+        if appearance_mode not in {"faithful", "redesign"}:
+            raise InputError("Unknown appearance mode")
         color_plan = load_plan(appearance_plan, scene) if appearance_plan else None
+        auto_selected = not appearance_plan and appearance_mode == "faithful"
+        if auto_selected and render:
+            color_plan = automatic_plan(scene, scene_path.resolve().parent)
         report["automated_checks"]["appearance"] = {
             "status": "not_run",
             "reason": "No actual-render appearance check has run",
             "required_for_source_color_claim": True,
+            "mode": appearance_mode,
+            "automatic_sampling": auto_selected,
+            "limits": "No eligible flat samples, no render, or explicit redesign without a target plan",
         }
         root = scene_path.resolve().parent
         report["source_scene_sha256"] = hashlib.sha256(scene_path.read_bytes()).hexdigest()
@@ -166,6 +175,20 @@ def build(
             report["artifacts"]["render"] = "render/"
             if color_plan:
                 appearance = verify_pdf(scene, root, pdf, color_plan, out / "appearance")
+                if auto_selected:
+                    appearance["selection"] = "automatic_flat_grid"
+                    appearance["limits"] = (
+                        "Sparse flat-color screening, not full-page or ink-density acceptance"
+                    )
+                    for region in appearance["regions"]:
+                        if region["issues"] == ["invalid_sampling_region"]:
+                            region["status"] = "review"
+                    appearance["status"] = (
+                        "fail"
+                        if any(r["status"] == "fail" for r in appearance["regions"])
+                        else "review"
+                    )
+                json_write(out / "appearance" / "appearance.json", appearance)
                 report["automated_checks"]["appearance"] = appearance
                 report["artifacts"]["appearance"] = "appearance/"
                 if appearance["status"] == "fail":
@@ -304,6 +327,12 @@ def main(argv: list[str] | None = None) -> int:
         cmd.add_argument("--font-dir", type=Path, action="append", default=[])
         if name == "build":
             cmd.add_argument(
+                "--appearance-mode",
+                choices=["faithful", "redesign"],
+                default="faithful",
+                help="Faithful defaults to automatic color screening; redesign needs explicit targets",
+            )
+            cmd.add_argument(
                 "--appearance-plan",
                 type=Path,
                 help="Validate isolated color/ink regions against source or explicit targets",
@@ -335,6 +364,8 @@ def main(argv: list[str] | None = None) -> int:
                         args.out / variant,
                         not args.no_render,
                         tuple(args.font_dir),
+                        None,
+                        "redesign" if variant == "refined" else "faithful",
                     )
                 statuses = [v["status"] for v in result["variants"].values()]
                 result["status"] = (
@@ -360,7 +391,12 @@ def main(argv: list[str] | None = None) -> int:
             )
         elif args.command == "build":
             result = build(
-                args.scene, args.out, not args.no_render, tuple(args.font_dir), args.appearance_plan
+                args.scene,
+                args.out,
+                not args.no_render,
+                tuple(args.font_dir),
+                args.appearance_plan,
+                args.appearance_mode,
             )
         elif args.command == "compose-math":
             result = compose_file(args.spec, args.out, tuple(args.font_dir))

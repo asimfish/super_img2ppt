@@ -1,6 +1,6 @@
 # Super Img2PPT capability card
 
-Owner: super_img2ppt contributors. Version: 0.3.10. Risk: scoped_change.
+Owner: super_img2ppt contributors. Version: 0.3.11. Risk: scoped_change.
 Canonical owner: this repository's `skills/super-img2ppt`.
 
 Reads: user-selected image/PDF/PPTX files; scene JSON and relative local assets; installed font
@@ -102,3 +102,8 @@ actual Office PDF at source scale and writes ROI crops, hashes and separate colo
 findings. No network, credential access, new dependency or automatic recoloring. Missing plans
 keep source-backed builds at review; invalid samples and threshold failures block. Regions
 remain agent-selected; partial coverage and sRGB channel thresholds do not prove global fidelity.
+
+Color handling: embedded ICC profiles converted to sRGB with local Pillow/LittleCMS;
+malformed profiles and untagged CMYK/LAB rejected. Input normalization emits color metadata.
+Default faithful rendered builds screen bounded flat source patches and block measured drift;
+successful sparse screening stays review. Raster asset alpha is preserved.

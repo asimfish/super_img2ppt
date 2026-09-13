@@ -102,9 +102,12 @@ def _dash(shape, element):
 def _image_data(path: Path) -> tuple[io.BytesIO, tuple[int, int]]:
     with Image.open(path) as im:
         data = io.BytesIO()
-        im.save(data, format="PNG")
+        from .color_management import to_srgb
+
+        normalized, _ = to_srgb(im, preserve_alpha=True)
+        normalized.save(data, format="PNG")
         data.seek(0)
-        return data, im.size
+        return data, normalized.size
 
 
 def write_pptx(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Path, out: Path):
