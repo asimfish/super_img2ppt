@@ -1,0 +1,202 @@
+{
+  "example_good": {
+    "status": "pass",
+    "source_scene_sha256": "9086f3934187829285856101ccc054163e3f6f56ceb08b14c09488c79da1137c",
+    "appearance": {
+      "status": "pass",
+      "regions": [
+        {
+          "id": "panel",
+          "slide": "page_001",
+          "mode": "faithful",
+          "status": "pass",
+          "source": {
+            "status": "measured",
+            "rgb": [
+              8,
+              120,
+              135
+            ],
+            "hex": "#087887",
+            "ink_mass": 0.9686274509803922,
+            "core_agreement": 1.0,
+            "pixels": 800
+          },
+          "actual": {
+            "status": "measured",
+            "rgb": [
+              8,
+              120,
+              135
+            ],
+            "hex": "#087887",
+            "ink_mass": 0.9686274509803922,
+            "core_agreement": 1.0,
+            "pixels": 800
+          },
+          "issues": [],
+          "expected_rgb": [
+            8,
+            120,
+            135
+          ],
+          "max_channel_delta": 0,
+          "channel_tolerance": 12,
+          "source_sha256": "2919b39b5a17ae0f70fc8127ccaee920e709b9055f05cf3f3dbb9dc45a2e839f"
+        },
+        {
+          "id": "stroke",
+          "slide": "page_001",
+          "mode": "faithful",
+          "status": "pass",
+          "source": {
+            "status": "measured",
+            "rgb": [
+              8,
+              120,
+              135
+            ],
+            "hex": "#087887",
+            "ink_mass": 0.29058823529411765,
+            "core_agreement": 1.0,
+            "pixels": 2400
+          },
+          "actual": {
+            "status": "measured",
+            "rgb": [
+              8,
+              120,
+              135
+            ],
+            "hex": "#087887",
+            "ink_mass": 0.2907843137254902,
+            "core_agreement": 1.0,
+            "pixels": 2400
+          },
+          "issues": [],
+          "expected_rgb": [
+            8,
+            120,
+            135
+          ],
+          "max_channel_delta": 0,
+          "channel_tolerance": 12,
+          "ink_coverage_ratio": 1.0006747638326585,
+          "density_limits": [
+            0.8,
+            1.25
+          ],
+          "source_sha256": "2919b39b5a17ae0f70fc8127ccaee920e709b9055f05cf3f3dbb9dc45a2e839f"
+        }
+      ],
+      "visual_review": "required",
+      "scope": "Explicit isolated regions only; not full-page color or aesthetic acceptance",
+      "pdf_sha256": "f94df9663cab64fcf50dfa9309c36d0bc0f6121cb5dd375a73c89bde42925895",
+      "uncovered_slides": []
+    },
+    "preflight_status": "pass",
+    "native_status": "pass"
+  },
+  "example_bad": {
+    "status": "fail",
+    "source_scene_sha256": "d9f3f2bdeda7b845ea24d3161df779c003173e28631d3e0069dc099abe96bba6",
+    "appearance": {
+      "status": "fail",
+      "regions": [
+        {
+          "id": "panel",
+          "slide": "page_001",
+          "mode": "faithful",
+          "status": "fail",
+          "source": {
+            "status": "measured",
+            "rgb": [
+              8,
+              120,
+              135
+            ],
+            "hex": "#087887",
+            "ink_mass": 0.9686274509803922,
+            "core_agreement": 1.0,
+            "pixels": 800
+          },
+          "actual": {
+            "status": "measured",
+            "rgb": [
+              31,
+              111,
+              120
+            ],
+            "hex": "#1F6F78",
+            "ink_mass": 0.8784313725490196,
+            "core_agreement": 1.0,
+            "pixels": 800
+          },
+          "issues": [
+            "color_drift"
+          ],
+          "expected_rgb": [
+            8,
+            120,
+            135
+          ],
+          "max_channel_delta": 23,
+          "channel_tolerance": 12,
+          "source_sha256": "2919b39b5a17ae0f70fc8127ccaee920e709b9055f05cf3f3dbb9dc45a2e839f"
+        },
+        {
+          "id": "stroke",
+          "slide": "page_001",
+          "mode": "faithful",
+          "status": "fail",
+          "source": {
+            "status": "measured",
+            "rgb": [
+              8,
+              120,
+              135
+            ],
+            "hex": "#087887",
+            "ink_mass": 0.29058823529411765,
+            "core_agreement": 1.0,
+            "pixels": 2400
+          },
+          "actual": {
+            "status": "measured",
+            "rgb": [
+              8,
+              120,
+              135
+            ],
+            "hex": "#087887",
+            "ink_mass": 0.14568627450980393,
+            "core_agreement": 1.0,
+            "pixels": 2400
+          },
+          "issues": [
+            "ink_density_drift"
+          ],
+          "expected_rgb": [
+            8,
+            120,
+            135
+          ],
+          "max_channel_delta": 0,
+          "channel_tolerance": 12,
+          "ink_coverage_ratio": 0.5013495276653173,
+          "density_limits": [
+            0.8,
+            1.25
+          ],
+          "source_sha256": "2919b39b5a17ae0f70fc8127ccaee920e709b9055f05cf3f3dbb9dc45a2e839f"
+        }
+      ],
+      "visual_review": "required",
+      "scope": "Explicit isolated regions only; not full-page color or aesthetic acceptance",
+      "pdf_sha256": "5a510889f01b8c66ac8d2227e63eb40df16ef5657459cdf7104c2ce0f38a6e25",
+      "uncovered_slides": []
+    },
+    "preflight_status": "pass",
+    "native_status": "pass"
+  }
+}

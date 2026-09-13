@@ -97,3 +97,7 @@ the rear panel's footprint intentionally. Check the actual ink and layer order b
 its font. `unintended_overlap.area_px2` describes the intersecting object footprints, not the
 refined glyph area; an unchanged value after reducing font size is not proof of a checker bug.
 Declare only the specific source-supported pair and retain any true text/text collision checks.
+
+## Preserve colors and ink weight
+
+Use [appearance.md](appearance.md) for sampled per-role colors and actual-render checks. Do not reuse a convenient default palette or lighten borders/labels in a faithful reconstruction. Line width, font size and weight affect perceived lightness independently of RGB.

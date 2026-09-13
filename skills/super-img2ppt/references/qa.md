@@ -7,6 +7,7 @@
 | preflight | Source bounds, measured text fit, explicit containers, text ink collisions, named overlap exemptions | OCR accuracy or complete visual reconstruction |
 | native_objects | Expected named PPTX objects, editable text content, page count, exact notes | Appearance in a particular office program |
 | rendered_text | Text, glyph bounds, font identifiers and visible width in LibreOffice's actual PDF | Correct source transcription, unique font identity from pixels, PowerPoint/WPS behavior |
+| appearance | Selected source/target color and normalized ink coverage against actual PPTX render | Full-page fidelity, semantic color correctness, aesthetic quality or target-editor equivalence |
 | comparison image | Source beside a rasterization of the actual PPTX and a difference heatmap | Automatic fidelity acceptance; antialiasing affects pixel differences |
 | fonts manifest | Actual locally resolved font files and substitutions | Availability/licensing on a different computer |
 
@@ -89,3 +90,5 @@ visible line-end hyphen. The runtime restores a hyphen only when the engine repo
 inside the text frame. Raw `rendered` text is retained beside `rendered_normalized`.
 The same indexed glyph remains in ownership, font and overflow checks. Missing or
 unconfirmed markers still fail; no general control-character stripping is performed.
+
+See [appearance.md](appearance.md) for explicit color/ink-density plans and required handling of missing coverage. Source-backed builds without a plan report review, not color PASS.

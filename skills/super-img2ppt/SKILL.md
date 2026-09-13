@@ -82,7 +82,11 @@ installed working tool with a command-local PATH; do not alter global settings o
 5. Correct OCR against the image, including punctuation, superscripts, numeric signs and
    line order. Preserve semantic line breaks. Set `reviewed: true` only after this comparison.
    For uncertain text retain `confidence < 0.85` and disclose it. Do not guess unreadable data.
-6. Run `super-img2ppt check JOB/scene.json --out JOB/check_01`. Resolve measured overflow,
+6. Read [appearance.md](references/appearance.md) and record an appearance plan for important
+   source colors, fills, borders, arrows and text ink. Sample each visual role instead of
+   inheriting a shared palette. User-requested recoloring requires explicit targets/reasons;
+   faithful conversion must not silently change colors. Missing checks remain unverified.
+7. Run `super-img2ppt check JOB/scene.json --out JOB/check_01`. Resolve measured overflow,
    out-of-bounds objects, invalid containers and unintended overlap by changing the scene.
    Positions are fixed by default; the runtime will not rearrange source objects for you.
 
@@ -119,7 +123,7 @@ Use parallel page work only if it is separately authorized and supported by the 
 
 ## Render, inspect, repair
 
-Run `super-img2ppt build JOB/scene.json --out JOB/build_01`. Every output directory must be
+Run `super-img2ppt build JOB/scene.json --appearance-plan JOB/appearance-plan.json --out JOB/build_01`. Every output directory must be
 new so a failed retry cannot leave stale “successful” evidence. `validation.json` always records
 the checks reached; errors exit with code 2.
 
@@ -141,7 +145,7 @@ and dash sizes. Rotated labels use a horizontal box rotated about its center; me
 final visible position instead of fitting horizontal text into a narrow vertical box.
 
 - `fail`: blocking structural or rendered-text error; repair the scene before calling it done.
-- `review`: blocking checks passed, but font substitutions, spacing drift, recognition or raster text need review.
+- `review`: blocking checks passed, but font substitutions, spacing drift, recognition, raster text or missing appearance coverage need review.
 - `pass`: automated checks passed. Visual/source fidelity and target application review remain
   separate evidence, represented by `visual_review: required`; do not call this perfect fidelity.
 - `unverified`: `--no-render` was explicitly selected; label the file as a draft and explain
@@ -161,7 +165,7 @@ evidence alone must not be presented as native PowerPoint/WPS verification.
 ## Deliver
 
 Return links to `editable.pptx`, `svg/`, `scene.resolved.json`, `fonts.json`, and
-`validation.json`, and `editability.json`, plus representative real previews. State which regions remain raster,
+`validation.json`, and `editability.json`, plus `appearance/` measurements and representative real previews. State which regions remain raster,
 which fonts changed, and what was actually checked. On a duplicate of a complex result,
 move a representative group and edit a child label; check that the intended children move
 and neighboring objects stay unchanged. Explain that external arrows do not reroute. `scene.resolved.json` plus `assets/` can be

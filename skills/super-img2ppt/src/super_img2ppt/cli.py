@@ -13,6 +13,7 @@ from pathlib import Path
 
 from PIL import Image
 
+from .appearance import load_plan, verify_pdf
 from .curves import trace_file
 from .export import write_pptx, write_svg
 from .fonts import FontCatalog
@@ -75,7 +76,11 @@ def resolve_scene(scene: dict, layouts: dict, root: Path, out: Path) -> dict:
 
 
 def build(
-    scene_path: Path, out: Path, render: bool = True, font_dirs: tuple[Path, ...] = ()
+    scene_path: Path,
+    out: Path,
+    render: bool = True,
+    font_dirs: tuple[Path, ...] = (),
+    appearance_plan: Path | None = None,
 ) -> dict:
     fresh_directory(out)
     report = {
@@ -90,6 +95,12 @@ def build(
     }
     try:
         scene = load_scene(scene_path)
+        color_plan = load_plan(appearance_plan, scene) if appearance_plan else None
+        report["automated_checks"]["appearance"] = {
+            "status": "not_run",
+            "reason": "No actual-render appearance check has run",
+            "required_for_source_color_claim": True,
+        }
         root = scene_path.resolve().parent
         report["source_scene_sha256"] = hashlib.sha256(scene_path.read_bytes()).hexdigest()
         catalog = FontCatalog(scene.get("fonts"), font_dirs)
@@ -153,6 +164,12 @@ def build(
                     )
             report["comparisons"] = comparisons
             report["artifacts"]["render"] = "render/"
+            if color_plan:
+                appearance = verify_pdf(scene, root, pdf, color_plan, out / "appearance")
+                report["automated_checks"]["appearance"] = appearance
+                report["artifacts"]["appearance"] = "appearance/"
+                if appearance["status"] == "fail":
+                    return report
             if rendered["status"] == "fail":
                 return report
             report["status"] = (
@@ -160,6 +177,10 @@ def build(
                 if checks["status"] == "review"
                 or font_manifest["substitutions"]
                 or rendered["status"] == "review"
+                or (
+                    any("source" in slide for slide in scene["slides"])
+                    and report["automated_checks"]["appearance"]["status"] != "pass"
+                )
                 else "pass"
             )
         else:
@@ -283,6 +304,11 @@ def main(argv: list[str] | None = None) -> int:
         cmd.add_argument("--font-dir", type=Path, action="append", default=[])
         if name == "build":
             cmd.add_argument(
+                "--appearance-plan",
+                type=Path,
+                help="Validate isolated color/ink regions against source or explicit targets",
+            )
+            cmd.add_argument(
                 "--no-render", action="store_true", help="Produce an explicitly unverified draft"
             )
     args = parser.parse_args(argv)
@@ -333,7 +359,9 @@ def main(argv: list[str] | None = None) -> int:
                 axis=args.axis,
             )
         elif args.command == "build":
-            result = build(args.scene, args.out, not args.no_render, tuple(args.font_dir))
+            result = build(
+                args.scene, args.out, not args.no_render, tuple(args.font_dir), args.appearance_plan
+            )
         elif args.command == "compose-math":
             result = compose_file(args.spec, args.out, tuple(args.font_dir))
         elif args.command == "compare-roi":

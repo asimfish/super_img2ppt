@@ -1,6 +1,6 @@
 # Super Img2PPT capability card
 
-Owner: super_img2ppt contributors. Version: 0.3.9. Risk: scoped_change.
+Owner: super_img2ppt contributors. Version: 0.3.10. Risk: scoped_change.
 Canonical owner: this repository's `skills/super-img2ppt`.
 
 Reads: user-selected image/PDF/PPTX files; scene JSON and relative local assets; installed font
@@ -94,3 +94,11 @@ geometry and revise typography/local spacing while preserving content and diagra
 Uses the existing check/build runtime; no automatic redraw CLI, network or extra executable.
 Faithful baseline is retained. Region mapping and content coverage require explicit agent
 review; static checks do not prove semantic equivalence or aesthetic improvement.
+
+## Appearance gate
+
+Reads a bounded explicit local JSON region plan and root-confined source images. Renders the
+actual Office PDF at source scale and writes ROI crops, hashes and separate color/ink-density
+findings. No network, credential access, new dependency or automatic recoloring. Missing plans
+keep source-backed builds at review; invalid samples and threshold failures block. Regions
+remain agent-selected; partial coverage and sRGB channel thresholds do not prove global fidelity.

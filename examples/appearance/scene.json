@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "slides": [
+    {
+      "id": "page_001",
+      "source": "source.png",
+      "width": 400,
+      "height": 200,
+      "reviewed": true,
+      "elements": [
+        {
+          "id": "panel",
+          "kind": "shape",
+          "shape": "rect",
+          "box": [
+            40,
+            40,
+            120,
+            60
+          ],
+          "fill": "#087887",
+          "z": 0
+        },
+        {
+          "id": "stroke",
+          "kind": "line",
+          "points": [
+            [
+              200,
+              80
+            ],
+            [
+              350,
+              80
+            ]
+          ],
+          "stroke": "#087887",
+          "stroke_width": 6,
+          "z": 1
+        }
+      ]
+    }
+  ]
+}
