@@ -55,3 +55,24 @@ verify Office editing separately from LibreOffice rendering.
 
 Schema references: [Microsoft TextMath](https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.linq.a14.m)
 and [OfficeMath](https://devblogs.microsoft.com/math-in-office/officemath/).
+
+## Math frame calibration (0.3.14)
+
+LibreOffice can stretch imported OMML horizontally to the old picture box and disregard
+its declared run size. Rendered replacement builds now measure the draft PDF glyph sizes,
+read the formula's intrinsic width/height from a temporary ODP import, and resize each
+native equation around its existing center to the requested point size and natural aspect.
+The final artifact stays PPTX/OMML; the ODP is measurement evidence only. Non-target chart
+objects are ignored. Formula tokens, scripts and accents are not rewritten.
+
+Use a small, deliberate size hierarchy for repeated formulas (for example 24 source pixels
+for main expressions and 20 for auxiliary labels), and give equivalent variables the same
+style. Do not reuse raster crop proportions as a typography specification. The same equation
+in differently shaped crop boxes should have the same final glyph proportions and size.
+
+This is a one-pass LibreOffice calibration, not cross-viewer font certification. It uses the
+largest measured glyph in each original box; overlapping labels or oversized symbols can
+contaminate the estimate. Inspect final formulas, available space and neighboring labels,
+and remeasure isolated formula regions. Font fallback may remain even when STIX Two Math
+is declared. Record actual fonts rather than claiming the declaration guarantees the font.
+`--no-render` skips calibration and remains unverified. Extra PDF/ODP imports increase render time.

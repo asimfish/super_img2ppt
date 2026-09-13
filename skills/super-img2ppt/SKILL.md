@@ -129,6 +129,9 @@ it has depth shading. Sample face colors from the source and suppress inherited 
 When real equations are requested, preserve math structure in Office Math (OMML), not images
 or ordinary text fragments. For an existing raster-heavy PPTX, use the explicit, hash-bound
 [replace-raster route](references/native.md), then inspect the enhanced PPTX render.
+Use consistent size tiers and variable/label styles for repeated equations. Inspect the
+render-calibrated natural aspect, scripts and glyph sizes; a common font declaration or
+matching screenshot crop box does not guarantee consistent formula typography.
 Disclose every remaining image, including images inside groups. Never infer full editability
 from the absence of a full-slide screenshot. This enhancement does not update the old SVG.
 

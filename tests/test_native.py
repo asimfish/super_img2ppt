@@ -154,3 +154,33 @@ def test_nested_pictures_remain_disclosed_and_name_conflicts_fail(tmp_path):
     plan["replacements"][0]["items"][0]["id"] = "nested"
     with pytest.raises(InputError, match="conflicts"):
         replace_rasters(source, plan, tmp_path / "conflict-out", False)
+
+
+@pytest.mark.render
+def test_equation_font_and_aspect_independent_of_crop_box(tmp_path):
+    import pypdfium2 as pdfium
+
+    source, plan = inputs(tmp_path)
+    formula = plan["replacements"][0]["items"][1]
+    formula["expression"] = [{"base": "x", "sub": "0"}, "+", "α", "=", "β"]
+    second = dict(formula, id="same_formula", box=[400, 250, 400, 60])
+    plan["replacements"][0]["items"].append(second)
+    result = replace_rasters(source, plan, tmp_path / "normalized")
+    assert len(result["math_layout"]["equations"]) == 2
+    shapes = Presentation(tmp_path / "normalized/editable.pptx").slides[0].shapes
+    equations = [s for s in shapes if s.name in ["formula", "same_formula"]]
+    assert equations[0].width / equations[0].height == pytest.approx(
+        equations[1].width / equations[1].height, abs=1e-4
+    )
+    with pdfium.PdfDocument(tmp_path / "normalized/render/editable.pdf") as pdf:
+        page = pdf[0]
+        text = page.get_textpage()
+        xs = []
+        for i in range(text.count_chars()):
+            if text.get_text_range(i, 1) == "x":
+                xs.append(pdfium.raw.FPDFText_GetFontSize(text, i))
+        text.close()
+        page.close()
+    assert len(xs) == 2
+    assert xs[0] == pytest.approx(xs[1], abs=0.1)
+    assert xs[0] == pytest.approx(24 * 720 / 1000, rel=0.025)

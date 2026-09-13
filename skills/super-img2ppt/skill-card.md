@@ -1,6 +1,6 @@
 # Super Img2PPT capability card
 
-Owner: super_img2ppt contributors. Version: 0.3.13. Risk: scoped_change.
+Owner: super_img2ppt contributors. Version: 0.3.14. Risk: scoped_change.
 Canonical owner: this repository's `skills/super-img2ppt`.
 
 Reads: user-selected image/PDF/PPTX files; scene JSON and relative local assets; installed font
@@ -116,3 +116,8 @@ Native enhancement: replace-raster reads a hash-bound PPTX and a bounded local p
 new PPTX with native cuboid groups, Office Math and text plus an audit/render. Uses existing
 local XML/Office parsers. No arbitrary XML, macros, shell or new network dependency. Plans
 require manual source transcription; incomplete/remaining raster content remains disclosed.
+
+Rendered native-equation replacement also measures PDF glyph sizes and temporary local ODP
+formula view areas to calibrate the final OMML frame proportions. Content is retained;
+calibration remains review due to possible overlapping glyphs, font substitution and viewer
+differences. Additional headless conversions are bounded and use isolated profiles.

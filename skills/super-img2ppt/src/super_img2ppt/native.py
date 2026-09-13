@@ -338,7 +338,22 @@ def replace_rasters(source: Path, plan: dict, out: Path, render=True):
         )
         json_write(out / "plan.json", plan)
         if render:
-            pdf = make_renderer().render(output, out / "render")
+            renderer = make_renderer()
+            targets = {
+                (r["slide"], i["id"]): i["font_size"] * scale_x / 12700
+                for r in plan["replacements"]
+                for i in r["items"]
+                if i["kind"] == "equation"
+            }
+            if targets:
+                from .math_layout import calibrate_equations
+
+                draft_pdf = renderer.render(output, out / "math_draft")
+                report["math_layout"] = calibrate_equations(
+                    output, draft_pdf, targets, out / "math_measurement", renderer
+                )
+                report["output_sha256"] = hashlib.sha256(output.read_bytes()).hexdigest()
+            pdf = renderer.render(output, out / "render")
             rasterize_pdf(pdf, out / "render", width=plan["width"])
         report["status"] = "review" if render else "unverified"
         return report
