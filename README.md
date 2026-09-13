@@ -325,6 +325,16 @@ GaLore 和 Mamba-2 的部分原保留区域曾在调整期间被查看，因此�
 
 </details>
 
+## 方块和公式的内部编辑
+
+张量小方块、U-Net 柱块可以拆成独立的原生三面形状组；公式可以导出真正的 **Office Math（OMML）**，保留上下标、帽符、分数和根式。适用于既有 PPTX 中被做成图片的对象，需先按源图制定替换方案。
+
+```bash
+super-img2ppt replace-raster build_02/editable.pptx --plan native-plan.json --out build_native
+```
+
+这一步生成新的 PPTX 和实际渲染，保留原文件；不会同步改写旧 SVG。照片和其他残留图片会明确列出。[方案与支持范围](skills/super-img2ppt/references/native.md)
+
 ## 颜色与线条浓度检查
 
 忠实重建不应偷偷换色，也不能把“几何检查通过”当成颜色正确。现在可以指定源图区域，对 **实际 PPTX 渲染** 检查颜色偏差和墨迹浓度，识别“配色被替换”和“颜色相同但线条变细”两类问题。

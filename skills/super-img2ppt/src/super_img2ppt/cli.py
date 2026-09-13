@@ -307,6 +307,14 @@ def main(argv: list[str] | None = None) -> int:
     region.add_argument("--color", required=True, help="Ink mask color as #RRGGBB")
     region.add_argument("--tolerance", type=int, default=64)
     region.add_argument("--out", type=Path, required=True)
+    native = commands.add_parser(
+        "replace-raster",
+        help="Replace selected PPTX pictures with native blocks and Office equations",
+    )
+    native.add_argument("pptx", type=Path)
+    native.add_argument("--plan", type=Path, required=True)
+    native.add_argument("--out", type=Path, required=True)
+    native.add_argument("--no-render", action="store_true")
     style = commands.add_parser(
         "restyle", help="Opt-in audited restyling with baseline and refined exports"
     )
@@ -373,6 +381,13 @@ def main(argv: list[str] | None = None) -> int:
                 )
             finally:
                 json_write(args.out / "restyle.json", result)
+        elif args.command == "replace-raster":
+            from .native import load_plan as load_native_plan
+            from .native import replace_rasters
+
+            result = replace_rasters(
+                args.pptx, load_native_plan(args.plan), args.out, not args.no_render
+            )
         elif args.command == "prepare":
             result = prepare(args.inputs, args.out, args.ocr, args.languages)
         elif args.command == "trace-curve":
@@ -413,6 +428,7 @@ def main(argv: list[str] | None = None) -> int:
             result = check(args.scene, args.out, tuple(args.font_dir))
         if args.command in {
             "restyle",
+            "replace-raster",
             "build",
             "prepare",
             "check",

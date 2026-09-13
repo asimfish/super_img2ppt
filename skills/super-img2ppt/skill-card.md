@@ -1,6 +1,6 @@
 # Super Img2PPT capability card
 
-Owner: super_img2ppt contributors. Version: 0.3.12. Risk: scoped_change.
+Owner: super_img2ppt contributors. Version: 0.3.13. Risk: scoped_change.
 Canonical owner: this repository's `skills/super-img2ppt`.
 
 Reads: user-selected image/PDF/PPTX files; scene JSON and relative local assets; installed font
@@ -77,8 +77,9 @@ Optional semantic groups become native nested PPTX/SVG groups; formula and curve
 emit matching group definitions. Group ids appear in the Selection Pane, and editability.json
 lists child membership and remaining ungrouped objects. Grouping preserves children and stable
 paint order; interleaving groups, repeated parents, cycles and depth above eight are rejected.
-No automatic semantic grouping, chart-data recovery, Office equation objects, external-arrow
-rerouting or native PowerPoint/WPS UI verification is claimed.
+Grouping alone does not create Office equations (use replace-raster for that). No automatic
+semantic grouping, chart-data recovery, external-arrow rerouting or native PowerPoint/WPS
+UI verification is claimed.
 
 ## Optional restyling
 
@@ -110,3 +111,8 @@ successful sparse screening stays review. Raster asset alpha is preserved.
 
 Measured appearance regions enforce both RGB and ΔEOK tolerances; signed lightness/chroma
 changes are diagnostic. This adds local arithmetic only, with no external runtime dependency.
+
+Native enhancement: replace-raster reads a hash-bound PPTX and a bounded local plan, emits a
+new PPTX with native cuboid groups, Office Math and text plus an audit/render. Uses existing
+local XML/Office parsers. No arbitrary XML, macros, shell or new network dependency. Plans
+require manual source transcription; incomplete/remaining raster content remains disclosed.

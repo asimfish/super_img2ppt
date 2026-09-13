@@ -121,6 +121,17 @@ Use parallel page work only if it is separately authorized and supported by the 
   family, review the actual rendering, and report substitutions. Font files are not embedded
   or distributed; another computer needs the listed fonts for the same appearance.
 
+## Native editing requirements
+
+Prefer native shapes for repeated cells, tensor blocks and U-Net columns. Make each meaningful
+block a separate group with editable faces; do not rasterize a whole array merely because
+it has depth shading. Sample face colors from the source and suppress inherited theme shadows.
+When real equations are requested, preserve math structure in Office Math (OMML), not images
+or ordinary text fragments. For an existing raster-heavy PPTX, use the explicit, hash-bound
+[replace-raster route](references/native.md), then inspect the enhanced PPTX render.
+Disclose every remaining image, including images inside groups. Never infer full editability
+from the absence of a full-slide screenshot. This enhancement does not update the old SVG.
+
 ## Render, inspect, repair
 
 Tagged input and raster asset colors are converted to sRGB; never copy wide-gamut channel

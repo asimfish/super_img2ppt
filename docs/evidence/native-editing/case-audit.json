@@ -1,0 +1,225 @@
+{
+  "source_pptx_sha256": "914178ac66b5106d052aea4d8ec4ffeba6ebdfe6541a1cd015faa6192fe7c0e7",
+  "output_pptx_sha256": "3058325abd826acdabed6ad048d70569194404fa3ccd8d26d2d58800bd2e705d",
+  "native_equations": 42,
+  "native_cuboid_groups": 162,
+  "native_items": 222,
+  "unique_shape_ids": 815,
+  "replaced_images": 54,
+  "remaining_images": [
+    {
+      "slide": 1,
+      "name": "demo_photo"
+    },
+    {
+      "slide": 1,
+      "name": "wrist_photo"
+    },
+    {
+      "slide": 1,
+      "name": "third_photo"
+    },
+    {
+      "slide": 1,
+      "name": "task_photo"
+    },
+    {
+      "slide": 1,
+      "name": "denoising_arc"
+    },
+    {
+      "slide": 1,
+      "name": "paired_brace"
+    },
+    {
+      "slide": 1,
+      "name": "pose_axes"
+    }
+  ],
+  "status": "review",
+  "notes": [
+    "Actual LibreOffice render visually inspected; Office math XML retained.",
+    "User source is AI-generated and contains known scientific limitations; these were not corrected.",
+    "Cube geometry/face colors and equation typography are reconstructions, not pixel-identical.",
+    "Microsoft PowerPoint/WPS editing not tested."
+  ],
+  "selected_face_color_checks": [
+    {
+      "id": "expert_tensor_block_01",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          209,
+          141,
+          133
+        ],
+        "hsv_saturation": 0.3636363636363636,
+        "hsv_value": 0.8196078431372549,
+        "hex": "#D18D85",
+        "ink_mass": 0.48061002178649237,
+        "core_agreement": 1.0,
+        "pixels": 9
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          209,
+          141,
+          133
+        ],
+        "hsv_saturation": 0.3636363636363636,
+        "hsv_value": 0.8196078431372549,
+        "hex": "#D18D85",
+        "ink_mass": 0.4784313725490196,
+        "core_agreement": 1.0,
+        "pixels": 9
+      },
+      "issues": [],
+      "expected_rgb": [
+        209,
+        141,
+        133
+      ],
+      "max_channel_delta": 0,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.709443276503085,
+          0.07540955142463635,
+          0.03808272606899077
+        ],
+        "actual_oklab": [
+          0.709443276503085,
+          0.07540955142463635,
+          0.03808272606899077
+        ],
+        "delta_e_ok": 0.0,
+        "lightness_change": 0.0,
+        "chroma_change": 0.0,
+        "tolerance": 0.02
+      }
+    },
+    {
+      "id": "student_unet_t_block_01",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          107,
+          162,
+          155
+        ],
+        "hsv_saturation": 0.3395061728395061,
+        "hsv_value": 0.6352941176470588,
+        "hex": "#6BA29B",
+        "ink_mass": 0.5790849673202615,
+        "core_agreement": 1.0,
+        "pixels": 9
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          107,
+          162,
+          155
+        ],
+        "hsv_saturation": 0.3395061728395061,
+        "hsv_value": 0.6352941176470588,
+        "hex": "#6BA29B",
+        "ink_mass": 0.5803921568627451,
+        "core_agreement": 1.0,
+        "pixels": 9
+      },
+      "issues": [],
+      "expected_rgb": [
+        107,
+        162,
+        155
+      ],
+      "max_channel_delta": 0,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.6718811010741562,
+          -0.05868140230843771,
+          -0.0060061751875370994
+        ],
+        "actual_oklab": [
+          0.6718811010741562,
+          -0.05868140230843771,
+          -0.0060061751875370994
+        ],
+        "delta_e_ok": 0.0,
+        "lightness_change": 0.0,
+        "chroma_change": 0.0,
+        "tolerance": 0.02
+      }
+    },
+    {
+      "id": "teacher_unet_block_01",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          206,
+          119,
+          113
+        ],
+        "hsv_saturation": 0.45145631067961167,
+        "hsv_value": 0.807843137254902,
+        "hex": "#CE7771",
+        "ink_mass": 0.5559912854030501,
+        "core_agreement": 1.0,
+        "pixels": 9
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          206,
+          119,
+          113
+        ],
+        "hsv_saturation": 0.45145631067961167,
+        "hsv_value": 0.807843137254902,
+        "hex": "#CE7771",
+        "ink_mass": 0.5568627450980392,
+        "core_agreement": 1.0,
+        "pixels": 9
+      },
+      "issues": [],
+      "expected_rgb": [
+        206,
+        119,
+        113
+      ],
+      "max_channel_delta": 0,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.6630673823715848,
+          0.09999993647011018,
+          0.0458811026411286
+        ],
+        "actual_oklab": [
+          0.6630673823715848,
+          0.09999993647011018,
+          0.0458811026411286
+        ],
+        "delta_e_ok": 0.0,
+        "lightness_change": 0.0,
+        "chroma_change": 0.0,
+        "tolerance": 0.02
+      }
+    }
+  ]
+}

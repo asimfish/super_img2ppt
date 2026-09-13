@@ -1,5 +1,10 @@
 # Editable formula typography
 
+When the user requests real editable equations, use the native Office equation route in
+[native.md](native.md). It emits structured OMML, including actual sub/superscripts, hats,
+fractions and radicals. The measured-parts helper below remains a distinct typography tool;
+do not describe its ordinary text boxes, or a formula screenshot, as an Office equation.
+
 Treat a formula as styled mathematical parts, not one bold-italic OCR string. Inventory
 the source's variable weights, upright/italic operators and labels, script sizes, baselines
 and punctuation spacing. A bold vector may sit beside a regular italic scalar and an upright
