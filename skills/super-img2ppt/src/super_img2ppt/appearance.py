@@ -13,6 +13,7 @@ import pypdfium2 as pdfium
 from jsonschema import Draft202012Validator
 from PIL import Image
 
+from .color_difference import color_difference
 from .color_management import to_srgb
 from .prepare import json_write
 from .scene import COLOR, ID, InputError, _unique_pairs, safe_asset, slide_transform
@@ -48,6 +49,7 @@ SCHEMA = {
                     "reason": {"type": "string", "minLength": 1, "maxLength": 2000},
                     "background": COLOR,
                     "max_channel_delta": {"type": "integer", "minimum": 0, "maximum": 64},
+                    "max_delta_e_ok": {"type": "number", "minimum": 0, "maximum": 0.1},
                     "min_contrast": {"type": "integer", "minimum": 1, "maximum": 128},
                     "density_ratio": {
                         "type": "array",
@@ -88,6 +90,8 @@ def validate_plan(plan, scene):
                 raise InputError("Target color requires an explicit color and change reason")
         elif "target_color" in region or "reason" in region:
             raise InputError("Faithful checks cannot override the source color")
+        if not math.isfinite(region.get("max_delta_e_ok", 0.02)):
+            raise InputError("Perceptual color tolerance must be finite")
         lo, hi = region.get("density_ratio", [0.8, 1.25])
         if not math.isfinite(lo) or not math.isfinite(hi) or not lo <= 1 <= hi:
             raise InputError("Density ratio interval must be finite and include 1")
@@ -229,6 +233,11 @@ def compare_region(source, actual, region):
         max_channel_delta=delta,
         channel_tolerance=region.get("max_channel_delta", 12),
     )
+    perceptual = color_difference(target, b["rgb"])
+    perceptual["tolerance"] = region.get("max_delta_e_ok", 0.02)
+    result["perceptual"] = perceptual
+    if perceptual["delta_e_ok"] > perceptual["tolerance"]:
+        result["issues"].append("perceptual_color_drift")
     if delta > result["channel_tolerance"]:
         result["issues"].append("color_drift")
     if region["kind"] == "ink":

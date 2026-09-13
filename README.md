@@ -335,6 +335,8 @@ super-img2ppt build scene.json --appearance-plan appearance-plan.json --out buil
 
 超限会阻断构建。默认忠实构建即使没有手动方案，也会从源图自动抽查平坦色块，对照实际 PPTX 渲染；抽查通过仍标为 `review`，没有可用色块则标为 `not_run`。关键曲线、文字和渐变仍需要手动区域检查。明确要求重新配色时，使用 `--appearance-mode redesign`，记录目标色值与理由，再按目标验收。检查覆盖所选区域，仍需看图复核整体效果。[方案格式与边界](skills/super-img2ppt/references/appearance.md) · [真实导出与失败回归证据](docs/evidence/appearance/README.md)
 
+0.3.12 补充 **感知色差 ΔEOK**：即使 RGB 单通道变化没有超过旧容差，也会检查颜色的感知差异，并报告变浅、变深及色彩浓度变化。默认阈值 0.02 是工程筛查标准，仍需人工复核。[漏检回归证据](docs/evidence/perceptual-color/README.md)
+
 输入与嵌入素材的 ICC 色彩配置现在统一转换为 sRGB，避免宽色域数值被直接当作 sRGB 而变淡或偏色；素材透明度保留。未标记的 RGB 按 sRGB 解释，不做全局饱和度增强。损坏的 ICC 和缺少配置的 CMYK/LAB 会报错。[色彩管理回归证据](docs/evidence/color-management/README.md)
 
 ## 可选：语义重绘与样式美化

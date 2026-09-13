@@ -1,6 +1,6 @@
 # Super Img2PPT capability card
 
-Owner: super_img2ppt contributors. Version: 0.3.11. Risk: scoped_change.
+Owner: super_img2ppt contributors. Version: 0.3.12. Risk: scoped_change.
 Canonical owner: this repository's `skills/super-img2ppt`.
 
 Reads: user-selected image/PDF/PPTX files; scene JSON and relative local assets; installed font
@@ -107,3 +107,6 @@ Color handling: embedded ICC profiles converted to sRGB with local Pillow/Little
 malformed profiles and untagged CMYK/LAB rejected. Input normalization emits color metadata.
 Default faithful rendered builds screen bounded flat source patches and block measured drift;
 successful sparse screening stays review. Raster asset alpha is preserved.
+
+Measured appearance regions enforce both RGB and ΔEOK tolerances; signed lightness/chroma
+changes are diagnostic. This adds local arithmetic only, with no external runtime dependency.

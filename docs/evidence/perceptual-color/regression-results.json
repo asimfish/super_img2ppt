@@ -1,0 +1,183 @@
+[
+  {
+    "id": "patch",
+    "slide": "page_001",
+    "mode": "faithful",
+    "status": "fail",
+    "source": {
+      "status": "measured",
+      "rgb": [
+        96,
+        96,
+        96
+      ],
+      "hsv_saturation": 0.0,
+      "hsv_value": 0.3764705882352941,
+      "hex": "#606060",
+      "ink_mass": 0.6235294117647059,
+      "core_agreement": 1.0,
+      "pixels": 400
+    },
+    "actual": {
+      "status": "measured",
+      "rgb": [
+        108,
+        108,
+        108
+      ],
+      "hsv_saturation": 0.0,
+      "hsv_value": 0.4235294117647059,
+      "hex": "#6C6C6C",
+      "ink_mass": 0.5764705882352942,
+      "core_agreement": 1.0,
+      "pixels": 400
+    },
+    "issues": [
+      "perceptual_color_drift"
+    ],
+    "expected_rgb": [
+      96,
+      96,
+      96
+    ],
+    "max_channel_delta": 12,
+    "channel_tolerance": 12,
+    "perceptual": {
+      "metric": "delta_e_ok",
+      "expected_oklab": [
+        0.48905644533401765,
+        3.959055305813308e-11,
+        1.8229044829176644e-08
+      ],
+      "actual_oklab": [
+        0.5312817994338657,
+        4.3009013017680786e-11,
+        1.9802948725278213e-08
+      ],
+      "delta_e_ok": 0.04222535409984804,
+      "lightness_change": 0.04222535409984801,
+      "chroma_change": 1.5739076084802937e-09,
+      "tolerance": 0.02
+    }
+  },
+  {
+    "id": "patch",
+    "slide": "page_001",
+    "mode": "faithful",
+    "status": "fail",
+    "source": {
+      "status": "measured",
+      "rgb": [
+        128,
+        112,
+        96
+      ],
+      "hsv_saturation": 0.25,
+      "hsv_value": 0.5019607843137255,
+      "hex": "#807060",
+      "ink_mass": 0.6235294117647059,
+      "core_agreement": 1.0,
+      "pixels": 400
+    },
+    "actual": {
+      "status": "measured",
+      "rgb": [
+        116,
+        124,
+        108
+      ],
+      "hsv_saturation": 0.12903225806451613,
+      "hsv_value": 0.48627450980392156,
+      "hex": "#747C6C",
+      "ink_mass": 0.5764705882352942,
+      "core_agreement": 1.0,
+      "pixels": 400
+    },
+    "issues": [
+      "perceptual_color_drift"
+    ],
+    "expected_rgb": [
+      128,
+      112,
+      96
+    ],
+    "max_channel_delta": 12,
+    "channel_tolerance": 12,
+    "perceptual": {
+      "metric": "delta_e_ok",
+      "expected_oklab": [
+        0.555562244158079,
+        0.012167472556044862,
+        0.028814700182087094
+      ],
+      "actual_oklab": [
+        0.5747732307012344,
+        -0.016219027425587257,
+        0.020049561880011724
+      ],
+      "delta_e_ok": 0.03537913275679618,
+      "lightness_change": 0.01921098654315545,
+      "chroma_change": -0.005489932486363185,
+      "tolerance": 0.02
+    }
+  },
+  {
+    "id": "patch",
+    "slide": "page_001",
+    "mode": "faithful",
+    "status": "pass",
+    "source": {
+      "status": "measured",
+      "rgb": [
+        96,
+        96,
+        96
+      ],
+      "hsv_saturation": 0.0,
+      "hsv_value": 0.3764705882352941,
+      "hex": "#606060",
+      "ink_mass": 0.6235294117647059,
+      "core_agreement": 1.0,
+      "pixels": 400
+    },
+    "actual": {
+      "status": "measured",
+      "rgb": [
+        97,
+        97,
+        97
+      ],
+      "hsv_saturation": 0.0,
+      "hsv_value": 0.3803921568627451,
+      "hex": "#616161",
+      "ink_mass": 0.6196078431372549,
+      "core_agreement": 1.0,
+      "pixels": 400
+    },
+    "issues": [],
+    "expected_rgb": [
+      96,
+      96,
+      96
+    ],
+    "max_channel_delta": 1,
+    "channel_tolerance": 12,
+    "perceptual": {
+      "metric": "delta_e_ok",
+      "expected_oklab": [
+        0.48905644533401765,
+        3.959055305813308e-11,
+        1.8229044829176644e-08
+      ],
+      "actual_oklab": [
+        0.4926091910375346,
+        3.9878128577086613e-11,
+        1.8361469567018673e-08
+      ],
+      "delta_e_ok": 0.003552745703516938,
+      "lightness_change": 0.003552745703516935,
+      "chroma_change": 1.3242505009328426e-10,
+      "tolerance": 0.02
+    }
+  }
+]

@@ -50,8 +50,9 @@ JSON keys, unbounded/nonfinite tolerances, missing slides and invalid ROIs fail.
   color cannot disappear from the comparison. The highest-contrast quartile estimates core
   color; mixed hues fail. At least four foreground pixels are required. `min_contrast`
   defaults to 16 (1–128); pale or subpixel-only strokes may lack reliable core samples.
-- Default color tolerance is a maximum **sRGB channel difference of 12**, not perceptual ΔE
-  or a universal aesthetic threshold. Explicit `max_channel_delta` may range from 0 to 64.
+- Default color limits require both a maximum **sRGB channel difference of 12** and
+  **ΔEOK ≤ 0.02**. These are screening limits, not universal aesthetic thresholds.
+  Explicit `max_channel_delta` may range from 0 to 64; see perceptual limits below.
 - `ink` also compares integrated background contrast divided by core contrast, normalized by
   ROI area, to estimate ink coverage. Default actual/source ratio is 0.8–1.25. A thin line or
   smaller/lighter type can fail even when RGB matches. It is not an exact font-weight or
@@ -96,3 +97,22 @@ reconstructions and keep their reference/target record with the deliverables.
 
 Color samples also record HSV saturation and value as diagnostics. These are not perceptual
 ΔE measurements and do not replace the RGB tolerance or ink-density checks.
+
+## Perceptual color differences (0.3.12)
+
+RGB channel tolerance alone can accept substantial lightness/chroma changes. Every measured
+region now also checks ΔEOK in Oklab, default `max_delta_e_ok: 0.02`, configurable from 0 to 0.1
+in an explicit region plan. Both RGB and perceptual limits must pass. This is a product
+screening threshold, not a promise that smaller differences are invisible to every viewer.
+It uses normalized sRGB with its transfer function decoded before Oklab conversion.
+
+`perceptual` reports expected/actual Oklab, ΔEOK, signed `lightness_change` and `chroma_change`.
+Positive lightness means lighter; negative chroma means less chromatic. Chroma is not HSV
+saturation. This is not CIE ΔE2000; Oklab lightness uses a 0–1 scale. Target-mode checks compare
+against the documented target, while retaining the original source measurement.
+Automatic invalid samples still require review and are never reported as matching colors.
+Do not relax either threshold simply to make a faithful reconstruction pass.
+
+Equations and public-domain matrix provenance:
+[Björn Ottosson's Oklab definition](https://bottosson.github.io/posts/oklab/),
+[W3C CSS Color 4 color differences](https://www.w3.org/TR/css-color-4/#color-difference).

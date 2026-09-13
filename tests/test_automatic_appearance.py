@@ -82,3 +82,15 @@ def test_redesign_cli_does_not_claim_faithful_verification(tmp_path):
     r = json.loads((tmp_path / "out/validation.json").read_text())
     assert r["automated_checks"]["appearance"]["mode"] == "redesign"
     assert not r["automated_checks"]["appearance"]["automatic_sampling"]
+
+
+@pytest.mark.render
+def test_default_build_blocks_lightness_drift_inside_rgb_tolerance(tmp_path):
+    _, p = inputs(tmp_path, "#6C6C6C")
+    Image.new("RGB", (400, 200), "#606060").save(tmp_path / "source.png")
+    result = build(p, tmp_path / "lighter")
+    assert result["status"] == "fail"
+    regions = result["automated_checks"]["appearance"]["regions"]
+    assert any(
+        r["max_channel_delta"] <= 12 and "perceptual_color_drift" in r["issues"] for r in regions
+    )

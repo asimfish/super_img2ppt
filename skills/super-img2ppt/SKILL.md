@@ -126,7 +126,9 @@ Use parallel page work only if it is separately authorized and supported by the 
 Tagged input and raster asset colors are converted to sRGB; never copy wide-gamut channel
 values as sRGB or compensate with a global saturation boost. Untagged RGB assumes sRGB.
 Default faithful builds automatically screen flat source patches; this sparse check is not
-whole-figure acceptance. Add explicit plans for semantic colors, curves, text and gradients.
+whole-figure acceptance. RGB and perceptual ΔEOK limits both apply; use signed lightness
+and chroma findings to diagnose a lighter/duller result, without globally boosting saturation.
+Add explicit plans for semantic colors, curves, text and gradients.
 Use `--appearance-mode redesign` only when the user requested recoloring, with documented
 target colors; it is not a workaround for faithful color failures.
 
