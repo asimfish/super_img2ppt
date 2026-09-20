@@ -7,7 +7,7 @@
 **Image → Editable PPTX · SVG · Scene JSON**
 
 [![Verify](https://github.com/asimfish/super_img2ppt/actions/workflows/verify.yml/badge.svg)](https://github.com/asimfish/super_img2ppt/actions/workflows/verify.yml)
-![Version](https://img.shields.io/badge/version-0.3.7-2563eb)
+![Version](https://img.shields.io/badge/version-0.3.15-2563eb)
 ![Python](https://img.shields.io/badge/python-3.11%2B-3776AB)
 [![License](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 

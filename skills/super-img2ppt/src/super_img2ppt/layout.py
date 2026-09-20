@@ -215,14 +215,18 @@ def layout_scene(scene: dict, catalog: FontCatalog) -> dict[tuple[str, str], Tex
             if "font_group" in element:
                 groups.setdefault(element["font_group"], []).append((slide, element))
     for members in groups.values():
-        strict_members = [e for _, e in members if e.get("fit", "strict") == "strict"]
-        factor = 1 if strict_members else min(results[s["id"], e["id"]].scale for s, e in members)
-        min_factor = max(
-            e.get("min_font_size", e["font_size"] * 0.85) / e["font_size"] for _, e in members
+        # A group represents one semantic type scale (for example, all panel
+        # labels).  Sharing only the old scale factor preserved small source
+        # measurement differences such as 9.3 vs 9.5 px.  Pick one absolute
+        # resulting size instead. The smallest fitted member is the safest common
+        # size; it avoids enlarging text that already needed to shrink. This explicit
+        # semantic group contract takes precedence over an individual strict fit.
+        target_size = min(
+            results[slide["id"], element["id"]].effective_font_size for slide, element in members
         )
-        factor = max(factor, min_factor)
         for slide, element in members:
-            results[slide["id"], element["id"]] = layout_at(element, catalog, factor)
+            scale = target_size / element["font_size"]
+            results[slide["id"], element["id"]] = layout_at(element, catalog, scale)
     return results
 
 

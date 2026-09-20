@@ -54,7 +54,7 @@ def test_explicit_blank_lines_and_mixed_runs_survive(fonts):
     assert result.lines[0].fragments[-1].size == 40
 
 
-def test_font_group_shrinks_together_and_strict_member_blocks_reflow(scene, fonts):
+def test_font_group_shrinks_together_and_normalizes_strict_peers(scene, fonts):
     first = scene["slides"][0]["elements"][0]
     first.update(
         text="WWWWWW",
@@ -71,8 +71,36 @@ def test_font_group_shrinks_together_and_strict_member_blocks_reflow(scene, font
     assert result["page_001", "title"].scale == result["page_001", "second"].scale
     second["fit"] = "strict"
     result = layout_scene(scene, fonts)
-    assert result["page_001", "title"].scale == 1
-    assert not result["page_001", "title"].fits
+    assert result["page_001", "title"].effective_font_size < 40
+    assert result["page_001", "second"].effective_font_size == pytest.approx(
+        result["page_001", "title"].effective_font_size
+    )
+
+
+def test_font_group_normalizes_absolute_size_not_only_scale(scene, fonts):
+    elements = scene["slides"][0]["elements"]
+    elements[0].update(
+        text="Left label",
+        box=[60, 60, 300, 80],
+        font_size=9.3,
+        font_group="panel-label",
+        fit="shrink",
+    )
+    elements.append(
+        {
+            **elements[0],
+            "id": "right-label",
+            "text": "Right label",
+            "box": [400, 60, 300, 80],
+            "font_size": 9.5,
+        }
+    )
+    result = layout_scene(scene, fonts)
+    left = result["page_001", elements[0]["id"]]
+    right = result["page_001", "right-label"]
+    assert left.effective_font_size == pytest.approx(9.3)
+    assert right.effective_font_size == pytest.approx(9.3)
+    assert right.lines[0].fragments[0].size == pytest.approx(9.3)
 
 
 def test_unknown_font_substitution_is_recorded():

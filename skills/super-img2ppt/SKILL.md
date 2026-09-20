@@ -102,7 +102,11 @@ Use parallel page work only if it is separately authorized and supported by the 
   explicit Latin, East Asian and complex-script typefaces. Inspect `fonts.json` substitutions.
 - `fit: strict` is the default. `fit: shrink` permits reduction only down to `min_font_size`
   (default 85% of the requested size). Give same-level text a shared `font_group` to preserve
-  relative sizes. Do not lower minimums repeatedly just to make a failing layout pass.
+  one absolute final type size across panels and slides. Group normalization corrects small
+  source measurement differences (for example 9.3 versus 9.5); rich-text runs and formula
+  scripts retain their relative sizes. This explicit group contract takes precedence over an
+  individual strict fit so peers stay consistent; ungrouped strict text still reports overflow.
+  Do not lower minimums repeatedly just to make a failing layout pass.
 - Preserve manual line breaks and set `wrap: true` only when wrapping is intended. Rich text
   remains editable; rotated text uses `rotation` (see scene reference). If superscript,
   vertical writing, freeform geometry or effects
