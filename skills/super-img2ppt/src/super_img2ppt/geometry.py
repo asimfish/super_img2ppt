@@ -45,6 +45,80 @@ def strictly_convex(vertices):
     return True
 
 
+def _cross(a, b, c):
+    return (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0])
+
+
+def triangulate(vertices):
+    """Validate one simple contour and partition its actual interior for QA."""
+    points = [tuple(p) for p in vertices]
+    if len(set(points)) != len(points):
+        raise ValueError("Freeform vertices must be distinct")
+    # Remove redundant points, retaining backtracking edges for rejection below.
+    changed = True
+    while changed and len(points) > 3:
+        changed = False
+        for i, b in enumerate(points):
+            a, c = points[i - 1], points[(i + 1) % len(points)]
+            if abs(_cross(a, b, c)) <= 1e-12 and (
+                (b[0] - a[0]) * (c[0] - b[0]) + (b[1] - a[1]) * (c[1] - b[1]) > 0
+            ):
+                points.pop(i)
+                changed = True
+                break
+    edges = list(zip(points, points[1:] + points[:1], strict=True))
+    for i, (a, b) in enumerate(edges):
+        for j in range(i + 1, len(edges)):
+            if j == i + 1 or (i == 0 and j == len(edges) - 1):
+                continue
+            c, d = edges[j]
+            if (
+                max(min(a[0], b[0]), min(c[0], d[0]))
+                <= min(max(a[0], b[0]), max(c[0], d[0])) + 1e-12
+                and max(min(a[1], b[1]), min(c[1], d[1]))
+                <= min(max(a[1], b[1]), max(c[1], d[1])) + 1e-12
+                and _cross(a, b, c) * _cross(a, b, d) <= 1e-24
+                and _cross(c, d, a) * _cross(c, d, b) <= 1e-24
+            ):
+                raise ValueError("Freeform edges must not cross or touch")
+    signed = sum(a[0] * b[1] - b[0] * a[1] for a, b in edges)
+    if abs(signed) <= 1e-12:
+        raise ValueError("Freeform contour has zero area")
+    if signed < 0:
+        points.reverse()
+    triangles = []
+    while len(points) > 3:
+        for i, b in enumerate(points):
+            a, c = points[i - 1], points[(i + 1) % len(points)]
+            if _cross(a, b, c) <= 1e-12:
+                continue
+            other = [
+                p
+                for j, p in enumerate(points)
+                if j not in {i, (i - 1) % len(points), (i + 1) % len(points)}
+            ]
+            if any(
+                _cross(a, b, p) >= -1e-12
+                and _cross(b, c, p) >= -1e-12
+                and _cross(c, a, p) >= -1e-12
+                for p in other
+            ):
+                continue
+            triangles.append([a, b, c])
+            points.pop(i)
+            break
+        else:
+            raise ValueError("Freeform contour cannot be partitioned without changing geometry")
+    if _cross(*points) <= 1e-12:
+        raise ValueError("Freeform contour contains a degenerate edge")
+    return triangles + [points]
+
+
+def freeform_parts(element):
+    x, y, w, h = element["box"]
+    return [[(x + u * w, y + v * h) for u, v in part] for part in triangulate(element["vertices"])]
+
+
 def line_parts(element):
     (x1, y1), (x2, y2) = element["points"]
     length = math.hypot(x2 - x1, y2 - y1)

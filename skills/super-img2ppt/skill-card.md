@@ -1,6 +1,6 @@
 # Super Img2PPT capability card
 
-Owner: super_img2ppt contributors. Version: 0.3.15. Risk: scoped_change.
+Owner: super_img2ppt contributors. Version: 0.3.16. Risk: scoped_change.
 Canonical owner: this repository's `skills/super-img2ppt`.
 
 Reads: user-selected image/PDF/PPTX files; scene JSON and relative local assets; installed font
@@ -121,3 +121,17 @@ Rendered native-equation replacement also measures PDF glyph sizes and temporary
 formula view areas to calibrate the final OMML frame proportions. Content is retained;
 calibration remains review due to possible overlapping glyphs, font substitution and viewer
 differences. Additional headless conversions are bounded and use isolated profiles.
+
+## v0.3.16 vector and palette boundary
+
+Native freeforms extend the scene to one simple closed concave contour (256 vertices,
+4096 per slide), validated for intersections and partitioned for actual-interior QA.
+Separate solid/stroke/gradient-stop alpha and zero-width outlines are explicit properties.
+Fully transparent vectors do not cause collisions; faint/outline geometry is conservative.
+
+trace-icon reads one selected local image/ROI/color; emits a single native shape, source
+hash, selected-mask count and overlay to a fresh directory. It rejects holes, separate
+islands, corner ambiguity and varying alpha; no semantic recognition or arbitrary SVG/XML
+parser. Input 200 MB/40 MP, ROI65536 pixels and boundary16384 edges, existing bounded
+simplifier. sample-color reads one explicit patch, emits normalized color evidence and
+refuses a mixed flat sample. No new dependency, executable, network, credential or host write.

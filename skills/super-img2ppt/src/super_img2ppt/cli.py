@@ -13,10 +13,11 @@ from pathlib import Path
 
 from PIL import Image
 
-from .appearance import automatic_plan, load_plan, verify_pdf
+from .appearance import automatic_plan, load_plan, sample_color_file, verify_pdf
 from .curves import trace_file
 from .export import write_pptx, write_svg
 from .fonts import FontCatalog
+from .icons import trace_icon_file
 from .layout import layout_scene
 from .mathtext import compose_file
 from .prepare import fresh_directory, json_write, prepare
@@ -292,6 +293,28 @@ def main(argv: list[str] | None = None) -> int:
     trace.add_argument("--stroke-width", type=float, default=1.5)
     trace.add_argument("--prefix", default="curve")
     trace.add_argument("--axis", choices=["x", "y"], default="x")
+    icon = commands.add_parser(
+        "trace-icon", help="Trace one isolated flat-color icon as a native freeform"
+    )
+    icon.add_argument("image", type=Path)
+    icon.add_argument("--roi", nargs=4, type=int, required=True, metavar=("X", "Y", "W", "H"))
+    icon.add_argument("--color", required=True)
+    icon.add_argument("--tolerance", type=int, default=64)
+    icon.add_argument("--simplify-px", type=float, default=0.25)
+    icon.add_argument("--prefix", default="icon")
+    icon.add_argument("--out", type=Path, required=True)
+    color = commands.add_parser(
+        "sample-color", help="Measure an explicit source color patch before scene authoring"
+    )
+    color.add_argument("image", type=Path)
+    color.add_argument("--roi", nargs=4, type=int, required=True, metavar=("X", "Y", "W", "H"))
+    color.add_argument("--kind", choices=["solid", "ink"], default="solid")
+    color.add_argument(
+        "--background",
+        default="#FFFFFF",
+        help="Background used to separate ink in an opaque normalized source",
+    )
+    color.add_argument("--out", type=Path, required=True)
     math_cmd = commands.add_parser(
         "compose-math", help="Place styled formula parts on explicit source baselines"
     )
@@ -403,6 +426,20 @@ def main(argv: list[str] | None = None) -> int:
                 stroke_width=args.stroke_width,
                 prefix=args.prefix,
                 axis=args.axis,
+            )
+        elif args.command == "trace-icon":
+            result = trace_icon_file(
+                args.image,
+                args.out,
+                roi=args.roi,
+                color=args.color,
+                tolerance=args.tolerance,
+                simplify_px=args.simplify_px,
+                prefix=args.prefix,
+            )
+        elif args.command == "sample-color":
+            result = sample_color_file(
+                args.image, args.out, roi=args.roi, kind=args.kind, background=args.background
             )
         elif args.command == "build":
             result = build(

@@ -3,9 +3,11 @@
 import ast
 import json
 import re
+import tomllib
 from pathlib import Path
 
 import yaml
+from super_img2ppt import __version__
 from super_img2ppt.scene import SCHEMA
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,6 +16,12 @@ SKILL = ROOT / "skills/super-img2ppt"
 
 def main():
     problems = []
+    version = tomllib.loads((SKILL / "pyproject.toml").read_text())["project"]["version"]
+    if (
+        __version__ != version
+        or tomllib.loads((ROOT / "pyproject.toml").read_text())["project"]["version"] != version
+    ):
+        problems.append("Runtime/workspace/package versions disagree")
     required = [
         "SKILL.md",
         "agents/openai.yaml",

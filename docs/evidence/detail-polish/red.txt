@@ -1,0 +1,100 @@
+F.FF                                                                     [100%]
+=================================== FAILURES ===================================
+___________ test_concave_freeform_checks_recess_and_real_solid_parts ___________
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 400, 'height': 300, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x108945c10>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-30/test_concave_freeform_checks_r0')
+
+    def test_concave_freeform_checks_recess_and_real_solid_parts(scene, fonts, tmp_path):
+>       spec = validate_scene(concave_scene(scene))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_vector_details.py:29:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 400, 'height': 300, 'reviewed': True, ...}]}
+
+    def validate_scene(scene: dict) -> dict:
+        _validate_finite(scene)
+        errors = sorted(Draft202012Validator(SCHEMA).iter_errors(scene), key=lambda e: str(e.path))
+        if errors:
+>           raise InputError(
+                "; ".join(f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5])
+            )
+E           super_img2ppt.scene.InputError: slides/0/elements/0/shape: 'freeform' is not one of ['rect', 'round_rect', 'ellipse', 'triangle', 'diamond', 'chevron', 'polygon']
+
+skills/super-img2ppt/src/super_img2ppt/scene.py:305: InputError
+------------------------------ Captured log setup ------------------------------
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:63 'created' timestamp out of range; ignoring top bytes
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:63 'created' timestamp out of range; ignoring top bytes
+WARNING  fontTools.ttLib.tables._h_e_a_d:_h_e_a_d.py:67 'created' timestamp seems very low; regarding as unix timestamp
+________ test_alpha_and_zero_width_export_as_explicit_native_properties ________
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 400, 'height': 300, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x108945c10>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-30/test_alpha_and_zero_width_expo0')
+
+    def test_alpha_and_zero_width_export_as_explicit_native_properties(scene, fonts, tmp_path):
+        spec = concave_scene(scene)
+        icon = spec['slides'][0]['elements'][0]
+        icon.update(fill_opacity=.5, stroke='#FF0000', stroke_width=0)
+>       validate_scene(spec)
+
+tests/test_vector_details.py:60:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 400, 'height': 300, 'reviewed': True, ...}]}
+
+    def validate_scene(scene: dict) -> dict:
+        _validate_finite(scene)
+        errors = sorted(Draft202012Validator(SCHEMA).iter_errors(scene), key=lambda e: str(e.path))
+        if errors:
+>           raise InputError(
+                "; ".join(f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5])
+            )
+E           super_img2ppt.scene.InputError: slides/0/elements/0/shape: 'freeform' is not one of ['rect', 'round_rect', 'ellipse', 'triangle', 'diamond', 'chevron', 'polygon']; slides/0/elements/0: Additional properties are not allowed ('fill_opacity' was unexpected)
+
+skills/super-img2ppt/src/super_img2ppt/scene.py:305: InputError
+____________ test_actual_alpha_is_composited_over_underlying_color _____________
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 400, 'height': 300, 'reviewed': True, ...}]}
+fonts = <super_img2ppt.fonts.FontCatalog object at 0x108945c10>
+tmp_path = PosixPath('/private/var/folders/ld/nb8clbcn2_nbslzr9xxl4scw0000gn/T/pytest-of-liyufeng/pytest-30/test_actual_alpha_is_composite0')
+
+    @pytest.mark.render
+    @pytest.mark.skipif(shutil.which('soffice') is None, reason='LibreOffice not installed')
+    def test_actual_alpha_is_composited_over_underlying_color(scene, fonts, tmp_path):
+        spec = concave_scene(scene)
+        page = spec['slides'][0]
+        page['background'] = '#204060'
+        page['elements'][0].update(fill='#E0A020', fill_opacity=.5)
+>       validate_scene(spec)
+
+tests/test_vector_details.py:82:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+scene = {'version': 1, 'slides': [{'id': 'page_001', 'width': 400, 'height': 300, 'reviewed': True, ...}]}
+
+    def validate_scene(scene: dict) -> dict:
+        _validate_finite(scene)
+        errors = sorted(Draft202012Validator(SCHEMA).iter_errors(scene), key=lambda e: str(e.path))
+        if errors:
+>           raise InputError(
+                "; ".join(f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5])
+            )
+E           super_img2ppt.scene.InputError: slides/0/elements/0/shape: 'freeform' is not one of ['rect', 'round_rect', 'ellipse', 'triangle', 'diamond', 'chevron', 'polygon']; slides/0/elements/0: Additional properties are not allowed ('fill_opacity' was unexpected)
+
+skills/super-img2ppt/src/super_img2ppt/scene.py:305: InputError
+=========================== short test summary info ============================
+FAILED tests/test_vector_details.py::test_concave_freeform_checks_recess_and_real_solid_parts
+FAILED tests/test_vector_details.py::test_alpha_and_zero_width_export_as_explicit_native_properties
+FAILED tests/test_vector_details.py::test_actual_alpha_is_composited_over_underlying_color
+3 failed, 1 passed in 1.19s

@@ -31,11 +31,11 @@ size in PPTX equals `font_size * transform.scale * 72`.
 | Object | Required fields beyond `id`, `kind`, `z` | Useful optional fields |
 | --- | --- | --- |
 | text | `box`, `font_size`, exactly one of `text` or `runs` | `font_family`, `cjk_font_family`, `bold`, `italic`, `color`, `align`, `valign`, `padding`, `wrap`, `line_height`, `fit`, `min_font_size`, `font_group`, `rotation` |
-| shape | `box`, `shape` | `fill`, `stroke`, `stroke_width`, `radius`, `dash`, `vertices`, `gradient` |
-| line | `points: [[x1,y1],[x2,y2]]` | `stroke`, `stroke_width`, `arrow`, `arrow_head`, `dash` |
+| shape | `box`, `shape` | `fill`, `fill_opacity`, `stroke`, `stroke_opacity`, `stroke_width`, `radius`, `dash`, `vertices`, `gradient` |
+| line | `points: [[x1,y1],[x2,y2]]` | `stroke`, `stroke_opacity`, `stroke_width`, `arrow`, `arrow_head`, `dash` |
 | image | `box`, `path`, `provenance`, `contains_text` | `image_fit: contain/cover/stretch` |
 
-Shapes: `rect`, `round_rect`, `ellipse`, `triangle`, `diamond`, `chevron`, `polygon`. Colors: `#RRGGBB`.
+Shapes: `rect`, `round_rect`, `ellipse`, `triangle`, `diamond`, `chevron`, `polygon`, `freeform`. Colors: `#RRGGBB`.
 Missing/null fill or stroke means none for shapes; lines default to a 1 px dark stroke.
 Alignment: `left/center/right`; vertical alignment: `top/middle/bottom`.
 Padding order: `[top, right, bottom, left]`, default all zero. Line height defaults to 1.15 em
@@ -53,7 +53,7 @@ In v0.3, a shape can use `gradient` instead of a solid `fill`. For example:
 Use 2–16 ordered stops covering exactly 0–1. Stops must remain distinct after rounding to
 Office's 1/100000 position units. `vertical` runs top to bottom; `horizontal` left to right.
 Sample colors and stop positions from the source; do not invent chart values. PPTX and SVG
-both retain one editable gradient shape. Radial gradients, opacity and arbitrary gradient directions remain
+both retain one editable gradient shape. Radial gradients and arbitrary gradient directions remain
 unsupported. A sampled gradient approximates its source color map and still needs comparison.
 
 The v0.3 runtime also supports `shape: "polygon"` with `vertices`: 3–32 normalized `[u,v]`
@@ -65,6 +65,22 @@ self-crossing, duplicate or collinear vertices are rejected. Polygons export as 
 freeforms, with round stroke joins. They support fill, stroke, dash and text containers;
 collision and containment use the actual slanted footprint. Curves and polygon corner radii
 remain unsupported. Do not approximate an unsupported path with a misleading rectangle.
+
+In v0.3.16, `shape: "freeform"` supports one simple closed concave contour, with 3–256
+normalized `vertices` and at most 4096 freeform vertices per slide. Self-crossing/touching
+edges, duplicate vertices and zero-area contours are rejected. PPTX keeps one editable
+native freeform; SVG keeps one polygon. QA partitions the actual concave interior for
+collision and container checks; the empty recess is not filled by a bounding box.
+This does not extend the original convex `polygon` contract. Holes, compound contours,
+Bezier curves and freeform radii remain unsupported. See [vectors.md](vectors.md).
+
+`fill_opacity` and `stroke_opacity` are separate 0–1 values (omission means 1).
+Fill opacity requires a solid/gradient fill; stroke opacity requires a positive visible stroke.
+A gradient stop can additionally have `opacity`; its alpha is multiplied by `fill_opacity`.
+These remain native PPTX/SVG properties and composite against underlying objects.
+`stroke_width: 0` exports no stroke rather than an Office hairline. Fully transparent
+vectors do not create collision findings; nonzero alpha remains conservatively occupied.
+Geometry and source comparison still require review, including outline-only interiors.
 
 - `rotation`: text only, finite degrees between `-360` and `360`, clockwise in screen coordinates.
   The `box` is the **unrotated horizontal** text frame. Fit its text normally, then rotate about

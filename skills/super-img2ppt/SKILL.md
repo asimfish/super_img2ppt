@@ -65,6 +65,14 @@ installed working tool with a command-local PATH; do not alter global settings o
 4. Rebuild readable text as `text`/`runs`, simple geometry as native `shape`, and connectors
    as `line`. Slanted convex nodes can use `shape: "polygon"` and normalized `vertices`
    (see scene reference); continuous colorbars can use sampled `gradient` stops on one shape.
+   For simple concave icons and separate fill/stroke/gradient transparency, read
+   [vectors.md](references/vectors.md). `trace-icon` emits one native freeform from an
+   explicitly isolated flat-color silhouette. Keep disconnected, holed or varying-alpha
+   artwork as measured native parts or raster; do not silently discard its details.
+   Measure solid/ink source colors with `sample-color` before authoring the palette.
+   Reuse a verified color for repeated semantic blocks and retain the sampled ROIs/hashes.
+   Validate final composited colors against the actual source; do not treat a pale flattened
+   screenshot color as evidence of the underlying fill alpha.
    For visible chart curves, use [curves.md](references/curves.md) and `trace-curve` on an
    inspected ROI/color instead of guessing a sine, trend or sparse vertices. Explicit guide
    exclusions and short interpolated gaps require visual review; ambiguous crossings fail.

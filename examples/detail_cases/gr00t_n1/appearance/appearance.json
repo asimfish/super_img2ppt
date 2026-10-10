@@ -1,0 +1,1600 @@
+{
+  "status": "review",
+  "regions": [
+    {
+      "id": "auto_0_0_4",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          204,
+          148,
+          241
+        ],
+        "hsv_saturation": 0.3858921161825725,
+        "hsv_value": 0.9450980392156862,
+        "hex": "#CC94F1",
+        "ink_mass": 0.4196078431372549,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          204,
+          148,
+          241
+        ],
+        "hsv_saturation": 0.3858921161825725,
+        "hsv_value": 0.9450980392156862,
+        "hex": "#CC94F1",
+        "ink_mass": 0.4196078431372549,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        204,
+        148,
+        241
+      ],
+      "max_channel_delta": 0,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.7542423934770494,
+          0.09295031343819271,
+          -0.1069394387187107
+        ],
+        "actual_oklab": [
+          0.7542423934770494,
+          0.09295031343819271,
+          -0.1069394387187107
+        ],
+        "delta_e_ok": 0.0,
+        "lightness_change": 0.0,
+        "chroma_change": 0.0,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_1_4",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          204,
+          148,
+          241
+        ],
+        "hsv_saturation": 0.3858921161825725,
+        "hsv_value": 0.9450980392156862,
+        "hex": "#CC94F1",
+        "ink_mass": 0.4196078431372549,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          204,
+          148,
+          241
+        ],
+        "hsv_saturation": 0.3858921161825725,
+        "hsv_value": 0.9450980392156862,
+        "hex": "#CC94F1",
+        "ink_mass": 0.4196078431372549,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        204,
+        148,
+        241
+      ],
+      "max_channel_delta": 0,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.7542423934770494,
+          0.09295031343819271,
+          -0.1069394387187107
+        ],
+        "actual_oklab": [
+          0.7542423934770494,
+          0.09295031343819271,
+          -0.1069394387187107
+        ],
+        "delta_e_ok": 0.0,
+        "lightness_change": 0.0,
+        "chroma_change": 0.0,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_2_4",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "review",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          3,
+          101,
+          192
+        ],
+        "hsv_saturation": 0.984375,
+        "hsv_value": 0.7529411764705882,
+        "hex": "#0365C0",
+        "ink_mass": 0.9882352941176471,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "invalid",
+        "issue": "mixed_or_gradient_region",
+        "core_agreement": 0.8
+      },
+      "issues": [
+        "invalid_sampling_region"
+      ],
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_3_4",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          234,
+          211
+        ],
+        "hsv_saturation": 0.0982905982905983,
+        "hsv_value": 0.9176470588235294,
+        "hex": "#D9EAD3",
+        "ink_mass": 0.17254901960784313,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          235,
+          209
+        ],
+        "hsv_saturation": 0.1106382978723404,
+        "hsv_value": 0.9215686274509803,
+        "hex": "#D9EBD1",
+        "ink_mass": 0.1803921568627451,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        234,
+        211
+      ],
+      "max_channel_delta": 2,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.9181247023955361,
+          -0.026273610497532518,
+          0.02409721120913666
+        ],
+        "actual_oklab": [
+          0.9196707261557691,
+          -0.028459392883295964,
+          0.027556940591862644
+        ],
+        "delta_e_ok": 0.004374649872483061,
+        "lightness_change": 0.0015460237602329396,
+        "chroma_change": 0.0039638880779194405,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_3_5",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          234,
+          211
+        ],
+        "hsv_saturation": 0.0982905982905983,
+        "hsv_value": 0.9176470588235294,
+        "hex": "#D9EAD3",
+        "ink_mass": 0.17254901960784313,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          235,
+          209
+        ],
+        "hsv_saturation": 0.1106382978723404,
+        "hsv_value": 0.9215686274509803,
+        "hex": "#D9EBD1",
+        "ink_mass": 0.1803921568627451,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        234,
+        211
+      ],
+      "max_channel_delta": 2,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.9181247023955361,
+          -0.026273610497532518,
+          0.02409721120913666
+        ],
+        "actual_oklab": [
+          0.9196707261557691,
+          -0.028459392883295964,
+          0.027556940591862644
+        ],
+        "delta_e_ok": 0.004374649872483061,
+        "lightness_change": 0.0015460237602329396,
+        "chroma_change": 0.0039638880779194405,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_3_7",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        217,
+        217
+      ],
+      "max_channel_delta": 0,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "actual_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "delta_e_ok": 0.0,
+        "lightness_change": 0.0,
+        "chroma_change": 0.0,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_3_8",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        217,
+        217
+      ],
+      "max_channel_delta": 0,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "actual_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "delta_e_ok": 0.0,
+        "lightness_change": 0.0,
+        "chroma_change": 0.0,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_3_10",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        217,
+        217
+      ],
+      "max_channel_delta": 0,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "actual_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "delta_e_ok": 0.0,
+        "lightness_change": 0.0,
+        "chroma_change": 0.0,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_3_12",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          234,
+          211
+        ],
+        "hsv_saturation": 0.0982905982905983,
+        "hsv_value": 0.9176470588235294,
+        "hex": "#D9EAD3",
+        "ink_mass": 0.17254901960784313,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          235,
+          209
+        ],
+        "hsv_saturation": 0.1106382978723404,
+        "hsv_value": 0.9215686274509803,
+        "hex": "#D9EBD1",
+        "ink_mass": 0.1803921568627451,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        234,
+        211
+      ],
+      "max_channel_delta": 2,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.9181247023955361,
+          -0.026273610497532518,
+          0.02409721120913666
+        ],
+        "actual_oklab": [
+          0.9196707261557691,
+          -0.028459392883295964,
+          0.027556940591862644
+        ],
+        "delta_e_ok": 0.004374649872483061,
+        "lightness_change": 0.0015460237602329396,
+        "chroma_change": 0.0039638880779194405,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_4_4",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          234,
+          211
+        ],
+        "hsv_saturation": 0.0982905982905983,
+        "hsv_value": 0.9176470588235294,
+        "hex": "#D9EAD3",
+        "ink_mass": 0.17254901960784313,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          235,
+          209
+        ],
+        "hsv_saturation": 0.1106382978723404,
+        "hsv_value": 0.9215686274509803,
+        "hex": "#D9EBD1",
+        "ink_mass": 0.1803921568627451,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        234,
+        211
+      ],
+      "max_channel_delta": 2,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.9181247023955361,
+          -0.026273610497532518,
+          0.02409721120913666
+        ],
+        "actual_oklab": [
+          0.9196707261557691,
+          -0.028459392883295964,
+          0.027556940591862644
+        ],
+        "delta_e_ok": 0.004374649872483061,
+        "lightness_change": 0.0015460237602329396,
+        "chroma_change": 0.0039638880779194405,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_4_5",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          234,
+          211
+        ],
+        "hsv_saturation": 0.0982905982905983,
+        "hsv_value": 0.9176470588235294,
+        "hex": "#D9EAD3",
+        "ink_mass": 0.17254901960784313,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          235,
+          209
+        ],
+        "hsv_saturation": 0.1106382978723404,
+        "hsv_value": 0.9215686274509803,
+        "hex": "#D9EBD1",
+        "ink_mass": 0.1803921568627451,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        234,
+        211
+      ],
+      "max_channel_delta": 2,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.9181247023955361,
+          -0.026273610497532518,
+          0.02409721120913666
+        ],
+        "actual_oklab": [
+          0.9196707261557691,
+          -0.028459392883295964,
+          0.027556940591862644
+        ],
+        "delta_e_ok": 0.004374649872483061,
+        "lightness_change": 0.0015460237602329396,
+        "chroma_change": 0.0039638880779194405,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_4_7",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        217,
+        217
+      ],
+      "max_channel_delta": 0,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "actual_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "delta_e_ok": 0.0,
+        "lightness_change": 0.0,
+        "chroma_change": 0.0,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_4_8",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        217,
+        217
+      ],
+      "max_channel_delta": 0,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "actual_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "delta_e_ok": 0.0,
+        "lightness_change": 0.0,
+        "chroma_change": 0.0,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_4_10",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        217,
+        217
+      ],
+      "max_channel_delta": 0,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "actual_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "delta_e_ok": 0.0,
+        "lightness_change": 0.0,
+        "chroma_change": 0.0,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_4_12",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          234,
+          211
+        ],
+        "hsv_saturation": 0.0982905982905983,
+        "hsv_value": 0.9176470588235294,
+        "hex": "#D9EAD3",
+        "ink_mass": 0.17254901960784313,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          235,
+          209
+        ],
+        "hsv_saturation": 0.1106382978723404,
+        "hsv_value": 0.9215686274509803,
+        "hex": "#D9EBD1",
+        "ink_mass": 0.1803921568627451,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        234,
+        211
+      ],
+      "max_channel_delta": 2,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.9181247023955361,
+          -0.026273610497532518,
+          0.02409721120913666
+        ],
+        "actual_oklab": [
+          0.9196707261557691,
+          -0.028459392883295964,
+          0.027556940591862644
+        ],
+        "delta_e_ok": 0.004374649872483061,
+        "lightness_change": 0.0015460237602329396,
+        "chroma_change": 0.0039638880779194405,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_5_4",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          234,
+          211
+        ],
+        "hsv_saturation": 0.0982905982905983,
+        "hsv_value": 0.9176470588235294,
+        "hex": "#D9EAD3",
+        "ink_mass": 0.17254901960784313,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          235,
+          209
+        ],
+        "hsv_saturation": 0.1106382978723404,
+        "hsv_value": 0.9215686274509803,
+        "hex": "#D9EBD1",
+        "ink_mass": 0.1803921568627451,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        234,
+        211
+      ],
+      "max_channel_delta": 2,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.9181247023955361,
+          -0.026273610497532518,
+          0.02409721120913666
+        ],
+        "actual_oklab": [
+          0.9196707261557691,
+          -0.028459392883295964,
+          0.027556940591862644
+        ],
+        "delta_e_ok": 0.004374649872483061,
+        "lightness_change": 0.0015460237602329396,
+        "chroma_change": 0.0039638880779194405,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_5_5",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          234,
+          211
+        ],
+        "hsv_saturation": 0.0982905982905983,
+        "hsv_value": 0.9176470588235294,
+        "hex": "#D9EAD3",
+        "ink_mass": 0.17254901960784313,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          235,
+          209
+        ],
+        "hsv_saturation": 0.1106382978723404,
+        "hsv_value": 0.9215686274509803,
+        "hex": "#D9EBD1",
+        "ink_mass": 0.1803921568627451,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        234,
+        211
+      ],
+      "max_channel_delta": 2,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.9181247023955361,
+          -0.026273610497532518,
+          0.02409721120913666
+        ],
+        "actual_oklab": [
+          0.9196707261557691,
+          -0.028459392883295964,
+          0.027556940591862644
+        ],
+        "delta_e_ok": 0.004374649872483061,
+        "lightness_change": 0.0015460237602329396,
+        "chroma_change": 0.0039638880779194405,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_5_7",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        217,
+        217
+      ],
+      "max_channel_delta": 0,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "actual_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "delta_e_ok": 0.0,
+        "lightness_change": 0.0,
+        "chroma_change": 0.0,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_5_8",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        217,
+        217
+      ],
+      "max_channel_delta": 0,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "actual_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "delta_e_ok": 0.0,
+        "lightness_change": 0.0,
+        "chroma_change": 0.0,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_5_10",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        217,
+        217
+      ],
+      "max_channel_delta": 0,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "actual_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "delta_e_ok": 0.0,
+        "lightness_change": 0.0,
+        "chroma_change": 0.0,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_5_12",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          234,
+          211
+        ],
+        "hsv_saturation": 0.0982905982905983,
+        "hsv_value": 0.9176470588235294,
+        "hex": "#D9EAD3",
+        "ink_mass": 0.17254901960784313,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          235,
+          209
+        ],
+        "hsv_saturation": 0.1106382978723404,
+        "hsv_value": 0.9215686274509803,
+        "hex": "#D9EBD1",
+        "ink_mass": 0.1803921568627451,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        234,
+        211
+      ],
+      "max_channel_delta": 2,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.9181247023955361,
+          -0.026273610497532518,
+          0.02409721120913666
+        ],
+        "actual_oklab": [
+          0.9196707261557691,
+          -0.028459392883295964,
+          0.027556940591862644
+        ],
+        "delta_e_ok": 0.004374649872483061,
+        "lightness_change": 0.0015460237602329396,
+        "chroma_change": 0.0039638880779194405,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_6_4",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          234,
+          211
+        ],
+        "hsv_saturation": 0.0982905982905983,
+        "hsv_value": 0.9176470588235294,
+        "hex": "#D9EAD3",
+        "ink_mass": 0.17254901960784313,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          235,
+          209
+        ],
+        "hsv_saturation": 0.1106382978723404,
+        "hsv_value": 0.9215686274509803,
+        "hex": "#D9EBD1",
+        "ink_mass": 0.1803921568627451,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        234,
+        211
+      ],
+      "max_channel_delta": 2,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.9181247023955361,
+          -0.026273610497532518,
+          0.02409721120913666
+        ],
+        "actual_oklab": [
+          0.9196707261557691,
+          -0.028459392883295964,
+          0.027556940591862644
+        ],
+        "delta_e_ok": 0.004374649872483061,
+        "lightness_change": 0.0015460237602329396,
+        "chroma_change": 0.0039638880779194405,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_6_5",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          234,
+          211
+        ],
+        "hsv_saturation": 0.0982905982905983,
+        "hsv_value": 0.9176470588235294,
+        "hex": "#D9EAD3",
+        "ink_mass": 0.17254901960784313,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          235,
+          209
+        ],
+        "hsv_saturation": 0.1106382978723404,
+        "hsv_value": 0.9215686274509803,
+        "hex": "#D9EBD1",
+        "ink_mass": 0.1803921568627451,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        234,
+        211
+      ],
+      "max_channel_delta": 2,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.9181247023955361,
+          -0.026273610497532518,
+          0.02409721120913666
+        ],
+        "actual_oklab": [
+          0.9196707261557691,
+          -0.028459392883295964,
+          0.027556940591862644
+        ],
+        "delta_e_ok": 0.004374649872483061,
+        "lightness_change": 0.0015460237602329396,
+        "chroma_change": 0.0039638880779194405,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_6_7",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        217,
+        217
+      ],
+      "max_channel_delta": 0,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "actual_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "delta_e_ok": 0.0,
+        "lightness_change": 0.0,
+        "chroma_change": 0.0,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_6_8",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        217,
+        217
+      ],
+      "max_channel_delta": 0,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "actual_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "delta_e_ok": 0.0,
+        "lightness_change": 0.0,
+        "chroma_change": 0.0,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_6_10",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          217,
+          217
+        ],
+        "hsv_saturation": 0.0,
+        "hsv_value": 0.8509803921568627,
+        "hex": "#D9D9D9",
+        "ink_mass": 0.14901960784313725,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        217,
+        217
+      ],
+      "max_channel_delta": 0,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "actual_oklab": [
+          0.8853053082647974,
+          7.166783833056911e-11,
+          3.299878847951021e-08
+        ],
+        "delta_e_ok": 0.0,
+        "lightness_change": 0.0,
+        "chroma_change": 0.0,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    },
+    {
+      "id": "auto_0_6_12",
+      "slide": "page_001",
+      "mode": "faithful",
+      "status": "pass",
+      "source": {
+        "status": "measured",
+        "rgb": [
+          217,
+          234,
+          211
+        ],
+        "hsv_saturation": 0.0982905982905983,
+        "hsv_value": 0.9176470588235294,
+        "hex": "#D9EAD3",
+        "ink_mass": 0.17254901960784313,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "actual": {
+        "status": "measured",
+        "rgb": [
+          217,
+          235,
+          209
+        ],
+        "hsv_saturation": 0.1106382978723404,
+        "hsv_value": 0.9215686274509803,
+        "hex": "#D9EBD1",
+        "ink_mass": 0.1803921568627451,
+        "core_agreement": 1.0,
+        "pixels": 25
+      },
+      "issues": [],
+      "expected_rgb": [
+        217,
+        234,
+        211
+      ],
+      "max_channel_delta": 2,
+      "channel_tolerance": 12,
+      "perceptual": {
+        "metric": "delta_e_ok",
+        "expected_oklab": [
+          0.9181247023955361,
+          -0.026273610497532518,
+          0.02409721120913666
+        ],
+        "actual_oklab": [
+          0.9196707261557691,
+          -0.028459392883295964,
+          0.027556940591862644
+        ],
+        "delta_e_ok": 0.004374649872483061,
+        "lightness_change": 0.0015460237602329396,
+        "chroma_change": 0.0039638880779194405,
+        "tolerance": 0.02
+      },
+      "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a"
+    }
+  ],
+  "visual_review": "required",
+  "scope": "Explicit isolated regions only; not full-page color or aesthetic acceptance",
+  "pdf_sha256": "9d59851fc385ae9afb1a81ef6ad5b0284ef86ee91511e62671d40b3e58aafd6c",
+  "uncovered_slides": [],
+  "selection": "automatic_flat_grid",
+  "limits": "Sparse flat-color screening, not full-page or ink-density acceptance"
+}

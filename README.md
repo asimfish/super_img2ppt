@@ -7,7 +7,7 @@
 **Image → Editable PPTX · SVG · Scene JSON**
 
 [![Verify](https://github.com/asimfish/super_img2ppt/actions/workflows/verify.yml/badge.svg)](https://github.com/asimfish/super_img2ppt/actions/workflows/verify.yml)
-![Version](https://img.shields.io/badge/version-0.3.15-2563eb)
+![Version](https://img.shields.io/badge/version-0.3.16-2563eb)
 ![Python](https://img.shields.io/badge/python-3.11%2B-3776AB)
 [![License](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 
@@ -348,6 +348,38 @@ super-img2ppt build scene.json --appearance-plan appearance-plan.json --out buil
 0.3.12 补充 **感知色差 ΔEOK**：即使 RGB 单通道变化没有超过旧容差，也会检查颜色的感知差异，并报告变浅、变深及色彩浓度变化。默认阈值 0.02 是工程筛查标准，仍需人工复核。[漏检回归证据](docs/evidence/perceptual-color/README.md)
 
 输入与嵌入素材的 ICC 色彩配置现在统一转换为 sRGB，避免宽色域数值被直接当作 sRGB 而变淡或偏色；素材透明度保留。未标记的 RGB 按 sRGB 解释，不做全局饱和度增强。损坏的 ICC 和缺少配置的 CMYK/LAB 会报错。[色彩管理回归证据](docs/evidence/color-management/README.md)
+
+## 形状、图标和透明度细节
+
+**0.3.16** 补充原生凹形轮廓、独立的填充/描边透明度及渐变停止点透明度。简单单色图标可以转成一个可编辑的自由形状，便于单独移动、改色和调整轮廓；零宽描边明确导出为无描边。
+
+```bash
+super-img2ppt sample-color source.png --roi 534 31 5 5 --out color_sample
+super-img2ppt trace-icon source.png --roi 1277 196 59 60 --color '#4295FF' \
+  --tolerance 64 --simplify-px 0.75 --out icon_trace
+```
+
+GR00T N1 的真实雪花图标由 **18 根线段 → 1 个原生轮廓**，该局部掩码 IoU 从 **0.67 → 0.93**；单独移动并改为橙色后，其余 143 个叶对象保持一致。图中顺序为源图、旧重建、新重建。
+
+<p align="center"><img src="examples/detail_cases/icon-comparison.png" width="900" alt="GR00T 图标的源图、旧线段和新原生轮廓对照"></p>
+
+本轮还重测了四张完整复杂图，并修正 GR00T N1 的紫色 token 和 BLIP-2 的编码器蓝色。使用源图明确区域取色，保留颜色检查阈值；全图仍标为 `review`。
+
+| 实际案例 | 编辑文件 | 本轮记录 |
+| --- | --- | --- |
+| GR00T N1 · Figure 3 | [PPTX](examples/detail_cases/gr00t_n1/editable.pptx) | [移动、改色验证](examples/detail_cases/gr00t_n1/edit-demo/actual.png) |
+| Spatial-Mamba · Figure 4 | [PPTX](examples/detail_cases/spatial_mamba/editable.pptx) | [实际渲染](examples/detail_cases/spatial_mamba/actual.png) |
+| Cosmos Policy · Figure 2 | [PPTX](examples/detail_cases/cosmos_policy/editable.pptx) | [实际渲染](examples/detail_cases/cosmos_policy/actual.png) |
+| BLIP-2 · Figure 2 | [PPTX](examples/detail_cases/blip2/editable.pptx) | [实际渲染](examples/detail_cases/blip2/actual.png) |
+
+<details>
+<summary>查看四张完整图的源图与实际重建对照</summary>
+
+![复杂图实际渲染对照](examples/detail_cases/comparison.png)
+
+</details>
+
+低分辨率、多部分、带孔洞或透明度变化的图标仍需按语义拆解或保留独立素材；图标工具会明确拒绝无法完整描出的情况。[范围与用法](skills/super-img2ppt/references/vectors.md) · [案例、许可与指标](examples/detail_cases/README.md) · [回归证据](docs/evidence/detail-polish/README.md)
 
 ## 可选：语义重绘与样式美化
 

@@ -1,0 +1,29 @@
+[
+  {
+    "command": [
+      "-c",
+      "import super_img2ppt; from pathlib import Path; assert super_img2ppt.__version__=='0.3.16'; print(super_img2ppt.__file__); assert '/super-img2ppt/src/' in str(Path(super_img2ppt.__file__).resolve())"
+    ],
+    "returncode": 0
+  },
+  {
+    "command": [
+      "-m",
+      "super_img2ppt",
+      "trace-icon"
+    ],
+    "returncode": 0
+  },
+  {
+    "command": [
+      "-m",
+      "super_img2ppt",
+      "sample-color"
+    ],
+    "returncode": 0
+  },
+  {
+    "real_icon_vertices": 130,
+    "measured_source_color": "#CC94F1"
+  }
+]

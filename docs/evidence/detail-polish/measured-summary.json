@@ -1,0 +1,128 @@
+{
+  "gr00t_n1": {
+    "status": "review",
+    "source_dimensions": [
+      1891,
+      986
+    ],
+    "pdf_raster_dimensions": [
+      1891,
+      987
+    ],
+    "source_sha256": "8b71156a0bf31698170daef317cec8484c55556ea2fa5bd85a0ae66694a4c39a",
+    "pptx_sha256": "1271fcfab4647c3abd3050a5d487cbd53076544cbc5aa4a15894b8091032e826",
+    "appearance_regions": 27,
+    "appearance_failed_regions": 0,
+    "rendered_text_status": "review",
+    "native_counts": {
+      "AUTO_SHAPE (1)": 59,
+      "TEXT_BOX (17)": 43,
+      "LINE (9)": 29,
+      "FREEFORM (5)": 11,
+      "PICTURE (13)": 2
+    },
+    "limits": "Source-scale PDF raster, crop integer ceil-only canvas edge; no resize/registration. Sparse checks stay review."
+  },
+  "spatial_mamba": {
+    "status": "review",
+    "source_dimensions": [
+      1600,
+      624
+    ],
+    "pdf_raster_dimensions": [
+      1600,
+      624
+    ],
+    "source_sha256": "a9b3706ca9a29d791d225300922fb064bb2c6441d4f7a5684b3fd6aaa16f2541",
+    "pptx_sha256": "de0f98a510c2e15d93a7161dae5cc01589a3cfbd6794beed12de2ad2091040ff",
+    "appearance_regions": 21,
+    "appearance_failed_regions": 0,
+    "rendered_text_status": "pass",
+    "native_counts": {
+      "LINE (9)": 351,
+      "AUTO_SHAPE (1)": 129,
+      "FREEFORM (5)": 24,
+      "PICTURE (13)": 1,
+      "TEXT_BOX (17)": 39
+    },
+    "limits": "Source-scale PDF raster, crop integer ceil-only canvas edge; no resize/registration. Sparse checks stay review."
+  },
+  "cosmos_policy": {
+    "status": "review",
+    "source_dimensions": [
+      1195,
+      476
+    ],
+    "pdf_raster_dimensions": [
+      1195,
+      476
+    ],
+    "source_sha256": "302976e126e632477599a48edba30bb8e0632a7aa0d50dd753758b96b803a960",
+    "pptx_sha256": "7cd5ca0fbc57510460e6e439fecff9aaa0656ca2df3e61e9b549b705ecca25ad",
+    "appearance_regions": 48,
+    "appearance_failed_regions": 0,
+    "rendered_text_status": "pass",
+    "native_counts": {
+      "AUTO_SHAPE (1)": 6,
+      "TEXT_BOX (17)": 31,
+      "PICTURE (13)": 26,
+      "LINE (9)": 13,
+      "FREEFORM (5)": 6
+    },
+    "limits": "Source-scale PDF raster, crop integer ceil-only canvas edge; no resize/registration. Sparse checks stay review."
+  },
+  "blip2": {
+    "status": "review",
+    "source_dimensions": [
+      1464,
+      303
+    ],
+    "pdf_raster_dimensions": [
+      1464,
+      303
+    ],
+    "source_sha256": "ac829affd7b3cc5eff44cf91173dfa5994499e31d66a8848db44b45d9072a5a8",
+    "pptx_sha256": "a155dfdf04cae6c08492d0d212eb5051b1b68346f3f62638397f4290287dfd15",
+    "appearance_regions": 33,
+    "appearance_failed_regions": 0,
+    "rendered_text_status": "review",
+    "native_counts": {
+      "AUTO_SHAPE (1)": 70,
+      "FREEFORM (5)": 15,
+      "LINE (9)": 4,
+      "PICTURE (13)": 2,
+      "TEXT_BOX (17)": 48
+    },
+    "limits": "Source-scale PDF raster, crop integer ceil-only canvas edge; no resize/registration. Sparse checks stay review."
+  },
+  "gr00t_icon_edit": {
+    "moved_source_px": [
+      -65,
+      40
+    ],
+    "new_color": "#E97424",
+    "unrelated_native_leaves_xml_identical": true,
+    "unrelated_native_leaves": 143,
+    "original_native_icon_lines": 18,
+    "new_native_icon_objects": 1,
+    "freeform_vertices": 130,
+    "shape_type": "FREEFORM (5)",
+    "contains_image_blip": false,
+    "actual_edited_render_generated": true,
+    "limits": "Programmatic native edit and actual LibreOffice render; no PowerPoint/WPS UI claim.",
+    "vertex_count_includes_first_moveTo": true,
+    "actual_edited_orange_pixels": 583,
+    "actual_edited_orange_box": [
+      1220,
+      243,
+      1262,
+      289
+    ],
+    "expected_source_box": [
+      1220,
+      242,
+      42,
+      47
+    ]
+  }
+}

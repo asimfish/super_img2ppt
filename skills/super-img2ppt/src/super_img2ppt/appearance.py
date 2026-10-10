@@ -6,6 +6,7 @@ import colorsys
 import hashlib
 import json
 import math
+import re
 from collections import Counter
 from contextlib import closing
 
@@ -15,7 +16,7 @@ from PIL import Image
 
 from .color_difference import color_difference
 from .color_management import to_srgb
-from .prepare import json_write
+from .prepare import fresh_directory, json_write
 from .scene import COLOR, ID, InputError, _unique_pairs, safe_asset, slide_transform
 
 ROI = {
@@ -104,6 +105,45 @@ def load_plan(path, scene):
     return validate_plan(
         json.loads(path.read_text(encoding="utf-8"), object_pairs_hook=_unique_pairs), scene
     )
+
+
+def sample_color_file(path, out, *, roi, kind="solid", background="#FFFFFF"):
+    """Measure a user-selected source patch before authoring its scene color."""
+    if path.stat().st_size > 200_000_000:
+        raise InputError("Color source exceeds 200 MB")
+    if (
+        not isinstance(roi, (list, tuple))
+        or len(roi) != 4
+        or any(type(n) is not int for n in roi)
+        or min(roi[:2]) < 0
+    ):
+        raise InputError("Color ROI must contain nonnegative integer x y and integer width height")
+    if (
+        kind not in {"solid", "ink"}
+        or not isinstance(background, str)
+        or not re.fullmatch(r"#[0-9a-fA-F]{6}", background)
+    ):
+        raise InputError("Color sampling requires solid/ink mode and a #RRGGBB background")
+    with Image.open(path) as image:
+        if image.width * image.height > 40_000_000:
+            raise InputError("Color source exceeds 40 million pixels")
+        normalized, management = to_srgb(image, preserve_alpha=False)
+        measured = sample(normalized, roi, kind, background)
+        patch = normalized.crop(_box(roi, normalized.size))
+    fresh_directory(out)
+    result = {
+        "status": "review" if measured["status"] == "measured" else "fail",
+        "source_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+        "roi": list(roi),
+        "kind": kind,
+        "background": background,
+        "measurement": measured,
+        "color_management": management,
+        "limits": "One explicit source patch; gradients/mixed samples are invalid. Verify the actual PPTX render.",
+    }
+    patch.save(out / "sample.png")
+    json_write(out / "color.json", result)
+    return result
 
 
 def _box(roi, size):

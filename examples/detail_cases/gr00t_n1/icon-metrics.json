@@ -1,0 +1,106 @@
+{
+  "baseline": {
+    "status": "review",
+    "roi": [
+      1277,
+      196,
+      59,
+      60
+    ],
+    "canvas_size": [
+      1891,
+      986
+    ],
+    "mask_color": "#4295FF",
+    "mask_tolerance": 64,
+    "mask_rule": "Every RGB channel differs from the selected color by at most tolerance",
+    "source_pixels": 701,
+    "actual_pixels": 611,
+    "source_ink_box": [
+      1285,
+      202,
+      1327,
+      249
+    ],
+    "actual_ink_box": [
+      1285,
+      202,
+      1327,
+      250
+    ],
+    "source_touches_roi": [],
+    "actual_touches_roi": [],
+    "edge_metrics_valid": true,
+    "edge_delta_px": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "mask_iou": 0.6713375796178344,
+    "issues": [],
+    "limits": [
+      "ROI and color must isolate the intended ink; nearby same-color geometry can contaminate the mask.",
+      "Boundary contact invalidates complete-ink edges; any IoU still describes only the cropped mask.",
+      "Equal extrema do not prove equal glyphs; no aggregate or automatic source-fidelity pass.",
+      "Caller must supply the actual PPTX render; this command cannot attest its origin."
+    ],
+    "raster_size": [
+      1891,
+      987
+    ],
+    "canvas_crop": "Remove the PDF rasterizer ceil-only final row; no resize or registration."
+  },
+  "candidate": {
+    "status": "review",
+    "roi": [
+      1277,
+      196,
+      59,
+      60
+    ],
+    "canvas_size": [
+      1891,
+      986
+    ],
+    "mask_color": "#4295FF",
+    "mask_tolerance": 64,
+    "mask_rule": "Every RGB channel differs from the selected color by at most tolerance",
+    "source_pixels": 701,
+    "actual_pixels": 671,
+    "source_ink_box": [
+      1285,
+      202,
+      1327,
+      249
+    ],
+    "actual_ink_box": [
+      1285,
+      202,
+      1327,
+      249
+    ],
+    "source_touches_roi": [],
+    "actual_touches_roi": [],
+    "edge_metrics_valid": true,
+    "edge_delta_px": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "mask_iou": 0.9269662921348315,
+    "issues": [],
+    "limits": [
+      "ROI and color must isolate the intended ink; nearby same-color geometry can contaminate the mask.",
+      "Boundary contact invalidates complete-ink edges; any IoU still describes only the cropped mask.",
+      "Equal extrema do not prove equal glyphs; no aggregate or automatic source-fidelity pass.",
+      "Caller must supply the actual PPTX render; this command cannot attest its origin."
+    ],
+    "raster_size": [
+      1891,
+      987
+    ],
+    "canvas_crop": "Remove the PDF rasterizer ceil-only final row; no resize or registration."
+  }
+}

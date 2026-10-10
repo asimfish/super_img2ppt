@@ -11,7 +11,7 @@ from pathlib import Path
 
 from jsonschema import Draft202012Validator
 
-from .geometry import strictly_convex
+from .geometry import strictly_convex, triangulate
 
 
 class InputError(ValueError):
@@ -21,6 +21,7 @@ class InputError(ValueError):
 NUM = {"type": "number", "minimum": -100000, "maximum": 100000}
 POS = {"type": "number", "exclusiveMinimum": 0, "maximum": 100000}
 COLOR = {"type": "string", "pattern": "^#[0-9a-fA-F]{6}$"}
+OPACITY = {"type": "number", "minimum": 0, "maximum": 1}
 ID = {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,99}$"}
 BOX = {"type": "array", "prefixItems": [NUM, NUM, POS, POS], "minItems": 4, "maxItems": 4}
 POINT = {"type": "array", "items": NUM, "minItems": 2, "maxItems": 2}
@@ -72,12 +73,21 @@ ELEMENT = {
         "min_font_size": {"type": "number", "minimum": 1, "maximum": 1000},
         "font_group": ID,
         "shape": {
-            "enum": ["rect", "round_rect", "ellipse", "triangle", "diamond", "chevron", "polygon"]
+            "enum": [
+                "rect",
+                "round_rect",
+                "ellipse",
+                "triangle",
+                "diamond",
+                "chevron",
+                "polygon",
+                "freeform",
+            ]
         },
         "vertices": {
             "type": "array",
             "minItems": 3,
-            "maxItems": 32,
+            "maxItems": 256,
             "items": {
                 "type": "array",
                 "minItems": 2,
@@ -86,6 +96,7 @@ ELEMENT = {
             },
         },
         "fill": {"anyOf": [COLOR, {"type": "null"}]},
+        "fill_opacity": OPACITY,
         "gradient": {
             "type": "object",
             "required": ["direction", "stops"],
@@ -101,6 +112,7 @@ ELEMENT = {
                         "properties": {
                             "offset": {"type": "number", "minimum": 0, "maximum": 1},
                             "color": COLOR,
+                            "opacity": OPACITY,
                         },
                         "additionalProperties": False,
                     },
@@ -109,6 +121,7 @@ ELEMENT = {
             "additionalProperties": False,
         },
         "stroke": {"anyOf": [COLOR, {"type": "null"}]},
+        "stroke_opacity": OPACITY,
         "stroke_width": {"type": "number", "minimum": 0, "maximum": 100},
         "line_cap": {"enum": ["round", "butt"]},
         "radius": {"type": "number", "minimum": 0, "maximum": 10000},
@@ -312,6 +325,15 @@ def validate_scene(scene: dict) -> dict:
         slide_ids.add(slide["id"])
         if slide["width"] * slide["height"] > 40_000_000:
             raise InputError("A slide may contain at most 40 million pixels")
+        if (
+            sum(
+                len(e.get("vertices", []))
+                for e in slide["elements"]
+                if e.get("shape") == "freeform"
+            )
+            > 4096
+        ):
+            raise InputError("A slide may contain at most 4096 freeform vertices")
         elements = {e["id"]: e for e in slide["elements"]}
         if len(elements) != len(slide["elements"]):
             raise InputError(f"Duplicate element id in {slide['id']}")
@@ -337,7 +359,9 @@ def validate_scene(scene: dict) -> dict:
                     "box",
                     "shape",
                     "fill",
+                    "fill_opacity",
                     "stroke",
+                    "stroke_opacity",
                     "stroke_width",
                     "radius",
                     "dash",
@@ -348,6 +372,7 @@ def validate_scene(scene: dict) -> dict:
                 "line": {
                     "points",
                     "stroke",
+                    "stroke_opacity",
                     "stroke_width",
                     "arrow",
                     "arrow_head",
@@ -386,14 +411,36 @@ def validate_scene(scene: dict) -> dict:
             if element["kind"] == "line" and element["points"][0] == element["points"][1]:
                 raise InputError(f"{element['id']}: zero-length line")
             if element.get("shape") == "polygon":
-                if "vertices" not in element or not strictly_convex(element["vertices"]):
+                if (
+                    "vertices" not in element
+                    or len(element["vertices"]) > 32
+                    or not strictly_convex(element["vertices"])
+                ):
                     raise InputError(
                         f"{element['id']}: polygon requires 3–32 distinct strictly convex vertices in perimeter order"
                     )
                 if "radius" in element:
                     raise InputError(f"{element['id']}: polygon does not support corner radius")
+            elif element.get("shape") == "freeform":
+                if "vertices" not in element or "radius" in element:
+                    raise InputError(
+                        f"{element['id']}: freeform requires vertices and no corner radius"
+                    )
+                try:
+                    triangulate(element["vertices"])
+                except ValueError as exc:
+                    raise InputError(f"{element['id']}: {exc}") from exc
             elif "vertices" in element:
-                raise InputError(f"{element['id']}: vertices require shape=polygon")
+                raise InputError(f"{element['id']}: vertices require shape=polygon or freeform")
+            if "fill_opacity" in element and not element.get("fill") and "gradient" not in element:
+                raise InputError(f"{element['id']}: fill opacity requires a solid or gradient fill")
+            if "stroke_opacity" in element and (
+                not element.get("stroke", "#111827" if element["kind"] == "line" else None)
+                or element.get("stroke_width", 1) <= 0
+            ):
+                raise InputError(
+                    f"{element['id']}: stroke opacity requires a positive visible stroke"
+                )
             if "gradient" in element:
                 offsets = [stop["offset"] for stop in element["gradient"]["stops"]]
                 if (

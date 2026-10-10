@@ -34,6 +34,13 @@ def _color(color: str) -> RGBColor:
     return RGBColor.from_string(color.removeprefix("#"))
 
 
+def _alpha(color_node, opacity):
+    if opacity != 1:
+        alpha = OxmlElement("a:alpha")
+        alpha.set("val", str(round(opacity * 100000)))
+        color_node.append(alpha)
+
+
 def _set_font(font, fragment, point_scale):
     font.name = east_asian_name(fragment.face)
     font.size = Pt(fragment.size * point_scale)
@@ -66,6 +73,7 @@ def _fill_and_line(shape, element: dict, point_scale: float):
             gs.set("pos", str(round(stop["offset"] * 100000)))
             color = OxmlElement("a:srgbClr")
             color.set("val", stop["color"].removeprefix("#"))
+            _alpha(color, stop.get("opacity", 1) * element.get("fill_opacity", 1))
             gs.append(color)
             stops.append(gs)
         grad.append(stops)
@@ -76,11 +84,19 @@ def _fill_and_line(shape, element: dict, point_scale: float):
     elif element.get("fill") is not None:
         shape.fill.solid()
         shape.fill.fore_color.rgb = _color(element["fill"])
+        _alpha(
+            shape._element.xpath("./p:spPr/a:solidFill/a:srgbClr")[0],
+            element.get("fill_opacity", 1),
+        )
     else:
         shape.fill.background()
-    if element.get("stroke") is not None:
+    if element.get("stroke") is not None and element.get("stroke_width", 1) > 0:
         shape.line.color.rgb = _color(element["stroke"])
         shape.line.width = Pt(element.get("stroke_width", 1) * point_scale)
+        _alpha(
+            shape._element.xpath("./p:spPr/a:ln/a:solidFill/a:srgbClr")[0],
+            element.get("stroke_opacity", 1),
+        )
         _dash(shape, element)
     else:
         shape.line.fill.background()
@@ -135,6 +151,10 @@ def write_pptx(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pa
                     shape = builder.convert_to_shape(Inches(tx.x), Inches(tx.y))
                     shape.fill.solid()
                     shape.fill.fore_color.rgb = _color(element.get("stroke", "#111827"))
+                    _alpha(
+                        shape._element.xpath("./p:spPr/a:solidFill/a:srgbClr")[0],
+                        element.get("stroke_opacity", 1),
+                    )
                     shape.line.fill.background()
                 else:
                     p1, p2 = [tx.point(*point) for point in element["points"]]
@@ -147,6 +167,12 @@ def write_pptx(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pa
                     )
                     shape.line.color.rgb = _color(element.get("stroke", "#111827"))
                     shape.line.width = Pt(element.get("stroke_width", 1) * point_scale)
+                    _alpha(
+                        shape._element.xpath("./p:spPr/a:ln/a:solidFill/a:srgbClr")[0],
+                        element.get("stroke_opacity", 1),
+                    )
+                    if element.get("stroke_width", 1) == 0:
+                        shape.line.fill.background()
                     _dash(shape, element)
                     if "line_cap" in element:
                         shape.line._get_or_add_ln().set(
@@ -194,7 +220,7 @@ def write_pptx(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pa
                             run.text = fragment.text
                             _set_font(run.font, fragment, point_scale)
                 elif kind == "shape":
-                    if element["shape"] == "polygon":
+                    if element["shape"] in {"polygon", "freeform"}:
                         points = [(px * 1000, py * 1000) for px, py in polygon_points(element)]
                         builder = slide.shapes.build_freeform(*points[0], scale=tx.scale * 914.4)
                         builder.add_line_segments(points[1:], close=True)
@@ -204,7 +230,7 @@ def write_pptx(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pa
                             SHAPES[element["shape"]], Inches(x), Inches(y), Inches(w), Inches(h)
                         )
                     _fill_and_line(shape, element, point_scale)
-                    if element["shape"] == "polygon":
+                    if element["shape"] in {"polygon", "freeform"}:
                         shape.line._get_or_add_ln().append(OxmlElement("a:round"))
                     if element["shape"] == "round_rect":
                         radius = element.get("radius", min(element["box"][2:]) * 0.12)
@@ -330,6 +356,7 @@ def write_svg(slide: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                     {
                         "points": " ".join(f"{x},{y}" for x, y in arrow_outline(element)),
                         "fill": element.get("stroke", "#111827"),
+                        "fill-opacity": str(element.get("stroke_opacity", 1)),
                     },
                 )
                 continue
@@ -339,8 +366,11 @@ def write_svg(slide: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                 "y1": str(y1),
                 "x2": str(x2),
                 "y2": str(y2),
-                "stroke": element.get("stroke", "#111827"),
+                "stroke": element.get("stroke", "#111827")
+                if element.get("stroke_width", 1) > 0
+                else "none",
                 "stroke-width": str(element.get("stroke_width", 1)),
+                "stroke-opacity": str(element.get("stroke_opacity", 1)),
             }
             if "line_cap" in element:
                 attrs["stroke-linecap"] = element["line_cap"]
@@ -360,7 +390,15 @@ def write_svg(slide: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                         "orient": "auto",
                     },
                 )
-                ET.SubElement(marker, "path", {"d": "M0,0 L6,3 L0,6 Z", "fill": attrs["stroke"]})
+                ET.SubElement(
+                    marker,
+                    "path",
+                    {
+                        "d": "M0,0 L6,3 L0,6 Z",
+                        "fill": attrs["stroke"],
+                        "fill-opacity": attrs["stroke-opacity"],
+                    },
+                )
                 attrs["marker-end"] = f"url(#{marker_id})"
             ET.SubElement(group, "line", attrs)
         else:
@@ -380,8 +418,12 @@ def write_svg(slide: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
             else:
                 style = {
                     "fill": element.get("fill") or "none",
-                    "stroke": element.get("stroke") or "none",
+                    "stroke": element.get("stroke")
+                    if element.get("stroke_width", 1) > 0 and element.get("stroke")
+                    else "none",
                     "stroke-width": str(element.get("stroke_width", 1)),
+                    "fill-opacity": str(element.get("fill_opacity", 1)),
+                    "stroke-opacity": str(element.get("stroke_opacity", 1)),
                 }
                 if "dash" in element:
                     style["stroke-dasharray"] = " ".join(map(str, element["dash"]))
@@ -403,7 +445,11 @@ def write_svg(slide: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                         ET.SubElement(
                             gradient,
                             "stop",
-                            {"offset": str(stop["offset"]), "stop-color": stop["color"]},
+                            {
+                                "offset": str(stop["offset"]),
+                                "stop-color": stop["color"],
+                                "stop-opacity": str(stop.get("opacity", 1)),
+                            },
                         )
                     style["fill"] = f"url(#{gid})"
                 name = element["shape"]
@@ -426,7 +472,7 @@ def write_svg(slide: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                         },
                     )
                 else:
-                    if name == "polygon":
+                    if name in {"polygon", "freeform"}:
                         points = polygon_points(element)
                         style["stroke-linejoin"] = "round"
                     elif name == "triangle":

@@ -300,13 +300,14 @@
                     "triangle",
                     "diamond",
                     "chevron",
-                    "polygon"
+                    "polygon",
+                    "freeform"
                   ]
                 },
                 "vertices": {
                   "type": "array",
                   "minItems": 3,
-                  "maxItems": 32,
+                  "maxItems": 256,
                   "items": {
                     "type": "array",
                     "minItems": 2,
@@ -328,6 +329,11 @@
                       "type": "null"
                     }
                   ]
+                },
+                "fill_opacity": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
                 },
                 "gradient": {
                   "type": "object",
@@ -361,6 +367,11 @@
                           "color": {
                             "type": "string",
                             "pattern": "^#[0-9a-fA-F]{6}$"
+                          },
+                          "opacity": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
                           }
                         },
                         "additionalProperties": false
@@ -379,6 +390,11 @@
                       "type": "null"
                     }
                   ]
+                },
+                "stroke_opacity": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
                 },
                 "stroke_width": {
                   "type": "number",

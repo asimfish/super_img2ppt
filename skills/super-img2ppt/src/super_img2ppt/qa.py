@@ -10,7 +10,14 @@ from pathlib import Path
 
 from PIL import Image, ImageChops, ImageDraw, ImageStat
 
-from .geometry import box_points, convex_hull, line_parts, polygon_points, rotate_points
+from .geometry import (
+    box_points,
+    convex_hull,
+    freeform_parts,
+    line_parts,
+    polygon_points,
+    rotate_points,
+)
 from .layout import TextLayout, text_ink_boxes, text_ink_mask
 from .scene import InputError, group_plan, safe_asset, text_content
 
@@ -22,6 +29,8 @@ def polygon(element: dict) -> list[tuple[float, float]]:
     shape = element.get("shape")
     if shape == "polygon":
         return polygon_points(element)
+    if shape == "freeform":
+        return convex_hull(polygon_points(element))
     if shape == "ellipse":
         return [
             (
@@ -35,6 +44,18 @@ def polygon(element: dict) -> list[tuple[float, float]]:
     if shape == "diamond":
         return [(x + w / 2, y), (x + w, y + h / 2), (x + w / 2, y + h), (x, y + h / 2)]
     return rotate_points(box_points(element["box"]), element)
+
+
+def visible_vector(element):
+    stroke = (
+        element.get("stroke", "#111827" if element["kind"] == "line" else None)
+        and element.get("stroke_width", 1) > 0
+        and element.get("stroke_opacity", 1) > 0
+    )
+    fill = element.get("fill") or (
+        "gradient" in element and any(s.get("opacity", 1) > 0 for s in element["gradient"]["stops"])
+    )
+    return bool(stroke or (fill and element.get("fill_opacity", 1) > 0))
 
 
 def area(poly: list[tuple[float, float]]) -> float:
@@ -167,9 +188,17 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                     raise InputError(f"Source dimensions disagree with {slide['id']}")
         polys = {eid: polygon(e) for eid, e in elements.items()}
         footprints = {
-            eid: line_parts(e) if e["kind"] == "line" else [polys[eid]]
+            eid: line_parts(e)
+            if e["kind"] == "line"
+            else freeform_parts(e)
+            if e.get("shape") == "freeform"
+            else [polys[eid]]
             for eid, e in elements.items()
         }
+        container_parts = footprints.copy()
+        for eid, element in elements.items():
+            if element["kind"] in {"shape", "line"} and not visible_vector(element):
+                footprints[eid] = []
         text_footprints = {}
         for eid, element in elements.items():
             if element["kind"] == "text" and layouts[slide["id"], eid].fits:
@@ -249,13 +278,14 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                     confidence=e["confidence"],
                 )
             if "container" in e:
-                container = polys[e["container"]]
-                content = text_footprints.get(eid, [p])
+                container = container_parts[e["container"]]
+                content = text_footprints.get(eid, container_parts[eid])
                 outside = any(
-                    area(intersection(part, container)) < area(part) - 0.5 for part in content
+                    sum(area(intersection(part, piece)) for piece in container) < area(part) - 0.5
+                    for part in content
                 )
                 if outside and eid in text_footprints:
-                    refined = ink_area(eid, [container], outside=True)
+                    refined = ink_area(eid, container, outside=True)
                     if refined is not None:
                         outside = refined > 0.5
                 if outside:
@@ -265,7 +295,7 @@ def preflight(scene: dict, layouts: dict[tuple[str, str], TextLayout], root: Pat
                         [eid, e["container"]],
                         "Visible content is not fully contained by its declared shape",
                     )
-                elif area(intersection(p, container)) < area(p) - 0.5:
+                elif sum(area(intersection(p, piece)) for piece in container) < area(p) - 0.5:
                     issue(
                         slide,
                         "text_frame_outside_container_only",
