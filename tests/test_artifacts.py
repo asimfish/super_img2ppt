@@ -99,6 +99,69 @@ def test_build_refuses_bad_geometry_and_marks_unrendered_draft(scene, tmp_path):
     report = build(source, tmp_path / "draft", render=False)
     assert report["status"] == "unverified"
     assert report["automated_checks"]["rendered_text"]["status"] == "not_run"
+    assert (
+        json.loads((tmp_path / "draft/vector/manifest.json").read_text())["pdf_status"] == "not_run"
+    )
+
+
+def test_build_writes_vector_manifest_and_discloses_raster_boundary(scene, tmp_path):
+    source = tmp_path / "scene.json"
+    source.write_text(json.dumps(scene))
+    out = tmp_path / "vector_only"
+    report = build(source, out, render=False, vector_pdf=False)
+    assert report["status"] == "unverified"
+    manifest = json.loads((out / "vector/manifest.json").read_text())
+    assert manifest["pdf_status"] == "disabled"
+    assert manifest["pages"][0]["pure_vector"] is True
+    assert manifest["pages"][0]["svg"] == "../svg/page_001.svg"
+    assert not (out / "vector/pdf").exists()
+
+    Image.new("RGB", (40, 20), "#f97316").save(tmp_path / "photo.png")
+    scene["slides"][0]["elements"].append(
+        {
+            "id": "photo",
+            "kind": "image",
+            "z": 0,
+            "box": [900, 40, 200, 100],
+            "path": "photo.png",
+            "contains_text": False,
+            "provenance": "Synthetic raster boundary fixture",
+        }
+    )
+    source.write_text(json.dumps(scene))
+    mixed = build(source, tmp_path / "mixed", render=False, vector_pdf=False)
+    assert mixed["status"] == "unverified"
+    page = json.loads((tmp_path / "mixed/vector/manifest.json").read_text())["pages"][0]
+    assert page["content_type"] == "mixed_vector_raster"
+    assert page["pure_vector"] is False
+    assert page["embedded_raster_assets"] == [
+        {
+            "id": "photo",
+            "path": "photo.png",
+            "provenance": "Synthetic raster boundary fixture",
+            "image_fit": "contain",
+        }
+    ]
+
+
+@pytest.mark.render
+@pytest.mark.skipif(not RENDER_AVAILABLE, reason="LibreOffice not installed")
+def test_rendered_build_exports_svg_derived_pdf_with_text(scene, tmp_path):
+    scene["slides"][0]["elements"][0].update(text="Hello 123", font_family="Arial")
+    source = tmp_path / "scene.json"
+    source.write_text(json.dumps(scene))
+    out = tmp_path / "published"
+    report = build(source, out)
+    assert report["status"] in {"pass", "review"}, report
+    assert report["automated_checks"]["vector"]["pdf_status"] == "generated"
+    pdf = out / "vector/pdf/page_001.pdf"
+    assert pdf.read_bytes().startswith(b"%PDF")
+    import pypdfium2 as pdfium
+
+    with pdfium.PdfDocument(pdf) as document:
+        assert len(document) == 1
+        textpage = document[0].get_textpage()
+        assert "Hello" in textpage.get_text_range(0, textpage.count_chars())
 
 
 @pytest.mark.parametrize("command", ["check", "build"])

@@ -26,6 +26,7 @@ from .regions import compare_region_files
 from .render import make_renderer, rasterize_pdf, verify_rendered_text
 from .restyle import stage_variants
 from .scene import SCHEMA, InputError, _unique_pairs, load_scene, safe_asset, slide_transform
+from .vector import export_pdf_pages, write_manifest
 
 
 def resolve_scene(scene: dict, layouts: dict, root: Path, out: Path) -> dict:
@@ -83,6 +84,7 @@ def build(
     font_dirs: tuple[Path, ...] = (),
     appearance_plan: Path | None = None,
     appearance_mode: str = "faithful",
+    vector_pdf: bool = True,
 ) -> dict:
     fresh_directory(out)
     report = {
@@ -131,12 +133,41 @@ def build(
         svg_dir.mkdir()
         for slide in scene["slides"]:
             write_svg(slide, layouts, root, svg_dir / f"{slide['id']}.svg")
+        vector_dir = out / "vector"
+        pdf_paths = {}
+        if render and vector_pdf:
+            pdf_paths = export_pdf_pages(
+                svg_dir, vector_dir / "pdf", [slide["id"] for slide in scene["slides"]]
+            )
+            pdf_status = "generated"
+        elif vector_pdf:
+            pdf_status = "not_run"
+        else:
+            pdf_status = "disabled"
+        vector_manifest = write_manifest(
+            scene,
+            vector_dir,
+            svg_dir=svg_dir,
+            pdf_paths=pdf_paths,
+            pdf_status=pdf_status,
+        )
+        report["automated_checks"]["vector"] = {
+            "status": "pass" if vector_manifest["pages"] else "fail",
+            "pdf_status": pdf_status,
+            "pages": len(vector_manifest["pages"]),
+            "pure_vector_pages": sum(page["pure_vector"] for page in vector_manifest["pages"]),
+            "mixed_vector_raster_pages": sum(
+                not page["pure_vector"] for page in vector_manifest["pages"]
+            ),
+        }
         json_write(out / "editability.json", editability_manifest(scene))
         native = inspect_pptx(pptx, scene)
         report["automated_checks"]["native_objects"] = native
         report["artifacts"] = {
             "pptx": "editable.pptx",
             "svg": "svg/",
+            "vector": "vector/",
+            "vector_manifest": "vector/manifest.json",
             "scene": "scene.resolved.json",
             "fonts": "fonts.json",
             "editability": "editability.json",
@@ -371,6 +402,13 @@ def main(argv: list[str] | None = None) -> int:
             cmd.add_argument(
                 "--no-render", action="store_true", help="Produce an explicitly unverified draft"
             )
+            cmd.add_argument(
+                "--no-vector-pdf",
+                dest="vector_pdf",
+                action="store_false",
+                help="Keep the SVG vector output but skip SVG-derived publication PDF pages",
+            )
+            cmd.set_defaults(vector_pdf=True)
     args = parser.parse_args(argv)
     try:
         if args.command == "doctor":
@@ -449,6 +487,7 @@ def main(argv: list[str] | None = None) -> int:
                 tuple(args.font_dir),
                 args.appearance_plan,
                 args.appearance_mode,
+                args.vector_pdf,
             )
         elif args.command == "compose-math":
             result = compose_file(args.spec, args.out, tuple(args.font_dir))

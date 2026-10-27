@@ -41,7 +41,10 @@ do not insert per-character spacing guesses into the exporter.
 OCR adapters implement one Protocol and are selected from a small explicit registry.
 `scene` validates bounded local data and asset paths. `fonts` resolves real local font
 faces and glyph coverage. `layout` computes explicit lines and fit decisions.
-`qa` checks geometry and native objects. `export` writes native PPTX objects and SVG.
+`qa` checks geometry and native objects. `export` writes native PPTX objects and SVG; `vector`
+writes the publication manifest and derives PDF pages from the canonical SVG without changing the
+scene. The manifest is the boundary that distinguishes pure vector pages from mixed pages with
+embedded raster assets.
 `render` invokes a local renderer with isolated temporary state and bounded subprocesses,
 then checks the rendered PDF text, font identifiers and glyph bounds.
 `cli` coordinates these modules and writes a fresh output directory.

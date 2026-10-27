@@ -1,13 +1,14 @@
 # Super Img2PPT capability card
 
-Owner: super_img2ppt contributors. Version: 0.3.16. Risk: scoped_change.
+Owner: super_img2ppt contributors. Version: 0.3.17. Risk: scoped_change.
 Canonical owner: this repository's `skills/super-img2ppt`.
 
 Reads: user-selected image/PDF/PPTX files; scene JSON and relative local assets; installed font
 metadata and glyph tables; local tool availability. Does not read credential stores.
 
 Writes: fresh user-selected job/output directories; normalized source PNGs, OCR JSON, scene
-snapshots, copied assets, font metadata/hashes, SVG, PPTX, PDF, previews and validation reports.
+snapshots, copied assets, font metadata/hashes, SVG, PPTX, SVG-derived publication PDF pages,
+vector manifest, previews and validation reports.
 The renderer creates and removes its own temporary profile. No registry/global configuration changes.
 
 Executes: Python runtime, local `fc-list`, optional `swift`/Apple Vision or `tesseract`, and
@@ -40,8 +41,10 @@ font metrics. Fonts are not embedded. Native PowerPoint/WPS require their own co
 evidence. Complex artwork remains raster; the skill cannot promise pixel-identical output.
 
 Output contract: PPTX text/geometry as native objects, separately movable raster assets, SVG with
-text/vector elements, portable resolved scene plus assets, font manifest, actual-PPTX preview,
-machine validation and a separate visual-review statement.
+text/vector elements, SVG-derived publication PDF pages, a per-page vector/raster manifest,
+portable resolved scene plus assets, font manifest, actual-PPTX preview, machine validation and a
+separate visual-review statement. The SVG is the canonical vector source; photos and complex
+artwork remain listed raster assets.
 
 Curve helper: reads one bounded local image and explicit ROI/color; writes native line
 fragments, source hashes, interpolation/exclusion diagnostics and an overlay. No model,
@@ -121,6 +124,15 @@ Rendered native-equation replacement also measures PDF glyph sizes and temporary
 formula view areas to calibrate the final OMML frame proportions. Content is retained;
 calibration remains review due to possible overlapping glyphs, font substitution and viewer
 differences. Additional headless conversions are bounded and use isolated profiles.
+
+## v0.3.17 dual vector delivery
+
+Rendered builds retain the backwards-compatible `svg/` directory and write
+`vector/manifest.json` plus one SVG-derived PDF page per slide under `vector/pdf/`. The manifest
+records page dimensions, element counts, `pure_vector` versus `mixed_vector_raster`, and every
+embedded image's ID/path/provenance. `--no-vector-pdf` skips only the PDF convenience export;
+`--no-render` leaves PDF generation unverified. Missing or unsupported artwork is never silently
+converted into a fake vector.
 
 ## v0.3.16 vector and palette boundary
 

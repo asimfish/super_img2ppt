@@ -4,10 +4,10 @@
 
 ### 图片里的文字、公式与曲线，都能继续编辑。
 
-**Image → Editable PPTX · SVG · Scene JSON**
+**Image → Editable PPTX · Publication SVG/PDF · Scene JSON**
 
 [![Verify](https://github.com/asimfish/super_img2ppt/actions/workflows/verify.yml/badge.svg)](https://github.com/asimfish/super_img2ppt/actions/workflows/verify.yml)
-![Version](https://img.shields.io/badge/version-0.3.16-2563eb)
+![Version](https://img.shields.io/badge/version-0.3.17-2563eb)
 ![Python](https://img.shields.io/badge/python-3.11%2B-3776AB)
 [![License](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 
@@ -19,7 +19,7 @@
 
 | 完整论文图 | 分组编辑案例 | 导出格式 |
 | :---: | :---: | :---: |
-| **17 例** · 具身 / 世界模型 / 通用架构 | **3 份** · 模块、公式、曲线成组编辑 | **PPTX · SVG · JSON** |
+| **17 例** · 具身 / 世界模型 / 通用架构 | **3 份** · 模块、公式、曲线成组编辑 | **PPTX · SVG · PDF · JSON** |
 
 > **v0.3.7 · 为后续编辑而组织对象**
 >
@@ -61,7 +61,7 @@
 | **浏览全部复杂论文图** | [十七例完整包 · 约 24.4 MB](examples/gallery/paper_gallery.zip) · [文件索引](examples/gallery/index.json) · [SHA256](examples/gallery/SHA256SUMS) |
 | **转换自己的图片** | [安装与调用 Skill](skills/super-img2ppt/SKILL.md) · [本地入门样例](examples/editable_demo.pptx) |
 
-文件包包含 PPTX、SVG、原图、实际渲染、可复建场景与各例报告。三份分组版为 GR00T N1、RoboDream、Cosmos 3；历史案例保留各自版本的编辑结构。
+新的构建输出包含 PPTX、SVG、矢量 PDF、原图、实际渲染、可复建场景与各例报告。仓库中的历史示例继续保留各自版本的编辑结构。
 
 ## 开始使用
 
@@ -76,7 +76,7 @@ uv run super-img2ppt build examples/flow_reconstruction.json --out output/demo
 把 `skills/super-img2ppt` 接入 Agent 的技能目录，然后直接说：
 
 ```text
-$super-img2ppt 把这张图片重建为可编辑 PPTX 和 SVG，保留布局，检查字体、曲线和重叠。
+$super-img2ppt 把这张图片重建为可编辑 PPTX 和论文排版可用的 SVG/PDF 矢量图，保留布局，检查字体、曲线和重叠。
 ```
 
 [自制入门样例 PPTX](examples/editable_demo.pptx) · [安装与调用说明](skills/super-img2ppt/SKILL.md)
@@ -349,6 +349,22 @@ super-img2ppt build scene.json --appearance-plan appearance-plan.json --out buil
 
 输入与嵌入素材的 ICC 色彩配置现在统一转换为 sRGB，避免宽色域数值被直接当作 sRGB 而变淡或偏色；素材透明度保留。未标记的 RGB 按 sRGB 解释，不做全局饱和度增强。损坏的 ICC 和缺少配置的 CMYK/LAB 会报错。[色彩管理回归证据](docs/evidence/color-management/README.md)
 
+## 双输出：可编辑 PPTX + 论文级矢量图
+
+每次 `build` 都从同一份 measured scene 生成 `editable.pptx` 与规范 SVG。实际渲染构建还会把 SVG 转成 `vector/pdf/` 下的出版 PDF，并写入 `vector/manifest.json`：清单按页标记 `pure_vector` 或 `mixed_vector_raster`，列出文字、形状、线条数量，以及仍然需要保留为图片的局部。这样投稿时可以直接使用矢量 PDF，后续修改仍回到 PPTX；复杂照片不会被伪装成矢量。
+
+```bash
+uv run super-img2ppt build scene.json --out build_01
+# build_01/editable.pptx
+# build_01/svg/page_001.svg                 # 规范矢量源
+# build_01/vector/pdf/page_001.pdf          # SVG 派生的出版 PDF
+# build_01/vector/manifest.json             # 矢量/栅格边界与页级清单
+```
+
+只需要 SVG 时可使用 `--no-vector-pdf`；`--no-render` 会保留 SVG 和清单，但明确不生成未经实际环境验证的 PDF。
+
+[复杂顶会图的双输出实测证据](docs/evidence/vector_delivery/README.md)
+
 ## 形状、图标和透明度细节
 
 **0.3.16** 补充原生凹形轮廓、独立的填充/描边透明度及渐变停止点透明度。简单单色图标可以转成一个可编辑的自由形状，便于单独移动、改色和调整轮廓；零宽描边明确导出为无描边。
@@ -459,7 +475,8 @@ uv run super-img2ppt build output/job/scene.json --out output/job/build_01
 
 | 交付物 | 可以检查什么 |
 | --- | --- |
-| `editable.pptx`、`svg/` | 原生文字、形状、线条，以及明确保留的图片 |
+| `editable.pptx`、`svg/`、`vector/pdf/` | 同一 scene 的可编辑 PPTX、规范 SVG 与出版 PDF；文字、形状、线条保持矢量，明确保留的图片仍是栅格 |
+| `vector/manifest.json` | 每页尺寸、元素计数、纯矢量/混合页状态，以及嵌入栅格素材的 ID、路径和归属 |
 | `scene.resolved.json`、`assets/` | 可修改、复建的场景与相对路径资产 |
 | `editability.json` | 语义组、成员层级与未组合对象 |
 | `fonts.json` | 实际字体文件、字重、替代情况与哈希 |

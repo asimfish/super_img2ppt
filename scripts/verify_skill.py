@@ -30,6 +30,7 @@ def main():
         "UPSTREAM.md",
         "requirements.lock",
         "LICENSE",
+        "src/super_img2ppt/vector.py",
     ]
     for name in required:
         if not (SKILL / name).is_file():
